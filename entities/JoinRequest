@@ -1,0 +1,39 @@
+{
+    "name": "JoinRequest",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        },
+        "role": {
+            "type": "string",
+            "enum": [
+                "patient",
+                "clinician",
+                "technologist",
+                "researcher",
+                "advocate",
+                "journalist",
+                "other"
+            ]
+        },
+        "reason": {
+            "type": "string"
+        },
+        "newsletter": {
+            "type": "boolean",
+            "default": true
+        },
+        "volunteer": {
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "required": [
+        "name",
+        "email"
+    ]
+}

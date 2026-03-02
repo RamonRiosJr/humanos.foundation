@@ -1,0 +1,99 @@
+name: ✅ Compliance Task
+description: Track a regulatory requirement, audit finding, or policy obligation
+title: "compliance: "
+labels: ["type: compliance", "epic: compliance", "P1: high"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for compliance obligations, audit findings, policy gaps,
+        and regulatory requirements. Items created here are tracked in the
+        Compliance epic on the project board.
+
+  - type: dropdown
+    id: regulation
+    attributes:
+      label: Regulation / Standard
+      description: Which regulation or standard does this relate to?
+      options:
+        - HIPAA — Health Insurance Portability and Accountability Act
+        - GDPR — General Data Protection Regulation
+        - SOC 2 — Service Organization Control 2
+        - SOX — Sarbanes-Oxley Act
+        - ISO 27001
+        - NIST CSF
+        - PCI-DSS
+        - FedRAMP
+        - Internal Policy
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: control
+    attributes:
+      label: Control / Requirement Reference
+      description: Specific control number or requirement ID (e.g., HIPAA §164.312(a)(1))
+      placeholder: "e.g., HIPAA §164.312(a)(1)"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Requirement Description
+      description: Describe the compliance requirement in plain language.
+    validations:
+      required: true
+
+  - type: textarea
+    id: gap
+    attributes:
+      label: Current Gap / Finding
+      description: What is the current state? What is missing or non-compliant?
+    validations:
+      required: true
+
+  - type: textarea
+    id: remediation
+    attributes:
+      label: Remediation Plan
+      description: What changes are required to achieve compliance?
+    validations:
+      required: true
+
+  - type: input
+    id: deadline
+    attributes:
+      label: Compliance Deadline
+      description: When must this be completed? (audit date, regulatory deadline, etc.)
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P0 — Critical / Audit in progress
+        - P1 — High / Upcoming audit or legal deadline
+        - P2 — Medium / Internal target
+        - P3 — Low / Best practice improvement
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence / Artifacts Required
+      description: What documentation or evidence must be produced to demonstrate compliance?
+      placeholder: |
+        - [ ] Policy document updated
+        - [ ] Technical control implemented and tested
+        - [ ] Evidence screenshot/log collected
+        - [ ] Auditor sign-off obtained
+    validations:
+      required: false
