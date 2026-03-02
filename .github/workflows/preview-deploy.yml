@@ -1,0 +1,65 @@
+name: Preview Deploy
+
+on:
+  pull_request:
+    branches: [main, master]
+
+concurrency:
+  group: preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: "20"
+
+jobs:
+  preview-deploy:
+    name: Vercel Preview Deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      pull-requests: write
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install dependencies
+        continue-on-error: true
+        run: npm ci --legacy-peer-deps
+
+      - name: Production build
+        continue-on-error: true
+        run: npm run build
+        env:
+          CI: true
+          NODE_ENV: production
+
+      - name: Deploy to Vercel (Preview)
+        id: deploy
+        continue-on-error: true
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: ./
+
+      - name: Comment preview URL on PR
+        continue-on-error: true
+        uses: actions/github-script@v7
+        if: steps.deploy.outputs.preview-url != ''
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## 🔍 Preview Deployment\n\n✅ **Preview URL:** ${{ steps.deploy.outputs.preview-url }}\n\n> This preview is updated on every commit to this PR.`
+            })

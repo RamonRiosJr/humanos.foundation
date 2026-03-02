@@ -1,0 +1,53 @@
+{
+    "name": "BlogPost",
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string"
+        },
+        "slug": {
+            "type": "string"
+        },
+        "excerpt": {
+            "type": "string"
+        },
+        "content": {
+            "type": "string"
+        },
+        "category": {
+            "type": "string",
+            "enum": [
+                "Patient Rights",
+                "Technology",
+                "Policy & Regulation",
+                "Movement Stories",
+                "Research & Data",
+                "Community"
+            ]
+        },
+        "cover_image": {
+            "type": "string"
+        },
+        "published": {
+            "type": "boolean",
+            "default": false
+        },
+        "featured": {
+            "type": "boolean",
+            "default": false
+        },
+        "read_time_minutes": {
+            "type": "number"
+        },
+        "tags": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": [
+        "title",
+        "slug"
+    ]
+}
