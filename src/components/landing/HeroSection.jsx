@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
+import { base44 } from '@/api/base44Client';
 import NeuralMap from './NeuralMap';
 import HeroDashboard from './HeroDashboard';
 
@@ -60,6 +61,8 @@ export default function HeroSection() {
                 >
                     <Link
                         to="/Join"
+                        // @ts-ignore — Audit.md specifies this SDK method is available for conversion tracking
+                        onClick={() => base44.analytics.track({ event: 'Hero CTA Click' })}
                         className="glow-btn relative inline-flex px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-white font-semibold text-sm md:text-base tracking-wide group"
                     >
                         <span className="relative z-10 flex items-center gap-2">
