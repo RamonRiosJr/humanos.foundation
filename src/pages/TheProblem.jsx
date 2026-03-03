@@ -6,16 +6,16 @@ import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
 import PageCTA from '../components/shared/PageCTA';
-import { AlertTriangle, Database, DollarSign, Lock, Eye, FileX, Globe } from 'lucide-react';
+import { AlertTriangle, Database, DollarSign, Lock, Eye, FileX, Globe, Clock } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 
 const problems = [
-    { icon: FileX, title: 'Your Records Are Fragmented', description: 'The average American has medical records spread across 14+ different systems. No single source of truth exists for your own health history.', stat: '14+', statLabel: 'disconnected systems per patient' },
-    { icon: DollarSign, title: 'Your Data Is Being Sold', description: 'Your de-identified health data is bought and sold in a $250 billion market. Hospitals, insurers, and data brokers profit. You receive nothing.', stat: '$250B', statLabel: 'annual health data market' },
-    { icon: Lock, title: 'You Don\'t Have Access', description: 'Despite legal rights (HIPAA, 21st Century Cures Act), 60% of patients report difficulty accessing their own complete medical records.', stat: '60%', statLabel: 'patients can\'t access their records' },
-    { icon: Eye, title: 'No Visibility Into Who Sees Your Data', description: 'Hundreds of third parties may have accessed your health data. You have no audit trail, no notification, and no control.', stat: '100s', statLabel: 'unknown third-party accesses' },
-    { icon: Database, title: 'Catastrophic Breach Risk', description: <span key="p5">Healthcare is the #1 most breached industry. <Link to="/Security" className="text-red-400 hover:text-red-300 underline underline-offset-4 decoration-red-400/30">1 in 3 Americans has had their health data exposed in a breach</Link>.</span>, stat: '1 in 3', statLabel: 'Americans breached' },
-    { icon: Globe, title: 'Global Health Inequity', description: 'Communities in low-income countries and underserved populations have even less access to their own health records, widening the global health equity gap.', stat: '4B+', statLabel: 'people without health data access' },
+    { icon: Clock, title: 'The 5-Minute Diagnosis', description: 'After filling out 20 pages of clipboards, your profound physical and mental reality is compressed into a rushed 5-minute review by a doctor staring at a screen.', stat: '5 MIN', statLabel: 'average time spent understanding you' },
+    { icon: AlertTriangle, title: 'The Medication Gallery', description: 'Instead of investigating root causes, the easiest administrative path is to drug the symptom. When side effects hit, they add another pill. You become a gallery of meds.', stat: '∞', statLabel: 'pills to treat the side effects of pills' },
+    { icon: DollarSign, title: 'A Billing Machine, Not Healthcare', description: 'The current architecture incentivizes rapid turnover and over-prescription. The system steals from insurance and patients by prioritizing volume over healing.', stat: 'VOLUME', statLabel: 'prioritized over your actual health' },
+    { icon: FileX, title: 'Standardizing Suffering', description: 'Your lived experience is continuous, but the system treats you as a standardized deviation. Complex cases (ADHD, ASD, Bipolar) are shoved into one-size-fits-all boxes.', stat: '1 SIZE', statLabel: 'fits no one' },
+    { icon: Eye, title: 'Forced Disability', description: 'Misdiagnosis and over-medication strip patients of their true selves, alter their thoughts, and sentence them to lives of forced disability and despair.', stat: 'LOSS', statLabel: 'of your true self and potential' },
+    { icon: Database, title: 'Data Without Context', description: 'A list of your prescriptions and lab values tells the system nothing about how you actually feel. We have petabytes of data, but zero clinical clarity.', stat: '0', statLabel: 'understanding of your daily reality' },
 ];
 
 export default function TheProblem() {
@@ -25,16 +25,16 @@ export default function TheProblem() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
-                title="The Health Data Crisis — Why the System is Broken"
-                description="1 in 3 Americans has had health data breached. Your EHR is worth $250 on the open market — you get $0. Here's why the health data system is fundamentally broken and what we're doing about it."
+                title="The Problem — Assembly-Line Medicine & Over-Medication"
+                description="The healthcare system is a billing machine. The 5-minute diagnosis leads to the medication gallery. Here is why we are fighting back."
                 url="https://humanos.foundation/the-problem"
             />
             <Navbar />
             <PageHero
                 badge="The Crisis"
-                title="The Health Data"
-                titleAccent="Crisis"
-                subtitle={<span key="st">The healthcare data system is fundamentally broken — <Link to="/Origin" className="text-white hover:text-white/80 underline underline-offset-4 decoration-white/30">not by accident</Link>, but by design. Here's what patients are up against.</span>}
+                title="Assembly-Line"
+                titleAccent="Medicine"
+                subtitle={<span key="st">The healthcare system is fundamentally broken — <Link to="/Origin" className="text-white hover:text-white/80 underline underline-offset-4 decoration-white/30">not by accident</Link>, but by design. It is a billing machine that prioritizes drugging symptoms over finding root causes.</span>}
             />
 
             <section ref={ref} className="pb-16 px-4 md:px-8">
@@ -49,9 +49,9 @@ export default function TheProblem() {
                         <div className="absolute inset-0 bg-gradient-to-br from-red-950/30 via-obsidian to-obsidian border border-red-900/20 rounded-3xl" />
                         <div className="relative z-10">
                             <AlertTriangle className="w-10 h-10 text-red-400/60 mx-auto mb-5" />
-                            <p className="text-4xl md:text-6xl font-bold text-red-400/80 mb-3" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>$6.2B</p>
+                            <p className="text-4xl md:text-6xl font-bold text-red-400/80 mb-3" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>The Human Cost</p>
                             <p className="text-sm text-white/40 max-w-lg mx-auto">
-                                Lost annually due to healthcare data inefficiencies. Meanwhile, patients bear the cost — in money, time, and health outcomes.
+                                The system does not suffer when it gets it wrong. Patients do. The cost is paid in side effects, altered thoughts, and stolen potential.
                             </p>
                         </div>
                     </motion.div>
