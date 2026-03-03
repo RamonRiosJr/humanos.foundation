@@ -70,7 +70,7 @@ Priority Item Impact
 🔴 P0 Fix the hero CTA button — link it to /Join ✅ DONE (v0.1)
 🔴 P0 Update index.html with real title, description, OG tags, favicon ✅ DONE (v0.1)
 🔴 P0 Add auth guard to Admin page ✅ DONE (v0.1)
-🟠 P1 Add honeypot + basic rate-limit messaging to forms 🔀 MOVED to Issue #1
+🟠 P1 Add honeypot + basic rate-limit messaging to forms ✅ DONE (Issue #1)
 🟠 P1 Add citations/sources to all statistics 🔀 MOVED to Issue #2
 🟠 P1 Write 3-5 cornerstone blog posts ✅ DONE (Issue #4)
 🟠 P1 Add base44.analytics.track() to CTA clicks and form submits ❌ CANCELLED (Removed for Sovereign Privacy)
