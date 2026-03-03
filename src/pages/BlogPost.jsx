@@ -39,7 +39,7 @@ export default function BlogPost() {
 
     if (loading) {
         return (
-            <div className="bg-[#0a0a0f] min-h-screen text-white flex flex-col pt-32 px-4 items-center">
+            <div className="bg-obsidian min-h-screen text-white flex flex-col pt-32 px-4 items-center">
                 <Navbar />
                 <div className="w-8 h-8 border-4 border-cyan-500/20 border-t-cyan-500 rounded-full animate-spin"></div>
             </div>
@@ -48,7 +48,7 @@ export default function BlogPost() {
 
     if (!postId || !post) {
         return (
-            <div className="bg-[#0a0a0f] min-h-screen text-white flex flex-col">
+            <div className="bg-obsidian min-h-screen text-white flex flex-col">
                 <Navbar />
                 <div className="flex-1 flex flex-col items-center justify-center text-center px-4 pt-32">
                     <h1 className="text-3xl font-bold mb-4">Post Not Found</h1>
@@ -63,7 +63,7 @@ export default function BlogPost() {
     }
 
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white">
+        <div className="bg-obsidian min-h-screen text-white">
             <SEOMeta
                 title={`${post.title} | Humanos Foundation`}
                 description={post.excerpt}

@@ -25,7 +25,7 @@ const principles = [
 
 export default function OpenSource() {
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta title="Open Source Health Technology — Humanos Foundation" description="We believe in open source as a philosophy. Explore open-source health projects, FHIR standards, and the Coqui Cloud Dev Co. technical infrastructure behind the hOS movement." url="https://humanos.foundation/open-source" />
             <Navbar />
             <PageHero badge="Open Source" title="Open by" titleAccent="Default" subtitle="We believe in open source as a philosophy, not just a development model. Transparency, collaboration, and freedom are how we build trust." />

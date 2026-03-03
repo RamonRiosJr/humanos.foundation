@@ -31,7 +31,7 @@ export default function Volunteer() {
     };
 
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta title="Volunteer for the hOS Movement — Humanos Foundation" description="Contribute to the health data sovereignty movement as a developer, writer, translator, advocate, researcher, or community leader. Volunteer with Humanos Foundation." url="https://humanos.foundation/volunteer" />
             <Navbar />
             <PageHero badge="Get Involved" title="Volunteer for" titleAccent="the Movement" subtitle="The hOS movement is built by volunteers who believe health data sovereignty is worth fighting for. Find your role." />

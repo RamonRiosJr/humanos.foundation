@@ -25,7 +25,7 @@ const partnerBenefits = [
 
 export default function Partners() {
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta title="Partners — Organizations Aligned with Health Data Sovereignty" description="Humanos Foundation partners with healthcare advocacy organizations, academic institutions, and open-source health projects committed to patient data rights." url="https://humanos.foundation/partners" />
             <Navbar />
             <PageHero badge="Collaboration" title="Partners in" titleAccent="Sovereignty" subtitle="We are stronger together. We partner with organizations that share our commitment to patient data rights and health equity." />

@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import HOSLogo from '../shared/HOSLogo';
+import ThemeToggle from '../shared/ThemeToggle';
 
 const navLinks = [
     { label: 'Origin', href: createPageUrl('Origin') },
@@ -57,11 +58,15 @@ export default function Navbar() {
                         <Link to={createPageUrl('Join')} className="px-5 py-2 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-xs text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 font-medium">
                             Join the Movement
                         </Link>
+                        <ThemeToggle />
                     </div>
 
-                    <button className="lg:hidden text-white/40 hover:text-white/60 transition-colors" onClick={() => setMenuOpen(!menuOpen)}>
-                        {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-                    </button>
+                    <div className="flex items-center gap-3 lg:hidden">
+                        <ThemeToggle />
+                        <button className="text-white/40 hover:text-white/60 transition-colors" onClick={() => setMenuOpen(!menuOpen)}>
+                            {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                        </button>
+                    </div>
                 </div>
 
                 <AnimatePresence>

@@ -39,7 +39,7 @@ function DeclarationSection() {
                     <span className="text-xs text-cyan-400/60 tracking-[0.2em] uppercase font-medium">The Declaration</span>
                 </motion.div>
                 <div className="space-y-0 relative rounded-3xl overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#06060a] via-[#0a0a12] to-[#06060a] border border-white/[0.03] rounded-3xl" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-obsidian via-obsidian to-obsidian border border-white/[0.03] rounded-3xl" />
                     <div className="relative z-10 p-8 md:p-14">
                         {declarations.map((line, i) => (
                             <motion.div
@@ -104,7 +104,7 @@ function FourLawsSection() {
 
 export default function Manifesto() {
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
                 title="The hOS Manifesto — Patient Data Rights Declaration"
                 description="A formal declaration of patient data rights. We believe your biological data is yours — not your hospital's, not your insurer's. Read and share the hOS Manifesto by Humanos Foundation."

@@ -36,7 +36,7 @@ export default function Blog() {
     const filtered = activeCategory === 'All' ? posts : posts.filter(p => p.category === activeCategory);
 
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
                 title="Blog — Health Data Rights, Patient Sovereignty & Policy | Humanos Foundation"
                 description="Thought leadership on patient data ownership, health privacy, HIPAA, zero-knowledge architecture, and the movement for health data sovereignty. Written for patients, advocates, and technologists."

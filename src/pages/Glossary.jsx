@@ -34,7 +34,7 @@ export default function Glossary() {
     );
 
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
                 title="Health Data Glossary — FHIR, HIPAA, PHI, Zero-Knowledge & More"
                 description="Plain-language definitions for FHIR, HIPAA, PHI, EHR, zero-knowledge architecture, GDPR, CCPA, patient sovereignty, and other key terms in the health data rights movement."

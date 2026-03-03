@@ -23,7 +23,7 @@ export default function TheProblem() {
     const isInView = useInView(ref, { once: true, margin: '-80px' });
 
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
                 title="The Health Data Crisis — Why the System is Broken"
                 description="1 in 3 Americans has had health data breached. Your EHR is worth $250 on the open market — you get $0. Here's why the health data system is fundamentally broken and what we're doing about it."
@@ -46,7 +46,7 @@ export default function TheProblem() {
                         transition={{ duration: 0.7 }}
                         className="relative rounded-3xl overflow-hidden mb-12 p-8 md:p-14 text-center"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-br from-red-950/30 via-[#0a0a0f] to-[#0a0a0f] border border-red-900/20 rounded-3xl" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-red-950/30 via-obsidian to-obsidian border border-red-900/20 rounded-3xl" />
                         <div className="relative z-10">
                             <AlertTriangle className="w-10 h-10 text-red-400/60 mx-auto mb-5" />
                             <p className="text-4xl md:text-6xl font-bold text-red-400/80 mb-3" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>$6.2B</p>

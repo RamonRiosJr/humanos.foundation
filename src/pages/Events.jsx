@@ -15,7 +15,7 @@ const upcomingTypes = [
 
 export default function Events() {
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <Navbar />
             <PageHero badge="Events" title="Join the" titleAccent="Conversation" subtitle="Webinars, conferences, and community events where the movement comes alive." />
             <section className="pb-20 px-4 md:px-8">

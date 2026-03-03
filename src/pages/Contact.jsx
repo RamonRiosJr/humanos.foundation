@@ -51,7 +51,7 @@ export default function Contact() {
     };
 
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
                 title="Contact Humanos Foundation — Press, Partnerships & General Inquiries"
                 description="Contact Humanos Foundation for press inquiries, partnership opportunities, grant applications, and general questions about the hOS patient data sovereignty movement."
