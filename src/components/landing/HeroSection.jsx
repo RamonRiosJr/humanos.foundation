@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import NeuralMap from './NeuralMap';
 import HeroDashboard from './HeroDashboard';
@@ -57,7 +58,10 @@ export default function HeroSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.5 }}
                 >
-                    <button className="glow-btn relative px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-white font-semibold text-sm md:text-base tracking-wide group">
+                    <Link
+                        to="/Join"
+                        className="glow-btn relative inline-flex px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-white font-semibold text-sm md:text-base tracking-wide group"
+                    >
                         <span className="relative z-10 flex items-center gap-2">
                             Take Command of Your Health
                             <motion.span
@@ -67,7 +71,7 @@ export default function HeroSection() {
                                 →
                             </motion.span>
                         </span>
-                    </button>
+                    </Link>
                 </motion.div>
 
                 {/* Dashboard */}
