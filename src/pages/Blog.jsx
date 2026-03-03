@@ -122,7 +122,7 @@ export default function Blog() {
                     )}
                 </div>
             </section>
-            <PageCTA title="Have a Story to Share?" subtitle="We welcome contributors from across the movement. Clinicians, patients, technologists, advocates." cta="Contact Us" ctaHref={createPageUrl('Contact')} />
+            <PageCTA title="The System Won't Fix Itself" subtitle="We need patients, clinicians, and technologists to stand up against assembly-line medicine." cta="Join the Movement" ctaHref={createPageUrl('Join')} />
             <Footer />
         </div>
     );

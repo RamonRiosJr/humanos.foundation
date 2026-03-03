@@ -101,17 +101,27 @@ export default function BlogPost() {
                 </h1>
 
                 <div className="prose dark:prose-invert prose-cyan max-w-none prose-p:text-white/70 prose-p:leading-relaxed prose-headings:font-bold prose-headings:text-white/90 prose-a:text-cyan-400">
-                    <ReactMarkdown rehypePlugins={[rehypeSanitize]}>
+                    <ReactMarkdown
+                        rehypePlugins={[rehypeSanitize]}
+                        components={{
+                            a: ({ node, ...props }) => {
+                                if (props.href && props.href.startsWith('/')) {
+                                    return <Link to={props.href} className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30 transition-colors" {...props}>{props.children}</Link>;
+                                }
+                                return <a target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30 transition-colors" {...props}>{props.children}</a>;
+                            }
+                        }}
+                    >
                         {post.content}
                     </ReactMarkdown>
                 </div>
             </article>
 
             <PageCTA
-                title="Join the Conversation"
-                subtitle="We need independent thinkers to help shape the future of sovereign health data."
-                cta="Read the Manifesto"
-                ctaHref={createPageUrl('Manifesto')}
+                title="Are You Ready to Demand Better?"
+                subtitle="Do not let your health be reduced to a 5-minute review. Join the movement and help us build the infrastructure of personalized care."
+                cta="Join the Waitlist"
+                ctaHref={createPageUrl('Join')}
             />
             <Footer />
         </div>
