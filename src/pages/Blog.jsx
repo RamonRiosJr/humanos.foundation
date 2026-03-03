@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SEOMeta from '../components/shared/SEOMeta';
 import { motion } from 'framer-motion';
-import { base44 } from '@/api/base44Client';
+import { base44 } from '@/api/humanosClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
