@@ -39,7 +39,7 @@ function DeclarationSection() {
                     <span className="text-xs text-cyan-400/60 tracking-[0.2em] uppercase font-medium">The Declaration</span>
                 </motion.div>
                 <div className="space-y-0 relative rounded-3xl overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#06060a] via-[#0a0a12] to-[#06060a] border border-white/[0.03] rounded-3xl" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#06060a] via-[#0a0a12] to-[#06060a] border border-foreground/[0.03] rounded-3xl" />
                     <div className="relative z-10 p-8 md:p-14">
                         {declarations.map((line, i) => (
                             <motion.div
@@ -47,9 +47,9 @@ function DeclarationSection() {
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                                 transition={{ duration: 0.7, delay: 0.1 + i * 0.12 }}
-                                className={`py-5 md:py-6 border-b border-white/[0.03] last:border-0 ${i === declarations.length - 1 ? 'pt-8' : ''}`}
+                                className={`py-5 md:py-6 border-b border-foreground/[0.03] last:border-0 ${i === declarations.length - 1 ? 'pt-8' : ''}`}
                             >
-                                <p className={`leading-relaxed ${i === declarations.length - 1 ? 'text-cyan-400 font-semibold text-lg md:text-2xl' : 'text-white/50 text-sm md:text-base'}`} style={{ fontFamily: i === declarations.length - 1 ? 'Outfit, Inter, sans-serif' : 'Inter, sans-serif' }}>
+                                <p className={`leading-relaxed ${i === declarations.length - 1 ? 'text-cyan-400 font-semibold text-lg md:text-2xl' : 'text-foreground/50 text-sm md:text-base'}`} style={{ fontFamily: i === declarations.length - 1 ? 'Outfit, Inter, sans-serif' : 'Inter, sans-serif' }}>
                                     {i < declarations.length - 1 && <span className="text-cyan-500/30 font-mono text-xs mr-3">{String(i + 1).padStart(2, '0')}</span>}
                                     {line}
                                 </p>
@@ -81,7 +81,7 @@ function FourLawsSection() {
                             transition={{ duration: 0.6, delay: i * 0.12 }}
                             className="relative group"
                         >
-                            <div className="relative rounded-2xl overflow-hidden glass border border-white/[0.06] hover:border-cyan-500/20 transition-colors duration-500 p-7 md:p-9">
+                            <div className="relative rounded-2xl overflow-hidden glass border border-foreground/[0.06] hover:border-cyan-500/20 transition-colors duration-500 p-7 md:p-9">
                                 <motion.div
                                     className="absolute -top-8 -right-8 w-24 h-24 bg-cyan-400/5 rounded-full blur-2xl"
                                     animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
@@ -89,10 +89,10 @@ function FourLawsSection() {
                                 />
                                 <div className="flex items-start justify-between mb-5">
                                     <law.icon className="w-6 h-6 text-cyan-400/70" />
-                                    <span className="text-4xl font-bold text-white/[0.05]" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{law.number}</span>
+                                    <span className="text-4xl font-bold text-foreground/[0.05]" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{law.number}</span>
                                 </div>
-                                <h3 className="text-lg font-semibold text-white/80 mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{law.title}</h3>
-                                <p className="text-sm text-white/35 leading-relaxed">{law.description}</p>
+                                <h3 className="text-lg font-semibold text-foreground/80 mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{law.title}</h3>
+                                <p className="text-sm text-foreground/35 leading-relaxed">{law.description}</p>
                             </div>
                         </motion.div>
                     ))}
@@ -104,7 +104,7 @@ function FourLawsSection() {
 
 export default function Manifesto() {
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-foreground overflow-x-hidden">
             <SEOMeta
                 title="The hOS Manifesto — Patient Data Rights Declaration"
                 description="A formal declaration of patient data rights. We believe your biological data is yours — not your hospital's, not your insurer's. Read and share the hOS Manifesto by Humanos Foundation."

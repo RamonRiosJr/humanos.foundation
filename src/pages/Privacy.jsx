@@ -42,7 +42,7 @@ const sections = [
 
 export default function Privacy() {
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-foreground overflow-x-hidden">
             <SEOMeta title="Privacy Policy — Humanos Foundation" description="How Humanos Foundation collects, uses, and protects your personal data. GDPR and CCPA compliant. We never sell your data." url="https://humanos.foundation/privacy" noindex={false} />
             <Navbar />
             <PageHero badge="Legal" title="Privacy" titleAccent="Policy" subtitle="We believe in radical transparency — including about how we handle your data." />

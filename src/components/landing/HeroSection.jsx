@@ -33,12 +33,12 @@ export default function HeroSection() {
                     // @ts-ignore — fontFamily is valid in MotionStyle at runtime
                     style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
                 >
-                    <span className="text-white">Your Body.</span>
+                    <span className="text-foreground">Your Body.</span>
                     <br />
                     <span className="gradient-text">Your Data.</span>
                     <br />
-                    <span className="text-white/60">Your</span>{' '}
-                    <span className="text-white">Sovereignty.</span>
+                    <span className="text-foreground/60">Your</span>{' '}
+                    <span className="text-foreground">Sovereignty.</span>
                 </motion.h1>
 
                 {/* Subheadline */}
@@ -46,7 +46,7 @@ export default function HeroSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.4 }}
-                    className="text-sm md:text-lg text-white/40 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed font-light"
+                    className="text-sm md:text-lg text-foreground/40 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed font-light"
                 >
                     hOS is the revolution in patient data sovereignty — a human-first operating
                     system that puts you in command of every signal your body generates.
@@ -60,7 +60,7 @@ export default function HeroSection() {
                 >
                     <Link
                         to="/Join"
-                        className="glow-btn relative inline-flex px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-white font-semibold text-sm md:text-base tracking-wide group"
+                        className="glow-btn relative inline-flex px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-foreground font-semibold text-sm md:text-base tracking-wide group"
                     >
                         <span className="relative z-10 flex items-center gap-2">
                             Take Command of Your Health
@@ -89,7 +89,7 @@ export default function HeroSection() {
                     animate={{ y: [0, 8, 0] }}
                     transition={{ duration: 2, repeat: Infinity }}
                 >
-                    <ChevronDown className="w-5 h-5 text-white/20" />
+                    <ChevronDown className="w-5 h-5 text-foreground/20" />
                 </motion.div>
             </motion.div>
         </section>

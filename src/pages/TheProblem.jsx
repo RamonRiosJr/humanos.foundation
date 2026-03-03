@@ -23,7 +23,7 @@ export default function TheProblem() {
     const isInView = useInView(ref, { once: true, margin: '-80px' });
 
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-foreground overflow-x-hidden">
             <SEOMeta
                 title="The Health Data Crisis — Why the System is Broken"
                 description="1 in 3 Americans has had health data breached. Your EHR is worth $250 on the open market — you get $0. Here's why the health data system is fundamentally broken and what we're doing about it."
@@ -34,7 +34,7 @@ export default function TheProblem() {
                 badge="The Crisis"
                 title="The Health Data"
                 titleAccent="Crisis"
-                subtitle={<span key="st">The healthcare data system is fundamentally broken — <Link to="/Origin" className="text-white hover:text-white/80 underline underline-offset-4 decoration-white/30">not by accident</Link>, but by design. Here's what patients are up against.</span>}
+                subtitle={<span key="st">The healthcare data system is fundamentally broken — <Link to="/Origin" className="text-foreground hover:text-foreground/80 underline underline-offset-4 decoration-white/30">not by accident</Link>, but by design. Here's what patients are up against.</span>}
             />
 
             <section ref={ref} className="pb-16 px-4 md:px-8">
@@ -50,7 +50,7 @@ export default function TheProblem() {
                         <div className="relative z-10">
                             <AlertTriangle className="w-10 h-10 text-red-400/60 mx-auto mb-5" />
                             <p className="text-4xl md:text-6xl font-bold text-red-400/80 mb-3" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>$6.2B</p>
-                            <p className="text-sm text-white/40 max-w-lg mx-auto">
+                            <p className="text-sm text-foreground/40 max-w-lg mx-auto">
                                 Lost annually due to healthcare data inefficiencies. Meanwhile, patients bear the cost — in money, time, and health outcomes.
                             </p>
                         </div>
@@ -64,17 +64,17 @@ export default function TheProblem() {
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                                className="glass rounded-2xl p-6 md:p-7 border border-white/[0.04] hover:border-red-500/15 transition-all duration-500 group"
+                                className="glass rounded-2xl p-6 md:p-7 border border-foreground/[0.04] hover:border-red-500/15 transition-all duration-500 group"
                             >
                                 <div className="flex items-start justify-between mb-4">
                                     <problem.icon className="w-5 h-5 text-red-400/50 group-hover:text-red-400/70 transition-colors" />
                                     <div className="text-right">
                                         <p className="text-xl font-bold text-red-400/70" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{problem.stat}</p>
-                                        <p className="text-[9px] text-white/20 max-w-[100px] leading-tight">{problem.statLabel}</p>
+                                        <p className="text-[9px] text-foreground/20 max-w-[100px] leading-tight">{problem.statLabel}</p>
                                     </div>
                                 </div>
-                                <h3 className="text-sm font-semibold text-white/70 mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{problem.title}</h3>
-                                <p className="text-xs text-white/30 leading-relaxed">{problem.description}</p>
+                                <h3 className="text-sm font-semibold text-foreground/70 mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{problem.title}</h3>
+                                <p className="text-xs text-foreground/30 leading-relaxed">{problem.description}</p>
                             </motion.div>
                         ))}
                     </div>

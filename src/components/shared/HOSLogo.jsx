@@ -99,13 +99,13 @@ export default function HOSLogo({ size = 36, variant = 'full', className = '', a
     const wordmark = variant === 'full' && (
         <div className="flex flex-col leading-none gap-0.5">
             <span
-                className={`font-bold text-white tracking-tight leading-none ${wc.name}`}
+                className={`font-bold text-foreground tracking-tight leading-none ${wc.name}`}
                 style={{ fontFamily: 'Outfit, Inter, sans-serif', letterSpacing: '-0.03em' }}
             >
                 hOS
             </span>
             <span
-                className={`text-white/30 font-medium tracking-[0.15em] uppercase leading-none ${wc.sub}`}
+                className={`text-foreground/30 font-medium tracking-[0.15em] uppercase leading-none ${wc.sub}`}
                 style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
             >
                 Human Operating System

@@ -21,13 +21,13 @@ export default function HomeStats() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.7, delay: i * 0.12 }}
-                        className="glass rounded-2xl p-5 md:p-7 group hover:border-cyan-500/20 transition-all duration-500 border border-white/[0.04]"
+                        className="glass rounded-2xl p-5 md:p-7 group hover:border-cyan-500/20 transition-all duration-500 border border-foreground/[0.04]"
                     >
                         <p className="text-3xl md:text-4xl font-bold gradient-text mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>
                             {stat.value}
                         </p>
-                        <p className="text-xs md:text-sm font-semibold text-white/60 mb-1">{stat.label}</p>
-                        <p className="text-[10px] md:text-xs text-white/25 leading-relaxed">{stat.sub}</p>
+                        <p className="text-xs md:text-sm font-semibold text-foreground/60 mb-1">{stat.label}</p>
+                        <p className="text-[10px] md:text-xs text-foreground/25 leading-relaxed">{stat.sub}</p>
                     </motion.div>
                 ))}
             </div>

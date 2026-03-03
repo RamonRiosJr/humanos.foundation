@@ -45,11 +45,11 @@ const faqs = [
 function FAQItem({ question, answer }) {
     const [open, setOpen] = useState(false);
     return (
-        <div className="border border-white/[0.04] rounded-2xl overflow-hidden hover:border-white/[0.07] transition-colors duration-300">
+        <div className="border border-foreground/[0.04] rounded-2xl overflow-hidden hover:border-foreground/[0.07] transition-colors duration-300">
             <button onClick={() => setOpen(!open)} className="w-full flex items-center justify-between px-6 py-5 text-left gap-4">
-                <span className="text-sm font-medium text-white/65 leading-snug">{question}</span>
+                <span className="text-sm font-medium text-foreground/65 leading-snug">{question}</span>
                 <motion.div animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2 }}>
-                    <ChevronDown className="w-4 h-4 text-white/25 shrink-0" />
+                    <ChevronDown className="w-4 h-4 text-foreground/25 shrink-0" />
                 </motion.div>
             </button>
             <AnimatePresence>
@@ -60,8 +60,8 @@ function FAQItem({ question, answer }) {
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.25 }}
                     >
-                        <div className="px-6 pb-5 border-t border-white/[0.04] pt-4">
-                            <p className="text-sm text-white/35 leading-relaxed">{answer}</p>
+                        <div className="px-6 pb-5 border-t border-foreground/[0.04] pt-4">
+                            <p className="text-sm text-foreground/35 leading-relaxed">{answer}</p>
                         </div>
                     </motion.div>
                 )}
@@ -72,7 +72,7 @@ function FAQItem({ question, answer }) {
 
 export default function FAQ() {
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-foreground overflow-x-hidden">
             <SEOMeta
                 title="FAQ — Patient Data Rights, hOS Movement & Health Sovereignty"
                 description="Answers to common questions about the hOS movement, patient data ownership, HIPAA, zero-knowledge architecture, FHIR, and how to get involved with Humanos Foundation."

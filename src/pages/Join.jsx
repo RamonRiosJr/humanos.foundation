@@ -54,7 +54,7 @@ export default function Join() {
     };
 
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-foreground overflow-x-hidden">
             <SEOMeta
                 title="Join the hOS Movement — Health Data Sovereignty for All"
                 description="Join patients, clinicians, technologists, researchers, and advocates fighting for health data sovereignty. This is not a product waitlist — it's a movement. Sign up at Humanos Foundation."
@@ -91,7 +91,7 @@ export default function Join() {
                                     <CheckCircle2 className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
                                 </motion.div>
                                 <h2 className="text-2xl font-bold mb-3" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Welcome to the Movement</h2>
-                                <p className="text-white/40 text-sm leading-relaxed mb-4">
+                                <p className="text-foreground/40 text-sm leading-relaxed mb-4">
                                     You're now part of something much larger than any single app or product. We'll be in touch.
                                 </p>
                                 <p className="text-xs text-cyan-400/50">Watch for an email from hello@humanos.foundation</p>
@@ -103,7 +103,7 @@ export default function Join() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6 }}
                                 onSubmit={handleSubmit}
-                                className="glass-strong rounded-3xl p-8 md:p-12 border border-white/[0.05] space-y-6"
+                                className="glass-strong rounded-3xl p-8 md:p-12 border border-foreground/[0.05] space-y-6"
                             >
                                 {/* Spam Protection Honeypot - Invisible to users, filled by bots */}
                                 <input
@@ -117,31 +117,31 @@ export default function Join() {
                                 />
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     <div>
-                                        <label className="text-xs text-white/40 uppercase tracking-wider mb-2 block">Full Name *</label>
+                                        <label className="text-xs text-foreground/40 uppercase tracking-wider mb-2 block">Full Name *</label>
                                         <input
                                             required
                                             type="text"
                                             value={form.name}
                                             onChange={e => setForm({ ...form, name: e.target.value })}
                                             placeholder="Your name"
-                                            className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
+                                            className="w-full glass rounded-xl px-4 py-3 text-sm text-foreground placeholder-foreground/20 border border-foreground/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
                                         />
                                     </div>
                                     <div>
-                                        <label className="text-xs text-white/40 uppercase tracking-wider mb-2 block">Email *</label>
+                                        <label className="text-xs text-foreground/40 uppercase tracking-wider mb-2 block">Email *</label>
                                         <input
                                             required
                                             type="email"
                                             value={form.email}
                                             onChange={e => setForm({ ...form, email: e.target.value })}
                                             placeholder="you@example.com"
-                                            className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
+                                            className="w-full glass rounded-xl px-4 py-3 text-sm text-foreground placeholder-foreground/20 border border-foreground/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
                                         />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label className="text-xs text-white/40 uppercase tracking-wider mb-3 block">I am a...</label>
+                                    <label className="text-xs text-foreground/40 uppercase tracking-wider mb-3 block">I am a...</label>
                                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
                                         {roles.map((role) => (
                                             <button
@@ -150,7 +150,7 @@ export default function Join() {
                                                 onClick={() => setForm({ ...form, role: role.value })}
                                                 className={`flex flex-col items-center gap-2 p-3 rounded-xl text-xs transition-all duration-300 border ${form.role === role.value
                                                     ? 'bg-cyan-500/10 border-cyan-500/40 text-cyan-400'
-                                                    : 'glass border-white/[0.05] text-white/30 hover:text-white/50 hover:border-white/10'
+                                                    : 'glass border-foreground/[0.05] text-foreground/30 hover:text-foreground/50 hover:border-foreground/10'
                                                     }`}
                                             >
                                                 <role.icon className="w-4 h-4" />
@@ -161,17 +161,17 @@ export default function Join() {
                                 </div>
 
                                 <div>
-                                    <label className="text-xs text-white/40 uppercase tracking-wider mb-2 block">Why does this matter to you? (optional)</label>
+                                    <label className="text-xs text-foreground/40 uppercase tracking-wider mb-2 block">Why does this matter to you? (optional)</label>
                                     <textarea
                                         value={form.reason}
                                         onChange={e => setForm({ ...form, reason: e.target.value })}
                                         rows={3}
                                         placeholder="Share your story or reason for joining..."
-                                        className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent resize-none"
+                                        className="w-full glass rounded-xl px-4 py-3 text-sm text-foreground placeholder-foreground/20 border border-foreground/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent resize-none"
                                     />
                                 </div>
 
-                                <div className="space-y-3 pt-2 border-t border-white/[0.04]">
+                                <div className="space-y-3 pt-2 border-t border-foreground/[0.04]">
                                     {[
                                         { key: 'newsletter', label: 'Keep me informed — send me the movement newsletter' },
                                         { key: 'volunteer', label: 'I want to volunteer / contribute to the movement' },
@@ -179,12 +179,12 @@ export default function Join() {
                                         <label key={opt.key} className="flex items-center gap-3 cursor-pointer group">
                                             <div
                                                 onClick={() => setForm({ ...form, [opt.key]: !form[opt.key] })}
-                                                className={`w-5 h-5 rounded-md border transition-all duration-300 flex items-center justify-center shrink-0 ${form[opt.key] ? 'bg-cyan-500/20 border-cyan-500/50' : 'border-white/10 group-hover:border-white/20'
+                                                className={`w-5 h-5 rounded-md border transition-all duration-300 flex items-center justify-center shrink-0 ${form[opt.key] ? 'bg-cyan-500/20 border-cyan-500/50' : 'border-foreground/10 group-hover:border-foreground/20'
                                                     }`}
                                             >
                                                 {form[opt.key] && <CheckCircle2 className="w-3 h-3 text-cyan-400" />}
                                             </div>
-                                            <span className="text-sm text-white/35 group-hover:text-white/50 transition-colors">{opt.label}</span>
+                                            <span className="text-sm text-foreground/35 group-hover:text-foreground/50 transition-colors">{opt.label}</span>
                                         </label>
                                     ))}
                                 </div>
@@ -192,12 +192,12 @@ export default function Join() {
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className="w-full glow-btn py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-white font-semibold text-sm tracking-wide disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                                    className="w-full glow-btn py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-foreground font-semibold text-sm tracking-wide disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                                 >
                                     {loading ? 'Joining...' : 'Join the Movement →'}
                                 </button>
 
-                                <p className="text-[11px] text-white/15 text-center leading-relaxed">
+                                <p className="text-[11px] text-foreground/15 text-center leading-relaxed">
                                     No spam. No product pitches. Just the movement. Unsubscribe anytime.
                                 </p>
                             </motion.form>

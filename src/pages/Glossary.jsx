@@ -34,7 +34,7 @@ export default function Glossary() {
     );
 
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-foreground overflow-x-hidden">
             <SEOMeta
                 title="Health Data Glossary — FHIR, HIPAA, PHI, Zero-Knowledge & More"
                 description="Plain-language definitions for FHIR, HIPAA, PHI, EHR, zero-knowledge architecture, GDPR, CCPA, patient sovereignty, and other key terms in the health data rights movement."
@@ -49,7 +49,7 @@ export default function Glossary() {
                         value={filter}
                         onChange={e => setFilter(e.target.value)}
                         placeholder="Search terms..."
-                        className="w-full glass rounded-xl px-5 py-3.5 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent mb-10"
+                        className="w-full glass rounded-xl px-5 py-3.5 text-sm text-foreground placeholder-foreground/20 border border-foreground/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent mb-10"
                     />
                     <div className="space-y-4">
                         {filtered.map((item, i) => (
@@ -59,16 +59,16 @@ export default function Glossary() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: i * 0.03 }}
-                                className="glass rounded-2xl p-6 border border-white/[0.04] hover:border-cyan-500/15 transition-all duration-400"
+                                className="glass rounded-2xl p-6 border border-foreground/[0.04] hover:border-cyan-500/15 transition-all duration-400"
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-500/5 border border-cyan-500/20 flex items-center justify-center">
                                         <span className="text-xs font-bold text-cyan-400/70 font-mono">{item.term.slice(0, 4)}</span>
                                     </div>
                                     <div>
-                                        <h3 className="text-sm font-semibold text-white/75 mb-0.5" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{item.term}</h3>
+                                        <h3 className="text-sm font-semibold text-foreground/75 mb-0.5" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{item.term}</h3>
                                         <p className="text-xs text-cyan-400/40 mb-2">{item.full}</p>
-                                        <p className="text-sm text-white/35 leading-relaxed">{item.definition}</p>
+                                        <p className="text-sm text-foreground/35 leading-relaxed">{item.definition}</p>
                                     </div>
                                 </div>
                             </motion.div>

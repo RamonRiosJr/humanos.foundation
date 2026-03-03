@@ -78,8 +78,8 @@ export default function Manifestos() {
                         <button
                             onClick={() => setActiveTab('manifesto')}
                             className={`px-5 md:px-8 py-2.5 rounded-full text-xs md:text-sm font-medium transition-all duration-300 ${activeTab === 'manifesto'
-                                    ? 'bg-white/10 text-cyan-400 shadow-lg shadow-cyan-500/10'
-                                    : 'text-white/30 hover:text-white/50'
+                                    ? 'bg-foreground/10 text-cyan-400 shadow-lg shadow-cyan-500/10'
+                                    : 'text-foreground/30 hover:text-foreground/50'
                                 }`}
                         >
                             <span className="flex items-center gap-2">
@@ -90,8 +90,8 @@ export default function Manifestos() {
                         <button
                             onClick={() => setActiveTab('laws')}
                             className={`px-5 md:px-8 py-2.5 rounded-full text-xs md:text-sm font-medium transition-all duration-300 ${activeTab === 'laws'
-                                    ? 'bg-white/10 text-cyan-400 shadow-lg shadow-cyan-500/10'
-                                    : 'text-white/30 hover:text-white/50'
+                                    ? 'bg-foreground/10 text-cyan-400 shadow-lg shadow-cyan-500/10'
+                                    : 'text-foreground/30 hover:text-foreground/50'
                                 }`}
                         >
                             <span className="flex items-center gap-2">
@@ -115,7 +115,7 @@ export default function Manifestos() {
                         >
                             {/* Deep obsidian background */}
                             <div className="absolute inset-0 bg-gradient-to-br from-[#06060a] via-[#0a0a12] to-[#06060a]" />
-                            <div className="absolute inset-0 border border-white/[0.03] rounded-3xl" />
+                            <div className="absolute inset-0 border border-foreground/[0.03] rounded-3xl" />
 
                             <div className="relative z-10 p-8 md:p-16">
                                 <div className="max-w-3xl mx-auto space-y-0">
@@ -125,12 +125,12 @@ export default function Manifestos() {
                                             initial={{ opacity: 0, x: -30 }}
                                             animate={isInView ? { opacity: 1, x: 0 } : {}}
                                             transition={{ duration: 0.8, delay: 0.3 + i * 0.15 }}
-                                            className="py-5 md:py-6 border-b border-white/[0.03] last:border-0"
+                                            className="py-5 md:py-6 border-b border-foreground/[0.03] last:border-0"
                                         >
                                             <p
                                                 className={`text-base md:text-xl leading-relaxed ${i === manifestoLines.length - 1
                                                         ? 'text-cyan-400 font-semibold text-lg md:text-2xl'
-                                                        : 'text-white/50'
+                                                        : 'text-foreground/50'
                                                     }`}
                                                 style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
                                             >
@@ -162,7 +162,7 @@ export default function Manifestos() {
                                         <div className="relative rounded-2xl overflow-hidden">
                                             {/* Light ethereal bg */}
                                             <div className="absolute inset-0 bg-gradient-to-br from-white/[0.06] to-white/[0.02]" />
-                                            <div className="absolute inset-0 border border-white/[0.06] rounded-2xl group-hover:border-cyan-500/20 transition-colors duration-500" />
+                                            <div className="absolute inset-0 border border-foreground/[0.06] rounded-2xl group-hover:border-cyan-500/20 transition-colors duration-500" />
 
                                             {/* Pulsing icon glow */}
                                             <motion.div
@@ -175,19 +175,19 @@ export default function Manifestos() {
                                                 <div className="flex items-start justify-between mb-4">
                                                     <law.icon className="w-6 h-6 text-cyan-400/70" />
                                                     <span
-                                                        className="text-3xl md:text-4xl font-bold text-white/[0.06]"
+                                                        className="text-3xl md:text-4xl font-bold text-foreground/[0.06]"
                                                         style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
                                                     >
                                                         {law.number}
                                                     </span>
                                                 </div>
                                                 <h3
-                                                    className="text-lg md:text-xl font-semibold text-white/80 mb-2"
+                                                    className="text-lg md:text-xl font-semibold text-foreground/80 mb-2"
                                                     style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
                                                 >
                                                     {law.title}
                                                 </h3>
-                                                <p className="text-sm text-white/35 leading-relaxed">
+                                                <p className="text-sm text-foreground/35 leading-relaxed">
                                                     {law.description}
                                                 </p>
                                             </div>

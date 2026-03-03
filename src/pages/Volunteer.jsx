@@ -31,7 +31,7 @@ export default function Volunteer() {
     };
 
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-foreground overflow-x-hidden">
             <SEOMeta title="Volunteer for the hOS Movement — Humanos Foundation" description="Contribute to the health data sovereignty movement as a developer, writer, translator, advocate, researcher, or community leader. Volunteer with Humanos Foundation." url="https://humanos.foundation/volunteer" />
             <Navbar />
             <PageHero badge="Get Involved" title="Volunteer for" titleAccent="the Movement" subtitle="The hOS movement is built by volunteers who believe health data sovereignty is worth fighting for. Find your role." />
@@ -41,11 +41,11 @@ export default function Volunteer() {
                         {roles.map((role, i) => (
                             <motion.button key={role.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.07 }}
                                 onClick={() => setSelectedRole(role.title)}
-                                className={`glass rounded-2xl p-6 border text-left transition-all duration-300 group ${selectedRole === role.title ? 'border-cyan-500/40 bg-cyan-500/5' : 'border-white/[0.04] hover:border-cyan-500/15'}`}
+                                className={`glass rounded-2xl p-6 border text-left transition-all duration-300 group ${selectedRole === role.title ? 'border-cyan-500/40 bg-cyan-500/5' : 'border-foreground/[0.04] hover:border-cyan-500/15'}`}
                             >
-                                <role.icon className={`w-5 h-5 mb-3 transition-colors ${selectedRole === role.title ? 'text-cyan-400' : 'text-white/30 group-hover:text-cyan-400/50'}`} />
-                                <h3 className="text-sm font-semibold text-white/70 mb-1" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{role.title}</h3>
-                                <p className="text-xs text-white/30">{role.desc}</p>
+                                <role.icon className={`w-5 h-5 mb-3 transition-colors ${selectedRole === role.title ? 'text-cyan-400' : 'text-foreground/30 group-hover:text-cyan-400/50'}`} />
+                                <h3 className="text-sm font-semibold text-foreground/70 mb-1" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{role.title}</h3>
+                                <p className="text-xs text-foreground/30">{role.desc}</p>
                             </motion.button>
                         ))}
                     </div>
@@ -56,28 +56,28 @@ export default function Volunteer() {
                                 <motion.div key="success" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="glass-strong rounded-3xl p-12 text-center border border-cyan-500/20">
                                     <CheckCircle2 className="w-14 h-14 text-cyan-400 mx-auto mb-5" />
                                     <h2 className="text-xl font-bold mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Welcome, Volunteer</h2>
-                                    <p className="text-white/35 text-sm">We'll be in touch with next steps. Thank you for believing in the mission.</p>
+                                    <p className="text-foreground/35 text-sm">We'll be in touch with next steps. Thank you for believing in the mission.</p>
                                 </motion.div>
                             ) : (
-                                <motion.form key="form" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} onSubmit={handleSubmit} className="glass-strong rounded-3xl p-8 border border-white/[0.05] space-y-5">
-                                    <h3 className="text-base font-semibold text-white/60 mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>
+                                <motion.form key="form" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} onSubmit={handleSubmit} className="glass-strong rounded-3xl p-8 border border-foreground/[0.05] space-y-5">
+                                    <h3 className="text-base font-semibold text-foreground/60 mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>
                                         {selectedRole ? `Applying as: ${selectedRole}` : 'Tell us about yourself'}
                                     </h3>
                                     {[{ key: 'name', label: 'Full Name', type: 'text', required: true },
                                     { key: 'email', label: 'Email', type: 'email', required: true }].map(f => (
                                         <div key={f.key}>
-                                            <label className="text-xs text-white/40 uppercase tracking-wider mb-2 block">{f.label} {f.required && '*'}</label>
+                                            <label className="text-xs text-foreground/40 uppercase tracking-wider mb-2 block">{f.label} {f.required && '*'}</label>
                                             <input required={f.required} type={f.type} value={form[f.key]} onChange={e => setForm({ ...form, [f.key]: e.target.value })}
-                                                className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent" />
+                                                className="w-full glass rounded-xl px-4 py-3 text-sm text-foreground placeholder-foreground/20 border border-foreground/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent" />
                                         </div>
                                     ))}
                                     <div>
-                                        <label className="text-xs text-white/40 uppercase tracking-wider mb-2 block">Why do you want to volunteer?</label>
+                                        <label className="text-xs text-foreground/40 uppercase tracking-wider mb-2 block">Why do you want to volunteer?</label>
                                         <textarea value={form.reason} onChange={e => setForm({ ...form, reason: e.target.value })} rows={3}
                                             placeholder="Your motivation, skills, or experience..."
-                                            className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent resize-none" />
+                                            className="w-full glass rounded-xl px-4 py-3 text-sm text-foreground placeholder-foreground/20 border border-foreground/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent resize-none" />
                                     </div>
-                                    <button type="submit" disabled={loading} className="w-full glow-btn py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-white font-semibold text-sm tracking-wide disabled:opacity-50">
+                                    <button type="submit" disabled={loading} className="w-full glow-btn py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-foreground font-semibold text-sm tracking-wide disabled:opacity-50">
                                         {loading ? 'Submitting...' : 'Join the Volunteer Network →'}
                                     </button>
                                 </motion.form>

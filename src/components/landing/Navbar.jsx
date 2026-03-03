@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import HOSLogo from '../shared/HOSLogo';
+import ThemeToggle from '../shared/ThemeToggle';
 
 const navLinks = [
     { label: 'Origin', href: createPageUrl('Origin') },
@@ -42,7 +43,7 @@ export default function Navbar() {
 
                     <div className="hidden lg:flex items-center gap-6">
                         {navLinks.map((link) => (
-                            <Link key={link.label} to={link.href} className="text-xs text-white/35 hover:text-cyan-400/80 transition-colors duration-300 tracking-wider uppercase font-medium">
+                            <Link key={link.label} to={link.href} className="text-xs text-foreground/35 hover:text-cyan-400/80 transition-colors duration-300 tracking-wider uppercase font-medium">
                                 {link.label}
                             </Link>
                         ))}
@@ -57,11 +58,15 @@ export default function Navbar() {
                         <Link to={createPageUrl('Join')} className="px-5 py-2 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-xs text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 font-medium">
                             Join the Movement
                         </Link>
+                        <ThemeToggle />
                     </div>
 
-                    <button className="lg:hidden text-white/40 hover:text-white/60 transition-colors" onClick={() => setMenuOpen(!menuOpen)}>
-                        {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-                    </button>
+                    <div className="flex items-center gap-3 lg:hidden">
+                        <ThemeToggle />
+                        <button className="text-foreground/40 hover:text-foreground/60 transition-colors" onClick={() => setMenuOpen(!menuOpen)}>
+                            {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                        </button>
+                    </div>
                 </div>
 
                 <AnimatePresence>
@@ -74,7 +79,7 @@ export default function Navbar() {
                             className="lg:hidden glass-strong rounded-2xl mt-2 p-4 space-y-1"
                         >
                             {navLinks.map((link) => (
-                                <Link key={link.label} to={link.href} onClick={() => setMenuOpen(false)} className="block px-4 py-3 text-sm text-white/40 hover:text-cyan-400 transition-colors rounded-xl hover:bg-white/[0.03]">
+                                <Link key={link.label} to={link.href} onClick={() => setMenuOpen(false)} className="block px-4 py-3 text-sm text-foreground/40 hover:text-cyan-400 transition-colors rounded-xl hover:bg-foreground/[0.03]">
                                     {link.label}
                                 </Link>
                             ))}

@@ -36,7 +36,7 @@ export default function Blog() {
     const filtered = activeCategory === 'All' ? posts : posts.filter(p => p.category === activeCategory);
 
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-foreground overflow-x-hidden">
             <SEOMeta
                 title="Blog — Health Data Rights, Patient Sovereignty & Policy | Humanos Foundation"
                 description="Thought leadership on patient data ownership, health privacy, HIPAA, zero-knowledge architecture, and the movement for health data sovereignty. Written for patients, advocates, and technologists."
@@ -61,7 +61,7 @@ export default function Blog() {
                                 onClick={() => setActiveCategory(cat)}
                                 className={`px-4 py-2 rounded-full text-xs font-medium transition-all duration-300 border ${activeCategory === cat
                                     ? 'bg-cyan-500/10 border-cyan-500/40 text-cyan-400'
-                                    : 'glass border-white/[0.05] text-white/30 hover:text-white/50 hover:border-white/10'
+                                    : 'glass border-foreground/[0.05] text-foreground/30 hover:text-foreground/50 hover:border-foreground/10'
                                     }`}
                             >
                                 {cat}
@@ -72,18 +72,18 @@ export default function Blog() {
                     {loading ? (
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                             {[...Array(6)].map((_, i) => (
-                                <div key={i} className="glass rounded-2xl p-6 animate-pulse border border-white/[0.04]">
-                                    <div className="h-3 bg-white/5 rounded mb-4 w-1/3" />
-                                    <div className="h-5 bg-white/5 rounded mb-3" />
-                                    <div className="h-5 bg-white/5 rounded mb-3 w-2/3" />
-                                    <div className="h-16 bg-white/5 rounded mt-4" />
+                                <div key={i} className="glass rounded-2xl p-6 animate-pulse border border-foreground/[0.04]">
+                                    <div className="h-3 bg-foreground/5 rounded mb-4 w-1/3" />
+                                    <div className="h-5 bg-foreground/5 rounded mb-3" />
+                                    <div className="h-5 bg-foreground/5 rounded mb-3 w-2/3" />
+                                    <div className="h-16 bg-foreground/5 rounded mt-4" />
                                 </div>
                             ))}
                         </div>
                     ) : filtered.length === 0 ? (
                         <div className="text-center py-24">
-                            <p className="text-white/25 text-sm">No posts yet in this category.</p>
-                            <p className="text-xs text-white/15 mt-2">Check back soon — the movement is growing.</p>
+                            <p className="text-foreground/25 text-sm">No posts yet in this category.</p>
+                            <p className="text-xs text-foreground/15 mt-2">Check back soon — the movement is growing.</p>
                         </div>
                     ) : (
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -93,21 +93,21 @@ export default function Blog() {
                                     initial={{ opacity: 0, y: 25 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: i * 0.07 }}
-                                    className="glass rounded-2xl p-6 border border-white/[0.04] hover:border-cyan-500/20 transition-all duration-500 group flex flex-col"
+                                    className="glass rounded-2xl p-6 border border-foreground/[0.04] hover:border-cyan-500/20 transition-all duration-500 group flex flex-col"
                                 >
                                     {post.category && (
-                                        <span className={`inline-flex items-center gap-1 text-[10px] font-medium px-2 py-1 rounded-full border w-fit mb-4 ${categoryColors[post.category] || 'text-white/30 bg-white/5 border-white/10'}`}>
+                                        <span className={`inline-flex items-center gap-1 text-[10px] font-medium px-2 py-1 rounded-full border w-fit mb-4 ${categoryColors[post.category] || 'text-foreground/30 bg-foreground/5 border-foreground/10'}`}>
                                             <Tag className="w-2.5 h-2.5" />
                                             {post.category}
                                         </span>
                                     )}
-                                    <h3 className="text-base font-semibold text-white/80 mb-2 flex-1 leading-snug group-hover:text-white transition-colors" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>
+                                    <h3 className="text-base font-semibold text-foreground/80 mb-2 flex-1 leading-snug group-hover:text-foreground transition-colors" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>
                                         {post.title}
                                     </h3>
-                                    {post.excerpt && <p className="text-xs text-white/30 leading-relaxed mb-4 line-clamp-3">{post.excerpt}</p>}
-                                    <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.04]">
+                                    {post.excerpt && <p className="text-xs text-foreground/30 leading-relaxed mb-4 line-clamp-3">{post.excerpt}</p>}
+                                    <div className="flex items-center justify-between mt-auto pt-4 border-t border-foreground/[0.04]">
                                         {post.read_time_minutes && (
-                                            <span className="flex items-center gap-1 text-[10px] text-white/20">
+                                            <span className="flex items-center gap-1 text-[10px] text-foreground/20">
                                                 <Clock className="w-3 h-3" />
                                                 {post.read_time_minutes} min read
                                             </span>

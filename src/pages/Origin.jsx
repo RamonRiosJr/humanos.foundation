@@ -39,11 +39,11 @@ function ValuesGrid() {
                             initial={{ opacity: 0, y: 25 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.6, delay: i * 0.1 }}
-                            className="glass rounded-2xl p-6 md:p-7 border border-white/[0.04] hover:border-cyan-500/20 transition-all duration-500 group"
+                            className="glass rounded-2xl p-6 md:p-7 border border-foreground/[0.04] hover:border-cyan-500/20 transition-all duration-500 group"
                         >
                             <v.icon className="w-5 h-5 text-cyan-400/60 mb-4 group-hover:text-cyan-400 transition-colors duration-300" />
-                            <h3 className="text-base font-semibold text-white/80 mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{v.title}</h3>
-                            <p className="text-sm text-white/35 leading-relaxed">{v.description}</p>
+                            <h3 className="text-base font-semibold text-foreground/80 mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{v.title}</h3>
+                            <p className="text-sm text-foreground/35 leading-relaxed">{v.description}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -54,7 +54,7 @@ function ValuesGrid() {
 
 export default function Origin() {
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-foreground overflow-x-hidden">
             <SEOMeta
                 title="Origin Story — Ramon Luis Rios Jr. & the hOS Movement"
                 description="hOS was built in a motel room by Ramon Luis Rios Jr., a patient who refused to accept a broken healthcare system. The origin story of Humanos Foundation and the health data sovereignty movement."

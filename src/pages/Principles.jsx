@@ -65,7 +65,7 @@ export default function Principles() {
     const isInView = useInView(ref, { once: true, margin: '-80px' });
 
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-foreground overflow-x-hidden">
             <SEOMeta
                 title="Our Principles — Zero-Knowledge, Local-First, Patient-First | Humanos Foundation"
                 description="The non-negotiable principles behind the hOS movement: patient-first architecture, zero-knowledge encryption, local-first computing, radical transparency, open standards, and health equity by design."
@@ -86,21 +86,21 @@ export default function Principles() {
                             initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
                             animate={isInView ? { opacity: 1, x: 0 } : {}}
                             transition={{ duration: 0.7, delay: i * 0.1 }}
-                            className={`relative rounded-2xl p-6 md:p-9 border border-white/[0.04] ${p.border} transition-all duration-500 overflow-hidden group`}
+                            className={`relative rounded-2xl p-6 md:p-9 border border-foreground/[0.04] ${p.border} transition-all duration-500 overflow-hidden group`}
                         >
                             <div className={`absolute inset-0 bg-gradient-to-br ${p.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                             <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-5 md:gap-10">
                                 <div className="shrink-0">
-                                    <div className="w-12 h-12 rounded-2xl glass border border-white/[0.06] flex items-center justify-center">
+                                    <div className="w-12 h-12 rounded-2xl glass border border-foreground/[0.06] flex items-center justify-center">
                                         <p.icon className="w-5 h-5 text-cyan-400/60" />
                                     </div>
                                 </div>
                                 <div className="flex-1">
                                     <div className="flex flex-col md:flex-row md:items-center gap-2 mb-2">
-                                        <h3 className="text-lg font-semibold text-white/80" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{p.title}</h3>
+                                        <h3 className="text-lg font-semibold text-foreground/80" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{p.title}</h3>
                                         <span className="text-xs text-cyan-400/40 md:before:content-['—'] md:before:mr-2 italic">{p.tagline}</span>
                                     </div>
-                                    <p className="text-sm text-white/35 leading-relaxed">{p.description}</p>
+                                    <p className="text-sm text-foreground/35 leading-relaxed">{p.description}</p>
                                 </div>
                             </div>
                         </motion.div>

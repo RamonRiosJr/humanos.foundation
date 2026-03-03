@@ -27,8 +27,8 @@ export default function HeroDashboard() {
                         </span>
                     </div>
                     <div className="flex gap-1.5">
-                        <div className="w-2 h-2 rounded-full bg-white/10" />
-                        <div className="w-2 h-2 rounded-full bg-white/10" />
+                        <div className="w-2 h-2 rounded-full bg-foreground/10" />
+                        <div className="w-2 h-2 rounded-full bg-foreground/10" />
                         <div className="w-2 h-2 rounded-full bg-cyan-400/40" />
                     </div>
                 </div>
@@ -47,10 +47,10 @@ export default function HeroDashboard() {
                                 className="w-4 h-4 md:w-5 md:h-5 mb-2 transition-transform duration-500 group-hover:scale-110"
                                 style={{ color: metric.color }}
                             />
-                            <p className="text-[10px] md:text-xs text-white/40 uppercase tracking-wider mb-1">
+                            <p className="text-[10px] md:text-xs text-foreground/40 uppercase tracking-wider mb-1">
                                 {metric.label}
                             </p>
-                            <p className="text-lg md:text-xl font-semibold text-white">
+                            <p className="text-lg md:text-xl font-semibold text-foreground">
                                 {metric.value}
                             </p>
                         </motion.div>
@@ -62,7 +62,7 @@ export default function HeroDashboard() {
                     <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
                             <Zap className="w-3.5 h-3.5 text-cyan-400" />
-                            <span className="text-xs text-white/40">Bio-Signal Stream</span>
+                            <span className="text-xs text-foreground/40">Bio-Signal Stream</span>
                         </div>
                         <div className="flex items-center gap-1">
                             <TrendingUp className="w-3 h-3 text-emerald-400" />

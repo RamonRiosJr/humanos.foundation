@@ -18,10 +18,10 @@ export default function PageCTA({ title = "Ready to Take Command?", subtitle = "
                     <h2 className="text-2xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>
                         {title}
                     </h2>
-                    <p className="text-sm text-white/35 mb-8 leading-relaxed max-w-xl mx-auto">{subtitle}</p>
+                    <p className="text-sm text-foreground/35 mb-8 leading-relaxed max-w-xl mx-auto">{subtitle}</p>
                     <Link
                         to={ctaHref || createPageUrl('Join')}
-                        className="inline-flex items-center gap-2 glow-btn px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-white font-semibold text-sm tracking-wide"
+                        className="inline-flex items-center gap-2 glow-btn px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-foreground font-semibold text-sm tracking-wide"
                     >
                         {cta} →
                     </Link>

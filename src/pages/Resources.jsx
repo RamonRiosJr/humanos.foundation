@@ -51,7 +51,7 @@ const resourceGroups = [
 
 export default function Resources() {
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-foreground overflow-x-hidden">
             <SEOMeta title="Research & Resources — Health Data Rights, HIPAA, GDPR | Humanos Foundation" description="Curated resources for patients, advocates, researchers, and technologists: regulatory references, patient advocacy organizations, academic research, and open-source health projects." url="https://humanos.foundation/resources" />
             <Navbar />
             <PageHero badge="Knowledge Base" title="Research &" titleAccent="Resources" subtitle="Curated resources for patients, advocates, researchers, and technologists building toward health data sovereignty." />
@@ -67,13 +67,13 @@ export default function Resources() {
                                 {group.resources.map((res, i) => (
                                     <motion.a key={res.name} href={res.url} target="_blank" rel="noopener noreferrer"
                                         initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.06 }}
-                                        className="glass rounded-2xl p-5 border border-white/[0.04] hover:border-cyan-500/20 transition-all group"
+                                        className="glass rounded-2xl p-5 border border-foreground/[0.04] hover:border-cyan-500/20 transition-all group"
                                     >
                                         <div className="flex items-start justify-between mb-2">
-                                            <p className="text-sm font-medium text-white/60 group-hover:text-white/80 transition-colors leading-snug">{res.name}</p>
-                                            <ExternalLink className="w-3 h-3 text-white/15 group-hover:text-cyan-400/60 transition-colors shrink-0 ml-2 mt-0.5" />
+                                            <p className="text-sm font-medium text-foreground/60 group-hover:text-foreground/80 transition-colors leading-snug">{res.name}</p>
+                                            <ExternalLink className="w-3 h-3 text-foreground/15 group-hover:text-cyan-400/60 transition-colors shrink-0 ml-2 mt-0.5" />
                                         </div>
-                                        <p className="text-xs text-white/25">{res.desc}</p>
+                                        <p className="text-xs text-foreground/25">{res.desc}</p>
                                     </motion.a>
                                 ))}
                             </div>

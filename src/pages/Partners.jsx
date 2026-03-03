@@ -25,7 +25,7 @@ const partnerBenefits = [
 
 export default function Partners() {
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-foreground overflow-x-hidden">
             <SEOMeta title="Partners — Organizations Aligned with Health Data Sovereignty" description="Humanos Foundation partners with healthcare advocacy organizations, academic institutions, and open-source health projects committed to patient data rights." url="https://humanos.foundation/partners" />
             <Navbar />
             <PageHero badge="Collaboration" title="Partners in" titleAccent="Sovereignty" subtitle="We are stronger together. We partner with organizations that share our commitment to patient data rights and health equity." />
@@ -36,13 +36,13 @@ export default function Partners() {
                         <p className="text-xs text-cyan-400/50 uppercase tracking-widest font-medium mb-6">Organizations Aligned With Our Mission</p>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                             {alignedOrgs.map((org, i) => (
-                                <motion.a key={org.name} href={org.url} target="_blank" rel="noopener noreferrer" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} className="glass rounded-2xl p-5 border border-white/[0.04] hover:border-cyan-500/20 transition-all group flex items-start gap-3">
+                                <motion.a key={org.name} href={org.url} target="_blank" rel="noopener noreferrer" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} className="glass rounded-2xl p-5 border border-foreground/[0.04] hover:border-cyan-500/20 transition-all group flex items-start gap-3">
                                     <div className="flex-1">
                                         <div className="flex items-center gap-2 mb-1">
-                                            <p className="text-sm font-medium text-white/60 group-hover:text-white/80 transition-colors">{org.name}</p>
-                                            <ExternalLink className="w-3 h-3 text-white/15 group-hover:text-cyan-400/60 transition-colors" />
+                                            <p className="text-sm font-medium text-foreground/60 group-hover:text-foreground/80 transition-colors">{org.name}</p>
+                                            <ExternalLink className="w-3 h-3 text-foreground/15 group-hover:text-cyan-400/60 transition-colors" />
                                         </div>
-                                        <p className="text-xs text-white/25">{org.desc}</p>
+                                        <p className="text-xs text-foreground/25">{org.desc}</p>
                                     </div>
                                 </motion.a>
                             ))}
@@ -53,20 +53,20 @@ export default function Partners() {
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="glass-strong rounded-3xl p-8 md:p-12 border border-cyan-500/10">
                         <div className="flex items-center gap-3 mb-6">
                             <Handshake className="w-6 h-6 text-cyan-400/60" />
-                            <h2 className="text-xl font-bold text-white/70" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Become a Partner</h2>
+                            <h2 className="text-xl font-bold text-foreground/70" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Become a Partner</h2>
                         </div>
-                        <p className="text-sm text-white/35 leading-relaxed mb-8 max-w-2xl">
+                        <p className="text-sm text-foreground/35 leading-relaxed mb-8 max-w-2xl">
                             We welcome partnerships with healthcare advocacy organizations, academic institutions, open-source health projects, patient communities, NGOs, and mission-aligned companies. We don't partner with organizations that profit from selling patient data.
                         </p>
                         <div className="grid sm:grid-cols-2 gap-3 mb-8">
                             {partnerBenefits.map((b, i) => (
                                 <div key={i} className="flex items-start gap-2">
                                     <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400/50 shrink-0 mt-0.5" />
-                                    <p className="text-xs text-white/40">{b}</p>
+                                    <p className="text-xs text-foreground/40">{b}</p>
                                 </div>
                             ))}
                         </div>
-                        <a href="mailto:partnerships@humanos.foundation" className="inline-flex items-center gap-2 glow-btn px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-sm text-white font-medium">
+                        <a href="mailto:partnerships@humanos.foundation" className="inline-flex items-center gap-2 glow-btn px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-sm text-foreground font-medium">
                             partnerships@humanos.foundation →
                         </a>
                     </motion.div>
