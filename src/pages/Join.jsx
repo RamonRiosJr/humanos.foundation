@@ -85,7 +85,7 @@ export default function Join() {
                         transition={{ duration: 0.7, delay: 0.1 }}
                         className="flex justify-center mb-10"
                     >
-                        <HOSLogo size={96} wordmarkSize="lg" variant="full" asLink={false} className="flex-col text-center gap-4" />
+                        <HOSLogo size={144} wordmarkSize="xl" variant="full" asLink={false} className="flex-col text-center gap-6" />
                     </motion.div>
                     <AnimatePresence mode="wait">
                         {submitted ? (

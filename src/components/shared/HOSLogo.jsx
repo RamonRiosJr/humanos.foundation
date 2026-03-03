@@ -25,7 +25,7 @@ export default function HOSLogo({ size = 36, variant = 'full', className = '', a
             viewBox="0 0 48 48"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="flex-shrink-0"
+            className="flex-shrink-0 transition-transform duration-500 group-hover:scale-110 drop-shadow-none group-hover:drop-shadow-[0_0_25px_rgba(34,211,238,0.6)]"
             aria-label="hOS — Human Operating System"
         >
             <defs>
@@ -45,6 +45,17 @@ export default function HOSLogo({ size = 36, variant = 'full', className = '', a
                     </feMerge>
                 </filter>
             </defs>
+            <style>
+                {`
+                    .group:hover .node-dot-0 { fill: #fca5a5; opacity: 1; }
+                    .group:hover .node-dot-1 { fill: #93c5fd; opacity: 1; }
+                    .group:hover .node-dot-2 { fill: #86efac; opacity: 1; }
+                    .group:hover .node-dot-3 { fill: #fde047; opacity: 1; }
+                    .group:hover .node-dot-4 { fill: #d8b4fe; opacity: 1; }
+                    .group:hover .node-dot-5 { fill: #fdba74; opacity: 1; }
+                    .node-dot { transition: all 0.5s ease-in-out; }
+                `}
+            </style>
 
             {/* Outer hexagon */}
             <path
@@ -68,7 +79,7 @@ export default function HOSLogo({ size = 36, variant = 'full', className = '', a
 
             {/* Node dots */}
             {[[24, 10], [34, 16], [34, 32], [24, 38], [14, 32], [14, 16]].map(([cx, cy], i) => (
-                <circle key={i} cx={cx} cy={cy} r="1.4" fill="url(#hOS-grad-a)" opacity="0.7" />
+                <circle key={i} cx={cx} cy={cy} r="1.4" fill="url(#hOS-grad-a)" opacity="0.7" className={`node-dot node-dot-${i}`} />
             ))}
 
             {/* Center */}
@@ -114,10 +125,10 @@ export default function HOSLogo({ size = 36, variant = 'full', className = '', a
     );
 
     const inner = (
-        <div className={`flex items-center gap-3 group ${className}`}>
+        <div className={`flex items-center gap-3 group cursor-pointer ${className}`}>
             <div className="relative flex-shrink-0">
                 {mark}
-                <div className="absolute inset-0 rounded-full bg-cyan-500/0 group-hover:bg-cyan-500/15 blur-xl transition-all duration-500 -z-10" />
+                <div className="absolute inset-0 rounded-full bg-cyan-500/0 group-hover:bg-cyan-500/20 blur-[20px] transition-all duration-500 -z-10" />
             </div>
             {wordmark}
         </div>
