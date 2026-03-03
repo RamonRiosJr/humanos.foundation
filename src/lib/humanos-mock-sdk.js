@@ -9,33 +9,33 @@ const STORAGE_PREFIX = 'humanos_';
 const CORNERSTONE_POSTS = [
     {
         id: 'post-1',
-        title: 'The Case for Patient Data Sovereignty',
-        excerpt: 'Why your health data is your most valuable asset, and how the current closed-system EHR architectures strip you of ownership.',
-        category: 'Patient Rights',
+        title: 'You Are Not A Standard Deviation',
+        excerpt: 'Why the 5-minute diagnosis is breaking healthcare, and how securing your continuous lived experience is the only way to fight back.',
+        category: 'Patient Empowerment',
         read_time_minutes: 5,
         published: true,
         created_date: '2026-02-15T10:00:00Z',
-        content: '# The Illusion of Ownership\n\nWhen you visit a hospital today, your data is entered into an Electronic Health Record (EHR) system. You might assume that because it is *your* body and *your* diagnosis, the data is *yours*. \n\n**You would be wrong.**\n\nUnder the current paradigm, health data is treated as the proprietary asset of the institution that generated it. Patients are granted "access rights" (often behind clunky portals), but true sovereignty—the ability to move, monetize, or permanently delete that data—is denied.\n\n### Why Sovereignty Matters\n\nWithout sovereignty, your data is monetized by data brokers to the tune of billions of dollars annually. When you switch doctors, the friction of moving records delays life-saving care. The **hOS movement** is fighting to flip this architecture on its head. \n\nWe believe data should live in a secure, patient-owned wallet. Doctors should "request" access, not dictate it. It is time to treat health data as a fundamental human right.'
+        content: '# The 5-Minute Tragedy\n\nYou walk into a clinic. You spend 20 minutes filling out archaic paper clipboards, detailing weeks or months of complex suffering. You wait.\n\nThen, the doctor enters. They have exactly 5 minutes to review your forms, listen to your story, and decide your fate. \n\n**This is not healthcare. This is a billing machine.**\n\nWhen a complex human being is compressed into a 5-minute window, nuance is destroyed. Your lived experience is tossed out the window. You are immediately shoved into a "standardized basket" (ADHD, Bipolar, ASD, etc.) because the system does not have the time—or the financial incentive—to investigate the root cause of your unique suffering.\n\n### The Result: The Medication Gallery\n\nBecause they don\'t understand the root cause, they drug the symptom. When that pill causes a side effect, they prescribe a second pill. You become a walking medication gallery. Your thoughts change. Your body breaks down. You face forced disability, all because the system refused to take the time to *know* you.\n\nAt the Humanos Foundation, we say: **No more.** We are building the tools to capture your unignorable, continuous truth, forcing the system to treat you as an individual.'
     },
     {
         id: 'post-2',
-        title: 'Zero-Knowledge Architecture in Health Tech',
-        excerpt: 'How Local-First computing and end-to-end encryption can end massive hospital data breaches forever.',
-        category: 'Technology',
+        title: 'Escaping the Medication Gallery',
+        excerpt: 'Drugging symptoms out of administrative convenience is ruining lives. It is time to demand root-cause analysis.',
+        category: 'Advocacy',
         read_time_minutes: 8,
         published: true,
         created_date: '2026-02-28T14:30:00Z',
-        content: '# The End of the Mega-Breach\n\nIn the last decade, over 300 million patient records have been exposed in hospital and insurance cyberattacks. Why? Because the architecture is fundamentally flawed. We centralize petabytes of unencrypted PHI (Protected Health Information) in massive cloud databases, creating honeypots so lucrative that state-sponsored hackers cannot resist them.\n\n### Enter Zero-Knowledge Architecture (ZKA)\n\nZKA is a cryptographic paradigm where the server storing the data *has no idea what the data actually says*. \n\nUnder the **Aura hOS** model, data is encrypted locally on your device using keys that only you hold. When a hospital server syncs your data, it is syncing blinded, scrambled ciphertext.\n\n1.  **No more ransomware leverage:** Hackers stealing ciphertext get nothing but useless noise.\n2.  **No more insider threats:** Even rogue hospital sysadmins cannot read your files.\n3.  **True privacy:** AI agents can process your data locally on your device, uploading only the summarized insights you approve.\n\nLocal-first isn\'t just a feature. It\'s the only responsible way to build healthcare tech in the 21st century.'
+        content: '# The Convenience of the Prescription Pad\n\nWriting a prescription takes 30 seconds. Ordering complex labs, reviewing daily continuous glucose or mood data, and sitting with a patient to understand environmental triggers takes hours.\n\nThe current healthcare economic model does not pay for hours. It pays for 30 seconds.\n\n### Drugging the Symptom\n\nMillions of patients are currently trapped in the Medication Gallery. They are prescribed heavy, mind-altering pharmaceuticals simply because they exhibited a symptom that fits neatly into a diagnostic billing code. \n\nWe hear horrific stories daily: patients driven to the brink, losing their cognitive spark, suffering extreme side effects—only for the doctor to shrug and say, "Let\'s try this other pill instead." It is a sick game of dartboard medicine.\n\n### Holding the System Accountable\n\nThe only way out is irrefutable data. When a patient controls a high-fidelity, longitudinal graph of their own health—every symptom, every trigger, every baseline metric—they strip the doctor of the ability to guess. You bring the truth, and you demand care based upon it.'
     },
     {
         id: 'post-3',
-        title: 'Re-thinking HIPAA in the Era of Cloud AI',
-        excerpt: 'HIPAA was written for fax machines and filing cabinets. Here is why the regulatory framework must evolve for the age of LLMs.',
-        category: 'Policy & Regulation',
+        title: 'Sovereignty is Accountability',
+        excerpt: 'Why owning your health data isn\'t just about privacy from hackers—it\'s about wielding power against a broken system.',
+        category: 'The Movement',
         read_time_minutes: 6,
         published: true,
         created_date: '2026-03-01T09:15:00Z',
-        content: '# A 1996 Law for a 2026 Problem\n\nHIPAA (the Health Insurance Portability and Accountability Act) was passed in 1996. Its primary goal was to ensure you didn\'t lose medical coverage between jobs, with a secondary privacy rule tacked on for paper files and early local-network computers.\n\nToday, we are routing highly sensitive patient transcripts through massive, cloud-hosted Large Language Models (LLMs). \n\n### The BAA Loophole\n\nCurrently, hospitals rely on Business Associate Agreements (BAAs) to legally share your data with tech giants. As long as the tech giant signs a BAA promising to protect the data, the hospital is largely shielded from liability. \n\n**But a legal promise does not stop a technical breach.**\n\nWe need to shift from *compliance-based privacy* to *mathematically guaranteed privacy*. The law should require Zero-Knowledge processing for cloud infrastructures. Until it does, the Humanos Foundation will continue pushing the industry to adopt verifiable, encrypted standards that go above and beyond the baseline requirements of a 30-year-old law.'
+        content: '# Power, Not Just Privacy\n\nWhen we talk about "Health Data Sovereignty," the tech industry assumes we are only talking about cryptography. They think we just want to stop hackers from stealing cloud databases.\n\n**They are missing the point.**\n\nYes, your data must be encrypted. Yes, it must be secure. But the true purpose of sovereignty is power.\n\n### The Weaponization of Data\n\nRight now, hospitals weaponize your data against you. They lock it in silos so you cannot easily seek second opinions. They use it to bill your insurance maximum amounts for minimum time spent.\n\nBy taking absolute control of your data, you flip the power dynamic. When you hold the complete, uncompressed record of your life, you are no longer a passive supplicant in a hospital gown. You become the CEO of your own body. You tell the system what you need, backed by your own unassailable data, and you do not leave until they provide it.'
     }
 ];
 

@@ -4,17 +4,17 @@ import { useRef } from 'react';
 import { AlertTriangle, Sparkles, FileX, Wifi, Clock, ShieldCheck, Scan, Database } from 'lucide-react';
 
 const brokenItems = [
-    { icon: FileX, text: 'Paper clipboards in 2026' },
-    { icon: Wifi, text: 'Disconnected systems' },
-    { icon: Clock, text: 'Hours wasted on data entry' },
-    { icon: AlertTriangle, text: 'Patients as afterthoughts' },
+    { icon: Clock, text: 'The 5-Minute Diagnosis' },
+    { icon: FileX, text: '20 pages of ignored intake' },
+    { icon: AlertTriangle, text: 'The Medication Gallery' },
+    { icon: Wifi, text: 'Treating symptoms, leaving causes' },
 ];
 
 const hosItems = [
-    { icon: ShieldCheck, text: 'Cryptographic data sovereignty' },
-    { icon: Scan, text: 'Real-time bio-signal ingestion' },
-    { icon: Database, text: 'Unified health graph' },
-    { icon: Sparkles, text: 'AI-powered clinical clarity' },
+    { icon: Scan, text: 'Continuous lived-experience capture' },
+    { icon: Database, text: 'Unignorable longitudinal data' },
+    { icon: ShieldCheck, text: 'Forcing case-by-case analysis' },
+    { icon: Sparkles, text: 'Personalized root-cause care' },
 ];
 
 export default function BrokenFirstMile() {
@@ -73,10 +73,10 @@ export default function BrokenFirstMile() {
                                 className="text-2xl md:text-3xl font-bold text-[#ffffff]/90 mb-2"
                                 style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
                             >
-                                Healthcare is Broken
+                                Assembly-Line Medicine
                             </h3>
                             <p className="text-sm text-[#ffffff]/50 mb-8 leading-relaxed">
-                                Archaic systems. Scattered records. You are an afterthought in your own care.
+                                You are not a standard deviation. A 5-minute review cannot capture your truth.
                             </p>
 
                             <div className="space-y-4">
@@ -126,10 +126,10 @@ export default function BrokenFirstMile() {
                                 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2"
                                 style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
                             >
-                                Clinical Clarity
+                                Individualized Clarity
                             </h3>
                             <p className="text-sm text-slate-400 mb-8 leading-relaxed">
-                                One unified system. Your data, encrypted and sovereign. Always.
+                                Your data, structured so perfectly that the system is forced to listen.
                             </p>
 
                             <div className="space-y-4">

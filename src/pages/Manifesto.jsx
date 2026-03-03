@@ -10,22 +10,22 @@ import { Key, Eye, Shield, Fingerprint, Scale, BookOpen } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 
 const declarations = [
-    'We, the patients of the world, declare that our biological data is an extension of our bodies — and therefore, an extension of our selves.',
-    'We declare that no corporation, institution, or government has the right to own, sell, or profit from our health data without our explicit, informed, and revocable consent.',
-    <span key="d3">We declare that the current healthcare data system — built on opacity, fragmentation, and institutional convenience — is <Link to="/TheProblem" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">fundamentally broken and must be reimagined</Link> from the ground up.</span>,
-    <span key="d4">We declare that every person, regardless of geography, income, or technical literacy, has the right to access their complete health record in a <Link to="/Principles" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">human-readable format</Link>.</span>,
-    'We declare that the future of healthcare is patient-sovereign: where individuals hold the keys to their own biological data vault.',
-    'We declare that technology must serve the patient first — not the insurer, not the hospital system, not the data broker.',
-    'We declare that health data privacy is not a premium feature. It is a basic human right.',
-    'We call on technologists, clinicians, policymakers, and advocates to join us in building systems worthy of human trust.',
-    <span key="d9">The revolution is not coming. It is here. And it starts with you <Link to="/Join" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">taking command of your health</Link>.</span>,
+    'We, the patients of the world, declare that our lived experience cannot be compressed into a five-minute visit or a standard deviation.',
+    'We declare that the current medical architecture is a billing machine, designed to rapidly process bodies rather than investigate complex, root-cause suffering.',
+    <span key="d3">We declare an end to the "medication gallery" — the systemic practice of <Link to="/TheProblem" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">drugging symptoms out of administrative convenience</Link> rather than healing the human.</span>,
+    <span key="d4">We refuse to spend 20 minutes filling out archaic paper clipboards, only for our profound physical and mental realities to be ignored in a <Link to="/Principles" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">rushed 5-minute review</Link>.</span>,
+    'We declare that misdiagnosis and over-medication strip us of our true selves, alter our thoughts, and sentence us to forced disability.',
+    'We demand systems that capture our continuous, longitudinal truth — the days, the weeks, the months of our lived reality — rendering our suffering unignorable.',
+    'We declare that health data sovereignty is not just about privacy. It is about holding the system accountable with irrefutable proof of our condition.',
+    'We call on technologists, clinicians who refuse the status quo, and fellow patients to build the infrastructure of personalized, root-cause medicine.',
+    <span key="d9">The revolution against assembly-line medicine is not coming. It is here. And it starts with you <Link to="/Join" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">taking command of your story</Link>.</span>,
 ];
 
 const fourLaws = [
-    { icon: Key, number: 'I', title: 'The Law of Ownership', description: 'Your biological data belongs to you. Not your provider. Not your insurer. Not a tech company. You are the sole sovereign of your health record.' },
-    { icon: Eye, number: 'II', title: 'The Law of Transparency', description: 'Every access to your data — who read it, when, and why — must be logged, visible, and auditable by you at any time.' },
-    { icon: Shield, number: 'III', title: 'The Law of Sovereignty', description: 'Your health data must be encrypted end-to-end. No backdoors. No silent sharing. No compromise. Sovereignty is absolute or it is nothing.' },
-    { icon: Fingerprint, number: 'IV', title: 'The Law of Identity', description: 'Your health identity is self-sovereign — portable across systems, interoperable by design, and yours to carry for the duration of your life.' },
+    { icon: Eye, number: 'I', title: 'The Law of Lived Experience', description: 'Your health history is continuous, not episodic. The system must adapt to your continuous reality, rather than forcing you to compress your suffering into a fragmented 5-minute window.' },
+    { icon: Shield, number: 'II', title: 'The Law of Root Cause', description: 'You have the right to diagnostic diligence. Treating symptoms with an ever-expanding gallery of medications while ignoring the root cause is a failure of care that cannot be tolerated.' },
+    { icon: Key, number: 'III', title: 'The Law of Sovereignty', description: 'Your data belongs to you. By controlling the highest fidelity, most unignorable health graph of your own life, you force the system to treat you as an individual, not a statistic.' },
+    { icon: Scale, number: 'IV', title: 'The Law of Independence', description: 'Technology must serve the patient first—not the billing machine, not the insurance quota, and not institutional convenience. We build tools that make you the undeniable center of your care.' },
 ];
 
 function DeclarationSection() {
@@ -106,8 +106,8 @@ export default function Manifesto() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
-                title="The hOS Manifesto — Patient Data Rights Declaration"
-                description="A formal declaration of patient data rights. We believe your biological data is yours — not your hospital's, not your insurer's. Read and share the hOS Manifesto by Humanos Foundation."
+                title="The hOS Manifesto — Demanding Individualized Care"
+                description="A formal declaration against assembly-line medicine. We believe in rooting out the causes of suffering, not medicating symptoms in a 5-minute review. Join the movement."
                 url="https://humanos.foundation/manifesto"
                 type="article"
                 article={{ publishedTime: '2026-03-01', author: 'Ramon Luis Rios Jr.', section: 'Movement' }}

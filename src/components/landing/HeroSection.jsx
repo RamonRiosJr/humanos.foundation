@@ -33,12 +33,12 @@ export default function HeroSection() {
                     // @ts-ignore — fontFamily is valid in MotionStyle at runtime
                     style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
                 >
-                    <span className="text-white">Your Body.</span>
+                    <span className="text-white">You Are Not</span>
                     <br />
-                    <span className="gradient-text">Your Data.</span>
+                    <span className="text-white/60">A </span>
+                    <span className="gradient-text">5-Minute</span>
                     <br />
-                    <span className="text-white/60">Your</span>{' '}
-                    <span className="text-white">Sovereignty.</span>
+                    <span className="text-white">Diagnosis.</span>
                 </motion.h1>
 
                 {/* Subheadline */}
@@ -48,8 +48,7 @@ export default function HeroSection() {
                     transition={{ duration: 1, delay: 0.4 }}
                     className="text-sm md:text-lg text-white/40 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed font-light"
                 >
-                    hOS is the revolution in patient data sovereignty — a human-first operating
-                    system that puts you in command of every signal your body generates.
+                    hOS is the revolution against assembly-line medicine — demanding that your entire, continuous lived experience is understood before you are prescribed another pill.
                 </motion.p>
 
                 {/* CTA */}
@@ -63,7 +62,7 @@ export default function HeroSection() {
                         className="glow-btn relative inline-flex px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-white font-semibold text-sm md:text-base tracking-wide group"
                     >
                         <span className="relative z-10 flex items-center gap-2">
-                            Take Command of Your Health
+                            Take Command of Your Story
                             <motion.span
                                 animate={{ x: [0, 4, 0] }}
                                 transition={{ duration: 1.5, repeat: Infinity }}
