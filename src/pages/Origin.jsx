@@ -5,15 +5,16 @@ import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
 import PageCTA from '../components/shared/PageCTA';
 import AboutJourney from '../components/landing/AboutJourney';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { useInView } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Globe, Heart, Code, Zap, Shield, Users } from 'lucide-react';
+import { createPageUrl } from '@/utils';
 
 const values = [
     { icon: Heart, title: 'Patient First', description: 'Every decision starts with one question: does this serve the patient?' },
-    { icon: Shield, title: 'Sovereignty by Design', description: 'Data ownership is not a feature — it\'s the foundation.' },
-    { icon: Code, title: 'Open by Default', description: 'Transparency in code, governance, and intention.' },
+    { icon: Shield, title: 'Sovereignty by Design', description: <span key="v2"><Link to="/Manifesto" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">Data ownership is not a feature</Link> — it's the foundation.</span> },
+    { icon: Code, title: 'Open by Default', description: <span key="v3"><Link to="/OpenSource" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">Transparency in code</Link>, governance, and intention.</span> },
     { icon: Globe, title: 'Global Equity', description: 'Health data rights belong to every human, everywhere, regardless of income.' },
     { icon: Zap, title: 'Radical Clarity', description: 'No jargon. No obscurity. Your health record should be readable by you.' },
     { icon: Users, title: 'Community Driven', description: 'This is a movement, not a startup. We grow through people, not press releases.' },
@@ -72,6 +73,7 @@ export default function Origin() {
                 title="Be Part of the Story"
                 subtitle="The movement grows one person at a time. Join us."
                 cta="Join the Movement"
+                ctaHref={createPageUrl('Join')}
             />
             <Footer />
         </div>

@@ -1,22 +1,24 @@
 import React, { useRef } from 'react';
 import SEOMeta from '../components/shared/SEOMeta';
 import { motion, useInView } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
 import PageCTA from '../components/shared/PageCTA';
 import { Key, Eye, Shield, Fingerprint, Scale, BookOpen } from 'lucide-react';
+import { createPageUrl } from '@/utils';
 
 const declarations = [
     'We, the patients of the world, declare that our biological data is an extension of our bodies — and therefore, an extension of our selves.',
     'We declare that no corporation, institution, or government has the right to own, sell, or profit from our health data without our explicit, informed, and revocable consent.',
-    'We declare that the current healthcare data system — built on opacity, fragmentation, and institutional convenience — is fundamentally broken and must be reimagined from the ground up.',
-    'We declare that every person, regardless of geography, income, or technical literacy, has the right to access their complete health record in a human-readable format.',
+    <span key="d3">We declare that the current healthcare data system — built on opacity, fragmentation, and institutional convenience — is <Link to="/TheProblem" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">fundamentally broken and must be reimagined</Link> from the ground up.</span>,
+    <span key="d4">We declare that every person, regardless of geography, income, or technical literacy, has the right to access their complete health record in a <Link to="/Principles" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">human-readable format</Link>.</span>,
     'We declare that the future of healthcare is patient-sovereign: where individuals hold the keys to their own biological data vault.',
     'We declare that technology must serve the patient first — not the insurer, not the hospital system, not the data broker.',
     'We declare that health data privacy is not a premium feature. It is a basic human right.',
     'We call on technologists, clinicians, policymakers, and advocates to join us in building systems worthy of human trust.',
-    'The revolution is not coming. It is here. And it starts with you taking command of your health.',
+    <span key="d9">The revolution is not coming. It is here. And it starts with you <Link to="/Join" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">taking command of your health</Link>.</span>,
 ];
 
 const fourLaws = [
@@ -122,7 +124,8 @@ export default function Manifesto() {
             <PageCTA
                 title="Stand With the Movement"
                 subtitle="The manifesto means nothing without the people willing to live it."
-                cta="Sign the Movement"
+                cta="Sign the Manifesto"
+                ctaHref={createPageUrl('Join')}
             />
             <Footer />
         </div>

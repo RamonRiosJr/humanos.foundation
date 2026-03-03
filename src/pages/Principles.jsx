@@ -1,11 +1,13 @@
 import React, { useRef } from 'react';
 import SEOMeta from '../components/shared/SEOMeta';
 import { motion, useInView } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
 import PageCTA from '../components/shared/PageCTA';
 import { Cpu, User, Globe, Lock, Eye, Heart } from 'lucide-react';
+import { createPageUrl } from '@/utils';
 
 const principles = [
     {
@@ -20,7 +22,7 @@ const principles = [
         icon: Lock,
         title: 'Zero-Knowledge by Default',
         tagline: 'We cannot see what we are not meant to see.',
-        description: 'Zero-knowledge architecture means your health data is encrypted before it ever leaves your device. The systems we advocate for have no ability to read your health records — even if compelled.',
+        description: <span key="p2"><Link to="/Glossary" className="text-purple-400 hover:text-purple-300 underline underline-offset-4 decoration-purple-400/30">Zero-knowledge architecture</Link> means your health data is encrypted before it ever leaves your device. The systems we advocate for have no ability to read your health records — even if compelled.</span>,
         color: 'from-purple-500/10 to-purple-500/5',
         border: 'hover:border-purple-500/20',
     },
@@ -28,7 +30,7 @@ const principles = [
         icon: Cpu,
         title: 'Local-First Computing',
         tagline: 'Your device. Your data. Your cloud.',
-        description: 'Health data should live on the device you own, not on a server you don\'t control. Local-first architecture means you stay in control even when you\'re offline, even when companies shut down.',
+        description: <span key="p3">Health data should live on the device you own, not on a server you don't control. <Link to="/Glossary" className="text-blue-400 hover:text-blue-300 underline underline-offset-4 decoration-blue-400/30">Local-first architecture</Link> means you stay in control even when you're offline, even when companies shut down.</span>,
         color: 'from-blue-500/10 to-blue-500/5',
         border: 'hover:border-blue-500/20',
     },
@@ -44,7 +46,7 @@ const principles = [
         icon: Globe,
         title: 'Open Standards',
         tagline: 'Built on FHIR, not proprietary silos.',
-        description: 'We advocate for open health data standards (FHIR, HL7) that allow your data to move freely between systems. No lock-in. No proprietary format that holds your health record hostage.',
+        description: <span key="p5"><Link to="/Origin" className="text-green-400 hover:text-green-300 underline underline-offset-4 decoration-green-400/30">We advocate for open health data standards</Link> (FHIR, HL7) that allow your data to move freely between systems. No lock-in. No proprietary format that holds your health record hostage.</span>,
         color: 'from-green-500/10 to-green-500/5',
         border: 'hover:border-green-500/20',
     },
@@ -105,7 +107,12 @@ export default function Principles() {
                     ))}
                 </div>
             </section>
-            <PageCTA title="Build on These Principles" subtitle="Join a movement that refuses to compromise on what matters most." cta="Join the Movement" />
+            <PageCTA
+                title="Build on These Principles"
+                subtitle="Join a movement that refuses to compromise on what matters most."
+                cta="Join the Movement"
+                ctaHref={createPageUrl('Join')}
+            />
             <Footer />
         </div>
     );
