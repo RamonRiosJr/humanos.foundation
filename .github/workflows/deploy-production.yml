@@ -45,15 +45,15 @@ jobs:
           CI: true
           NODE_ENV: production
 
-      - name: Deploy to Vercel (Production)
-        id: deploy
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: "--prod"
-          working-directory: ./
+      # - name: Deploy to Vercel (Production)
+      #   id: deploy
+      #   uses: amondnet/vercel-action@v25
+      #   with:
+      #     vercel-token: ${{ secrets.VERCEL_TOKEN }}
+      #     vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+      #     vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+      #     vercel-args: "--prod"
+      #     working-directory: ./
 
-      - name: Output deployment URL
-        run: echo "🚀 Production deployment URL - ${{ steps.deploy.outputs.preview-url }}"
+      # - name: Output deployment URL
+      #   run: echo "🚀 Production deployment URL - ${{ steps.deploy.outputs.preview-url }}"
