@@ -70,12 +70,12 @@ export default function BrokenFirstMile() {
                             </div>
 
                             <h3
-                                className="text-2xl md:text-3xl font-bold text-white/80 mb-2"
+                                className="text-2xl md:text-3xl font-bold text-[#ffffff]/90 mb-2"
                                 style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
                             >
                                 Healthcare is Broken
                             </h3>
-                            <p className="text-sm text-white/30 mb-8 leading-relaxed">
+                            <p className="text-sm text-[#ffffff]/50 mb-8 leading-relaxed">
                                 Archaic systems. Scattered records. You are an afterthought in your own care.
                             </p>
 
@@ -86,10 +86,10 @@ export default function BrokenFirstMile() {
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                                         transition={{ duration: 0.6, delay: 0.5 + i * 0.1 }}
-                                        className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/[0.04]"
+                                        className="flex items-center gap-3 p-3 rounded-xl bg-[#ffffff]/[0.02] border border-[#ffffff]/[0.06]"
                                     >
                                         <item.icon className="w-4 h-4 text-red-400/60 shrink-0" />
-                                        <span className="text-sm text-white/40">{item.text}</span>
+                                        <span className="text-sm text-[#ffffff]/60">{item.text}</span>
                                     </motion.div>
                                 ))}
                             </div>
@@ -139,7 +139,7 @@ export default function BrokenFirstMile() {
                                         initial={{ opacity: 0, x: 20 }}
                                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                                         transition={{ duration: 0.6, delay: 0.7 + i * 0.1 }}
-                                        className="flex items-center gap-3 p-3 rounded-xl bg-white border border-slate-100 shadow-sm"
+                                        className="flex items-center gap-3 p-3 rounded-xl bg-[#ffffff] border border-slate-100 shadow-sm"
                                     >
                                         <item.icon className="w-4 h-4 text-cyan-500 shrink-0" />
                                         <span className="text-sm text-slate-600">{item.text}</span>
