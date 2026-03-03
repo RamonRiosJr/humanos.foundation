@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
-import { Heart, Users, Code, DollarSign, Github, ExternalLink } from 'lucide-react';
+import { Heart, Users, Code, DollarSign, ExternalLink } from 'lucide-react';
 
 const supportWays = [
     { icon: Heart, title: 'Spread the Word', desc: 'Share our manifesto. Talk about patient data rights. Refer journalists, researchers, and advocates to us. The movement grows through people.', cta: 'Read the Manifesto', href: '/manifesto' },

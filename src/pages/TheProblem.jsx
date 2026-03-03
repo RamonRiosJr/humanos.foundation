@@ -5,7 +5,7 @@ import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
 import PageCTA from '../components/shared/PageCTA';
-import { AlertTriangle, Database, DollarSign, Lock, Eye, FileX, TrendingDown, Globe } from 'lucide-react';
+import { AlertTriangle, Database, DollarSign, Lock, Eye, FileX, Globe } from 'lucide-react';
 
 const problems = [
     { icon: FileX, title: 'Your Records Are Fragmented', description: 'The average American has medical records spread across 14+ different systems. No single source of truth exists for your own health history.', stat: '14+', statLabel: 'disconnected systems per patient' },

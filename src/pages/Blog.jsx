@@ -7,7 +7,6 @@ import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
 import PageCTA from '../components/shared/PageCTA';
 import { Clock, ArrowRight, Tag } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 
 const categories = ['All', 'Patient Rights', 'Technology', 'Policy & Regulation', 'Movement Stories', 'Research & Data', 'Community'];

@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 import { base44 } from '@/api/base44Client';
 import { useQuery } from '@tanstack/react-query';
 import {
-    Users, MessageSquare, BookOpen, TrendingUp,
-    ExternalLink, RefreshCw, Eye, Mail, Calendar,
+    Users, MessageSquare, BookOpen, Mail,
     ChevronRight, Database, Zap, Globe
 } from 'lucide-react';
 import SEOMeta from '../components/shared/SEOMeta';

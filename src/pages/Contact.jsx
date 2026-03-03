@@ -5,7 +5,7 @@ import { base44 } from '@/api/base44Client';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
-import { CheckCircle2, Mail, Newspaper, Handshake, Coins, Users, HelpCircle } from 'lucide-react';
+import { CheckCircle2, Newspaper, Handshake, Coins, Users, HelpCircle } from 'lucide-react';
 
 const inquiryTypes = [
     { value: 'press', label: 'Press & Media', icon: Newspaper, email: 'press@humanos.foundation' },

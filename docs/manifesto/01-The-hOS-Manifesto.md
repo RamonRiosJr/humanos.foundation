@@ -1,6 +1,6 @@
 # The Human Operating System (hOS) Manifesto
 
-**Author:** Ramon Rios Jr., Founder of Aura hOS
+**Author:** Ramon Rios Jr., Founder of the hOS Movement
 **Date:** February 2026
 
 ## The End of the Electronic Health Record (EHR) Era
@@ -36,11 +36,11 @@ In the legacy era, a patient was a "subject" of medical records—a passive enti
 This evolution is defined by three phases:
 
 1. **Passive Data (Legacy):** Data is trapped in institutional silos; patients are "couriers" of their own history.
-2. **Active Awareness (Aura hOS):** Data is edge-computed and patient-owned; the system provides real-time guidance and agency.
-3. **Sovereign Governance (The Future):** The patient dictates the terms of engagement with the healthcare industry, using their customizable Storage Modes and explicit `AURA-XXXX` vCard cryptographic shields to manage their own medical destiny.
+2. **Active Awareness:** Data is edge-computed and patient-owned; the system provides real-time guidance and agency.
+3. **Sovereign Governance (The Future):** The patient dictates the terms of engagement with the healthcare industry, using their customizable Storage Modes and explicit `hOS-XXXX` vCard cryptographic shields to manage their own medical destiny.
 
 We are not just building software. We are authoring a new legal and technological standard for what it means to own your health in the digital age.
 
 ---
 
-_This manifesto serves as the foundational architecture for **Aura hOS™**, the world's first true hOS._
+_This manifesto serves as the foundational architecture for the **hOS Movement**._
