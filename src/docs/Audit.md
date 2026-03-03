@@ -74,7 +74,7 @@ Priority Item Impact
 🟠 P1 Add citations/sources to all statistics 🔀 MOVED to Issue #2
 🟠 P1 Write 3-5 cornerstone blog posts ✅ DONE (Issue #4)
 🟠 P1 Add base44.analytics.track() to CTA clicks and form submits ❌ CANCELLED (Removed for Sovereign Privacy)
-🟡 P2 Add sitemap and robots.txt 🔀 MOVED to Issue #5
+🟡 P2 Add sitemap and robots.txt ✅ DONE (Issue #5)
 🟡 P2 Cross-link pages internally 🔀 MOVED to Issue #6
 🟡 P2 Add rehype-sanitize to blog markdown renderer ✅ DONE (Issue #7)
 🟡 P2 Add Blog post admin UI 🔀 MOVED to Issue #8
