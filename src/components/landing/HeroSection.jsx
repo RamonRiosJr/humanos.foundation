@@ -29,6 +29,7 @@ export default function HeroSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                     className="font-outfit text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-800 leading-[0.95] tracking-tight mb-4 md:mb-6"
+                    // @ts-ignore — fontFamily is valid in MotionStyle at runtime
                     style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
                 >
                     <span className="text-white">Your Body.</span>

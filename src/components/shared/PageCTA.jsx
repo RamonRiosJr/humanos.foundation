@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 
-export default function PageCTA({ title = "Ready to Take Command?", subtitle = "Join thousands building the movement for patient data sovereignty.", cta = "Join the Movement", ctaHref }) {
+export default function PageCTA({ title = "Ready to Take Command?", subtitle = "Join thousands building the movement for patient data sovereignty.", cta = "Join the Movement", ctaHref = undefined }) {
     return (
         <section className="relative py-24 md:py-32 px-4 md:px-8">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/[0.02] to-transparent" />
