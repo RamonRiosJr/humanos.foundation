@@ -1,11 +1,13 @@
 import React from 'react';
 import SEOMeta from '../components/shared/SEOMeta';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
 import PageCTA from '../components/shared/PageCTA';
 import { Github, ExternalLink, Code, Globe, Database, Zap } from 'lucide-react';
+import { createPageUrl } from '@/utils';
 
 const projects = [
     { name: 'OpenMRS', desc: 'Open-source medical record system for resource-constrained environments. Used in 40+ countries.', url: 'https://openmrs.org', icon: Database },
@@ -16,7 +18,7 @@ const projects = [
 
 const principles = [
     'Open source means no lock-in — your data and the tools to read it must be freely accessible.',
-    'Transparency in code is transparency in intent. We cannot trust what we cannot inspect.',
+    <span key="pr2">Transparency in code is <Link to="/Manifesto" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">transparency in intent</Link>. We cannot trust what we cannot inspect.</span>,
     'Community-built software serves the community, not a board of directors.',
     'Open standards (FHIR, HL7, DICOM) are the foundation of true interoperability.',
 ];
@@ -74,7 +76,12 @@ export default function OpenSource() {
                     </motion.div>
                 </div>
             </section>
-            <PageCTA title="Contribute to the Movement" subtitle="Code, content, advocacy — every contribution moves the needle." cta="Get Involved" />
+            <PageCTA
+                title="Contribute to the Movement"
+                subtitle="Code, content, advocacy — every contribution moves the needle."
+                cta="Get Involved"
+                ctaHref={createPageUrl('Volunteer')}
+            />
             <Footer />
         </div>
     );
