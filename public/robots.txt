@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /Admin
+
+# Sitemap Location
+Sitemap: https://humanos.foundation/sitemap.xml
