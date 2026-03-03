@@ -97,6 +97,7 @@ export const humanosMockClient = {
         },
         BlogPost: {
             list: async (...args) => storage.get('blog_posts'),
+            filter: async (...args) => storage.get('blog_posts'),
             get: async (id) => storage.get('blog_posts').find(p => p.id === id)
         }
     },

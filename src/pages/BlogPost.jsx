@@ -100,7 +100,7 @@ export default function BlogPost() {
                     {post.title}
                 </h1>
 
-                <div className="prose prose-invert prose-cyan max-w-none prose-p:text-white/70 prose-p:leading-relaxed prose-headings:font-bold prose-headings:text-white/90 prose-a:text-cyan-400">
+                <div className="prose dark:prose-invert prose-cyan max-w-none prose-p:text-white/70 prose-p:leading-relaxed prose-headings:font-bold prose-headings:text-white/90 prose-a:text-cyan-400">
                     <ReactMarkdown rehypePlugins={[rehypeSanitize]}>
                         {post.content}
                     </ReactMarkdown>

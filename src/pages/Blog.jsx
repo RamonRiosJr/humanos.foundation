@@ -13,12 +13,12 @@ import { Link } from 'react-router-dom';
 const categories = ['All', 'Patient Rights', 'Technology', 'Policy & Regulation', 'Movement Stories', 'Research & Data', 'Community'];
 
 const categoryColors = {
-    'Patient Rights': 'text-rose-400/70 bg-rose-500/10 border-rose-500/20',
-    'Technology': 'text-blue-400/70 bg-blue-500/10 border-blue-500/20',
-    'Policy & Regulation': 'text-amber-400/70 bg-amber-500/10 border-amber-500/20',
-    'Movement Stories': 'text-cyan-400/70 bg-cyan-500/10 border-cyan-500/20',
-    'Research & Data': 'text-purple-400/70 bg-purple-500/10 border-purple-500/20',
-    'Community': 'text-green-400/70 bg-green-500/10 border-green-500/20',
+    'Patient Rights': 'text-rose-600 dark:text-rose-400/80 bg-rose-500/10 border-rose-500/20',
+    'Technology': 'text-blue-600 dark:text-blue-400/80 bg-blue-500/10 border-blue-500/20',
+    'Policy & Regulation': 'text-amber-600 dark:text-amber-400/80 bg-amber-500/10 border-amber-500/20',
+    'Movement Stories': 'text-cyan-600 dark:text-cyan-400/80 bg-cyan-500/10 border-cyan-500/20',
+    'Research & Data': 'text-purple-600 dark:text-purple-400/80 bg-purple-500/10 border-purple-500/20',
+    'Community': 'text-green-600 dark:text-green-400/80 bg-green-500/10 border-green-500/20',
 };
 
 export default function Blog() {
