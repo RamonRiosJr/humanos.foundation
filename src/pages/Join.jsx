@@ -19,14 +19,36 @@ const roles = [
 ];
 
 export default function Join() {
-    const [form, setForm] = useState({ name: '', email: '', role: '', reason: '', newsletter: true, volunteer: false });
+    const [form, setForm] = useState({ name: '', email: '', role: '', reason: '', newsletter: true, volunteer: false, honeypot: '' });
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-        await base44.entities.JoinRequest.create(form);
+
+        // Security: Honeypot check
+        if (form.honeypot.trim() !== '') {
+            console.warn('Spam submission intercepted.');
+            setSubmitted(true); // Fail silently by showing success state to bots
+            setLoading(false);
+            return;
+        }
+
+        // Security: Rate limiting (60 seconds)
+        const lastSubmit = localStorage.getItem('last_join_submit');
+        const now = Date.now();
+        if (lastSubmit && (now - parseInt(lastSubmit, 10)) < 60000) {
+            alert('You are submitting too fast. Please wait a minute before trying again.');
+            setLoading(false);
+            return;
+        }
+        localStorage.setItem('last_join_submit', now.toString());
+
+        const payload = { ...form };
+        delete payload.honeypot;
+
+        await base44.entities.JoinRequest.create(payload);
         setSubmitted(true);
         setLoading(false);
     };
@@ -83,6 +105,16 @@ export default function Join() {
                                 onSubmit={handleSubmit}
                                 className="glass-strong rounded-3xl p-8 md:p-12 border border-white/[0.05] space-y-6"
                             >
+                                {/* Spam Protection Honeypot - Invisible to users, filled by bots */}
+                                <input
+                                    type="text"
+                                    name="website_url"
+                                    style={{ display: 'none' }}
+                                    tabIndex={-1}
+                                    autoComplete="off"
+                                    value={form.honeypot}
+                                    onChange={e => setForm({ ...form, honeypot: e.target.value })}
+                                />
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     <div>
                                         <label className="text-xs text-white/40 uppercase tracking-wider mb-2 block">Full Name *</label>
@@ -117,8 +149,8 @@ export default function Join() {
                                                 type="button"
                                                 onClick={() => setForm({ ...form, role: role.value })}
                                                 className={`flex flex-col items-center gap-2 p-3 rounded-xl text-xs transition-all duration-300 border ${form.role === role.value
-                                                        ? 'bg-cyan-500/10 border-cyan-500/40 text-cyan-400'
-                                                        : 'glass border-white/[0.05] text-white/30 hover:text-white/50 hover:border-white/10'
+                                                    ? 'bg-cyan-500/10 border-cyan-500/40 text-cyan-400'
+                                                    : 'glass border-white/[0.05] text-white/30 hover:text-white/50 hover:border-white/10'
                                                     }`}
                                             >
                                                 <role.icon className="w-4 h-4" />

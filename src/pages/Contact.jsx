@@ -16,14 +16,36 @@ const inquiryTypes = [
 ];
 
 export default function Contact() {
-    const [form, setForm] = useState({ name: '', email: '', organization: '', inquiry_type: '', subject: '', message: '' });
+    const [form, setForm] = useState({ name: '', email: '', organization: '', inquiry_type: '', subject: '', message: '', honeypot: '' });
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-        await base44.entities.ContactMessage.create(form);
+
+        // Security: Honeypot check
+        if (form.honeypot.trim() !== '') {
+            console.warn('Spam submission intercepted.');
+            setSubmitted(true); // Fail silently by showing success state to bots
+            setLoading(false);
+            return;
+        }
+
+        // Security: Rate limiting (60 seconds)
+        const lastSubmit = localStorage.getItem('last_contact_submit');
+        const now = Date.now();
+        if (lastSubmit && (now - parseInt(lastSubmit, 10)) < 60000) {
+            alert('You are submitting messages too fast. Please wait a minute before trying again.');
+            setLoading(false);
+            return;
+        }
+        localStorage.setItem('last_contact_submit', now.toString());
+
+        const payload = { ...form };
+        delete payload.honeypot;
+
+        await base44.entities.ContactMessage.create(payload);
         setSubmitted(true);
         setLoading(false);
     };
@@ -80,6 +102,16 @@ export default function Contact() {
                                 </motion.div>
                             ) : (
                                 <motion.form key="form" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} onSubmit={handleSubmit} className="glass-strong rounded-3xl p-8 md:p-10 border border-white/[0.05] space-y-5">
+                                    {/* Spam Protection Honeypot */}
+                                    <input
+                                        type="text"
+                                        name="website_url"
+                                        style={{ display: 'none' }}
+                                        tabIndex={-1}
+                                        autoComplete="off"
+                                        value={form.honeypot}
+                                        onChange={e => setForm({ ...form, honeypot: e.target.value })}
+                                    />
                                     <div className="grid sm:grid-cols-2 gap-4">
                                         {[{ key: 'name', label: 'Full Name', type: 'text', placeholder: 'Your name', required: true },
                                         { key: 'email', label: 'Email', type: 'email', placeholder: 'you@example.com', required: true },
