@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
-import { Shield, AlertTriangle, CheckCircle2, Clock, Mail } from 'lucide-react';
+import { Shield, AlertTriangle, CheckCircle2, Mail } from 'lucide-react';
 
 const commitments = [
     'We will acknowledge your report within 48 hours',

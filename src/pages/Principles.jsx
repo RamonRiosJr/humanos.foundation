@@ -5,7 +5,7 @@ import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
 import PageCTA from '../components/shared/PageCTA';
-import { Shield, Cpu, User, Zap, Globe, Lock, Eye, Heart } from 'lucide-react';
+import { Cpu, User, Globe, Lock, Eye, Heart } from 'lucide-react';
 
 const principles = [
     {

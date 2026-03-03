@@ -40,4 +40,4 @@ Technology built for the sick and vulnerable cannot behave like a corporate liab
 
 ---
 
-_These four laws form the core philosophical architecture of **Aura hOS™**._
+_These four laws form the core philosophical architecture of the **hOS Movement**._

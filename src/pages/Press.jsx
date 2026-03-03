@@ -5,8 +5,6 @@ import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
 import { Newspaper, Download, Mail, ExternalLink, Quote } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { createPageUrl } from '@/utils';
 
 const pressLinks = [
     { label: 'Patient Privacy Rights', url: 'https://patientprivacyrights.org', desc: 'Leading advocacy for medical privacy' },
