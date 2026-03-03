@@ -67,14 +67,14 @@ Because this is a Base44-hosted SPA with no custom backend, the attack surface i
 6. Sensitive data in entity fields JoinRequest stores name + email. No encryption at rest beyond what Base44 provides. No data retention policy enforced at the app level.
 🎯 PRIORITY ACTION LIST
 Priority Item Impact
-🔴 P0 Fix the hero CTA button — link it to /Join Conversion
-🔴 P0 Update index.html with real title, description, OG tags, favicon SEO + Social
-🔴 P0 Add auth guard to Admin page Security
-🟠 P1 Add honeypot + basic rate-limit messaging to forms Security
-🟠 P1 Add citations/sources to all statistics E-E-A-T / Credibility
-🟠 P1 Write 3-5 cornerstone blog posts Long-tail SEO
-🟠 P1 Add base44.analytics.track() to CTA clicks and form submits Data
-🟡 P2 Add sitemap and robots.txt SEO
-🟡 P2 Cross-link pages internally SEO PageRank
-🟡 P2 Add rehype-sanitize to blog markdown renderer Security
-🟡 P2 Add Blog post admin UI Content pipeline
+🔴 P0 Fix the hero CTA button — link it to /Join ✅ DONE (v0.1)
+🔴 P0 Update index.html with real title, description, OG tags, favicon ✅ DONE (v0.1)
+🔴 P0 Add auth guard to Admin page ✅ DONE (v0.1)
+🟠 P1 Add honeypot + basic rate-limit messaging to forms 🔀 MOVED to Issue #1
+🟠 P1 Add citations/sources to all statistics 🔀 MOVED to Issue #2
+🟠 P1 Write 3-5 cornerstone blog posts 🔀 MOVED to Issue #4
+🟠 P1 Add base44.analytics.track() to CTA clicks and form submits ❌ CANCELLED (Removed for Sovereign Privacy)
+🟡 P2 Add sitemap and robots.txt 🔀 MOVED to Issue #5
+🟡 P2 Cross-link pages internally 🔀 MOVED to Issue #6
+🟡 P2 Add rehype-sanitize to blog markdown renderer 🔀 MOVED to Issue #7
+🟡 P2 Add Blog post admin UI 🔀 MOVED to Issue #8
