@@ -54,7 +54,7 @@ function ValuesGrid() {
 
 export default function Origin() {
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
                 title="Origin Story — Ramon Luis Rios Jr. & the hOS Movement"
                 description="hOS was built in a motel room by Ramon Luis Rios Jr., a patient who refused to accept a broken healthcare system. The origin story of Humanos Foundation and the health data sovereignty movement."

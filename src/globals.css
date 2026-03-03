@@ -5,14 +5,48 @@
 @tailwind utilities;
 
 :root {
+    /* Neuro Dark Theme Context - mapped by Tailwind */
+    --theme-bg: #f8fafc;
+    --theme-white: #020617;
+    /* When text-white is called, it renders as dark slate */
+    --theme-cyan: 2563eb;
+    /* Matches dark blue in hOS logo for contrast */
+    --theme-cyan-hover: 1e40af;
+    --theme-cyan-glow: 0ea5e9;
+    --theme-cyan-soft: rgba(14, 165, 233, 0.1);
+    --theme-cyan-rgba: 37 99 235;
+    --theme-cyan-hover-rgba: 30 64 175;
+    --theme-text-muted: rgba(2, 6, 23, 0.6);
+    --theme-glass-bg: rgba(0, 0, 0, 0.03);
+    --theme-glass-border: rgba(0, 0, 0, 0.08);
+    --theme-glass-strong-bg: rgba(255, 255, 255, 0.85);
+    --theme-glass-strong-border: rgba(0, 0, 0, 0.1);
+
+    /* Original Hardcoded Colors - Left intact for explicit usage */
     --obsidian: #0a0a0f;
     --obsidian-light: #12121a;
     --cyan-glow: #00d4ff;
     --cyan-soft: #00d4ff33;
     --blue-accent: #3b82f6;
     --ethereal: #f8fafc;
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-bg: rgba(255, 255, 255, 0.04);
+}
+
+.dark {
+    /* Neuro Dark Theme Context - mapped by Tailwind */
+    --theme-bg: #0a0a0f;
+    --theme-white: #ffffff;
+    /* text-white remains pure white */
+    --theme-cyan: 22d3ee;
+    --theme-cyan-hover: 67e8f9;
+    --theme-cyan-glow: 00d4ff;
+    --theme-cyan-soft: #00d4ff33;
+    --theme-cyan-rgba: 34 211 238;
+    --theme-cyan-hover-rgba: 103 232 249;
+    --theme-text-muted: rgba(255, 255, 255, 0.4);
+    --theme-glass-bg: rgba(255, 255, 255, 0.03);
+    --theme-glass-border: rgba(255, 255, 255, 0.06);
+    --theme-glass-strong-bg: rgba(255, 255, 255, 0.06);
+    --theme-glass-strong-border: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -27,8 +61,8 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    background: var(--obsidian);
-    color: white;
+    background: var(--theme-bg);
+    color: var(--theme-white);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -36,17 +70,17 @@ body {
 
 /* Glassmorphism utility */
 .glass {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--theme-glass-bg);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--theme-glass-border);
 }
 
 .glass-strong {
-    background: rgba(255, 255, 255, 0.06);
+    background: var(--theme-glass-strong-bg);
     -webkit-backdrop-filter: blur(40px);
     backdrop-filter: blur(40px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--theme-glass-strong-border);
 }
 
 .glass-light {

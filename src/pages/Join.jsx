@@ -54,7 +54,7 @@ export default function Join() {
     };
 
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
                 title="Join the hOS Movement — Health Data Sovereignty for All"
                 description="Join patients, clinicians, technologists, researchers, and advocates fighting for health data sovereignty. This is not a product waitlist — it's a movement. Sign up at Humanos Foundation."

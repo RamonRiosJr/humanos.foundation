@@ -14,7 +14,7 @@ export default function AboutJourney() {
     return (
         <section ref={ref} className="relative py-24 md:py-40 px-4 md:px-8 overflow-hidden">
             {/* Background grain */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f] via-[#0d0d15] to-[#0a0a0f]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-[#0d0d15] to-obsidian" />
 
             <div className="relative z-10 max-w-6xl mx-auto">
                 {/* Section label */}
@@ -110,7 +110,7 @@ export default function AboutJourney() {
                                 </div>
 
                                 {/* Vignette */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent opacity-60" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-60" />
                             </div>
 
                             {/* Caption */}

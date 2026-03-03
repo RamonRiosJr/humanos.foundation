@@ -66,7 +66,7 @@ export default function Admin() {
 
     if (authed === null) {
         return (
-            <div className="bg-[#0a0a0f] min-h-screen flex items-center justify-center">
+            <div className="bg-obsidian min-h-screen flex items-center justify-center">
                 <div className="w-5 h-5 rounded-full border-2 border-cyan-500/30 border-t-cyan-400 animate-spin" />
             </div>
         );
@@ -74,7 +74,7 @@ export default function Admin() {
 
     if (authed === false) {
         return (
-            <div className="bg-[#0a0a0f] min-h-screen flex items-center justify-center px-4">
+            <div className="bg-obsidian min-h-screen flex items-center justify-center px-4">
                 <div className="glass-strong rounded-3xl p-10 text-center max-w-sm">
                     <HOSLogo size={48} wordmarkSize="lg" variant="full" asLink={false} className="justify-center mb-6" />
                     <p className="text-white/40 text-sm mb-6">Admin access required.</p>
@@ -95,11 +95,11 @@ export default function Admin() {
     const newsletterSubs = joinRequests.filter(r => r.newsletter).length;
 
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white">
+        <div className="bg-obsidian min-h-screen text-white">
             <SEOMeta title="hOS Admin Dashboard" description="" url="" noindex />
 
             {/* Top bar */}
-            <div className="sticky top-0 z-40 border-b border-white/[0.05] bg-[#0a0a0f]/90 backdrop-blur-xl px-6 py-4 flex items-center justify-between">
+            <div className="sticky top-0 z-40 border-b border-white/[0.05] bg-obsidian/90 backdrop-blur-xl px-6 py-4 flex items-center justify-between">
                 <div className="flex items-center gap-4">
                     <HOSLogo size={28} wordmarkSize="sm" variant="full" asLink />
                     <span className="text-[10px] text-white/20 uppercase tracking-widest font-medium border-l border-white/10 pl-4">Admin</span>

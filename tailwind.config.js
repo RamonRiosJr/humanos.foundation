@@ -10,6 +10,14 @@ module.exports = {
                 sm: 'calc(var(--radius) - 4px)'
             },
             colors: {
+                white: 'var(--theme-white)',
+                obsidian: 'var(--theme-bg)',
+                cyan: {
+                    400: '#var(--theme-cyan)',
+                    500: '#var(--theme-cyan-hover)',
+                    glow: '#var(--theme-cyan-glow)',
+                    soft: 'var(--theme-cyan-soft)',
+                },
                 background: 'hsl(var(--background))',
                 foreground: 'hsl(var(--foreground))',
                 card: {

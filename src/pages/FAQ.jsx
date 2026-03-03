@@ -72,7 +72,7 @@ function FAQItem({ question, answer }) {
 
 export default function FAQ() {
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
                 title="FAQ — Patient Data Rights, hOS Movement & Health Sovereignty"
                 description="Answers to common questions about the hOS movement, patient data ownership, HIPAA, zero-knowledge architecture, FHIR, and how to get involved with Humanos Foundation."

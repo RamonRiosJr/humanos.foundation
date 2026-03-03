@@ -29,7 +29,7 @@ const sections = [
 
 export default function Accessibility() {
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <Navbar />
             <PageHero badge="Legal" title="Accessibility" titleAccent="Statement" subtitle="Health data sovereignty must be accessible to everyone — including people with disabilities." />
             <LegalLayout sections={sections} lastUpdated="March 1, 2026" version="1.0" />

@@ -45,7 +45,7 @@ export default function Manifestos() {
 
     return (
         <section ref={ref} className="relative py-24 md:py-40 px-4 md:px-8 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f] via-[#080810] to-[#0a0a0f]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-[#080810] to-obsidian" />
 
             <div className="relative z-10 max-w-5xl mx-auto">
                 {/* Section Header */}
@@ -114,7 +114,7 @@ export default function Manifestos() {
                             className="relative rounded-3xl overflow-hidden"
                         >
                             {/* Deep obsidian background */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#06060a] via-[#0a0a12] to-[#06060a]" />
+                            <div className="absolute inset-0 bg-gradient-to-br from-obsidian via-obsidian to-obsidian" />
                             <div className="absolute inset-0 border border-white/[0.03] rounded-3xl" />
 
                             <div className="relative z-10 p-8 md:p-16">

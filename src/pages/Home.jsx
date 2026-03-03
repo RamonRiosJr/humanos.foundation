@@ -11,7 +11,7 @@ import SEOMeta from '../components/shared/SEOMeta';
 
 export default function Home() {
     return (
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+        <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
                 title="Humanos Foundation — Health Data Sovereignty Movement"
                 description="The Human Operating System (hOS) is a global movement to return health data sovereignty to every patient. Own your health record, control who sees it, and benefit from it. Founded by Ramon Luis Rios Jr."
