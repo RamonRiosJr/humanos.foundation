@@ -51,7 +51,7 @@ export default function Footer() {
                             humanos.foundation <ExternalLink className="w-3 h-3" />
                         </a>
                         <div className="mt-3 space-y-1">
-                            <p className="text-[10px] text-white/15">By Ramon Luis Rios Jr.</p>
+                            <p className="text-[10px] text-white/15">By Systems Architect Ramon Luis Rios Jr.</p>
                             <a href="https://ramonrios.net" target="_blank" rel="noopener noreferrer" className="text-[10px] text-white/20 hover:text-cyan-400/60 transition-colors block">ramonrios.net</a>
                             <a href="https://coqui.cloud" target="_blank" rel="noopener noreferrer" className="text-[10px] text-white/20 hover:text-cyan-400/60 transition-colors block">Coqui Cloud Dev Co.</a>
                         </div>
