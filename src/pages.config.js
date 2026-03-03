@@ -49,6 +49,7 @@
  */
 import Accessibility from './pages/Accessibility';
 import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 import Cookies from './pages/Cookies';
 import Disclaimer from './pages/Disclaimer';
@@ -77,6 +78,7 @@ import __Layout from './Layout.jsx';
 export const PAGES = {
     "Accessibility": Accessibility,
     "Blog": Blog,
+    "BlogPost": BlogPost,
     "Contact": Contact,
     "Cookies": Cookies,
     "Disclaimer": Disclaimer,
