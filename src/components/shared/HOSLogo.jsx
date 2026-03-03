@@ -47,27 +47,40 @@ export default function HOSLogo({ size = 36, variant = 'full', className = '', a
             </defs>
             <style>
                 {`
-                    .node-dot-0 { fill: #fca5a5; }
-                    .node-dot-1 { fill: #93c5fd; }
-                    .node-dot-2 { fill: #86efac; }
-                    .node-dot-3 { fill: #fde047; }
-                    .node-dot-4 { fill: #d8b4fe; }
-                    .node-dot-5 { fill: #fdba74; }
-                    
-                    @keyframes hOS-pulse-soft {
-                        0%, 100% { opacity: 0.4; filter: drop-shadow(0 0 1px currentColor); transform: scale(0.9); }
-                        50% { opacity: 1; filter: drop-shadow(0 0 3px currentColor); transform: scale(1.1); }
+                    @keyframes color-cycle {
+                        0% { fill: #fca5a5; opacity: 1; transform: scale(1.3); }
+                        16% { fill: #93c5fd; opacity: 1; transform: scale(1.1); }
+                        33% { fill: #86efac; opacity: 1; transform: scale(1.1); }
+                        50% { fill: #fde047; opacity: 1; transform: scale(1.1); }
+                        66% { fill: #d8b4fe; opacity: 1; transform: scale(1.1); }
+                        83% { fill: #fdba74; opacity: 1; transform: scale(1.1); }
+                        100% { fill: #fca5a5; opacity: 1; transform: scale(1.3); }
                     }
                     
                     .node-dot {
-                        transform-origin: center;
-                        animation: hOS-pulse-soft 4s infinite ease-in-out;
+                        fill: url(#hOS-grad-a);
+                        opacity: 0.7;
+                        transition: all 0.5s ease-in-out;
                     }
-                    .node-dot-1 { animation-delay: 0.6s; }
-                    .node-dot-2 { animation-delay: 1.2s; }
-                    .node-dot-3 { animation-delay: 1.8s; }
-                    .node-dot-4 { animation-delay: 2.4s; }
-                    .node-dot-5 { animation-delay: 3.0s; }
+                    
+                    .group:hover .node-dot {
+                        animation: color-cycle 4s infinite ease-in-out;
+                    }
+                    .group:hover .node-dot-1 { animation-delay: 0.6s; }
+                    .group:hover .node-dot-2 { animation-delay: 1.2s; }
+                    .group:hover .node-dot-3 { animation-delay: 1.8s; }
+                    .group:hover .node-dot-4 { animation-delay: 2.4s; }
+                    .group:hover .node-dot-5 { animation-delay: 3.0s; }
+                    
+                    .hos-text {
+                        transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+                    }
+                    .group:hover .hos-text {
+                        fill: #ffffff;
+                        filter: drop-shadow(0 0 4px #ffffff) drop-shadow(0 0 12px #22d3ee);
+                        transform: scale(1.05);
+                        transform-origin: center;
+                    }
                 `}
             </style>
 
@@ -115,6 +128,7 @@ export default function HOSLogo({ size = 36, variant = 'full', className = '', a
                 letterSpacing="-0.3"
                 fill="url(#hOS-grad-a)"
                 filter="url(#hOS-glow)"
+                className="hos-text"
             >
                 hOS
             </text>
