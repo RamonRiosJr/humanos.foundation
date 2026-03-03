@@ -8,6 +8,7 @@ import PageHero from '../components/shared/PageHero';
 import PageCTA from '../components/shared/PageCTA';
 import { Clock, ArrowRight, Tag } from 'lucide-react';
 import { createPageUrl } from '@/utils';
+import { Link } from 'react-router-dom';
 
 const categories = ['All', 'Patient Rights', 'Technology', 'Policy & Regulation', 'Movement Stories', 'Research & Data', 'Community'];
 
@@ -59,8 +60,8 @@ export default function Blog() {
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
                                 className={`px-4 py-2 rounded-full text-xs font-medium transition-all duration-300 border ${activeCategory === cat
-                                        ? 'bg-cyan-500/10 border-cyan-500/40 text-cyan-400'
-                                        : 'glass border-white/[0.05] text-white/30 hover:text-white/50 hover:border-white/10'
+                                    ? 'bg-cyan-500/10 border-cyan-500/40 text-cyan-400'
+                                    : 'glass border-white/[0.05] text-white/30 hover:text-white/50 hover:border-white/10'
                                     }`}
                             >
                                 {cat}
@@ -111,9 +112,9 @@ export default function Blog() {
                                                 {post.read_time_minutes} min read
                                             </span>
                                         )}
-                                        <span className="text-[10px] text-cyan-400/40 flex items-center gap-1 group-hover:text-cyan-400/70 transition-colors ml-auto">
+                                        <Link to={`/BlogPost?id=${post.id}`} className="text-[10px] text-cyan-400/40 flex items-center gap-1 group-hover:text-cyan-400/70 transition-colors ml-auto">
                                             Read more <ArrowRight className="w-3 h-3" />
-                                        </span>
+                                        </Link>
                                     </div>
                                 </motion.div>
                             ))}
