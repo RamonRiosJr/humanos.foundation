@@ -76,6 +76,7 @@ export default function HeroDashboard() {
                                 <motion.div
                                     key={i}
                                     className="flex-1 rounded-full"
+                                    // @ts-ignore — background is valid CSS in MotionStyle at runtime
                                     style={{
                                         background: `linear-gradient(to top, rgba(0,212,255,0.1), rgba(0,212,255,${0.3 + Math.random() * 0.4}))`,
                                     }}

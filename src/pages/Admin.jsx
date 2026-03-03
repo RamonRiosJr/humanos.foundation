@@ -76,7 +76,7 @@ export default function Admin() {
         return (
             <div className="bg-[#0a0a0f] min-h-screen flex items-center justify-center px-4">
                 <div className="glass-strong rounded-3xl p-10 text-center max-w-sm">
-                    <HOSLogo size="lg" variant="full" asLink={false} className="justify-center mb-6" />
+                    <HOSLogo size={48} wordmarkSize="lg" variant="full" asLink={false} className="justify-center mb-6" />
                     <p className="text-white/40 text-sm mb-6">Admin access required.</p>
                     <button
                         onClick={() => base44.auth.redirectToLogin(window.location.href)}
@@ -101,7 +101,7 @@ export default function Admin() {
             {/* Top bar */}
             <div className="sticky top-0 z-40 border-b border-white/[0.05] bg-[#0a0a0f]/90 backdrop-blur-xl px-6 py-4 flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                    <HOSLogo size="sm" variant="full" asLink />
+                    <HOSLogo size={28} wordmarkSize="sm" variant="full" asLink />
                     <span className="text-[10px] text-white/20 uppercase tracking-widest font-medium border-l border-white/10 pl-4">Admin</span>
                 </div>
                 <div className="flex items-center gap-3">
