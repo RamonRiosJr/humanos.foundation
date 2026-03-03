@@ -10,13 +10,13 @@ import { Key, Eye, Shield, Fingerprint, Scale, BookOpen } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 
 const declarations = [
-    'We, the patients of the world, declare that our lived experience cannot be compressed into a five-minute visit or a standard deviation.',
+    'We, the patients of the world, declare that the "First Mile" of care is fundamentally broken. Our continuous lived experience cannot be compressed into a five-minute visit or a standard deviation.',
+    'We declare that forcing vulnerable populations—rural patients, non-native speakers, and those battling severe chronic illness—to communicate complex histories under intense time pressure is an act of systemic negligence.',
     'We declare that the current medical architecture is a billing machine, designed to rapidly process bodies rather than investigate complex, root-cause suffering.',
     <span key="d3">We declare an end to the "medication gallery" — the systemic practice of <Link to="/TheProblem" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">drugging symptoms out of administrative convenience</Link> rather than healing the human.</span>,
     <span key="d4">We refuse to spend 20 minutes filling out archaic paper clipboards, only for our profound physical and mental realities to be ignored in a <Link to="/Principles" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">rushed 5-minute review</Link>.</span>,
-    'We declare that misdiagnosis and over-medication strip us of our true selves, alter our thoughts, and sentence us to forced disability.',
-    'We demand systems that capture our continuous, longitudinal truth — the days, the weeks, the months of our lived reality — rendering our suffering unignorable.',
-    'We declare that health data sovereignty is not just about privacy. It is about holding the system accountable with irrefutable proof of our condition.',
+    'We demand systems that capture our continuous, longitudinal truth — bridging the First Mile with irrefutable data before we ever step foot in a clinic.',
+    'We declare that health data sovereignty is not just about privacy. It is about wielding power to hold the system accountable and demand individualized care.',
     'We call on technologists, clinicians who refuse the status quo, and fellow patients to build the infrastructure of personalized, root-cause medicine.',
     <span key="d9">The revolution against assembly-line medicine is not coming. It is here. And it starts with you <Link to="/Join" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">taking command of your story</Link>.</span>,
 ];

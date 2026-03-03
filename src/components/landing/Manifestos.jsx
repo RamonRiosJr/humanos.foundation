@@ -3,12 +3,12 @@ import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { BookOpen, Scale, Shield, Eye, Key, Fingerprint } from 'lucide-react';
 
 const manifestoLines = [
-    'We believe your body is yours — every signal, every cell, every byte.',
-    'We believe healthcare should serve the human, not the institution.',
-    'We believe in radical transparency over bureaucratic obscurity.',
-    'We believe data sovereignty is a fundamental human right.',
-    'We believe the future of medicine begins with the patient.',
-    'We are the revolution. We are hOS.',
+    'We believe the "First Mile" of care is fundamentally broken — forcing complex lived experiences into a 5-minute intake is an act of institutional violence against the vulnerable.',
+    'We believe treating symptoms with endless new medications while ignoring the root cause is unacceptable.',
+    'We believe the "Medication Gallery" must be dismantled. You are not a trial-and-error experiment for pharmacology.',
+    'We believe healthcare must serve the human, not the volume-driven billing machine.',
+    'We believe that bridging the First Mile requires patient data sovereignty, equipping individuals with their unassailable truth before they ever enter the clinic.',
+    'We are the revolution against assembly-line medicine. We are hOS.',
 ];
 
 const fourLaws = [
@@ -78,8 +78,8 @@ export default function Manifestos() {
                         <button
                             onClick={() => setActiveTab('manifesto')}
                             className={`px-5 md:px-8 py-2.5 rounded-full text-xs md:text-sm font-medium transition-all duration-300 ${activeTab === 'manifesto'
-                                    ? 'bg-white/10 text-cyan-400 shadow-lg shadow-cyan-500/10'
-                                    : 'text-white/30 hover:text-white/50'
+                                ? 'bg-white/10 text-cyan-400 shadow-lg shadow-cyan-500/10'
+                                : 'text-white/30 hover:text-white/50'
                                 }`}
                         >
                             <span className="flex items-center gap-2">
@@ -90,8 +90,8 @@ export default function Manifestos() {
                         <button
                             onClick={() => setActiveTab('laws')}
                             className={`px-5 md:px-8 py-2.5 rounded-full text-xs md:text-sm font-medium transition-all duration-300 ${activeTab === 'laws'
-                                    ? 'bg-white/10 text-cyan-400 shadow-lg shadow-cyan-500/10'
-                                    : 'text-white/30 hover:text-white/50'
+                                ? 'bg-white/10 text-cyan-400 shadow-lg shadow-cyan-500/10'
+                                : 'text-white/30 hover:text-white/50'
                                 }`}
                         >
                             <span className="flex items-center gap-2">
@@ -129,8 +129,8 @@ export default function Manifestos() {
                                         >
                                             <p
                                                 className={`text-base md:text-xl leading-relaxed ${i === manifestoLines.length - 1
-                                                        ? 'text-cyan-400 font-semibold text-lg md:text-2xl'
-                                                        : 'text-white/50'
+                                                    ? 'text-cyan-400 font-semibold text-lg md:text-2xl'
+                                                    : 'text-white/50'
                                                     }`}
                                                 style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
                                             >

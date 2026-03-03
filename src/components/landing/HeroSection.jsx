@@ -48,7 +48,7 @@ export default function HeroSection() {
                     transition={{ duration: 1, delay: 0.4 }}
                     className="text-sm md:text-lg text-white/40 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed font-light"
                 >
-                    hOS is the revolution against assembly-line medicine — demanding that your entire, continuous lived experience is understood before you are prescribed another pill.
+                    The "First Mile" of care is broken. Vulnerable populations face an impossible task: compressing complex, continuous lived experiences into a rushed 5-minute intake. hOS is the revolution that bridges this gap, giving you sovereignty over your full story before you ever enter the clinic.
                 </motion.p>
 
                 {/* CTA */}
