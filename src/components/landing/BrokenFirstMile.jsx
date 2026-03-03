@@ -4,8 +4,8 @@ import { useRef } from 'react';
 import { AlertTriangle, Sparkles, FileX, Wifi, Clock, ShieldCheck, Scan, Database } from 'lucide-react';
 
 const brokenItems = [
-    { icon: Clock, text: 'The 5-Minute Diagnosis' },
-    { icon: FileX, text: '20 pages of ignored intake' },
+    { icon: Clock, text: 'The 5-Minute Doctor Review' },
+    { icon: FileX, text: '15 pages of ignored intake' },
     { icon: AlertTriangle, text: 'The Medication Gallery' },
     { icon: Wifi, text: 'Treating symptoms, leaving causes' },
 ];
