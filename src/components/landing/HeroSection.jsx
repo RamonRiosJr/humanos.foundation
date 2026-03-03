@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
-import { base44 } from '@/api/humanosClient';
 import NeuralMap from './NeuralMap';
 import HeroDashboard from './HeroDashboard';
 
