@@ -4,6 +4,7 @@ import SEOMeta from '../components/shared/SEOMeta';
 import { base44 } from '@/api/humanosClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
+import { Turnstile } from '@marsidev/react-turnstile';
 import PageHero from '../components/shared/PageHero';
 import { CheckCircle2, Users, Heart, Code, Stethoscope, BookOpen, Megaphone, HelpCircle } from 'lucide-react';
 import HOSLogo from '../components/shared/HOSLogo';
@@ -22,6 +23,7 @@ export default function Join() {
     const [form, setForm] = useState({ name: '', email: '', role: '', reason: '', newsletter: true, volunteer: false, honeypot: '' });
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [turnstileToken, setTurnstileToken] = useState(null);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -45,7 +47,13 @@ export default function Join() {
         }
         localStorage.setItem('last_join_submit', now.toString());
 
-        const payload = { ...form };
+        if (!turnstileToken) {
+            alert('Please verify you are human by completing the captcha.');
+            setLoading(false);
+            return;
+        }
+
+        const payload = { ...form, turnstile_token: turnstileToken };
         delete payload.honeypot;
 
         await base44.entities.JoinRequest.create(payload);
@@ -187,6 +195,14 @@ export default function Join() {
                                             <span className="text-sm text-white/35 group-hover:text-white/50 transition-colors">{opt.label}</span>
                                         </label>
                                     ))}
+                                </div>
+
+                                <div className="flex justify-center mt-6">
+                                    <Turnstile
+                                        siteKey="1x00000000000000000000AA"
+                                        onSuccess={(token) => setTurnstileToken(token)}
+                                        options={{ theme: 'dark' }}
+                                    />
                                 </div>
 
                                 <button

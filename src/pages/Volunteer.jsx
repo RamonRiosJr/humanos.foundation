@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { base44 } from '@/api/humanosClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
+import { Turnstile } from '@marsidev/react-turnstile';
 import PageHero from '../components/shared/PageHero';
 import { CheckCircle2, Code, PenTool, Globe, Megaphone, BookOpen, Users } from 'lucide-react';
 
@@ -21,11 +22,19 @@ export default function Volunteer() {
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
     const [selectedRole, setSelectedRole] = useState('');
+    const [turnstileToken, setTurnstileToken] = useState(null);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-        await base44.entities.JoinRequest.create({ ...form, reason: selectedRole ? `Role interest: ${selectedRole}. ${form.reason}` : form.reason });
+
+        if (!turnstileToken) {
+            alert('Please verify you are human by completing the captcha.');
+            setLoading(false);
+            return;
+        }
+
+        await base44.entities.JoinRequest.create({ ...form, reason: selectedRole ? `Role interest: ${selectedRole}. ${form.reason}` : form.reason, turnstile_token: turnstileToken });
         setSubmitted(true);
         setLoading(false);
     };
@@ -77,6 +86,15 @@ export default function Volunteer() {
                                             placeholder="Your motivation, skills, or experience..."
                                             className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent resize-none" />
                                     </div>
+
+                                    <div className="flex justify-center mt-6">
+                                        <Turnstile
+                                            siteKey="1x00000000000000000000AA"
+                                            onSuccess={(token) => setTurnstileToken(token)}
+                                            options={{ theme: 'dark' }}
+                                        />
+                                    </div>
+
                                     <button type="submit" disabled={loading} className="w-full glow-btn py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-white font-semibold text-sm tracking-wide disabled:opacity-50">
                                         {loading ? 'Submitting...' : 'Join the Volunteer Network →'}
                                     </button>
