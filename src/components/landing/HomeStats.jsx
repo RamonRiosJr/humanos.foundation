@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion';
 
 const stats = [
     { value: '1B+', label: 'Patient records at risk daily', sub: 'of data breaches involve health records' },
-    { value: '$250', label: 'Your EHR data market value', sub: 'yet patients receive $0' },
+    { value: '$250', label: 'Your health data market value', sub: 'yet patients receive $0' },
     { value: '0%', label: 'Patient data ownership', sub: 'under current healthcare systems' },
     { value: '∞', label: 'Your right to sovereignty', sub: 'what hOS is fighting for' },
 ];

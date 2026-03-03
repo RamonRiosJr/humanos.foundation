@@ -10,7 +10,7 @@ import { AlertTriangle, Database, DollarSign, Lock, Eye, FileX, Globe, Clock } f
 import { createPageUrl } from '@/utils';
 
 const problems = [
-    { icon: Clock, title: 'The 5-Minute Diagnosis', description: 'After filling out 20 pages of clipboards, your profound physical and mental reality is compressed into a rushed 5-minute review by a doctor staring at a screen.', stat: '5 MIN', statLabel: 'average time spent understanding you' },
+    { icon: Clock, title: 'The 5-Minute Review', description: 'After filling out 15 pages of arbitrary clipboards, your profound physical and mental reality is compressed into a rushed 5-minute review by a doctor staring at a screen.', stat: '5 MIN', statLabel: 'average time spent understanding you' },
     { icon: AlertTriangle, title: 'The Medication Gallery', description: 'Instead of investigating root causes, the easiest administrative path is to drug the symptom. When side effects hit, they add another pill. You become a gallery of meds.', stat: '∞', statLabel: 'pills to treat the side effects of pills' },
     { icon: DollarSign, title: 'A Billing Machine, Not Healthcare', description: 'The current architecture incentivizes rapid turnover and over-prescription. The system steals from insurance and patients by prioritizing volume over healing.', stat: 'VOLUME', statLabel: 'prioritized over your actual health' },
     { icon: FileX, title: 'Standardizing Suffering', description: 'Your lived experience is continuous, but the system treats you as a standardized deviation. Complex cases (ADHD, ASD, Bipolar) are shoved into one-size-fits-all boxes.', stat: '1 SIZE', statLabel: 'fits no one' },
@@ -26,7 +26,7 @@ export default function TheProblem() {
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
                 title="The Problem — Assembly-Line Medicine & Over-Medication"
-                description="The healthcare system is a billing machine. The 5-minute diagnosis leads to the medication gallery. Here is why we are fighting back."
+                description="The healthcare system is a billing machine. 15 pages of arbitrary paperwork and a 5-minute doctor review lead directly to the medication gallery."
                 url="https://humanos.foundation/the-problem"
             />
             <Navbar />
