@@ -66,29 +66,29 @@ export default function AboutJourney() {
                                                 <div className="w-2 h-2 rounded-full bg-red-400/60" />
                                                 <div className="w-2 h-2 rounded-full bg-yellow-400/60" />
                                                 <div className="w-2 h-2 rounded-full bg-green-400/60" />
-                                                <span className="text-[9px] text-white/20 ml-2 font-mono">
+                                                <span className="text-[9px] text-[#ffffff]/50 ml-2 font-mono">
                                                     hOS-core.ts
                                                 </span>
                                             </div>
                                             <div className="space-y-1.5">
                                                 <div className="flex gap-2">
-                                                    <span className="text-[10px] text-purple-400/60 font-mono">const</span>
-                                                    <span className="text-[10px] text-cyan-400/70 font-mono">sovereignty</span>
-                                                    <span className="text-[10px] text-white/30 font-mono">=</span>
-                                                    <span className="text-[10px] text-green-400/60 font-mono">"absolute"</span>
+                                                    <span className="text-[10px] text-[#c084fc]/80 font-mono">const</span>
+                                                    <span className="text-[10px] text-[#22d3ee]/90 font-mono">sovereignty</span>
+                                                    <span className="text-[10px] text-white/50 font-mono">=</span>
+                                                    <span className="text-[10px] text-[#4ade80]/80 font-mono">"absolute"</span>
                                                 </div>
                                                 <div className="flex gap-2">
-                                                    <span className="text-[10px] text-purple-400/60 font-mono">const</span>
-                                                    <span className="text-[10px] text-cyan-400/70 font-mono">patient</span>
-                                                    <span className="text-[10px] text-white/30 font-mono">=</span>
-                                                    <span className="text-[10px] text-green-400/60 font-mono">"first"</span>
+                                                    <span className="text-[10px] text-[#c084fc]/80 font-mono">const</span>
+                                                    <span className="text-[10px] text-[#22d3ee]/90 font-mono">patient</span>
+                                                    <span className="text-[10px] text-white/50 font-mono">=</span>
+                                                    <span className="text-[10px] text-[#4ade80]/80 font-mono">"first"</span>
                                                 </div>
                                                 <div className="h-1" />
                                                 <div className="flex gap-2">
-                                                    <span className="text-[10px] text-yellow-400/60 font-mono">// Built by a patient,</span>
+                                                    <span className="text-[10px] text-[#facc15]/80 font-mono">// Built by a patient,</span>
                                                 </div>
                                                 <div className="flex gap-2">
-                                                    <span className="text-[10px] text-yellow-400/60 font-mono">// for patients.</span>
+                                                    <span className="text-[10px] text-[#facc15]/80 font-mono">// for patients.</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -102,7 +102,7 @@ export default function AboutJourney() {
                                             className="flex items-center gap-2"
                                         >
                                             <Heart className="w-3 h-3 text-rose-400/50" />
-                                            <span className="text-[10px] text-white/20 font-light italic">
+                                            <span className="text-[10px] text-[#ffffff]/50 font-light italic">
                                                 River & Brownie, always by his side
                                             </span>
                                         </motion.div>
@@ -116,7 +116,7 @@ export default function AboutJourney() {
                             {/* Caption */}
                             <div className="mt-4 flex items-center gap-2">
                                 <div className="w-8 h-px bg-cyan-500/30" />
-                                <p className="text-[11px] text-white/25 italic">
+                                <p className="text-[11px] text-white/50 italic">
                                     The Motel Room Prototype — Where hOS was born
                                 </p>
                             </div>
@@ -131,26 +131,26 @@ export default function AboutJourney() {
                         className="md:col-span-2 space-y-6"
                     >
                         <div className="space-y-4">
-                            <p className="text-white/50 text-sm md:text-base leading-relaxed">
+                            <p className="text-white/70 text-sm md:text-base leading-relaxed">
                                 hOS wasn't born in a boardroom or a venture capital pitch meeting.
                                 It was born in a dimly lit motel room, powered by necessity and
                                 an unshakable belief that{' '}
                                 <span className="text-cyan-400/80">patients deserve better</span>.
                             </p>
-                            <p className="text-white/35 text-sm md:text-base leading-relaxed">
+                            <p className="text-white/60 text-sm md:text-base leading-relaxed">
                                 Ramon Luis Rios Jr., the founder, was a patient first — navigating a broken
                                 healthcare system, drowning in paperwork, locked out of his own medical records.
                                 With raw code and relentless determination, he built the first prototype
                                 of what would become the Human Operating System.
                             </p>
-                            <p className="text-white/35 text-sm md:text-base leading-relaxed">
+                            <p className="text-white/60 text-sm md:text-base leading-relaxed">
                                 No team. No funding. Just a laptop, two loyal dogs, and a vision
                                 that healthcare should serve the human — not the institution.
                             </p>
                         </div>
 
                         {/* Principles */}
-                        <div className="space-y-3 pt-4 border-t border-white/[0.04]">
+                        <div className="space-y-3 pt-4 border-t border-white/10">
                             {[
                                 { icon: Code, text: 'Built by a patient' },
                                 { icon: Heart, text: 'Forged in survival' },
@@ -164,7 +164,7 @@ export default function AboutJourney() {
                                     className="flex items-center gap-3"
                                 >
                                     <item.icon className="w-3.5 h-3.5 text-cyan-400/50" />
-                                    <span className="text-xs text-white/40">{item.text}</span>
+                                    <span className="text-xs text-white/60">{item.text}</span>
                                 </motion.div>
                             ))}
                         </div>
