@@ -49,20 +49,25 @@ const ChatbotWidget = () => {
             {/* Toggle Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="relative group transition-transform duration-300 hover:scale-105"
+                className="relative group transition-transform duration-300 hover:scale-110"
                 aria-label="Toggle AI Chatbot"
                 aria-expanded={isOpen}
             >
-                {/* Glow Effect */}
-                <div className="absolute inset-0 bg-cyan-500 rounded-full blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                {/* Green Animated Halo */}
+                <div className="absolute inset-0 bg-green-500 rounded-full blur-2xl opacity-40 animate-halo-pulse group-hover:opacity-70 transition-opacity"></div>
+                <div className="absolute inset-0 bg-green-400 rounded-full blur-md opacity-30 animate-pulse group-hover:opacity-50 transition-opacity"></div>
 
-                <div className={`relative w-14 h-14 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(6,182,212,0.3)] overflow-hidden transition-all duration-500 ${isOpen ? 'scale-90 border-cyan-500' : 'border-slate-700'}`}>
+                <div className={`relative w-16 h-16 flex items-center justify-center transition-all duration-500 overflow-visible`}>
                     {isOpen ? (
-                        <div className="absolute inset-0 flex items-center justify-center bg-slate-900 border border-cyan-500 rounded-full">
-                            <X className="w-6 h-6 text-cyan-400" />
+                        <div className="w-12 h-12 flex items-center justify-center bg-slate-900 border border-green-500 rounded-full shadow-[0_0_15px_rgba(34,197,94,0.5)]">
+                            <X className="w-6 h-6 text-green-400" />
                         </div>
                     ) : (
-                        <img src="/coquibot.png" alt="CoquiBot" className="w-full h-full object-cover rounded-full border-2 border-slate-800" />
+                        <img
+                            src="/coquibot.png"
+                            alt="CoquiBot"
+                            className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]"
+                        />
                     )}
                 </div>
             </button>
