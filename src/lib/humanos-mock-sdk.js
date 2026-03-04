@@ -3,7 +3,7 @@
  * This replaces the Base44 SDK to ensure full data sovereignty 
  * and removal of third-party tracking/analytics.
  */
-import posthog from 'posthog-js';
+// PostHog imported dynamically below to prevent blank screen crashes when config is missing
 
 const STORAGE_PREFIX = 'humanos_';
 
@@ -123,9 +123,10 @@ export const humanosMockClient = {
         }
     },
     analytics: {
-        track: (params) => {
+        track: async (params) => {
             // Send exact user journey data to PostHog if configured
             if (import.meta.env.VITE_POSTHOG_KEY) {
+                const { default: posthog } = await import('posthog-js');
                 posthog.capture(params.name || 'Custom Event', params.properties || params);
             }
             console.log('Analytics Event Tracked:', params);
