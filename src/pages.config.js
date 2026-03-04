@@ -9,9 +9,9 @@
  * 
  * Example file structure:
  * 
- *   import HomePage from './pages/HomePage';
- *   import Dashboard from './pages/Dashboard';
- *   import Settings from './pages/Settings';
+ *   const HomePage = lazy(() => import('./pages/HomePage'));
+ *   const Dashboard = lazy(() => import('./pages/Dashboard'));
+ *   const Settings = lazy(() => import('./pages/Settings'));
  *   
  *   export const PAGES = {
  *       "HomePage": HomePage,
@@ -26,9 +26,10 @@
  * 
  * Example with Layout (wraps all pages):
  *
- *   import Home from './pages/Home';
- *   import Settings from './pages/Settings';
- *   import __Layout from './Layout.jsx';
+ *   const Home = lazy(() => import('./pages/Home'));
+ *   const Settings = lazy(() => import('./pages/Settings'));
+ *   import { lazy } from 'react';
+import __Layout from './Layout.jsx';
  *
  *   export const PAGES = {
  *       "Home": Home,
@@ -47,31 +48,32 @@
  *
  * The mainPage value must match a key in the PAGES object exactly.
  */
-import Accessibility from './pages/Accessibility';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import Contact from './pages/Contact';
-import Cookies from './pages/Cookies';
-import Disclaimer from './pages/Disclaimer';
-import Events from './pages/Events';
-import FAQ from './pages/FAQ';
-import Glossary from './pages/Glossary';
-import Home from './pages/Home';
-import Join from './pages/Join';
-import Manifesto from './pages/Manifesto';
-import OpenSource from './pages/OpenSource';
-import Origin from './pages/Origin';
-import Partners from './pages/Partners';
-import Press from './pages/Press';
-import Principles from './pages/Principles';
-import Privacy from './pages/Privacy';
-import Resources from './pages/Resources';
-import Security from './pages/Security';
-import Support from './pages/Support';
-import Terms from './pages/Terms';
-import TheProblem from './pages/TheProblem';
-import Volunteer from './pages/Volunteer';
-import Admin from './pages/Admin';
+const Accessibility = lazy(() => import('./pages/Accessibility'));
+const Blog = lazy(() => import('./pages/Blog'));
+const BlogPost = lazy(() => import('./pages/BlogPost'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Cookies = lazy(() => import('./pages/Cookies'));
+const Disclaimer = lazy(() => import('./pages/Disclaimer'));
+const Events = lazy(() => import('./pages/Events'));
+const FAQ = lazy(() => import('./pages/FAQ'));
+const Glossary = lazy(() => import('./pages/Glossary'));
+const Home = lazy(() => import('./pages/Home'));
+const Join = lazy(() => import('./pages/Join'));
+const Manifesto = lazy(() => import('./pages/Manifesto'));
+const OpenSource = lazy(() => import('./pages/OpenSource'));
+const Origin = lazy(() => import('./pages/Origin'));
+const Partners = lazy(() => import('./pages/Partners'));
+const Press = lazy(() => import('./pages/Press'));
+const Principles = lazy(() => import('./pages/Principles'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Resources = lazy(() => import('./pages/Resources'));
+const Security = lazy(() => import('./pages/Security'));
+const Support = lazy(() => import('./pages/Support'));
+const Terms = lazy(() => import('./pages/Terms'));
+const TheProblem = lazy(() => import('./pages/TheProblem'));
+const Volunteer = lazy(() => import('./pages/Volunteer'));
+const Admin = lazy(() => import('./pages/Admin'));
+import { lazy } from 'react';
 import __Layout from './Layout.jsx';
 
 
