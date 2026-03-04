@@ -1,53 +1,10 @@
+import { lazy } from 'react';
+import __Layout from './Layout.jsx';
+
 /**
  * pages.config.js - Page routing configuration
- * 
- * This file is AUTO-GENERATED. Do not add imports or modify PAGES manually.
- * Pages are auto-registered when you create files in the ./pages/ folder.
- * 
- * THE ONLY EDITABLE VALUE: mainPage
- * This controls which page is the landing page (shown when users visit the app).
- * 
- * Example file structure:
- * 
- *   const HomePage = lazy(() => import('./pages/HomePage'));
- *   const Dashboard = lazy(() => import('./pages/Dashboard'));
- *   const Settings = lazy(() => import('./pages/Settings'));
- *   
- *   export const PAGES = {
- *       "HomePage": HomePage,
- *       "Dashboard": Dashboard,
- *       "Settings": Settings,
- *   }
- *   
- *   export const pagesConfig = {
- *       mainPage: "HomePage",
- *       Pages: PAGES,
- *   };
- * 
- * Example with Layout (wraps all pages):
- *
- *   const Home = lazy(() => import('./pages/Home'));
- *   const Settings = lazy(() => import('./pages/Settings'));
- *   import { lazy } from 'react';
-import __Layout from './Layout.jsx';
- *
- *   export const PAGES = {
- *       "Home": Home,
- *       "Settings": Settings,
- *   }
- *
- *   export const pagesConfig = {
- *       mainPage: "Home",
- *       Pages: PAGES,
- *       Layout: __Layout,
- *   };
- *
- * To change the main page from HomePage to Dashboard, use find_replace:
- *   Old: mainPage: "HomePage",
- *   New: mainPage: "Dashboard",
- *
- * The mainPage value must match a key in the PAGES object exactly.
  */
+
 const Accessibility = lazy(() => import('./pages/Accessibility'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
@@ -73,9 +30,6 @@ const Terms = lazy(() => import('./pages/Terms'));
 const TheProblem = lazy(() => import('./pages/TheProblem'));
 const Volunteer = lazy(() => import('./pages/Volunteer'));
 const Admin = lazy(() => import('./pages/Admin'));
-import { lazy } from 'react';
-import __Layout from './Layout.jsx';
-
 
 export const PAGES = {
     "Accessibility": Accessibility,
