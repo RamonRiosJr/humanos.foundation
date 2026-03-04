@@ -13,4 +13,9 @@ export default defineConfig({
             "@": path.resolve(__dirname, "./src"),
         },
     },
+    server: {
+        host: '192.168.16.73',
+        port: 7200,
+        strictPort: true,
+    },
 });

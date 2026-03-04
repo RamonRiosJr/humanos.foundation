@@ -25,8 +25,8 @@ Write-Host " [SYSTEM] Loading Patient Data Bill of Rights..." -ForegroundColor G
 Write-Host " [SYSTEM] Syncing Foundation Sovereignty Standards..." -ForegroundColor Gray
 Write-Host ""
 
-# Start the main Humanos Foundation App in the background on Port 5173
-Write-Host " [LAUNCH] Launching Humanos Foundation Website (Port 5173)..." -ForegroundColor Green
+# Start the main Humanos Foundation App in the background on Port 7200
+Write-Host " [LAUNCH] Launching Humanos Foundation Website (Port 7200)..." -ForegroundColor Green
 Start-Process -NoNewWindow -FilePath "npm.cmd" -ArgumentList "run", "dev"
 
 Write-Host ""
@@ -34,7 +34,7 @@ Write-Host " -----------------------------------------------------------------" 
 Write-Host " Status: ADVOCACY PIPELINE ACTIVE" -ForegroundColor White
 Write-Host " -----------------------------------------------------------------" -ForegroundColor Gray
 Write-Host ""
-Write-Host " - Foundation Main: http://localhost:5173" -ForegroundColor Cyan
+Write-Host " - Foundation Main: http://192.168.16.73:7200" -ForegroundColor Cyan
 Write-Host ""
 Write-Host " Press Ctrl+C in this window if you need to stop."
 Write-Host ""
