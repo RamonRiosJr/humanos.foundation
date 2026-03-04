@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from '@/App.jsx'
 import '@/index.css'
+import '@/lib/i18n' // Initialize i18n global engine
 
 const posthogKey = import.meta.env.VITE_POSTHOG_KEY;
 

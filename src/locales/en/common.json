@@ -1,0 +1,27 @@
+{
+    "a11y": {
+        "title": "Accessibility",
+        "engine_active": "SOVEREIGN ENGINE ACTIVE",
+        "high_contrast": "High Contrast",
+        "large_text": "Oversized Text",
+        "dyslexia_font": "Dyslexia Friendly",
+        "highlight_links": "Highlight Links",
+        "pause_animations": "Pause Animations",
+        "language": "Language",
+        "close": "Close Accessibility Menu"
+    },
+    "hero": {
+        "badge": "The Human Operating System",
+        "title_part1": "You Are Not",
+        "title_part2": "A",
+        "title_part3": "5-Minute",
+        "title_part4": "Diagnosis.",
+        "subtitle": "The \"First Mile\" of care is broken. Vulnerable populations face an impossible task: compressing complex, continuous lived experiences into 15 pages of arbitrary paperwork and a rushed 5-minute doctor review. hOS is the revolution that bridges this gap, giving you sovereignty over your full story before you ever enter the clinic.",
+        "cta_main": "Take Command of Your Story"
+    },
+    "common": {
+        "loading": "Loading...",
+        "error": "An error occurred",
+        "back": "Back"
+    }
+}
