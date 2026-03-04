@@ -1,8 +1,15 @@
 import React, { createContext, useContext, useEffect, useState } from "react"
 
+/**
+ * @typedef {Object} ThemeProviderState
+ * @property {string} theme
+ * @property {(theme: string) => void} setTheme
+ */
+
+/** @type {ThemeProviderState} */
 const initialState = {
     theme: "system",
-    setTheme: (theme) => null,
+    setTheme: (_theme) => null,
 }
 
 const ThemeProviderContext = createContext(initialState)

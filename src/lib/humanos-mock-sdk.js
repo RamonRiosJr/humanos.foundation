@@ -203,7 +203,8 @@ export const humanosMockClient = {
     analytics: {
         track: async (params) => {
             // Send exact user journey data to PostHog if configured
-            if (import.meta.env.VITE_POSTHOG_KEY) {
+            // @ts-ignore
+            if (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_POSTHOG_KEY) {
                 const { default: posthog } = await import('posthog-js');
                 posthog.capture(params.name || 'Custom Event', params.properties || params);
             }
