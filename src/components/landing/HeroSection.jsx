@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import NeuralMap from './NeuralMap';
 import HeroDashboard from './HeroDashboard';
+import { useTranslation } from 'react-i18next';
 
 export default function HeroSection() {
+    const { t } = useTranslation();
+
     return (
         <section className="relative min-h-screen flex flex-col items-center justify-center px-4 md:px-8 overflow-hidden noise-overlay">
             <NeuralMap />
@@ -20,7 +23,7 @@ export default function HeroSection() {
                 >
                     <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
                     <span className="text-[11px] md:text-xs text-cyan-400/80 font-medium tracking-[0.2em] uppercase">
-                        The Human Operating System
+                        {t('hero.badge')}
                     </span>
                 </motion.div>
 
@@ -33,12 +36,12 @@ export default function HeroSection() {
                     // @ts-ignore — fontFamily is valid in MotionStyle at runtime
                     style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
                 >
-                    <span className="text-white">You Are Not</span>
+                    <span className="text-white">{t('hero.title_part1')}</span>
                     <br />
-                    <span className="text-white/60">A </span>
-                    <span className="gradient-text">5-Minute</span>
+                    <span className="text-white/60">{t('hero.title_part2')} </span>
+                    <span className="gradient-text">{t('hero.title_part3')}</span>
                     <br />
-                    <span className="text-white">Diagnosis.</span>
+                    <span className="text-white">{t('hero.title_part4')}</span>
                 </motion.h1>
 
                 {/* Subheadline */}
@@ -48,7 +51,7 @@ export default function HeroSection() {
                     transition={{ duration: 1, delay: 0.4 }}
                     className="text-sm md:text-lg text-white/40 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed font-light"
                 >
-                    The "First Mile" of care is broken. Vulnerable populations face an impossible task: compressing complex, continuous lived experiences into 15 pages of arbitrary paperwork and a rushed 5-minute doctor review. hOS is the revolution that bridges this gap, giving you sovereignty over your full story before you ever enter the clinic.
+                    {t('hero.subtitle')}
                 </motion.p>
 
                 {/* CTA */}
@@ -62,7 +65,7 @@ export default function HeroSection() {
                         className="glow-btn relative inline-flex px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-white font-semibold text-sm md:text-base tracking-wide group"
                     >
                         <span className="relative z-10 flex items-center gap-2">
-                            Take Command of Your Story
+                            {t('hero.cta_main')}
                             <motion.span
                                 animate={{ x: [0, 4, 0] }}
                                 transition={{ duration: 1.5, repeat: Infinity }}
