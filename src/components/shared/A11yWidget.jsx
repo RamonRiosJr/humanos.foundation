@@ -57,9 +57,13 @@ const A11yWidget = () => {
                 </div>
             )}
 
+            {/* Blue Animated Halo & Fog */}
+            <div className="absolute inset-0 bg-blue-500 rounded-full blur-2xl opacity-30 animate-halo-pulse"></div>
+            <div className="absolute -inset-2 bg-blue-400/20 rounded-full blur-xl animate-fog-drift"></div>
+
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg ${isOpen ? 'bg-cyan-500 text-obsidian scale-90' : 'bg-slate-800 text-cyan-400 border border-slate-700 hover:border-cyan-500/50 hover:bg-slate-700 hover:scale-110'
+                className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.5)] ${isOpen ? 'bg-blue-600 text-white scale-90' : 'bg-slate-800 text-blue-400 border border-slate-700 hover:border-blue-500/50 hover:bg-slate-700 hover:scale-110'
                     }`}
                 aria-label="Toggle Accessibility Menu"
                 aria-expanded={isOpen}
@@ -75,8 +79,8 @@ const A11yToggle = ({ active, onClick, icon, label }) => {
         <button
             onClick={onClick}
             className={`w-full flex items-center justify-between p-3 rounded-lg border transition-all duration-200 ${active
-                    ? 'bg-cyan-500/10 border-cyan-500/50 text-cyan-400'
-                    : 'bg-transparent border-transparent text-slate-300 hover:bg-slate-800 hover:text-white'
+                ? 'bg-cyan-500/10 border-cyan-500/50 text-cyan-400'
+                : 'bg-transparent border-transparent text-slate-300 hover:bg-slate-800 hover:text-white'
                 }`}
             aria-pressed={active}
         >
