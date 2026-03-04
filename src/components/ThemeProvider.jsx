@@ -2,7 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from "react"
 
 const initialState = {
     theme: "system",
-    setTheme: () => null,
+    setTheme: (theme) => null,
 }
 
 const ThemeProviderContext = createContext(initialState)
@@ -37,9 +37,9 @@ export function ThemeProvider({
 
     const value = {
         theme,
-        setTheme: (theme) => {
-            localStorage.setItem(storageKey, theme)
-            setTheme(theme)
+        setTheme: (newTheme) => { // Renamed argument to avoid conflict with state setter
+            localStorage.setItem(storageKey, newTheme)
+            setTheme(newTheme)
         },
     }
 

@@ -6,7 +6,7 @@ import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
 import PageCTA from '../components/shared/PageCTA';
-import { AlertTriangle, Database, DollarSign, Lock, Eye, FileX, Globe, Clock } from 'lucide-react';
+import { AlertTriangle, Database, DollarSign, Lock, Eye, FileX, Clock } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 
 const problems = [
@@ -16,6 +16,7 @@ const problems = [
     { icon: FileX, title: 'Standardizing Suffering', description: 'Your lived experience is continuous, but the system treats you as a standardized deviation. Complex cases (ADHD, ASD, Bipolar) are shoved into one-size-fits-all boxes.', stat: '1 SIZE', statLabel: 'fits no one' },
     { icon: Eye, title: 'Forced Disability', description: 'Misdiagnosis and over-medication strip patients of their true selves, alter their thoughts, and sentence them to lives of forced disability and despair.', stat: 'LOSS', statLabel: 'of your true self and potential' },
     { icon: Database, title: 'Data Without Context', description: 'A list of your prescriptions and lab values tells the system nothing about how you actually feel. We have petabytes of data, but zero clinical clarity.', stat: '0', statLabel: 'understanding of your daily reality' },
+    { icon: Lock, title: 'Legacy Leaks', description: 'Once your data enters an institutional silo, you lose all control. Hospitals sell "de-identified" data to brokers, and legacy security leads to inevitable hacks.', stat: '0%', statLabel: 'control over institutional sharing' },
 ];
 
 export default function TheProblem() {

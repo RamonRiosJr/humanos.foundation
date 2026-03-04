@@ -13,7 +13,7 @@ const A11yWidget = () => {
     };
 
     return (
-        <div className="fixed bottom-6 left-6 z-50 transition-all duration-300">
+        <div className="fixed bottom-6 left-6 z-[60] transition-all duration-300">
             {isOpen && (
                 <div className="absolute bottom-16 left-0 bg-slate-900/90 backdrop-blur-xl border border-white/10 rounded-2xl w-72 sm:w-80 p-4 shadow-2xl flex flex-col gap-3 animate-in fade-in slide-in-from-bottom-4">
                     <div className="flex items-center justify-between pb-3 border-b border-white/10">
@@ -85,9 +85,9 @@ const A11yWidget = () => {
                 </div>
             )}
 
-            {/* Blue Animated Halo & Fog */}
-            <div className="absolute inset-0 bg-blue-500 rounded-full blur-2xl opacity-30 animate-halo-pulse"></div>
-            <div className="absolute -inset-2 bg-blue-400/20 rounded-full blur-xl animate-fog-drift"></div>
+            {/* Blue Animated Halo & Fog - pointer-events-none to prevent blocking clicks */}
+            <div className="absolute inset-0 bg-blue-500 rounded-full blur-2xl opacity-30 animate-halo-pulse pointer-events-none"></div>
+            <div className="absolute -inset-2 bg-blue-400/20 rounded-full blur-xl animate-fog-drift pointer-events-none"></div>
 
             <button
                 onClick={() => setIsOpen(!isOpen)}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Bot, X, Send } from 'lucide-react';
+import { X, Send } from 'lucide-react';
 
 const ChatbotWidget = () => {
     const [isOpen, setIsOpen] = useState(false);

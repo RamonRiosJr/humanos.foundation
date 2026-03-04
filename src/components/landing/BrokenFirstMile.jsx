@@ -105,30 +105,36 @@ export default function BrokenFirstMile() {
 
                     {/* Right - hOS Light */}
                     <motion.div
-                        initial={{ opacity: 0, x: 40 }}
+                        initial={{ opacity: 1, x: 40 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 1, delay: 0.4 }}
-                        className="relative rounded-2xl md:rounded-l-none md:rounded-r-3xl overflow-hidden"
+                        className="relative rounded-2xl md:rounded-l-none md:rounded-r-3xl overflow-hidden bg-cyan-600 text-white !bg-cyan-600 group shadow-2xl"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-blue-50" />
+                        {/* Radiant background patterns for 'Light' effect */}
+                        <div className="absolute inset-0 bg-white opacity-10 z-0" />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.4),transparent_70%)]" />
+
+                        {/* Radiant glow highlights */}
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-400/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
                         {/* Radiant glow */}
-                        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-32 h-64 bg-cyan-400/10 blur-3xl" />
+                        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-32 h-64 bg-white/10 blur-3xl" />
 
                         <div className="relative z-10 p-8 md:p-12">
-                            <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full border border-cyan-500/20 bg-cyan-500/5">
-                                <Sparkles className="w-3 h-3 text-cyan-600" />
-                                <span className="text-[10px] text-cyan-600 tracking-widest uppercase font-medium">
+                            <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full border border-white/20 bg-white/10">
+                                <Sparkles className="w-3 h-3 text-white" />
+                                <span className="text-[10px] text-white tracking-widest uppercase font-medium">
                                     The hOS Light
                                 </span>
                             </div>
 
                             <h3
-                                className="text-2xl md:text-3xl font-bold text-slate-900 mb-2"
+                                className="text-2xl md:text-3xl font-bold text-white mb-2"
                                 style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
                             >
                                 Individualized Clarity
                             </h3>
-                            <p className="text-sm text-slate-400 mb-8 leading-relaxed">
+                            <p className="text-sm text-cyan-50 mb-8 leading-relaxed">
                                 Your data, structured so perfectly that the system is forced to listen.
                             </p>
 
@@ -139,10 +145,10 @@ export default function BrokenFirstMile() {
                                         initial={{ opacity: 0, x: 20 }}
                                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                                         transition={{ duration: 0.6, delay: 0.7 + i * 0.1 }}
-                                        className="flex items-center gap-3 p-3 rounded-xl bg-[#ffffff] border border-slate-100 shadow-sm"
+                                        className="flex items-center gap-3 p-3 rounded-xl bg-white/10 border border-white/20 shadow-sm backdrop-blur-sm transition-colors"
                                     >
-                                        <item.icon className="w-4 h-4 text-cyan-500 shrink-0" />
-                                        <span className="text-sm text-slate-600">{item.text}</span>
+                                        <item.icon className="w-4 h-4 text-white shrink-0" />
+                                        <span className="text-sm text-white font-medium">{item.text}</span>
                                     </motion.div>
                                 ))}
                             </div>

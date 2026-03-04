@@ -14,7 +14,7 @@ const pressLinks = [
     { label: 'NEJM Catalyst', url: 'https://catalyst.nejm.org', desc: 'Healthcare innovation research' },
 ];
 
-const boilerplate = `Humanos Foundation is a movement dedicated to returning health data sovereignty to the individual. Founded by Ramon Luis Rios Jr. and supported by Coqui Cloud Dev Co., the Foundation advocates for patient-owned health records, zero-knowledge architecture, and universal health data rights. The Human Operating System (hOS) movement believes that every person deserves to own their health record, control who sees it, and benefit from it. Learn more at humanos.foundation.`;
+const boilerplate = `Humanos Foundation is a movement dedicated to returning health data sovereignty to the individual. We advocate for zero-knowledge architecture where the patient — not the foundation or the doctor — holds the digital keys. We believe that health information should be mathematically sovereign, giving every person the power to decide their own data destiny without institutional gatekeepers. Learn more at humanos.foundation.`;
 
 export default function Press() {
     return (
