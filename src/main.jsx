@@ -15,8 +15,14 @@ if (posthogKey) {
     });
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-    <PostHogProvider client={posthog}>
-        <App />
-    </PostHogProvider>
-)
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+if (posthogKey) {
+    root.render(
+        <PostHogProvider client={posthog}>
+            <App />
+        </PostHogProvider>
+    );
+} else {
+    root.render(<App />);
+}
