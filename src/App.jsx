@@ -5,7 +5,7 @@ import { queryClientInstance } from '@/lib/query-client'
 import { pagesConfig } from './pages.config'
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
-import posthog from 'posthog-js';
+// posthog removed to prevent crash
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import { ThemeProvider } from './components/ThemeProvider';
@@ -81,7 +81,9 @@ const PosthogPageViewTracker = () => {
     React.useEffect(() => {
         // Only track if setup is complete
         if (import.meta.env.VITE_POSTHOG_KEY) {
-            posthog.capture('$pageview');
+            import('posthog-js').then(({ default: posthog }) => {
+                posthog.capture('$pageview');
+            });
         }
     }, [location]);
 
