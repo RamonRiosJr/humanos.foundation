@@ -86,3 +86,47 @@
         @apply bg-background text-foreground;
     }
 }
+
+/* -----------------------------------------------------------------------------
+ * Sovereign Accessibility Engine Overrides
+ * Protected state overrides toggled via A11yWidget.jsx
+ * ----------------------------------------------------------------------------- */
+
+/* High Contrast: Forces pure white/black overriding tailwind variables */
+html.a11y-high-contrast body,
+html.a11y-high-contrast .dark body {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+html.a11y-high-contrast * {
+    border-color: #fff !important;
+}
+
+/* Large Text: Scales the root rem up universally */
+html.a11y-large-text {
+    font-size: 110% !important;
+    /* Forces all rem units up by 10% */
+}
+
+/* Dyslexia Font: Fallback to highly readable OpenDyslexic or Comic Sans */
+html.a11y-dyslexia * {
+    font-family: 'OpenDyslexic', 'Comic Sans MS', 'Comic Sans', sans-serif !important;
+}
+
+/* Highlight Links: Pure yellow highlights for all interactive anchors */
+html.a11y-highlight-links a {
+    text-decoration: underline !important;
+    text-decoration-thickness: 3px !important;
+    background-color: yellow !important;
+    color: black !important;
+}
+
+/* Pause Animations: Kills all Tailwind and keyframe animations immediately */
+html.a11y-pause-animations *,
+html.a11y-pause-animations *::before,
+html.a11y-pause-animations *::after {
+    animation-play-state: paused !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+}

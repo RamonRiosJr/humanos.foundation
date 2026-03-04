@@ -9,6 +9,9 @@ import posthog from 'posthog-js';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import { ThemeProvider } from './components/ThemeProvider';
+import { A11yProvider } from '@/lib/A11yContext';
+import A11yWidget from '@/components/shared/A11yWidget';
+import ChatbotWidget from '@/components/shared/ChatbotWidget';
 
 const { Pages, Layout, mainPage } = pagesConfig;
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];
@@ -89,15 +92,19 @@ function App() {
 
     return (
         <ThemeProvider defaultTheme="dark">
-            <AuthProvider>
-                <QueryClientProvider client={queryClientInstance}>
-                    <Router>
-                        <PosthogPageViewTracker />
-                        <AuthenticatedApp />
-                    </Router>
-                    <Toaster />
-                </QueryClientProvider>
-            </AuthProvider>
+            <A11yProvider>
+                <AuthProvider>
+                    <QueryClientProvider client={queryClientInstance}>
+                        <Router>
+                            <PosthogPageViewTracker />
+                            <A11yWidget />
+                            <ChatbotWidget />
+                            <AuthenticatedApp />
+                        </Router>
+                        <Toaster />
+                    </QueryClientProvider>
+                </AuthProvider>
+            </A11yProvider>
         </ThemeProvider>
     )
 }
