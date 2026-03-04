@@ -11,7 +11,7 @@ const faqs = [
     {
         category: 'About hOS',
         questions: [
-            { q: 'What is the Human Operating System (hOS)?', a: 'hOS is a movement and philosophy, not a specific product. We advocate for a world where your health data is owned by you, encrypted by default, and portable across any system you choose to use. Think of it as the operating system layer that puts you — the patient — in control of your biological data.' },
+            { q: 'What is the Human Operating System (hOS)?', a: 'hOS is a movement and philosophy focused on Data Sovereignty. We believe your health data should be mathematically decoupled from any institution. It is encrypted at the edge using keys only you control. We don\'t "protect" your data in the traditional sense; we simply make it mathematically impossible for us to access it.' },
             { q: 'Is humanos.foundation a nonprofit?', a: 'Humanos Foundation is currently on a path toward formal nonprofit status (501(c)(3)). We operate as an advocacy and educational organization committed to patient data sovereignty. Updates on our legal structure will be posted here.' },
             { q: 'Who founded this?', a: 'hOS was founded by Ramon Luis Rios Jr., a patient and technologist who experienced the broken healthcare data system firsthand. The movement grew from a personal necessity into a global advocacy mission. Learn more on the Origin page.' },
         ],
@@ -21,7 +21,7 @@ const faqs = [
         questions: [
             { q: 'Do I actually own my health data?', a: 'Legally, it\'s complicated — and that\'s the problem. Under HIPAA, you have rights to access your records, but you don\'t have true ownership. Your provider, insurer, and numerous third parties may have rights to your data that supersede yours. This is exactly what hOS is working to change.' },
             { q: 'Can my doctor sell my health data?', a: 'Yes. "De-identified" health data is routinely sold by hospitals, EHR vendors, and data brokers — legally. This is a $250 billion market. The hOS movement advocates for laws requiring explicit, informed consent before any data sale, and patient benefit-sharing from data commercialization.' },
-            { q: 'What is HIPAA and does it protect me?', a: 'HIPAA (Health Insurance Portability and Accountability Act) gives you the right to access your medical records and requires healthcare entities to protect your data. However, it has significant gaps: it doesn\'t cover health apps, fitness trackers, or direct-to-consumer services. And "de-identified" data can be sold without your consent.' },
+            { q: 'What is HIPAA and does it protect me?', a: 'HIPAA (Health Insurance Portability and Accountability Act) is a regulatory framework for how institutions handle your data, but it does not grant you sovereignty. Once you authorize a provider to access your record, hOS and the Foundation have no control over how they subsequently share or use that data. Our goal is to give you the choice of who to trust, but the trust itself remains a human decision between you and your clinician.' },
         ],
     },
     {

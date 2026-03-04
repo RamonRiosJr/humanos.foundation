@@ -1,0 +1,16 @@
+
+C:\Users\localadmin\OneDrive - Coqui Cloud Dev CO\Documents\GitHub\humanos.foundation\src\components\shared\ChatbotWidget.jsx
+  2:10  error  'Bot' is defined but never used  unused-imports/no-unused-imports
+
+C:\Users\localadmin\OneDrive - Coqui Cloud Dev CO\Documents\GitHub\humanos.foundation\src\pages\Blog.jsx
+  9:29  error  'Tag' is defined but never used  unused-imports/no-unused-imports
+
+C:\Users\localadmin\OneDrive - Coqui Cloud Dev CO\Documents\GitHub\humanos.foundation\src\pages\Manifesto.jsx
+  9:28  error  'Fingerprint' is defined but never used  unused-imports/no-unused-imports
+
+C:\Users\localadmin\OneDrive - Coqui Cloud Dev CO\Documents\GitHub\humanos.foundation\src\pages\TheProblem.jsx
+  9:65  error  'Globe' is defined but never used  unused-imports/no-unused-imports
+
+Γ£û 4 problems (4 errors, 0 warnings)
+  4 errors and 0 warnings potentially fixable with the `--fix` option.
+

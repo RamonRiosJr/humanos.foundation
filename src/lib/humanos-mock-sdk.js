@@ -140,6 +140,14 @@ const storage = {
             } else {
                 items = [];
             }
+        } else if (key === 'blog_posts' && items.length < CORNERSTONE_POSTS.length) {
+            // Merge missing cornerstone posts if the list is outdated
+            const existingIds = new Set(items.map(p => p.id));
+            const newPosts = CORNERSTONE_POSTS.filter(p => !existingIds.has(p.id));
+            if (newPosts.length > 0) {
+                items = [...newPosts, ...items];
+                storage.set(key, items);
+            }
         }
         return items;
     },

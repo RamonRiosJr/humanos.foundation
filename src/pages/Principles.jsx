@@ -38,7 +38,7 @@ const principles = [
         icon: Eye,
         title: 'Radical Transparency',
         tagline: 'No hidden access. No silent sharing.',
-        description: 'Every read of your data is logged. Every write is attributable. Every third-party access requires your explicit consent and is visible to you in an immutable audit trail.',
+        description: 'Every read of your data is logged inside the hOS boundary. However, once you grant a clinician temporary access to your records, they may ingest that data into their own legacy systems. hOS does not control the institutional silos where your data is subsequently stored or shared; our mission is to ensure you know exactly what left your vault and when.',
         color: 'from-amber-500/10 to-amber-500/5',
         border: 'hover:border-amber-500/20',
     },

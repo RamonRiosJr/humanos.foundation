@@ -6,7 +6,7 @@ import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
 import PageCTA from '../components/shared/PageCTA';
-import { Clock, ArrowRight, Tag, Search, Calendar } from 'lucide-react';
+import { Clock, ArrowRight, Search, Calendar } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -22,7 +22,7 @@ const categoryColors = {
     'Community': 'text-emerald-400/80 bg-emerald-500/10 border-emerald-500/20',
 };
 
-const POSTS_PER_PAGE = 6;
+const POSTS_PER_PAGE = 12;
 
 export default function Blog() {
     const { t } = useTranslation();
@@ -61,6 +61,7 @@ export default function Blog() {
 
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
+            <div className="fixed bottom-6 left-6 z-[60] transition-all duration-300"></div>
             <SEOMeta
                 title="Blog — Health Data Rights & Sovereign Stories | Humanos Foundation"
                 description="Insights, manifestos, and patient stories from the health data sovereignty movement."

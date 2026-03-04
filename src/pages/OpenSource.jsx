@@ -17,7 +17,7 @@ const projects = [
 ];
 
 const principles = [
-    'Open source means no lock-in — your data and the tools to read it must be freely accessible.',
+    'Open source means no lock-in — your data and the tools to read it must be freely accessible. It allows you to verify that our system is mathematically incapable of seeing your data.',
     <span key="pr2">Transparency in code is <Link to="/Manifesto" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">transparency in intent</Link>. We cannot trust what we cannot inspect.</span>,
     'Community-built software serves the community, not a board of directors.',
     'Open standards (FHIR, HL7, DICOM) are the foundation of true interoperability.',
