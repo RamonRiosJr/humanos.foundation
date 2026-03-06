@@ -99,7 +99,7 @@ export default function Join() {
                                     <CheckCircle2 className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
                                 </motion.div>
                                 <h2 className="text-2xl font-bold mb-3" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Welcome to the Movement</h2>
-                                <p className="text-white/40 text-sm leading-relaxed mb-4">
+                                <p className="text-white/60 text-sm leading-relaxed mb-4">
                                     You're now part of something much larger than any single app or product. We'll be in touch.
                                 </p>
                                 <p className="text-xs text-cyan-400/50">Watch for an email from hello@humanos.foundation</p>
@@ -125,25 +125,25 @@ export default function Join() {
                                 />
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     <div>
-                                        <label className="text-xs text-white/40 uppercase tracking-wider mb-2 block">Full Name *</label>
+                                        <label className="text-xs text-white/50 font-bold uppercase tracking-wider mb-2 block">Full Name *</label>
                                         <input
                                             required
                                             type="text"
                                             value={form.name}
                                             onChange={e => setForm({ ...form, name: e.target.value })}
                                             placeholder="Your name"
-                                            className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
+                                            className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.1] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
                                         />
                                     </div>
                                     <div>
-                                        <label className="text-xs text-white/40 uppercase tracking-wider mb-2 block">Email *</label>
+                                        <label className="text-xs text-white/50 font-bold uppercase tracking-wider mb-2 block">Email *</label>
                                         <input
                                             required
                                             type="email"
                                             value={form.email}
                                             onChange={e => setForm({ ...form, email: e.target.value })}
                                             placeholder="you@example.com"
-                                            className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
+                                            className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.1] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
                                         />
                                     </div>
                                 </div>

@@ -35,7 +35,7 @@ export default function PageHero({ badge, title, titleAccent, subtitle, children
                         initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.25 }}
-                        className="text-sm md:text-lg text-white/40 max-w-2xl mx-auto leading-relaxed font-light"
+                        className="text-sm md:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed font-medium"
                     >
                         {subtitle}
                     </motion.p>

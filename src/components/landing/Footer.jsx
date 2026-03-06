@@ -59,11 +59,11 @@ export default function Footer() {
 
                     {Object.entries(footerLinks).map(([section, links]) => (
                         <div key={section}>
-                            <p className="text-[10px] font-semibold text-white/25 uppercase tracking-widest mb-4">{section}</p>
+                            <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-4 border-b border-white/10 pb-1">{section}</p>
                             <ul className="space-y-2.5">
                                 {links.map((link) => (
                                     <li key={link.label}>
-                                        <Link to={createPageUrl(link.page)} className="text-xs text-white/25 hover:text-cyan-400/70 transition-colors">
+                                        <Link to={createPageUrl(link.page)} className="text-xs text-white/50 hover:text-cyan-400 transition-colors font-medium">
                                             {link.label}
                                         </Link>
                                     </li>
@@ -73,7 +73,7 @@ export default function Footer() {
                     ))}
                 </div>
 
-                <div className="pt-8 border-t border-white/[0.03] flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="pt-8 pb-4 border-t border-white/[0.03] flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16">
                     <p className="text-[10px] text-white/15">
                         © 2026 Humanos Foundation. All rights reserved.
                     </p>
@@ -86,8 +86,8 @@ export default function Footer() {
                         <a href="mailto:hello@humanos.foundation" className="text-[10px] text-white/15 hover:text-cyan-400/60 transition-colors">
                             hello@humanos.foundation
                         </a>
-                        <a href="https://buymeacoffee.com/ramonriosjr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[10px] text-yellow-400/40 hover:text-yellow-400/70 transition-colors border border-yellow-500/10 hover:border-yellow-500/30 px-3 py-1.5 rounded-lg">
-                            <Coffee className="w-3 h-3" /> Support the movement
+                        <a href="https://buymeacoffee.com/ramonriosjr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[10px] text-yellow-300 hover:text-yellow-200 transition-colors border border-yellow-400/30 hover:border-yellow-400/60 bg-yellow-400/5 hover:bg-yellow-400/10 shadow-[0_0_10px_rgba(250,204,21,0.1)] hover:shadow-[0_0_15px_rgba(250,204,21,0.2)] px-4 py-2 rounded-lg font-medium tracking-wide">
+                            <Coffee className="w-3.5 h-3.5" /> Support the movement
                         </a>
                     </div>
                 </div>

@@ -27,9 +27,9 @@ export default function Support() {
                                 <div className="w-12 h-12 rounded-2xl glass border border-white/[0.06] flex items-center justify-center mb-5">
                                     <way.icon className="w-5 h-5 text-cyan-400/60 group-hover:text-cyan-400 transition-colors" />
                                 </div>
-                                <h3 className="text-lg font-semibold text-white/75 mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{way.title}</h3>
-                                <p className="text-sm text-white/35 leading-relaxed mb-6 flex-1">{way.desc}</p>
-                                <a href={way.href} className="inline-flex items-center gap-2 text-sm text-cyan-400/60 hover:text-cyan-400 transition-colors font-medium">
+                                <h3 className="text-lg font-bold text-white/90 mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{way.title}</h3>
+                                <p className="text-sm text-white/70 leading-relaxed mb-6 flex-1 font-medium">{way.desc}</p>
+                                <a href={way.href} className="inline-flex items-center gap-2 text-sm text-cyan-400 font-bold hover:text-cyan-300 transition-colors">
                                     {way.cta} <ExternalLink className="w-3.5 h-3.5" />
                                 </a>
                             </motion.div>
@@ -37,9 +37,9 @@ export default function Support() {
                     </div>
 
                     {/* 501c3 notice */}
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="mt-10 glass rounded-2xl p-6 border border-amber-500/10 text-center">
-                        <p className="text-sm text-white/30 leading-relaxed">
-                            <span className="text-amber-400/60 font-medium">501(c)(3) Status:</span>{' '}
+                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="mt-10 glass rounded-2xl p-6 border border-amber-500/20 text-center">
+                        <p className="text-sm text-white/60 leading-relaxed">
+                            <span className="text-amber-400 font-bold">501(c)(3) Status:</span>{' '}
                             Humanos Foundation is currently pursuing formal nonprofit status. Tax-deductible donations will be enabled once status is confirmed. We'll announce this milestone to everyone who has joined the movement.
                         </p>
                     </motion.div>

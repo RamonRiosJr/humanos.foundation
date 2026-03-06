@@ -74,6 +74,8 @@ Priority Item Impact
 🟠 P1 Add citations/sources to all statistics 🔀 MOVED to Issue #2
 🟠 P1 Write 3-5 cornerstone blog posts ✅ DONE (Issue #4)
 🟠 P1 Add base44.analytics.track() to CTA clicks and form submits ❌ CANCELLED (Removed for Sovereign Privacy)
+🟠 P1 Standardize UI/UX Hero overlap, Manifestos styling, A11y Widget scaling, and Footer alignment ✅ DONE
+🟠 P1 Resolve Global Light Mode Hex Contrast in Dark Panels (Broken First Mile) ✅ DONE
 🟡 P2 Add sitemap and robots.txt ✅ DONE (Issue #5)
 🟡 P2 Cross-link pages internally ✅ DONE (Issue #6)
 🟡 P2 Add rehype-sanitize to blog markdown renderer ✅ DONE (Issue #7)

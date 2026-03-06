@@ -67,9 +67,9 @@ export default function Glossary() {
                                         <span className="text-xs font-bold text-cyan-400/70 font-mono">{item.term.slice(0, 4)}</span>
                                     </div>
                                     <div>
-                                        <h3 className="text-sm font-semibold text-white/75 mb-0.5" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{item.term}</h3>
-                                        <p className="text-xs text-cyan-400/40 mb-2">{item.full}</p>
-                                        <p className="text-sm text-white/35 leading-relaxed">{item.definition}</p>
+                                        <h3 className="text-sm font-semibold text-cyan-400 mb-0.5" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{item.term}</h3>
+                                        <p className="text-xs text-cyan-400/60 mb-2">{item.full}</p>
+                                        <p className="text-sm text-white/80 leading-relaxed">{item.definition}</p>
                                     </div>
                                 </div>
                             </motion.div>

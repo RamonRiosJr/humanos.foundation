@@ -43,7 +43,7 @@ export default function Navbar() {
 
                     <div className="hidden lg:flex items-center gap-6">
                         {navLinks.map((link) => (
-                            <Link key={link.label} to={link.href} className="text-xs text-white/35 hover:text-cyan-400/80 transition-colors duration-300 tracking-wider uppercase font-medium">
+                            <Link key={link.label} to={link.href} className="text-xs text-white/60 hover:text-cyan-400 transition-colors duration-300 tracking-wider uppercase font-bold">
                                 {link.label}
                             </Link>
                         ))}
@@ -55,7 +55,7 @@ export default function Navbar() {
                         >
                             ☕ Donate
                         </a>
-                        <Link to={createPageUrl('Join')} className="px-5 py-2 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-xs text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 font-medium">
+                        <Link to={createPageUrl('Join')} className="px-5 py-2 rounded-xl bg-gradient-to-r from-cyan-400/20 to-blue-500/20 border border-cyan-400/30 text-xs text-cyan-300 hover:text-white hover:border-cyan-300/60 transition-all duration-300 font-bold shadow-[0_0_15px_rgba(34,211,238,0.15)] glow-btn">
                             Join the Movement
                         </Link>
                         <ThemeToggle />

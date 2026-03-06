@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import { Code, Heart, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 
 export default function AboutJourney() {
     const ref = useRef(null);
@@ -12,7 +14,7 @@ export default function AboutJourney() {
     const y = useTransform(scrollYProgress, [0, 1], [60, -60]);
 
     return (
-        <section ref={ref} className="relative py-24 md:py-40 px-4 md:px-8 overflow-hidden">
+        <section ref={ref} className="relative py-24 md:py-40 px-4 md:px-8 overflow-hidden z-20">
             {/* Background grain */}
             <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-[#0d0d15] to-obsidian" />
 
@@ -24,7 +26,7 @@ export default function AboutJourney() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16 md:mb-20"
                 >
-                    <span className="text-xs md:text-sm text-cyan-400/60 font-medium tracking-[0.2em] uppercase">
+                    <span className="text-xs md:text-sm text-cyan-400 font-bold tracking-[0.2em] uppercase drop-shadow-[0_0_8px_rgba(34,211,238,0.2)]">
                         The Origin Story
                     </span>
                     <h2
@@ -63,7 +65,7 @@ export default function AboutJourney() {
                                     >
                                         <div className="glass rounded-lg p-4 border border-cyan-500/10">
                                             <div className="flex items-center gap-2 mb-3">
-                                                <div className="w-2 h-2 rounded-full bg-red-400/60" />
+                                                <motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ duration: 2, repeat: Infinity }} className="w-2 h-2 rounded-full bg-red-400 drop-shadow-[0_0_4px_rgba(248,113,113,0.6)]" />
                                                 <div className="w-2 h-2 rounded-full bg-yellow-400/60" />
                                                 <div className="w-2 h-2 rounded-full bg-green-400/60" />
                                                 <span className="text-[9px] text-[#ffffff]/50 ml-2 font-mono">
@@ -89,6 +91,7 @@ export default function AboutJourney() {
                                                 </div>
                                                 <div className="flex gap-2">
                                                     <span className="text-[10px] text-[#facc15]/80 font-mono">// for patients.</span>
+                                                    <motion.span animate={{ opacity: [1, 0] }} transition={{ duration: 0.8, repeat: Infinity }} className="text-[10px] text-white/50 font-mono">|</motion.span>
                                                 </div>
                                             </div>
                                         </div>
@@ -101,7 +104,9 @@ export default function AboutJourney() {
                                             transition={{ duration: 5, repeat: Infinity }}
                                             className="flex items-center gap-2"
                                         >
-                                            <Heart className="w-3 h-3 text-rose-400/50" />
+                                            <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}>
+                                                <Heart className="w-3 h-3 text-rose-400" />
+                                            </motion.div>
                                             <span className="text-[10px] text-[#ffffff]/50 font-light italic">
                                                 River & Brownie, always by his side
                                             </span>
@@ -131,30 +136,30 @@ export default function AboutJourney() {
                         className="md:col-span-2 space-y-6"
                     >
                         <div className="space-y-4">
-                            <p className="text-white/70 text-sm md:text-base leading-relaxed">
+                            <p className="text-white/80 text-sm md:text-base leading-relaxed font-medium">
                                 hOS wasn't born in a boardroom or a venture capital pitch meeting.
                                 It was born in a dimly lit motel room, powered by necessity and
                                 an unshakable belief that{' '}
-                                <span className="text-cyan-400/80">patients deserve better</span>.
+                                <Link to={createPageUrl('TheProblem')} className="text-cyan-400 font-bold underline underline-offset-4 decoration-cyan-400/20 hover:text-cyan-300 transition-colors">patients deserve better</Link>.
                             </p>
-                            <p className="text-white/60 text-sm md:text-base leading-relaxed">
-                                Ramon Luis Rios Jr., the founder, was a patient first — navigating a broken
-                                healthcare system, drowning in paperwork, locked out of his own medical records.
+                            <p className="text-white/80 text-sm md:text-base leading-relaxed font-medium">
+                                <span className="text-cyan-400 font-bold drop-shadow-[0_0_8px_rgba(34,211,238,0.3)]">Ramon Luis Rios Jr.</span>, the founder, was a patient first — navigating a broken
+                                healthcare system, drowning in paperwork, locked out of his own <span className="text-cyan-400/80 font-bold">medical records</span>.
                                 With raw code and relentless determination, he built the first prototype
-                                of what would become the Human Operating System.
+                                of what would become the <Link to={createPageUrl('Manifesto')} className="text-cyan-300 font-bold underline decoration-cyan-400/30 underline-offset-4 hover:text-cyan-200 transition-colors">Human Operating System</Link>.
                             </p>
-                            <p className="text-white/60 text-sm md:text-base leading-relaxed">
+                            <p className="text-white/80 text-sm md:text-base leading-relaxed font-medium">
                                 No team. No funding. Just a laptop, two loyal dogs, and a vision
-                                that healthcare should serve the human — not the institution.
+                                that healthcare should <span className="text-cyan-400 font-bold drop-shadow-[0_0_8px_rgba(34,211,238,0.2)]">serve the human</span> — not the institution.
                             </p>
                         </div>
 
                         {/* Principles */}
                         <div className="space-y-3 pt-4 border-t border-white/10">
                             {[
-                                { icon: Code, text: 'Built by a patient' },
-                                { icon: Heart, text: 'Forged in survival' },
-                                { icon: Shield, text: 'Designed for sovereignty' },
+                                { icon: Code, text: 'Built by a patient', color: 'text-blue-400' },
+                                { icon: Heart, text: 'Forged in survival', color: 'text-rose-400' },
+                                { icon: Shield, text: 'Designed for sovereignty', color: 'text-purple-400' },
                             ].map((item, i) => (
                                 <motion.div
                                     key={item.text}
@@ -163,8 +168,10 @@ export default function AboutJourney() {
                                     transition={{ duration: 0.5, delay: 0.8 + i * 0.1 }}
                                     className="flex items-center gap-3"
                                 >
-                                    <item.icon className="w-3.5 h-3.5 text-cyan-400/50" />
-                                    <span className="text-xs text-white/60">{item.text}</span>
+                                    <motion.div animate={{ opacity: [0.4, 1, 0.4] }} transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.3 }}>
+                                        <item.icon className={`w-3.5 h-3.5 ${item.color}`} />
+                                    </motion.div>
+                                    <span className="text-xs text-white/80 font-medium">{item.text}</span>
                                 </motion.div>
                             ))}
                         </div>

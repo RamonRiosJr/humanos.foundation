@@ -18,7 +18,7 @@ const projects = [
 
 const principles = [
     'Open source means no lock-in — your data and the tools to read it must be freely accessible. It allows you to verify that our system is mathematically incapable of seeing your data.',
-    <span key="pr2">Transparency in code is <Link to="/Manifesto" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">transparency in intent</Link>. We cannot trust what we cannot inspect.</span>,
+    <span key="pr2">Transparency in code is <Link to={createPageUrl('Manifesto')} className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">transparency in intent</Link>. We cannot trust what we cannot inspect.</span>,
     'Community-built software serves the community, not a board of directors.',
     'Open standards (FHIR, HL7, DICOM) are the foundation of true interoperability.',
 ];
@@ -38,7 +38,7 @@ export default function OpenSource() {
                             {principles.map((p, i) => (
                                 <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="flex items-start gap-4 glass rounded-2xl p-5 border border-white/[0.04]">
                                     <span className="text-cyan-500/30 font-mono text-sm shrink-0 mt-0.5">{String(i + 1).padStart(2, '0')}</span>
-                                    <p className="text-sm text-white/50 leading-relaxed">{p}</p>
+                                    <p className="text-sm text-white/70 leading-relaxed">{p}</p>
                                 </motion.div>
                             ))}
                         </div>
@@ -58,7 +58,7 @@ export default function OpenSource() {
                                             <h3 className="text-sm font-semibold text-white/70 group-hover:text-white/90 transition-colors">{proj.name}</h3>
                                             <ExternalLink className="w-3 h-3 text-white/20 group-hover:text-cyan-400/60 transition-colors" />
                                         </div>
-                                        <p className="text-xs text-white/30 leading-relaxed">{proj.desc}</p>
+                                        <p className="text-xs text-white/60 group-hover:text-white/80 transition-colors leading-relaxed">{proj.desc}</p>
                                     </div>
                                 </motion.a>
                             ))}

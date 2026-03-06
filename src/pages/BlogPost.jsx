@@ -53,7 +53,7 @@ export default function BlogPost() {
                 <div className="flex-1 flex flex-col items-center justify-center text-center px-4 pt-32">
                     <h1 className="text-3xl font-bold mb-4">Post Not Found</h1>
                     <p className="text-white/50 mb-8">The article you are looking for does not exist or has been removed.</p>
-                    <Link to="/Blog" className="glow-btn px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-medium flex items-center gap-2">
+                    <Link to={createPageUrl('Blog')} className="glow-btn px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-medium flex items-center gap-2">
                         <ArrowLeft className="w-4 h-4" /> Back to Blog
                     </Link>
                 </div>
@@ -73,7 +73,7 @@ export default function BlogPost() {
             <Navbar />
 
             <article className="pt-40 pb-20 px-4 md:px-8 max-w-4xl mx-auto">
-                <Link to="/Blog" className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors mb-8 text-sm font-medium">
+                <Link to={createPageUrl('Blog')} className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors mb-8 text-sm font-medium">
                     <ArrowLeft className="w-4 h-4" /> Back to Blog
                 </Link>
 
@@ -84,13 +84,13 @@ export default function BlogPost() {
                             {post.category}
                         </span>
                     )}
-                    <span className="flex items-center gap-1.5 text-xs text-white/40">
-                        <CalendarDays className="w-3.5 h-3.5" />
+                    <span className="flex items-center gap-1.5 text-xs text-white/60 font-medium">
+                        <CalendarDays className="w-3.5 h-3.5 text-cyan-400/50" />
                         {formatDate(post.created_date)}
                     </span>
                     {post.read_time_minutes && (
-                        <span className="flex items-center gap-1.5 text-xs text-white/40">
-                            <Clock className="w-3.5 h-3.5" />
+                        <span className="flex items-center gap-1.5 text-xs text-white/60 font-medium">
+                            <Clock className="w-3.5 h-3.5 text-cyan-400/50" />
                             {post.read_time_minutes} min read
                         </span>
                     )}

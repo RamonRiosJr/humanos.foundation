@@ -17,7 +17,7 @@ export default function HeroDashboard() {
             transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="relative w-full max-w-4xl mx-auto mt-12 md:mt-16"
         >
-            <div className="glass-strong rounded-2xl md:rounded-3xl p-4 md:p-8 glow-cyan">
+            <div className="glass-strong rounded-2xl md:rounded-3xl p-4 md:p-8 glow-cyan h-full">
                 {/* Header bar */}
                 <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-2">
@@ -76,7 +76,6 @@ export default function HeroDashboard() {
                                 <motion.div
                                     key={i}
                                     className="flex-1 rounded-full"
-                                    // @ts-ignore — background is valid CSS in MotionStyle at runtime
                                     style={{
                                         background: `linear-gradient(to top, rgba(0,212,255,0.1), rgba(0,212,255,${0.3 + Math.random() * 0.4}))`,
                                     }}
