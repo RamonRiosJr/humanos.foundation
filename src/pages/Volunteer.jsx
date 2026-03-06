@@ -54,7 +54,7 @@ export default function Volunteer() {
                             >
                                 <role.icon className={`w-5 h-5 mb-3 transition-colors ${selectedRole === role.title ? 'text-cyan-400' : 'text-white/30 group-hover:text-cyan-400/50'}`} />
                                 <h3 className="text-sm font-semibold text-white/70 mb-1" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{role.title}</h3>
-                                <p className="text-xs text-white/30">{role.desc}</p>
+                                <p className="text-xs text-white/60 font-medium group-hover:text-white/80 transition-colors">{role.desc}</p>
                             </motion.button>
                         ))}
                     </div>
@@ -65,7 +65,7 @@ export default function Volunteer() {
                                 <motion.div key="success" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="glass-strong rounded-3xl p-12 text-center border border-cyan-500/20">
                                     <CheckCircle2 className="w-14 h-14 text-cyan-400 mx-auto mb-5" />
                                     <h2 className="text-xl font-bold mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Welcome, Volunteer</h2>
-                                    <p className="text-white/35 text-sm">We'll be in touch with next steps. Thank you for believing in the mission.</p>
+                                    <p className="text-white/60 text-sm leading-relaxed mb-4">We'll be in touch with next steps. Thank you for believing in the mission.</p>
                                 </motion.div>
                             ) : (
                                 <motion.form key="form" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} onSubmit={handleSubmit} className="glass-strong rounded-3xl p-8 border border-white/[0.05] space-y-5">

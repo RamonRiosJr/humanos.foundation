@@ -24,8 +24,8 @@ function StatCard({ icon: Icon, label, value, sub, color = 'cyan' }) {
         >
             <Icon className={`w-5 h-5 mb-3 ${colors[color].split(' ').pop()}`} />
             <div className="text-2xl font-bold text-white mb-0.5">{value ?? '—'}</div>
-            <div className="text-xs text-white/50 font-medium">{label}</div>
-            {sub && <div className="text-[10px] text-white/25 mt-1">{sub}</div>}
+            <div className="text-xs text-white/70 font-semibold">{label}</div>
+            {sub && <div className="text-[10px] text-white/40 mt-1 font-medium">{sub}</div>}
         </motion.div>
     );
 }
@@ -33,8 +33,8 @@ function StatCard({ icon: Icon, label, value, sub, color = 'cyan' }) {
 function SectionHeader({ title, sub }) {
     return (
         <div className="mb-5">
-            <h2 className="text-base font-bold text-white/80" style={{ fontFamily: 'Outfit, sans-serif' }}>{title}</h2>
-            {sub && <p className="text-xs text-white/30 mt-0.5">{sub}</p>}
+            <h2 className="text-base font-bold text-white/90" style={{ fontFamily: 'Outfit, sans-serif' }}>{title}</h2>
+            {sub && <p className="text-xs text-white/60 mt-0.5 font-medium">{sub}</p>}
         </div>
     );
 }

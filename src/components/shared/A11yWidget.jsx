@@ -91,12 +91,12 @@ const A11yWidget = () => {
 
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.5)] ${isOpen ? 'bg-blue-600 text-white scale-90' : 'bg-slate-800 text-blue-400 border border-slate-700 hover:border-blue-500/50 hover:bg-slate-700 hover:scale-110'
+                className={`w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.5)] ${isOpen ? 'bg-blue-600 text-white scale-90' : 'bg-slate-800 text-blue-400 border border-slate-700 hover:border-blue-500/50 hover:bg-slate-700 hover:scale-110'
                     }`}
                 aria-label="Toggle Accessibility Menu"
                 aria-expanded={isOpen}
             >
-                {isOpen ? <X className="w-6 h-6" /> : <Accessibility className="w-6 h-6" />}
+                {isOpen ? <X className="w-7 h-7" /> : <Accessibility className="w-7 h-7" />}
             </button>
         </div>
     );

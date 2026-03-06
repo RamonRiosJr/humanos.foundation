@@ -92,9 +92,9 @@ export default function Contact() {
                             </div>
                         </div>
                         <div className="glass rounded-xl p-5 border border-white/[0.04]">
-                            <p className="text-xs text-white/30 leading-relaxed">
-                                <span className="text-cyan-400/60 font-medium">Response time:</span>{' '}
-                                We aim to respond to all inquiries within 48 hours. Press inquiries are prioritized.
+                            <p className="text-xs text-white/60 leading-relaxed">
+                                <span className="text-cyan-400 font-bold">Response time:</span>{' '}
+                                We aim to respond to all inquiries within <span className="text-cyan-400/80 font-medium">48 hours</span>. Press inquiries are prioritized.
                             </p>
                         </div>
                     </div>
@@ -127,14 +127,14 @@ export default function Contact() {
                                         { key: 'subject', label: 'Subject', type: 'text', placeholder: 'Brief subject', required: false },
                                         ].map((field) => (
                                             <div key={field.key}>
-                                                <label className="text-xs text-white/40 uppercase tracking-wider mb-2 block">{field.label}{field.required ? ' *' : ''}</label>
+                                                <label className="text-xs text-white/60 font-bold uppercase tracking-wider mb-2 block">{field.label}{field.required ? ' *' : ''}</label>
                                                 <input
                                                     required={field.required}
                                                     type={field.type}
                                                     value={form[field.key]}
                                                     onChange={e => setForm({ ...form, [field.key]: e.target.value })}
                                                     placeholder={field.placeholder}
-                                                    className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
+                                                    className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.1] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
                                                 />
                                             </div>
                                         ))}

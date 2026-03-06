@@ -74,28 +74,28 @@ export default function Manifestos() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="flex justify-center mb-10 md:mb-14"
                 >
-                    <div className="glass rounded-full p-1 flex">
+                    <div className="glass rounded-full p-1.5 flex gap-2">
                         <button
                             onClick={() => setActiveTab('manifesto')}
-                            className={`px-5 md:px-8 py-2.5 rounded-full text-xs md:text-sm font-medium transition-all duration-300 ${activeTab === 'manifesto'
-                                ? 'bg-white/10 text-cyan-400 shadow-lg shadow-cyan-500/10'
-                                : 'text-white/30 hover:text-white/50'
+                            className={`px-6 md:px-10 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wide transition-all duration-300 ${activeTab === 'manifesto'
+                                ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/40 text-white shadow-[0_0_20px_rgba(34,211,238,0.3)]'
+                                : 'border border-transparent text-white/40 hover:text-white hover:bg-white/5'
                                 }`}
                         >
                             <span className="flex items-center gap-2">
-                                <BookOpen className="w-3.5 h-3.5" />
+                                <BookOpen className={`w-4 h-4 ${activeTab === 'manifesto' ? 'text-cyan-400' : ''}`} />
                                 The Manifesto
                             </span>
                         </button>
                         <button
                             onClick={() => setActiveTab('laws')}
-                            className={`px-5 md:px-8 py-2.5 rounded-full text-xs md:text-sm font-medium transition-all duration-300 ${activeTab === 'laws'
-                                ? 'bg-white/10 text-cyan-400 shadow-lg shadow-cyan-500/10'
-                                : 'text-white/30 hover:text-white/50'
+                            className={`px-6 md:px-10 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wide transition-all duration-300 ${activeTab === 'laws'
+                                ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/40 text-white shadow-[0_0_20px_rgba(34,211,238,0.3)]'
+                                : 'border border-transparent text-white/40 hover:text-white hover:bg-white/5'
                                 }`}
                         >
                             <span className="flex items-center gap-2">
-                                <Scale className="w-3.5 h-3.5" />
+                                <Scale className={`w-4 h-4 ${activeTab === 'laws' ? 'text-cyan-400' : ''}`} />
                                 The Four Laws
                             </span>
                         </button>
@@ -129,8 +129,8 @@ export default function Manifestos() {
                                         >
                                             <p
                                                 className={`text-base md:text-xl leading-relaxed ${i === manifestoLines.length - 1
-                                                    ? 'text-cyan-400 font-semibold text-lg md:text-2xl'
-                                                    : 'text-white/50'
+                                                    ? 'text-cyan-400 font-bold text-lg md:text-2xl drop-shadow-[0_0_10px_rgba(34,211,238,0.2)]'
+                                                    : 'text-white/70 font-medium'
                                                     }`}
                                                 style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
                                             >
@@ -187,7 +187,7 @@ export default function Manifestos() {
                                                 >
                                                     {law.title}
                                                 </h3>
-                                                <p className="text-sm text-white/35 leading-relaxed">
+                                                <p className="text-sm text-white/60 leading-relaxed font-medium">
                                                     {law.description}
                                                 </p>
                                             </div>

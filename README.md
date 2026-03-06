@@ -24,7 +24,7 @@ This repository powers our advocacy platform. It serves as both a high-fidelity 
 
 ## 🏗️ Architecture
 
-This project is built for performance, modularity, and security, utilizing an enterprise-grade stack:
+This project is built for performance, modularity, and security, utilizing an enterprise-grade stack. For detailed guidelines on visual layout, color schemes, and accessibility styling, see our [UI/UX Design System](docs/UI_UX_DESIGN_SYSTEM.md).
 
 - **Framework**: [React](https://reactjs.org/) + [Vite](https://vitejs.dev/) for lightning-fast HMR and optimized builds
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) + Glassmorphism UX design systems

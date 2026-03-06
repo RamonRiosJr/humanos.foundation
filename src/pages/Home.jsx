@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from '../components/landing/Navbar';
 import HeroSection from '../components/landing/HeroSection';
 import BrokenFirstMile from '../components/landing/BrokenFirstMile';
-import AboutJourney from '../components/landing/AboutJourney';
 import Manifestos from '../components/landing/Manifestos';
 import Footer from '../components/landing/Footer';
 import SectionDivider from '../components/shared/SectionDivider';
@@ -23,9 +22,7 @@ export default function Home() {
             <SectionDivider />
             <div id="vision"><BrokenFirstMile /></div>
             <SectionDivider />
-            <HomeStats />
-            <SectionDivider />
-            <div id="origin"><AboutJourney /></div>
+            <div id="stats"><HomeStats /></div>
             <SectionDivider />
             <div id="manifesto"><Manifestos /></div>
             <Footer />

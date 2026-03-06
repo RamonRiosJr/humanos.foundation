@@ -47,9 +47,9 @@ function FAQItem({ question, answer }) {
     return (
         <div className="border border-white/[0.04] rounded-2xl overflow-hidden hover:border-white/[0.07] transition-colors duration-300">
             <button onClick={() => setOpen(!open)} className="w-full flex items-center justify-between px-6 py-5 text-left gap-4">
-                <span className="text-sm font-medium text-white/65 leading-snug">{question}</span>
+                <span className="text-sm font-semibold text-white/80 leading-snug">{question}</span>
                 <motion.div animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2 }}>
-                    <ChevronDown className="w-4 h-4 text-white/25 shrink-0" />
+                    <ChevronDown className="w-4 h-4 text-cyan-400/40 shrink-0" />
                 </motion.div>
             </button>
             <AnimatePresence>
@@ -61,7 +61,7 @@ function FAQItem({ question, answer }) {
                         transition={{ duration: 0.25 }}
                     >
                         <div className="px-6 pb-5 border-t border-white/[0.04] pt-4">
-                            <p className="text-sm text-white/35 leading-relaxed">{answer}</p>
+                            <p className="text-sm text-white/70 leading-relaxed font-medium">{answer}</p>
                         </div>
                     </motion.div>
                 )}
@@ -84,7 +84,7 @@ export default function FAQ() {
                 <div className="max-w-3xl mx-auto space-y-12">
                     {faqs.map((group, i) => (
                         <motion.div key={group.category} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.1 }}>
-                            <p className="text-xs text-cyan-400/50 uppercase tracking-widest font-medium mb-4">{group.category}</p>
+                            <p className="text-xs text-cyan-400 font-bold uppercase tracking-widest mb-4 drop-shadow-[0_0_8px_rgba(34,211,238,0.2)]">{group.category}</p>
                             <div className="space-y-2">
                                 {group.questions.map((item) => (
                                     <FAQItem key={item.q} question={item.q} answer={item.a} />

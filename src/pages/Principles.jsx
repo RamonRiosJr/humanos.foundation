@@ -14,7 +14,7 @@ const principles = [
         icon: User,
         title: 'Patient-First Architecture',
         tagline: 'The patient is not the product.',
-        description: 'Every design decision, every technical tradeoff, every business decision begins with one question: does this serve the patient? Not the hospital. Not the insurer. Not the investor. The patient.',
+        description: <span>Every design decision, every technical tradeoff, every business decision begins with one question: <span className="text-cyan-400/80 font-medium">does this serve the patient?</span> Not the hospital. Not the insurer. Not the investor. The patient.</span>,
         color: 'from-cyan-500/10 to-cyan-500/5',
         border: 'hover:border-cyan-500/20',
     },
@@ -22,7 +22,7 @@ const principles = [
         icon: Lock,
         title: 'Zero-Knowledge by Default',
         tagline: 'We cannot see what we are not meant to see.',
-        description: <span key="p2"><Link to="/Glossary" className="text-purple-400 hover:text-purple-300 underline underline-offset-4 decoration-purple-400/30">Zero-knowledge architecture</Link> means your health data is encrypted before it ever leaves your device. The systems we advocate for have no ability to read your health records — even if compelled.</span>,
+        description: <span key="p2"><Link to={createPageUrl('Glossary')} className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30 transition-colors">Zero-knowledge architecture</Link> means your health data is <span className="text-cyan-400/80 font-medium">encrypted before it ever leaves your device</span>. The systems we advocate for have no ability to read your health records — even if compelled.</span>,
         color: 'from-purple-500/10 to-purple-500/5',
         border: 'hover:border-purple-500/20',
     },
@@ -30,7 +30,7 @@ const principles = [
         icon: Cpu,
         title: 'Local-First Computing',
         tagline: 'Your device. Your data. Your cloud.',
-        description: <span key="p3">Health data should live on the device you own, not on a server you don't control. <Link to="/Glossary" className="text-blue-400 hover:text-blue-300 underline underline-offset-4 decoration-blue-400/30">Local-first architecture</Link> means you stay in control even when you're offline, even when companies shut down.</span>,
+        description: <span key="p3">Health data should live on the device you own, <span className="text-cyan-400/80 font-medium">not on a server you don't control</span>. <Link to={createPageUrl('Glossary')} className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30 transition-colors">Local-first architecture</Link> means you stay in control even when you're offline, even when companies shut down.</span>,
         color: 'from-blue-500/10 to-blue-500/5',
         border: 'hover:border-blue-500/20',
     },
@@ -38,7 +38,7 @@ const principles = [
         icon: Eye,
         title: 'Radical Transparency',
         tagline: 'No hidden access. No silent sharing.',
-        description: 'Every read of your data is logged inside the hOS boundary. However, once you grant a clinician temporary access to your records, they may ingest that data into their own legacy systems. hOS does not control the institutional silos where your data is subsequently stored or shared; our mission is to ensure you know exactly what left your vault and when.',
+        description: <span>Every read of your data is logged inside the hOS boundary. However, once you grant a clinician temporary access to your records, they may ingest that data into their own legacy systems. hOS does not control the <span className="text-cyan-400/80 font-medium">institutional silos</span> where your data is subsequently stored or shared; our mission is to ensure you know exactly what left your vault and when.</span>,
         color: 'from-amber-500/10 to-amber-500/5',
         border: 'hover:border-amber-500/20',
     },
@@ -46,7 +46,7 @@ const principles = [
         icon: Globe,
         title: 'Open Standards',
         tagline: 'Built on FHIR, not proprietary silos.',
-        description: <span key="p5"><Link to="/Origin" className="text-green-400 hover:text-green-300 underline underline-offset-4 decoration-green-400/30">We advocate for open health data standards</Link> (FHIR, HL7) that allow your data to move freely between systems. No lock-in. No proprietary format that holds your health record hostage.</span>,
+        description: <span key="p5"><Link to={createPageUrl('Origin')} className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30 transition-colors">We advocate for open health data standards</Link> (FHIR, HL7) that allow your data to <span className="text-cyan-400/80 font-medium">move freely between systems</span>. No lock-in. No proprietary format that holds your health record hostage.</span>,
         color: 'from-green-500/10 to-green-500/5',
         border: 'hover:border-green-500/20',
     },
@@ -54,7 +54,7 @@ const principles = [
         icon: Heart,
         title: 'Health Equity by Design',
         tagline: 'Data sovereignty for everyone, not just the privileged.',
-        description: 'The benefits of health data sovereignty must reach underserved communities, low-income populations, and the Global South. Health equity is a design requirement, not an afterthought.',
+        description: <span>The benefits of <span className="text-cyan-400/80 font-medium">health data sovereignty</span> must reach underserved communities, low-income populations, and the Global South. Health equity is a design requirement, not an afterthought.</span>,
         color: 'from-rose-500/10 to-rose-500/5',
         border: 'hover:border-rose-500/20',
     },
@@ -100,7 +100,7 @@ export default function Principles() {
                                         <h3 className="text-lg font-semibold text-white/80" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{p.title}</h3>
                                         <span className="text-xs text-cyan-400/40 md:before:content-['—'] md:before:mr-2 italic">{p.tagline}</span>
                                     </div>
-                                    <p className="text-sm text-white/35 leading-relaxed">{p.description}</p>
+                                    <p className="text-sm text-white/70 leading-relaxed font-medium">{p.description}</p>
                                 </div>
                             </div>
                         </motion.div>
