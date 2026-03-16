@@ -119,7 +119,7 @@ export default function BlogPost() {
 
             <PageCTA
                 title="Are You Ready to Demand Better?"
-                subtitle="Do not let your health be reduced to a 5-minute review. Join the movement and help us build the infrastructure of personalized care."
+                subtitle="Do not let your health be reduced to a 5-minute clinical documentation. Join the movement and help us build the infrastructure of personalized care."
                 cta="Join the Waitlist"
                 ctaHref={createPageUrl('Join')}
             />

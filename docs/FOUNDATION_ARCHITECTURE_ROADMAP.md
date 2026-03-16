@@ -42,4 +42,10 @@ The current strategy involves a brilliant decoupling to maximize both UI aesthet
 - [x] **Sovereign Global Engine (i18n):** Implemented high-privacy English/Spanish support via local JSON bundles. Integrated with A11y widget.
 - [x] **Server-Side Pagination & Infinite Scroll:** Implemented virtual pagination/Load More for the Sovereign Library. Ready for Odoo integration.
 - [ ] **Relational Taxonomy Filtering:** Implement dynamic tagging ('Neurodiversity', 'Billing System', 'Patient Rights') to ensure long-tail SEO keywords can be instantly searched by users.
-- [ ] **Pre-rendered SEO Sitemaps:** To solve the fact that Vite SPAs struggle with SEO indexing, we will use a Vite SSG (Static Site Generation) plugin or a pre-rendering service (like Prerender.io) *specifically for crawler bots*. This gives Google a perfect HTML snapshot while humans get the glorious 3D, animated application.
+### Phase 5: Compliance & Aura hOS Sync (Pre-Launch)
+
+- [ ] **Terminology Audit (FDA SaMD Risk):** Purge all "diagnostic" language. Replace "Diagnosis," "Review," and "Analyze" with formatting and documentation terms (e.g., "5-Minute Diagnosis" → "5-Minute Story").
+- [ ] **Stealth Protocol Scrub:** Ensure "Aura hOS" and "auraos.com" are never mentioned. Use "patient-sovereign hOS" or "human OS movement."
+- [ ] **Dashboard Branding Refactor:** Update `HeroDashboard.jsx` to reflect the **Clinical Agenda** (data-driven tasks) instead of interpretive health scores ("Vitals: Optimal").
+- [ ] **Zero-Trust Calendar Feature:** Highlight the **ICS Privacy Sync** as a major advocacy pillar—allowing alarms without leaking clinical PHI.
+- [ ] **Legal & Regulatory Pages:** Implement the mandatory `/disclaimer`, `/privacy`, and `/terms` pages as specified in the Website Strategy.

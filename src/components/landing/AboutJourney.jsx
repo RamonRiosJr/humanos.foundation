@@ -144,7 +144,7 @@ export default function AboutJourney() {
                             </p>
                             <p className="text-white/80 text-sm md:text-base leading-relaxed font-medium">
                                 <span className="text-cyan-400 font-bold drop-shadow-[0_0_8px_rgba(34,211,238,0.3)]">Ramon Luis Rios Jr.</span>, the founder, was a patient first — navigating a broken
-                                healthcare system, drowning in paperwork, locked out of his own <span className="text-cyan-400/80 font-bold">medical records</span>.
+                                healthcare system, drowning in paperwork, locked out of his own <span className="text-cyan-400/80 font-bold">clinical records</span>.
                                 With raw code and relentless determination, he built the first prototype
                                 of what would become the <Link to={createPageUrl('Manifesto')} className="text-cyan-300 font-bold underline decoration-cyan-400/30 underline-offset-4 hover:text-cyan-200 transition-colors">Human Operating System</Link>.
                             </p>

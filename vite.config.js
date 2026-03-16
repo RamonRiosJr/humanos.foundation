@@ -14,7 +14,7 @@ export default defineConfig({
         },
     },
     server: {
-        host: '192.168.16.73',
+        host: true,
         port: 7200,
         strictPort: true,
     },
