@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { Activity, Heart, Brain, Shield, Zap, TrendingUp } from 'lucide-react';
 
 const metrics = [
-    { label: 'Neural Sync', value: '98.4%', icon: Brain, color: '#00d4ff' },
+    { label: 'History Sync', value: 'Complete', icon: Brain, color: '#00d4ff' },
     { label: 'Heart Rate', value: '72 bpm', icon: Heart, color: '#f43f5e' },
-    { label: 'Vitals', value: 'Optimal', icon: Activity, color: '#10b981' },
-    { label: 'Data Vault', value: 'Encrypted', icon: Shield, color: '#8b5cf6' },
+    { label: 'Vitals', value: 'Unignorable', icon: Activity, color: '#10b981' },
+    { label: 'Digital Vault', value: 'Sovereign', icon: Shield, color: '#8b5cf6' },
 ];
 
 export default function HeroDashboard() {

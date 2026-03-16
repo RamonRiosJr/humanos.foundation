@@ -61,7 +61,7 @@ You can start the environment using our custom CLI launcher, which provides an i
 **Windows**:
 
 ```cmd
-humanos-dev-launcher.bat
+Humanos-Operating-System.bat
 ```
 
 **Cross-Platform (CLI)**:
@@ -70,7 +70,7 @@ humanos-dev-launcher.bat
 npm run dev
 ```
 
-The application will be running locally at `http://localhost:5173`.
+The application will be running locally at `http://localhost:7200`.
 
 ---
 

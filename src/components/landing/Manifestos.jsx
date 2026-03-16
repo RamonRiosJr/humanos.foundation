@@ -3,7 +3,7 @@ import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { BookOpen, Scale, Shield, Eye, Key, Fingerprint } from 'lucide-react';
 
 const manifestoLines = [
-    'We believe the "First Mile" of care is fundamentally broken — forcing complex lived experiences into a 15-page paper intake and a 5-minute doctor review is an act of institutional violence against the vulnerable.',
+    'We believe the "First Mile" of care is fundamentally broken — forcing complex lived experiences into a 15-page paper intake and a 5-minute clinical documentation is an act of institutional violence against the vulnerable.',
     'We believe treating symptoms with endless new medications while ignoring the root cause is unacceptable.',
     'We believe the "Medication Gallery" must be dismantled. You are not a trial-and-error experiment for pharmacology.',
     'We believe healthcare must serve the human, not the volume-driven billing machine.',
