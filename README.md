@@ -1,106 +1,112 @@
 <div align="center">
 
-# Humanos Foundation
+# HUMANOS FOUNDATION
+### The Advocacy Kernel for Human Data Sovereignty
 
-**The Advocacy Engine for Health Data Sovereignty**
+[![License: MIT](https://img.shields.io/badge/License-MIT-00d4ff.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/Node.js-20.x-10b981.svg?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org)
+[![Vite](https://img.shields.io/badge/Vite-6.x-8b5cf6.svg?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
+[![React](https://img.shields.io/badge/React-18.x-61DAFB.svg?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js](https://img.shields.io/badge/Node.js-20.x-green.svg)](https://nodejs.org)
-[![Vite](https://img.shields.io/badge/Vite-6.x-purple.svg)](https://vitejs.dev)
-[![React](https://img.shields.io/badge/React-18.x-blue.svg)](https://reactjs.org)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+**[Visit the Portal](https://humanos.foundation)** • **[Read the Manifesto](https://humanos.foundation/manifesto)** • **[Join the Revolution](https://humanos.foundation/join)**
 
-[Visit humanos.foundation](https://humanos.foundation) · [Read the Manifesto](https://humanos.foundation/manifesto) · [Join the Movement](https://humanos.foundation/join)
+---
+
+*"The system only listens when the truth is unignorable. We are building the tools to make your truth undeniable."*
 
 </div>
 
----
+## 🌍 The Mission
 
-## 🌍 The Movement
+The **Humanos Foundation** is the public advocacy wing of the **hOS (Human Operating System)** movement. We are a global network of patients, clinicians, and technologists dedicated to dismantling "Assembly-Line Medicine." 
 
-The Humanos Foundation is the public-facing advocacy entity for the **hOS (Human Operating System)** movement. Our mission is to fundamentally reform how health data is managed, returning sovereignty to the patient through local-first computing, zero-knowledge architecture, and radical transparency.
-
-This repository powers our advocacy platform. It serves as both a high-fidelity digital presence for the movement and a community-driven open-source project.
-
-## 🏗️ Architecture
-
-This project is built for performance, modularity, and security, utilizing an enterprise-grade stack. For detailed guidelines on visual layout, color schemes, and accessibility styling, see our [UI/UX Design System](docs/UI_UX_DESIGN_SYSTEM.md).
-
-- **Framework**: [React](https://reactjs.org/) + [Vite](https://vitejs.dev/) for lightning-fast HMR and optimized builds
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) + Glassmorphism UX design systems
-- **Components**: [shadcn/ui](https://ui.shadcn.com/) (Radix UI + Tailwind)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Data SDK**: Local-First `humanosClient` (Zero external tracking, sovereign by design)
-- **Routing**: [React Router v6](https://reactrouter.com/)
+This repository powers our digital advocacy platform—an enterprise-grade engine designed to drive waitlist conversions, host our sovereign education library, and organize a worldwide rebellion against institutional data silos.
 
 ---
 
-## 🚀 Local Development
+## 🏗️ Technical Pillars (The Sovereign Stack)
 
-We welcome contributors from all backgrounds—developers, advocates, clinicians, and patients. Here is how to run the environment locally:
+Unlike traditional growth sites, we reject the "surveillance-first" status quo. The foundation platform is architected on three non-negotiable pillars:
+
+| Pillar | Philosophy | Implementation |
+| :--- | :--- | :--- |
+| **Local-First** | Data lives on the device you own, not a server you don't control. | LocalStorage Mock SDK & PWA capabilities. |
+| **Zero-Knowledge** | We cannot see what we are not meant to see. | Client-side encryption handshakes & private routing. |
+| **Radical Transparency** | No hidden access. No silent sharing. | Open-source logic and verifiable data ingestion logs. |
+
+---
+
+## 🛠️ Technology & Architecture
+
+This platform provides a visual masterclass in modern, high-performance web aesthetics:
+
+- **Logic**: React 18 (SPA) optimized for 60fps animations.
+- **Styling**: Tailwind CSS with an custom **Glassmorphism Design System**.
+- **Motion**: Framer Motion for scroll-synced narratives and biological waveforms.
+- **Icons**: Lucide React for consistent, high-fidelity iconography.
+- **i18n**: Sovereign English/Spanish localization with local-only bundling.
+
+---
+
+## 🚀 Presentation & Quick Start
 
 ### 1. Prerequisites
-
-- **Node.js**: v20+ recommended
+- **Node.js**: v20 or higher
 - **Git**
 
-### 2. Quick Start
-
-Clone the repository and install dependencies:
-
+### 2. Deployment
 ```bash
 git clone https://github.com/RamonRiosJr/humanos.foundation.git
 cd humanos.foundation
 npm install
 ```
 
-### 3. Launching the Environment
+### 3. Launching the "Sovereign Kernel"
+To maximize impact during presentations or local advocacy demos, we recommend using the **Humanos Operating System Launcher**:
 
-You can start the environment using our custom CLI launcher, which provides an integrated development experience:
+**Windows (Recommended Experience)**:
+Double-click `Humanos-Operating-System.bat`. This triggers a cinematic terminal boot sequence that initializes the advocacy pipeline, establishes zero-knowledge handshakes, and launches the server.
 
-**Windows**:
-
-```cmd
-Humanos-Operating-System.bat
-```
-
-**Cross-Platform (CLI)**:
-
+**Cross-Platform**:
 ```bash
 npm run dev
 ```
 
-The application will be running locally at `http://localhost:7200`.
+> **Access Portal**: [http://localhost:7200](http://localhost:7200)
 
 ---
 
-## 🔒 Security & Privacy (Sovereign-First)
+## 🔒 Security & Selective Privacy
 
-Unlike traditional platforms, this advocacy site is built with **Privacy by Design**:
+We believe **Privacy is a request, but Sovereignty is mathematics.** 
 
-- **Zero Third-Party Tracking**: We have stripped out all unauthorized external analytics tokens.
-- **Local-First Mock SDK**: For local development, form submissions (Join, Contact) are stored securely in browser `localStorage`. No data is exfiltrated to external CDNs or databases unexpectedly without configured backend environments.
+- **Zero Third-Party Trackers**: We have purged all unauthorized Google/Meta tracking pixels. 
+- **Privacy Handshake**: Optional analytics (PostHog) are loaded dynamically and strictly respect Do-Not-Track headers.
+- **Sovereign-First forms**: Contact and Join data are handled via our internal, privacy-hardened client logic.
 
-For more details on how to report security vulnerabilities, read our [SECURITY.md](SECURITY.md).
+For more information, please see our [SECURITY.md](SECURITY.md) and [Audit Documentation](src/docs/Audit.md).
 
 ---
 
-## 🤝 Contributing
+## 🤝 The Contributor's Path
 
-We rely on the community to build the future of patient data rights. Whether it's submitting PRs, raising issues, or writing for our blog, your contribution matters.
+We don't just need developers; we need an army.
+
+- **Technologists**: Help us harden the Zero-Knowledge architecture and optimize the 3D生物 (biological) renders.
+- **Clinicians**: Review our blog content for medical accuracy within the "Root-Cause" framework.
+- **Patients**: Share your history in the [Join Funnel](https://humanos.foundation/join) to help us map the failures of the status quo.
 
 1. Review the [Code of Conduct](CODE_OF_CONDUCT.md).
 2. Read the [Contributor Guidelines](CONTRIBUTING.md).
-3. Check our [Project Board](https://github.com/users/RamonRiosJr/projects/YOUR_PROJECT_ID) for active tasks (P1, P2 priorities).
-4. Fork the repository, create a branch, and submit a Pull Request!
+3. Check the [Project Board](https://github.com/RamonRiosJr/humanos.foundation/projects) for active tasks.
 
 ---
 
-## ⚖️ License
-
-This project operates under the **MIT License**. See [LICENSE](LICENSE) for the full terms.
-
 <div align="center">
-Built by patients, for patients. <br>
-<strong>Data Sovereignty is a Human Right.</strong>
+
+**Built by patients, for patients.** 
+*Data Sovereignty is a Human Right.*
+
+[**Developed by Ramon Luis Rios Jr @ Coqui Cloud Dev Co.**](https://coqui.cloud)
+
 </div>
