@@ -1,0 +1,66 @@
+<svg width="400" height="400" viewBox="0 0 48 48" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="hOS-grad-a" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#22d3ee" />
+            <stop offset="100%" stopColor="#3b82f6" />
+        </linearGradient>
+        <linearGradient id="hOS-grad-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.3" />
+            <stop offset="100%" stopColor="#2563eb" stopOpacity="0.15" />
+        </linearGradient>
+        <filter id="hOS-glow">
+            <feGaussianBlur stdDeviation="1.5" result="coloredBlur" />
+            <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+
+    <style>
+        .node-dot-0 { fill: #fca5a5; }
+        .node-dot-1 { fill: #93c5fd; }
+        .node-dot-2 { fill: #86efac; }
+        .node-dot-3 { fill: #fde047; }
+        .node-dot-4 { fill: #d8b4fe; }
+        .node-dot-5 { fill: #fdba74; }
+        
+        @keyframes hOS-pulse-soft {
+            0%, 100% { opacity: 0.4; filter: drop-shadow(0 0 1px currentColor); transform: scale(0.9); }
+            50% { opacity: 1; filter: drop-shadow(0 0 3px currentColor); transform: scale(1.1); }
+        }
+        
+        .node-dot {
+            transform-origin: center;
+            animation: hOS-pulse-soft 4s infinite ease-in-out;
+        }
+        
+        /* Fixed transform origins for each dot */
+        .node-dot-0 { transform-origin: 24px 10px; animation-delay: 0s; }
+        .node-dot-1 { transform-origin: 34px 16px; animation-delay: 0.6s; }
+        .node-dot-2 { transform-origin: 34px 32px; animation-delay: 1.2s; }
+        .node-dot-3 { transform-origin: 24px 38px; animation-delay: 1.8s; }
+        .node-dot-4 { transform-origin: 14px 32px; animation-delay: 2.4s; }
+        .node-dot-5 { transform-origin: 14px 16px; animation-delay: 3.0s; }
+    </style>
+
+    <path d="M24 3 L41 13 L41 35 L24 45 L7 35 L7 13 Z" fill="url(#hOS-grad-b)" stroke="url(#hOS-grad-a)" strokeWidth="1.2" strokeLinejoin="round" filter="url(#hOS-glow)" />
+    <path d="M24 10 L34 16 L34 32 L24 38 L14 32 L14 16 Z" fill="none" stroke="url(#hOS-grad-a)" strokeWidth="0.6" strokeLinejoin="round" opacity="0.35" />
+
+    <circle cx="24" cy="10" r="1.4" class="node-dot node-dot-0" />
+    <circle cx="34" cy="16" r="1.4" class="node-dot node-dot-1" />
+    <circle cx="34" cy="32" r="1.4" class="node-dot node-dot-2" />
+    <circle cx="24" cy="38" r="1.4" class="node-dot node-dot-3" />
+    <circle cx="14" cy="32" r="1.4" class="node-dot node-dot-4" />
+    <circle cx="14" cy="16" r="1.4" class="node-dot node-dot-5" />
+
+    <circle cx="24" cy="24" r="2.2" fill="url(#hOS-grad-a)" filter="url(#hOS-glow)" />
+    <circle cx="24" cy="24" r="4.5" fill="none" stroke="url(#hOS-grad-a)" strokeWidth="0.6" opacity="0.4" />
+
+    <line x1="24" y1="24" x2="24" y2="10" stroke="url(#hOS-grad-a)" strokeWidth="0.5" opacity="0.25" />
+    <line x1="24" y1="24" x2="34" y2="32" stroke="url(#hOS-grad-a)" strokeWidth="0.5" opacity="0.25" />
+    <line x1="24" y1="24" x2="14" y2="32" stroke="url(#hOS-grad-a)" strokeWidth="0.5" opacity="0.25" />
+
+    <text x="24" y="26.5" textAnchor="middle" fontSize="8.5" fontWeight="700" fontFamily="sans-serif" letterSpacing="-0.3" fill="url(#hOS-grad-a)" filter="url(#hOS-glow)">hOS</text>
+</svg>
