@@ -1,7 +1,15 @@
 {
     "name": "humanos-foundation",
     "private": true,
-    "version": "0.0.0",
+    "version": "0.1.0",
+    "description": "The official advocacy engine for the hOS (Human Operating System) movement. Empowering patients to own their continuous truth.",
+    "author": "Ramon Luis Rios Jr. (Coqui Cloud Dev Co.)",
+    "license": "MIT",
+    "homepage": "https://humanos.foundation",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RamonRiosJr/humanos.foundation.git"
+    },
     "type": "module",
     "scripts": {
         "dev": "vite",
