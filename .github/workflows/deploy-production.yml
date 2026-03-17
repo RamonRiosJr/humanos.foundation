@@ -1,63 +1,47 @@
-name: Deploy to Production (IonBlade)
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main, master]
   workflow_dispatch:
-    inputs:
-      force_deploy:
-        description: "Force deploy even if CI failed"
-        required: false
-        default: "false"
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: deploy-production
+  group: "pages"
   cancel-in-progress: false
 
-env:
-  NODE_VERSION: "20"
-
 jobs:
-  deploy-production:
-    name: Deploy Production
+  build-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
-    environment:
-      name: production
-      url: https://humanos.foundation
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: "npm"
+          node-version: 20
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
 
-      - name: Production build
+      - name: Build
         run: npm run build
         env:
-          CI: true
-          NODE_ENV: production
+          VITE_POSTHOG_KEY: ${{ secrets.VITE_POSTHOG_KEY }}
+          VITE_POSTHOG_HOST: ${{ secrets.VITE_POSTHOG_HOST }}
 
-      - name: Deploy to IonBlade via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
-          server-dir: /public_html/
-          dangerous-clean-slate: false
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-
-      - name: Deployment Complete
-        run: echo "🚀 humanos.foundation deployed successfully to IonBlade — https://humanos.foundation"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          cname: humanos.foundation
