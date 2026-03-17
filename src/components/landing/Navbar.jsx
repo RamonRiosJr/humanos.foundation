@@ -76,19 +76,36 @@ export default function Navbar() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
                             transition={{ duration: 0.2 }}
-                            className="lg:hidden glass-strong rounded-2xl mt-2 p-4 space-y-1"
+                            className="lg:hidden bg-[#0a0a0f]/95 backdrop-blur-xl border border-white/10 rounded-2xl mt-2 p-4 space-y-1 shadow-2xl"
                         >
                             {navLinks.map((link) => (
-                                <Link key={link.label} to={link.href} onClick={() => setMenuOpen(false)} className="block px-4 py-3 text-sm text-white/40 hover:text-cyan-400 transition-colors rounded-xl hover:bg-white/[0.03]">
+                                <Link 
+                                    key={link.label} 
+                                    to={link.href} 
+                                    onClick={() => setMenuOpen(false)} 
+                                    className="block px-4 py-3 text-sm text-white hover:text-cyan-400 transition-colors rounded-xl hover:bg-white/[0.05] font-medium"
+                                >
                                     {link.label}
                                 </Link>
                             ))}
-                            <a href="https://buymeacoffee.com/ramonriosjr" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)} className="block w-full mt-2 px-4 py-3 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-sm text-yellow-400/80 font-medium text-center">
-                                ☕ Donate
-                            </a>
-                            <Link to={createPageUrl('Join')} onClick={() => setMenuOpen(false)} className="block w-full mt-2 px-4 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-sm text-cyan-400 font-medium text-center">
-                                Join the Movement
-                            </Link>
+                            <div className="pt-2 space-y-2">
+                                <a 
+                                    href="https://buymeacoffee.com/ramonriosjr" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    onClick={() => setMenuOpen(false)} 
+                                    className="block w-full px-4 py-3 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-sm text-yellow-500 font-bold text-center"
+                                >
+                                    ☕ Donate
+                                </a>
+                                <Link 
+                                    to={createPageUrl('Join')} 
+                                    onClick={() => setMenuOpen(false)} 
+                                    className="block w-full px-4 py-3 rounded-xl bg-cyan-500/20 border border-cyan-400/40 text-sm text-cyan-300 font-bold text-center glow-btn"
+                                >
+                                    Join the Movement
+                                </Link>
+                            </div>
                         </motion.div>
                     )}
                 </AnimatePresence>
