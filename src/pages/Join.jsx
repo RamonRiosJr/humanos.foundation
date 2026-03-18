@@ -148,17 +148,17 @@ export default function Join() {
                                     </div>
                                 </div>
 
-                                <div>
+                                <div className="space-y-3">
                                     <label className="text-xs text-white/40 uppercase tracking-wider mb-3 block">I am a...</label>
                                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
                                         {roles.map((role) => (
                                             <button
                                                 key={role.value}
                                                 type="button"
-                                                onClick={() => setForm({ ...form, role: role.value })}
+                                                onClick={() => setForm(prev => ({ ...prev, role: role.value }))}
                                                 className={`flex flex-col items-center gap-2 p-3 rounded-xl text-xs transition-all duration-300 border ${form.role === role.value
-                                                    ? 'bg-cyan-500/10 border-cyan-500/40 text-cyan-400'
-                                                    : 'glass border-white/[0.05] text-white/30 hover:text-white/50 hover:border-white/10'
+                                                    ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.15)] scale-[1.02]'
+                                                    : 'glass border-white/[0.05] text-white/30 hover:text-white/50 hover:border-white/10 hover:scale-[1.01]'
                                                     }`}
                                             >
                                                 <role.icon className="w-4 h-4" />
@@ -199,7 +199,7 @@ export default function Join() {
 
                                 <div className="flex justify-center mt-6">
                                     <Turnstile
-                                        siteKey="1x00000000000000000000AA"
+                                        siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || "1x00000000000000000000AA"}
                                         onSuccess={(token) => setTurnstileToken(token)}
                                         options={{ theme: 'dark' }}
                                     />
