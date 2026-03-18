@@ -144,8 +144,14 @@ export default function Contact() {
                                         <label className="text-xs text-white/40 uppercase tracking-wider mb-3 block">Type of Inquiry</label>
                                         <div className="flex flex-wrap gap-2">
                                             {inquiryTypes.map((t) => (
-                                                <button key={t.value} type="button" onClick={() => setForm({ ...form, inquiry_type: t.value })}
-                                                    className={`px-4 py-2 rounded-xl text-xs transition-all duration-300 border ${form.inquiry_type === t.value ? 'bg-cyan-500/10 border-cyan-500/40 text-cyan-400' : 'glass border-white/[0.05] text-white/30 hover:text-white/50'}`}>
+                                                <button 
+                                                    key={t.value} 
+                                                    type="button" 
+                                                    onClick={() => setForm(prev => ({ ...prev, inquiry_type: t.value }))}
+                                                    className={`px-4 py-2 rounded-xl text-xs transition-all duration-300 border ${form.inquiry_type === t.value 
+                                                        ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.1)] scale-[1.02]' 
+                                                        : 'glass border-white/[0.05] text-white/30 hover:text-white/50 hover:scale-[1.01]'}`}
+                                                >
                                                     {t.label}
                                                 </button>
                                             ))}
@@ -159,7 +165,7 @@ export default function Contact() {
 
                                     <div className="flex justify-center mt-6">
                                         <Turnstile
-                                            siteKey="1x00000000000000000000AA"
+                                            siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || "1x00000000000000000000AA"}
                                             onSuccess={(token) => setTurnstileToken(token)}
                                             options={{ theme: 'dark' }}
                                         />
