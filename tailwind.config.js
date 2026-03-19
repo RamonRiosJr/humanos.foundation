@@ -10,6 +10,7 @@ module.exports = {
                 sm: 'calc(var(--radius) - 4px)'
             },
             colors: {
+<<<<<<< HEAD
                 white: 'var(--theme-white)',
                 obsidian: 'var(--theme-bg)',
                 cyan: {
@@ -18,6 +19,8 @@ module.exports = {
                     glow: '#var(--theme-cyan-glow)',
                     soft: 'var(--theme-cyan-soft)',
                 },
+=======
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                 background: 'hsl(var(--background))',
                 foreground: 'hsl(var(--foreground))',
                 card: {
@@ -93,5 +96,10 @@ module.exports = {
             }
         }
     },
+<<<<<<< HEAD
     plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 }
+=======
+    plugins: [require("tailwindcss-animate")],
+}
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)

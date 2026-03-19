@@ -49,7 +49,11 @@ export default function LegalLayout({ sections, lastUpdated, version }) {
                                 <div className="space-y-2">
                                     {s.content.split('\n').map((line, j) => (
                                         line.trim() === '' ? <div key={j} className="h-2" /> :
+<<<<<<< HEAD
                                             <p key={j} className={`text-sm leading-relaxed ${line.startsWith('•') ? 'text-white/60 pl-4 font-medium' : line === line.toUpperCase() && line.length > 20 ? 'text-cyan-400 font-bold text-xs' : 'text-white/60'}`}>
+=======
+                                            <p key={j} className={`text-sm leading-relaxed ${line.startsWith('•') ? 'text-white/35 pl-4' : line === line.toUpperCase() && line.length > 20 ? 'text-amber-400/60 font-medium text-xs' : 'text-white/35'}`}>
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                                 {line}
                                             </p>
                                     ))}
@@ -61,4 +65,8 @@ export default function LegalLayout({ sections, lastUpdated, version }) {
             </div>
         </section>
     );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)

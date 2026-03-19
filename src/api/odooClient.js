@@ -64,18 +64,6 @@ class OdooClient {
     });
   }
 
-  // Contact/Member Directory
-  async getContacts() {
-    try {
-        const data = await this.request('res.partner', 'GET', { 
-            fields: ["name", "id", "email", "category_id", "function", "website_short_description"] 
-        });
-        return data?.records || [];
-    } catch (e) {
-        return null;
-    }
-  }
-
   // Project Live Feed
   async getProjects() {
     try {
@@ -86,17 +74,6 @@ class OdooClient {
     } catch (e) {
         return null;
     }
-  }
-
-  // Support / Ticketing
-  async createTicket(ticketData) {
-    return this.request('project.task', 'POST', {
-        values: {
-            name: `Website Inquiry: ${ticketData.subject}`,
-            project_id: ticketData.projectId || 1, // Default support project
-            description: `Sender: ${ticketData.name} <${ticketData.email}>\n\n${ticketData.message}`
-        }
-    });
   }
 }
 

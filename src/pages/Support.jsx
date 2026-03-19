@@ -4,7 +4,11 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
+<<<<<<< HEAD
 import { Heart, Users, Code, DollarSign, ExternalLink } from 'lucide-react';
+=======
+import { Heart, Users, Code, DollarSign, Github, ExternalLink } from 'lucide-react';
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 
 const supportWays = [
     { icon: Heart, title: 'Spread the Word', desc: 'Share our manifesto. Talk about patient data rights. Refer journalists, researchers, and advocates to us. The movement grows through people.', cta: 'Read the Manifesto', href: '/manifesto' },
@@ -15,7 +19,11 @@ const supportWays = [
 
 export default function Support() {
     return (
+<<<<<<< HEAD
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
+=======
+        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
             <SEOMeta title="Support the Movement — Donate & Contribute to hOS" description="Support Humanos Foundation's mission for patient data sovereignty. Volunteer, contribute code, spread the word, or donate via Buy Me a Coffee. Every contribution fuels the revolution." url="https://humanos.foundation/support" />
             <Navbar />
             <PageHero badge="Support the Mission" title="Fuel the" titleAccent="Revolution" subtitle="The hOS movement depends on people who believe health data sovereignty is worth fighting for. Here's how you can help." />
@@ -27,9 +35,15 @@ export default function Support() {
                                 <div className="w-12 h-12 rounded-2xl glass border border-white/[0.06] flex items-center justify-center mb-5">
                                     <way.icon className="w-5 h-5 text-cyan-400/60 group-hover:text-cyan-400 transition-colors" />
                                 </div>
+<<<<<<< HEAD
                                 <h3 className="text-lg font-bold text-white/90 mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{way.title}</h3>
                                 <p className="text-sm text-white/70 leading-relaxed mb-6 flex-1 font-medium">{way.desc}</p>
                                 <a href={way.href} className="inline-flex items-center gap-2 text-sm text-cyan-400 font-bold hover:text-cyan-300 transition-colors">
+=======
+                                <h3 className="text-lg font-semibold text-white/75 mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{way.title}</h3>
+                                <p className="text-sm text-white/35 leading-relaxed mb-6 flex-1">{way.desc}</p>
+                                <a href={way.href} className="inline-flex items-center gap-2 text-sm text-cyan-400/60 hover:text-cyan-400 transition-colors font-medium">
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                     {way.cta} <ExternalLink className="w-3.5 h-3.5" />
                                 </a>
                             </motion.div>
@@ -37,9 +51,15 @@ export default function Support() {
                     </div>
 
                     {/* 501c3 notice */}
+<<<<<<< HEAD
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="mt-10 glass rounded-2xl p-6 border border-amber-500/20 text-center">
                         <p className="text-sm text-white/60 leading-relaxed">
                             <span className="text-amber-400 font-bold">501(c)(3) Status:</span>{' '}
+=======
+                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="mt-10 glass rounded-2xl p-6 border border-amber-500/10 text-center">
+                        <p className="text-sm text-white/30 leading-relaxed">
+                            <span className="text-amber-400/60 font-medium">501(c)(3) Status:</span>{' '}
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                             Humanos Foundation is currently pursuing formal nonprofit status. Tax-deductible donations will be enabled once status is confirmed. We'll announce this milestone to everyone who has joined the movement.
                         </p>
                     </motion.div>
@@ -48,4 +68,8 @@ export default function Support() {
             <Footer />
         </div>
     );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)

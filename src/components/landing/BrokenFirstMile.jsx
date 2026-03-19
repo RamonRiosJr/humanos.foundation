@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { AlertTriangle, Sparkles, FileX, Wifi, Clock, ShieldCheck, Scan, Database } from 'lucide-react';
 
 const brokenItems = [
+<<<<<<< HEAD
     { icon: Clock, text: 'The 5-Minute Clinical Documentation' },
     { icon: FileX, text: '15 pages of ignored intake' },
     { icon: AlertTriangle, text: 'The Medication Gallery' },
@@ -15,6 +16,19 @@ const hosItems = [
     { icon: Database, text: 'Unignorable longitudinal data' },
     { icon: ShieldCheck, text: 'Forcing case-by-case analysis' },
     { icon: Sparkles, text: 'Personalized root-cause care' },
+=======
+    { icon: FileX, text: 'Paper clipboards in 2026' },
+    { icon: Wifi, text: 'Disconnected systems' },
+    { icon: Clock, text: 'Hours wasted on data entry' },
+    { icon: AlertTriangle, text: 'Patients as afterthoughts' },
+];
+
+const hosItems = [
+    { icon: ShieldCheck, text: 'Cryptographic data sovereignty' },
+    { icon: Scan, text: 'Real-time bio-signal ingestion' },
+    { icon: Database, text: 'Unified health graph' },
+    { icon: Sparkles, text: 'AI-powered clinical clarity' },
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 ];
 
 export default function BrokenFirstMile() {
@@ -70,6 +84,7 @@ export default function BrokenFirstMile() {
                             </div>
 
                             <h3
+<<<<<<< HEAD
                                 className="text-2xl md:text-3xl font-bold text-[#ffffff]/90 mb-2"
                                 style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
                             >
@@ -77,6 +92,15 @@ export default function BrokenFirstMile() {
                             </h3>
                             <p className="text-sm text-[#ffffff]/50 mb-8 leading-relaxed">
                                 You are not a standard deviation. A 5-minute documentation cannot capture your truth.
+=======
+                                className="text-2xl md:text-3xl font-bold text-white/80 mb-2"
+                                style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
+                            >
+                                Healthcare is Broken
+                            </h3>
+                            <p className="text-sm text-white/30 mb-8 leading-relaxed">
+                                Archaic systems. Scattered records. You are an afterthought in your own care.
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                             </p>
 
                             <div className="space-y-4">
@@ -86,10 +110,17 @@ export default function BrokenFirstMile() {
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                                         transition={{ duration: 0.6, delay: 0.5 + i * 0.1 }}
+<<<<<<< HEAD
                                         className="flex items-center gap-3 p-3 rounded-xl bg-[#ffffff]/[0.02] border border-[#ffffff]/[0.06]"
                                     >
                                         <item.icon className="w-4 h-4 text-red-400/60 shrink-0" />
                                         <span className="text-sm text-[#ffffff]/60">{item.text}</span>
+=======
+                                        className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/[0.04]"
+                                    >
+                                        <item.icon className="w-4 h-4 text-red-400/60 shrink-0" />
+                                        <span className="text-sm text-white/40">{item.text}</span>
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                     </motion.div>
                                 ))}
                             </div>
@@ -105,6 +136,7 @@ export default function BrokenFirstMile() {
 
                     {/* Right - hOS Light */}
                     <motion.div
+<<<<<<< HEAD
                         initial={{ opacity: 1, x: 40 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 1, delay: 0.4 }}
@@ -121,11 +153,27 @@ export default function BrokenFirstMile() {
                             <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full border border-cyan-400/40 bg-cyan-400/10 shadow-sm backdrop-blur-sm">
                                 <Sparkles className="w-3 h-3 text-[#22d3ee]" />
                                 <span className="text-[10px] text-[#22d3ee] tracking-widest uppercase font-bold drop-shadow-md">
+=======
+                        initial={{ opacity: 0, x: 40 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : {}}
+                        transition={{ duration: 1, delay: 0.4 }}
+                        className="relative rounded-2xl md:rounded-l-none md:rounded-r-3xl overflow-hidden"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-blue-50" />
+                        {/* Radiant glow */}
+                        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-32 h-64 bg-cyan-400/10 blur-3xl" />
+
+                        <div className="relative z-10 p-8 md:p-12">
+                            <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full border border-cyan-500/20 bg-cyan-500/5">
+                                <Sparkles className="w-3 h-3 text-cyan-600" />
+                                <span className="text-[10px] text-cyan-600 tracking-widest uppercase font-medium">
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                     The hOS Light
                                 </span>
                             </div>
 
                             <h3
+<<<<<<< HEAD
                                 className="text-2xl md:text-3xl font-bold text-[#ffffff] mb-2 drop-shadow-md"
                                 style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
                             >
@@ -133,6 +181,15 @@ export default function BrokenFirstMile() {
                             </h3>
                             <p className="text-sm text-[#ffffff]/80 mb-8 leading-relaxed font-medium">
                                 Your data, structured so perfectly that the system is <span className="text-[#22d3ee] font-bold">forced to listen.</span>
+=======
+                                className="text-2xl md:text-3xl font-bold text-slate-900 mb-2"
+                                style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
+                            >
+                                Clinical Clarity
+                            </h3>
+                            <p className="text-sm text-slate-400 mb-8 leading-relaxed">
+                                One unified system. Your data, encrypted and sovereign. Always.
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                             </p>
 
                             <div className="space-y-4">
@@ -142,10 +199,17 @@ export default function BrokenFirstMile() {
                                         initial={{ opacity: 0, x: 20 }}
                                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                                         transition={{ duration: 0.6, delay: 0.7 + i * 0.1 }}
+<<<<<<< HEAD
                                         className="flex items-center gap-3 p-3 rounded-xl bg-[#22d3ee]/10 border border-[#22d3ee]/20 shadow-lg backdrop-blur-sm transition-all hover:bg-[#22d3ee] hover:-translate-y-0.5 group/item cursor-default"
                                     >
                                         <item.icon className="w-4 h-4 text-[#22d3ee] shrink-0 group-hover/item:text-[#000000] transition-colors" />
                                         <span className="text-sm text-[#ffffff]/90 font-semibold group-hover/item:text-[#000000] transition-colors">{item.text}</span>
+=======
+                                        className="flex items-center gap-3 p-3 rounded-xl bg-white border border-slate-100 shadow-sm"
+                                    >
+                                        <item.icon className="w-4 h-4 text-cyan-500 shrink-0" />
+                                        <span className="text-sm text-slate-600">{item.text}</span>
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                     </motion.div>
                                 ))}
                             </div>
@@ -155,4 +219,8 @@ export default function BrokenFirstMile() {
             </div>
         </section>
     );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)

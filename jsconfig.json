@@ -19,9 +19,13 @@
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "resolveJsonModule": true,
+<<<<<<< HEAD
         "types": [
             "vite/client"
         ]
+=======
+        "types": []
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
     },
     "include": [
         "src/components/**/*.js",

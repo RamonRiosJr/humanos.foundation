@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 import SEOMeta from '../components/shared/SEOMeta';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import { base44 } from '@/api/humanosClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import { Turnstile } from '@marsidev/react-turnstile';
+=======
+import { base44 } from '@/api/base44Client';
+import Navbar from '../components/landing/Navbar';
+import Footer from '../components/landing/Footer';
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 import PageHero from '../components/shared/PageHero';
 import { CheckCircle2, Code, PenTool, Globe, Megaphone, BookOpen, Users } from 'lucide-react';
 
@@ -22,11 +28,15 @@ export default function Volunteer() {
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
     const [selectedRole, setSelectedRole] = useState('');
+<<<<<<< HEAD
     const [turnstileToken, setTurnstileToken] = useState(null);
+=======
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
+<<<<<<< HEAD
 
         if (!turnstileToken) {
             alert('Please verify you are human by completing the captcha.');
@@ -35,12 +45,19 @@ export default function Volunteer() {
         }
 
         await base44.entities.JoinRequest.create({ ...form, reason: selectedRole ? `Role interest: ${selectedRole}. ${form.reason}` : form.reason, turnstile_token: turnstileToken });
+=======
+        await base44.entities.JoinRequest.create({ ...form, reason: selectedRole ? `Role interest: ${selectedRole}. ${form.reason}` : form.reason });
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
         setSubmitted(true);
         setLoading(false);
     };
 
     return (
+<<<<<<< HEAD
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
+=======
+        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
             <SEOMeta title="Volunteer for the hOS Movement — Humanos Foundation" description="Contribute to the health data sovereignty movement as a developer, writer, translator, advocate, researcher, or community leader. Volunteer with Humanos Foundation." url="https://humanos.foundation/volunteer" />
             <Navbar />
             <PageHero badge="Get Involved" title="Volunteer for" titleAccent="the Movement" subtitle="The hOS movement is built by volunteers who believe health data sovereignty is worth fighting for. Find your role." />
@@ -54,7 +71,11 @@ export default function Volunteer() {
                             >
                                 <role.icon className={`w-5 h-5 mb-3 transition-colors ${selectedRole === role.title ? 'text-cyan-400' : 'text-white/30 group-hover:text-cyan-400/50'}`} />
                                 <h3 className="text-sm font-semibold text-white/70 mb-1" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{role.title}</h3>
+<<<<<<< HEAD
                                 <p className="text-xs text-white/60 font-medium group-hover:text-white/80 transition-colors">{role.desc}</p>
+=======
+                                <p className="text-xs text-white/30">{role.desc}</p>
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                             </motion.button>
                         ))}
                     </div>
@@ -65,7 +86,11 @@ export default function Volunteer() {
                                 <motion.div key="success" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="glass-strong rounded-3xl p-12 text-center border border-cyan-500/20">
                                     <CheckCircle2 className="w-14 h-14 text-cyan-400 mx-auto mb-5" />
                                     <h2 className="text-xl font-bold mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Welcome, Volunteer</h2>
+<<<<<<< HEAD
                                     <p className="text-white/60 text-sm leading-relaxed mb-4">We'll be in touch with next steps. Thank you for believing in the mission.</p>
+=======
+                                    <p className="text-white/35 text-sm">We'll be in touch with next steps. Thank you for believing in the mission.</p>
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                 </motion.div>
                             ) : (
                                 <motion.form key="form" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} onSubmit={handleSubmit} className="glass-strong rounded-3xl p-8 border border-white/[0.05] space-y-5">
@@ -86,6 +111,7 @@ export default function Volunteer() {
                                             placeholder="Your motivation, skills, or experience..."
                                             className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent resize-none" />
                                     </div>
+<<<<<<< HEAD
 
                                     <div className="flex justify-center mt-6">
                                         <Turnstile
@@ -95,6 +121,8 @@ export default function Volunteer() {
                                         />
                                     </div>
 
+=======
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                     <button type="submit" disabled={loading} className="w-full glow-btn py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-white font-semibold text-sm tracking-wide disabled:opacity-50">
                                         {loading ? 'Submitting...' : 'Join the Volunteer Network →'}
                                     </button>
@@ -107,4 +135,8 @@ export default function Volunteer() {
             <Footer />
         </div>
     );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)

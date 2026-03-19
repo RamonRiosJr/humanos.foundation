@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SEOMeta from '../components/shared/SEOMeta';
+<<<<<<< HEAD
 import { base44 } from '@/api/humanosClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import { Turnstile } from '@marsidev/react-turnstile';
 import PageHero from '../components/shared/PageHero';
 import { CheckCircle2, Newspaper, Handshake, Coins, Users, HelpCircle } from 'lucide-react';
+=======
+import { base44 } from '@/api/base44Client';
+import Navbar from '../components/landing/Navbar';
+import Footer from '../components/landing/Footer';
+import PageHero from '../components/shared/PageHero';
+import { CheckCircle2, Mail, Newspaper, Handshake, Coins, Users, HelpCircle } from 'lucide-react';
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 
 const inquiryTypes = [
     { value: 'press', label: 'Press & Media', icon: Newspaper, email: 'press@humanos.foundation' },
@@ -17,14 +25,21 @@ const inquiryTypes = [
 ];
 
 export default function Contact() {
+<<<<<<< HEAD
     const [form, setForm] = useState({ name: '', email: '', organization: '', inquiry_type: '', subject: '', message: '', honeypot: '' });
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
     const [turnstileToken, setTurnstileToken] = useState(null);
+=======
+    const [form, setForm] = useState({ name: '', email: '', organization: '', inquiry_type: '', subject: '', message: '' });
+    const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
+<<<<<<< HEAD
 
         // Security: Honeypot check
         if (form.honeypot.trim() !== '') {
@@ -54,12 +69,19 @@ export default function Contact() {
         delete payload.honeypot;
 
         await base44.entities.ContactMessage.create(payload);
+=======
+        await base44.entities.ContactMessage.create(form);
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
         setSubmitted(true);
         setLoading(false);
     };
 
     return (
+<<<<<<< HEAD
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
+=======
+        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
             <SEOMeta
                 title="Contact Humanos Foundation — Press, Partnerships & General Inquiries"
                 description="Contact Humanos Foundation for press inquiries, partnership opportunities, grant applications, and general questions about the hOS patient data sovereignty movement."
@@ -92,9 +114,15 @@ export default function Contact() {
                             </div>
                         </div>
                         <div className="glass rounded-xl p-5 border border-white/[0.04]">
+<<<<<<< HEAD
                             <p className="text-xs text-white/60 leading-relaxed">
                                 <span className="text-cyan-400 font-bold">Response time:</span>{' '}
                                 We aim to respond to all inquiries within <span className="text-cyan-400/80 font-medium">48 hours</span>. Press inquiries are prioritized.
+=======
+                            <p className="text-xs text-white/30 leading-relaxed">
+                                <span className="text-cyan-400/60 font-medium">Response time:</span>{' '}
+                                We aim to respond to all inquiries within 48 hours. Press inquiries are prioritized.
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                             </p>
                         </div>
                     </div>
@@ -110,6 +138,7 @@ export default function Contact() {
                                 </motion.div>
                             ) : (
                                 <motion.form key="form" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} onSubmit={handleSubmit} className="glass-strong rounded-3xl p-8 md:p-10 border border-white/[0.05] space-y-5">
+<<<<<<< HEAD
                                     {/* Spam Protection Honeypot */}
                                     <input
                                         type="text"
@@ -120,6 +149,8 @@ export default function Contact() {
                                         value={form.honeypot}
                                         onChange={e => setForm({ ...form, honeypot: e.target.value })}
                                     />
+=======
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                     <div className="grid sm:grid-cols-2 gap-4">
                                         {[{ key: 'name', label: 'Full Name', type: 'text', placeholder: 'Your name', required: true },
                                         { key: 'email', label: 'Email', type: 'email', placeholder: 'you@example.com', required: true },
@@ -127,14 +158,22 @@ export default function Contact() {
                                         { key: 'subject', label: 'Subject', type: 'text', placeholder: 'Brief subject', required: false },
                                         ].map((field) => (
                                             <div key={field.key}>
+<<<<<<< HEAD
                                                 <label className="text-xs text-white/60 font-bold uppercase tracking-wider mb-2 block">{field.label}{field.required ? ' *' : ''}</label>
+=======
+                                                <label className="text-xs text-white/40 uppercase tracking-wider mb-2 block">{field.label}{field.required ? ' *' : ''}</label>
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                                 <input
                                                     required={field.required}
                                                     type={field.type}
                                                     value={form[field.key]}
                                                     onChange={e => setForm({ ...form, [field.key]: e.target.value })}
                                                     placeholder={field.placeholder}
+<<<<<<< HEAD
                                                     className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.1] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
+=======
+                                                    className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                                 />
                                             </div>
                                         ))}
@@ -144,6 +183,7 @@ export default function Contact() {
                                         <label className="text-xs text-white/40 uppercase tracking-wider mb-3 block">Type of Inquiry</label>
                                         <div className="flex flex-wrap gap-2">
                                             {inquiryTypes.map((t) => (
+<<<<<<< HEAD
                                                 <button 
                                                     key={t.value} 
                                                     type="button" 
@@ -152,6 +192,10 @@ export default function Contact() {
                                                         ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.1)] scale-[1.02]' 
                                                         : 'glass border-white/[0.05] text-white/30 hover:text-white/50 hover:scale-[1.01]'}`}
                                                 >
+=======
+                                                <button key={t.value} type="button" onClick={() => setForm({ ...form, inquiry_type: t.value })}
+                                                    className={`px-4 py-2 rounded-xl text-xs transition-all duration-300 border ${form.inquiry_type === t.value ? 'bg-cyan-500/10 border-cyan-500/40 text-cyan-400' : 'glass border-white/[0.05] text-white/30 hover:text-white/50'}`}>
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                                     {t.label}
                                                 </button>
                                             ))}
@@ -163,6 +207,7 @@ export default function Contact() {
                                         <textarea required value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} rows={5} placeholder="Tell us what's on your mind..." className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent resize-none" />
                                     </div>
 
+<<<<<<< HEAD
                                     <div className="flex justify-center mt-6">
                                         <Turnstile
                                             siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || "1x00000000000000000000AA"}
@@ -171,6 +216,8 @@ export default function Contact() {
                                         />
                                     </div>
 
+=======
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                     <button type="submit" disabled={loading} className="w-full glow-btn py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-white font-semibold text-sm tracking-wide disabled:opacity-50">
                                         {loading ? 'Sending...' : 'Send Message →'}
                                     </button>
@@ -183,4 +230,8 @@ export default function Contact() {
             <Footer />
         </div>
     );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)

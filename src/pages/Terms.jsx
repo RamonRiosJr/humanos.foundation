@@ -46,7 +46,11 @@ const sections = [
 
 export default function Terms() {
     return (
+<<<<<<< HEAD
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
+=======
+        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
             <SEOMeta title="Terms of Use — Humanos Foundation" description="Terms governing use of humanos.foundation. Informational site only — not medical advice. Governing law: Puerto Rico / United States." url="https://humanos.foundation/terms" />
             <Navbar />
             <PageHero badge="Legal" title="Terms of" titleAccent="Use" subtitle="Plain language terms governing your use of this Site." />
@@ -54,4 +58,8 @@ export default function Terms() {
             <Footer />
         </div>
     );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)

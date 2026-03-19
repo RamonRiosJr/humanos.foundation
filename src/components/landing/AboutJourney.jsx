@@ -1,8 +1,11 @@
 import React, { useRef } from 'react';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import { Code, Heart, Shield } from 'lucide-react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+=======
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 
 export default function AboutJourney() {
     const ref = useRef(null);
@@ -14,9 +17,15 @@ export default function AboutJourney() {
     const y = useTransform(scrollYProgress, [0, 1], [60, -60]);
 
     return (
+<<<<<<< HEAD
         <section ref={ref} className="relative py-24 md:py-40 px-4 md:px-8 overflow-hidden z-20">
             {/* Background grain */}
             <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-[#0d0d15] to-obsidian" />
+=======
+        <section ref={ref} className="relative py-24 md:py-40 px-4 md:px-8 overflow-hidden">
+            {/* Background grain */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f] via-[#0d0d15] to-[#0a0a0f]" />
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 
             <div className="relative z-10 max-w-6xl mx-auto">
                 {/* Section label */}
@@ -26,7 +35,11 @@ export default function AboutJourney() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16 md:mb-20"
                 >
+<<<<<<< HEAD
                     <span className="text-xs md:text-sm text-cyan-400 font-bold tracking-[0.2em] uppercase drop-shadow-[0_0_8px_rgba(34,211,238,0.2)]">
+=======
+                    <span className="text-xs md:text-sm text-cyan-400/60 font-medium tracking-[0.2em] uppercase">
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                         The Origin Story
                     </span>
                     <h2
@@ -65,15 +78,23 @@ export default function AboutJourney() {
                                     >
                                         <div className="glass rounded-lg p-4 border border-cyan-500/10">
                                             <div className="flex items-center gap-2 mb-3">
+<<<<<<< HEAD
                                                 <motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ duration: 2, repeat: Infinity }} className="w-2 h-2 rounded-full bg-red-400 drop-shadow-[0_0_4px_rgba(248,113,113,0.6)]" />
                                                 <div className="w-2 h-2 rounded-full bg-yellow-400/60" />
                                                 <div className="w-2 h-2 rounded-full bg-green-400/60" />
                                                 <span className="text-[9px] text-[#ffffff]/50 ml-2 font-mono">
+=======
+                                                <div className="w-2 h-2 rounded-full bg-red-400/60" />
+                                                <div className="w-2 h-2 rounded-full bg-yellow-400/60" />
+                                                <div className="w-2 h-2 rounded-full bg-green-400/60" />
+                                                <span className="text-[9px] text-white/20 ml-2 font-mono">
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                                     hOS-core.ts
                                                 </span>
                                             </div>
                                             <div className="space-y-1.5">
                                                 <div className="flex gap-2">
+<<<<<<< HEAD
                                                     <span className="text-[10px] text-[#c084fc]/80 font-mono">const</span>
                                                     <span className="text-[10px] text-[#22d3ee]/90 font-mono">sovereignty</span>
                                                     <span className="text-[10px] text-white/50 font-mono">=</span>
@@ -92,6 +113,25 @@ export default function AboutJourney() {
                                                 <div className="flex gap-2">
                                                     <span className="text-[10px] text-[#facc15]/80 font-mono">// for patients.</span>
                                                     <motion.span animate={{ opacity: [1, 0] }} transition={{ duration: 0.8, repeat: Infinity }} className="text-[10px] text-white/50 font-mono">|</motion.span>
+=======
+                                                    <span className="text-[10px] text-purple-400/60 font-mono">const</span>
+                                                    <span className="text-[10px] text-cyan-400/70 font-mono">sovereignty</span>
+                                                    <span className="text-[10px] text-white/30 font-mono">=</span>
+                                                    <span className="text-[10px] text-green-400/60 font-mono">"absolute"</span>
+                                                </div>
+                                                <div className="flex gap-2">
+                                                    <span className="text-[10px] text-purple-400/60 font-mono">const</span>
+                                                    <span className="text-[10px] text-cyan-400/70 font-mono">patient</span>
+                                                    <span className="text-[10px] text-white/30 font-mono">=</span>
+                                                    <span className="text-[10px] text-green-400/60 font-mono">"first"</span>
+                                                </div>
+                                                <div className="h-1" />
+                                                <div className="flex gap-2">
+                                                    <span className="text-[10px] text-yellow-400/60 font-mono">// Built by a patient,</span>
+                                                </div>
+                                                <div className="flex gap-2">
+                                                    <span className="text-[10px] text-yellow-400/60 font-mono">// for patients.</span>
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                                 </div>
                                             </div>
                                         </div>
@@ -104,10 +144,15 @@ export default function AboutJourney() {
                                             transition={{ duration: 5, repeat: Infinity }}
                                             className="flex items-center gap-2"
                                         >
+<<<<<<< HEAD
                                             <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}>
                                                 <Heart className="w-3 h-3 text-rose-400" />
                                             </motion.div>
                                             <span className="text-[10px] text-[#ffffff]/50 font-light italic">
+=======
+                                            <Heart className="w-3 h-3 text-rose-400/50" />
+                                            <span className="text-[10px] text-white/20 font-light italic">
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                                 River & Brownie, always by his side
                                             </span>
                                         </motion.div>
@@ -115,13 +160,21 @@ export default function AboutJourney() {
                                 </div>
 
                                 {/* Vignette */}
+<<<<<<< HEAD
                                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-60" />
+=======
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent opacity-60" />
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                             </div>
 
                             {/* Caption */}
                             <div className="mt-4 flex items-center gap-2">
                                 <div className="w-8 h-px bg-cyan-500/30" />
+<<<<<<< HEAD
                                 <p className="text-[11px] text-white/50 italic">
+=======
+                                <p className="text-[11px] text-white/25 italic">
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                     The Motel Room Prototype — Where hOS was born
                                 </p>
                             </div>
@@ -136,6 +189,7 @@ export default function AboutJourney() {
                         className="md:col-span-2 space-y-6"
                     >
                         <div className="space-y-4">
+<<<<<<< HEAD
                             <p className="text-white/80 text-sm md:text-base leading-relaxed font-medium">
                                 hOS wasn't born in a boardroom or a venture capital pitch meeting.
                                 It was born in a dimly lit motel room, powered by necessity and
@@ -151,15 +205,40 @@ export default function AboutJourney() {
                             <p className="text-white/80 text-sm md:text-base leading-relaxed font-medium">
                                 No team. No funding. Just a laptop, two loyal dogs, and a vision
                                 that healthcare should <span className="text-cyan-400 font-bold drop-shadow-[0_0_8px_rgba(34,211,238,0.2)]">serve the human</span> — not the institution.
+=======
+                            <p className="text-white/50 text-sm md:text-base leading-relaxed">
+                                hOS wasn't born in a boardroom or a venture capital pitch meeting.
+                                It was born in a dimly lit motel room, powered by necessity and
+                                an unshakable belief that{' '}
+                                <span className="text-cyan-400/80">patients deserve better</span>.
+                            </p>
+                            <p className="text-white/35 text-sm md:text-base leading-relaxed">
+                                Ramon Luis Rios Jr., the founder, was a patient first — navigating a broken
+                                healthcare system, drowning in paperwork, locked out of his own medical records.
+                                With raw code and relentless determination, he built the first prototype
+                                of what would become the Human Operating System.
+                            </p>
+                            <p className="text-white/35 text-sm md:text-base leading-relaxed">
+                                No team. No funding. Just a laptop, two loyal dogs, and a vision
+                                that healthcare should serve the human — not the institution.
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                             </p>
                         </div>
 
                         {/* Principles */}
+<<<<<<< HEAD
                         <div className="space-y-3 pt-4 border-t border-white/10">
                             {[
                                 { icon: Code, text: 'Built by a patient', color: 'text-blue-400' },
                                 { icon: Heart, text: 'Forged in survival', color: 'text-rose-400' },
                                 { icon: Shield, text: 'Designed for sovereignty', color: 'text-purple-400' },
+=======
+                        <div className="space-y-3 pt-4 border-t border-white/[0.04]">
+                            {[
+                                { icon: Code, text: 'Built by a patient' },
+                                { icon: Heart, text: 'Forged in survival' },
+                                { icon: Shield, text: 'Designed for sovereignty' },
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                             ].map((item, i) => (
                                 <motion.div
                                     key={item.text}
@@ -168,10 +247,15 @@ export default function AboutJourney() {
                                     transition={{ duration: 0.5, delay: 0.8 + i * 0.1 }}
                                     className="flex items-center gap-3"
                                 >
+<<<<<<< HEAD
                                     <motion.div animate={{ opacity: [0.4, 1, 0.4] }} transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.3 }}>
                                         <item.icon className={`w-3.5 h-3.5 ${item.color}`} />
                                     </motion.div>
                                     <span className="text-xs text-white/80 font-medium">{item.text}</span>
+=======
+                                    <item.icon className="w-3.5 h-3.5 text-cyan-400/50" />
+                                    <span className="text-xs text-white/40">{item.text}</span>
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                 </motion.div>
                             ))}
                         </div>
@@ -180,4 +264,8 @@ export default function AboutJourney() {
             </div>
         </section>
     );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)

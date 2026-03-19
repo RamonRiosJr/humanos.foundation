@@ -11,7 +11,11 @@ const faqs = [
     {
         category: 'About hOS',
         questions: [
+<<<<<<< HEAD
             { q: 'What is the Human Operating System (hOS)?', a: 'hOS is a movement and philosophy focused on Data Sovereignty. We believe your health data should be mathematically decoupled from any institution. It is encrypted at the edge using keys only you control. We don\'t "protect" your data in the traditional sense; we simply make it mathematically impossible for us to access it.' },
+=======
+            { q: 'What is the Human Operating System (hOS)?', a: 'hOS is a movement and philosophy, not a specific product. We advocate for a world where your health data is owned by you, encrypted by default, and portable across any system you choose to use. Think of it as the operating system layer that puts you — the patient — in control of your biological data.' },
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
             { q: 'Is humanos.foundation a nonprofit?', a: 'Humanos Foundation is currently on a path toward formal nonprofit status (501(c)(3)). We operate as an advocacy and educational organization committed to patient data sovereignty. Updates on our legal structure will be posted here.' },
             { q: 'Who founded this?', a: 'hOS was founded by Ramon Luis Rios Jr., a patient and technologist who experienced the broken healthcare data system firsthand. The movement grew from a personal necessity into a global advocacy mission. Learn more on the Origin page.' },
         ],
@@ -21,7 +25,11 @@ const faqs = [
         questions: [
             { q: 'Do I actually own my health data?', a: 'Legally, it\'s complicated — and that\'s the problem. Under HIPAA, you have rights to access your records, but you don\'t have true ownership. Your provider, insurer, and numerous third parties may have rights to your data that supersede yours. This is exactly what hOS is working to change.' },
             { q: 'Can my doctor sell my health data?', a: 'Yes. "De-identified" health data is routinely sold by hospitals, EHR vendors, and data brokers — legally. This is a $250 billion market. The hOS movement advocates for laws requiring explicit, informed consent before any data sale, and patient benefit-sharing from data commercialization.' },
+<<<<<<< HEAD
             { q: 'What is HIPAA and does it protect me?', a: 'HIPAA (Health Insurance Portability and Accountability Act) is a regulatory framework for how institutions handle your data, but it does not grant you sovereignty. Once you authorize a provider to access your record, hOS and the Foundation have no control over how they subsequently share or use that data. Our goal is to give you the choice of who to trust, but the trust itself remains a human decision between you and your clinician.' },
+=======
+            { q: 'What is HIPAA and does it protect me?', a: 'HIPAA (Health Insurance Portability and Accountability Act) gives you the right to access your medical records and requires healthcare entities to protect your data. However, it has significant gaps: it doesn\'t cover health apps, fitness trackers, or direct-to-consumer services. And "de-identified" data can be sold without your consent.' },
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
         ],
     },
     {
@@ -47,9 +55,15 @@ function FAQItem({ question, answer }) {
     return (
         <div className="border border-white/[0.04] rounded-2xl overflow-hidden hover:border-white/[0.07] transition-colors duration-300">
             <button onClick={() => setOpen(!open)} className="w-full flex items-center justify-between px-6 py-5 text-left gap-4">
+<<<<<<< HEAD
                 <span className="text-sm font-semibold text-white/80 leading-snug">{question}</span>
                 <motion.div animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2 }}>
                     <ChevronDown className="w-4 h-4 text-cyan-400/40 shrink-0" />
+=======
+                <span className="text-sm font-medium text-white/65 leading-snug">{question}</span>
+                <motion.div animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2 }}>
+                    <ChevronDown className="w-4 h-4 text-white/25 shrink-0" />
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                 </motion.div>
             </button>
             <AnimatePresence>
@@ -61,7 +75,11 @@ function FAQItem({ question, answer }) {
                         transition={{ duration: 0.25 }}
                     >
                         <div className="px-6 pb-5 border-t border-white/[0.04] pt-4">
+<<<<<<< HEAD
                             <p className="text-sm text-white/70 leading-relaxed font-medium">{answer}</p>
+=======
+                            <p className="text-sm text-white/35 leading-relaxed">{answer}</p>
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                         </div>
                     </motion.div>
                 )}
@@ -72,7 +90,11 @@ function FAQItem({ question, answer }) {
 
 export default function FAQ() {
     return (
+<<<<<<< HEAD
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
+=======
+        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
             <SEOMeta
                 title="FAQ — Patient Data Rights, hOS Movement & Health Sovereignty"
                 description="Answers to common questions about the hOS movement, patient data ownership, HIPAA, zero-knowledge architecture, FHIR, and how to get involved with Humanos Foundation."
@@ -84,7 +106,11 @@ export default function FAQ() {
                 <div className="max-w-3xl mx-auto space-y-12">
                     {faqs.map((group, i) => (
                         <motion.div key={group.category} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.1 }}>
+<<<<<<< HEAD
                             <p className="text-xs text-cyan-400 font-bold uppercase tracking-widest mb-4 drop-shadow-[0_0_8px_rgba(34,211,238,0.2)]">{group.category}</p>
+=======
+                            <p className="text-xs text-cyan-400/50 uppercase tracking-widest font-medium mb-4">{group.category}</p>
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                             <div className="space-y-2">
                                 {group.questions.map((item) => (
                                     <FAQItem key={item.q} question={item.q} answer={item.a} />
@@ -98,4 +124,8 @@ export default function FAQ() {
             <Footer />
         </div>
     );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)

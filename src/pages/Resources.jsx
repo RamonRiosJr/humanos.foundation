@@ -51,7 +51,11 @@ const resourceGroups = [
 
 export default function Resources() {
     return (
+<<<<<<< HEAD
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
+=======
+        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
             <SEOMeta title="Research & Resources — Health Data Rights, HIPAA, GDPR | Humanos Foundation" description="Curated resources for patients, advocates, researchers, and technologists: regulatory references, patient advocacy organizations, academic research, and open-source health projects." url="https://humanos.foundation/resources" />
             <Navbar />
             <PageHero badge="Knowledge Base" title="Research &" titleAccent="Resources" subtitle="Curated resources for patients, advocates, researchers, and technologists building toward health data sovereignty." />
@@ -70,10 +74,17 @@ export default function Resources() {
                                         className="glass rounded-2xl p-5 border border-white/[0.04] hover:border-cyan-500/20 transition-all group"
                                     >
                                         <div className="flex items-start justify-between mb-2">
+<<<<<<< HEAD
                                             <p className="text-sm font-semibold text-white/80 group-hover:text-white transition-colors leading-snug">{res.name}</p>
                                             <ExternalLink className="w-3 h-3 text-white/15 group-hover:text-cyan-400/60 transition-colors shrink-0 ml-2 mt-0.5" />
                                         </div>
                                         <p className="text-xs text-white/60 leading-relaxed font-medium">{res.desc}</p>
+=======
+                                            <p className="text-sm font-medium text-white/60 group-hover:text-white/80 transition-colors leading-snug">{res.name}</p>
+                                            <ExternalLink className="w-3 h-3 text-white/15 group-hover:text-cyan-400/60 transition-colors shrink-0 ml-2 mt-0.5" />
+                                        </div>
+                                        <p className="text-xs text-white/25">{res.desc}</p>
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                     </motion.a>
                                 ))}
                             </div>
@@ -84,4 +95,8 @@ export default function Resources() {
             <Footer />
         </div>
     );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
