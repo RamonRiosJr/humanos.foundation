@@ -28,7 +28,7 @@ export default function Volunteer() {
         e.preventDefault();
         setLoading(true);
 
-        if (!turnstileToken) {
+        // if (!turnstileToken) {
             alert('Please verify you are human by completing the captcha.');
             setLoading(false);
             return;
@@ -88,7 +88,7 @@ export default function Volunteer() {
                                     </div>
 
                                     <div className="flex justify-center mt-6">
-                                        <Turnstile
+                                        {/* <Turnstile
                                             siteKey="1x00000000000000000000AA"
                                             onSuccess={(token) => setTurnstileToken(token)}
                                             options={{ theme: 'dark' }}

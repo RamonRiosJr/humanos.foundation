@@ -47,7 +47,7 @@ export default function Join() {
         }
         localStorage.setItem('last_join_submit', now.toString());
 
-        if (!turnstileToken) {
+        // if (!turnstileToken) {
             alert('Please verify you are human by completing the captcha.');
             setLoading(false);
             return;
@@ -198,7 +198,7 @@ export default function Join() {
                                 </div>
 
                                 <div className="flex justify-center mt-6">
-                                    <Turnstile
+                                    {/* <Turnstile
                                         siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || "1x00000000000000000000AA"}
                                         onSuccess={(token) => setTurnstileToken(token)}
                                         options={{ theme: 'dark' }}
