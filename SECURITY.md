@@ -42,3 +42,4 @@ We ask that you maintain confidentiality until we have had an opportunity to add
 ## Public Disclosure
 
 Once a vulnerability has been addressed, we will coordinate public disclosure with you. We value the contributions of security researchers and will provide appropriate credit (if desired) for responsibly disclosed vulnerabilities.
+

@@ -11,23 +11,29 @@ class OdooClient {
     this.password = import.meta.env.VITE_ODOO_PASS;
   }
 
-  async request(model, method = 'GET', data = null) {
+  async request(model, method = 'POST', data = null) {
     if (!this.apiKey) return null;
 
     // specific Cybrosys REST API endpoint format
     const url = `${this.baseUrl}/send_request?model=${model}`;
     
-    const response = await fetch(url, {
-      method,
+    // Most Odoo REST APIs expect POST with a body even for queries
+    const requestOptions = {
+      method: data || method === 'POST' ? 'POST' : 'GET',
       headers: {
         'Content-Type': 'application/json',
         'api-key': this.apiKey,
         'login': this.login,
         'password': this.password
-      },
-      body: data ? JSON.stringify(data) : JSON.stringify({ fields: ["name", "id", "subtitle", "content", "post_date"] }),
-    });
+      }
+    };
 
+    if (requestOptions.method === 'POST') {
+        const bodyData = data || { fields: ["name", "id", "subtitle", "content", "post_date"] };
+        requestOptions.body = JSON.stringify(bodyData);
+    }
+    
+    const response = await fetch(url, requestOptions);
     if (!response.ok) return null;
     return response.json();
   }

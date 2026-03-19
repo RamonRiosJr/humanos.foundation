@@ -1,27 +1,16 @@
-<<<<<<< HEAD
 import React, { Suspense } from 'react';
-=======
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 import { Toaster } from "@/components/ui/toaster"
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
 import { pagesConfig } from './pages.config'
-<<<<<<< HEAD
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
-// posthog removed to prevent crash
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import { ThemeProvider } from './components/ThemeProvider';
 import { A11yProvider } from '@/lib/A11yContext';
 import A11yWidget from '@/components/shared/A11yWidget';
 import ChatbotWidget from '@/components/shared/ChatbotWidget';
-=======
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import PageNotFound from './lib/PageNotFound';
-import { AuthProvider, useAuth } from '@/lib/AuthContext';
-import UserNotRegisteredError from '@/components/UserNotRegisteredError';
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 
 const { Pages, Layout, mainPage } = pagesConfig;
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];
@@ -56,7 +45,6 @@ const AuthenticatedApp = () => {
 
     // Render the main app
     return (
-<<<<<<< HEAD
         <Suspense fallback={
             <div className="fixed inset-0 flex items-center justify-center bg-black/95">
                 <div className="w-8 h-8 border-4 border-cyan-500/30 border-t-cyan-400 rounded-full animate-spin"></div>
@@ -82,32 +70,9 @@ const AuthenticatedApp = () => {
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
         </Suspense>
-=======
-        <Routes>
-            <Route path="/" element={
-                <LayoutWrapper currentPageName={mainPageKey}>
-                    <MainPage />
-                </LayoutWrapper>
-            } />
-            {Object.entries(Pages).map(([path, Page]) => (
-                <Route
-                    key={path}
-                    path={`/${path}`}
-                    element={
-                        <LayoutWrapper currentPageName={path}>
-                            <Page />
-                        </LayoutWrapper>
-                    }
-                />
-            ))}
-            <Route path="*" element={<PageNotFound />} />
-        </Routes>
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
     );
 };
 
-
-<<<<<<< HEAD
 const PosthogPageViewTracker = () => {
     const location = useLocation();
 
@@ -141,19 +106,6 @@ function App() {
                 </AuthProvider>
             </A11yProvider>
         </ThemeProvider>
-=======
-function App() {
-
-    return (
-        <AuthProvider>
-            <QueryClientProvider client={queryClientInstance}>
-                <Router>
-                    <AuthenticatedApp />
-                </Router>
-                <Toaster />
-            </QueryClientProvider>
-        </AuthProvider>
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
     )
 }
 

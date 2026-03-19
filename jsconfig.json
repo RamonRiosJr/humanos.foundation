@@ -19,25 +19,18 @@
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "resolveJsonModule": true,
-<<<<<<< HEAD
         "types": [
             "vite/client"
         ]
-=======
-        "types": []
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
     },
     "include": [
-        "src/components/**/*.js",
-        "src/pages/**/*.jsx",
-        "src/Layout.jsx"
+        "src/**/*.js",
+        "src/**/*.jsx",
+        "src/**/*.ts",
+        "src/**/*.tsx"
     ],
     "exclude": [
         "node_modules",
-        "dist",
-        "src/vite-plugins",
-        "src/components/ui",
-        "src/api",
-        "src/lib"
+        "dist"
     ]
 }

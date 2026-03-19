@@ -75,8 +75,6 @@
     }
 }
 
-
-
 @layer base {
     * {
         @apply border-border outline-ring/50;
@@ -85,7 +83,6 @@
     body {
         @apply bg-background text-foreground;
     }
-<<<<<<< HEAD
 }
 
 /* -----------------------------------------------------------------------------
@@ -176,6 +173,4 @@ html.a11y-pause-animations *::after {
 
 .animate-fog-drift {
     animation: fog-drift 5s ease-in-out infinite;
-=======
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 }
