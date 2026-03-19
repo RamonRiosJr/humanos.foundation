@@ -5,7 +5,6 @@
 @tailwind utilities;
 
 :root {
-<<<<<<< HEAD
     /* Neuro Dark Theme Context - mapped by Tailwind */
     --theme-bg: #f8fafc;
     --theme-white: #020617;
@@ -24,15 +23,12 @@
     --theme-glass-strong-border: rgba(0, 0, 0, 0.1);
 
     /* Original Hardcoded Colors - Left intact for explicit usage */
-=======
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
     --obsidian: #0a0a0f;
     --obsidian-light: #12121a;
     --cyan-glow: #00d4ff;
     --cyan-soft: #00d4ff33;
     --blue-accent: #3b82f6;
     --ethereal: #f8fafc;
-<<<<<<< HEAD
 }
 
 .dark {
@@ -51,10 +47,6 @@
     --theme-glass-border: rgba(255, 255, 255, 0.06);
     --theme-glass-strong-bg: rgba(255, 255, 255, 0.06);
     --theme-glass-strong-border: rgba(255, 255, 255, 0.1);
-=======
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-bg: rgba(255, 255, 255, 0.04);
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 }
 
 * {
@@ -69,13 +61,8 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-<<<<<<< HEAD
     background: var(--theme-bg);
     color: var(--theme-white);
-=======
-    background: var(--obsidian);
-    color: white;
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -83,7 +70,6 @@ body {
 
 /* Glassmorphism utility */
 .glass {
-<<<<<<< HEAD
     background: var(--theme-glass-bg);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
@@ -95,30 +81,12 @@ body {
     -webkit-backdrop-filter: blur(40px);
     backdrop-filter: blur(40px);
     border: 1px solid var(--theme-glass-strong-border);
-=======
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.glass-strong {
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 }
 
 .glass-light {
     background: rgba(255, 255, 255, 0.85);
-<<<<<<< HEAD
     -webkit-backdrop-filter: blur(40px);
     backdrop-filter: blur(40px);
-=======
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
     border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
@@ -245,3 +213,4 @@ body {
     pointer-events: none;
     z-index: 1;
 }
+

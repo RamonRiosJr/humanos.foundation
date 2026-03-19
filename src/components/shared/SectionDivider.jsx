@@ -8,11 +8,8 @@ export default function SectionDivider() {
             <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent" />
         </div>
     );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
+
 
 
 

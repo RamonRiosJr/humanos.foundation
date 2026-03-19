@@ -17,9 +17,11 @@ class OdooClient {
     // specific Cybrosys REST API endpoint format
     const url = `${this.baseUrl}/send_request?model=${model}`;
     
-    // Most Odoo REST APIs expect POST with a body even for queries
+    // In Odoo REST API, POST is generally safer for sending bodies
+    const finalMethod = data ? 'POST' : method;
+    
     const requestOptions = {
-      method: data || method === 'POST' ? 'POST' : 'GET',
+      method: finalMethod,
       headers: {
         'Content-Type': 'application/json',
         'api-key': this.apiKey,
@@ -28,9 +30,11 @@ class OdooClient {
       }
     };
 
-    if (requestOptions.method === 'POST') {
-        const bodyData = data || { fields: ["name", "id", "subtitle", "content", "post_date"] };
-        requestOptions.body = JSON.stringify(bodyData);
+    if (data) {
+        requestOptions.body = JSON.stringify(data);
+    } else if (finalMethod === 'POST') {
+        // Default fields for POST without custom data
+        requestOptions.body = JSON.stringify({ fields: ["name", "id", "subtitle", "content", "post_date"] });
     }
     
     const response = await fetch(url, requestOptions);

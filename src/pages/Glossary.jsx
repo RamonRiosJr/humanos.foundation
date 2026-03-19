@@ -10,28 +10,17 @@ const terms = [
     { term: 'HIPAA', full: 'Health Insurance Portability and Accountability Act', definition: 'US federal law (1996) that establishes standards for protecting sensitive patient health information. Gives patients rights to access their records but has significant gaps in covering modern health apps and data brokers.' },
     { term: 'PHI', full: 'Protected Health Information', definition: 'Any health information that can be used to identify an individual. Includes medical records, test results, prescriptions, and insurance information. PHI is protected under HIPAA when held by covered entities.' },
     { term: 'EHR', full: 'Electronic Health Record', definition: 'A digital version of a patient\'s medical history maintained over time by a healthcare provider. Despite being "electronic," EHRs are notoriously fragmented and difficult for patients to access or transfer.' },
-<<<<<<< HEAD
     { term: 'Zero-Knowledge', full: 'Zero-Knowledge Architecture', definition: 'A cryptographic approach where a service provider can verify data without being able to read it. In health data context, this means the platform holding your data cannot decrypt or access your health records — only you can. This architecture mathematically removes us from the data access path, ensuring your sovereignty.' },
     { term: 'Open Source', full: 'Open Source Software', definition: 'Open source means no lock-in — your data and the tools to read it must be freely accessible. It allows you to verify that our system is mathematically incapable of seeing your data.' },
-=======
-    { term: 'Zero-Knowledge', full: 'Zero-Knowledge Architecture', definition: 'A cryptographic approach where a service provider can verify data without being able to read it. In health data context, this means the platform holding your data cannot decrypt or access your health records — only you can.' },
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
     { term: 'Local-First', full: 'Local-First Software', definition: 'Software that stores your data on your own device and works offline, with optional sync. Prioritizes user ownership and availability over cloud convenience. A key principle for true health data sovereignty.' },
     { term: 'GDPR', full: 'General Data Protection Regulation', definition: 'EU regulation (2018) giving individuals control over their personal data. Establishes rights to access, correct, delete, and port personal data. Sets the global standard for data privacy rights.' },
     { term: 'CCPA', full: 'California Consumer Privacy Act', definition: 'California law giving residents the right to know what personal data is collected, to delete it, and to opt out of its sale. One of the strongest US state privacy laws.' },
     { term: 'Interoperability', full: 'Health Data Interoperability', definition: 'The ability of different healthcare IT systems to exchange, interpret, and use data seamlessly. True interoperability means your health record follows you, not your provider.' },
     { term: 'Decentralized ID', full: 'Decentralized Identifier (DID)', definition: 'A type of digital identity that is controlled by the individual, not a central authority. DIDs enable self-sovereign identity — you control your health identity without depending on any single institution.' },
-<<<<<<< HEAD
     { term: 'E2EE', full: 'End-to-End Encryption', definition: 'Encryption where only the communicating parties can read the data. In health data: only you and parties you explicitly authorize can decrypt your records. However, once shared with a clinician, hOS loses control over how that clinician chooses to store or share the decrypted data within their institution.' },
     { term: 'SaMD', full: 'Software as a Medical Device', definition: 'Software intended to be used for medical purposes — diagnosis, prevention, monitoring, or treatment — without being part of a hardware medical device. Subject to FDA regulation in the US and CE marking in the EU.' },
     { term: 'TEFCA', full: 'Trusted Exchange Framework and Common Agreement', definition: 'A US framework to enable nationwide health information exchange across different networks. Part of the 21st Century Cures Act implementation aiming for better patient data access.' },
     { term: 'Patient Sovereignty', full: 'Patient Data Sovereignty', definition: 'The principle that patients have absolute rights over their biological data—including the choice of whom to trust. It is not about "protecting" data behind a corporate wall; it is about mathematically ensuring the patient is the sole gatekeeper of their own history.' },
-=======
-    { term: 'E2EE', full: 'End-to-End Encryption', definition: 'Encryption where only the communicating parties can read the messages. In health data: only you and parties you explicitly authorize can decrypt your records. No intermediate server can access the plaintext.' },
-    { term: 'SaMD', full: 'Software as a Medical Device', definition: 'Software intended to be used for medical purposes — diagnosis, prevention, monitoring, or treatment — without being part of a hardware medical device. Subject to FDA regulation in the US and CE marking in the EU.' },
-    { term: 'TEFCA', full: 'Trusted Exchange Framework and Common Agreement', definition: 'A US framework to enable nationwide health information exchange across different networks. Part of the 21st Century Cures Act implementation aiming for better patient data access.' },
-    { term: 'Patient Sovereignty', full: 'Patient Data Sovereignty', definition: 'The principle that patients have absolute, inalienable rights over their biological data — including ownership, access control, portability, and the right to benefit from its use. The foundational principle of the hOS movement.' },
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 ];
 
 const alphabet = [...new Set(terms.map(t => t.term[0]))].sort();
@@ -46,11 +35,7 @@ export default function Glossary() {
     );
 
     return (
-<<<<<<< HEAD
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
-=======
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
             <SEOMeta
                 title="Health Data Glossary — FHIR, HIPAA, PHI, Zero-Knowledge & More"
                 description="Plain-language definitions for FHIR, HIPAA, PHI, EHR, zero-knowledge architecture, GDPR, CCPA, patient sovereignty, and other key terms in the health data rights movement."
@@ -82,15 +67,9 @@ export default function Glossary() {
                                         <span className="text-xs font-bold text-cyan-400/70 font-mono">{item.term.slice(0, 4)}</span>
                                     </div>
                                     <div>
-<<<<<<< HEAD
                                         <h3 className="text-sm font-semibold text-cyan-400 mb-0.5" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{item.term}</h3>
                                         <p className="text-xs text-cyan-400/60 mb-2">{item.full}</p>
                                         <p className="text-sm text-white/80 leading-relaxed">{item.definition}</p>
-=======
-                                        <h3 className="text-sm font-semibold text-white/75 mb-0.5" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{item.term}</h3>
-                                        <p className="text-xs text-cyan-400/40 mb-2">{item.full}</p>
-                                        <p className="text-sm text-white/35 leading-relaxed">{item.definition}</p>
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                     </div>
                                 </div>
                             </motion.div>
@@ -101,9 +80,6 @@ export default function Glossary() {
             <Footer />
         </div>
     );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
+
 

@@ -42,11 +42,7 @@ const sections = [
 
 export default function Privacy() {
     return (
-<<<<<<< HEAD
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
-=======
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
             <SEOMeta title="Privacy Policy — Humanos Foundation" description="How Humanos Foundation collects, uses, and protects your personal data. GDPR and CCPA compliant. We never sell your data." url="https://humanos.foundation/privacy" noindex={false} />
             <Navbar />
             <PageHero badge="Legal" title="Privacy" titleAccent="Policy" subtitle="We believe in radical transparency — including about how we handle your data." />
@@ -54,10 +50,7 @@ export default function Privacy() {
             <Footer />
         </div>
     );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
+
 
 

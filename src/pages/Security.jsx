@@ -4,11 +4,7 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
-<<<<<<< HEAD
 import { Shield, AlertTriangle, CheckCircle2, Mail } from 'lucide-react';
-=======
-import { Shield, AlertTriangle, CheckCircle2, Clock, Mail } from 'lucide-react';
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 
 const commitments = [
     'We will acknowledge your report within 48 hours',
@@ -34,11 +30,7 @@ const outOfScope = [
 
 export default function Security() {
     return (
-<<<<<<< HEAD
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
-=======
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
             <SEOMeta title="Security & Responsible Disclosure — Humanos Foundation" description="Report vulnerabilities responsibly to Humanos Foundation. We commit to acknowledging security reports within 48 hours and never pursuing legal action against good-faith researchers." url="https://humanos.foundation/security" />
             <Navbar />
             <PageHero badge="Security" title="Responsible" titleAccent="Disclosure" subtitle="We take security seriously. If you've found a vulnerability, we want to know — and we'll treat you with respect." />
@@ -49,11 +41,7 @@ export default function Security() {
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="glass-strong rounded-3xl p-8 md:p-12 border border-cyan-500/10 text-center">
                         <Shield className="w-12 h-12 text-cyan-400/60 mx-auto mb-5" />
                         <h2 className="text-xl font-bold text-white/70 mb-3" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Found a Vulnerability?</h2>
-<<<<<<< HEAD
                         <p className="text-sm text-white/60 mb-6 max-w-md mx-auto">Please report it responsibly. We appreciate the security community's work in keeping our <span className="text-cyan-400 font-bold">systems safe.</span></p>
-=======
-                        <p className="text-sm text-white/35 mb-6 max-w-md mx-auto">Please report it responsibly. We appreciate the security community's work in keeping our systems safe.</p>
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                         <a href="mailto:security@humanos.foundation" className="inline-flex items-center gap-2 glow-btn px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-sm text-white font-medium">
                             <Mail className="w-4 h-4" /> security@humanos.foundation
                         </a>
@@ -69,11 +57,7 @@ export default function Security() {
                             {commitments.map((c, i) => (
                                 <li key={i} className="flex items-start gap-3">
                                     <CheckCircle2 className="w-3.5 h-3.5 text-green-400/40 shrink-0 mt-0.5" />
-<<<<<<< HEAD
                                     <p className="text-sm text-white/60">{c}</p>
-=======
-                                    <p className="text-sm text-white/40">{c}</p>
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                 </li>
                             ))}
                         </ul>
@@ -107,15 +91,9 @@ export default function Security() {
 
                     {/* Philosophy */}
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="glass rounded-2xl p-6 border border-white/[0.04]">
-<<<<<<< HEAD
                         <p className="text-sm text-white/60 leading-relaxed">
                             <span className="text-cyan-400 font-bold">Our philosophy:</span>{' '}
                             Security researchers act in the <span className="text-cyan-400/80 font-medium">public interest.</span> We will never sue, threaten, or take action against someone who follows responsible disclosure practices. We believe security research is a <span className="text-cyan-400/80 font-medium">public good</span>, and we treat it that way.
-=======
-                        <p className="text-sm text-white/30 leading-relaxed">
-                            <span className="text-cyan-400/60 font-medium">Our philosophy:</span>{' '}
-                            Security researchers act in the public interest. We will never sue, threaten, or take action against someone who follows responsible disclosure practices. We believe security research is a public good, and we treat it that way.
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                         </p>
                     </motion.div>
                 </div>
@@ -123,11 +101,8 @@ export default function Security() {
             <Footer />
         </div>
     );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
+
 
 
 

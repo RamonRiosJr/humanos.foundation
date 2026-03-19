@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useMemo } from 'react';
-=======
-import React, { useRef, useMemo } from 'react';
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 import { motion } from 'framer-motion';
 
 const NODE_COUNT = 28;
@@ -121,9 +117,6 @@ export default function NeuralMap() {
             />
         </div>
     );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
+
 

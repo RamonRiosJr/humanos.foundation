@@ -3,21 +3,12 @@ import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { BookOpen, Scale, Shield, Eye, Key, Fingerprint } from 'lucide-react';
 
 const manifestoLines = [
-<<<<<<< HEAD
     'We believe the "First Mile" of care is fundamentally broken — forcing complex lived experiences into a 15-page paper intake and a 5-minute clinical documentation is an act of institutional violence against the vulnerable.',
     'We believe treating symptoms with endless new medications while ignoring the root cause is unacceptable.',
     'We believe the "Medication Gallery" must be dismantled. You are not a trial-and-error experiment for pharmacology.',
     'We believe healthcare must serve the human, not the volume-driven billing machine.',
     'We believe that bridging the First Mile requires patient data sovereignty, equipping individuals with their unassailable truth before they ever enter the clinic.',
     'We are the revolution against assembly-line medicine. We are hOS.',
-=======
-    'We believe your body is yours — every signal, every cell, every byte.',
-    'We believe healthcare should serve the human, not the institution.',
-    'We believe in radical transparency over bureaucratic obscurity.',
-    'We believe data sovereignty is a fundamental human right.',
-    'We believe the future of medicine begins with the patient.',
-    'We are the revolution. We are hOS.',
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 ];
 
 const fourLaws = [
@@ -54,11 +45,7 @@ export default function Manifestos() {
 
     return (
         <section ref={ref} className="relative py-24 md:py-40 px-4 md:px-8 overflow-hidden">
-<<<<<<< HEAD
             <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-[#080810] to-obsidian" />
-=======
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f] via-[#080810] to-[#0a0a0f]" />
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 
             <div className="relative z-10 max-w-5xl mx-auto">
                 {/* Section Header */}
@@ -87,7 +74,6 @@ export default function Manifestos() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="flex justify-center mb-10 md:mb-14"
                 >
-<<<<<<< HEAD
                     <div className="glass rounded-full p-1.5 flex gap-2">
                         <button
                             onClick={() => setActiveTab('manifesto')}
@@ -98,24 +84,11 @@ export default function Manifestos() {
                         >
                             <span className="flex items-center gap-2">
                                 <BookOpen className={`w-4 h-4 ${activeTab === 'manifesto' ? 'text-cyan-400' : ''}`} />
-=======
-                    <div className="glass rounded-full p-1 flex">
-                        <button
-                            onClick={() => setActiveTab('manifesto')}
-                            className={`px-5 md:px-8 py-2.5 rounded-full text-xs md:text-sm font-medium transition-all duration-300 ${activeTab === 'manifesto'
-                                    ? 'bg-white/10 text-cyan-400 shadow-lg shadow-cyan-500/10'
-                                    : 'text-white/30 hover:text-white/50'
-                                }`}
-                        >
-                            <span className="flex items-center gap-2">
-                                <BookOpen className="w-3.5 h-3.5" />
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                 The Manifesto
                             </span>
                         </button>
                         <button
                             onClick={() => setActiveTab('laws')}
-<<<<<<< HEAD
                             className={`px-6 md:px-10 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wide transition-all duration-300 ${activeTab === 'laws'
                                 ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/40 text-white shadow-[0_0_20px_rgba(34,211,238,0.3)]'
                                 : 'border border-transparent text-white/40 hover:text-white hover:bg-white/5'
@@ -123,15 +96,6 @@ export default function Manifestos() {
                         >
                             <span className="flex items-center gap-2">
                                 <Scale className={`w-4 h-4 ${activeTab === 'laws' ? 'text-cyan-400' : ''}`} />
-=======
-                            className={`px-5 md:px-8 py-2.5 rounded-full text-xs md:text-sm font-medium transition-all duration-300 ${activeTab === 'laws'
-                                    ? 'bg-white/10 text-cyan-400 shadow-lg shadow-cyan-500/10'
-                                    : 'text-white/30 hover:text-white/50'
-                                }`}
-                        >
-                            <span className="flex items-center gap-2">
-                                <Scale className="w-3.5 h-3.5" />
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                 The Four Laws
                             </span>
                         </button>
@@ -150,11 +114,7 @@ export default function Manifestos() {
                             className="relative rounded-3xl overflow-hidden"
                         >
                             {/* Deep obsidian background */}
-<<<<<<< HEAD
                             <div className="absolute inset-0 bg-gradient-to-br from-obsidian via-obsidian to-obsidian" />
-=======
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#06060a] via-[#0a0a12] to-[#06060a]" />
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                             <div className="absolute inset-0 border border-white/[0.03] rounded-3xl" />
 
                             <div className="relative z-10 p-8 md:p-16">
@@ -169,13 +129,8 @@ export default function Manifestos() {
                                         >
                                             <p
                                                 className={`text-base md:text-xl leading-relaxed ${i === manifestoLines.length - 1
-<<<<<<< HEAD
                                                     ? 'text-cyan-400 font-bold text-lg md:text-2xl drop-shadow-[0_0_10px_rgba(34,211,238,0.2)]'
                                                     : 'text-white/70 font-medium'
-=======
-                                                        ? 'text-cyan-400 font-semibold text-lg md:text-2xl'
-                                                        : 'text-white/50'
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                                     }`}
                                                 style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
                                             >
@@ -232,11 +187,7 @@ export default function Manifestos() {
                                                 >
                                                     {law.title}
                                                 </h3>
-<<<<<<< HEAD
                                                 <p className="text-sm text-white/60 leading-relaxed font-medium">
-=======
-                                                <p className="text-sm text-white/35 leading-relaxed">
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                                     {law.description}
                                                 </p>
                                             </div>
@@ -250,9 +201,6 @@ export default function Manifestos() {
             </div>
         </section>
     );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
+
 

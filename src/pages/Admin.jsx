@@ -1,17 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { base44 } from '@/api/humanosClient';
 import { useQuery } from '@tanstack/react-query';
 import {
     Users, MessageSquare, BookOpen, Mail,
-=======
-import { base44 } from '@/api/base44Client';
-import { useQuery } from '@tanstack/react-query';
-import {
-    Users, MessageSquare, BookOpen, TrendingUp,
-    ExternalLink, RefreshCw, Eye, Mail, Calendar,
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
     ChevronRight, Database, Zap, Globe
 } from 'lucide-react';
 import SEOMeta from '../components/shared/SEOMeta';
@@ -32,13 +24,8 @@ function StatCard({ icon: Icon, label, value, sub, color = 'cyan' }) {
         >
             <Icon className={`w-5 h-5 mb-3 ${colors[color].split(' ').pop()}`} />
             <div className="text-2xl font-bold text-white mb-0.5">{value ?? '—'}</div>
-<<<<<<< HEAD
             <div className="text-xs text-white/70 font-semibold">{label}</div>
             {sub && <div className="text-[10px] text-white/40 mt-1 font-medium">{sub}</div>}
-=======
-            <div className="text-xs text-white/50 font-medium">{label}</div>
-            {sub && <div className="text-[10px] text-white/25 mt-1">{sub}</div>}
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
         </motion.div>
     );
 }
@@ -46,13 +33,8 @@ function StatCard({ icon: Icon, label, value, sub, color = 'cyan' }) {
 function SectionHeader({ title, sub }) {
     return (
         <div className="mb-5">
-<<<<<<< HEAD
             <h2 className="text-base font-bold text-white/90" style={{ fontFamily: 'Outfit, sans-serif' }}>{title}</h2>
             {sub && <p className="text-xs text-white/60 mt-0.5 font-medium">{sub}</p>}
-=======
-            <h2 className="text-base font-bold text-white/80" style={{ fontFamily: 'Outfit, sans-serif' }}>{title}</h2>
-            {sub && <p className="text-xs text-white/30 mt-0.5">{sub}</p>}
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
         </div>
     );
 }
@@ -84,11 +66,7 @@ export default function Admin() {
 
     if (authed === null) {
         return (
-<<<<<<< HEAD
             <div className="bg-obsidian min-h-screen flex items-center justify-center">
-=======
-            <div className="bg-[#0a0a0f] min-h-screen flex items-center justify-center">
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                 <div className="w-5 h-5 rounded-full border-2 border-cyan-500/30 border-t-cyan-400 animate-spin" />
             </div>
         );
@@ -96,15 +74,9 @@ export default function Admin() {
 
     if (authed === false) {
         return (
-<<<<<<< HEAD
             <div className="bg-obsidian min-h-screen flex items-center justify-center px-4">
                 <div className="glass-strong rounded-3xl p-10 text-center max-w-sm">
                     <HOSLogo size={48} wordmarkSize="lg" variant="full" asLink={false} className="justify-center mb-6" />
-=======
-            <div className="bg-[#0a0a0f] min-h-screen flex items-center justify-center px-4">
-                <div className="glass-strong rounded-3xl p-10 text-center max-w-sm">
-                    <HOSLogo size="lg" variant="full" asLink={false} className="justify-center mb-6" />
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                     <p className="text-white/40 text-sm mb-6">Admin access required.</p>
                     <button
                         onClick={() => base44.auth.redirectToLogin(window.location.href)}
@@ -123,7 +95,6 @@ export default function Admin() {
     const newsletterSubs = joinRequests.filter(r => r.newsletter).length;
 
     return (
-<<<<<<< HEAD
         <div className="bg-obsidian min-h-screen text-white">
             <SEOMeta title="hOS Admin Dashboard" description="" url="" noindex />
 
@@ -131,15 +102,6 @@ export default function Admin() {
             <div className="sticky top-0 z-40 border-b border-white/[0.05] bg-obsidian/90 backdrop-blur-xl px-6 py-4 flex items-center justify-between">
                 <div className="flex items-center gap-4">
                     <HOSLogo size={28} wordmarkSize="sm" variant="full" asLink />
-=======
-        <div className="bg-[#0a0a0f] min-h-screen text-white">
-            <SEOMeta title="hOS Admin Dashboard" description="" url="" noindex />
-
-            {/* Top bar */}
-            <div className="sticky top-0 z-40 border-b border-white/[0.05] bg-[#0a0a0f]/90 backdrop-blur-xl px-6 py-4 flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                    <HOSLogo size="sm" variant="full" asLink />
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                     <span className="text-[10px] text-white/20 uppercase tracking-widest font-medium border-l border-white/10 pl-4">Admin</span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -391,9 +353,6 @@ export default function Admin() {
             </div>
         </div>
     );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
+
 

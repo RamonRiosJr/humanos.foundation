@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SEOMeta from '../components/shared/SEOMeta';
-import { baseClient44 } from '@/api/humanosClient';
+import { base44 } from '@/api/humanosClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import { Turnstile } from '@marsidev/react-turnstile';
@@ -56,7 +56,7 @@ export default function Join() {
         const payload = { ...form, turnstile_token: turnstileToken };
         delete payload.honeypot;
 
-        await baseClient44.entities.JoinRequest.create(payload);
+        await base44.entities.JoinRequest.create(payload);
         setSubmitted(true);
         setLoading(false);
     };

@@ -1,19 +1,13 @@
 import React from 'react';
 import SEOMeta from '../components/shared/SEOMeta';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-=======
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
 import PageCTA from '../components/shared/PageCTA';
 import { Github, ExternalLink, Code, Globe, Database, Zap } from 'lucide-react';
-<<<<<<< HEAD
 import { createPageUrl } from '@/utils';
-=======
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 
 const projects = [
     { name: 'OpenMRS', desc: 'Open-source medical record system for resource-constrained environments. Used in 40+ countries.', url: 'https://openmrs.org', icon: Database },
@@ -23,24 +17,15 @@ const projects = [
 ];
 
 const principles = [
-<<<<<<< HEAD
     'Open source means no lock-in — your data and the tools to read it must be freely accessible. It allows you to verify that our system is mathematically incapable of seeing your data.',
     <span key="pr2">Transparency in code is <Link to={createPageUrl('Manifesto')} className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30">transparency in intent</Link>. We cannot trust what we cannot inspect.</span>,
-=======
-    'Open source means no lock-in — your data and the tools to read it must be freely accessible.',
-    'Transparency in code is transparency in intent. We cannot trust what we cannot inspect.',
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
     'Community-built software serves the community, not a board of directors.',
     'Open standards (FHIR, HL7, DICOM) are the foundation of true interoperability.',
 ];
 
 export default function OpenSource() {
     return (
-<<<<<<< HEAD
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
-=======
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
             <SEOMeta title="Open Source Health Technology — Humanos Foundation" description="We believe in open source as a philosophy. Explore open-source health projects, FHIR standards, and the Coqui Cloud Dev Co. technical infrastructure behind the hOS movement." url="https://humanos.foundation/open-source" />
             <Navbar />
             <PageHero badge="Open Source" title="Open by" titleAccent="Default" subtitle="We believe in open source as a philosophy, not just a development model. Transparency, collaboration, and freedom are how we build trust." />
@@ -53,11 +38,7 @@ export default function OpenSource() {
                             {principles.map((p, i) => (
                                 <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="flex items-start gap-4 glass rounded-2xl p-5 border border-white/[0.04]">
                                     <span className="text-cyan-500/30 font-mono text-sm shrink-0 mt-0.5">{String(i + 1).padStart(2, '0')}</span>
-<<<<<<< HEAD
                                     <p className="text-sm text-white/70 leading-relaxed">{p}</p>
-=======
-                                    <p className="text-sm text-white/50 leading-relaxed">{p}</p>
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                 </motion.div>
                             ))}
                         </div>
@@ -77,11 +58,7 @@ export default function OpenSource() {
                                             <h3 className="text-sm font-semibold text-white/70 group-hover:text-white/90 transition-colors">{proj.name}</h3>
                                             <ExternalLink className="w-3 h-3 text-white/20 group-hover:text-cyan-400/60 transition-colors" />
                                         </div>
-<<<<<<< HEAD
                                         <p className="text-xs text-white/60 group-hover:text-white/80 transition-colors leading-relaxed">{proj.desc}</p>
-=======
-                                        <p className="text-xs text-white/30 leading-relaxed">{proj.desc}</p>
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                     </div>
                                 </motion.a>
                             ))}
@@ -99,7 +76,6 @@ export default function OpenSource() {
                     </motion.div>
                 </div>
             </section>
-<<<<<<< HEAD
             <PageCTA
                 title="Contribute to the Movement"
                 subtitle="Code, content, advocacy — every contribution moves the needle."
@@ -110,11 +86,5 @@ export default function OpenSource() {
         </div>
     );
 }
-=======
-            <PageCTA title="Contribute to the Movement" subtitle="Code, content, advocacy — every contribution moves the needle." cta="Get Involved" />
-            <Footer />
-        </div>
-    );
-}
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
+
 

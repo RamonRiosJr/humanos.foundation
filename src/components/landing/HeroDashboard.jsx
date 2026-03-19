@@ -3,17 +3,10 @@ import { motion } from 'framer-motion';
 import { Activity, Heart, Brain, Shield, Zap, TrendingUp } from 'lucide-react';
 
 const metrics = [
-<<<<<<< HEAD
     { label: 'History Sync', value: 'Complete', icon: Brain, color: '#00d4ff' },
     { label: 'Heart Rate', value: '72 bpm', icon: Heart, color: '#f43f5e' },
     { label: 'Vitals', value: 'Unignorable', icon: Activity, color: '#10b981' },
     { label: 'Digital Vault', value: 'Sovereign', icon: Shield, color: '#8b5cf6' },
-=======
-    { label: 'Neural Sync', value: '98.4%', icon: Brain, color: '#00d4ff' },
-    { label: 'Heart Rate', value: '72 bpm', icon: Heart, color: '#f43f5e' },
-    { label: 'Vitals', value: 'Optimal', icon: Activity, color: '#10b981' },
-    { label: 'Data Vault', value: 'Encrypted', icon: Shield, color: '#8b5cf6' },
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 ];
 
 export default function HeroDashboard() {
@@ -24,11 +17,7 @@ export default function HeroDashboard() {
             transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="relative w-full max-w-4xl mx-auto mt-12 md:mt-16"
         >
-<<<<<<< HEAD
             <div className="glass-strong rounded-2xl md:rounded-3xl p-4 md:p-8 glow-cyan h-full">
-=======
-            <div className="glass-strong rounded-2xl md:rounded-3xl p-4 md:p-8 glow-cyan">
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                 {/* Header bar */}
                 <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-2">
@@ -108,9 +97,6 @@ export default function HeroDashboard() {
             <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-16 bg-cyan-500/5 blur-3xl rounded-full" />
         </motion.div>
     );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
+
 
