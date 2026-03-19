@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SEOMeta from '../components/shared/SEOMeta';
-<<<<<<< HEAD
-import { base44 } from '@/api/humanosClient';
+import { baseClient44 } from '@/api/humanosClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import { Turnstile } from '@marsidev/react-turnstile';
-=======
-import { base44 } from '@/api/base44Client';
-import Navbar from '../components/landing/Navbar';
-import Footer from '../components/landing/Footer';
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 import PageHero from '../components/shared/PageHero';
 import { CheckCircle2, Users, Heart, Code, Stethoscope, BookOpen, Megaphone, HelpCircle } from 'lucide-react';
 import HOSLogo from '../components/shared/HOSLogo';
@@ -26,21 +20,14 @@ const roles = [
 ];
 
 export default function Join() {
-<<<<<<< HEAD
     const [form, setForm] = useState({ name: '', email: '', role: '', reason: '', newsletter: true, volunteer: false, honeypot: '' });
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
     const [turnstileToken, setTurnstileToken] = useState(null);
-=======
-    const [form, setForm] = useState({ name: '', email: '', role: '', reason: '', newsletter: true, volunteer: false });
-    const [submitted, setSubmitted] = useState(false);
-    const [loading, setLoading] = useState(false);
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-<<<<<<< HEAD
 
         // Security: Honeypot check
         if (form.honeypot.trim() !== '') {
@@ -69,20 +56,13 @@ export default function Join() {
         const payload = { ...form, turnstile_token: turnstileToken };
         delete payload.honeypot;
 
-        await base44.entities.JoinRequest.create(payload);
-=======
-        await base44.entities.JoinRequest.create(form);
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
+        await baseClient44.entities.JoinRequest.create(payload);
         setSubmitted(true);
         setLoading(false);
     };
 
     return (
-<<<<<<< HEAD
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
-=======
-        <div className="bg-[#0a0a0f] min-h-screen text-white overflow-x-hidden">
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
             <SEOMeta
                 title="Join the hOS Movement — Health Data Sovereignty for All"
                 description="Join patients, clinicians, technologists, researchers, and advocates fighting for health data sovereignty. This is not a product waitlist — it's a movement. Sign up at Humanos Foundation."
@@ -105,11 +85,7 @@ export default function Join() {
                         transition={{ duration: 0.7, delay: 0.1 }}
                         className="flex justify-center mb-10"
                     >
-<<<<<<< HEAD
                         <HOSLogo size={144} wordmarkSize="xl" variant="full" asLink={false} className="flex-col text-center gap-6" />
-=======
-                        <HOSLogo size={96} wordmarkSize="lg" variant="full" asLink={false} className="flex-col text-center gap-4" />
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                     </motion.div>
                     <AnimatePresence mode="wait">
                         {submitted ? (
@@ -123,11 +99,7 @@ export default function Join() {
                                     <CheckCircle2 className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
                                 </motion.div>
                                 <h2 className="text-2xl font-bold mb-3" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Welcome to the Movement</h2>
-<<<<<<< HEAD
                                 <p className="text-white/60 text-sm leading-relaxed mb-4">
-=======
-                                <p className="text-white/40 text-sm leading-relaxed mb-4">
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                     You're now part of something much larger than any single app or product. We'll be in touch.
                                 </p>
                                 <p className="text-xs text-cyan-400/50">Watch for an email from hello@humanos.foundation</p>
@@ -141,7 +113,6 @@ export default function Join() {
                                 onSubmit={handleSubmit}
                                 className="glass-strong rounded-3xl p-8 md:p-12 border border-white/[0.05] space-y-6"
                             >
-<<<<<<< HEAD
                                 {/* Spam Protection Honeypot - Invisible to users, filled by bots */}
                                 <input
                                     type="text"
@@ -155,67 +126,39 @@ export default function Join() {
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     <div>
                                         <label className="text-xs text-white/50 font-bold uppercase tracking-wider mb-2 block">Full Name *</label>
-=======
-                                <div className="grid sm:grid-cols-2 gap-4">
-                                    <div>
-                                        <label className="text-xs text-white/40 uppercase tracking-wider mb-2 block">Full Name *</label>
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                         <input
                                             required
                                             type="text"
                                             value={form.name}
                                             onChange={e => setForm({ ...form, name: e.target.value })}
                                             placeholder="Your name"
-<<<<<<< HEAD
                                             className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.1] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
                                         />
                                     </div>
                                     <div>
                                         <label className="text-xs text-white/50 font-bold uppercase tracking-wider mb-2 block">Email *</label>
-=======
-                                            className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="text-xs text-white/40 uppercase tracking-wider mb-2 block">Email *</label>
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                         <input
                                             required
                                             type="email"
                                             value={form.email}
                                             onChange={e => setForm({ ...form, email: e.target.value })}
                                             placeholder="you@example.com"
-<<<<<<< HEAD
                                             className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.1] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
-=======
-                                            className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                         />
                                     </div>
                                 </div>
 
-<<<<<<< HEAD
                                 <div className="space-y-3">
-=======
-                                <div>
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                     <label className="text-xs text-white/40 uppercase tracking-wider mb-3 block">I am a...</label>
                                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
                                         {roles.map((role) => (
                                             <button
                                                 key={role.value}
                                                 type="button"
-<<<<<<< HEAD
                                                 onClick={() => setForm(prev => ({ ...prev, role: role.value }))}
                                                 className={`flex flex-col items-center gap-2 p-3 rounded-xl text-xs transition-all duration-300 border ${form.role === role.value
                                                     ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.15)] scale-[1.02]'
                                                     : 'glass border-white/[0.05] text-white/30 hover:text-white/50 hover:border-white/10 hover:scale-[1.01]'
-=======
-                                                onClick={() => setForm({ ...form, role: role.value })}
-                                                className={`flex flex-col items-center gap-2 p-3 rounded-xl text-xs transition-all duration-300 border ${form.role === role.value
-                                                        ? 'bg-cyan-500/10 border-cyan-500/40 text-cyan-400'
-                                                        : 'glass border-white/[0.05] text-white/30 hover:text-white/50 hover:border-white/10'
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                                     }`}
                                             >
                                                 <role.icon className="w-4 h-4" />
@@ -254,7 +197,6 @@ export default function Join() {
                                     ))}
                                 </div>
 
-<<<<<<< HEAD
                                 <div className="flex justify-center mt-6">
                                     <Turnstile
                                         siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || "1x00000000000000000000AA"}
@@ -263,8 +205,6 @@ export default function Join() {
                                     />
                                 </div>
 
-=======
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
                                 <button
                                     type="submit"
                                     disabled={loading}
@@ -284,8 +224,4 @@ export default function Join() {
             <Footer />
         </div>
     );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
