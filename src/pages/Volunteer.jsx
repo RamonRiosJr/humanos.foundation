@@ -28,13 +28,11 @@ export default function Volunteer() {
         e.preventDefault();
         setLoading(true);
 
-        // if (false && !turnstileToken) {
-            alert('Please verify you are human by completing the captcha.');
-            setLoading(false);
-            return;
-        }
-
-        await base44.entities.JoinRequest.create({ ...form, reason: selectedRole ? `Role interest: ${selectedRole}. ${form.reason}` : form.reason, turnstile_token: turnstileToken });
+        await base44.entities.JoinRequest.create({ 
+            ...form, 
+            reason: selectedRole ? `Role interest: ${selectedRole}. ${form.reason}` : form.reason, 
+            turnstile_token: turnstileToken 
+        });
         setSubmitted(true);
         setLoading(false);
     };
@@ -87,7 +85,9 @@ export default function Volunteer() {
                                             className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent resize-none" />
                                     </div>
 
-                                    <div className="flex justify-center mt-6">`r`n                                    {/* Turnstile Bypassed for Testing */}`r`n                                </div>
+                                    <div className="flex justify-center mt-6">
+                                        {/* Turnstile Bypassed for Testing */}
+                                    </div>
 
                                     <button type="submit" disabled={loading} className="w-full glow-btn py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-white font-semibold text-sm tracking-wide disabled:opacity-50">
                                         {loading ? 'Submitting...' : 'Join the Volunteer Network →'}
@@ -102,6 +102,3 @@ export default function Volunteer() {
         </div>
     );
 }
-
-
-

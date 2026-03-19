@@ -45,7 +45,9 @@ export default function Join() {
             setLoading(false);
             return;
         }
-        localStorage.setItem('last_join_submit', now.toString());`r`n`r`n        const payload = { ...form, turnstile_token: turnstileToken };
+        localStorage.setItem('last_join_submit', now.toString());
+
+        const payload = { ...form, turnstile_token: turnstileToken };
         delete payload.honeypot;
 
         await base44.entities.JoinRequest.create(payload);
@@ -189,7 +191,9 @@ export default function Join() {
                                     ))}
                                 </div>
 
-                                <div className="flex justify-center mt-6">`r`n                                    {/* Turnstile Bypassed for Testing */}`r`n                                </div>
+                                <div className="flex justify-center mt-6">
+                                    {/* Turnstile Bypassed for Testing */}
+                                </div>
 
                                 <button
                                     type="submit"
@@ -211,6 +215,4 @@ export default function Join() {
         </div>
     );
 }
-
-
 
