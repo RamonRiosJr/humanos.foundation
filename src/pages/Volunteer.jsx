@@ -88,11 +88,7 @@ export default function Volunteer() {
                                     </div>
 
                                     <div className="flex justify-center mt-6">
-                                        {/* {/* <Turnstile
-                                            siteKey="1x00000000000000000000AA"
-                                            onSuccess={(token) => setTurnstileToken(token)}
-                                            options={{ theme: 'dark' }}
-                                        />
+                                        {/* {/* <Turnstile bypassed */}
                                     </div>
 
                                     <button type="submit" disabled={loading} className="w-full glow-btn py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-white font-semibold text-sm tracking-wide disabled:opacity-50">
@@ -108,4 +104,5 @@ export default function Volunteer() {
         </div>
     );
 }
+
 
