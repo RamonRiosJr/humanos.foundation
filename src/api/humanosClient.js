@@ -31,6 +31,12 @@ const baseClient = {
                 }
                 return humanosMockClient.entities.JoinRequest.create(data);
             }
+        },
+        Project: {
+            list: async () => {
+                const live = await odooClient.getProjects();
+                return live || [];
+            }
         }
     }
 };
