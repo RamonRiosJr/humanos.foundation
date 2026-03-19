@@ -45,15 +45,7 @@ export default function Join() {
             setLoading(false);
             return;
         }
-        localStorage.setItem('last_join_submit', now.toString());
-
-        // if (false && !turnstileToken) {
-            alert('Please verify you are human by completing the captcha.');
-            setLoading(false);
-            return;
-        }
-
-        const payload = { ...form, turnstile_token: turnstileToken };
+        localStorage.setItem('last_join_submit', now.toString());`r`n`r`n        const payload = { ...form, turnstile_token: turnstileToken };
         delete payload.honeypot;
 
         await base44.entities.JoinRequest.create(payload);
@@ -197,9 +189,7 @@ export default function Join() {
                                     ))}
                                 </div>
 
-                                <div className="flex justify-center mt-6">
-                                    {/* {/* <Turnstile bypassed */}
-                                </div>
+                                <div className="flex justify-center mt-6">`r`n                                    {/* Turnstile Bypassed for Testing */}`r`n                                </div>
 
                                 <button
                                     type="submit"
@@ -221,5 +211,6 @@ export default function Join() {
         </div>
     );
 }
+
 
 
