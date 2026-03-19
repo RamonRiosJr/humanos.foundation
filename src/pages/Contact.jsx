@@ -4,7 +4,6 @@ import SEOMeta from '../components/shared/SEOMeta';
 import { base44 } from '@/api/humanosClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
-import { Turnstile } from '@marsidev/react-turnstile';
 import PageHero from '../components/shared/PageHero';
 import { CheckCircle2, Newspaper, Handshake, Coins, Users, HelpCircle } from 'lucide-react';
 
@@ -20,7 +19,6 @@ export default function Contact() {
     const [form, setForm] = useState({ name: '', email: '', organization: '', inquiry_type: '', subject: '', message: '', honeypot: '' });
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [turnstileToken, setTurnstileToken] = useState(null);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -44,13 +42,7 @@ export default function Contact() {
         }
         localStorage.setItem('last_contact_submit', now.toString());
 
-        if (!turnstileToken) {
-            alert('Please verify you are human by completing the captcha.');
-            setLoading(false);
-            return;
-        }
-
-        const payload = { ...form, turnstile_token: turnstileToken };
+        const payload = { ...form };
         delete payload.honeypot;
 
         await base44.entities.ContactMessage.create(payload);
@@ -164,11 +156,7 @@ export default function Contact() {
                                     </div>
 
                                     <div className="flex justify-center mt-6">
-                                        <Turnstile
-                                            siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || "1x00000000000000000000AA"}
-                                            onSuccess={(token) => setTurnstileToken(token)}
-                                            options={{ theme: 'dark' }}
-                                        />
+                                        {/* Turnstile Bypassed for Testing */}
                                     </div>
 
                                     <button type="submit" disabled={loading} className="w-full glow-btn py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-white font-semibold text-sm tracking-wide disabled:opacity-50">
