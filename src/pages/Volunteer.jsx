@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { base44 } from '@/api/humanosClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
-import { Turnstile } from '@marsidev/react-turnstile';
 import PageHero from '../components/shared/PageHero';
 import { CheckCircle2, Code, PenTool, Globe, Megaphone, BookOpen, Users } from 'lucide-react';
 
@@ -22,24 +21,19 @@ export default function Volunteer() {
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
     const [selectedRole, setSelectedRole] = useState('');
-    const [turnstileToken, setTurnstileToken] = useState(null);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
 
-        await base44.entities.JoinRequest.create({ 
-            ...form, 
-            reason: selectedRole ? `Role interest: ${selectedRole}. ${form.reason}` : form.reason, 
-            turnstile_token: turnstileToken 
-        });
+        await base44.entities.JoinRequest.create({ ...form, reason: selectedRole ? `Role interest: ${selectedRole}. ${form.reason}` : form.reason });
         setSubmitted(true);
         setLoading(false);
     };
 
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
-            <SEOMeta title="Volunteer for the hOS Movement — Humanos Foundation" description="Contribute to the health data sovereignty movement as a developer, writer, translator, advocate, researcher, or community leader. Volunteer with Humanos Foundation." url="https://humanos.foundation/volunteer" />
+            <SEOMeta title="Volunteer for the hOS movement — Humanos Foundation" description="Contribute to the health data sovereignty movement as a developer, writer, translator, advocate, researcher, or community leader. Volunteer with Humanos Foundation." url="https://humanos.foundation/volunteer" />
             <Navbar />
             <PageHero badge="Get Involved" title="Volunteer for" titleAccent="the Movement" subtitle="The hOS movement is built by volunteers who believe health data sovereignty is worth fighting for. Find your role." />
             <section className="pb-28 px-4 md:px-8">
