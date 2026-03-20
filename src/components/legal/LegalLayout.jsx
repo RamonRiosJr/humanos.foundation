@@ -62,3 +62,5 @@ export default function LegalLayout({ sections, lastUpdated, version }) {
         </section>
     );
 }
+
+

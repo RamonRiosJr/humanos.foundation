@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
-const A11yContext = createContext();
+const A11yContext = createContext(null);
 
 export const useA11y = () => useContext(A11yContext);
 

@@ -202,3 +202,5 @@ export default function Manifestos() {
         </section>
     );
 }
+
+

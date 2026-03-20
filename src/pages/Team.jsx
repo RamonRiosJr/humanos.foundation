@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { base44 } from '@/api/humanosClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
-import { Turnstile } from '@marsidev/react-turnstile';
 import PageHero from '../components/shared/PageHero';
 import { 
     CheckCircle2, 
@@ -35,7 +34,6 @@ export default function Team() {
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
     const [selectedRole, setSelectedRole] = useState('');
-    const [turnstileToken, setTurnstileToken] = useState(null);
     const [activeProjects, setActiveProjects] = useState([]);
     const [loadingProjects, setLoadingProjects] = useState(true);
 
@@ -60,16 +58,9 @@ export default function Team() {
         e.preventDefault();
         setLoading(true);
 
-        if (!turnstileToken) {
-            alert('Please verify you are human by completing the captcha.');
-            setLoading(false);
-            return;
-        }
-
         await base44.entities.JoinRequest.create({ 
             ...form, 
-            reason: selectedRole ? `Role interest: ${selectedRole}. ${form.reason}` : form.reason, 
-            turnstile_token: turnstileToken 
+            reason: selectedRole ? `Role interest: ${selectedRole}. ${form.reason}` : form.reason
         });
         
         setSubmitted(true);
@@ -196,11 +187,7 @@ export default function Team() {
                                         </div>
 
                                         <div className="flex justify-center mt-2">
-                                            <Turnstile
-                                                siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || "1x00000000000000000000AA"}
-                                                onSuccess={(token) => setTurnstileToken(token)}
-                                                options={{ theme: 'dark', size: 'flexible' }}
-                                            />
+                                            {/* Turnstile Bypassed for Testing */}
                                         </div>
 
                                         <button type="submit" disabled={loading} className="w-full glow-btn py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-white font-bold text-xs uppercase tracking-widest disabled:opacity-50">

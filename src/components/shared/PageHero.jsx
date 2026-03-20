@@ -45,3 +45,5 @@ export default function PageHero({ badge, title, titleAccent, subtitle, children
         </section>
     );
 }
+
+

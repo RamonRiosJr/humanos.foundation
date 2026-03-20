@@ -16,7 +16,11 @@ Please do **NOT** open a public GitHub Issue to report security vulnerabilities.
 
 If you discover a security vulnerability, we'd like to know about it so we can take steps to address it as quickly as possible. Please follow these steps to report a vulnerability:
 
+<<<<<<< HEAD
 1. **Email:** Send an email to [hello@humanos.foundation](mailto:hello@humanos.foundation) or use the preferred secure contact method for your organization.
+=======
+1. **Email:** Send an email to [security@yourdomain.com](mailto:security@yourdomain.com) or use the preferred secure contact method for your organization.
+>>>>>>> 266151a (chore: bootstrap repository with enterprise CI/CD and community health standards using gh-repo-bootstrap)
 2. **Details:** Include the following information in your report:
    - A detailed description of the vulnerability.
    - The steps required to reproduce the vulnerability.
@@ -38,3 +42,4 @@ We ask that you maintain confidentiality until we have had an opportunity to add
 ## Public Disclosure
 
 Once a vulnerability has been addressed, we will coordinate public disclosure with you. We value the contributions of security researchers and will provide appropriate credit (if desired) for responsibly disclosed vulnerabilities.
+
