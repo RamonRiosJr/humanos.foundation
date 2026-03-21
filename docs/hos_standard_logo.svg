@@ -1,0 +1,51 @@
+<svg width="100" height="100" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="hOS-grad-a" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#22d3ee" />
+            <stop offset="100%" stop-color="#3b82f6" />
+        </linearGradient>
+        <linearGradient id="hOS-grad-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.3" />
+            <stop offset="100%" stop-color="#2563eb" stop-opacity="0.15" />
+        </linearGradient>
+    </defs>
+    <style>
+        @keyframes color-cycle {
+            0% { fill: #fca5a5; opacity: 1; transform: scale(1.3); }
+            16% { fill: #93c5fd; opacity: 1; transform: scale(1.1); }
+            33% { fill: #86efac; opacity: 1; transform: scale(1.1); }
+            50% { fill: #fde047; opacity: 1; transform: scale(1.1); }
+            66% { fill: #d8b4fe; opacity: 1; transform: scale(1.1); }
+            83% { fill: #fdba74; opacity: 1; transform: scale(1.1); }
+            100% { fill: #fca5a5; opacity: 1; transform: scale(1.3); }
+        }
+        .node-dot { fill: url(#hOS-grad-a); opacity: 0.7; transition: all 0.5s ease-in-out; }
+        svg:hover .node-dot { animation: color-cycle 4s infinite ease-in-out; }
+        svg:hover .node-dot-1 { animation-delay: 0.6s; }
+        svg:hover .node-dot-2 { animation-delay: 1.2s; }
+        svg:hover .node-dot-3 { animation-delay: 1.8s; }
+        svg:hover .node-dot-4 { animation-delay: 2.4s; }
+        svg:hover .node-dot-5 { animation-delay: 3.0s; }
+        .hos-text { transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); fill: url(#hOS-grad-a); }
+        svg:hover .hos-text { fill: #ffffff; transform: scale(1.05); transform-origin: center; }
+    </style>
+    <!-- Outer hexagon -->
+    <path d="M24 3 L41 13 L41 35 L24 45 L7 35 L7 13 Z" fill="url(#hOS-grad-b)" stroke="url(#hOS-grad-a)" stroke-width="1.2" stroke-linejoin="round" />
+    <!-- Inner hex ring -->
+    <path d="M24 10 L34 16 L34 32 L24 38 L14 32 L14 16 Z" fill="none" stroke="url(#hOS-grad-a)" stroke-width="0.6" stroke-linejoin="round" opacity="0.35" />
+    <!-- Node dots -->
+    <circle cx="24" cy="10" r="1.4" class="node-dot node-dot-0" style="transform-origin: 24px 10px;" />
+    <circle cx="34" cy="16" r="1.4" class="node-dot node-dot-1" style="transform-origin: 34px 16px;" />
+    <circle cx="34" cy="32" r="1.4" class="node-dot node-dot-2" style="transform-origin: 34px 32px;" />
+    <circle cx="24" cy="38" r="1.4" class="node-dot node-dot-3" style="transform-origin: 24px 38px;" />
+    <circle cx="14" cy="32" r="1.4" class="node-dot node-dot-4" style="transform-origin: 14px 32px;" />
+    <circle cx="14" cy="16" r="1.4" class="node-dot node-dot-5" style="transform-origin: 14px 16px;" />
+    <!-- Center -->
+    <circle cx="24" cy="24" r="2.2" fill="url(#hOS-grad-a)" />
+    <circle cx="24" cy="24" r="4.5" fill="none" stroke="url(#hOS-grad-a)" stroke-width="0.6" opacity="0.4" />
+    <!-- Connector lines -->
+    <line x1="24" y1="24" x2="24" y2="10" stroke="url(#grad-a)" stroke-width="0.5" opacity="0.25" />
+    <line x1="24" y1="24" x2="34" y2="32" stroke="url(#grad-a)" stroke-width="0.5" opacity="0.25" />
+    <line x1="24" y1="24" x2="14" y2="32" stroke="url(#grad-a)" stroke-width="0.5" opacity="0.25" />
+    <text x="24" y="26.5" text-anchor="middle" font-size="8.5" font-weight="700" font-family="'Inter', sans-serif" letter-spacing="-0.3" class="hos-text">hOS</text>
+</svg>

@@ -1,0 +1,77 @@
+<!-- STANDARDIZED hOS OPERATIONS PORTAL - LEAN VERSION -->
+<!-- Copy and paste this into an Odoo HTML/Embed Block -->
+<style>
+    @keyframes color-cycle {
+        0% { fill: #fca5a5; opacity: 1; transform: scale(1.3); }
+        16% { fill: #93c5fd; opacity: 1; transform: scale(1.1); }
+        33% { fill: #86efac; opacity: 1; transform: scale(1.1); }
+        50% { fill: #fde047; opacity: 1; transform: scale(1.1); }
+        66% { fill: #d8b4fe; opacity: 1; transform: scale(1.1); }
+        83% { fill: #fdba74; opacity: 1; transform: scale(1.1); }
+        100% { fill: #fca5a5; opacity: 1; transform: scale(1.3); }
+    }
+    .node-dot { fill: #22d3ee; opacity: 0.7; transition: all 0.5s ease-in-out; }
+    .portal-container:hover .node-dot { animation: color-cycle 4s infinite ease-in-out; }
+    .portal-container:hover .node-dot-1 { animation-delay: 0.6s; }
+    .portal-container:hover .node-dot-2 { animation-delay: 1.2s; }
+    .portal-container:hover .node-dot-3 { animation-delay: 1.8s; }
+    .portal-container:hover .node-dot-4 { animation-delay: 2.4s; }
+    .portal-container:hover .node-dot-5 { animation-delay: 3.0s; }
+    
+    .hos-text { transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); fill: #22d3ee; }
+    .portal-container:hover .hos-text { fill: #ffffff; filter: drop-shadow(0 0 4px #ffffff) drop-shadow(0 0 12px #22d3ee); transform: scale(1.05); transform-origin: center; }
+    
+    .logo-mark { transition: transform 0.5s; }
+    .portal-container:hover .logo-mark { transform: scale(1.1); filter: drop-shadow(0 0 25px rgba(34,211,238,0.6)); }
+</style>
+
+<div class="portal-container" style="background: #050508; color: #fff; padding: 100px 20px; font-family: 'Inter', sans-serif; text-align: center; border-radius: 32px; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 40px 100px rgba(0,0,0,0.8); overflow: hidden; position: relative;">
+    
+    <!-- STANDARDIZED LOGO SECTION -->
+    <div style="margin-bottom: 50px; display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 15px;">
+        <svg width="110" height="110" viewBox="0 0 48 48" fill="none" class="logo-mark" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="grad-a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#22d3ee"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+                <linearGradient id="grad-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#06b6d4" stop-opacity="0.3"/><stop offset="100%" stop-color="#2563eb" stop-opacity="0.15"/></linearGradient>
+            </defs>
+            <path d="M24 3 L41 13 L41 35 L24 45 L7 35 L7 13 Z" fill="url(#grad-b)" stroke="url(#grad-a)" stroke-width="1.2" stroke-linejoin="round"/>
+            <path d="M24 10 L34 16 L34 32 L24 38 L14 32 L14 16 Z" fill="none" stroke="url(#grad-a)" stroke-width="0.6" stroke-linejoin="round" opacity="0.35"/>
+            <circle cx="24" cy="10" r="1.4" class="node-dot node-dot-0" style="transform-origin: 24px 10px;"/>
+            <circle cx="34" cy="16" r="1.4" class="node-dot node-dot-1" style="transform-origin: 34px 16px;"/>
+            <circle cx="34" cy="32" r="1.4" class="node-dot node-dot-2" style="transform-origin: 34px 32px;"/>
+            <circle cx="24" cy="38" r="1.4" class="node-dot node-dot-3" style="transform-origin: 24px 38px;"/>
+            <circle cx="14" cy="32" r="1.4" class="node-dot node-dot-4" style="transform-origin: 14px 32px;"/>
+            <circle cx="14" cy="16" r="1.4" class="node-dot node-dot-5" style="transform-origin: 14px 16px;"/>
+            <circle cx="24" cy="24" r="2.2" fill="url(#grad-a)"/>
+            <circle cx="24" cy="24" r="4.5" fill="none" stroke="url(#grad-a)" stroke-width="0.6" opacity="0.4"/>
+            <line x1="24" y1="24" x2="24" y2="10" stroke="url(#grad-a)" stroke-width="0.5" opacity="0.25"/>
+            <line x1="24" y1="24" x2="34" y2="32" stroke="url(#grad-a)" stroke-width="0.5" opacity="0.25"/>
+            <line x1="24" y1="24" x2="14" y2="32" stroke="url(#grad-a)" stroke-width="0.5" opacity="0.25"/>
+            <text x="24" y="26.5" text-anchor="middle" font-size="8.5" font-weight="700" font-family="'Inter', sans-serif" letter-spacing="-0.3" class="hos-text">hOS</text>
+        </svg>
+        <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 4px; color: rgba(255,255,255,0.3); font-weight: 700; opacity: 0.8;">Human Operating System</div>
+    </div>
+
+    <div style="max-width: 800px; margin: 0 auto; position: relative; z-index: 10;">
+        <span style="text-transform: uppercase; letter-spacing: 5px; font-size: 9px; font-weight: 900; color: #22d3ee; margin-bottom: 25px; display: block; opacity: 0.8;">Sovereign Engine Activated</span>
+        <h1 style="font-size: 56px; font-weight: 800; margin-bottom: 24px; background: linear-gradient(135deg, #fff 30%, #22d3ee 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -2.5px;">Guardian Operations</h1>
+        <p style="font-size: 16px; color: rgba(255,255,255,0.5); line-height: 1.8; margin-bottom: 50px;">The unified local layer for clinical sovereignty. Manage the Sovereign Library, coordinate mission milestones, and engage with the global team from this hub.</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 40px;">
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 40px 25px; border-radius: 24px; text-align: left;">
+                <h3 style="font-size: 12px; color: #22d3ee; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 800;">Blog Engine</h3>
+                <p style="font-size: 11px; color: rgba(255,255,255,0.3); line-height: 1.6;">Direct injection of narratives into the Sovereign Library.</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 40px 25px; border-radius: 24px; text-align: left;">
+                <h3 style="font-size: 12px; color: #8b5cf6; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 800;">Network CRM</h3>
+                <p style="font-size: 11px; color: rgba(255,255,255,0.3); line-height: 1.6;">Managing global contributor applications and profiles.</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 40px 25px; border-radius: 24px; text-align: left;">
+                <h3 style="font-size: 12px; color: #ec4899; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 800;">Mission Feed</h3>
+                <p style="font-size: 11px; color: rgba(255,255,255,0.3); line-height: 1.6;">Real-time sync of core foundation milestones.</p>
+            </div>
+        </div>
+        
+        <a href="https://humanos.foundation" style="display: inline-block; margin-top: 60px; padding: 18px 45px; background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.4); color: #fff; border-radius: 16px; text-decoration: none; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 2.5px; transition: 0.3s;">Launch Foundation Mainframe →</a>
+    </div>
+</div>
