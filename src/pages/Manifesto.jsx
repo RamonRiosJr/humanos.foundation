@@ -90,8 +90,7 @@ function FourLawsSection() {
                                 <div className="flex items-start justify-between mb-5">
                                     <motion.div animate={{ opacity: [0.5, 1, 0.5] }} transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.2 }}>
                                         <law.icon className={`w-8 h-8 ${law.color} group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_currentColor] transition-all duration-300`} />
-                                    </motion.div>
-                                    <span className="text-4xl font-bold text-white/[0.08] group-hover:text-white/[0.15] transition-colors" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{law.number}</span>
+                                    </motion.div>                                    <span className="text-4xl font-bold text-white/[0.08] group-hover:text-white/[0.15] transition-colors" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{law.number}</span>
                                 </div>
                                 <h3 className="text-lg font-semibold text-white/80 mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{law.title}</h3>
                                 <p className="text-sm text-white/70 leading-relaxed font-medium">{law.description}</p>

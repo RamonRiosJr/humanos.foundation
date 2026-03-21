@@ -50,7 +50,7 @@ export default function TheProblem() {
                         <div className="absolute inset-0 bg-gradient-to-br from-red-950/30 via-obsidian to-obsidian border border-red-900/20 rounded-3xl" />
                         <div className="relative z-10">
                             <AlertTriangle className="w-10 h-10 text-red-400/60 mx-auto mb-5" />
-                            <p className="text-4xl md:text-6xl font-bold text-red-400/80 mb-3" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>The Human Cost</p>
+                            <p className="text-4xl md:text-6xl font-bold text-red-300/80 mb-3" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>The Human Cost</p>
                             <p className="text-sm text-white/70 max-w-lg mx-auto font-medium">
                                 The system does not suffer when it gets it wrong. Patients do. The cost is paid in side effects, altered thoughts, and stolen potential.
                             </p>

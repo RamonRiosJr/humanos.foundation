@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { base44 } from '@/api/humanosClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
+
 import PageHero from '../components/shared/PageHero';
 import { 
     CheckCircle2, 
@@ -34,6 +35,7 @@ export default function Team() {
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
     const [selectedRole, setSelectedRole] = useState('');
+
     const [activeProjects, setActiveProjects] = useState([]);
     const [loadingProjects, setLoadingProjects] = useState(true);
 

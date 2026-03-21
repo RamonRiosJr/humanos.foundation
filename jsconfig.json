@@ -14,7 +14,7 @@
             "dom"
         ],
         "target": "esnext",
-        "checkJs": true,
+        "checkJs": false,
         "skipLibCheck": true,
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
@@ -24,16 +24,13 @@
         ]
     },
     "include": [
-        "src/components/**/*.js",
-        "src/pages/**/*.jsx",
-        "src/Layout.jsx"
+        "src/**/*.js",
+        "src/**/*.jsx",
+        "src/**/*.ts",
+        "src/**/*.tsx"
     ],
     "exclude": [
         "node_modules",
-        "dist",
-        "src/vite-plugins",
-        "src/components/ui",
-        "src/api",
-        "src/lib"
+        "dist"
     ]
 }
