@@ -50,11 +50,11 @@ const getAppParams = () => {
     // @ts-ignore — import.meta.env is injected by Vite at build time
     const env = import.meta.env ?? {};
     return {
-        appId: getAppParamValue("app_id", { defaultValue: (env['VITE_BASE44_APP_ID'] || '') }),
+        appId: getAppParamValue("app_id", { defaultValue: (env && typeof env === 'object') ? env['VITE_BASE44_APP_ID'] : undefined }),
         token: getAppParamValue("access_token", { removeFromUrl: true }),
         fromUrl: getAppParamValue("from_url", { defaultValue: isNode ? '' : window.location.href }),
-        functionsVersion: getAppParamValue("functions_version", { defaultValue: (env['VITE_BASE44_FUNCTIONS_VERSION'] || '') }),
-        appBaseUrl: getAppParamValue("app_base_url", { defaultValue: (env['VITE_BASE44_APP_BASE_URL'] || '') }),
+        functionsVersion: getAppParamValue("functions_version", { defaultValue: (env && typeof env === 'object') ? env['VITE_BASE44_FUNCTIONS_VERSION'] : undefined }),
+        appBaseUrl: getAppParamValue("app_base_url", { defaultValue: (env && typeof env === 'object') ? env['VITE_BASE44_APP_BASE_URL'] : undefined }),
     }
 }
 

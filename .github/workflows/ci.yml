@@ -55,7 +55,6 @@ jobs:
           name: coverage-report
           path: coverage/
           retention-days: 14
-
       - name: Security audit
         run: npm audit --audit-level=high || true
         # Non-blocking: awareness only, not a hard failure
