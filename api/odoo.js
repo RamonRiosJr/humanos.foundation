@@ -21,16 +21,23 @@ export default async function handler(req, res) {
 
   const url = `${ODOO_API_URL}/send_request?model=${model}`;
 
+  const finalMethod = (data && method.toUpperCase() === 'GET') ? 'POST' : method;
+  
+  let finalBody = data ? JSON.stringify(data) : undefined;
+  if (!data && finalMethod === 'POST') {
+      finalBody = JSON.stringify({ fields: ["name", "id", "subtitle", "content", "post_date"] });
+  }
+
   try {
     const response = await fetch(url, {
-      method: method,
+      method: finalMethod,
       headers: {
         'Content-Type': 'application/json',
         'api-key': ODOO_API_KEY,
         'login': ODOO_USER,
         'password': ODOO_PASS
       },
-      body: data ? JSON.stringify(data) : undefined
+      body: finalBody
     });
 
     if (!response.ok) {
