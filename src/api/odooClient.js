@@ -43,7 +43,7 @@ class OdooClient {
   }
 
   async localRequest(model, method, data) {
-    const url = `${this.localUrl}/send_request?model=${model}`;
+    const url = `/odoo_local?model=${model}`;
     const finalMethod = (data && method.toUpperCase() === 'GET') ? 'POST' : method;
     let finalBody = data ? JSON.stringify(data) : undefined;
     if (!data && finalMethod === 'POST') {
@@ -57,7 +57,8 @@ class OdooClient {
             'Content-Type': 'application/json',
             'api-key': this.localKey,
             'login': this.localUser,
-            'password': this.localPass
+            'password': this.localPass,
+            'db': import.meta.env.VITE_ODOO_DB || 'humanos_foundation'
           },
           body: finalBody
         });
