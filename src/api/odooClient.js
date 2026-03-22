@@ -5,41 +5,30 @@
 
 class OdooClient {
   constructor() {
-    this.baseUrl = import.meta.env.VITE_ODOO_API_URL || 'https://team.humanos.foundation';
-    this.apiKey = import.meta.env.VITE_ODOO_API_KEY;
-    this.login = import.meta.env.VITE_ODOO_USER;
-    this.password = import.meta.env.VITE_ODOO_PASS;
+    // Connects via the secure Vercel API proxy
+    this.proxyUrl = '/api/odoo';
   }
 
   async request(model, method = 'POST', data = null) {
-    if (!this.apiKey) return null;
+    try {
+        const response = await fetch(this.proxyUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                model,
+                method,
+                data
+            })
+        });
 
-    // specific Cybrosys REST API endpoint format
-    const url = `${this.baseUrl}/send_request?model=${model}`;
-    
-    // In Odoo REST API, POST is generally safer for sending bodies
-    const finalMethod = data ? 'POST' : method;
-    
-    const requestOptions = {
-      method: finalMethod,
-      headers: {
-        'Content-Type': 'application/json',
-        'api-key': this.apiKey,
-        'login': this.login,
-        'password': this.password
-      }
-    };
-
-    if (data) {
-        requestOptions.body = JSON.stringify(data);
-    } else if (finalMethod === 'POST') {
-        // Default fields for POST without custom data
-        requestOptions.body = JSON.stringify({ fields: ["name", "id", "subtitle", "content", "post_date"] });
+        if (!response.ok) return null;
+        return response.json();
+    } catch (e) {
+        console.error('Odoo proxy request failed:', e);
+        return null;
     }
-    
-    const response = await fetch(url, requestOptions);
-    if (!response.ok) return null;
-    return response.json();
   }
 
   // Blog Integration
