@@ -17,16 +17,34 @@ if (!$data || !isset($data["model"])) {
     exit();
 }
 
+$env_file = __DIR__ . '/../.env';
+$odoo_api_key = "7d9189405f117df0ab529f48ba5bfeff1e88c8f5";
+$odoo_user = "";
+$odoo_pass = "";
+
+if (file_exists($env_file)) {
+    $env = parse_ini_file($env_file);
+    $odoo_user = $env["ODOO_USER"] ?? ($env["VITE_ODOO_USER"] ?? "");
+    $odoo_pass = $env["ODOO_PASS"] ?? ($env["VITE_ODOO_PASS"] ?? "");
+} else {
+    // If running in same directory
+    $local_env = __DIR__ . '/.env';
+    if (file_exists($local_env)) {
+        $env = parse_ini_file($local_env);
+        $odoo_user = $env["ODOO_USER"] ?? ($env["VITE_ODOO_USER"] ?? "");
+        $odoo_pass = $env["ODOO_PASS"] ?? ($env["VITE_ODOO_PASS"] ?? "");
+    }
+}
+
 $url = "https://team.humanos.foundation/send_request?model=" . urlencode($data["model"]);
 
-// Since .env is ignored, and Vercel proxy failed, we fallback to hardcoded production keys strictly locked behind PHP execution so they never reach the browser.
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     "Content-Type: application/json",
-    "api-key: 7d9189405f117df0ab529f48ba5bfeff1e88c8f5",
-    "login: VITE_ODOO_USER",
-    "password: VITE_ODOO_PASS123!"
+    "api-key: " . $odoo_api_key,
+    "login: " . $odoo_user,
+    "password: " . $odoo_pass
 ]);
 
 if (isset($data["data"]) && $_SERVER["REQUEST_METHOD"] === "GET") {
