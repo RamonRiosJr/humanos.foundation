@@ -6,8 +6,8 @@
 class OdooClient {
   constructor() {
     this.isDev = import.meta.env.DEV;
-    // Connects via the secure Vercel API proxy in production
-    this.proxyUrl = '/api/odoo';
+    // Connects natively via cPanel PHP proxy to bypass static Vercel failure states on `humanos.foundation`
+    this.proxyUrl = '/odoo.php';
     
     // Direct bypass for local development to avoid Windows UV_HANDLE_CLOSING crash
     this.localUrl = import.meta.env.VITE_ODOO_API_URL || 'https://team.humanos.foundation';
