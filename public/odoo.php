@@ -18,12 +18,13 @@ if (!$data || !isset($data["model"])) {
 }
 
 $env_file = __DIR__ . '/../.env';
-$odoo_api_key = "7d9189405f117df0ab529f48ba5bfeff1e88c8f5";
+$odoo_api_key = "";
 $odoo_user = "";
 $odoo_pass = "";
 
 if (file_exists($env_file)) {
     $env = parse_ini_file($env_file);
+    $odoo_api_key = $env["ODOO_API_KEY"] ?? ($env["VITE_ODOO_API_KEY"] ?? "");
     $odoo_user = $env["ODOO_USER"] ?? ($env["VITE_ODOO_USER"] ?? "");
     $odoo_pass = $env["ODOO_PASS"] ?? ($env["VITE_ODOO_PASS"] ?? "");
 } else {
@@ -31,6 +32,7 @@ if (file_exists($env_file)) {
     $local_env = __DIR__ . '/.env';
     if (file_exists($local_env)) {
         $env = parse_ini_file($local_env);
+        $odoo_api_key = $env["ODOO_API_KEY"] ?? ($env["VITE_ODOO_API_KEY"] ?? "");
         $odoo_user = $env["ODOO_USER"] ?? ($env["VITE_ODOO_USER"] ?? "");
         $odoo_pass = $env["ODOO_PASS"] ?? ($env["VITE_ODOO_PASS"] ?? "");
     }
@@ -44,7 +46,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, [
     "Content-Type: application/json",
     "api-key: " . $odoo_api_key,
     "login: " . $odoo_user,
-    "password: " . $odoo_pass
+    "password: " . $odoo_pass, "db: " . ($env["ODOO_DB"] ?? ($env["VITE_ODOO_DB"] ?? "humanos_foundation"))
 ]);
 
 if (isset($data["data"]) && $_SERVER["REQUEST_METHOD"] === "GET") {
