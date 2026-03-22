@@ -18,7 +18,7 @@ if (!$data || !isset($data["model"])) {
 }
 
 $env_file = __DIR__ . '/../.env';
-$odoo_api_key = "7d9189405f117df0ab529f48ba5bfeff1e88c8f5";
+$odoo_api_key = "";
 $odoo_user = "";
 $odoo_pass = "";
 
