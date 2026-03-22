@@ -49,18 +49,25 @@ class OdooClient {
     if (!data && finalMethod === 'POST') {
         finalBody = JSON.stringify({ fields: ["name", "id", "subtitle", "content", "post_date"] });
     }
-    const response = await fetch(url, {
-      method: finalMethod,
-      headers: {
-        'Content-Type': 'application/json',
-        'api-key': this.localKey,
-        'login': this.localUser,
-        'password': this.localPass
-      },
-      body: finalBody
-    });
-    if (!response.ok) return null;
-    return response.json();
+    
+    try {
+        const response = await fetch(url, {
+          method: finalMethod,
+          headers: {
+            'Content-Type': 'application/json',
+            'api-key': this.localKey,
+            'login': this.localUser,
+            'password': this.localPass
+          },
+          body: finalBody
+        });
+        if (!response.ok) return null;
+        return response.json();
+    } catch (e) {
+        console.warn('Odoo CORS block triggered during local testing.', e);
+        alert('SECURITY PROTOCOL: Odoo blocks direct local browser testing (CORS). Because Vercel locally crashes on Windows, please test the form submissions identically on the live production site (https://humanos.foundation).');
+        return null;
+    }
   }
 
   // Blog Integration
