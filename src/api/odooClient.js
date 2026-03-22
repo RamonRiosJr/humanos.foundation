@@ -5,11 +5,22 @@
 
 class OdooClient {
   constructor() {
-    // Connects via the secure Vercel API proxy
+    this.isDev = import.meta.env.DEV;
+    // Connects via the secure Vercel API proxy in production
     this.proxyUrl = '/api/odoo';
+    
+    // Direct bypass for local development to avoid Windows UV_HANDLE_CLOSING crash
+    this.localUrl = import.meta.env.VITE_ODOO_API_URL || 'https://team.humanos.foundation';
+    this.localKey = import.meta.env.VITE_ODOO_API_KEY;
+    this.localUser = import.meta.env.VITE_ODOO_USER;
+    this.localPass = import.meta.env.VITE_ODOO_PASS;
   }
 
   async request(model, method = 'POST', data = null) {
+    if (this.isDev && this.localKey) {
+        return this.localRequest(model, method, data);
+    }
+    
     try {
         const response = await fetch(this.proxyUrl, {
             method: 'POST',
@@ -29,6 +40,27 @@ class OdooClient {
         console.error('Odoo proxy request failed:', e);
         return null;
     }
+  }
+
+  async localRequest(model, method, data) {
+    const url = `${this.localUrl}/send_request?model=${model}`;
+    const finalMethod = (data && method.toUpperCase() === 'GET') ? 'POST' : method;
+    let finalBody = data ? JSON.stringify(data) : undefined;
+    if (!data && finalMethod === 'POST') {
+        finalBody = JSON.stringify({ fields: ["name", "id", "subtitle", "content", "post_date"] });
+    }
+    const response = await fetch(url, {
+      method: finalMethod,
+      headers: {
+        'Content-Type': 'application/json',
+        'api-key': this.localKey,
+        'login': this.localUser,
+        'password': this.localPass
+      },
+      body: finalBody
+    });
+    if (!response.ok) return null;
+    return response.json();
   }
 
   // Blog Integration
