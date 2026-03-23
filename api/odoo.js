@@ -35,7 +35,8 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
         'api-key': ODOO_API_KEY,
         'login': ODOO_USER,
-        'password': ODOO_PASS
+        'password': ODOO_PASS,
+        'db': process.env.VITE_ODOO_DB || process.env.ODOO_DB || 'humanos_foundation'
       },
       body: finalBody
     });
