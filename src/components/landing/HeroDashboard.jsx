@@ -4,8 +4,8 @@ import { Activity, Heart, Brain, Shield, Zap, TrendingUp } from 'lucide-react';
 
 const metrics = [
     { label: 'History Sync', value: 'Complete', icon: Brain, color: '#00d4ff' },
-    { label: 'Heart Rate', value: '72 bpm', icon: Heart, color: '#f43f5e' },
-    { label: 'Vitals', value: 'Unignorable', icon: Activity, color: '#10b981' },
+    { label: 'Clinical Agenda', value: 'Ready', icon: Heart, color: '#f43f5e' },
+    { label: 'Daily Tasks', value: '3 Pending', icon: Activity, color: '#10b981' },
     { label: 'Digital Vault', value: 'Sovereign', icon: Shield, color: '#8b5cf6' },
 ];
 
@@ -62,7 +62,7 @@ export default function HeroDashboard() {
                     <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
                             <Zap className="w-3.5 h-3.5 text-cyan-400" />
-                            <span className="text-xs text-white/40">Bio-Signal Stream</span>
+                            <span className="text-xs text-white/40">Clinical Agenda Sync</span>
                         </div>
                         <div className="flex items-center gap-1">
                             <TrendingUp className="w-3 h-3 text-emerald-400" />
