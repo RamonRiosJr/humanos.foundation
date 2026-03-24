@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SEOMeta from '../components/shared/SEOMeta';
-import { base44 } from '@/api/humanosClient';
+
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
@@ -48,12 +48,28 @@ export default function Join() {
         const payload = { ...form };
         delete payload.honeypot;
 
+        payload.access_key = "af2df845-0c70-4f43-b530-45a8b0888c06";
+        payload.subject = `Waitlist Join Request: ${form.name} - ${form.role}`;
+        payload.from_name = "Humanos Waitlist Form";
+
         try {
-            await base44.entities.JoinRequest.create(payload);
-            setSubmitted(true);
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(payload)
+            });
+            const data = await response.json();
+            if (data.success) {
+                setSubmitted(true);
+            } else {
+                throw new Error(data.message || "Failed to submit mail");
+            }
         } catch (err) {
             console.error('Waitlist Submission Failed:', err);
-            alert(`Error: The Odoo server actively rejected the Lead creation.\nReason: ${err.message}`);
+            alert(`Error processing your request.\nReason: ${err.message}`);
         }
         setLoading(false);
     };
