@@ -34,10 +34,42 @@ class OdooClient {
             })
         });
 
-        if (!response.ok) return null;
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.error || 'Odoo Proxy Request Failed');
+        }
         return response.json();
     } catch (e) {
         console.error('Odoo proxy request failed:', e);
+        throw e;
+    }
+  }
+
+  async localRequest(model, method, data) {
+    const url = `/odoo_local?model=${model}`;
+    const finalMethod = (data && method.toUpperCase() === 'GET') ? 'POST' : method;
+    let finalBody = data ? JSON.stringify(data) : undefined;
+    if (!data && finalMethod === 'POST') {
+        finalBody = JSON.stringify({ fields: ["name", "id", "subtitle", "content", "post_date"] });
+    }
+    
+    try {
+        const response = await fetch(url, {
+          method: finalMethod,
+          headers: {
+            'Content-Type': 'application/json',
+            'api-key': this.localKey,
+            'login': this.localUser,
+            'password': this.localPass,
+            'db': import.meta.env.VITE_ODOO_DB || 'humanos_foundation'
+          },
+          body: finalBody
+        });
+        if (!response.ok) return null;
+        return response.json();
+    } catch (e) {
+        console.warn('Odoo CORS block triggered during local testing.', e);
+        alert('SECURITY PROTOCOL: Odoo blocks direct local browser testing (CORS). Because Vercel locally crashes on Windows, please test the form submissions identically on the live production site (https://humanos.foundation).');
         return null;
     }
   }
