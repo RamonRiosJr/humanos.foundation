@@ -34,11 +34,14 @@ class OdooClient {
             })
         });
 
-        if (!response.ok) return null;
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.error || 'Odoo Proxy Request Failed');
+        }
         return response.json();
     } catch (e) {
         console.error('Odoo proxy request failed:', e);
-        return null;
+        throw e;
     }
   }
 

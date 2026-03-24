@@ -45,8 +45,13 @@ export default function Contact() {
         const payload = { ...form };
         delete payload.honeypot;
 
-        await base44.entities.ContactMessage.create(payload);
-        setSubmitted(true);
+        try {
+            await base44.entities.ContactMessage.create(payload);
+            setSubmitted(true);
+        } catch (err) {
+            console.error('Submission Failed:', err);
+            alert(`Error: The Odoo server actively rejected the form submission.\nReason: ${err.message}`);
+        }
         setLoading(false);
     };
 

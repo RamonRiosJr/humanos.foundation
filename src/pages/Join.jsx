@@ -48,8 +48,13 @@ export default function Join() {
         const payload = { ...form };
         delete payload.honeypot;
 
-        await base44.entities.JoinRequest.create(payload);
-        setSubmitted(true);
+        try {
+            await base44.entities.JoinRequest.create(payload);
+            setSubmitted(true);
+        } catch (err) {
+            console.error('Waitlist Submission Failed:', err);
+            alert(`Error: The Odoo server actively rejected the Lead creation.\nReason: ${err.message}`);
+        }
         setLoading(false);
     };
 
