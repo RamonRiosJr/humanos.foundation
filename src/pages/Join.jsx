@@ -24,14 +24,11 @@ export default function Join() {
     const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-
-        // Security: Honeypot check
+        // Fallback for honeypot
         if (form.honeypot.trim() !== '') {
+            e.preventDefault();
             console.warn('Spam submission intercepted.');
-            setSubmitted(true); // Fail silently by showing success state to bots
-            setLoading(false);
+            setSubmitted(true);
             return;
         }
 
@@ -39,40 +36,23 @@ export default function Join() {
         const lastSubmit = localStorage.getItem('last_join_submit');
         const now = Date.now();
         if (lastSubmit && (now - parseInt(lastSubmit, 10)) < 60000) {
+            e.preventDefault();
             alert('You are submitting too fast. Please wait a minute before trying again.');
-            setLoading(false);
             return;
         }
         localStorage.setItem('last_join_submit', now.toString());
-
-        const formData = new FormData();
-        formData.append("access_key", "af2df845-0c70-4f43-b530-45a8b0888c06");
-        formData.append("subject", `Waitlist Join Request: ${form.name} - ${form.role}`);
-        formData.append("from_name", "Humanos Waitlist Form");
-        
-        Object.keys(form).forEach(key => {
-            if (key !== 'honeypot') {
-                formData.append(key, form[key]);
-            }
-        });
-
-        try {
-            const response = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                body: formData
-            });
-            const data = await response.json();
-            if (data.success) {
-                setSubmitted(true);
-            } else {
-                throw new Error(data.message || "Failed to submit mail");
-            }
-        } catch (err) {
-            console.error('Waitlist Submission Failed:', err);
-            alert(`Error processing your request.\nReason: ${err.message}`);
-        }
-        setLoading(false);
+        setLoading(true);
+        // Browser natively posts to web3forms.
     };
+
+    // React Hook to detect successful redirect from Web3Forms
+    React.useEffect(() => {
+        if (window.location.search.includes('success=true')) {
+            setSubmitted(true);
+            // Clean the URL bar so it looks professional after redirect
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    }, []);
 
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
@@ -120,16 +100,22 @@ export default function Join() {
                         ) : (
                             <motion.form
                                 key="form"
+                                action="https://api.web3forms.com/submit"
+                                method="POST"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6 }}
                                 onSubmit={handleSubmit}
                                 className="glass-strong rounded-3xl p-8 md:p-12 border border-white/[0.05] space-y-6"
                             >
+                                <input type="hidden" name="access_key" value="af2df845-0c70-4f43-b530-45a8b0888c06" />
+                                <input type="hidden" name="redirect" value="https://humanos.foundation/Join?success=true" />
+                                <input type="hidden" name="subject" value={`Waitlist Join Request: ${form.name} - ${form.role}`} />
+                                <input type="hidden" name="from_name" value="Humanos Waitlist Form" />
                                 {/* Spam Protection Honeypot - Invisible to users, filled by bots */}
                                 <input
                                     type="text"
-                                    name="website_url"
+                                    name="botcheck"
                                     style={{ display: 'none' }}
                                     tabIndex={-1}
                                     autoComplete="off"
@@ -140,6 +126,7 @@ export default function Join() {
                                     <div>
                                         <label className="text-xs text-white/50 font-bold uppercase tracking-wider mb-2 block">Full Name *</label>
                                         <input
+                                            name="name"
                                             required
                                             type="text"
                                             value={form.name}
@@ -151,6 +138,7 @@ export default function Join() {
                                     <div>
                                         <label className="text-xs text-white/50 font-bold uppercase tracking-wider mb-2 block">Email *</label>
                                         <input
+                                            name="email"
                                             required
                                             type="email"
                                             value={form.email}
@@ -163,6 +151,7 @@ export default function Join() {
 
                                 <div className="space-y-3">
                                     <label className="text-xs text-white/40 uppercase tracking-wider mb-3 block">I am a...</label>
+                                    <input type="hidden" name="role" value={form.role} />
                                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
                                         {roles.map((role) => (
                                             <button
@@ -184,6 +173,7 @@ export default function Join() {
                                 <div>
                                     <label className="text-xs text-white/40 uppercase tracking-wider mb-2 block">Why does this matter to you? (optional)</label>
                                     <textarea
+                                        name="reason"
                                         value={form.reason}
                                         onChange={e => setForm({ ...form, reason: e.target.value })}
                                         rows={3}
@@ -205,6 +195,7 @@ export default function Join() {
                                             >
                                                 {form[opt.key] && <CheckCircle2 className="w-3 h-3 text-cyan-400" />}
                                             </div>
+                                            <input type="hidden" name={opt.key} value={form[opt.key] ? 'Yes' : 'No'} />
                                             <span className="text-sm text-white/35 group-hover:text-white/50 transition-colors">{opt.label}</span>
                                         </label>
                                     ))}
