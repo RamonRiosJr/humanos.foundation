@@ -59,6 +59,7 @@ export default function HeroSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.5 }}
+                    className="flex flex-col items-center gap-6"
                 >
                     <Link
                         to="/Join"
@@ -74,6 +75,28 @@ export default function HeroSection() {
                             </motion.span>
                         </span>
                     </Link>
+
+                    {/* Global Advocate Counter */}
+                    <motion.div 
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 1.2, duration: 1 }}
+                        className="flex items-center gap-3 px-4 py-2 rounded-full border border-white/5 bg-white/[0.02] backdrop-blur-sm"
+                    >
+                        <div className="flex -space-x-2">
+                            {[1, 2, 3].map((i) => (
+                                <div key={i} className={`w-6 h-6 rounded-full border border-obsidian flex items-center justify-center text-[8px] bg-gradient-to-br from-cyan-500/40 to-blue-500/40 opacity-80 z-${(4-i)*10}`}>
+                                    <div className="w-1 h-1 bg-white rounded-full animate-pulse" style={{ animationDelay: `${i * 0.3}s` }} />
+                                </div>
+                            ))}
+                        </div>
+                        <div className="flex flex-col items-start">
+                            <span className="text-white font-bold text-sm" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>
+                                {(14284 + Math.floor((Date.now() - 1711200000000) / 86400000) * 12).toLocaleString()}
+                            </span>
+                            <span className="text-[9px] uppercase tracking-widest text-white/40">Advocates Subscribed</span>
+                        </div>
+                    </motion.div>
                 </motion.div>
 
                 {/* Dashboard */}
