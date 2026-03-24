@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SEOMeta from '../components/shared/SEOMeta';
-
+import { base44 } from '@/api/humanosClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
@@ -21,35 +21,39 @@ export default function Contact() {
     const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e) => {
-        // Fallback for honeypot
+        e.preventDefault();
+        setLoading(true);
+
+        // Security: Honeypot check
         if (form.honeypot.trim() !== '') {
-            e.preventDefault();
             console.warn('Spam submission intercepted.');
-            setSubmitted(true);
+            setSubmitted(true); // Fail silently by showing success state to bots
+            setLoading(false);
             return;
         }
-        
-        // Rate limiting logic still applies before browser triggers the native submit action
+
+        // Security: Rate limiting (60 seconds)
         const lastSubmit = localStorage.getItem('last_contact_submit');
         const now = Date.now();
         if (lastSubmit && (now - parseInt(lastSubmit, 10)) < 60000) {
-            e.preventDefault();
             alert('You are submitting messages too fast. Please wait a minute before trying again.');
+            setLoading(false);
             return;
         }
         localStorage.setItem('last_contact_submit', now.toString());
-        setLoading(true);
-        // The browser will inherently intercept this and POST directly to web3forms, navigating away perfectly.
-    };
 
-    // React Hook to detect successful redirect from Web3Forms
-    React.useEffect(() => {
-        if (window.location.search.includes('success=true')) {
+        const payload = { ...form };
+        delete payload.honeypot;
+
+        try {
+            await base44.entities.ContactMessage.create(payload);
             setSubmitted(true);
-            // Clean the URL bar so it looks professional after redirect
-            window.history.replaceState({}, document.title, window.location.pathname);
+        } catch (err) {
+            console.error('Submission Failed:', err);
+            alert(`Error: The Odoo server actively rejected the form submission.\nReason: ${err.message}`);
         }
-    }, []);
+        setLoading(false);
+    };
 
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
@@ -102,16 +106,11 @@ export default function Contact() {
                                     <p className="text-white/35 text-sm">We'll be in touch within 48 hours.</p>
                                 </motion.div>
                             ) : (
-                                <motion.form key="form" action="https://api.web3forms.com/submit" method="POST" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} onSubmit={handleSubmit} className="glass-strong rounded-3xl p-8 md:p-10 border border-white/[0.05] space-y-5">
-                                    <input type="hidden" name="access_key" value="af2df845-0c70-4f43-b530-45a8b0888c06" />
-                                    <input type="hidden" name="redirect" value="https://humanos.foundation/Contact?success=true" />
-                                    <input type="hidden" name="subject" value={`Contact Request: ${form.name} - ${form.inquiry_type}`} />
-                                    <input type="hidden" name="from_name" value="Humanos Contact Form" />
-                                    
+                                <motion.form key="form" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} onSubmit={handleSubmit} className="glass-strong rounded-3xl p-8 md:p-10 border border-white/[0.05] space-y-5">
                                     {/* Spam Protection Honeypot */}
                                     <input
                                         type="text"
-                                        name="botcheck"
+                                        name="website_url"
                                         style={{ display: 'none' }}
                                         tabIndex={-1}
                                         autoComplete="off"
@@ -127,7 +126,6 @@ export default function Contact() {
                                             <div key={field.key}>
                                                 <label className="text-xs text-white/60 font-bold uppercase tracking-wider mb-2 block">{field.label}{field.required ? ' *' : ''}</label>
                                                 <input
-                                                    name={field.key}
                                                     required={field.required}
                                                     type={field.type}
                                                     value={form[field.key]}
@@ -141,7 +139,6 @@ export default function Contact() {
 
                                     <div>
                                         <label className="text-xs text-white/40 uppercase tracking-wider mb-3 block">Type of Inquiry</label>
-                                        <input type="hidden" name="inquiry_type" value={form.inquiry_type} />
                                         <div className="flex flex-wrap gap-2">
                                             {inquiryTypes.map((t) => (
                                                 <button 
@@ -160,7 +157,7 @@ export default function Contact() {
 
                                     <div>
                                         <label className="text-xs text-white/40 uppercase tracking-wider mb-2 block">Message *</label>
-                                        <textarea name="message" required value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} rows={5} placeholder="Tell us what's on your mind..." className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent resize-none" />
+                                        <textarea required value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} rows={5} placeholder="Tell us what's on your mind..." className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent resize-none" />
                                     </div>
 
                                     <div className="flex justify-center mt-6">
