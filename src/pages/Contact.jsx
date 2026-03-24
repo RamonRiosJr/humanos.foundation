@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SEOMeta from '../components/shared/SEOMeta';
-import { base44 } from '@/api/humanosClient';
+
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
@@ -42,11 +42,32 @@ export default function Contact() {
         }
         localStorage.setItem('last_contact_submit', now.toString());
 
-        const payload = { ...form };
-        delete payload.honeypot;
+        const formData = new FormData();
+        formData.append("access_key", "af2df845-0c70-4f43-b530-45a8b0888c06");
+        formData.append("subject", `Contact Request: ${form.name} - ${form.inquiry_type}`);
+        formData.append("from_name", "Humanos Contact Form");
+        
+        Object.keys(form).forEach(key => {
+            if (key !== 'honeypot') {
+                formData.append(key, form[key]);
+            }
+        });
 
-        await base44.entities.ContactMessage.create(payload);
-        setSubmitted(true);
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+            const data = await response.json();
+            if (data.success) {
+                setSubmitted(true);
+            } else {
+                throw new Error(data.message || "Failed to submit mail");
+            }
+        } catch (err) {
+            console.error('Submission Failed:', err);
+            alert(`Error processing your request.\nReason: ${err.message}`);
+        }
         setLoading(false);
     };
 
