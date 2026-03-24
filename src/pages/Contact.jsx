@@ -42,21 +42,21 @@ export default function Contact() {
         }
         localStorage.setItem('last_contact_submit', now.toString());
 
-        const payload = { ...form };
-        delete payload.honeypot;
-
-        payload.access_key = "af2df845-0c70-4f43-b530-45a8b0888c06";
-        payload.subject = `Contact Request: ${form.name} - ${form.inquiry_type}`;
-        payload.from_name = "Humanos Contact Form";
+        const formData = new FormData();
+        formData.append("access_key", "af2df845-0c70-4f43-b530-45a8b0888c06");
+        formData.append("subject", `Contact Request: ${form.name} - ${form.inquiry_type}`);
+        formData.append("from_name", "Humanos Contact Form");
+        
+        Object.keys(form).forEach(key => {
+            if (key !== 'honeypot') {
+                formData.append(key, form[key]);
+            }
+        });
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Accept": "application/json"
-                },
-                body: JSON.stringify(payload)
+                body: formData
             });
             const data = await response.json();
             if (data.success) {

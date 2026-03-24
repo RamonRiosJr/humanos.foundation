@@ -45,21 +45,21 @@ export default function Join() {
         }
         localStorage.setItem('last_join_submit', now.toString());
 
-        const payload = { ...form };
-        delete payload.honeypot;
-
-        payload.access_key = "af2df845-0c70-4f43-b530-45a8b0888c06";
-        payload.subject = `Waitlist Join Request: ${form.name} - ${form.role}`;
-        payload.from_name = "Humanos Waitlist Form";
+        const formData = new FormData();
+        formData.append("access_key", "af2df845-0c70-4f43-b530-45a8b0888c06");
+        formData.append("subject", `Waitlist Join Request: ${form.name} - ${form.role}`);
+        formData.append("from_name", "Humanos Waitlist Form");
+        
+        Object.keys(form).forEach(key => {
+            if (key !== 'honeypot') {
+                formData.append(key, form[key]);
+            }
+        });
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Accept": "application/json"
-                },
-                body: JSON.stringify(payload)
+                body: formData
             });
             const data = await response.json();
             if (data.success) {
