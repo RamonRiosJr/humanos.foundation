@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SEOMeta from '../components/shared/SEOMeta';
 import { motion, AnimatePresence } from 'framer-motion';
-import { base44 } from '@/api/humanosClient';
+import { odooClient } from '../api/odooClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
@@ -33,7 +33,7 @@ export default function Blog() {
     const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
 
     useEffect(() => {
-        base44.entities.BlogPost.list().then(data => {
+        odooClient.getBlogPosts().then(data => {
             // Sort by date descending
             const sorted = [...data].sort((a, b) => new Date(b.created_date).getTime() - new Date(a.created_date).getTime());
             setPosts(sorted);
