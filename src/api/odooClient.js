@@ -74,31 +74,22 @@ class OdooClient {
     }
   }
 
-  async localRequest(model, method, data) {
-    const url = `/odoo_local?model=${model}`;
-    const finalMethod = (data && method.toUpperCase() === 'GET') ? 'POST' : method;
-    let finalBody = data ? JSON.stringify(data) : undefined;
-    if (!data && finalMethod === 'POST') {
-        finalBody = JSON.stringify({ fields: ["name", "id", "subtitle", "content", "post_date"] });
-    }
-    
+  async getBlogPost(id) {
     try {
-        const response = await fetch(url, {
-          method: finalMethod,
-          headers: {
-            'Content-Type': 'application/json',
-            'api-key': this.localKey,
-            'login': this.localUser,
-            'password': this.localPass,
-            'db': import.meta.env.VITE_ODOO_DB || 'humanos_foundation'
-          },
-          body: finalBody
-        });
-        if (!response.ok) return null;
-        return response.json();
+        const data = await this.request('blog.post', 'GET', { id });
+        if (!data || !data.records || data.records.length === 0) return null;
+        const post = data.records.find(p => p.id.toString() === id.toString()) || data.records[0];
+        
+        return {
+            id: post.id.toString(),
+            title: post.name,
+            excerpt: post.subtitle || '',
+            content: post.content,
+            created_date: post.post_date,
+            category: 'Movement Stories',
+            read_time_minutes: Math.ceil((post.content || '').length / 1000) || 5,
+        };
     } catch (e) {
-        console.warn('Odoo CORS block triggered during local testing.', e);
-        alert('SECURITY PROTOCOL: Odoo blocks direct local browser testing (CORS). Because Vercel locally crashes on Windows, please test the form submissions identically on the live production site (https://humanos.foundation).');
         return null;
     }
   }
@@ -130,7 +121,7 @@ class OdooClient {
             name: `Website Lead: ${formData.name}`,
             contact_name: formData.name,
             email_from: formData.email,
-            description: `Movement Join Request\nRole: ${formData.role}\nNewsletter: ${formData.newsletter}`
+            description: `Movement Join Request\nRole: ${formData.role}\nReason: ${formData.reason || 'None'}\nNewsletter: ${formData.newsletter}\nVolunteer: ${formData.volunteer}`
         }
     });
   }
@@ -163,9 +154,9 @@ class OdooClient {
   async createTicket(ticketData) {
     return this.request('project.task', 'POST', {
         values: {
-            name: `Website Inquiry: ${ticketData.subject}`,
+            name: `Website Inquiry: ${ticketData.subject || ticketData.inquiry_type || 'General'}`,
             project_id: ticketData.projectId || 1, // Default support project
-            description: `Sender: ${ticketData.name} <${ticketData.email}>\n\n${ticketData.message}`
+            description: `Sender: ${ticketData.name} <${ticketData.email}>\nOrganization: ${ticketData.organization || 'None'}\nType: ${ticketData.inquiry_type || 'General'}\n\n${ticketData.message}`
         }
     });
   }

@@ -5,8 +5,7 @@ import { queryClientInstance } from '@/lib/query-client'
 import { pagesConfig } from './pages.config'
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
-import { AuthProvider, useAuth } from '@/lib/AuthContext';
-import UserNotRegisteredError from '@/components/UserNotRegisteredError';
+
 import { ThemeProvider } from './components/ThemeProvider';
 import { A11yProvider } from '@/lib/A11yContext';
 import A11yWidget from '@/components/shared/A11yWidget';
@@ -21,30 +20,7 @@ const LayoutWrapper = ({ children, currentPageName }) => Layout ?
     <Layout currentPageName={currentPageName}>{children}</Layout>
     : <>{children}</>;
 
-const AuthenticatedApp = () => {
-    const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
-
-    // Show loading spinner while checking app public settings or auth
-    if (isLoadingPublicSettings || isLoadingAuth) {
-        return (
-            <div className="fixed inset-0 flex items-center justify-center">
-                <div className="w-8 h-8 border-4 border-slate-200 border-t-slate-800 rounded-full animate-spin"></div>
-            </div>
-        );
-    }
-
-    // Handle authentication errors
-    if (authError) {
-        if (authError.type === 'user_not_registered') {
-            return <UserNotRegisteredError />;
-        } else if (authError.type === 'auth_required') {
-            // Redirect to login automatically
-            navigateToLogin();
-            return null;
-        }
-    }
-
-    // Render the main app
+const AppRouter = () => {
     return (
         <Suspense fallback={
             <div className="fixed inset-0 flex items-center justify-center bg-black/95">
@@ -94,17 +70,15 @@ function App() {
     return (
         <ThemeProvider defaultTheme="dark">
             <A11yProvider>
-                <AuthProvider>
-                    <QueryClientProvider client={queryClientInstance}>
-                        <Router>
-                            <PosthogPageViewTracker />
-                            <A11yWidget />
-                            <ChatbotWidget />
-                            <AuthenticatedApp />
-                        </Router>
-                        <Toaster />
-                    </QueryClientProvider>
-                </AuthProvider>
+                <QueryClientProvider client={queryClientInstance}>
+                    <Router>
+                        <PosthogPageViewTracker />
+                        <A11yWidget />
+                        <ChatbotWidget />
+                        <AppRouter />
+                    </Router>
+                    <Toaster />
+                </QueryClientProvider>
             </A11yProvider>
         </ThemeProvider>
     )

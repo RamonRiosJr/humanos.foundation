@@ -4,7 +4,7 @@ import SEOMeta from '../components/shared/SEOMeta';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageCTA from '../components/shared/PageCTA';
-import { base44 } from '@/api/humanosClient';
+import { odooClient } from '../api/odooClient';
 import { ArrowLeft, Clock, CalendarDays, Tag } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import rehypeSanitize from 'rehype-sanitize';
@@ -22,7 +22,7 @@ export default function BlogPost() {
             return;
         }
 
-        base44.entities.BlogPost.get(postId).then(data => {
+        odooClient.getBlogPost(postId).then(data => {
             setPost(data);
             setLoading(false);
         });
