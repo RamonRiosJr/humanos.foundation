@@ -105,12 +105,11 @@ export default function HeroSection() {
                         transition={{ delay: 1.2, duration: 1 }}
                         className="flex items-center gap-3 px-4 py-2 rounded-full border border-white/5 bg-white/[0.02] backdrop-blur-sm"
                     >
-                        <div className="flex -space-x-2">
-                            {[1, 2, 3].map((i) => (
-                                <div key={i} className={`w-6 h-6 rounded-full border border-obsidian flex items-center justify-center text-[8px] bg-gradient-to-br from-cyan-500/40 to-blue-500/40 opacity-80 z-${(4-i)*10}`}>
-                                    <div className="w-1 h-1 bg-white rounded-full animate-pulse" style={{ animationDelay: `${i * 0.3}s` }} />
-                                </div>
-                            ))}
+                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-cyan-500/10 border border-cyan-500/20 relative">
+                            {/* Outer Radar Ripple */}
+                            <div className="absolute inset-0 rounded-full border border-cyan-400 opacity-0 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
+                            {/* Inner core pulse */}
+                            <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)] animate-pulse"></div>
                         </div>
                         <div className="flex flex-col items-start">
                             <span className="text-white font-bold text-sm" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>
