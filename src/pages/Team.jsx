@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SEOMeta from '../components/shared/SEOMeta';
 import { motion, AnimatePresence } from 'framer-motion';
-import { base44 } from '@/api/humanosClient';
+import { odooClient } from '../api/odooClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 
@@ -43,7 +43,7 @@ export default function Team() {
         // Fetch live projects from Odoo if available
         const fetchProjects = async () => {
             try {
-                const projects = await base44.entities.Project?.list();
+                const projects = await odooClient.getProjects();
                 if (projects) {
                     setActiveProjects(projects.slice(0, 3));
                 }
@@ -60,7 +60,7 @@ export default function Team() {
         e.preventDefault();
         setLoading(true);
 
-        await base44.entities.JoinRequest.create({ 
+        await odooClient.createLead({ 
             ...form, 
             reason: selectedRole ? `Role interest: ${selectedRole}. ${form.reason}` : form.reason
         });

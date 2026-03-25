@@ -30,7 +30,6 @@ const Terms = lazy(() => import('./pages/Terms'));
 const TheProblem = lazy(() => import('./pages/TheProblem'));
 const Volunteer = lazy(() => import('./pages/Volunteer'));
 const Team = lazy(() => import('./pages/Team'));
-const Admin = lazy(() => import('./pages/Admin'));
 
 export const PAGES = {
     "Accessibility": Accessibility,
@@ -58,7 +57,6 @@ export const PAGES = {
     "TheProblem": TheProblem,
     "Volunteer": Volunteer,
     "Team": Team,
-    "Admin": Admin,
 }
 
 export const pagesConfig = {
