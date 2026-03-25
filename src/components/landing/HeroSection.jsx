@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
@@ -8,6 +8,28 @@ import { useTranslation } from 'react-i18next';
 
 export default function HeroSection() {
     const { t } = useTranslation();
+    const [visitors, setVisitors] = useState(14824);
+
+    useEffect(() => {
+        const fetchVisitors = async () => {
+            try {
+                const hasVisited = sessionStorage.getItem('hfd_visited');
+                if (!hasVisited) {
+                    sessionStorage.setItem('hfd_visited', 'true');
+                    const res = await fetch('https://api.counterapi.dev/v1/humanos_foundation/home/up');
+                    const data = await res.json();
+                    if (data && data.count) setVisitors(14824 + data.count);
+                } else {
+                    const res = await fetch('https://api.counterapi.dev/v1/humanos_foundation/home');
+                    const data = await res.json();
+                    if (data && data.count) setVisitors(14824 + data.count);
+                }
+            } catch (err) {
+                console.error("Visitor fetch error:", err);
+            }
+        };
+        fetchVisitors();
+    }, []);
 
     return (
         <section className="relative min-h-screen flex flex-col items-center px-4 md:px-8 overflow-hidden noise-overlay pt-32 md:pt-40 lg:pt-48 pb-20">
@@ -92,9 +114,9 @@ export default function HeroSection() {
                         </div>
                         <div className="flex flex-col items-start">
                             <span className="text-white font-bold text-sm" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>
-                                {(14284 + Math.floor((Date.now() - 1711200000000) / 86400000) * 12).toLocaleString()}
+                                {visitors.toLocaleString()}
                             </span>
-                            <span className="text-[9px] uppercase tracking-widest text-white/40">Advocates Subscribed</span>
+                            <span className="text-[9px] uppercase tracking-widest text-white/40">Lifetime Visitors</span>
                         </div>
                     </motion.div>
                 </motion.div>
