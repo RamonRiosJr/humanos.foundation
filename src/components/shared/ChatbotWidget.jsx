@@ -11,9 +11,9 @@ const ChatbotWidget = () => {
                     {/* Header */}
                     <div className="flex items-center justify-between bg-black/50 p-4 border-b border-white/10">
                         <div className="flex items-center gap-3">
-                            <img src="/coquibot.png" alt="CoquiBot Avatar" className="w-8 h-8 rounded-full border border-cyan-500/50" />
+                            <img src="/hOS.png" alt="hOS Avatar" className="w-8 h-8 rounded-full border border-cyan-500/50" />
                             <div>
-                                <h3 className="font-semibold text-white text-sm">CoquiBot</h3>
+                                <h3 className="font-semibold text-white text-sm">hOS AI</h3>
                                 <p className="text-[10px] text-cyan-400 font-mono tracking-wider uppercase">Foundation AI (Beta)</p>
                             </div>
                         </div>
@@ -53,20 +53,20 @@ const ChatbotWidget = () => {
                 aria-label="Toggle AI Chatbot"
                 aria-expanded={isOpen}
             >
-                {/* Green Animated Halo */}
-                <div className="absolute inset-0 bg-green-500 rounded-full blur-2xl opacity-40 animate-halo-pulse group-hover:opacity-70 transition-opacity"></div>
-                <div className="absolute inset-0 bg-green-400 rounded-full blur-md opacity-30 animate-pulse group-hover:opacity-50 transition-opacity"></div>
+                {/* Blue/Red Animated Halo */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-red-500 rounded-full blur-2xl opacity-40 animate-halo-pulse group-hover:opacity-70 transition-opacity"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-red-400 rounded-full blur-md opacity-30 animate-pulse group-hover:opacity-50 transition-opacity"></div>
 
                 <div className={`relative w-16 h-16 flex items-center justify-center transition-all duration-500 overflow-visible`}>
                     {isOpen ? (
-                        <div className="w-12 h-12 flex items-center justify-center bg-slate-900 border border-green-500 rounded-full shadow-[0_0_15px_rgba(34,197,94,0.5)]">
-                            <X className="w-6 h-6 text-green-400" />
+                        <div className="w-12 h-12 flex items-center justify-center bg-slate-900 border border-blue-500 rounded-full shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                            <X className="w-6 h-6 text-blue-400" />
                         </div>
                     ) : (
                         <img
-                            src="/coquibot.png"
-                            alt="CoquiBot"
-                            className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]"
+                            src="/hOS.png"
+                            alt="hOS AI"
+                            className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(239,68,68,0.5)]"
                         />
                     )}
                 </div>

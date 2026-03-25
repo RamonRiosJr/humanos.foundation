@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SEOMeta from '../components/shared/SEOMeta';
 import { motion, AnimatePresence } from 'framer-motion';
-import { base44 } from '@/api/humanosClient';
+import { odooClient } from '../api/odooClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
@@ -26,7 +26,7 @@ export default function Volunteer() {
         e.preventDefault();
         setLoading(true);
 
-        await base44.entities.JoinRequest.create({ ...form, reason: selectedRole ? `Role interest: ${selectedRole}. ${form.reason}` : form.reason });
+        await odooClient.createLead({ ...form, reason: selectedRole ? `Role interest: ${selectedRole}. ${form.reason}` : form.reason });
         setSubmitted(true);
         setLoading(false);
     };
