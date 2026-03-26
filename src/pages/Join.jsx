@@ -59,7 +59,6 @@ export default function Join() {
                     console.log("Mailing list tag error, strictly soft fail:", mailErr);
                 }
             }
-            
             setSubmitted(true);
         } catch (err) {
             console.error('Waitlist Submission Failed:', err);
