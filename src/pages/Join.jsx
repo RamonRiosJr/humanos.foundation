@@ -50,6 +50,16 @@ export default function Join() {
 
         try {
             await odooClient.createLead(payload);
+            
+            // Re-route implicitly verified newsletter opt-ins natively to the Mass Mailing module 
+            if (payload.newsletter) {
+                try {
+                    await odooClient.createMailingContact({ name: payload.name, email: payload.email });
+                } catch (mailErr) {
+                    console.log("Mailing list tag error, strictly soft fail:", mailErr);
+                }
+            }
+            
             setSubmitted(true);
         } catch (err) {
             console.error('Waitlist Submission Failed:', err);
