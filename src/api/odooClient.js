@@ -114,14 +114,37 @@ class OdooClient {
     }
   }
 
+  // HR applicant integration for Team Hub
+  async createApplicant(formData) {
+    return this.request('hr.applicant', 'POST', {
+        values: {
+            name: `Network Application: ${formData.role} - ${formData.name}`,
+            partner_name: formData.name,
+            email_from: formData.email,
+            description: `Reason: ${formData.reason || 'None'}`
+        }
+    });
+  }
+
+  // Mailing list integration for Newsletter subscriptions
+  async createMailingContact(formData) {
+    return this.request('mailing.contact', 'POST', {
+        values: {
+            name: formData.name,
+            email: formData.email,
+            list_ids: [[4, 1]] // Adds to default list ID 1
+        }
+    });
+  }
+
   // CRM Integration for Join/Waitlist
   async createLead(formData) {
     return this.request('crm.lead', 'POST', {
         values: {
-            name: `Website Lead: ${formData.name}`,
+            name: `Website Waitlist: ${formData.name}`,
             contact_name: formData.name,
             email_from: formData.email,
-            description: `Movement Join Request\nRole: ${formData.role}\nReason: ${formData.reason || 'None'}\nNewsletter: ${formData.newsletter}\nVolunteer: ${formData.volunteer}`
+            description: `Waitlist Join Request\nRole: ${formData.role}\nReason: ${formData.reason || 'None'}\nVolunteer: ${formData.volunteer}`
         }
     });
   }
