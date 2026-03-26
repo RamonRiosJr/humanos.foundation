@@ -60,8 +60,9 @@ export default function Team() {
         e.preventDefault();
         setLoading(true);
 
-        await odooClient.createLead({ 
+        await odooClient.createApplicant({ 
             ...form, 
+            role: selectedRole,
             reason: selectedRole ? `Role interest: ${selectedRole}. ${form.reason}` : form.reason
         });
         
