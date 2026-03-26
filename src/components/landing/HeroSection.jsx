@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
@@ -8,6 +8,28 @@ import { useTranslation } from 'react-i18next';
 
 export default function HeroSection() {
     const { t } = useTranslation();
+    const [visitors, setVisitors] = useState(14824);
+
+    useEffect(() => {
+        const fetchVisitors = async () => {
+            try {
+                const hasVisited = sessionStorage.getItem('hfd_visited');
+                if (!hasVisited) {
+                    sessionStorage.setItem('hfd_visited', 'true');
+                    const res = await fetch('https://api.counterapi.dev/v1/humanos_foundation/home/up');
+                    const data = await res.json();
+                    if (data && data.count) setVisitors(14824 + data.count);
+                } else {
+                    const res = await fetch('https://api.counterapi.dev/v1/humanos_foundation/home');
+                    const data = await res.json();
+                    if (data && data.count) setVisitors(14824 + data.count);
+                }
+            } catch (err) {
+                console.error("Visitor fetch error:", err);
+            }
+        };
+        fetchVisitors();
+    }, []);
 
     return (
         <section className="relative min-h-screen flex flex-col items-center px-4 md:px-8 overflow-hidden noise-overlay pt-32 md:pt-40 lg:pt-48 pb-20">
@@ -83,18 +105,17 @@ export default function HeroSection() {
                         transition={{ delay: 1.2, duration: 1 }}
                         className="flex items-center gap-3 px-4 py-2 rounded-full border border-white/5 bg-white/[0.02] backdrop-blur-sm"
                     >
-                        <div className="flex -space-x-2">
-                            {[1, 2, 3].map((i) => (
-                                <div key={i} className={`w-6 h-6 rounded-full border border-obsidian flex items-center justify-center text-[8px] bg-gradient-to-br from-cyan-500/40 to-blue-500/40 opacity-80 z-${(4-i)*10}`}>
-                                    <div className="w-1 h-1 bg-white rounded-full animate-pulse" style={{ animationDelay: `${i * 0.3}s` }} />
-                                </div>
-                            ))}
+                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-cyan-500/10 border border-cyan-500/20 relative">
+                            {/* Outer Radar Ripple */}
+                            <div className="absolute inset-0 rounded-full border border-cyan-400 opacity-0 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
+                            {/* Inner core pulse */}
+                            <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)] animate-pulse"></div>
                         </div>
                         <div className="flex flex-col items-start">
                             <span className="text-white font-bold text-sm" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>
-                                {(14284 + Math.floor((Date.now() - 1711200000000) / 86400000) * 12).toLocaleString()}
+                                {visitors.toLocaleString()}
                             </span>
-                            <span className="text-[9px] uppercase tracking-widest text-white/40">Advocates Subscribed</span>
+                            <span className="text-[9px] uppercase tracking-widest text-white/40">Lifetime Visitors</span>
                         </div>
                     </motion.div>
                 </motion.div>
