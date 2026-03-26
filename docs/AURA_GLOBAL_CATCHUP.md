@@ -51,19 +51,15 @@ The Aura ecosystem consists of 4 distinct codebases working in synergy. Changes 
 - _Pending Tasks:_
   - Publish public directory of validated "Clinic IDs" for the B2B SaaS routing.
 
-## 🤖 Repository 4: AurahOS_Docs_Portal_&_Tech_Support_AuraBot
+## 🤖 Repository 4: AurahOS*Docs_Portal*&\_Tech_Support_AuraBot
 
-**Last Synced:** 2026-03-25
+**Last Synced:** Pending
 
 - _Recent Changes:_
-  - **Enterprise UI/UX Architecture Complete**: Upgraded the documentation portal to Stripe/Vercel DX standards. Implemented a sticky right-rail Minimap (Table of Contents), a dynamic Framer Motion Mobile Drawer, natively injected Dark/Light Mode explicit toggles via `next-themes`, and elegantly designed a glass-morphed 404 Mainframe Empty State.
-  - **Dynamic Markdown Engine (GFM + Prism)**: Scrapped basic text rendering. Integrated `remark-gfm` for standardizing tables/strikethroughs and `react-syntax-highlighter` (Prism vscDarkPlus) with native hover-to-copy JSON buttons. 
-  - **SEO & Graph Metadata**: Bolted `react-helmet-async` globally to the React DOM to dynamically inject `#id` link titles into the `<head>` for rich Discord/Slack social previews.
-  - **Supabase Edge Function AI**: Locked down the OpenAI/Pinecone RAG pipeline by ripping API keys from the client-side UI and migrating the vector-query math to a secure `supabase/functions/chat` Edge Function.
-  - **Advanced Auditor Gate**: Replaced inherently insecure `localStorage` codes with cryptographically secure Supabase JWT Auth for role-based portal access (Admin, Auditor, Public).
-  - **GitHub Matrix Sync**: Logged 5 massive architectural features into formal GitHub Issues and mapped them to the central Project board to organically repair the PR/Review metric matrix.
+  - Repository recognized as the new front-line documentation portal and tech support operator.
 - _Pending Tasks:_
-  - Engineer the Odoo API fallback logic: Auto-convert thumbs-down 👎 AuraBot responses into native JSON-RPC payloads firing straight to the Odoo ERP Helpdesk ticket queue.
+  - Establish connection to Odoo instance.
+  - Ingest `aura_hos_docs` markdown.
 
 ---
 
