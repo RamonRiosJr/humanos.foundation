@@ -20,7 +20,7 @@ export default defineConfig({
             '/odoo_local': {
                 target: 'https://team.humanos.foundation',
                 changeOrigin: true,
-                rewrite: (path) => path.replace(/^\/odoo_local/, '/send_request'),
+                rewrite: (path) => path.replace(/^\/odoo_local/, '/humanos_api'),
                 secure: false
             }
         }
