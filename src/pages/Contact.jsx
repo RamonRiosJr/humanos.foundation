@@ -16,7 +16,7 @@ const inquiryTypes = [
 ];
 
 export default function Contact() {
-    const [form, setForm] = useState({ name: '', email: '', organization: '', inquiry_type: '', subject: '', message: '', honeypot: '' });
+    const [form, setForm] = useState({ name: '', email: '', phone: '', zip: '', organization: '', inquiry_type: '', subject: '', message: '', honeypot: '' });
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
 
@@ -120,6 +120,8 @@ export default function Contact() {
                                     <div className="grid sm:grid-cols-2 gap-4">
                                         {[{ key: 'name', label: 'Full Name', type: 'text', placeholder: 'Your name', required: true },
                                         { key: 'email', label: 'Email', type: 'email', placeholder: 'you@example.com', required: true },
+                                        { key: 'phone', label: 'Phone', type: 'tel', placeholder: '(555) 123-4567', required: false },
+                                        { key: 'zip', label: 'Zip Code', type: 'text', placeholder: 'Ex: 90210', required: false },
                                         { key: 'organization', label: 'Organization', type: 'text', placeholder: 'Optional', required: false },
                                         { key: 'subject', label: 'Subject', type: 'text', placeholder: 'Brief subject', required: false },
                                         ].map((field) => (
