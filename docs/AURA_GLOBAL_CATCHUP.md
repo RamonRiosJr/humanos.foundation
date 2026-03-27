@@ -19,14 +19,15 @@ The Aura ecosystem consists of 4 distinct codebases working in synergy. Changes 
 
 ## 🛠️ Repository 1: aura-health-os (Core App)
 
-**Last Synced:** 2026-03-26
+**Last Synced:** 2026-03-27
 
 - _Recent Changes:_
-  - **Zero-Knowledge Handshake Gate**: Deployed an explicit overlying Vault PIN challenge directly onto the Clinical Handshake route to guarantee end-to-end device physical security prior to data decryption.
-  - **Clinical Handshake Architecture Upgrade**: Systematically resolved raw JSON dumps for `ReasonForVisit` and `ReviewOfSystems` fields, implementing native, aesthetically integrated print layouts. Sorted patient conditions with strict clinical urgency (`Suspected` > `Recurring` > `Active`).
-  - **Spanglish Eradication & i18n Auditing**: Architected an autonomous translation extraction script that captured 38+ unbound English fallback labels and injected them into `es.json`. Wrapped raw database enumerations (`mriSafetyStatus`, `reactionSeverity`, `status`) in translation hooks to guarantee a 100% localized printout.
-  - **Efficacy Log Aggregation**: Refactored the Medication Efficacy rendering algorithm to intelligently compress dozens of daily logs into a simple, physician-friendly average score (e.g., "Efficacy: 8.5/10 (60 logs)").
-  - **Clinical Reference Legend**: Embedded an automated legend at the footer of the Handshake OCR document to orient external physicians to Aura's internal priority tagging structures.
+  - **Version 0.8.0-rc.1 Leap:** Elevated the fundamental system versioning off of prototype `0.5.0-beta` to `0.8.0-rc.1`. The Artificial Intelligence architecture has fully matured past conversational chatting into a hard-locked, FDA-compliant Patient Operating System component.
+  - **Autonomous AI-to-Vault Logging:** Empowered the `useChat` stream interceptor with regex payload execution (`[ACTION:SAVE_EVENTS_VAULT]`), granting Aura the authority to autonomously transform user-submitted free-text into structurally formatted "Clinical Chart Notes" persisted directly and silently to the `MedicalHistoryContext`.
+  - **[MANDATORY PRE-FLIGHT COMPLIANCE CHECK]:** Completely extracted Aura's core LLM instructions from hard-coded TypeScript string literals into an isolated `AURA_SYSTEM_DIRECTIVE.md` template. Injected an explicit "Zero-Trust" rule block mandating Aura to actively audit every user prompt against FTC Deceptive claims, DOJ Emergency Liability scopes, and HIPAA bounds before even generating an analysis frame.
+  - **FDA SaMD Anti-Triage Protocol:** Explicitly suppressed Aura's capacity to diagnose or independently route patients to specialists based on their symptoms. Replaced independent triage with an explicit, FDA MDDS administrative directive, securely presenting the patient's existing Care Team context and returning the routing decision entirely to the patient.
+  - **Local Resource Grounding (Safe Search):** Programmatically wired the Gemini SDK's real-time Web Search capabilities directly to the patient's localized Intake Form (Zip/City scope). Integrated strict "Safe Grounding" controls allowing spatial retrieval exclusively focused on Healthcare, Clinics, Food Banks, Mental Health, and Legal constraints, completely blocking external/unsafe indexing.
+  - **UI/UX 'Clinical 2026' Standardization:** Systemically purged all raw/blinding Tailwind UI structures and implicit english variables out of the `AuraChatScreen.tsx`. Transitioned all hard-edges to FSD-compliant contextual components (`GlassHeader`, Semantically-typed action triggers like `Eraser`), and mapped all interactive UI/UX states directly onto localized `i18next` endpoints and contextual Dark Mode environment variables (`backgroundColor: var(--card-bg)`).
 - _Pending Tasks:_
   - Implement Provider Terminal FHIR ingestion.
   - Setup SOC2 infrastructure.
@@ -47,10 +48,12 @@ The Aura ecosystem consists of 4 distinct codebases working in synergy. Changes 
 
 ## 🏥 Repository 3: humanos.foundation (Non-Profit Site)
 
-**Last Synced:** 2026-03-26
+**Last Synced:** 2026-03-27
 
 - _Recent Changes:_
   - **Odoo REST Pipeline Restoration**: Surgically severed dependencies on the third-party Web3Forms relay, rewriting the "Apply for Network" and "Newsletter" React components to ingest exclusively through native Odoo `hr.applicant` and `mailing.contact` native REST APIs.
+  - **Odoo REST API Ghost Routing Bypass**: Diagnosed and completely dismantled a persistent WSGI routing conflict caused by a legacy ghost module locally overriding the identical `/send_request` endpoint. Securely rerouted the NodeJS React edge proxy explicitly through a fresh `/humanos_api` controller path, forcibly isolating the data pipeline from older WSGI loops.
+  - **Odoo 19 MissingError Eradication**: Decoded a hidden native `status=404 Record not found` payload dynamically cascading out of Odoo's core ORM engine. Eradicated the crash completely by stripping unbound relational variables (`contact_name`, `list_ids`) from the front-end JSON packet strings, guaranteeing the pristine `.sudo()` query executed cleanly without physically failing Postgres `Many2one` entity relationship checks.
   - Deployed a persistent live global visitor counter directly into the UI.
 - _Pending Tasks:_
   - Publish public directory of validated "Clinic IDs" for the B2B SaaS routing.
@@ -62,6 +65,8 @@ The Aura ecosystem consists of 4 distinct codebases working in synergy. Changes 
 - _Recent Changes:_
   - **Established Role Identity (Inter-Agent Protocol):** Explicitly formalized my role as the **Enterprise Portal & Support Operator**, responsible for secure markdown parsing, RAG implementation, Helpdesk UI deployment, and Odoo routing.
   - **Ingested the DOC_SECURITY_MATRIX.md**: Received the official security clearance map from the Strategy AI. I have formally registered `Tier 2` (Business/Internal) and `Tier 3` (Restricted) as **Hard-Blocked / Zero-Trust** vectors. My Pinecone RAG engine will forcefully bypass and drop `/compliance`, `/server_config`, `/business-registration`, and `/business_plan`.
+  - **Dynamic RAG Compliance Sandbox**: Restructured the UI to provide explicit testing context tabs (Public/Admin/Auditor) so the architect can instantly swap security scopes and test RAG filtering boundaries live in the interface.
+  - **Component Layout Tuning**: Offset the AuraBot UI floating widget on the Y-Axis (`bottom-24`) to eliminate Z-index collisions with third-party settings and system-level widgets anchored to the bottom corners.
   - Repaired CI/CD pipeline `checkJs` TypeScript compilation errors and purged a fatal broken Git Submodule cache, executing a fully green Deploy to Production.
 - _Pending Tasks:_
   - Build the automated RegEx path-blocking iterators into the RAG vectorization ingestion script to enforce the `DOC_SECURITY_MATRIX.md` rules.
