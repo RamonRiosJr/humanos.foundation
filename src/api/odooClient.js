@@ -130,7 +130,6 @@ class OdooClient {
   async createMailingContact(formData) {
     return this.request('mailing.contact', 'POST', {
         values: {
-            name: formData.name,
             email: formData.email
         }
     });
