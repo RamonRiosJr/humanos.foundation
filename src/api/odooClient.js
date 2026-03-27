@@ -141,7 +141,6 @@ class OdooClient {
     return this.request('crm.lead', 'POST', {
         values: {
             name: `Website Waitlist: ${formData.name}`,
-            contact_name: formData.name,
             email_from: formData.email,
             phone: formData.phone || '',
             zip: formData.zip || '',
