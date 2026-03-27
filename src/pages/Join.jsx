@@ -19,7 +19,7 @@ const roles = [
 ];
 
 export default function Join() {
-    const [form, setForm] = useState({ name: '', email: '', role: '', reason: '', newsletter: true, volunteer: false, honeypot: '' });
+    const [form, setForm] = useState({ name: '', email: '', phone: '', zip: '', role: '', reason: '', newsletter: true, volunteer: false, honeypot: '' });
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
 
@@ -149,6 +149,26 @@ export default function Join() {
                                             value={form.email}
                                             onChange={e => setForm({ ...form, email: e.target.value })}
                                             placeholder="you@example.com"
+                                            className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.1] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className="text-xs text-white/50 font-bold uppercase tracking-wider mb-2 block">Phone (Optional)</label>
+                                        <input
+                                            type="tel"
+                                            value={form.phone}
+                                            onChange={e => setForm({ ...form, phone: e.target.value })}
+                                            placeholder="(555) 123-4567"
+                                            className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.1] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className="text-xs text-white/50 font-bold uppercase tracking-wider mb-2 block">Zip Code</label>
+                                        <input
+                                            type="text"
+                                            value={form.zip}
+                                            onChange={e => setForm({ ...form, zip: e.target.value })}
+                                            placeholder="Ex: 90210"
                                             className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.1] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent"
                                         />
                                     </div>

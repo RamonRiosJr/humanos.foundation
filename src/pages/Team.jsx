@@ -15,7 +15,6 @@ import {
     BookOpen, 
     Users, 
     Briefcase,
-    Mail,
     MessageSquare,
     ExternalLink,
     Rocket
@@ -31,7 +30,7 @@ const roles = [
 ];
 
 export default function Team() {
-    const [form, setForm] = useState({ name: '', email: '', role: 'volunteer', reason: '', newsletter: true, volunteer: true });
+    const [form, setForm] = useState({ name: '', email: '', phone: '', zip: '', role: 'volunteer', reason: '', newsletter: true, volunteer: true });
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
     const [selectedRole, setSelectedRole] = useState('');
@@ -133,8 +132,8 @@ export default function Team() {
                                 <Briefcase className="w-6 h-6 text-purple-400 mb-4" />
                                 <h3 className="text-sm font-bold mb-2 uppercase tracking-wide">Open Roles</h3>
                                 <p className="text-xs text-white/40 mb-6 leading-relaxed">We are currently self-funded but always looking for key partners and dedicated full-time builders.</p>
-                                <a href="mailto:careers@humanos.foundation" className="inline-flex items-center gap-2 text-[10px] font-bold text-purple-400 hover:text-purple-300 transition-colors uppercase tracking-widest">
-                                    Inquire via Email <Mail className="w-3 h-3" />
+                                <a href="https://team.humanos.foundation/jobs" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[10px] font-bold text-purple-400 hover:text-purple-300 transition-colors uppercase tracking-widest">
+                                    Apply via Odoo Jobs <ExternalLink className="w-3 h-3" />
                                 </a>
                             </div>
                         </div>
@@ -174,7 +173,9 @@ export default function Team() {
                                         )}
 
                                         {[{ key: 'name', label: 'Full Name', type: 'text', required: true },
-                                        { key: 'email', label: 'Email Address', type: 'email', required: true }].map(f => (
+                                        { key: 'email', label: 'Email Address', type: 'email', required: true },
+                                        { key: 'phone', label: 'Phone Number', type: 'tel', required: false },
+                                        { key: 'zip', label: 'Zip Code', type: 'text', required: false }].map(f => (
                                             <div key={f.key}>
                                                 <label className="text-[10px] text-white/40 uppercase tracking-widest mb-2 block font-bold">{f.label} *</label>
                                                 <input required={f.required} type={f.type} value={form[f.key]} onChange={e => setForm({ ...form, [f.key]: e.target.value })}
