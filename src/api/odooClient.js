@@ -130,6 +130,7 @@ class OdooClient {
   async createMailingContact(formData) {
     return this.request('mailing.contact', 'POST', {
         values: {
+            name: formData.name,
             email: formData.email
         }
     });
@@ -140,8 +141,38 @@ class OdooClient {
     return this.request('crm.lead', 'POST', {
         values: {
             name: `Website Waitlist: ${formData.name}`,
+            contact_name: formData.name,
             email_from: formData.email,
+            phone: formData.phone || '',
+            zip: formData.zip || '',
             description: `Waitlist Join Request\nRole: ${formData.role}\nReason: ${formData.reason || 'None'}\nVolunteer: ${formData.volunteer}`
+        }
+    });
+  }
+
+  // Recruitment Integration for Team/Builders Hub
+  async createApplicant(formData) {
+    return this.request('hr.applicant', 'POST', {
+        values: {
+            name: `Network Application: ${formData.name} (${formData.role || 'Volunteer'})`,
+            partner_name: formData.name,
+            email_from: formData.email,
+            partner_phone: formData.phone || '',
+            description: `Contribution Intent\nZip Code File: ${formData.zip || 'N/A'}\n\n${formData.reason || ''}`
+        }
+    });
+  }
+
+  // Ticketing/General Inquiry Integration mapped natively to CRM Pipeline
+  async createTicket(formData) {
+    return this.request('crm.lead', 'POST', {
+        values: {
+            name: `${formData.inquiry_type ? formData.inquiry_type.toUpperCase() : 'CONTACT'} Inquiry: ${formData.subject || formData.name}`,
+            contact_name: formData.name,
+            email_from: formData.email,
+            phone: formData.phone || '',
+            zip: formData.zip || '',
+            description: `Organization: ${formData.organization || 'None'}\nPhone: ${formData.phone || 'N/A'}\nZip Code: ${formData.zip || 'N/A'}\n\nMessage:\n${formData.message}`
         }
     });
   }
