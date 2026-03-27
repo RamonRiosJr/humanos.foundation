@@ -131,8 +131,7 @@ class OdooClient {
     return this.request('mailing.contact', 'POST', {
         values: {
             name: formData.name,
-            email: formData.email,
-            list_ids: [[4, 1]] // Adds to default list ID 1
+            email: formData.email
         }
     });
   }
@@ -142,7 +141,6 @@ class OdooClient {
     return this.request('crm.lead', 'POST', {
         values: {
             name: `Website Waitlist: ${formData.name}`,
-            contact_name: formData.name,
             email_from: formData.email,
             description: `Waitlist Join Request\nRole: ${formData.role}\nReason: ${formData.reason || 'None'}\nVolunteer: ${formData.volunteer}`
         }

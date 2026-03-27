@@ -1,6 +1,8 @@
 # 🌍 AURA GLOBAL ECOSYSTEM CATCH-UP
 
 > **Core Directive:** This is the master synchronization file for the entire Aura ecosystem. This project spans 4 distinct repositories and 2 Odoo instances. AI assistants must read this file to understand the _global state_ of the project across all endpoints before making architectural changes.
+> 
+> **AI RAG Protocol:** Upon spawning, AI agents MUST read `MASTER_INDEX.md` (at the root of this repository) to build an immediate mental map of the entire documentation suite across both Aura and Humanos. If the documentation structure changes, the agent must run `node scripts/generate_rag_index.js` at the repo root.
 >
 > **How to use this file:** When the Architect says "execute global catchup" or `/global-catchup`, log the latest session changes under the corresponding repo section with a timestamp.
 
@@ -17,49 +19,53 @@ The Aura ecosystem consists of 4 distinct codebases working in synergy. Changes 
 
 ## 🛠️ Repository 1: aura-health-os (Core App)
 
-**Last Synced:** 2026-03-24
+**Last Synced:** 2026-03-26
 
 - _Recent Changes:_
-  - Overhauled `ClinicalHandshakeScreen.tsx` (Clinical Intake Print module) to utilize CSS Multi-Column Masonry layout, eliminating vertical whitespace gaps for optimal clinic print density.
-  - Performed 04-Compliance-Audit: Purged dangerous SaaS/ONC IT terminology ("HL7 FHIR Structured Output") from the UI, converting to safe-harbor patient advocacy labels ("Patient-Reported Clinical Intake").
-  - Fixed severe data loss where Live Transfer payload arrays (Pharmacies, Meds, Surgery) were hardcoded to `[]` despite user selection.
-  - Hardened Zero-Knowledge metadata: Rewrote Transient WebSocket channel IDs to strictly broadcast using SHA-256 hashes of the `clinicId` to patch PHI metadata leaks.
+  - **Zero-Knowledge Handshake Gate**: Deployed an explicit overlying Vault PIN challenge directly onto the Clinical Handshake route to guarantee end-to-end device physical security prior to data decryption.
+  - **Clinical Handshake Architecture Upgrade**: Systematically resolved raw JSON dumps for `ReasonForVisit` and `ReviewOfSystems` fields, implementing native, aesthetically integrated print layouts. Sorted patient conditions with strict clinical urgency (`Suspected` > `Recurring` > `Active`).
+  - **Spanglish Eradication & i18n Auditing**: Architected an autonomous translation extraction script that captured 38+ unbound English fallback labels and injected them into `es.json`. Wrapped raw database enumerations (`mriSafetyStatus`, `reactionSeverity`, `status`) in translation hooks to guarantee a 100% localized printout.
+  - **Efficacy Log Aggregation**: Refactored the Medication Efficacy rendering algorithm to intelligently compress dozens of daily logs into a simple, physician-friendly average score (e.g., "Efficacy: 8.5/10 (60 logs)").
+  - **Clinical Reference Legend**: Embedded an automated legend at the footer of the Handshake OCR document to orient external physicians to Aura's internal priority tagging structures.
 - _Pending Tasks:_
   - Implement Provider Terminal FHIR ingestion.
   - Setup SOC2 infrastructure.
-  - Actually map the 35+ English strings in Clinical Handshake to `es.json`.
 
 ## 📚 Repository 2: aura_hos_docs (Architecture & Strategy)
 
-**Last Synced:** 2026-03-25
+**Last Synced:** 2026-03-26
 
 - _Recent Changes:_
+  - **[B2B HARDWARE PIVOT]**: Aura is explicitly expanding beyond software into custom physical ambient/wearable health devices. Updated the business plans (`09-Use-of-Funds.md` and `07-Team-and-Advisors.md`) to budget for dummy test prototypes, an initial 100-unit pilot batch, and immediately structured hiring tracks for an Embedded Hardware & IoT Developer and a Content Management/Marketing Lead.
+  - **The RAG Master Index Protocol (v2)**: Remapped the `generate_rag_index.js` compiler to the root of the repository. Ecosystem bots (and human operators) now use `MASTER_INDEX.md` at the repo root as their universal source of truth for repository structure across **both** Aura and Humanos.
   - **[MASSIVE PIVOT]**: Shifted the platform identity from an "Interoperability Tool" to **"Clinical Accessibility Infrastructure"**. This legally and structurally bypasses HIPAA/EHR dependencies and explicitly targets the medically underserved.
-  - **The 16-Mode Accessibility Engine**: Overhauled the core Business Plan (`01-Problem-and-Solution.md`, `03-Competitive-Landscape.md`, `05-Go-To-Market-Strategy.md`) to structurally integrate the new **16-mode Cognitive Accessibility Engine** (Dementia Mode, AAC Board, Sensory Filter, Dyslexia Font, etc.). This acts as a massive competitive moat and targets $950K federal health equity grants (PCORI/AHRQ).
-  - **C4 Architecture Deep Clean**: Scanned and purged lingering "Fall Detection" / SaMD hardware traps from `ARCHITECTURE-C4-MODEL.md`, replacing it with "Kinetic Event" parameters.
-  - **Global Purge Verified**: Validated that all pitch decks, investor collateral, and public markdown (`README.md`, `PERMISSIONS.md`, `ROADMAP.md` etc.) contain ZERO references to "HL7 FHIR" endpoints, securing the FTC HBNR BAA-exemption.
+  - **The 16-Mode Accessibility Engine**: Overhauled the core Business Plan to structurally integrate the new **16-mode Cognitive Accessibility Engine**.
+  - **C4 Architecture & FDA Deep Clean**: Scanned and purged lingering "Fall Detection" / SaMD hardware traps, replacing them with "Kinetic Event" parameters. Complete eradication of "HL7 FHIR" endpoints to secure FTC HBNR BAA-exemption.
+  - **Published `DOC_SECURITY_MATRIX.md`**: Formally responded to the Docs Portal AI by explicitly categorizing the entire macro-architecture documentation into 3 strict tiers (`Tier 1: Public`, `Tier 2: Internal Business`, `Tier 3: Restricted/Auditor Only`).
 - _Pending Tasks:_
-  - Establish connection to the new Next.js Support Portal (RAG).
   - Pursue formal FDA SaMD Regulatory Counsel Opinion.
 
 ## 🏥 Repository 3: humanos.foundation (Non-Profit Site)
 
-**Last Synced:** Pending
+**Last Synced:** 2026-03-26
 
 - _Recent Changes:_
-  - Rebranded GoFundMe strategy to ensure brand safety for the "Aura" and "hOS" trademarks.
+  - **Odoo REST Pipeline Restoration**: Surgically severed dependencies on the third-party Web3Forms relay, rewriting the "Apply for Network" and "Newsletter" React components to ingest exclusively through native Odoo `hr.applicant` and `mailing.contact` native REST APIs.
+  - Deployed a persistent live global visitor counter directly into the UI.
 - _Pending Tasks:_
   - Publish public directory of validated "Clinic IDs" for the B2B SaaS routing.
 
-## 🤖 Repository 4: AurahOS*Docs_Portal*&\_Tech_Support_AuraBot
+## 🤖 Repository 4: AurahOS_Docs_Portal_&_Tech_Support_AuraBot
 
-**Last Synced:** Pending
+**Last Synced:** 2026-03-27
 
 - _Recent Changes:_
-  - Repository recognized as the new front-line documentation portal and tech support operator.
+  - **Established Role Identity (Inter-Agent Protocol):** Explicitly formalized my role as the **Enterprise Portal & Support Operator**, responsible for secure markdown parsing, RAG implementation, Helpdesk UI deployment, and Odoo routing.
+  - **Ingested the DOC_SECURITY_MATRIX.md**: Received the official security clearance map from the Strategy AI. I have formally registered `Tier 2` (Business/Internal) and `Tier 3` (Restricted) as **Hard-Blocked / Zero-Trust** vectors. My Pinecone RAG engine will forcefully bypass and drop `/compliance`, `/server_config`, `/business-registration`, and `/business_plan`.
+  - Repaired CI/CD pipeline `checkJs` TypeScript compilation errors and purged a fatal broken Git Submodule cache, executing a fully green Deploy to Production.
 - _Pending Tasks:_
+  - Build the automated RegEx path-blocking iterators into the RAG vectorization ingestion script to enforce the `DOC_SECURITY_MATRIX.md` rules.
   - Establish connection to Odoo instance.
-  - Ingest `aura_hos_docs` markdown.
 
 ---
 
