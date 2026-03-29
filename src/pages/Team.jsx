@@ -1,40 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import SEOMeta from '../components/shared/SEOMeta';
-import { motion, AnimatePresence } from 'framer-motion';
 import { odooClient } from '../api/odooClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 
 import PageHero from '../components/shared/PageHero';
 import { 
-    CheckCircle2, 
-    Code, 
-    PenTool, 
-    Globe, 
-    Megaphone, 
-    BookOpen, 
-    Users, 
     Briefcase,
     MessageSquare,
     ExternalLink,
     Rocket
 } from 'lucide-react';
 
-const roles = [
-    { icon: Code, title: 'Developer', desc: 'Build open-source tools for the movement' },
-    { icon: PenTool, title: 'Writer / Editor', desc: 'Create content and thought leadership' },
-    { icon: Globe, title: 'Translator', desc: 'Make the movement globally accessible' },
-    { icon: Megaphone, title: 'Advocate', desc: 'Spread the message in your community' },
-    { icon: BookOpen, title: 'Researcher', desc: 'Contribute data and policy research' },
-    { icon: Users, title: 'Community Lead', desc: 'Organize local chapters and events' },
-];
 
 export default function Team() {
-    const [form, setForm] = useState({ name: '', email: '', phone: '', zip: '', role: 'volunteer', reason: '', newsletter: true, volunteer: true });
-    const [submitted, setSubmitted] = useState(false);
-    const [loading, setLoading] = useState(false);
-    const [selectedRole, setSelectedRole] = useState('');
-
     const [activeProjects, setActiveProjects] = useState([]);
     const [loadingProjects, setLoadingProjects] = useState(true);
 
@@ -55,20 +34,6 @@ export default function Team() {
         fetchProjects();
     }, []);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-
-        await odooClient.createApplicant({ 
-            ...form, 
-            role: selectedRole,
-            reason: selectedRole ? `Role interest: ${selectedRole}. ${form.reason}` : form.reason
-        });
-        
-        setSubmitted(true);
-        setLoading(false);
-    };
-
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta 
@@ -86,10 +51,10 @@ export default function Team() {
             />
 
             <section className="pb-28 px-4 md:px-8">
-                <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12">
+                <div className="max-w-4xl mx-auto flex flex-col items-center justify-center gap-12">
                     
-                    {/* Left Column: Context & Projects */}
-                    <div className="lg:col-span-7 space-y-12">
+                    {/* Centered Column: Context & Projects */}
+                    <div className="w-full space-y-12">
                         <div className="glass-strong rounded-3xl p-8 border border-white/[0.05]">
                             <h2 className="text-xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>
                                 <Rocket className="w-5 h-5 text-cyan-400" />
@@ -136,72 +101,6 @@ export default function Team() {
                                     Apply via Odoo Jobs <ExternalLink className="w-3 h-3" />
                                 </a>
                             </div>
-                        </div>
-                    </div>
-
-                    {/* Right Column: Enrollment Form */}
-                    <div className="lg:col-span-5">
-                        <div className="sticky top-24">
-                            <AnimatePresence mode="wait">
-                                {submitted ? (
-                                    <motion.div key="success" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="glass-strong rounded-3xl p-12 text-center border border-cyan-500/20">
-                                        <CheckCircle2 className="w-14 h-14 text-cyan-400 mx-auto mb-5" />
-                                        <h2 className="text-xl font-bold mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Application Received</h2>
-                                        <p className="text-white/60 text-sm leading-relaxed mb-4">You've taken the first step toward reclaiming clinical sovereignty. We'll be in touch with next steps.</p>
-                                    </motion.div>
-                                ) : (
-                                    <motion.form key="form" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} onSubmit={handleSubmit} className="glass-strong rounded-3xl p-8 border border-white/[0.05] space-y-5">
-                                        <div className="border-b border-white/[0.05] pb-4 mb-4">
-                                            <h3 className="text-base font-semibold text-white/80" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Apply for the Network</h3>
-                                            <p className="text-[11px] text-white/30 uppercase tracking-widest mt-1">Select your expertise</p>
-                                        </div>
-
-                                        <div className="grid grid-cols-3 gap-2 mb-6">
-                                            {roles.map((role) => (
-                                                <button key={role.title} type="button" onClick={() => setSelectedRole(role.title)}
-                                                    className={`flex flex-col items-center gap-2 p-3 rounded-xl transition-all duration-300 border ${selectedRole === role.title ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400' : 'glass border-white/[0.05] text-white/20 hover:text-white/40 hover:border-white/10'}`}
-                                                >
-                                                    <role.icon className="w-4 h-4" />
-                                                </button>
-                                            ))}
-                                        </div>
-
-                                        {selectedRole && (
-                                            <motion.p initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="text-[10px] text-cyan-400 font-bold uppercase tracking-widest text-center mb-4">
-                                                Selected Role: {selectedRole}
-                                            </motion.p>
-                                        )}
-
-                                        {[{ key: 'name', label: 'Full Name', type: 'text', required: true },
-                                        { key: 'email', label: 'Email Address', type: 'email', required: true },
-                                        { key: 'phone', label: 'Phone Number', type: 'tel', required: false },
-                                        { key: 'zip', label: 'Zip Code', type: 'text', required: false }].map(f => (
-                                            <div key={f.key}>
-                                                <label className="text-[10px] text-white/40 uppercase tracking-widest mb-2 block font-bold">{f.label} *</label>
-                                                <input required={f.required} type={f.type} value={form[f.key]} onChange={e => setForm({ ...form, [f.key]: e.target.value })}
-                                                    className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent shadow-inner" />
-                                            </div>
-                                        ))}
-
-                                        <div>
-                                            <label className="text-[10px] text-white/40 uppercase tracking-widest mb-2 block font-bold">Contribution Intent</label>
-                                            <textarea value={form.reason} onChange={e => setForm({ ...form, reason: e.target.value })} rows={4}
-                                                placeholder="Tell us about your background and how you want to contribute to the hOS movement..."
-                                                className="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 border border-white/[0.06] focus:border-cyan-500/40 focus:outline-none transition-colors bg-transparent resize-none" />
-                                        </div>
-
-                                        <div className="flex justify-center mt-2">
-                                            {/* Turnstile Bypassed for Testing */}
-                                        </div>
-
-                                        <button type="submit" disabled={loading} className="w-full glow-btn py-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-white font-bold text-xs uppercase tracking-widest disabled:opacity-50">
-                                            {loading ? 'Submitting...' : 'Join the Guardian Network →'}
-                                        </button>
-                                        
-                                        <p className="text-[9px] text-white/10 text-center uppercase tracking-tighter">By joining, you agree to the Foundation's Code of Conduct and Mission.</p>
-                                    </motion.form>
-                                )}
-                            </AnimatePresence>
                         </div>
                     </div>
                 </div>
