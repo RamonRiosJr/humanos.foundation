@@ -1,40 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import SEOMeta from '../components/shared/SEOMeta';
-import { motion, AnimatePresence } from 'framer-motion';
 import { odooClient } from '../api/odooClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 
 import PageHero from '../components/shared/PageHero';
 import { 
-    CheckCircle2, 
-    Code, 
-    PenTool, 
-    Globe, 
-    Megaphone, 
-    BookOpen, 
-    Users, 
     Briefcase,
     MessageSquare,
     ExternalLink,
     Rocket
 } from 'lucide-react';
 
-const roles = [
-    { icon: Code, title: 'Developer', desc: 'Build open-source tools for the movement' },
-    { icon: PenTool, title: 'Writer / Editor', desc: 'Create content and thought leadership' },
-    { icon: Globe, title: 'Translator', desc: 'Make the movement globally accessible' },
-    { icon: Megaphone, title: 'Advocate', desc: 'Spread the message in your community' },
-    { icon: BookOpen, title: 'Researcher', desc: 'Contribute data and policy research' },
-    { icon: Users, title: 'Community Lead', desc: 'Organize local chapters and events' },
-];
 
 export default function Team() {
-    const [form, setForm] = useState({ name: '', email: '', phone: '', zip: '', role: 'volunteer', reason: '', newsletter: true, volunteer: true });
-    const [submitted, setSubmitted] = useState(false);
-    const [loading, setLoading] = useState(false);
-    const [selectedRole, setSelectedRole] = useState('');
-
     const [activeProjects, setActiveProjects] = useState([]);
     const [loadingProjects, setLoadingProjects] = useState(true);
 
@@ -54,20 +33,6 @@ export default function Team() {
         };
         fetchProjects();
     }, []);
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-
-        await odooClient.createApplicant({ 
-            ...form, 
-            role: selectedRole,
-            reason: selectedRole ? `Role interest: ${selectedRole}. ${form.reason}` : form.reason
-        });
-        
-        setSubmitted(true);
-        setLoading(false);
-    };
 
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
