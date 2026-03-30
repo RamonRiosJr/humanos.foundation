@@ -23,13 +23,25 @@ class OdooClient {
     
     // Natively normalize API packets intelligently seamlessly cleanly
     const finalMethod = (data && method.toUpperCase() === 'GET') ? 'POST' : method;
-    const finalBody = data ? JSON.stringify(data) : undefined;
+    
+    // We strictly encode the JSON inside a URLSearchParams 'values' or data struct
+    // to force Werkzeug to use request.form instead of trying to internally decode application/json
+    let finalBody = undefined;
+    let contentType = 'application/json';
+    
+    if (data) {
+        contentType = 'application/x-www-form-urlencoded';
+        finalBody = new URLSearchParams();
+        for (const [key, val] of Object.entries(data)) {
+            finalBody.append(key, typeof val === 'object' ? JSON.stringify(val) : val);
+        }
+    }
     
     try {
         const response = await fetch(url, {
             method: finalMethod,
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': contentType,
                 'api-key': token
             },
             body: finalBody
