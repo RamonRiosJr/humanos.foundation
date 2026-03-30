@@ -1,0 +1,16 @@
+
+--- Testing Content-Type: application/json ---
+Status: 500
+Response: <!doctype html> <html lang=en> <title>500 Internal Server Error</title> <h1>Internal Server Error</h...
+
+--- Testing Content-Type: text/plain ---
+Status: 500
+Response: <!doctype html> <html lang=en> <title>500 Internal Server Error</title> <h1>Internal Server Error</h...
+
+--- Testing Content-Type: NONE ---
+Status: 500
+Response: <!doctype html> <html lang=en> <title>500 Internal Server Error</title> <h1>Internal Server Error</h...
+
+--- Testing Content-Type: application/x-www-form-urlencoded ---
+Status: 400
+Response: {"error": "No values provided for creation"}...
