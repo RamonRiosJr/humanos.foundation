@@ -4,8 +4,8 @@ import { useRef } from 'react';
 import { AlertTriangle, Sparkles, FileX, Wifi, Clock, ShieldCheck, Scan, Database } from 'lucide-react';
 
 const brokenItems = [
-    { icon: Clock, text: 'The 5-Minute Clinical Documentation' },
-    { icon: FileX, text: '15 pages of ignored intake' },
+    { icon: FileX, text: 'The 15-20 page clipboard penalty in the waiting room' },
+    { icon: Clock, text: 'The rushed 5-minute clinical documentation' },
     { icon: AlertTriangle, text: 'The Medication Gallery' },
     { icon: Wifi, text: 'Logging symptoms, missing causes' },
 ];
@@ -76,7 +76,7 @@ export default function BrokenFirstMile() {
                                 Assembly-Line Medicine
                             </h3>
                             <p className="text-sm text-[#ffffff]/50 mb-8 leading-relaxed">
-                                You are not a standard deviation. A 5-minute documentation cannot capture your truth.
+                                You are not a standard deviation. The 15-20 page clipboard penalty followed by a rushed 5-minute documentation cannot capture your truth.
                             </p>
 
                             <div className="space-y-4">
