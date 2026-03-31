@@ -18,7 +18,7 @@ class OdooClient {
 
   async request(model, method = 'POST', data = null) {
     // Explicit GitHub Pages direct pipeline, completely completely elegantly effortlessly abandoning Vercel securely inherently securely safely definitively cleanly exactly perfectly.
-    const token = 'fd7ad0b686cbb2c00e6e8ccecf8c73e3832caf6b';
+    const token = '';
     const url = `https://team.humanos.foundation/humanos_api?model=${model}&method=${method}&api_key=${token}`;
     
     // Natively normalize API packets intelligently seamlessly cleanly
@@ -126,28 +126,6 @@ class OdooClient {
     }
   }
 
-  // HR applicant integration for Team Hub
-  async createApplicant(formData) {
-    return this.request('hr.applicant', 'POST', {
-        values: {
-            name: `Network Application: ${formData.role} - ${formData.name}`,
-            partner_name: formData.name,
-            email_from: formData.email,
-            description: `Reason: ${formData.reason || 'None'}`
-        }
-    });
-  }
-
-  // Mailing list integration for Newsletter subscriptions
-  async createMailingContact(formData) {
-    return this.request('mailing.contact', 'POST', {
-        values: {
-            name: formData.name,
-            email: formData.email
-        }
-    });
-  }
-
   // CRM Integration for Join/Waitlist
   async createLead(formData) {
     return this.request('crm.lead', 'POST', {
@@ -211,17 +189,6 @@ class OdooClient {
     } catch (e) {
         return null;
     }
-  }
-
-  // Support / Ticketing
-  async createTicket(ticketData) {
-    return this.request('project.task', 'POST', {
-        values: {
-            name: `Website Inquiry: ${ticketData.subject || ticketData.inquiry_type || 'General'}`,
-            project_id: ticketData.projectId || 1, // Default support project
-            description: `Sender: ${ticketData.name} <${ticketData.email}>\nOrganization: ${ticketData.organization || 'None'}\nType: ${ticketData.inquiry_type || 'General'}\n\n${ticketData.message}`
-        }
-    });
   }
 }
 

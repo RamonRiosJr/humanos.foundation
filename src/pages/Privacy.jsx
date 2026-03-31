@@ -8,7 +8,7 @@ import LegalLayout from '../components/legal/LegalLayout';
 const sections = [
     {
         title: '1. Introduction',
-        content: `Humanos Foundation ("we," "us," or "our") operates humanos.foundation (the "Site"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our Site. Please read this policy carefully. If you disagree with its terms, please discontinue use of the Site.\n\nEffective Date: March 1, 2026 | Version 1.0\n\nImportant: This Site does not collect, store, or process any personal health data (PHI). We are an informational and advocacy platform only.`,
+        content: `Humanos Foundation ("we," "us," or "our") operates humanos.foundation (the "Site"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our Site. Please read this policy carefully. If you disagree with its terms, please discontinue use of the Site.\n\nEffective Date: March 1, 2026 | Version 1.0\n\nATTENTION: This policy strictly applies to website communications (Contact Forms & Waitlists). The Humanos Foundation does NOT possess, process, or sell any clinical health records. We uphold a strict Zero-Knowledge cryptographic barrier for the hOS application.`,
     },
     {
         title: '2. Information We Collect',
