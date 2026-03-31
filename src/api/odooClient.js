@@ -19,7 +19,7 @@ class OdooClient {
   async request(model, method = 'POST', data = null) {
     // Explicit GitHub Pages direct pipeline, completely completely elegantly effortlessly abandoning Vercel securely inherently securely safely definitively cleanly exactly perfectly.
     const token = 'fd7ad0b686cbb2c00e6e8ccecf8c73e3832caf6b';
-    const url = `https://team.humanos.foundation/humanos_api?model=${model}&method=${method}&api_key=${token}`;
+    const url = `https://team.humanos.foundation/humanos_api?model=${model}&method=${method}&humanos_token=${token}`;
     
     // Natively normalize API packets intelligently seamlessly cleanly
     const finalMethod = (data && method.toUpperCase() === 'GET') ? 'POST' : method;
