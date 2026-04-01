@@ -1,8 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Send } from 'lucide-react';
+import { AILogo } from './AILogo';
 
 const ChatbotWidget = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [botState, setBotState] = useState('idle');
+
+    // Immersive demo auto-cycler for the animated states when the user opens the chat
+    useEffect(() => {
+        if (!isOpen) {
+            setBotState('idle');
+            return;
+        }
+        
+        // Initial state
+        setBotState('speaking');
+        
+        let timeout;
+        const cycle = () => {
+            const states = ['listening', 'thinking', 'speaking', 'idle'];
+            const nextState = states[Math.floor(Math.random() * states.length)];
+            setBotState(nextState);
+            timeout = setTimeout(cycle, Math.random() * 3000 + 2000);
+        };
+        
+        timeout = setTimeout(cycle, 3000); // Wait for initial speaking to finish
+        return () => clearTimeout(timeout);
+    }, [isOpen]);
 
     return (
         <div className="fixed bottom-6 right-6 z-50">
@@ -11,7 +35,7 @@ const ChatbotWidget = () => {
                     {/* Header */}
                     <div className="flex items-center justify-between bg-black/50 p-4 border-b border-white/10">
                         <div className="flex items-center gap-3">
-                            <img src="/hOS.png" alt="hOS Avatar" className="w-8 h-8 rounded-full border border-cyan-500/50" />
+                            <AILogo className="w-12 h-12" botState={botState} />
                             <div>
                                 <h3 className="font-semibold text-white text-sm">hOS AI</h3>
                                 <p className="text-[10px] text-cyan-400 font-mono tracking-wider uppercase">Foundation AI (Beta)</p>
@@ -63,11 +87,7 @@ const ChatbotWidget = () => {
                             <X className="w-6 h-6 text-blue-400" />
                         </div>
                     ) : (
-                        <img
-                            src="/hOS.png"
-                            alt="hOS AI"
-                            className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(239,68,68,0.5)]"
-                        />
+                        <AILogo className="w-16 h-16 filter drop-shadow-[0_0_8px_rgba(239,68,68,0.5)]" botState="idle" />
                     )}
                 </div>
             </button>
