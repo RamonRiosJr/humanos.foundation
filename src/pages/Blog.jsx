@@ -34,9 +34,17 @@ export default function Blog() {
 
     useEffect(() => {
         odooClient.getBlogPosts().then(data => {
+            if (!data) {
+                setPosts([]);
+                setLoading(false);
+                return;
+            }
             // Sort by date descending
             const sorted = [...data].sort((a, b) => new Date(b.created_date).getTime() - new Date(a.created_date).getTime());
             setPosts(sorted);
+            setLoading(false);
+        }).catch(() => {
+            setPosts([]);
             setLoading(false);
         });
     }, []);
