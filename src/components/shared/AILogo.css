@@ -1,0 +1,237 @@
+
+.ai-logo-container {
+  display: inline-block;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* FEATURE 1: BOOT-UP SEQUENCE */
+.base-path {
+  animation: boot-up-draw 2.5s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+  opacity: 0;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes boot-up-draw {
+  0% { opacity: 0; filter: brightness(3) contrast(2); transform: scale(0.9); }
+  40% { opacity: 1; filter: brightness(2) contrast(1.5); transform: scale(1.02); }
+  100% { opacity: 1; filter: brightness(1) contrast(1); transform: scale(1); }
+}
+
+/* FEATURE 3: GLITCH TRANSITION */
+.glitch-active {
+  animation: glitch-anim 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+
+@keyframes glitch-anim {
+  0% { transform: translate(0) }
+  20% { transform: translate(-3px, 3px); filter: drop-shadow(3px 0px 0px rgba(254, 40, 96, 0.8)) drop-shadow(-3px 0px 0px rgba(47, 192, 242, 0.8)); }
+  40% { transform: translate(-3px, -3px); filter: drop-shadow(4px 0px 0px rgba(254, 40, 96, 0.8)) drop-shadow(-4px 0px 0px rgba(47, 192, 242, 0.8)); }
+  60% { transform: translate(3px, 3px); filter: drop-shadow(-3px 0px 0px rgba(254, 40, 96, 0.8)) drop-shadow(3px 0px 0px rgba(47, 192, 242, 0.8)); }
+  80% { transform: translate(3px, -3px); filter: drop-shadow(-4px 0px 0px rgba(254, 40, 96, 0.8)) drop-shadow(4px 0px 0px rgba(47, 192, 242, 0.8)); }
+  100% { transform: translate(0) }
+}
+
+/* FEATURE 5: AUDIO WAVEFORM RINGS */
+.waveform-container {
+  position: absolute;
+  inset: -20%;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.waveform-ring {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 2px solid rgba(47, 192, 242, 0.5);
+  opacity: 0;
+}
+
+.state-speaking-rings .waveform-ring {
+  animation: ripple-ring 1.5s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+}
+.state-speaking-rings .waveform-ring:nth-child(2) { animation-delay: 0.5s; }
+.state-speaking-rings .waveform-ring:nth-child(3) { animation-delay: 1.0s; }
+
+@keyframes ripple-ring {
+  0% { transform: scale(0.8); opacity: 0.8; border-width: 4px; }
+  100% { transform: scale(2.5); opacity: 0; border-width: 1px; }
+}
+
+/* IDLE STATE */
+.state-idle {
+  animation: sudden-glow 6s ease-in-out infinite;
+}
+
+/* THINKING STATE */
+.state-thinking {
+  animation: thinking-glow 2s ease-in-out infinite;
+}
+.state-thinking .star { animation-duration: 1s !important; }
+.state-thinking .shooting-star-1, 
+.state-thinking .shooting-star-2, 
+.state-thinking .shooting-star-3, 
+.state-thinking .shooting-star-4 {
+  animation-duration: 0.8s !important;
+  opacity: 0.8;
+}
+.state-thinking .network-pulse { animation-duration: 1s !important; }
+.state-thinking .data-link { animation-duration: 0.2s !important; }
+
+/* SPEAKING STATE */
+.state-speaking {
+  animation: speaking-glow 0.8s ease-in-out infinite alternate;
+}
+.state-speaking .star { animation-duration: 0.5s !important; }
+.state-speaking .shooting-star-1, 
+.state-speaking .shooting-star-2, 
+.state-speaking .shooting-star-3, 
+.state-speaking .shooting-star-4 {
+  animation-duration: 0.5s !important;
+}
+.state-speaking .network-pulse { animation-duration: 0.5s !important; }
+.state-speaking .data-link { animation-duration: 0.1s !important; }
+
+/* FEATURE 2: LISTENING STATE (Gravity Pull) */
+.state-listening {
+  animation: listening-glow 3s ease-in-out infinite;
+}
+.state-listening .star { animation-duration: 1.5s !important; }
+.state-listening .shooting-star-1 { animation-name: shoot-1-reverse; }
+.state-listening .shooting-star-2 { animation-name: shoot-2-reverse; }
+.state-listening .shooting-star-3 { animation-name: shoot-3-reverse; }
+.state-listening .shooting-star-4 { animation-name: shoot-4-reverse; }
+.state-listening .network-pulse { animation-name: network-ping-reverse; }
+
+@keyframes listening-glow {
+  0%, 100% { filter: drop-shadow(0px 0px 5px rgba(10, 69, 112, 0.5)); }
+  50% { filter: drop-shadow(0px 0px 20px rgba(47, 192, 242, 0.8)); }
+}
+
+@keyframes shoot-1-reverse {
+  0% { opacity: 0; transform: scale(0) translate(15px, 15px); }
+  10% { opacity: 1; transform: scale(1.5) translate(0, 0); }
+  20%, 100% { opacity: 0; transform: scale(0) translate(-15px, -15px); }
+}
+@keyframes shoot-2-reverse {
+  0% { opacity: 0; transform: scale(0) translate(-15px, -15px); }
+  10% { opacity: 1; transform: scale(1.5) translate(0, 0); }
+  20%, 100% { opacity: 0; transform: scale(0) translate(15px, 15px); }
+}
+@keyframes shoot-3-reverse {
+  0% { opacity: 0; transform: scale(0) translate(0px, -20px); }
+  10% { opacity: 1; transform: scale(1.5) translate(0, 0); }
+  20%, 100% { opacity: 0; transform: scale(0) translate(0px, 20px); }
+}
+@keyframes shoot-4-reverse {
+  0% { opacity: 0; transform: scale(0) translate(20px, 0px); }
+  10% { opacity: 1; transform: scale(1.5) translate(0, 0); }
+  20%, 100% { opacity: 0; transform: scale(0) translate(-20px, 0px); }
+}
+@keyframes network-ping-reverse {
+  0% { opacity: 0; transform: scale(2.5); }
+  10% { opacity: 0.8; transform: scale(1.5); }
+  30%, 100% { opacity: 0; transform: scale(1); }
+}
+
+
+/* GLOW ANIMATIONS */
+@keyframes sudden-glow {
+  0%, 40%, 60%, 100% { filter: drop-shadow(0px 0px 0px rgba(47, 192, 242, 0)); }
+  50% { filter: drop-shadow(0px 0px 25px rgba(47, 192, 242, 0.6)); }
+}
+
+@keyframes thinking-glow {
+  0%, 100% { filter: drop-shadow(0px 0px 10px rgba(47, 192, 242, 0.3)); }
+  50% { filter: drop-shadow(0px 0px 35px rgba(10, 69, 112, 0.9)); }
+}
+
+@keyframes speaking-glow {
+  0% { filter: drop-shadow(0px 0px 5px rgba(47, 192, 242, 0.4)); }
+  100% { filter: drop-shadow(0px 0px 40px rgba(47, 192, 242, 1)); }
+}
+
+/* STAR ANIMATIONS */
+.star {
+  animation-name: twinkle;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.shooting-star-1, 
+.shooting-star-2, 
+.shooting-star-3, 
+.shooting-star-4 {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+.shooting-star-1 { animation-name: shoot-1; }
+.shooting-star-2 { animation-name: shoot-2; }
+.shooting-star-3 { animation-name: shoot-3; }
+.shooting-star-4 { animation-name: shoot-4; }
+
+.network-pulse {
+  animation-name: network-ping;
+  animation-timing-function: cubic-bezier(0.1, 0.8, 0.3, 1);
+  animation-iteration-count: infinite;
+}
+
+.data-link {
+  animation-name: data-transfer;
+  animation-timing-function: steps(2, end);
+  animation-iteration-count: infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.6); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Diagonal Right-Down */
+@keyframes shoot-1 {
+  0% { opacity: 0; transform: scale(0) translate(-15px, -15px); }
+  10% { opacity: 1; transform: scale(1.5) translate(0, 0); }
+  20%, 100% { opacity: 0; transform: scale(0) translate(15px, 15px); }
+}
+
+/* Diagonal Left-Up */
+@keyframes shoot-2 {
+  0% { opacity: 0; transform: scale(0) translate(15px, 15px); }
+  10% { opacity: 1; transform: scale(1.5) translate(0, 0); }
+  20%, 100% { opacity: 0; transform: scale(0) translate(-15px, -15px); }
+}
+
+/* Vertical Up */
+@keyframes shoot-3 {
+  0% { opacity: 0; transform: scale(0) translate(0px, 20px); }
+  10% { opacity: 1; transform: scale(1.5) translate(0, 0); }
+  20%, 100% { opacity: 0; transform: scale(0) translate(0px, -20px); }
+}
+
+/* Horizontal Right */
+@keyframes shoot-4 {
+  0% { opacity: 0; transform: scale(0) translate(-20px, 0px); }
+  10% { opacity: 1; transform: scale(1.5) translate(0, 0); }
+  20%, 100% { opacity: 0; transform: scale(0) translate(20px, 0px); }
+}
+
+/* Sonar Ping Effect */
+@keyframes network-ping {
+  0% { opacity: 1; transform: scale(1); }
+  30% { opacity: 0; transform: scale(2.5); }
+  100% { opacity: 0; transform: scale(1); }
+}
+
+/* Rapid Data Transfer Blink */
+@keyframes data-transfer {
+  0%, 100% { opacity: 0.3; filter: brightness(1); }
+  50% { opacity: 1; filter: brightness(1.5); }
+}
