@@ -86,7 +86,7 @@ export default function Footer() {
                         <a href="mailto:hello@humanos.foundation" className="text-[10px] text-white/15 hover:text-cyan-400/60 transition-colors">
                             hello@humanos.foundation
                         </a>
-                        <a href="https://buymeacoffee.com/ramonriosjr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[10px] text-yellow-300 hover:text-yellow-200 transition-colors border border-yellow-400/30 hover:border-yellow-400/60 bg-yellow-400/5 hover:bg-yellow-400/10 shadow-[0_0_10px_rgba(250,204,21,0.1)] hover:shadow-[0_0_15px_rgba(250,204,21,0.2)] px-4 py-2 rounded-lg font-medium tracking-wide">
+                        <a href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[10px] text-yellow-300 hover:text-yellow-200 transition-colors border border-yellow-400/30 hover:border-yellow-400/60 bg-yellow-400/5 hover:bg-yellow-400/10 shadow-[0_0_10px_rgba(250,204,21,0.1)] hover:shadow-[0_0_15px_rgba(250,204,21,0.2)] px-4 py-2 rounded-lg font-medium tracking-wide">
                             <Coffee className="w-3.5 h-3.5" /> Support the movement
                         </a>
                     </div>

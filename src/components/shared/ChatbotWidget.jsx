@@ -81,13 +81,13 @@ const ChatbotWidget = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-red-500 rounded-full blur-2xl opacity-40 animate-halo-pulse group-hover:opacity-70 transition-opacity"></div>
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-red-400 rounded-full blur-md opacity-30 animate-pulse group-hover:opacity-50 transition-opacity"></div>
 
-                <div className={`relative w-16 h-16 flex items-center justify-center transition-all duration-500 overflow-visible`}>
+                <div className={`relative w-20 h-20 flex items-center justify-center transition-all duration-500 overflow-visible`}>
                     {isOpen ? (
-                        <div className="w-12 h-12 flex items-center justify-center bg-slate-900 border border-blue-500 rounded-full shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-                            <X className="w-6 h-6 text-blue-400" />
+                        <div className="w-14 h-14 flex items-center justify-center bg-slate-900 border border-blue-500 rounded-full shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                            <X className="w-7 h-7 text-blue-400" />
                         </div>
                     ) : (
-                        <AILogo className="w-16 h-16 filter drop-shadow-[0_0_8px_rgba(239,68,68,0.5)]" botState="idle" />
+                        <AILogo className="w-20 h-20 filter drop-shadow-[0_0_8px_rgba(239,68,68,0.5)]" botState="idle" />
                     )}
                 </div>
             </button>

@@ -49,10 +49,10 @@ export default function Navbar() {
                             </Link>
                         ))}
                         <a
-                            href="https://buymeacoffee.com/ramonriosjr"
+                            href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="px-4 py-2 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-xs text-yellow-400/80 hover:text-yellow-300 hover:border-yellow-400/40 transition-all duration-300 font-medium flex items-center gap-1.5"
+                            className="bg-yellow-400/10 text-yellow-500 hover:text-yellow-400 px-3 md:px-5 py-1.5 md:py-2 rounded-lg text-[10px] md:text-xs font-bold tracking-widest uppercase transition-all duration-300 border border-yellow-500/20 hover:border-yellow-500/50 hover:bg-yellow-500/20 shadow-[0_0_15px_rgba(234,179,8,0.15)] hover:shadow-[0_0_25px_rgba(234,179,8,0.3)] min-w-max flex-shrink-0"
                         >
                             ☕ Donate
                         </a>
@@ -91,11 +91,11 @@ export default function Navbar() {
                             ))}
                             <div className="pt-2 space-y-2">
                                 <a 
-                                    href="https://buymeacoffee.com/ramonriosjr" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    onClick={() => setMenuOpen(false)} 
-                                    className="block w-full px-4 py-3 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-sm text-yellow-500 font-bold text-center"
+                                    href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom" 
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => setMenuOpen(false)}
+                                    className="block p-3 rounded-xl bg-yellow-400/10 text-center text-yellow-500 text-xs font-bold tracking-widest uppercase border border-yellow-500/20"
                                 >
                                     ☕ Donate
                                 </a>
