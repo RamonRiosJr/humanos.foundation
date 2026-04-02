@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SEOMeta from '../components/shared/SEOMeta';
 import { motion, AnimatePresence } from 'framer-motion';
-import { odooClient } from '../api/odooClient';
+import { humanosMockClient } from '../lib/humanos-mock-sdk';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
@@ -33,7 +33,7 @@ export default function Blog() {
     const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
 
     useEffect(() => {
-        odooClient.getBlogPosts().then(data => {
+        humanosMockClient.entities.BlogPost.list().then(data => {
             if (!data) {
                 setPosts([]);
                 setLoading(false);

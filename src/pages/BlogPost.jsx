@@ -4,8 +4,8 @@ import SEOMeta from '../components/shared/SEOMeta';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageCTA from '../components/shared/PageCTA';
-import { odooClient } from '../api/odooClient';
-import { ArrowLeft, Clock, CalendarDays, Tag } from 'lucide-react';
+import { humanosMockClient } from '../lib/humanos-mock-sdk';
+import { ArrowLeft, Clock, CalendarDays, Tag, Eye, MessageSquare } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import rehypeSanitize from 'rehype-sanitize';
 import { createPageUrl } from '@/utils';
@@ -22,7 +22,7 @@ export default function BlogPost() {
             return;
         }
 
-        odooClient.getBlogPost(postId).then(data => {
+        humanosMockClient.entities.BlogPost.get(postId).then(data => {
             setPost(data);
             setLoading(false);
         });
