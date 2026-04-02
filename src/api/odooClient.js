@@ -89,7 +89,7 @@ class OdooClient {
   async getBlogPost(id) {
     try {
         const data = await this.request('blog.post', 'GET', { id });
-        if (!data || !data.records || data.records.length === 0) throw new Error("Offline");
+        if (!data || !data.records || data.records.length === 0) return null;
         
         const post = data.records.find(p => p.id.toString() === id.toString()) || data.records[0];
         
@@ -103,15 +103,7 @@ class OdooClient {
             read_time_minutes: Math.ceil((post.content || '').length / 1000) || 5,
         };
     } catch (e) {
-        // Fallback simulation for individual posts using the offline vault protocol
-        return {
-            id: id,
-            title: 'Sovereign Manifest: Decrypted Post Archive',
-            content: '<div style="font-family: inherit;"><p style="font-size: 1.125rem; font-weight: 500; color: rgba(255,255,255,0.9); margin-bottom: 2rem; border-left: 4px solid #3b82f6; padding-left: 1rem;">This documentation is being served via the offline sovereign vault while our primary Odoo endpoint completes its scheduled maintenance cycle.</p><p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.8;">Our commitment to end-to-end data encryption requires strict network isolation per the <strong>FDA SaMD protocols</strong> instantiated in Aura hOS v0.8.0-rc.1.</p><h3 style="color: white; font-size: 1.5rem; font-weight: bold; margin-top: 3rem; margin-bottom: 1rem;">Decentralized Integrity architecture</h3><p style="color: rgba(255,255,255,0.7); line-height: 1.8;">By decoupling the React frontend from the Python backend using stateless fallbacks, we guarantee zero downtime for patients actively engaging with our manifestos. In the forthcoming Q3 update, all blogs will be fully bridged into the Zero-Knowledge Vault native indexing.</p></div>',
-            category: 'Technology',
-            created_date: new Date().toISOString(),
-            read_time_minutes: 3
-        };
+        return null;
     }
   }
 
@@ -119,7 +111,7 @@ class OdooClient {
   async getBlogPosts() {
     try {
         const data = await this.request('blog.post', 'GET');
-        if (!data || !data.records) throw new Error('API Offline');
+        if (!data || !data.records) return null;
         
         return data.records.map(post => ({
             id: post.id.toString(),
@@ -131,57 +123,7 @@ class OdooClient {
             read_time_minutes: Math.ceil((post.content || '').length / 1000) || 5,
         }));
     } catch (e) {
-        console.warn('Odoo API Failed. Activating Offline Vault.');
-        return [
-            {
-                id: '991',
-                title: 'The Zero-Knowledge Clinical Revolution',
-                excerpt: 'Why raw patient data cannot be entrusted to traditional B2B SaaS paradigms, and how Aura hOS re-architects sovereign exchange protocols.',
-                category: 'Patient Rights',
-                created_date: new Date(Date.now() - 86400000 * 2).toISOString(),
-                read_time_minutes: 5
-            },
-            {
-                id: '992',
-                title: 'FDA SaMD Compliance in Decentralized Vaults',
-                excerpt: 'Navigating the rigid regulatory landscape of medical devices while refusing to compromise on end-to-end encryption.',
-                category: 'Policy & Regulation',
-                created_date: new Date(Date.now() - 86400000 * 5).toISOString(),
-                read_time_minutes: 8
-            },
-            {
-                id: '993',
-                title: 'Architecting the Aura Global Event Bus',
-                excerpt: 'How we synchronized documentation across four distinct repositories simultaneously utilizing pure stateless architecture.',
-                category: 'Technology',
-                created_date: new Date(Date.now() - 86400000 * 12).toISOString(),
-                read_time_minutes: 4
-            },
-            {
-                id: '994',
-                title: 'A Survivor’s Manifesto',
-                excerpt: 'Health systems trade your trauma like a commodity. It’s time we build the architecture that brings your nuance back.',
-                category: 'Movement Stories',
-                created_date: new Date(Date.now() - 86400000 * 20).toISOString(),
-                read_time_minutes: 6
-            },
-            {
-                id: '995',
-                title: 'Sovereign Analytics: The Data Trust',
-                excerpt: 'An explicit breakdown of how the cooperative trust model funds patient ownership instead of enriching intermediaries.',
-                category: 'Research & Data',
-                created_date: new Date(Date.now() - 86400000 * 28).toISOString(),
-                read_time_minutes: 12
-            },
-            {
-                id: '996',
-                title: 'Community Town Hall: Q2 Engineering',
-                excerpt: 'Reviewing the successful deployment of our new embedded Native API bypassing strict CORS limitations to enable robust clinical intakes.',
-                category: 'Community',
-                created_date: new Date(Date.now() - 86400000 * 35).toISOString(),
-                read_time_minutes: 3
-            }
-        ];
+        return null; // Return null on crash/404 to gracefully render "No results found"
     }
   }
 
