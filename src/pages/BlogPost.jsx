@@ -5,7 +5,7 @@ import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageCTA from '../components/shared/PageCTA';
 import { humanosMockClient } from '../lib/humanos-mock-sdk';
-import { ArrowLeft, Clock, CalendarDays, Tag, Eye, MessageSquare } from 'lucide-react';
+import { ArrowLeft, Clock, CalendarDays, Tag, MessageSquare } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import rehypeSanitize from 'rehype-sanitize';
 import { createPageUrl } from '@/utils';
@@ -94,15 +94,11 @@ export default function BlogPost() {
                         {formatDate(post.created_date)}
                     </span>
                     {post.read_time_minutes && (
-                        <span className="flex items-center gap-1.5 text-xs text-white/60 font-medium">
+                        <span className="flex items-center gap-1.5 text-xs text-white/60 font-medium ml-2">
                             <Clock className="w-3.5 h-3.5 text-cyan-400/50" />
                             {post.read_time_minutes} min read
                         </span>
                     )}
-                    <span className="flex items-center gap-1.5 text-xs text-white/60 font-medium ml-2">
-                        <Eye className="w-3.5 h-3.5 text-cyan-400/50" />
-                        {post.visits ? post.visits.toLocaleString() : (post.title.length * 37).toLocaleString()} Reads
-                    </span>
                 </div>
 
                 <h1 className="text-4xl md:text-5xl font-bold mb-10 leading-tight" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>
