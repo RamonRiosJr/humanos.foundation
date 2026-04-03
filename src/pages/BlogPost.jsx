@@ -69,6 +69,11 @@ export default function BlogPost() {
                 description={post.excerpt}
                 url={`https://humanos.foundation/blog/${post.id}`}
                 type="article"
+                article={{
+                    publishedTime: post.created_date,
+                    section: post.category || 'Movement Stories',
+                    author: 'Humanos Foundation'
+                }}
             />
             <Navbar />
 
