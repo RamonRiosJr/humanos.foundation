@@ -13,6 +13,7 @@ const footerLinks = {
         { label: 'Join the Movement', page: 'Join' },
     ],
     Resources: [
+        { label: 'Architecture Whitepaper', page: 'Whitepaper' },
         { label: 'Blog & Insights', page: 'Blog' },
         { label: 'Press & Media', page: 'Press' },
         { label: 'FAQ', page: 'FAQ' },
