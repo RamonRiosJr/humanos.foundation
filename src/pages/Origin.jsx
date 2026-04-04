@@ -58,7 +58,7 @@ export default function Origin() {
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
                 title="Origin Story — Ramon Luis Rios Jr. & the hOS Movement"
-                description="hOS was built in a motel room by Ramon Luis Rios Jr., a patient who refused to accept a broken healthcare system. The origin story of Humanos Foundation and the health data sovereignty movement."
+                description="hOS was engineered on the front lines of the healthcare crisis by Ramon Luis Rios Jr., a patient who refused to accept a broken healthcare system. The origin story of Humanos Foundation and the health data sovereignty movement."
                 url="https://humanos.foundation/origin"
             />
             <Navbar />
