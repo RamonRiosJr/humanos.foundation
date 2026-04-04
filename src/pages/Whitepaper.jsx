@@ -7,20 +7,20 @@ import ReactMarkdown from 'react-markdown';
 import rehypeSanitize from 'rehype-sanitize';
 
 const whitepaperContent = `
-# Aura hOS: Data Security & Privacy Whitepaper
+# Aura hOS™: Data Security & Privacy Whitepaper
 
 ## Executive Summary
 
-Aura hOS provides a revolutionary "Zero-Knowledge" approach to health data management, specifically engineered to eliminate the systemic vulnerabilities inherent in traditional cloud-based healthcare applications and eradicate the catastrophic 15-20 page physical clipboard packet bottleneck. By ensuring that Protected Health Information (PHI) is rigorously encrypted continuously before it syncs to our managed backend, Aura hOS fundamentally mitigates data breach risks for healthcare providers and patients alike.
+Aura hOS™ provides a revolutionary "Zero-Knowledge" approach to health data management, specifically engineered to eliminate the systemic vulnerabilities inherent in traditional cloud-based healthcare applications and eradicate the catastrophic 15-20 page physical clipboard packet bottleneck. By ensuring that Protected Health Information (PHI) is rigorously encrypted continuously before it syncs to our managed backend, Aura hOS™ fundamentally mitigates data breach risks for healthcare providers and patients alike.
 
 ## 1. Zero-Knowledge, Edge-First Architecture
 
-Unlike legacy platforms that continuously sync raw, sensitive health telemetry to central cloud servers, Aura hOS operates on a Zero-Knowledge paradigm.
+Unlike legacy platforms that continuously sync raw, sensitive health telemetry to central cloud servers, Aura hOS™ operates on a Zero-Knowledge paradigm.
 
 - **Native SQLite Storage Engine:** All patient-generated health data (seizure event logs, heart rate readings, temperature, sleep, activity) is processed and stored locally on the user's hardware utilizing an encrypted SQLite database managed by the Native App Shell.
 - **Air-Gapped Operation:** The core operating system remains fully functional without an internet connection, guaranteeing uninterrupted patient access to their health data even in infrastructure-degraded environments.
 - **Data At Rest Encryption:** We explicitly utilize **Native Hardware-Accelerated APIs (AES-256-GCM)** to encrypt the local SQLite database at rest. The decryption key is generated and tied to the device's hardware Secure Enclave/Keystore (FaceID/TouchID) or a strong secure PIN, ensuring data remains mathematically locked even if the device is stolen or the file system is ripped.
-- **Zero-Knowledge by Default:** Aura hOS does not possess the decryption keys to access user data.
+- **Zero-Knowledge by Default:** Aura hOS™ does not possess the decryption keys to access user data.
 - **Zero-Knowledge Backend (Math over Infrastructure):** Because all health telemetry is aggressively encrypted (AES-256-GCM) exclusively on the patient's edge OS (iOS/Android) prior to transit, the backend infrastructure itself is legally moot. Aura's database stores only mathematically unbreakable ciphertext. We hold zero decryption keys. Therefore, even under a catastrophic systemic cloud breach or cross-tenant leakage scenario, zero Protected Health Information (PHI) is exposed, cementing our BAA Exemption.
 
 ## 2. FTC HBNR & BAA Exemption
@@ -47,7 +47,7 @@ For healthcare institutions, adopting third-party software introduces vendor ris
 
 ## 5. Third-Party Audits & ADA Compliance
 
-To definitively prove our security posture as a Sovereign B2C Personal Health Record (thereby strictly avoiding B2B vendor BAA traps), Aura hOS commits to:
+To definitively prove our security posture as a Sovereign B2C Personal Health Record (thereby strictly avoiding B2B vendor BAA traps), Aura hOS™ commits to:
 
 - **Independent Grey-Box Penetration Testing:** Focused strictly on our iOS Secure Enclave / Android Keystore key derivation implementation and Supabase Row-Level Security (RLS) policies. We do not "grade our own homework."
 - **WCAG 2.1 AA (EAA / ADA) Compliance:** Implementing strict "High Contrast" UI toggles alongside our standard Glassmorphism engine to ensure visually impaired patients maintain absolute, safe control over their medical telemetry.
@@ -58,7 +58,7 @@ export default function Whitepaper() {
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
                 title="Data Security & Privacy Whitepaper | Humanos Foundation"
-                description="Read the Aura hOS Zero-Knowledge architecture and FTC HBNR compliance documentation. Our structural approach to eradicating data breaches and preserving patient privacy."
+                description="Read the Aura hOS™ Zero-Knowledge architecture and FTC HBNR compliance documentation. Our structural approach to eradicating data breaches and preserving patient privacy."
                 url="https://humanos.foundation/whitepaper"
             />
             <Navbar />
