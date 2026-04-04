@@ -48,11 +48,11 @@ export default function AboutJourney() {
                         className="md:col-span-3 relative"
                     >
                         <motion.div style={{ y }} className="relative">
-                            {/* The motel scene - stylized */}
+                            {/* The genesis scene - stylized */}
                             <div className="relative rounded-2xl overflow-hidden aspect-[16/10]">
                                 <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-[#151520] to-[#0a0a15]" />
 
-                                {/* Motel atmosphere */}
+                                {/* Remote atmosphere */}
                                 <div className="absolute inset-0 p-6 md:p-10 flex flex-col justify-between">
                                     {/* Dim window light */}
                                     <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-gradient-to-bl from-amber-900/10 to-transparent" />
@@ -122,7 +122,7 @@ export default function AboutJourney() {
                             <div className="mt-4 flex items-center gap-2">
                                 <div className="w-8 h-px bg-cyan-500/30" />
                                 <p className="text-[11px] text-white/50 italic">
-                                    The Motel Room Prototype — Where hOS was born
+                                    The Genesis Prototype — Where hOS was born
                                 </p>
                             </div>
                         </motion.div>
@@ -137,8 +137,8 @@ export default function AboutJourney() {
                     >
                         <div className="space-y-4">
                             <p className="text-white/80 text-sm md:text-base leading-relaxed font-medium">
-                                hOS wasn't born in a boardroom or a venture capital pitch meeting.
-                                It was born in a dimly lit motel room, powered by necessity and
+                                hOS wasn't built in a disconnected tech hub or a venture capital pitch meeting.
+                                It was engineered on the front lines of the healthcare crisis, powered by necessity and
                                 an unshakable belief that{' '}
                                 <Link to={createPageUrl('TheProblem')} className="text-cyan-400 font-bold underline underline-offset-4 decoration-cyan-400/20 hover:text-cyan-300 transition-colors">patients deserve better</Link>.
                             </p>
