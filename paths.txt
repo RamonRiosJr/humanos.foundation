@@ -1,0 +1,3 @@
+C:\Users\localadmin\OneDrive - Coqui Cloud Dev CO\Documents\GitHub\Aura-hub\src\docs_repo\Aura-hos\docs\executive\Data_Security_and_Privacy_Whitepaper.md
+C:\Users\localadmin\OneDrive - Coqui Cloud Dev CO\Documents\GitHub\aura_hos_docs\hOS-documentation\aura-hos\aurahos-admin-content\executive\Data_Security_and_Privacy_Whitepaper.md
+C:\Users\localadmin\OneDrive - Coqui Cloud Dev CO\Documents\GitHub\coqui-cloud-utility-server\aura-health-os\docs\executive\Data_Security_and_Privacy_Whitepaper.md

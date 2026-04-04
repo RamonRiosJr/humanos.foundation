@@ -1,0 +1,13 @@
+
+> humanos-foundation@0.1.0 build
+> vite build
+
+Γ£ù Build failed in 1.71s
+error during build:
+Could not resolve "./pages/Whitepaper" from "src/pages.config.js"
+file: C:/Users/localadmin/OneDrive - Coqui Cloud Dev CO/Documents/GitHub/humanos.foundation/src/pages.config.js
+    at getRollupError (file:///C:/Users/localadmin/OneDrive%20-%20Coqui%20Cloud%20Dev%20CO/Documents/GitHub/humanos.foundation/node_modules/rollup/dist/es/shared/parseAst.js:402:41)
+    at error (file:///C:/Users/localadmin/OneDrive%20-%20Coqui%20Cloud%20Dev%20CO/Documents/GitHub/humanos.foundation/node_modules/rollup/dist/es/shared/parseAst.js:398:42)
+    at ModuleLoader.handleInvalidResolvedId (file:///C:/Users/localadmin/OneDrive%20-%20Coqui%20Cloud%20Dev%20CO/Documents/GitHub/humanos.foundation/node_modules/rollup/dist/es/shared/node-entry.js:21710:24)
+    at ModuleLoader.resolveDynamicImport (file:///C:/Users/localadmin/OneDrive%20-%20Coqui%20Cloud%20Dev%20CO/Documents/GitHub/humanos.foundation/node_modules/rollup/dist/es/shared/node-entry.js:21770:58)
+    at async file:///C:/Users/localadmin/OneDrive%20-%20Coqui%20Cloud%20Dev%20CO/Documents/GitHub/humanos.foundation/node_modules/rollup/dist/es/shared/node-entry.js:21654:32
