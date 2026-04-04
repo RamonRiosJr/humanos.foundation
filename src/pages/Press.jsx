@@ -90,7 +90,7 @@ export default function Press() {
                                 'Patient data ownership and the right to health record portability',
                                 'The $250 billion health data market and who profits from it',
                                 'Zero-knowledge architecture in consumer health technology',
-                                'The hOS movement: from motel room prototype to global advocacy',
+                                'The hOS movement: from genesis prototype to global advocacy',
                                 'Health data equity in underserved and Global South communities',
                                 'Regulatory landscape: HIPAA, GDPR, 21st Century Cures Act',
                             ].map((angle, i) => (
