@@ -57,8 +57,6 @@ export default function PageNotFound() {
                         </svg>
                     </div>
 
-                    <p className="text-8xl md:text-[140px] font-bold text-white/[0.04] mb-0 leading-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 pointer-events-none" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>404</p>
-
                     <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>
                         Patient Not Found
                     </h1>
