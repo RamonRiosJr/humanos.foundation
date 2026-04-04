@@ -51,7 +51,7 @@ To definitively prove our security posture as a Sovereign B2C Personal Health Re
 
 - **Independent Grey-Box Penetration Testing:** Focused strictly on our iOS Secure Enclave / Android Keystore key derivation implementation and Supabase Row-Level Security (RLS) policies. We do not "grade our own homework."
 - **WCAG 2.1 AA (EAA / ADA) Compliance:** Implementing strict "High Contrast" UI toggles alongside our standard Glassmorphism engine to ensure visually impaired patients maintain absolute, safe control over their medical telemetry.
-\`;
+`;
 
 export default function Whitepaper() {
     return (
