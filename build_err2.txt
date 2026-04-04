@@ -1,0 +1,26 @@
+
+> humanos-foundation@0.1.0 build
+> vite build
+
+Γ£ù Build failed in 1.85s
+error during build:
+[vite:esbuild] Transform failed with 1 error:
+C:/Users/localadmin/OneDrive - Coqui Cloud Dev CO/Documents/GitHub/humanos.foundation/src/pages/Whitepaper.jsx:88:0: ERROR: Unterminated string literal
+file: C:/Users/localadmin/OneDrive - Coqui Cloud Dev CO/Documents/GitHub/humanos.foundation/src/pages/Whitepaper.jsx:88:0
+
+Unterminated string literal
+86 |      );
+87 |  }
+88 |  
+   |  ^
+
+    at failureErrorWithLog (C:\Users\localadmin\OneDrive - Coqui Cloud Dev CO\Documents\GitHub\humanos.foundation\node_modules\esbuild\lib\main.js:1467:15)
+    at C:\Users\localadmin\OneDrive - Coqui Cloud Dev CO\Documents\GitHub\humanos.foundation\node_modules\esbuild\lib\main.js:736:50
+    at responseCallbacks.<computed> (C:\Users\localadmin\OneDrive - Coqui Cloud Dev CO\Documents\GitHub\humanos.foundation\node_modules\esbuild\lib\main.js:603:9)
+    at handleIncomingPacket (C:\Users\localadmin\OneDrive - Coqui Cloud Dev CO\Documents\GitHub\humanos.foundation\node_modules\esbuild\lib\main.js:658:12)
+    at Socket.readFromStdout (C:\Users\localadmin\OneDrive - Coqui Cloud Dev CO\Documents\GitHub\humanos.foundation\node_modules\esbuild\lib\main.js:581:7)
+    at Socket.emit (node:events:508:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Readable.push (node:internal/streams/readable:390:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
