@@ -1,33 +1,27 @@
 ---
-description: Activates the global synchronization protocol to log and distribute changes across all 4 Aura ecosystem repositories simultaneously.
+description: Activates the global synchronization protocol to log and distribute changes across all 7 Aura ecosystem repositories simultaneously.
 ---
 
 # Global Catchup & Multi-Repo Sync Workflow
 
-**Use Case:** When the Architect types `/global-catchup`, they want to take a snapshot of what was built today, log the work strictly into `AURA_GLOBAL_CATCHUP.md` (which tracks 4 distinct repos), and automatically distribute this new file to the other 3 repos so all AI agents across all workspaces have the exact same context tomorrow morning.
+**Use Case:** When the Architect types `/global-catchup`, they want to launch the 2-Phase Living Mailbox Protocol to strictly sync their local tasks with the single-source-of-truth `AURA_GLOBAL_CATCHUP.md` file located inside the `aura_hos_docs` repository.
 
 ## Prerequisites
 
-- Read `docs/AURA_GLOBAL_CATCHUP.md` to see the current master state of the 4 repositories.
-- These repos are hardcoded to exist in the `C:\Users\localadmin\OneDrive - Coqui Cloud Dev CO\Documents\GitHub\` root directory.
+- Read `..\aura_hos_docs\docs\AURA_GLOBAL_CATCHUP.md` to see the current master state of all 7 repositories. (Always use the absolute path or relative path to the master file in `aura_hos_docs`).
+- **CRITICAL HARD RULE:** You must NEVER physically copy or clone the `AURA_GLOBAL_CATCHUP.md` file into other repositories. It is a single-source-of-truth Living File.
 
 ## Execution Steps
 
-1. **AUTONOMOUS REVIEW:** You must autonomously deduce what was accomplished today by consulting your conversation history, recent conversation summaries, and recent file changes. **DO NOT** ask the Architect what was accomplished; deduce the summary yourself. 
-2. Intelligently rewrite/append your findings under the correct `Repository 1, 2, 3, or 4` section in `docs/AURA_GLOBAL_CATCHUP.md` using the `replace_file_content` tool.
-3. Update the `Last Synced:` timestamp inside the markdown file for the repos that were active.
-4. Auto-run the distribution sync to force-copy this file into ALL ecosystem repositories so the other agents have identical context for tomorrow.
+1. **AUTONOMOUS REVIEW:** You must autonomously deduce what was accomplished today by consulting your conversation history, recent conversation summaries, and recent file changes. **DO NOT** ask the Architect what was accomplished.
+2. **PHASE 1 (CONSUMPTION - CLEARING THE MAILBOX):** Look inside `AURA_GLOBAL_CATCHUP.md` under your current repository's `- _Recent Changes:_` header. If there are tasks there, securely extract them into your local repository's `TODO.md` file. You must then **DELETE** those lines from `AURA_GLOBAL_CATCHUP.md` to clear your inbox and prevent file bloat.
+3. **PHASE 2 (BROADCASTING - SENDING MAIL):** Based on the accomplished work you deduced in Step 1, determine exactly *which* other repositories are affected. Go directly into `AURA_GLOBAL_CATCHUP.md` and insert your updates natively under their specific `- _Recent Changes:_` lists. Update their `Last Synced:` timestamp.
+4. **SECURITY CHECK:** If your broadcast contains confidential Series-A business/legal strategies, prepend `[TIER 3 RESTRICTED]` to the line.
+5. **GIT LOCK STATE:** To prevent cross-repo file corruption, you MUST auto-run the synchronization script to lock the changes into Git.
 
-// turbo-all 5. Run the Power-Sync command to physically copy the file across the user's hard drive:
-
+// turbo
 ```powershell
-Copy-Item -Path "docs\AURA_GLOBAL_CATCHUP.md" -Destination "..\aura_hos_docs\Aura-hos\docs\AURA_GLOBAL_CATCHUP.md" -Force -ErrorAction SilentlyContinue
-Copy-Item -Path "docs\AURA_GLOBAL_CATCHUP.md" -Destination "..\humanos.foundation\docs\AURA_GLOBAL_CATCHUP.md" -Force -ErrorAction SilentlyContinue
-Copy-Item -Path "docs\AURA_GLOBAL_CATCHUP.md" -Destination "..\AurahOS_Docs_Portal_&_Tech_Support_AuraBot\docs\AURA_GLOBAL_CATCHUP.md" -Force -ErrorAction SilentlyContinue
-Copy-Item -Path "docs\AURA_GLOBAL_CATCHUP.md" -Destination "..\odoo_rest_api_coquicloud\docs\AURA_GLOBAL_CATCHUP.md" -Force -ErrorAction SilentlyContinue
-Copy-Item -Path "docs\AURA_GLOBAL_CATCHUP.md" -Destination "..\aura-health-os\docs\AURA_GLOBAL_CATCHUP.md" -Force -ErrorAction SilentlyContinue
+..\aura_hos_docs\scripts\sync_event_bus.ps1
 ```
 
-_(Note: If the `docs` folder doesn't exist in one of the repos yet, the script might fail, or the AI should handle directory creation if necessary)._
-
-6. Respond to the user: "Global Catchup complete. `AURA_GLOBAL_CATCHUP.md` has been updated and physically injected into the other repositories. The other AI windows are now primed with the latest sync data."
+6. Respond to the user: "Global Catchup complete. I have successfully consumed my pending inbox and broadcasted the day's tasks to the Event Bus. The Git Lock script has successfully synchronized the Master Message Queue."
