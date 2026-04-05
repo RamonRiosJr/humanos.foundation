@@ -9,35 +9,35 @@ import { ChevronDown } from 'lucide-react';
 
 const faqs = [
     {
-        category: 'About hOS',
+        category: 'About Aura hOS™',
         questions: [
-            { q: 'What is the Human Operating System (hOS)?', a: 'hOS is a movement and philosophy focused on Data Sovereignty. We believe your health data should be mathematically decoupled from any institution. It is encrypted at the edge using keys only you control. We don\'t "protect" your data in the traditional sense; we simply make it mathematically impossible for us to access it.' },
-            { q: 'Is humanos.foundation a nonprofit?', a: 'Humanos Foundation is currently on a path toward formal nonprofit status (501(c)(3)). We operate as an advocacy and educational organization committed to patient data sovereignty. Updates on our legal structure will be posted here.' },
-            { q: 'Who founded this?', a: 'hOS was founded by Ramon Luis Rios Jr., a patient and technologist who experienced the broken healthcare data system firsthand. The movement grew from a personal necessity into a global advocacy mission. Learn more on the Origin page.' },
+            { q: 'What is Aura hOS™?', a: 'Aura hOS™ is an enterprise clinical software platform engineered by the Humanos Foundation. It acts as a Zero-Knowledge architectural bridge designed to solve the clinical \'First Mile\' crisis, eliminating the 15-20 page clipboard penalty for neurodivergent and medically complex populations via deterministic formatting and biometrics.' },
+            { q: 'Is the Humanos Foundation a registered nonprofit?', a: 'The Humanos Foundation operates exactly as a 501(c)(3) open-source technology steward. Our formal 501(c)(3) nonprofit designation and tax exemption status is pending final determination from the IRS. We operate purely to engineer public-benefit, open-source technology for marginalized patient populations, fully aligning with state and federal grant compliance.' },
+            { q: 'Who engineered Aura hOS™?', a: 'Aura hOS™ was architected by systems engineer and patient Ramon Luis Rios Jr., driven by the sheer necessity to survive a fragmented healthcare system. It was built from the ground up as a defensive, cryptographically sealed medical toolset. Learn more on the Origin page.' },
         ],
     },
     {
-        category: 'Patient Data Rights',
+        category: 'Data Sovereignty & Legal Frameworks',
         questions: [
-            { q: 'Do I actually own my health data?', a: 'Legally, it\'s complicated — and that\'s the problem. Under HIPAA, you have rights to access your records, but you don\'t have true ownership. Your provider, insurer, and numerous third parties may have rights to your data that supersede yours. This is exactly what hOS is working to change.' },
-            { q: 'Can my doctor sell my health data?', a: 'Yes. "De-identified" health data is routinely sold by hospitals, EHR vendors, and data brokers — legally. This is a $250 billion market. The hOS movement advocates for laws requiring explicit, informed consent before any data sale, and patient benefit-sharing from data commercialization.' },
-            { q: 'What is HIPAA and does it protect me?', a: 'HIPAA (Health Insurance Portability and Accountability Act) is a regulatory framework for how institutions handle your data, but it does not grant you sovereignty. Once you authorize a provider to access your record, hOS and the Foundation have no control over how they subsequently share or use that data. Our goal is to give you the choice of who to trust, but the trust itself remains a human decision between you and your clinician.' },
+            { q: 'How does Aura hOS™ protect my data from being sold?', a: 'Unlike standard EHRs where "de-identified" data is legally sold, Aura hOS™ runs on a Zero-Knowledge local-first architecture. We mathematically cannot read, see, or sell your clinical data because the encryption keys are tied to your device biometrics, not our servers.' },
+            { q: 'Are you a HIPAA Covered Entity?', a: 'No. Because Aura hOS™ structurally cannot access your decrypted medical data, the foundation falls under the strict FTC Health Breach Notification Rule (HBNR) \'Zero-Knowledge\' exemption. This creates a definitive mathematical boundary where true data sovereignty is enforced prior to B2B clinic ingestion.' },
+            { q: 'What does "Formatting-Only Engine" mean?', a: 'Aura hOS™ utilizes AI purely to synthesize and format complex patient narratives into clinical FHIR-compliant outputs. It intentionally does not diagnose or practice medicine, allowing it to mathematically bypass FDA SaMD (Software as a Medical Device) diagnostic liability traps.' },
         ],
     },
     {
-        category: 'Technology',
+        category: 'Enterprise Technology',
         questions: [
-            { q: 'What is zero-knowledge architecture?', a: 'Zero-knowledge architecture means that even the service provider cannot read your data. Your data is encrypted before it leaves your device using a key only you control. This is the gold standard for health data privacy — and a core principle we advocate for.' },
-            { q: 'What does "local-first" mean?', a: 'Local-first computing means your data is stored and processed on your device, not on a remote server. You retain control even when offline, and your data doesn\'t disappear if a company shuts down. We believe health data should be local-first by default.' },
-            { q: 'What is FHIR?', a: 'FHIR (Fast Healthcare Interoperability Resources) is an open standard for representing and exchanging electronic health records. Think of it as a universal language for health data. We advocate for FHIR-based systems that let your data move freely between providers without proprietary lock-in.' },
+            { q: 'What is Zero-Knowledge architecture?', a: 'Zero-knowledge architecture inside Aura hOS™ means that even the platform infrastructure cannot read your data. Your clinical state is encrypted locally before it touches our Edge servers, secured by a cryptographic key only your biometrics control.' },
+            { q: 'What does "local-first" deployment mean?', a: 'Local-first computing ensures your health data is stored and processed on your native device (iOS/Android). You retain absolute control even when completely offline. Your health records will not vanish if our servers experience downtime.' },
+            { q: 'How does the B2B Clinic Handshake work?', a: 'Aura hOS™ utilizes an automated Zero-SSN registration flow. We generate Unique Patient Identifiers (UPIs) and Clinic Routing IDs to securely link patient health records directly into the provider\'s terminal without exposing the patient\'s Social Security Number across insecure channels.' },
         ],
     },
     {
-        category: 'Getting Involved',
+        category: 'Pilot & Funding Architecture',
         questions: [
-            { q: 'How can I join the movement?', a: 'Visit our Join page to sign up. Whether you\'re a patient, clinician, technologist, researcher, or advocate — there\'s a place for you in this movement. We welcome volunteers, contributors, and partners.' },
-            { q: 'How can organizations partner with hOS?', a: 'We partner with healthcare advocacy organizations, academic institutions, open-source health projects, and aligned nonprofits. Contact us at partnerships@humanos.foundation to start the conversation.' },
-            { q: 'Can I write for the hOS blog?', a: 'Yes! We welcome contributors who can bring expertise in patient rights, health technology, policy, or personal stories of navigating the healthcare system. Reach out to hello@humanos.foundation with your pitch.' },
+            { q: 'How do clinics pilot Aura hOS™?', a: 'We partner with federally qualified health centers (FQHCs) and enterprise B2B clinics. Our current pilot programs act as Sandbox environments designed to eliminate clinical intake friction. If you represent a front-range clinic, contact partnerships@humanos.foundation.' },
+            { q: 'How is the platform funded?', a: 'The Humanos Foundation architecture is primarily backed by a strategic capitalization roadmap, targeting prestigious enterprise health-equity funding vectors like PCORI and AHRQ, ensuring the core platform remains free for the neurodivergent community.' },
+            { q: 'Can developers audit the codebase?', a: 'Yes. Aura hOS™ is an open-source movement. We invite security auditors, developers, and systems architects to review our Zero-Knowledge protocols directly. Reach out to hello@humanos.foundation.' },
         ],
     },
 ];
