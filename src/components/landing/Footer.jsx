@@ -32,6 +32,7 @@ const footerLinks = {
         { label: 'Partners', page: 'Partners' },
         { label: 'Volunteer', page: 'Volunteer' },
         { label: 'Security', page: 'Security' },
+        { label: 'B2B Clinic Directory', page: 'Clinics' },
     ],
 };
 
