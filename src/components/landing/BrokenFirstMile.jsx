@@ -6,7 +6,7 @@ import { AlertTriangle, Sparkles, FileX, Wifi, Clock, ShieldCheck, Scan, Databas
 const brokenItems = [
     { icon: FileX, text: 'The 15-20 page clipboard penalty in the waiting room' },
     { icon: Clock, text: 'The rushed 5-minute clinical documentation' },
-    { icon: AlertTriangle, text: 'The Medication Gallery' },
+    { icon: AlertTriangle, text: 'The Prescriptive Spiral' },
     { icon: Wifi, text: 'Logging symptoms, missing causes' },
 ];
 

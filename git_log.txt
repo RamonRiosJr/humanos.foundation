@@ -1,0 +1,95 @@
+commit ce9431a5cd01b648cc6908351a3a9ce44b01bebf
+Author: Ramon Rios <98999314+RamonRiosJr@users.noreply.github.com>
+Date:   Sat Apr 4 00:28:08 2026 -0600
+
+    feat: integrate whitepaper architecture links and hOS trademark (#83)
+    
+    Co-authored-by: Aura hOS Automation <bot@humanos.foundation>
+
+ src/components/landing/Footer.jsx |  1 +
+ src/pages/Blog.jsx                |  2 +-
+ src/pages/Manifesto.jsx           |  2 +-
+ src/pages/Whitepaper.jsx          | 12 ++++++------
+ 4 files changed, 9 insertions(+), 8 deletions(-)
+
+commit 39378d6e4c45473fc77b5499dd665ee879c428c6
+Author: Ramon Rios <98999314+RamonRiosJr@users.noreply.github.com>
+Date:   Fri Apr 3 23:15:06 2026 -0600
+
+    fix: purge broken lifetime visitors counter (#82)
+    
+    Co-authored-by: Aura hOS Automation <bot@humanos.foundation>
+
+ src/components/landing/HeroSection.jsx | 45 +---------------------------------
+ 1 file changed, 1 insertion(+), 44 deletions(-)
+
+commit ae4d024e1bfbada2b8770612848b879b446b7b82
+Author: Ramon Rios <98999314+RamonRiosJr@users.noreply.github.com>
+Date:   Fri Apr 3 20:36:06 2026 -0600
+
+    feat: whitepaper route and 404 fix (#81)
+    
+    * enhancing content
+    
+    * fix: added missing Whitepaper.jsx file
+    
+    * fix: resolve string termination syntax error in Whitepaper
+    
+    ---------
+    
+    Co-authored-by: Aura hOS Automation <bot@humanos.foundation>
+
+ TODO.md                  |  5 +++
+ build_err.txt            | 13 ++++++++
+ build_err2.txt           | 26 +++++++++++++++
+ paths.txt                |  3 ++
+ pr_err.txt               |  4 +++
+ src/lib/PageNotFound.jsx |  2 --
+ src/pages.config.js      |  3 +-
+ src/pages/Whitepaper.jsx | 87 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 8 files changed, 140 insertions(+), 3 deletions(-)
+
+commit 9ec5f8e8ea0a466c9bbd2bc88a645f2b8523def9
+Author: Ramon Rios <98999314+RamonRiosJr@users.noreply.github.com>
+Date:   Fri Apr 3 19:13:36 2026 -0600
+
+    enhancing content (#80)
+    
+    Co-authored-by: Aura hOS Automation <bot@humanos.foundation>
+
+ push_error.txt           | 10 ++++++++
+ src/lib/PageNotFound.jsx | 59 +++++++++++++++++++++++++++++++++++++-----------
+ 2 files changed, 56 insertions(+), 13 deletions(-)
+
+commit 6e8b7755d4f334410f7bba990ac4926c5dc6e7e5
+Author: Ramon Rios <98999314+RamonRiosJr@users.noreply.github.com>
+Date:   Fri Apr 3 18:29:10 2026 -0600
+
+    enhancing content (#79)
+    
+    Co-authored-by: Aura hOS Automation <bot@humanos.foundation>
+
+ .agents/workflows/00-architect-assessor.md         |  24 ++
+ .agents/workflows/00-audit-director.md             |  36 +++
+ .agents/workflows/00-jules-swarm-orchestrator.md   |  28 +++
+ .agents/workflows/AI_READ.md                       |   0
+ .agents/workflows/AURA_GLOBAL_CATCHUP.md           | 159 ++++++++++++
+ .agents/workflows/audit-aura-hos.md                |  54 ++++
+ .agents/workflows/audit-business-plan.md           |  53 ++++
+ .agents/workflows/audit-compliance.md              |  65 +++++
+ .agents/workflows/audit-executive-strategy.md      |  38 +++
+ .agents/workflows/audit-fda-samd.md                |  24 ++
+ .agents/workflows/audit-foundation.md              |  48 ++++
+ .agents/workflows/audit-ftc-hbnr.md                |  24 ++
+ .agents/workflows/audit-grant-narrative.md         |  23 ++
+ .agents/workflows/cross-repo-intelligence.md       |  31 +++
+ .agents/workflows/global-catchup.md                |  30 +--
+ ...AUDITOR_PROMPT_HealthTech_PatientSovereignty.md | 278 +++++++++++++++++++++
+ .agents/workflows/hOS_SYNC.md                      |  24 ++
+ .agents/workflows/jules-swarm-prompts.md           |  48 ++++
+ docs/AURA_GLOBAL_CATCHUP.md                        |  16 +-
+ src/components/landing/AboutJourney.jsx            |  10 +-
+ src/lib/humanos-mock-sdk.js                        |  10 +-
+ src/pages/Origin.jsx                               |   2 +-
+ src/pages/Press.jsx                                |   2 +-
+ 23 files changed, 992 insertions(+), 35 deletions(-)
