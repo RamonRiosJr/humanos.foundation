@@ -8,6 +8,7 @@ import __Layout from './Layout.jsx';
 const Accessibility = lazy(() => import('./pages/Accessibility'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
+const Clinics = lazy(() => import('./pages/Clinics'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Cookies = lazy(() => import('./pages/Cookies'));
 const Disclaimer = lazy(() => import('./pages/Disclaimer'));
@@ -35,6 +36,7 @@ export const PAGES = {
     "Accessibility": Accessibility,
     "Blog": Blog,
     "BlogPost": BlogPost,
+    "Clinics": Clinics,
     "Contact": Contact,
     "Cookies": Cookies,
     "Disclaimer": Disclaimer,
