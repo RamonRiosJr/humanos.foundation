@@ -10,11 +10,11 @@ import { AlertTriangle, Database, DollarSign, Lock, Eye, FileX, Clock } from 'lu
 import { createPageUrl } from '@/utils';
 
 const problems = [
-    { icon: Clock, title: 'The 5-Minute Clinical Documentation', description: <span>After filling out <span className="text-cyan-400/80 font-bold">15 pages of arbitrary clipboards</span>, your profound physical and mental reality is compressed into a rushed <span className="text-cyan-400/80 font-bold">5-minute clinical documentation</span> by a doctor staring at a screen.</span>, stat: '5 MIN', statLabel: 'average time spent understanding you' },
-    { icon: AlertTriangle, title: 'The Medication Gallery', description: <span>Instead of <span className="text-cyan-400/80 font-bold">documenting root causes</span>, the easiest administrative path is to drug the symptom. When side effects hit, they add another pill. You become a <span className="text-cyan-400/80 font-bold">gallery of meds</span>.</span>, stat: '∞', statLabel: 'pills to treat the side effects of pills' },
-    { icon: DollarSign, title: 'A Billing Machine, Not Healthcare', description: <span>The current architecture incentivizes <span className="text-cyan-400/80 font-bold">rapid turnover</span> and over-prescription. The system steals from insurance and patients by prioritizing volume over healing.</span>, stat: 'VOLUME', statLabel: 'prioritized over your actual health' },
-    { icon: FileX, title: 'Standardizing Suffering', description: <span>Your lived experience is continuous, but the system treats you as a <span className="text-cyan-400/80 font-bold">standardized deviation</span>. Complex cases (ADHD, ASD, Bipolar) are shoved into one-size-fits-all boxes.</span>, stat: '1 SIZE', statLabel: 'fits no one' },
-    { icon: Eye, title: 'Forced Disability', description: <span>Mis-categorization and over-medication strip patients of their true selves, alter their thoughts, and sentence them to lives of <span className="text-cyan-400/80 font-bold drop-shadow-[0_0_8px_rgba(34,211,238,0.2)]">forced disability</span> and despair.</span>, stat: 'LOSS', statLabel: 'of your true self and potential' },
+    { icon: Clock, title: 'The 5-Minute Clinical Documentation', description: <span>After suffering the <span className="text-cyan-400/80 font-bold">15-20 page clipboard penalty</span> in the waiting room, your profound physical and mental reality is compressed into a rushed <span className="text-cyan-400/80 font-bold">5-minute clinical documentation</span> by a provider restricted by legacy software.</span>, stat: '5 MIN', statLabel: 'average time spent understanding you' },
+    { icon: AlertTriangle, title: 'The Prescriptive Spiral', description: <span>Because providers lack immediate access to <span className="text-cyan-400/80 font-bold">pre-compiled root-cause data</span>, current workflows often default to treating isolated symptoms. When side effects arrive, more medications follow, creating a burdensome <span className="text-cyan-400/80 font-bold">prescriptive loop</span>.</span>, stat: '∞', statLabel: 'pills to treat the side effects of pills' },
+    { icon: DollarSign, title: 'Volume-Driven Architecture', description: <span>The current infrastructure economically rewards <span className="text-cyan-400/80 font-bold">rapid patient turnover</span>. The system inadvertently prioritizes processing volume over providing the necessary time for deep, investigative healing.</span>, stat: 'VOLUME', statLabel: 'prioritized over clinical diligence' },
+    { icon: FileX, title: 'Standardizing Sickness', description: <span>Your lived experience is continuous, but legacy tools treat you as a <span className="text-cyan-400/80 font-bold">standardized deviation</span>. Complex neurodivergent or chronic cases are forced into rigid, one-size-fits-all clinical brackets.</span>, stat: '1 SIZE', statLabel: 'fits no one' },
+    { icon: Eye, title: 'Iatrogenic Cascades', description: <span>Mis-categorization resulting from blind spots in initial intake data leads to <span className="text-cyan-400/80 font-bold drop-shadow-[0_0_8px_rgba(34,211,238,0.2)]">prescribing cascades</span>, which can artificially induce impairment and profoundly alter patients' lives.</span>, stat: 'LOSS', statLabel: 'of baseline health and potential' },
     { icon: Database, title: 'Data Without Context', description: <span>A list of your prescriptions and lab values tells the system nothing about how you actually feel. We have petabytes of data, but <span className="text-cyan-400/80 font-bold">zero institutional clarity</span>.</span>, stat: '0', statLabel: 'understanding of your daily reality' },
     { icon: Lock, title: 'Legacy Leaks', description: <span>Once your data enters an <span className="text-cyan-400/80 font-bold">institutional silo</span>, you lose all control. Hospitals sell "de-identified" data to brokers, and legacy security leads to inevitable hacks.</span>, stat: '0%', statLabel: 'control over institutional sharing' },
 ];
@@ -32,10 +32,10 @@ export default function TheProblem() {
             />
             <Navbar />
             <PageHero
-                badge="The Crisis"
-                title="Assembly-Line"
+                badge="The Architectural Crisis"
+                title="Systemic Overload"
                 titleAccent="Medicine"
-                subtitle={<span key="st">The healthcare system is fundamentally broken — <Link to={createPageUrl('Origin')} className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30 transition-colors font-medium">not by accident</Link>, but by design. It is a billing machine that prioritizes drugging symptoms over documenting root causes.</span>}
+                subtitle={<span key="st">The healthcare intake system is fundamentally broken — overwhelmed by <Link to={createPageUrl('Origin')} className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30 transition-colors font-medium">legacy data silos</Link>. It operates on volume-driven constraints that prioritize isolated symptom management over compiling longitudinal root causes.</span>}
             />
 
             <section ref={ref} className="pb-16 px-4 md:px-8">
@@ -52,7 +52,7 @@ export default function TheProblem() {
                             <AlertTriangle className="w-10 h-10 text-red-400/60 mx-auto mb-5" />
                             <p className="text-4xl md:text-6xl font-bold text-red-300/80 mb-3" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>The Human Cost</p>
                             <p className="text-sm text-white/70 max-w-lg mx-auto font-medium">
-                                The system does not suffer when it gets it wrong. Patients do. The cost is paid in side effects, altered thoughts, and stolen potential.
+                                The system struggles when its data flows are broken. Patients absorb the impact. The cost is paid in compounding side effects, diagnostic delays, and compromised quality of life.
                             </p>
                         </div>
                     </motion.div>
