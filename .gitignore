@@ -30,3 +30,4 @@ dist-ssr
 .env
 docs/fix-branch/
 .vercel
+*.txt
