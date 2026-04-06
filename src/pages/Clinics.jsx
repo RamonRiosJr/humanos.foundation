@@ -52,7 +52,7 @@ export default function Clinics() {
                     <Info className="w-6 h-6 text-blue-400 shrink-0 mt-1" />
                     <div>
                         <h3 className="text-lg font-bold text-white mb-2">How to Use Clinic IDs</h3>
-                        <p className="text-sm text-white/70 leading-relaxed">
+                        <p className="text-sm text-white opacity-70 leading-relaxed">
                             Aura hOS establishes a Zero-Knowledge architectural handshake between your encrypted local vault and a provider. 
                             When you arrive at a participating clinic, input their verified routing ID below into your Aura app to establish a secure, ephemeral data bridge. No SSN required.
                         </p>
@@ -78,18 +78,18 @@ export default function Clinics() {
                             </div>
                             
                             <h4 className="text-xl font-bold text-white mb-1">{clinic.name}</h4>
-                            <p className="text-xs text-white/50 mb-6">{clinic.region}</p>
+                            <p className="text-xs text-white opacity-50 mb-6">{clinic.region}</p>
                             
                             <div className="space-y-3">
                                 <div className="flex items-center justify-between text-sm">
-                                    <span className="text-white/40 flex items-center gap-2"><Key className="w-3 h-3" /> Routing ID</span>
+                                    <span className="text-white opacity-40 flex items-center gap-2"><Key className="w-3 h-3" /> Routing ID</span>
                                     <code className="text-cyan-300 bg-cyan-500/10 px-2 py-0.5 rounded font-mono text-xs border border-cyan-500/20 select-all">
                                         {clinic.id}
                                     </code>
                                 </div>
                                 <div className="flex items-center justify-between text-sm">
-                                    <span className="text-white/40 flex items-center gap-2"><ShieldCheck className="w-3 h-3" /> Type</span>
-                                    <span className="text-white/80 text-xs font-medium">{clinic.integrationType}</span>
+                                    <span className="text-white opacity-40 flex items-center gap-2"><ShieldCheck className="w-3 h-3" /> Type</span>
+                                    <span className="text-white opacity-80 text-xs font-medium">{clinic.integrationType}</span>
                                 </div>
                             </div>
                         </motion.div>
