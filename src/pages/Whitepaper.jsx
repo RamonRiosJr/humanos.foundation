@@ -72,7 +72,7 @@ export default function Whitepaper() {
             <section className="pb-28 px-4 md:px-8">
                 <div className="max-w-4xl mx-auto">
                     <div className="glass rounded-3xl p-6 md:p-12 border border-white/[0.04]">
-                        <article className="prose prose-invert prose-cyan max-w-none prose-headings:font-outfit prose-h1:text-3xl prose-h2:text-2xl prose-h2:border-b prose-h2:border-white/10 prose-h2:pb-2 prose-h2:mt-10 prose-h2:mb-6 prose-p:text-white/70 prose-p:leading-relaxed prose-li:text-white/70 prose-strong:text-white/90">
+                        <article className="prose dark:prose-invert prose-cyan max-w-none prose-headings:font-outfit prose-h1:text-3xl prose-h2:text-2xl prose-h2:border-b prose-h2:border-white/10 prose-h2:pb-2 prose-h2:mt-10 prose-h2:mb-6">
                             <ReactMarkdown rehypePlugins={[rehypeSanitize]}>
                                 {whitepaperContent}
                             </ReactMarkdown>
