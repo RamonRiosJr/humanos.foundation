@@ -3,10 +3,10 @@ import { motion, useInView } from 'framer-motion';
 import HeartbeatStream from '../shared/HeartbeatStream';
 
 const stats = [
-    { value: '1B+', label: 'Patient records at risk daily', sub: 'of data breaches involve health records' },
-    { value: '$250', label: 'Your health data market value', sub: 'yet patients receive $0' },
-    { value: '0%', label: 'Patient data ownership', sub: 'under current healthcare systems' },
-    { value: '∞', label: 'Your right to sovereignty', sub: 'what hOS is fighting for' },
+    { value: '$875k', label: 'Pending Federal Funding', sub: 'PCORI Cycle 2 & AHRQ Sandbox' },
+    { value: '100%', label: 'FTC HBNR BAA Exemption', sub: 'Zero-Knowledge Cryptography' },
+    { value: '0 Days', label: 'B2B Implementation Time', sub: 'Bypass SSN collection bottlenecks' },
+    { value: 'R4', label: 'HL7 FHIR Native', sub: 'Seamless Sandboxed Exporting' },
 ];
 
 export default function HomeStats() {
