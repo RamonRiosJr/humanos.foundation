@@ -10,6 +10,7 @@ import { ThemeProvider } from './components/ThemeProvider';
 import { A11yProvider } from '@/lib/A11yContext';
 import A11yWidget from '@/components/shared/A11yWidget';
 import ChatbotWidget from '@/components/shared/ChatbotWidget';
+import VaultBackground from '@/components/shared/VaultBackground';
 
 const { Pages, Layout, mainPage } = pagesConfig;
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];
@@ -75,6 +76,7 @@ function App() {
                         <PosthogPageViewTracker />
                         <A11yWidget />
                         <ChatbotWidget />
+                        <VaultBackground />
                         <AppRouter />
                     </Router>
                     <Toaster />
