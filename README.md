@@ -13,15 +13,15 @@
 
 ---
 
-*"The system only listens when the truth is unignorable. We are building the tools to make your truth undeniable."*
+*"The system only listens when the truth is structurally robust. We are engineering the Zero-Knowledge Vault to make your clinical narrative undeniable."*
 
 </div>
 
 ## 🌍 The Mission
 
-The **Humanos Foundation** is the public advocacy wing of the **hOS (Human Operating System)** movement. We are a global network of patients, clinicians, and technologists dedicated to dismantling "Assembly-Line Medicine." 
+The **Humanos Foundation** is the 501(c)(3) Enterprise advocacy wing of the **Aura hOS™ (Human Operating System)**. We are a global network of patients, clinicians, and technologists dedicated to dismantling the 15-20 page clinical clipboard penalty. 
 
-This repository powers our digital advocacy platform—an enterprise-grade engine designed to drive waitlist conversions, host our sovereign education library, and organize a worldwide rebellion against institutional data silos.
+This repository powers our digital advocacy platform—an enterprise-grade engine designed to drive $875k PCORI grant pipeline conversions, host our sovereign education library, and facilitate Zero-SSN Registration for our B2B Clinic partners.
 
 ---
 
@@ -63,10 +63,10 @@ npm install
 ```
 
 ### 3. Launching the "Sovereign Kernel"
-To maximize impact during presentations or local advocacy demos, we recommend using the **Humanos Operating System Launcher**:
+To maximize impact during Enterprise Demonstrations, B2B Clinic Piloting, or PCORI validation audits, we recommend using the **Humanos Operating System Launcher**:
 
 **Windows (Recommended Experience)**:
-Double-click `Humanos-Operating-System.bat`. This triggers a cinematic terminal boot sequence that initializes the advocacy pipeline, establishes zero-knowledge handshakes, and launches the server.
+Double-click `Humanos-Operating-System.bat`. This triggers a terminal boot sequence that initializes the Zero-Knowledge infrastructure, establishes cryptographic handshakes, and launches the server.
 
 **Cross-Platform**:
 ```bash
@@ -77,29 +77,31 @@ npm run dev
 
 ---
 
-## 🔒 Security & Selective Privacy
+## 🔒 Security & FTC HBNR BAA Exemption
 
 We believe **Privacy is a request, but Sovereignty is mathematics.** 
 
-- **Zero Third-Party Trackers**: We have purged all unauthorized Google/Meta tracking pixels. 
-- **Privacy Handshake**: Optional analytics (PostHog) are loaded dynamically and strictly respect Do-Not-Track headers.
-- **Sovereign-First forms**: Contact and Join data are handled via our internal, privacy-hardened client logic.
+By utilizing strict Edge-First Encryption, Aura hOS operates distinctly under the **FTC Health Breach Notification Rule (HBNR)** as a Personal Health Record. We do not hold decryption keys, legally shielding our institutional partners from Business Associate (BAA) constraints and HIPAA misclassification.
 
-For more information, please see our [SECURITY.md](SECURITY.md) and [Audit Documentation](src/docs/Audit.md).
+- **Zero Third-Party Trackers**: We have purged all unauthorized Google/Meta marketing tracking scopes. 
+- **Privacy Handshake**: Optional telemetry (PostHog) is loaded dynamically and strictly respects Edge rendering constraints.
+- **Sovereign-First Framework**: Contact and Waitlist nodes route strictly through zero-trust architectures.
+
+For more information, please see our [Zero-Knowledge Whitepaper](/whitepaper).
 
 ---
 
 ## 🤝 The Contributor's Path
 
-We don't just need developers; we need an army.
+We are scaling an enterprise-grade contributor network to protect the $3.0M Enterprise Capitalization.
 
-- **Technologists**: Help us harden the Zero-Knowledge architecture and optimize the 3D生物 (biological) renders.
-- **Clinicians**: Review our blog content for medical accuracy within the "Root-Cause" framework.
-- **Patients**: Share your history in the [Join Funnel](https://humanos.foundation/join) to help us map the failures of the status quo.
+- **Data Scientists/Engineers**: Help us harden the Zero-Knowledge architecture and optimize the Supabase edge vectors.
+- **Clinicians**: Validate our UX logic against "Root-Cause" workflows to optimize our B2B integration metrics.
+- **Patients**: Share your history to establish the exact First Mile baseline prior to clinic arrival via the Zero-SSN Registration.
 
 1. Review the [Code of Conduct](CODE_OF_CONDUCT.md).
 2. Read the [Contributor Guidelines](CONTRIBUTING.md).
-3. Check the [Project Board](https://github.com/RamonRiosJr/humanos.foundation/projects) for active tasks.
+3. Check the [Project Board](https://github.com/RamonRiosJr/humanos.foundation/projects) for active capitalization tasks.
 
 ---
 
