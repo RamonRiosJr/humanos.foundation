@@ -8,6 +8,7 @@ import Footer from '../components/landing/Footer';
 import SectionDivider from '../components/shared/SectionDivider';
 import HomeStats from '../components/landing/HomeStats';
 import SEOMeta from '../components/shared/SEOMeta';
+import SurvivalBanner from '../components/landing/SurvivalBanner';
 
 export default function Home() {
     return (
@@ -18,6 +19,7 @@ export default function Home() {
                 url="https://humanos.foundation"
                 type="website"
             />
+            <SurvivalBanner />
             <Navbar />
             <HeroSection />
             <SectionDivider />
