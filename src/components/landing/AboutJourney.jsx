@@ -140,13 +140,13 @@ export default function AboutJourney() {
                                 hOS wasn't built in a disconnected tech hub or a venture capital pitch meeting.
                                 It was engineered on the front lines of the healthcare crisis, powered by necessity and
                                 an unshakable belief that{' '}
-                                <Link to={createPageUrl('TheProblem')} className="text-cyan-400 font-bold underline underline-offset-4 decoration-cyan-400/20 hover:text-cyan-300 transition-colors">patients deserve better</Link>.
+                                <Link to={createPageUrl('TheProblem')} className="text-cyan-400 font-bold underline underline-offset-4 decoration-cyan-400/20 hover:text-cyan-300 transition-colors">patients deserve data sovereignty</Link>.
                             </p>
                             <p className="text-white/80 text-sm md:text-base leading-relaxed font-medium">
                                 <span className="text-cyan-400 font-bold drop-shadow-[0_0_8px_rgba(34,211,238,0.3)]">Ramon Luis Rios Jr.</span>, the founder, was a patient first — navigating a broken
-                                healthcare system, drowning in paperwork, locked out of his own <span className="text-cyan-400/80 font-bold">clinical records</span>.
-                                With raw code and relentless determination, he built the first prototype
-                                of what would become <span className="text-cyan-400 font-bold drop-shadow-[0_0_8px_rgba(34,211,238,0.2)]">Aura hOS™</span>. Engineered by the Humanos NGO, it now stands as the open-source technological crown jewel solving the First Mile crisis for neurodivergent populations.
+                                healthcare system, drowning in the <Link to={createPageUrl('TheProblem')} className="text-cyan-400/80 font-bold underline decoration-cyan-400/20">15-20 page clipboard penalty</Link>, and locked out of his own <Link to={createPageUrl('Whitepaper')} className="text-cyan-400/80 font-bold underline decoration-cyan-400/20">Zero-Knowledge Vault</Link>.
+                                With raw code and relentless determination, he built the absolute foundation
+                                of what would become <span className="text-cyan-400 font-bold drop-shadow-[0_0_8px_rgba(34,211,238,0.2)]">Aura hOS™ v0.8.0-rc.1</span>. Engineered by the Humanos NGO, it now acts as a <a href="https://www.ftc.gov" target="_blank" rel="noopener noreferrer" className="text-cyan-500/70 hover:text-cyan-400">FTC HBNR BAA Exempt</a> technological pipeline routing patients securely via <Link to={createPageUrl('Clinics')} className="text-cyan-400/80 font-bold underline decoration-cyan-400/20">Zero-SSN Registration</Link>.
                             </p>
                             <p className="text-white/80 text-sm md:text-base leading-relaxed font-medium">
                                 No team. No funding. Just a laptop, two loyal dogs, and a vision
