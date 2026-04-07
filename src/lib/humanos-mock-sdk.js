@@ -5,7 +5,7 @@
  */
 // PostHog imported dynamically below to prevent blank screen crashes when config is missing
 
-const STORAGE_PREFIX = 'humanos_';
+const STORAGE_PREFIX = 'humanos_v2_';
 
 const CORNERSTONE_POSTS = [
     {
@@ -127,6 +127,36 @@ const CORNERSTONE_POSTS = [
         published: true,
         created_date: '2026-03-17T09:00:00Z',
         content: '# The Crossroads of Clinical AI\n\nHealthcare is rushing to adopt Artificial Intelligence. But look closely at who is buying the software. Hospital systems are deploying AI to "optimize billing workflows," "increase patient throughput," and "reduce clinical documentation time."\n\nNotice what is missing? **The patient.**\n\nAI is currently being used to make the [assembly-line medical machine](/TheProblem) run faster. It is being used to compress your 5-minute visit into a 4-minute visit.\n\n### Flipping the Supercomputer\n\nhOS is a unified, local-first data layer that structures your continuous lived experience into a sovereign clinical record, ensuring your healthcare data remains your private, encrypted property while bridging the gap between your daily truth and the hospital system. At the Humanos Foundation, we are building local-first, sovereign AI models—like our integrated CoquiBot. But we are pointing the supercomputer in the opposite direction.\n\nWe use AI to help the patient *expand* their nuance. If you struggle to articulate your symptoms, our AI acts as a patient advocate, gently prompting you to record the critical environmental, psychological, and physical details everyday. It then synthesizes that chaotic longitudinal data into a mathematically unignorable clinical report.\n\n### The AI Must Be the Co-Pilot, Not the Judge\n\nFurthermore, sovereign AI must never make a "black-box" clinical determination. When our AI generates a clinical summary, it provides transparent citations back to your original journal entries. It does not replace the doctor; it simply structures your truth so the doctor cannot ignore it.\n\n---\n\n### Control the Algorithm\n\nThe system only listens when the truth is unignorable. [Join the Movement](/Join) today to claim your clinical sovereignty and share your story with a global community fighting for root-cause medicine.'
+    },
+    {
+        id: 'post-13',
+        title: 'The Assessor Protocol: Guarding Enterprise Capitalization',
+        excerpt: 'Why the Humanos Foundation enforces strict CTO/COO-level guardrails to prevent architectural drift and insulate the $3.0M Seed IP.',
+        category: 'Technology',
+        read_time_minutes: 6,
+        published: true,
+        created_date: '2026-03-24T10:00:00Z',
+        content: '# The Enterprise Defense Layer\n\nBuilding an open-source, mathematically secure clinical architecture requires immense focus and unyielding momentum. In the early stages, the rapid-fire "pushy" execution of a neurodivergent founder is a massive tactical advantage—it generates the velocity required to build deeply complex systems from nothing.\n\nHowever, velocity without strict structural containment leads to architectural drift. \n\n### Enter the Architect Assessor\n\nTo translate raw execution into hardened enterprise architecture, we engineered the **Architect Assessor**—a master administrative guardrail acting as a ruthless, highly-paid CTO/COO. The Assessor exists to catch the CEO\'s blind spots.\n\nThe Assessor enforces our core financial architecture without compromise. While VC-backed startups dilute their equity to survive, the Foundation relies on a $3.0M Enterprise Capitalization framework. The Assessor mandates our $140,000-$180,000/yr Executive Base Salaries to retain elite enterprise data scientists and engineers, rather than accepting inexperienced volunteers for critical compliant-data infrastructure.\n\n### Defending the 1:1 Leverage\n\nMost importantly, the Assessor acts as the ultimate shield for the **1:1 Grant Leverage Ratio**. When facing financial constraints, the temptation to pivot the architecture to please private equity is high. The Assessor strictly forbids this. It locks the Zero-Knowledge Vault architecture in place, ensuring that we never sell our core intellectual property. Our allegiance remains strictly with the patient.\n\n---\n\n### Validate the Architecture\n\nThe system only listens when the math is secure. [Join the Movement](/Join) today to see how we build uncompromising clinical infrastructure.'
+    },
+    {
+        id: 'post-14',
+        title: 'The 15-20 Page Clipboard Penalty',
+        excerpt: 'Why "Waiting Room Duress" destroys clinical data before the doctor even views it, and how Zero-SSN registration bypasses it.',
+        category: 'Movement Stories',
+        read_time_minutes: 8,
+        published: true,
+        created_date: '2026-03-30T14:30:00Z',
+        content: '# The Reality of Waiting Room Duress\n\nThe healthcare industry refers to the "intake friction" as simply a 15-minute wait time. They suggest patients are merely frustrated by delays.\n\n**This is a gross miscalculation.** The founder spent an entire year entrenched across 6 clinics and 2 hospitals proving the actual, visceral failure point of clinical intake.\n\n### The Clipboard Walk of Shame\n\nThe catastrophic breakdown of neurodivergent healthcare happens long before the physician enters the room. It happens the moment a chronically ill patient is handed a 15-20 page stack of administrative PDF printouts on a clipboard.\n\nPatients are tasked with distilling months of complex, shifting, continuous lived suffering into generic, arbitrary checkboxes. They must do this while sitting in a sterile, loud room under immense psychological pressure. The result? **Patients frequently walk into the examination room with the clipboard still in their hands.** They literally haven\'t been able to finish the paperwork before they are called in.\n\nThis isn\'t an inconvenience; it\'s cognitive overload. The data they hand the doctor is corrupt, rushed, and inaccurate, resulting in immediate misclassification and unnecessary prescriptions.\n\n### The Structural Solution\n\nAura hOS™ v0.8.0-rc.1 eradicates the paper wall. By anchoring directly into our B2B Clinic Directory via Zero-SSN routing, the platform formats the patient\'s continuous lived data into a secure FHIR payload *from the safety of their home*. The clinical baseline is established without the clipboard penalty.\n\n---\n\n### We Are Eradicating the Paper Wall\n\nThe system only listens when the truth is untainted by duress. [Join the Movement](/Join) to reclaim your unpressured narrative.'
+    },
+    {
+        id: 'post-15',
+        title: 'Aura hOS v0.8.0-rc.1: The Federal Infrastructure Lock',
+        excerpt: 'After 1,000 hours of development, the Zero-Knowledge Vault architecture is officially flagged as RC.1 and prepared for PCORI evaluation.',
+        category: 'Technology',
+        read_time_minutes: 5,
+        published: true,
+        created_date: '2026-04-06T09:00:00Z',
+        content: '# The RC.1 Validation\n\nToday, the Humanos Foundation officially promotes the Aura hOS™ ecosystem to **v0.8.0-rc.1**. This release candidate marks the culmination of 1,000 hours of continuous architectural refinement, strictly governed by the Architect Assessor Protocol.\n\n### Locking the Zero-Knowledge Vault\n\nRC.1 is not a feature bump; it is a structural seal. We have officially deployed the Zero-Knowledge Vault architecture across the entire global event bus. By utilizing localized encryption routines, the Foundation mathematically proves its FTC HBNR BAA Exemption. We do not hold the keys. We are entirely immune to HIPAA liability, providing massive risk mitigation for our incoming Enterprise Clinic partners.\n\n### The $875k PCORI Pipeline\n\nWith RC.1 live, the platform is now fully scaled to absorb the pending $875,000 PCORI/AHRQ Federal Grant payload. The B2B Clinic Routing API is stable. The Dual-Path Validation (Zero-SSN Registration) is active. The Foundation site has formally transitioned from a grassroots startup blog to an authoritative, enterprise-grade Clinical AI Hub.\n\n---\n\n### Enterprise Standard Deployed\n\nThe system only listens when the compliance is bulletproof. [Join the Movement](/Join) to build the future of sovereign data architecture.'
     }
 ];
 

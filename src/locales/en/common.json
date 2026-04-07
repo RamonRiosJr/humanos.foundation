@@ -11,12 +11,12 @@
         "close": "Close Accessibility Menu"
     },
     "hero": {
-        "badge": "Introducing Aura hOS™",
+        "badge": "Aura hOS™ v0.8.0-rc.1",
         "title_part1": "You Are Not",
         "title_part2": "A",
         "title_part3": "5-Minute",
         "title_part4": "Story.",
-        "subtitle": "The \"First Mile\" of clinical care is catastrophically broken for neurodivergent populations. Engineered by the Humanos NGO, Aura hOS™ replaces the 15-page physical clipboard with a mathematically secure Zero-Knowledge Vault. We strictly eradicate clinical intake liability for our enterprise partners while returning seamless data sovereignty directly to the patient.",
+        "subtitle": "The \"First Mile\" of clinical care is catastrophically broken for neurodivergent populations. Engineered by the Humanos NGO, Aura hOS™ replaces the 15-20 page physical clipboard penalty with a mathematically secure Zero-Knowledge Vault. We strictly eradicate clinical intake liability for our enterprise partners while returning seamless data sovereignty directly to the patient.",
         "cta_main": "Take Command of Your Story"
     },
     "common": {
