@@ -21,7 +21,7 @@
 
 The **Humanos Foundation** is the 501(c)(3) Enterprise advocacy wing of the **Aura hOS™ (Human Operating System)**. We are a global network of patients, clinicians, and technologists dedicated to dismantling the 15-20 page clinical clipboard penalty. 
 
-This repository powers our digital advocacy platform—an enterprise-grade engine designed to drive $875k PCORI grant pipeline conversions, host our sovereign education library, and facilitate Zero-SSN Registration for our B2B Clinic partners.
+This repository powers our digital advocacy platform—an enterprise-grade engine designed to drive $825k PCORI grant pipeline conversions, host our sovereign education library, and facilitate Zero-SSN Registration for our B2B Clinic partners.
 
 ---
 
