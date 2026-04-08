@@ -51,6 +51,13 @@ To definitively prove our security posture as a Sovereign B2C Personal Health Re
 
 - **Independent Grey-Box Penetration Testing:** Focused strictly on our iOS Secure Enclave / Android Keystore key derivation implementation and Supabase Row-Level Security (RLS) policies. We do not "grade our own homework."
 - **WCAG 2.1 AA (EAA / ADA) Compliance:** Implementing strict "High Contrast" UI toggles alongside our standard Glassmorphism engine to ensure visually impaired patients maintain absolute, safe control over their medical telemetry.
+
+## 6. Enterprise Pharmacy Hub & Predictive Logistics
+
+To comprehensively close the loop on patient adherence and clinical friction, Aura hOS™ integrates native FHIR-standard granular medication logistics directly into the cryptographic vault.
+
+- **Granular Inventory Tracking:** Ecosystem algorithms track strictly-typed telemetry such as \`quantityOnHand\`, \`dispenseQuantity\`, and \`refillsRemaining\`. Rather than forcing patients to endure the 15-20 page clipboard penalty just to update their adherence history, their physical inventory counts automatically generate predictive analytics.
+- **B2B Adherence Engines:** By calculating exact drop-off rates on life-saving pharmaceuticals locally over the Zero-Knowledge Vault, Aura hOS™ feeds mathematically pure adherence metrics to partner B2B enterprise clinics. This allows providers to proactively engage patients before catastrophic hospitalization events occur, establishing a massive cost-saving moat for our B2B network.
 `;
 
 export default function Whitepaper() {

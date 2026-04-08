@@ -5,7 +5,7 @@
  */
 // PostHog imported dynamically below to prevent blank screen crashes when config is missing
 
-const STORAGE_PREFIX = 'humanos_v2_';
+const STORAGE_PREFIX = 'humanos_v3_rc1_';
 
 const CORNERSTONE_POSTS = [
     {
