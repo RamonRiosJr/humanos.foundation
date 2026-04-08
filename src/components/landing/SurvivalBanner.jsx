@@ -41,7 +41,7 @@ export default function SurvivalBanner() {
 
                 {/* Call To Action */}
                 <a 
-                    href="https://www.gofundme.com" 
+                    href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="shrink-0 group relative overflow-hidden inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-red-500/10 border border-red-500/30 hover:border-red-400 hover:bg-red-500/20 transition-all duration-300"
