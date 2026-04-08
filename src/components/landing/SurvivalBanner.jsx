@@ -31,7 +31,7 @@ export default function SurvivalBanner() {
                         <h3 className="text-sm md:text-base font-bold text-white mb-0.5 tracking-tight flex items-center justify-center sm:justify-start gap-2">
                             <span className="text-red-400 uppercase tracking-widest text-[10px] sm:text-xs">Survival Campaign</span>
                             <span className="hidden sm:inline text-white/30">•</span>
-                            <span>Bridge to the $875k Federal PCORI Grant</span>
+                            <span>Bridge to the $825k Federal PCORI Grant</span>
                         </h3>
                         <p className="text-xs md:text-sm text-white/70 leading-snug">
                             We are raising $20k to sustain our foundational engineers. Funding the Zero-Knowledge Vault architecture immediately secures the FTC HBNR BAA Exemption for pediatric clinics.
