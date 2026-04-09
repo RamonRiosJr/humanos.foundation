@@ -3,6 +3,7 @@ import SEOMeta from '../components/shared/SEOMeta';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
+import SurvivalBanner from '../components/landing/SurvivalBanner';
 import { motion } from 'framer-motion';
 import { ShieldCheck, Server, Key, Info } from 'lucide-react';
 
@@ -38,6 +39,7 @@ export default function Clinics() {
                 description="Public directory of validated B2B Clinic Routing IDs for Aura hOS integration."
                 url="https://humanos.foundation/clinics"
             />
+            <SurvivalBanner />
             <Navbar />
             
             <PageHero 
