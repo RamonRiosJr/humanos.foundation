@@ -14,6 +14,8 @@ const footerLinks = {
     ],
     Resources: [
         { label: 'Architecture Whitepaper', page: 'Whitepaper' },
+        { label: 'Developer Portal (API)', page: 'Developers' },
+        { label: 'Interactive Sandbox', page: 'Sandbox' },
         { label: 'Blog & Insights', page: 'Blog' },
         { label: 'Press & Media', page: 'Press' },
         { label: 'FAQ', page: 'FAQ' },
@@ -33,6 +35,7 @@ const footerLinks = {
         { label: 'Volunteer', page: 'Volunteer' },
         { label: 'Security', page: 'Security' },
         { label: 'B2B Clinic Directory', page: 'Clinics' },
+        { label: 'Enterprise Onboarding', page: 'Providers' },
     ],
 };
 
