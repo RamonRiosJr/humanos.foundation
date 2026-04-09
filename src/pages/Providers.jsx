@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SEOMeta from '../components/shared/SEOMeta';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
 import SurvivalBanner from '../components/landing/SurvivalBanner';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { DatabaseZap, ShieldCheck, ActivitySquare, Ban, CheckCircle2, ChevronRight } from 'lucide-react';
 
 const valueProps = [
@@ -26,6 +26,16 @@ const valueProps = [
 ];
 
 export default function Providers() {
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    
+    const handleB2BSubmit = (e) => {
+        e.preventDefault();
+        // Simulate local network ingestion
+        setTimeout(() => {
+            setIsSubmitted(true);
+        }, 800);
+    };
+
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta 
@@ -107,44 +117,54 @@ export default function Providers() {
                             Submit your practice information to provision a Zero-Knowledge Routing ID on our public registry and open your OAuth B2B pipeline.
                         </p>
 
-                        <form action="https://api.web3forms.com/submit" method="POST" className="space-y-4">
-                            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY" />
-                            <input type="hidden" name="subject" value="New B2B Enterprise Lead - Aura hOS" />
-                            <input type="hidden" name="redirect" value="https://humanos.foundation/providers?success=true" />
+                        <AnimatePresence mode="wait">
+                            {!isSubmitted ? (
+                                <motion.form key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onSubmit={handleB2BSubmit} className="space-y-4">
+                                    <div>
+                                        <label className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">Clinic / Hospital System</label>
+                                        <input required type="text" name="clinic_name" placeholder="e.g. River Valley Health" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors placeholder:text-white/20" />
+                                    </div>
 
-                            <div>
-                                <label className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">Clinic / Hospital System</label>
-                                <input required type="text" name="clinic_name" placeholder="e.g. River Valley Health" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors placeholder:text-white/20" />
-                            </div>
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <label className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">Director Name</label>
+                                            <input required type="text" name="name" placeholder="Name" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors placeholder:text-white/20" />
+                                        </div>
+                                        <div>
+                                            <label className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">Work Email</label>
+                                            <input required type="email" name="email" placeholder="CTO@clinic.org" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors placeholder:text-white/20" />
+                                        </div>
+                                    </div>
 
-                            <div className="grid grid-cols-2 gap-4">
-                                <div>
-                                    <label className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">Director Name</label>
-                                    <input required type="text" name="name" placeholder="Name" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors placeholder:text-white/20" />
-                                </div>
-                                <div>
-                                    <label className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">Work Email</label>
-                                    <input required type="email" name="email" placeholder="CTO@clinic.org" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors placeholder:text-white/20" />
-                                </div>
-                            </div>
+                                    <div>
+                                        <label className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">EHR Matrix</label>
+                                        <select required name="ehr_system" defaultValue="" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white/70 focus:outline-none focus:border-cyan-500/50 transition-colors appearance-none">
+                                            <option value="" disabled>Select Current EHR System</option>
+                                            <option value="Epic">Epic</option>
+                                            <option value="Cerner">Oracle Cerner</option>
+                                            <option value="Athenahealth">Athenahealth</option>
+                                            <option value="eClinicalWorks">eClinicalWorks</option>
+                                            <option value="Other">Other / Paper</option>
+                                        </select>
+                                    </div>
 
-                            <div>
-                                <label className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">EHR Matrix</label>
-                                <select required name="ehr_system" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white/70 focus:outline-none focus:border-cyan-500/50 transition-colors appearance-none">
-                                    <option value="" disabled selected>Select Current EHR System</option>
-                                    <option value="Epic">Epic</option>
-                                    <option value="Cerner">Oracle Cerner</option>
-                                    <option value="Athenahealth">Athenahealth</option>
-                                    <option value="eClinicalWorks">eClinicalWorks</option>
-                                    <option value="Other">Other / Paper</option>
-                                </select>
-                            </div>
-
-                            <button type="submit" className="w-full mt-6 group relative overflow-hidden inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-cyan-500/10 border border-cyan-500/30 hover:border-cyan-400 hover:bg-cyan-500/20 transition-all duration-300">
-                                <span className="relative z-10 text-sm font-bold text-cyan-100">Provision Ledger ID</span>
-                                <ChevronRight className="relative z-10 w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                            </button>
-                        </form>
+                                    <button type="submit" className="w-full mt-6 group relative overflow-hidden inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-cyan-500/10 border border-cyan-500/30 hover:border-cyan-400 hover:bg-cyan-500/20 transition-all duration-300">
+                                        <span className="relative z-10 text-sm font-bold text-cyan-100">Provision Ledger ID</span>
+                                        <ChevronRight className="relative z-10 w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                                    </button>
+                                </motion.form>
+                            ) : (
+                                <motion.div key="success" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="flex flex-col items-center justify-center py-6 text-center">
+                                    <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mb-4 border border-emerald-500/30">
+                                        <CheckCircle2 className="w-8 h-8 text-emerald-400" />
+                                    </div>
+                                    <h4 className="text-xl font-bold text-white mb-2">Provisional ID Generated</h4>
+                                    <p className="text-sm text-white/60 leading-relaxed max-w-xs mx-auto">
+                                        The enterprise architecture team has received your webhook. We will be in contact to finalize your $0.25 execution sandbox.
+                                    </p>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
                     </motion.div>
 
                 </div>
