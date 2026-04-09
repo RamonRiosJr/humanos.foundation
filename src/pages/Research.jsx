@@ -4,7 +4,6 @@ import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
 import { Network, LineChart, TestTube2, ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 export default function Research() {
     return (

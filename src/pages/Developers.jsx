@@ -4,8 +4,7 @@ import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
 import SurvivalBanner from '../components/landing/SurvivalBanner';
-import { Terminal, Github, Code2, Webhook, FileJson } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Terminal, Github, Webhook } from 'lucide-react';
 
 export default function Developers() {
     return (
