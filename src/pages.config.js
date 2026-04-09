@@ -35,6 +35,10 @@ const Whitepaper = lazy(() => import('./pages/Whitepaper'));
 const Providers = lazy(() => import('./pages/Providers'));
 const Sandbox = lazy(() => import('./pages/Sandbox'));
 const Developers = lazy(() => import('./pages/Developers'));
+const Governance = lazy(() => import('./pages/Governance'));
+const Research = lazy(() => import('./pages/Research'));
+const Status = lazy(() => import('./pages/Status'));
+const Bounties = lazy(() => import('./pages/Bounties'));
 export const PAGES = {
     "Accessibility": Accessibility,
     "Blog": Blog,
@@ -66,6 +70,10 @@ export const PAGES = {
     "Providers": Providers,
     "Sandbox": Sandbox,
     "Developers": Developers,
+    "Governance": Governance,
+    "Research": Research,
+    "Status": Status,
+    "Bounties": Bounties,
 }
 
 export const pagesConfig = {

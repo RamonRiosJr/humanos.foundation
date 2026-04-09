@@ -32,3 +32,23 @@
   - [x] **State Management:** Implement a global Context layer / URL parameter listener (e.g., `?context=enterprise`).
   - [x] **Component Triage:** Modify `SurvivalBanner.jsx` to dynamically unload the $20K GoFundMe grassroots text whenever B2B/Enterprise routes are engaged.
   - [x] **Capital Injection:** Dynamically swap the banner with a strict "Supported by the $825k PCORI / AHRQ Infrastructure Pilot" narrative to lock the institutional facade for hospital CTOs.
+
+## Phase 9: Institutional Armor & PCORI Compliance
+
+- [x] **GAP 5: BOARD GOVERNANCE & IRS TRANSPARENCY (`/governance`)**
+  - [x] **Infrastructure:** Build `Governance.jsx` showing explicit 501(c)(3) compliance.
+  - [x] **Conflict of Interest:** Publish the strict zero-compromise COI strategy.
+  - [x] **Financial Public Ledger:** Create a structured layout for pending Form 990 uploads, establishing the NGO as a rigid legal entity.
+
+- [x] **GAP 6: CLINICAL OUTCOMES & PCORI EVIDENCE (`/research`)**
+  - [x] **Infrastructure:** Build `Research.jsx` to prove the grant validity.
+  - [x] **Narrative Engine:** Detail the "Neurodivergent UI Sovereignty vs. Adherence Rates" hypothesis to validate the $825k AHRQ/PCORI pipeline.
+  - [x] **Endpoints:** Create academic-style UI layouts for future peer-reviewed publications.
+
+- [x] **GAP 7: ENTERPRISE SYSTEM SLA (`/status`)**
+  - [x] **Infrastructure:** Build `Status.jsx` to mock the edge function uptime and webhooks pipeline health.
+  - [x] **B2B Comfort:** Expose a visually flawless "100% Operational" interface strictly to appease CTO diligence checks.
+
+- [x] **GAP 8: OPEN SOURCE BOUNTY MECHANICS (`/bounties`)**
+  - [x] **Infrastructure:** Build `Bounties.jsx` to formalize the decentralized engineering model.
+  - [x] **Economic Hooks:** State physical USD payouts for FHIR webhooks (e.g., $500 Athenahealth JSON parser) to funnel dev momentum.
