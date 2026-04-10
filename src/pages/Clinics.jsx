@@ -9,13 +9,6 @@ import { ShieldCheck, Server, Key, Info } from 'lucide-react';
 
 const clinicDirectory = [
     {
-        id: 'RVFHC-CO-825',
-        name: 'River Valley Front Range Clinic',
-        region: 'Colorado, USA',
-        status: 'Active (Pilot)',
-        integrationType: 'Full API Handshake',
-    },
-    {
         id: 'PRST-EQ-001',
         name: 'PRST Health Equity Initiative',
         region: 'San Juan, PR',
