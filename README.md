@@ -12,7 +12,7 @@
 
 ---
 
-*"The system only listens when the truth is structurally robust. We are engineering the Zero-Knowledge Vault to make your clinical narrative undeniable."*
+*"We are engineering the 256-bit AES-GCM local-first data vault to cryptographically secure your clinical narrative."*
 
 </div>
 
@@ -20,26 +20,26 @@
 
 The **Humanos Foundation** is the 501(c)(3) Enterprise advocacy wing of the **Aura hOS™ (Human Operating System)**. We are a global network of patients, clinicians, and technologists dedicated to dismantling the 15-20 page clinical clipboard penalty. 
 
-This repository powers our digital advocacy platform—an enterprise-grade engine designed to drive our $3.0M Enterprise Capitalization, manage donor pathways, host our sovereign education library, and facilitate recruiting via our CRM.
+This repository powers our digital advocacy platform, designed to manage donor pathways, parse localized Markdown for our sovereign education library, and facilitate B2B Clinic Lead Generation via the FHIR R4 schema.
 
 ---
 
 ## 🏗️ Architectural Boundaries
 
-To protect both our capital roadmap and regulatory standing, the ecosystem is strictly divided into two distinct perimeters:
+To protect our regulatory standing, the ecosystem is strictly divided into two distinct perimeters:
 
 ### 1. The Human Operations Layer (This Repository)
 Powers `humanos.foundation`. This is the administrative surface area of the NGO.
 - **Frontend:** React 18 SPA, deployed via Vercel Edge.
-- **Backend (CRM):** Bound directly to Odoo (`teams.humanos.foundation`) via internal iframes and webhooks.
-- **Use Case:** Recruiting, Helpdesk, GoFundMe routing, and Federal Grant (PCORI/AHRQ) validation.
-- **Design System:** Custom Glassmorphism, Tailwind CSS, and Framer Motion.
+- **Backend (CRM):** Bound directly to Odoo (`teams.humanos.foundation`) via internal iframes and XML-RPC webhook payloads.
+- **Use Case:** Recruiting, Helpdesk, GoFundMe routing, and Federal Grant validation.
+- **Design System:** Custom CSS, Tailwind, and Framer Motion decorative animations (No diagnostic logic).
 
 ### 2. The Machine Layer (External Repository)
 Powers `aurahos.io` and the Clinical Patient Vault. For engineering the core software, please see the `aura-health-os` repository.
 - **Frontend:** Capacitor / React Native.
-- **Backend:** Local-First IndexedDB and Supabase Edge Functions.
-- **Use Case:** The $199/mo B2B Clinic Route, Zero-SSN Registrations, and AES-GCM encrypted vaults.
+- **Backend:** Local-First IndexedDB and PostgREST via Edge Functions.
+- **Use Case:** The B2B Clinic Route, FHIR R4 JSON Payload Generation, and AES-GCM encrypted vaults.
 
 ---
 
@@ -57,7 +57,7 @@ npm install
 ```
 
 ### 3. Launching the Advocacy Kernel
-Start the local Vite development server to test the UI or prepare for Enterprise Demonstrations:
+Executes the UI sequence and launches the local Vite development server (Note: executes zero local cryptographic operations).
 
 ```bash
 npm run dev
@@ -69,13 +69,13 @@ npm run dev
 
 ## 🔒 Security & FTC HBNR BAA Exemption
 
-We believe **Privacy is a request, but Sovereignty is mathematics.** 
+We believe Privacy is a request, but Sovereignty is mathematics. 
 
-By utilizing strict Edge-First Encryption on the Machine Layer, Aura hOS operates distinctly under the **FTC Health Breach Notification Rule (HBNR)** as a Personal Health Record. Although this repository strictly handles Human Operations, we enforce the same Zero-Trust standard:
+By utilizing **256-bit AES-GCM Encryption with Web Crypto API key isolation** on the Machine Layer, Aura hOS operates distinctly under the **FTC Health Breach Notification Rule (HBNR)** as a Personal Health Record. Although this repository strictly handles Human Operations, we enforce the same Zero-Trust standard:
 
-- **Ethical Integrity:** Contact and Waitlist nodes strictly utilize our dedicated Odoo CRM. We do not sell analytics.
+- **Ethical Integrity:** Contact and Waitlist nodes route strictly through authenticated Odoo CRM endpoints using webhook payload encryption. We do not sell analytics.
 - **Zero Third-Party Trackers**: We have purged all unauthorized Google/Meta marketing tracking scopes. 
-- **Privacy Handshake**: Optional telemetry (PostHog) is loaded dynamically and strictly respects Edge rendering constraints.
+- **Privacy Handshake**: Optional telemetry (PostHog) is loaded dynamically and strictly respects Edge rendering constraints without accessing persistent local state.
 
 For more information on how we bypass FDA SaMD and HIPAA BAA traps, please see our [Zero-Knowledge Whitepaper](/whitepaper).
 
@@ -83,15 +83,15 @@ For more information on how we bypass FDA SaMD and HIPAA BAA traps, please see o
 
 ## 🤝 The Contributor's Path
 
-We are scaling an enterprise-grade contributor network to protect the $3.0M Enterprise Capitalization.
+We are scaling an enterprise-grade contributor network:
 
-- **Data Scientists/Engineers**: Help us harden the Zero-Knowledge architecture and optimize the Supabase edge vectors on our core product.
-- **Clinicians**: Validate our UX logic against "Root-Cause" workflows to optimize our B2B integration metrics.
-- **Advocates**: Help us scale the 501(c)(3) pipeline by driving awareness to our structural narrative.
+- **Data Scientists/Engineers**: Help us harden the local encryption logic or optimize the UI compiling speeds locally.
+- **Clinicians**: Validate our UX logic against "Root-Cause" workflows.
+- **Advocates**: Help us scale the 501(c)(3) pipeline by driving awareness.
 
 1. Review the [Code of Conduct](CODE_OF_CONDUCT.md).
 2. Read the [Contributor Guidelines](CONTRIBUTING.md).
-3. Check the [Project Board](https://github.com/RamonRiosJr/humanos.foundation/projects) for active capitalization tasks.
+3. Check the [Project Board](https://github.com/RamonRiosJr/humanos.foundation/projects) for active validation tasks.
 
 ---
 
