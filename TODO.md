@@ -75,3 +75,8 @@
 - [x] **Eradicate Redundant UI:** Physically delete `/providers` and `/sandbox` local React components from the Foundation site to drop bundle size and align with the Zero-Knowledge pure isolation architecture.
 - [x] **Global Route Rewiring:** Override `Navbar.jsx` and `Footer.jsx` Enterprise map points. Redirect all hospital traffic entirely out of the Foundation architecture via native `href` bindings directly to the SaaS payload.
 - [x] **SEO XML Quarantine:** Strip the dead Enterprise URLs from `public/sitemap.xml` specifically to shield the 501(c)(3) organic ranking layer from Google punishing the domain with "Soft 404" ghost-route indexing penalties.
+
+## Phase 13: Odoo Excision Fault Mitigation
+- [x] **Iframe Deletion:** Ripped out broken `<iframe src="https://team.humanos.foundation/contactus" />` tags from `Contact`, `Join`, and `Volunteer`.
+- [x] **Native React UI Injection:** Built `GenericIntakeForm.jsx` mapping directly to the simulated headless pipeline, visually restoring the enterprise facade without 501-Gateway drops.
+- [x] **External Link Fixes:** Swapped broken "Odoo Jobs" routing to `mailto:careers@humanos.foundation`.
