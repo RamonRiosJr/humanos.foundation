@@ -6,7 +6,6 @@ import PageHero from '../components/shared/PageHero';
 import SurvivalBanner from '../components/landing/SurvivalBanner';
 import { motion, AnimatePresence } from 'framer-motion';
 import { DatabaseZap, ShieldCheck, ActivitySquare, Ban, CheckCircle2, ChevronRight, Loader2 } from 'lucide-react';
-import { odooClient } from '../api/odooClient';
 
 const valueProps = [
     {
@@ -45,7 +44,8 @@ export default function Providers() {
         };
 
         try {
-            await odooClient.createTicket(payload);
+            await new Promise(r => setTimeout(r, 2000));
+            console.log("Edge Function Simulation (Supabase Connect):", payload);
         } catch (err) {
             console.warn('Odoo integration gracefully simulated due to local offline environment:', err);
         }

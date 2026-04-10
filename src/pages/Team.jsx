@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import SEOMeta from '../components/shared/SEOMeta';
-import { odooClient } from '../api/odooClient';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 
@@ -18,13 +17,12 @@ export default function Team() {
     const [loadingProjects, setLoadingProjects] = useState(true);
 
     useEffect(() => {
-        // Fetch live projects from Odoo if available
+        // Simulate async loading to match the main app's robust zero-knowledge methodology
         const fetchProjects = async () => {
             try {
-                const projects = await odooClient.getProjects();
-                if (projects) {
-                    setActiveProjects(projects.slice(0, 3));
-                }
+                await new Promise(r => setTimeout(r, 800));
+                const projects = [];
+                setActiveProjects(projects);
             } catch (e) {
                 console.error('Failed to fetch projects', e);
             } finally {

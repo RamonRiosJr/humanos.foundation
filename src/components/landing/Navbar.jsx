@@ -14,7 +14,7 @@ const navLinks = [
     { label: 'Blog', href: createPageUrl('Blog') },
     { label: 'Team', href: createPageUrl('Team') },
     { label: 'Press', href: createPageUrl('Press') },
-    { label: 'For Providers', href: createPageUrl('Providers') },
+    { label: 'For Providers', href: 'https://aurahos.io', external: true },
 ];
 
 export default function Navbar() {
@@ -45,9 +45,15 @@ export default function Navbar() {
 
                     <div className="hidden lg:flex items-center gap-6">
                         {navLinks.map((link) => (
-                            <Link key={link.label} to={link.href} className="text-xs text-white/60 hover:text-cyan-400 transition-colors duration-300 tracking-wider uppercase font-bold">
-                                {link.label}
-                            </Link>
+                            link.external ? (
+                                <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 tracking-wider uppercase font-bold border border-cyan-500/30 px-3 py-1.5 rounded-lg bg-cyan-500/10">
+                                    {link.label}
+                                </a>
+                            ) : (
+                                <Link key={link.label} to={link.href} className="text-xs text-white/60 hover:text-cyan-400 transition-colors duration-300 tracking-wider uppercase font-bold">
+                                    {link.label}
+                                </Link>
+                            )
                         ))}
                         <a
                             href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom"
@@ -81,14 +87,15 @@ export default function Navbar() {
                             className="lg:hidden bg-[#0a0a0f]/95 backdrop-blur-xl border border-white/10 rounded-2xl mt-2 p-4 space-y-1 shadow-2xl"
                         >
                             {navLinks.map((link) => (
-                                <Link 
-                                    key={link.label} 
-                                    to={link.href} 
-                                    onClick={() => setMenuOpen(false)} 
-                                    className="block px-4 py-3 text-sm text-white hover:text-cyan-400 transition-colors rounded-xl hover:bg-white/[0.05] font-medium"
-                                >
-                                    {link.label}
-                                </Link>
+                                link.external ? (
+                                    <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)} className="block px-4 py-3 text-sm text-cyan-400 font-bold border border-cyan-500/30 bg-cyan-500/10 rounded-xl mb-1">
+                                        {link.label}
+                                    </a>
+                                ) : (
+                                    <Link key={link.label} to={link.href} onClick={() => setMenuOpen(false)} className="block px-4 py-3 text-sm text-white hover:text-cyan-400 transition-colors rounded-xl hover:bg-white/[0.05] font-medium">
+                                        {link.label}
+                                    </Link>
+                                )
                             ))}
                             <div className="pt-2 space-y-2">
                                 <a 
