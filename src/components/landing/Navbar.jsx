@@ -55,7 +55,7 @@ export default function Navbar() {
                             rel="noopener noreferrer"
                             className="bg-yellow-400/10 text-yellow-500 hover:text-yellow-400 px-3 md:px-5 py-1.5 md:py-2 rounded-lg text-[10px] md:text-xs font-bold tracking-widest uppercase transition-all duration-300 border border-yellow-500/20 hover:border-yellow-500/50 hover:bg-yellow-500/20 shadow-[0_0_15px_rgba(234,179,8,0.15)] hover:shadow-[0_0_25px_rgba(234,179,8,0.3)] min-w-max flex-shrink-0"
                         >
-                            ☕ Donate
+                            ⚡ Bridge Round
                         </a>
                         <Link to={createPageUrl('Join')} className="px-5 py-2 rounded-xl bg-gradient-to-r from-cyan-400/20 to-blue-500/20 border border-cyan-400/30 text-xs text-cyan-300 hover:text-white hover:border-cyan-300/60 transition-all duration-300 font-bold shadow-[0_0_15px_rgba(34,211,238,0.15)] glow-btn">
                             Join the Movement
@@ -98,7 +98,7 @@ export default function Navbar() {
                                     onClick={() => setMenuOpen(false)}
                                     className="block p-3 rounded-xl bg-yellow-400/10 text-center text-yellow-500 text-xs font-bold tracking-widest uppercase border border-yellow-500/20"
                                 >
-                                    ☕ Donate
+                                    ⚡ Bridge Round
                                 </a>
                                 <Link 
                                     to={createPageUrl('Join')} 

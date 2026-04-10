@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, ExternalLink, Coffee } from 'lucide-react';
+import { Heart, ExternalLink, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import HOSLogo from '../shared/HOSLogo';
@@ -96,7 +96,7 @@ export default function Footer() {
                             hello@humanos.foundation
                         </a>
                         <a href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[10px] text-yellow-300 hover:text-yellow-200 transition-colors border border-yellow-400/30 hover:border-yellow-400/60 bg-yellow-400/5 hover:bg-yellow-400/10 shadow-[0_0_10px_rgba(250,204,21,0.1)] hover:shadow-[0_0_15px_rgba(250,204,21,0.2)] px-4 py-2 rounded-lg font-medium tracking-wide">
-                            <Coffee className="w-3.5 h-3.5" /> Support the movement
+                            <Zap className="w-3.5 h-3.5" /> Fund Bridge Round
                         </a>
                     </div>
                 </div>
