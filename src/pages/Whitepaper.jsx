@@ -58,6 +58,13 @@ To comprehensively close the loop on patient adherence and clinical friction, Au
 
 - **Granular Inventory Tracking:** Ecosystem algorithms track strictly-typed telemetry such as \`quantityOnHand\`, \`dispenseQuantity\`, and \`refillsRemaining\`. Rather than forcing patients to endure the 15-20 page clipboard penalty just to update their adherence history, their physical inventory counts automatically generate predictive analytics.
 - **B2B Adherence Engines:** By calculating exact drop-off rates on life-saving pharmaceuticals locally over the Zero-Knowledge Vault, Aura hOS™ feeds mathematically pure adherence metrics to partner B2B enterprise clinics. This allows providers to proactively engage patients before catastrophic hospitalization events occur, establishing a massive cost-saving moat for our B2B network.
+
+## 7. Zero-Knowledge Signatures: The Enterprise API Boundary
+
+To mitigate strict Business Associate liability, the Aura hOS™ Provider Terminal (Phase 3.E) legally shifts policy burdens directly onto the cryptographic layer.
+
+- **Provider-Pushed Consent Generation:** Enterprise B2B clinics can dynamically push rigorous internal compliance PDFs, terms of service, and fasting instructions directly into the patient's mobile terminal. The Aura architecture categorically intercepts these payloads and restricts clinic communication until the patient has generated a **Zero-Knowledge Digital Signature** stored strictly offline.
+- **Automated Clinical Protocol Engine (Phase 3.D):** Partner clinics inject continuous Telemetry Tracking triggers (such as EEG Wake protocols and Fasting intervals) into our API Gateway. Aura’s \`DashboardNotificationHub\` securely ingests these directives, translating them into standard \`ClinicalEvent\` nodes without exposing the patient’s primary medical cipher. The enterprise clinic receives pristine adherence logs without directly touching patient keys, closing the liability moat permanently.
 `;
 
 export default function Whitepaper() {
