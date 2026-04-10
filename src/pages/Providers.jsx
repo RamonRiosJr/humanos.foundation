@@ -138,13 +138,25 @@ export default function Providers() {
 
                                     <div>
                                         <label className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">EHR Matrix</label>
-                                        <select required name="ehr_system" defaultValue="" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white/70 focus:outline-none focus:border-cyan-500/50 transition-colors appearance-none">
-                                            <option value="" disabled>Select Current EHR System</option>
-                                            <option value="Epic">Epic</option>
-                                            <option value="Cerner">Oracle Cerner</option>
-                                            <option value="Athenahealth">Athenahealth</option>
-                                            <option value="eClinicalWorks">eClinicalWorks</option>
-                                            <option value="Other">Other / Paper</option>
+                                        <select required name="ehr_system" defaultValue="" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors appearance-none cursor-pointer">
+                                            <option value="" disabled className="bg-slate-900 text-white/50">Select Current EHR System</option>
+                                            <option value="Epic" className="bg-slate-900 text-white">Epic Systems</option>
+                                            <option value="Cerner" className="bg-slate-900 text-white">Oracle Cerner</option>
+                                            <option value="Athenahealth" className="bg-slate-900 text-white">Athenahealth</option>
+                                            <option value="eClinicalWorks" className="bg-slate-900 text-white">eClinicalWorks</option>
+                                            <option value="MEDITECH" className="bg-slate-900 text-white">MEDITECH</option>
+                                            <option value="NextGen" className="bg-slate-900 text-white">NextGen Healthcare</option>
+                                            <option value="Allscripts" className="bg-slate-900 text-white">Altera (Allscripts)</option>
+                                            <option value="Greenway" className="bg-slate-900 text-white">Greenway Health</option>
+                                            <option value="PracticeFusion" className="bg-slate-900 text-white">Practice Fusion</option>
+                                            <option value="DrChrono" className="bg-slate-900 text-white">DrChrono</option>
+                                            <option value="AdvancedMD" className="bg-slate-900 text-white">AdvancedMD</option>
+                                            <option value="CareCloud" className="bg-slate-900 text-white">CareCloud</option>
+                                            <option value="Elation" className="bg-slate-900 text-white">Elation Health</option>
+                                            <option value="PointClickCare" className="bg-slate-900 text-white">PointClickCare</option>
+                                            <option value="Kareo" className="bg-slate-900 text-white">Kareo / Tebra</option>
+                                            <option value="Other" className="bg-slate-900 text-white">Other / Custom Deployment</option>
+                                            <option value="Paper" className="bg-slate-900 text-white">Analog / Paper Charts</option>
                                         </select>
                                     </div>
 
