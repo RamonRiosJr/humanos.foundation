@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import SEOMeta from '../components/shared/SEOMeta';
 import { motion, AnimatePresence } from 'framer-motion';
 import { humanosMockClient } from '../lib/humanos-mock-sdk';
@@ -49,14 +49,16 @@ export default function Blog() {
         });
     }, []);
 
-    const filtered = posts.filter(post => {
-        const matchesCategory = activeCategory === 'All' || post.category === activeCategory;
-        const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            (post.excerpt && post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()));
-        return matchesCategory && matchesSearch;
-    });
+    const filtered = useMemo(() => {
+        return posts.filter(post => {
+            const matchesCategory = activeCategory === 'All' || post.category === activeCategory;
+            const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                (post.excerpt && post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()));
+            return matchesCategory && matchesSearch;
+        });
+    }, [posts, activeCategory, searchQuery]);
 
-    const visiblePosts = filtered.slice(0, visibleCount);
+    const visiblePosts = useMemo(() => filtered.slice(0, visibleCount), [filtered, visibleCount]);
     const hasMore = visibleCount < filtered.length;
 
     const formatDate = (dateStr) => {
