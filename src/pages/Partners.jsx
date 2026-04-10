@@ -8,18 +8,12 @@ import { ExternalLink, Handshake, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 
-const alignedOrgs = [
     { name: 'Patient Privacy Rights', url: 'https://patientprivacyrights.org', desc: 'Medical privacy advocacy' },
     { name: 'Patient Advocacy Foundation', url: 'https://www.patientadvocate.org', desc: 'Patient support & case management' },
-    { name: 'PCORI', url: 'https://www.pcori.org', desc: 'Patient-Centered Outcomes' },
-    { name: 'SMART Health IT', url: 'https://smarthealthit.org', desc: 'Open healthcare APIs (FHIR)' },
-    { name: 'CARIN Alliance', url: 'https://www.carinalliance.com', desc: 'Consumer-directed health exchange' },
-    { name: 'HL7 International', url: 'https://www.hl7.org', desc: 'Global interoperability standards' },
-    { name: 'OpenNotes', url: 'https://www.opennotes.org', desc: 'Clinical transparency' },
-    { name: 'CommonWell Health Alliance', url: 'https://www.commonwellalliance.org', desc: 'Health data network' },
+    { name: 'OpenNotes', url: 'https://www.opennotes.org', desc: 'Open notes in healthcare' },
+    { name: 'CommonWell Health Alliance', url: 'https://www.commonwellalliance.org', desc: 'Health data interoperability' },
     { name: 'Health Data Research UK', url: 'https://www.hdruk.ac.uk', desc: 'Health data research' },
     { name: 'OpenMRS', url: 'https://openmrs.org', desc: 'Open-source medical records' },
-];
 
 const partnerBenefits = [
     'Mutual amplification of your mission and ours',
