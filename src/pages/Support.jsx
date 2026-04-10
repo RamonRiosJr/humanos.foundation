@@ -10,7 +10,7 @@ const supportWays = [
     { icon: Heart, title: 'Spread the Word', desc: 'Share our manifesto. Talk about patient data rights. Refer journalists, researchers, and advocates to us. The movement grows through people.', cta: 'Read the Manifesto', href: '/manifesto' },
     { icon: Users, title: 'Volunteer', desc: 'Give your time and skills. We need developers, writers, translators, and community organizers. Every contribution matters.', cta: 'Volunteer Now', href: '/volunteer' },
     { icon: Code, title: 'Contribute Code', desc: 'Help build open-source tools for the movement. Whether it\'s documentation, design, or development — we welcome all contributors.', cta: 'Visit Coqui Cloud', href: 'https://coqui.cloud' },
-    { icon: DollarSign, title: 'Financial Support', desc: 'We are currently raising the $15,000 Bridge Round via GoFundMe to finalize our Enterprise Clinic implementations. Your contribution accelerates the Zero-Knowledge Vault rollout.', cta: 'Donate on GoFundMe', href: 'https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom' },
+    { icon: DollarSign, title: 'Financial Support', desc: 'We are currently raising $15,000 via GoFundMe so we can give this secure, private health system to real clinics immediately. Your contribution directly funds the technology that protects your family\'s right to own their medical records.', cta: 'Donate on GoFundMe', href: 'https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom' },
 ];
 
 export default function Support() {
@@ -40,7 +40,7 @@ export default function Support() {
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="mt-10 glass rounded-2xl p-6 border border-yellow-500/20 text-center">
                         <p className="text-sm text-white/60 leading-relaxed">
                             <span className="text-yellow-400 font-bold">Bridge Round Active:</span>{' '}
-                            Humanos Foundation is currently pursuing formal 501(c)(3) nonprofit status. While tax-deductible donations will be enabled once status is confirmed, we are actively raising critical seed capital via GoFundMe to bridge the architecture to our incoming B2B Clinics today.
+                            Humanos Foundation is currently pursuing formal 501(c)(3) nonprofit status. While tax-deductible donations will be enabled once status is confirmed, we are actively raising crucial support via GoFundMe to bring this life-changing, private health platform directly to the clinics that care for our communities today.
                         </p>
                     </motion.div>
                 </div>

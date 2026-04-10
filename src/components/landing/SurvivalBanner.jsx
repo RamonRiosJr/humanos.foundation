@@ -73,7 +73,7 @@ export default function SurvivalBanner() {
                             <span>Bridge to the $825k Federal PCORI Grant</span>
                         </h3>
                         <p className="text-xs md:text-sm text-white/70 leading-snug">
-                            We are raising $20k to sustain our foundational engineers. Funding the Zero-Knowledge Vault architecture immediately secures the FTC HBNR BAA Exemption for pediatric clinics.
+                            Your $20k support directly funds the privacy locks that keep our families' medical records entirely in their own hands—bypassing the waiting room penalty forever.
                         </p>
                     </div>
                 </div>
