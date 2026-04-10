@@ -5,7 +5,6 @@ import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
 import HOSLogo from '../components/shared/HOSLogo';
-import GenericIntakeForm from '../components/shared/GenericIntakeForm';
 
 export default function Join() {
     return (
@@ -42,7 +41,20 @@ export default function Join() {
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                             className="absolute -inset-2 bg-gradient-to-tr from-cyan-500/5 via-white/10 to-transparent rounded-[2rem] blur-xl pointer-events-none"
                         />
-                        <GenericIntakeForm type="Join" subtitle="Join the open-source movement. Contribute as a patient advocate, researcher, or engineer." />
+                        <div className="w-full relative rounded-3xl overflow-hidden glass-strong border border-white/[0.08] shadow-[0_0_50px_rgba(0,0,0,0.5)] z-10 bg-obsidian" style={{ height: '820px' }}>
+                            <iframe
+                                src="https://team.humanos.foundation/contactus"
+                                className="w-full absolute"
+                                style={{ 
+                                    height: 'calc(100% + 200px)', 
+                                    top: '-75px', 
+                                    border: '0',
+                                    backgroundColor: 'transparent'
+                                }}
+                                title="Join"
+                                scrolling="yes"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

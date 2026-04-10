@@ -95,8 +95,8 @@ export default function Team() {
                                 <Briefcase className="w-6 h-6 text-purple-400 mb-4" />
                                 <h3 className="text-sm font-bold mb-2 uppercase tracking-wide">Open Roles</h3>
                                 <p className="text-xs text-white/40 mb-6 leading-relaxed">We are currently self-funded but always looking for key partners and dedicated full-time builders.</p>
-                                <a href="mailto:careers@humanos.foundation" className="inline-flex items-center gap-2 text-[10px] font-bold text-purple-400 hover:text-purple-300 transition-colors uppercase tracking-widest">
-                                    Apply via Email <ExternalLink className="w-3 h-3" />
+                                <a href="https://team.humanos.foundation/jobs" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[10px] font-bold text-purple-400 hover:text-purple-300 transition-colors uppercase tracking-widest">
+                                    Apply via Odoo Jobs <ExternalLink className="w-3 h-3" />
                                 </a>
                             </div>
                         </div>
