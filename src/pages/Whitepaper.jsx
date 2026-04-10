@@ -11,7 +11,7 @@ const whitepaperContent = `
 
 ## Executive Summary
 
-Aura hOS™ provides a revolutionary "Zero-Knowledge" approach to health data management, specifically engineered to eliminate the systemic vulnerabilities inherent in traditional cloud-based healthcare applications and eradicate the catastrophic 15-20 page physical clipboard packet bottleneck. By ensuring that Protected Health Information (PHI) is rigorously encrypted continuously before it syncs to our managed backend, Aura hOS™ fundamentally mitigates data breach risks for healthcare providers and patients alike.
+Aura hOS™ provides a revolutionary "Zero-Knowledge" approach to health data management, specifically engineered to eliminate the systemic vulnerabilities inherent in traditional cloud-based healthcare applications and eradicate the catastrophic 15-20 page physical clipboard packet bottleneck. By ensuring that Protected Health Information (PHI) is strictly secured via 256-bit AES-GCM Local Encryption continuously before it syncs to our managed backend, Aura hOS™ fundamentally mitigates data breach risks for healthcare providers and patients alike.
 
 ## 1. Zero-Knowledge, Edge-First Architecture
 
