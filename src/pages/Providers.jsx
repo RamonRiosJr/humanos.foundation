@@ -122,7 +122,7 @@ export default function Providers() {
                                 <motion.form key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onSubmit={handleB2BSubmit} className="space-y-4">
                                     <div>
                                         <label className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">Clinic / Hospital System</label>
-                                        <input required type="text" name="clinic_name" placeholder="e.g. River Valley Health" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors placeholder:text-white/20" />
+                                        <input required type="text" name="clinic_name" placeholder="e.g. Apex Health Systems" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors placeholder:text-white/20" />
                                     </div>
 
                                     <div className="grid grid-cols-2 gap-4">
