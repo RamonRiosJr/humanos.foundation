@@ -1,15 +1,14 @@
-
 <div align="center">
 
-# HUMANOS FOUNDATION
-### The Advocacy Kernel for Human Data Sovereignty
+# Humanos Foundation
+### The Advocacy Kernel & Human Operations Layer
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-00d4ff.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-20.x-10b981.svg?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org)
 [![Vite](https://img.shields.io/badge/Vite-6.x-8b5cf6.svg?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
 [![React](https://img.shields.io/badge/React-18.x-61DAFB.svg?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org)
 
-**[Visit the Portal](https://humanos.foundation)** • **[Read the Manifesto](https://humanos.foundation/manifesto)** • **[Join the Revolution](https://humanos.foundation/join)**
+**[Visit the Foundation](https://humanos.foundation)** • **[Read the Manifesto](https://humanos.foundation/manifesto)** • **[Join the Revolution](https://humanos.foundation/join)**
 
 ---
 
@@ -21,31 +20,26 @@
 
 The **Humanos Foundation** is the 501(c)(3) Enterprise advocacy wing of the **Aura hOS™ (Human Operating System)**. We are a global network of patients, clinicians, and technologists dedicated to dismantling the 15-20 page clinical clipboard penalty. 
 
-This repository powers our digital advocacy platform—an enterprise-grade engine designed to drive $825k PCORI grant pipeline conversions, host our sovereign education library, and facilitate Zero-SSN Registration for our B2B Clinic partners.
+This repository powers our digital advocacy platform—an enterprise-grade engine designed to drive our $3.0M Enterprise Capitalization, manage donor pathways, host our sovereign education library, and facilitate recruiting via our CRM.
 
 ---
 
-## 🏗️ Technical Pillars (The Sovereign Stack)
+## 🏗️ Architectural Boundaries
 
-Unlike traditional growth sites, we reject the "surveillance-first" status quo. The foundation platform is architected on three non-negotiable pillars:
+To protect both our capital roadmap and regulatory standing, the ecosystem is strictly divided into two distinct perimeters:
 
-| Pillar | Philosophy | Implementation |
-| :--- | :--- | :--- |
-| **Local-First** | Data lives on the device you own, not a server you don't control. | LocalStorage Mock SDK & PWA capabilities. |
-| **Zero-Knowledge** | We cannot see what we are not meant to see. | Client-side encryption handshakes & private routing. |
-| **Radical Transparency** | No hidden access. No silent sharing. | Open-source logic and verifiable data ingestion logs. |
+### 1. The Human Operations Layer (This Repository)
+Powers `humanos.foundation`. This is the administrative surface area of the NGO.
+- **Frontend:** React 18 SPA, deployed via Vercel Edge.
+- **Backend (CRM):** Bound directly to Odoo (`teams.humanos.foundation`) via internal iframes and webhooks.
+- **Use Case:** Recruiting, Helpdesk, GoFundMe routing, and Federal Grant (PCORI/AHRQ) validation.
+- **Design System:** Custom Glassmorphism, Tailwind CSS, and Framer Motion.
 
----
-
-## 🛠️ Technology & Architecture
-
-This platform provides a visual masterclass in modern, high-performance web aesthetics:
-
-- **Logic**: React 18 (SPA) optimized for 60fps animations.
-- **Styling**: Tailwind CSS with an custom **Glassmorphism Design System**.
-- **Motion**: Framer Motion for scroll-synced narratives and biological waveforms.
-- **Icons**: Lucide React for consistent, high-fidelity iconography.
-- **i18n**: Sovereign English/Spanish localization with local-only bundling.
+### 2. The Machine Layer (External Repository)
+Powers `aurahos.io` and the Clinical Patient Vault. For engineering the core software, please see the `aura-health-os` repository.
+- **Frontend:** Capacitor / React Native.
+- **Backend:** Local-First IndexedDB and Supabase Edge Functions.
+- **Use Case:** The $199/mo B2B Clinic Route, Zero-SSN Registrations, and AES-GCM encrypted vaults.
 
 ---
 
@@ -62,13 +56,9 @@ cd humanos.foundation
 npm install
 ```
 
-### 3. Launching the "Sovereign Kernel"
-To maximize impact during Enterprise Demonstrations, B2B Clinic Piloting, or PCORI validation audits, we recommend using the **Humanos Operating System Launcher**:
+### 3. Launching the Advocacy Kernel
+Start the local Vite development server to test the UI or prepare for Enterprise Demonstrations:
 
-**Windows (Recommended Experience)**:
-Double-click `Humanos-Operating-System.bat`. This triggers a terminal boot sequence that initializes the Zero-Knowledge infrastructure, establishes cryptographic handshakes, and launches the server.
-
-**Cross-Platform**:
 ```bash
 npm run dev
 ```
@@ -81,13 +71,13 @@ npm run dev
 
 We believe **Privacy is a request, but Sovereignty is mathematics.** 
 
-By utilizing strict Edge-First Encryption, Aura hOS operates distinctly under the **FTC Health Breach Notification Rule (HBNR)** as a Personal Health Record. We do not hold decryption keys, legally shielding our institutional partners from Business Associate (BAA) constraints and HIPAA misclassification.
+By utilizing strict Edge-First Encryption on the Machine Layer, Aura hOS operates distinctly under the **FTC Health Breach Notification Rule (HBNR)** as a Personal Health Record. Although this repository strictly handles Human Operations, we enforce the same Zero-Trust standard:
 
+- **Ethical Integrity:** Contact and Waitlist nodes strictly utilize our dedicated Odoo CRM. We do not sell analytics.
 - **Zero Third-Party Trackers**: We have purged all unauthorized Google/Meta marketing tracking scopes. 
 - **Privacy Handshake**: Optional telemetry (PostHog) is loaded dynamically and strictly respects Edge rendering constraints.
-- **Sovereign-First Framework**: Contact and Waitlist nodes route strictly through zero-trust architectures.
 
-For more information, please see our [Zero-Knowledge Whitepaper](/whitepaper).
+For more information on how we bypass FDA SaMD and HIPAA BAA traps, please see our [Zero-Knowledge Whitepaper](/whitepaper).
 
 ---
 
@@ -95,9 +85,9 @@ For more information, please see our [Zero-Knowledge Whitepaper](/whitepaper).
 
 We are scaling an enterprise-grade contributor network to protect the $3.0M Enterprise Capitalization.
 
-- **Data Scientists/Engineers**: Help us harden the Zero-Knowledge architecture and optimize the Supabase edge vectors.
+- **Data Scientists/Engineers**: Help us harden the Zero-Knowledge architecture and optimize the Supabase edge vectors on our core product.
 - **Clinicians**: Validate our UX logic against "Root-Cause" workflows to optimize our B2B integration metrics.
-- **Patients**: Share your history to establish the exact First Mile baseline prior to clinic arrival via the Zero-SSN Registration.
+- **Advocates**: Help us scale the 501(c)(3) pipeline by driving awareness to our structural narrative.
 
 1. Review the [Code of Conduct](CODE_OF_CONDUCT.md).
 2. Read the [Contributor Guidelines](CONTRIBUTING.md).
@@ -113,5 +103,3 @@ We are scaling an enterprise-grade contributor network to protect the $3.0M Ente
 [**Developed by Ramon Luis Rios Jr @ Coqui Cloud Dev Co.**](https://coqui.cloud)
 
 </div>
-
-
