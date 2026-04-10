@@ -69,3 +69,9 @@
 - [x] **Ethical Brand Shielding:** Stripped unverified alignments (PCORI, HL7) from the Partners page, successfully blocking brand-jacking and stabilizing the PCORI pipeline.
 - [x] **B2B Webhook Translation:** Removed Web3Forms. Mapped the `/providers` lead intake mechanically to `odooClient.createTicket()` with loading state enforcement.
 - [x] **WCAG AA Guardrails:** Enforced `aria-hidden` and exact `<label>` mapping to insulate the UI structure from disability compliance friction.
+
+## Phase 12: Architectural Deprecation & SEO Shielding
+- [x] **Enterprise Perimeter Migration:** The main App AI has successfully pushed `aurahos.io` and the `aurahos.io/demo` Enterprise B2B Landing infrastructure to the live Vercel edge on the `aura-health-os` node.
+- [x] **Eradicate Redundant UI:** Physically delete `/providers` and `/sandbox` local React components from the Foundation site to drop bundle size and align with the Zero-Knowledge pure isolation architecture.
+- [x] **Global Route Rewiring:** Override `Navbar.jsx` and `Footer.jsx` Enterprise map points. Redirect all hospital traffic entirely out of the Foundation architecture via native `href` bindings directly to the SaaS payload.
+- [x] **SEO XML Quarantine:** Strip the dead Enterprise URLs from `public/sitemap.xml` specifically to shield the 501(c)(3) organic ranking layer from Google punishing the domain with "Soft 404" ghost-route indexing penalties.
