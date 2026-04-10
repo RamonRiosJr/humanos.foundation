@@ -127,7 +127,7 @@ export default function Providers() {
                         className="glass-strong rounded-3xl p-8 border border-cyan-500/20 sticky top-24"
                     >
                         <div className="flex items-center gap-3 justify-center mb-8">
-                            <ActivitySquare className="w-6 h-6 text-cyan-400" />
+                            <ActivitySquare aria-hidden="true" className="w-6 h-6 text-cyan-400" />
                             <h3 className="text-xl font-bold text-center font-outfit text-white">Claim Clinic Routing ID</h3>
                         </div>
                         
@@ -139,24 +139,24 @@ export default function Providers() {
                             {!isSubmitted ? (
                                 <motion.form key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onSubmit={handleB2BSubmit} className="space-y-4">
                                     <div>
-                                        <label className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">Clinic / Hospital System</label>
-                                        <input required type="text" name="clinic_name" placeholder="e.g. Apex Health Systems" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors placeholder:text-white/20" />
+                                        <label htmlFor="clinic_name" className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">Clinic / Hospital System</label>
+                                        <input id="clinic_name" required type="text" name="clinic_name" placeholder="e.g. Apex Health Systems" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors placeholder:text-white/20" />
                                     </div>
 
                                     <div className="grid grid-cols-2 gap-4">
                                         <div>
-                                            <label className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">Director Name</label>
-                                            <input required type="text" name="name" placeholder="Name" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors placeholder:text-white/20" />
+                                            <label htmlFor="name" className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">Director Name</label>
+                                            <input id="name" required type="text" name="name" placeholder="Name" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors placeholder:text-white/20" />
                                         </div>
                                         <div>
-                                            <label className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">Work Email</label>
-                                            <input required type="email" name="email" placeholder="CTO@clinic.org" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors placeholder:text-white/20" />
+                                            <label htmlFor="email" className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">Work Email</label>
+                                            <input id="email" required type="email" name="email" placeholder="CTO@clinic.org" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors placeholder:text-white/20" />
                                         </div>
                                     </div>
 
                                     <div>
-                                        <label className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">EHR Matrix</label>
-                                        <select required name="ehr_system" defaultValue="" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors appearance-none cursor-pointer">
+                                        <label htmlFor="ehr_system" className="block text-[10px] font-bold text-white/40 uppercase tracking-wider mb-1.5 ml-1">EHR Matrix</label>
+                                        <select id="ehr_system" required name="ehr_system" defaultValue="" className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors appearance-none cursor-pointer">
                                             <option value="" disabled className="bg-slate-900 text-white/50">Select Current EHR System</option>
                                             <option value="Epic" className="bg-slate-900 text-white">Epic Systems</option>
                                             <option value="Cerner" className="bg-slate-900 text-white">Oracle Cerner</option>
