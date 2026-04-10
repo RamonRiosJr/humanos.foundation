@@ -15,7 +15,7 @@ const footerLinks = {
     Resources: [
         { label: 'Architecture Whitepaper', page: 'Whitepaper' },
         { label: 'Developer Portal (API)', page: 'Developers' },
-        { label: 'Interactive Sandbox', page: 'Sandbox' },
+        { label: 'Interactive Sandbox', href: 'https://aurahos.io/demo', isExternal: true },
         { label: 'Clinical Research (PCORI)', page: 'Research' },
         { label: 'Blog & Insights', page: 'Blog' },
         { label: 'Press & Media', page: 'Press' },
@@ -39,7 +39,7 @@ const footerLinks = {
         { label: 'Security', page: 'Security' },
         { label: 'System Status', page: 'Status' },
         { label: 'B2B Clinic Directory', page: 'Clinics' },
-        { label: 'Enterprise Onboarding', page: 'Providers' },
+        { label: 'Enterprise Onboarding', href: 'https://aurahos.io', isExternal: true },
     ],
 };
 
@@ -72,9 +72,15 @@ export default function Footer() {
                             <ul className="space-y-2.5">
                                 {links.map((link) => (
                                     <li key={link.label}>
-                                        <Link to={createPageUrl(link.page)} className="text-xs text-white/50 hover:text-cyan-400 transition-colors font-medium">
-                                            {link.label}
-                                        </Link>
+                                        {link.isExternal ? (
+                                            <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors font-bold flex items-center gap-1">
+                                                {link.label} <ExternalLink className="w-2 h-2 opacity-70" />
+                                            </a>
+                                        ) : (
+                                            <Link to={createPageUrl(link.page)} className="text-xs text-white/50 hover:text-cyan-400 transition-colors font-medium">
+                                                {link.label}
+                                            </Link>
+                                        )}
                                     </li>
                                 ))}
                             </ul>
