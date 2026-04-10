@@ -35,7 +35,7 @@ function DeclarationSection() {
         <section ref={ref} className="py-16 md:py-24 px-4 md:px-8">
             <div className="max-w-4xl mx-auto">
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }} className="flex items-center gap-3 mb-10">
-                    <BookOpen className="w-5 h-5 text-cyan-400/60" />
+                    <BookOpen aria-hidden="true" className="w-5 h-5 text-cyan-400/60" />
                     <span className="text-xs text-cyan-400/60 tracking-[0.2em] uppercase font-medium">The Declaration</span>
                 </motion.div>
                 <div className="space-y-0 relative rounded-3xl overflow-hidden">
@@ -69,7 +69,7 @@ function FourLawsSection() {
         <section ref={ref} className="py-16 md:py-24 px-4 md:px-8">
             <div className="max-w-5xl mx-auto">
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }} className="flex items-center gap-3 mb-10">
-                    <Scale className="w-5 h-5 text-cyan-400/60" />
+                    <Scale aria-hidden="true" className="w-5 h-5 text-cyan-400/60" />
                     <span className="text-xs text-cyan-400/60 tracking-[0.2em] uppercase font-medium">The Four Laws of hOS</span>
                 </motion.div>
                 <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
@@ -89,7 +89,7 @@ function FourLawsSection() {
                                 />
                                 <div className="flex items-start justify-between mb-5">
                                     <motion.div animate={{ opacity: [0.5, 1, 0.5] }} transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.2 }}>
-                                        <law.icon className={`w-8 h-8 ${law.color} group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_currentColor] transition-all duration-300`} />
+                                        <law.icon aria-hidden="true" className={`w-8 h-8 ${law.color} group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_currentColor] transition-all duration-300`} />
                                     </motion.div>                                    <span className="text-4xl font-bold text-white/[0.08] group-hover:text-white/[0.15] transition-colors" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{law.number}</span>
                                 </div>
                                 <h3 className="text-lg font-semibold text-white/80 mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>{law.title}</h3>
