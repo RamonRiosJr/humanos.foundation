@@ -82,7 +82,7 @@ export default function Developers() {
                             <Terminal className="w-6 h-6 text-white/50 group-hover:text-cyan-400 transition-colors" />
                         </div>
                         <h3 className="text-lg font-bold text-white mb-2">Aura Hub (Backend & Edges)</h3>
-                        <p className="text-sm text-white/50 leading-relaxed">The Supabase Deno Edge functions managing the secure webhook routes and processing the $0.25 API micro-transactions.</p>
+                        <p className="text-sm text-white/50 leading-relaxed">The Supabase Deno Edge functions managing the secure webhook routes and processing the core $199/month Clinic Gateway base alongside $0.25 API micro-transactions per FHIR payload pull.</p>
                     </a>
                 </div>
 
