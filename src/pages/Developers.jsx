@@ -53,7 +53,7 @@ export default function Developers() {
                             <span className="text-purple-400">POST</span> <span className="text-white/60">/api/edge/fhir-dispatcher</span><br />
                             <span className="text-blue-400">Authorization:</span> Bearer {'<'}YOUR_AURA_SECRET{'>'}<br />
                             <span className="text-blue-400">Content-Type:</span> application/json<br />
-                            <span className="text-blue-400">X-Aura-Clinic-ID:</span> RVFHC-CO-825<br /><br />
+                            <span className="text-blue-400">X-Aura-Clinic-ID:</span> AURA-NODE-X4A9<br /><br />
                             
                             <span className="text-white/40">{'{'}</span><br />
                             <span className="text-rose-300">  "resourceType"</span><span className="text-white/40">:</span> <span className="text-emerald-300">"Observation"</span><span className="text-white/40">,</span><br />
