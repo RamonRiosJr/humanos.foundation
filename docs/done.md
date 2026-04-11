@@ -89,3 +89,8 @@
 - [x] **Zero-Trust Network Routing:** Define exactly what the "zero-trust architecture" means for Contact and Waitlist nodes. State the Odoo endpoints, webhook payloads, and authentication.
 - [x] **Supabase Boundary Fix:** Correct the "Contributor's Path" AI hallucination that mentions "Supabase edge vectors" inside the Foundation repository (since Supabase is isolated to the Machine Layer `aura-health-os` repository).
 - [x] **Clinical JSON Scope:** Replace "First Mile baseline" in the contributor path with the precise JSON data schema or FHIR structure used during patient onboarding.
+
+## Phase 15: Dual-Narrative Ecosystem Alignment
+- [x] **PCORI Grant Alignment Rule (from PR 123):** Strictly separate the Federal Health Equity narrative from the B2B Enterprise narrative. Ensure that grant-facing pages (Whitepaper, Manifesto) explicitly avoid "SaaS", "MRR", or "Profitability Moat" language. Instead use "Sustainability Models" and focus entirely on the emotional agony of the 15-20 page clipboard for marginalized/neurodivergent demographics.
+- [x] **Enterprise Sandbox Enforcement:** Enforced the $199/mo Provider Seat MRR exclusively on API/Developer pathways and B2B SaaS clinics (`Developers.jsx`), keeping the 501(c)(3) mission mathematically pure.
+- [x] **Architectural Guardrail Update:** Injected the "Dual-Narrative Defense Protocol" permanently into `.agents/workflows/00-architect-assessor.md` to guarantee the Founder never cross-contaminates Federal Grant logic with B2B Silicon Valley jargon.
