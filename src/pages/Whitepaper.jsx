@@ -11,7 +11,7 @@ const whitepaperContent = `
 
 ## Executive Summary
 
-Aura hOS™ provides a revolutionary "Zero-Knowledge" approach to health data management, specifically engineered to eliminate the systemic vulnerabilities inherent in traditional cloud-based healthcare applications and eradicate the catastrophic 15-20 page physical clipboard packet bottleneck. By ensuring that Protected Health Information (PHI) is strictly secured via 256-bit AES-GCM Local Encryption continuously before it syncs to our managed backend, Aura hOS™ fundamentally mitigates data breach risks for healthcare providers and patients alike.
+Aura hOS™ provides a revolutionary "Zero-Knowledge" approach to health data management, specifically engineered to alleviate the visceral, emotional agony of the 15-20 page clipboard waiting-room penalty for neurodivergent patients (including Autism and Epilepsy demographics). By ensuring that Protected Health Information (PHI) is rigorously encrypted continuously before it syncs to our managed backend, Aura hOS™ fundamentally secures demographic protection and improves localized clinical workflows for these marginalized populations.
 
 ## 1. Zero-Knowledge, Edge-First Architecture
 
@@ -57,7 +57,7 @@ To definitively prove our security posture as a Sovereign B2C Personal Health Re
 To comprehensively close the loop on patient adherence and clinical friction, Aura hOS™ integrates native FHIR-standard granular medication logistics directly into the cryptographic vault.
 
 - **Granular Inventory Tracking:** Ecosystem algorithms track strictly-typed telemetry such as \`quantityOnHand\`, \`dispenseQuantity\`, and \`refillsRemaining\`. Rather than forcing patients to endure the 15-20 page clipboard penalty just to update their adherence history, their physical inventory counts automatically generate predictive analytics.
-- **B2B Adherence Engines:** By calculating exact drop-off rates on life-saving pharmaceuticals locally over the Zero-Knowledge Vault, Aura hOS™ feeds mathematically pure adherence metrics to partner B2B enterprise clinics. This allows providers to proactively engage patients before catastrophic hospitalization events occur, establishing a massive cost-saving moat for our B2B network.
+- **B2B Adherence Engines:** By calculating exact drop-off rates on life-saving pharmaceuticals locally over the Zero-Knowledge Vault, Aura hOS™ feeds mathematically pure adherence metrics to partner B2B enterprise clinics. This allows providers to proactively engage patients before catastrophic hospitalization events occur, aligning with robust Sustainability Models and Patient-Centered Outcomes Research.
 
 ## 7. Zero-Knowledge Signatures: The Enterprise API Boundary
 
