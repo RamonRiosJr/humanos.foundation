@@ -25,7 +25,7 @@ Write-Host " #################################################################" 
 Write-Host ""
 
 # Simulated High-Tech Boot Sequence
-Write-Host " [BOOT] Initializing hOS Kernel v0.5-Alpha..." -ForegroundColor Cyan
+Write-Host " [BOOT] Initializing hOS Kernel v0.8.0-rc.2..." -ForegroundColor Cyan
 Boot-Delay 400
 Write-Host " [BOOT] Mounting Sovereign Data Layer..." -ForegroundColor Gray
 Boot-Delay 300

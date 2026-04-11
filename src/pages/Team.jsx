@@ -75,9 +75,10 @@ export default function Team() {
                                     ))}
                                 </div>
                             ) : (
-                                <div className="glass rounded-2xl p-8 border border-dashed border-white/10 text-center">
-                                    <p className="text-sm text-white/30 italic">Live project feed currently syncing with the Sovereign Brain...</p>
-                                    <p className="text-[10px] text-white/20 mt-2 uppercase tracking-widest font-bold">V0.5 ALPHA</p>
+                                <div className="relative overflow-hidden glass rounded-2xl p-8 border border-cyan-500/10 text-center">
+                                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 animate-pulse" />
+                                    <p className="relative z-10 text-sm text-white/50 font-medium">B2B Clinic Mission Feed Connecting...</p>
+                                    <p className="relative z-10 text-[10px] text-cyan-400/50 mt-2 uppercase tracking-widest font-bold font-mono">V0.8.0-RC.2 • EDGE NODE ACTIVE</p>
                                 </div>
                             )}
                         </div>
