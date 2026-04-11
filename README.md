@@ -1,19 +1,18 @@
-
 <div align="center">
 
-# HUMANOS FOUNDATION
-### The Advocacy Kernel for Human Data Sovereignty
+# Humanos Foundation
+### The Advocacy Kernel & Human Operations Layer
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-00d4ff.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-20.x-10b981.svg?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org)
 [![Vite](https://img.shields.io/badge/Vite-6.x-8b5cf6.svg?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
 [![React](https://img.shields.io/badge/React-18.x-61DAFB.svg?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org)
 
-**[Visit the Portal](https://humanos.foundation)** • **[Read the Manifesto](https://humanos.foundation/manifesto)** • **[Join the Revolution](https://humanos.foundation/join)**
+**[Visit the Foundation](https://humanos.foundation)** • **[Read the Manifesto](https://humanos.foundation/manifesto)** • **[Join the Revolution](https://humanos.foundation/join)**
 
 ---
 
-*"The system only listens when the truth is structurally robust. We are engineering the Zero-Knowledge Vault to make your clinical narrative undeniable."*
+*"We are engineering the 256-bit AES-GCM local-first data vault to cryptographically secure your clinical narrative."*
 
 </div>
 
@@ -21,31 +20,26 @@
 
 The **Humanos Foundation** is the 501(c)(3) Enterprise advocacy wing of the **Aura hOS™ (Human Operating System)**. We are a global network of patients, clinicians, and technologists dedicated to dismantling the 15-20 page clinical clipboard penalty. 
 
-This repository powers our digital advocacy platform—an enterprise-grade engine designed to drive $825k PCORI grant pipeline conversions, host our sovereign education library, and facilitate Zero-SSN Registration for our B2B Clinic partners.
+This repository powers our digital advocacy platform, designed to manage donor pathways, parse localized Markdown for our sovereign education library, and facilitate B2B Clinic Lead Generation via the FHIR R4 schema.
 
 ---
 
-## 🏗️ Technical Pillars (The Sovereign Stack)
+## 🏗️ Architectural Boundaries
 
-Unlike traditional growth sites, we reject the "surveillance-first" status quo. The foundation platform is architected on three non-negotiable pillars:
+To protect our regulatory standing, the ecosystem is strictly divided into two distinct perimeters:
 
-| Pillar | Philosophy | Implementation |
-| :--- | :--- | :--- |
-| **Local-First** | Data lives on the device you own, not a server you don't control. | LocalStorage Mock SDK & PWA capabilities. |
-| **Zero-Knowledge** | We cannot see what we are not meant to see. | Client-side encryption handshakes & private routing. |
-| **Radical Transparency** | No hidden access. No silent sharing. | Open-source logic and verifiable data ingestion logs. |
+### 1. The Human Operations Layer (This Repository)
+Powers `humanos.foundation`. This is the administrative surface area of the NGO.
+- **Frontend:** React 18 SPA, deployed via Vercel Edge.
+- **Backend (CRM):** Bound directly to Odoo (`teams.humanos.foundation`) via internal iframes and XML-RPC webhook payloads.
+- **Use Case:** Recruiting, Helpdesk, GoFundMe routing, and Federal Grant validation.
+- **Design System:** Custom CSS, Tailwind, and Framer Motion decorative animations (No diagnostic logic).
 
----
-
-## 🛠️ Technology & Architecture
-
-This platform provides a visual masterclass in modern, high-performance web aesthetics:
-
-- **Logic**: React 18 (SPA) optimized for 60fps animations.
-- **Styling**: Tailwind CSS with an custom **Glassmorphism Design System**.
-- **Motion**: Framer Motion for scroll-synced narratives and biological waveforms.
-- **Icons**: Lucide React for consistent, high-fidelity iconography.
-- **i18n**: Sovereign English/Spanish localization with local-only bundling.
+### 2. The Machine Layer (External Repository)
+Powers `aurahos.io` and the Clinical Patient Vault. For engineering the core software, please see the `aura-health-os` repository.
+- **Frontend:** Capacitor / React Native.
+- **Backend:** Local-First IndexedDB and PostgREST via Edge Functions.
+- **Use Case:** The B2B Clinic Route, FHIR R4 JSON Payload Generation, and AES-GCM encrypted vaults.
 
 ---
 
@@ -62,13 +56,9 @@ cd humanos.foundation
 npm install
 ```
 
-### 3. Launching the "Sovereign Kernel"
-To maximize impact during Enterprise Demonstrations, B2B Clinic Piloting, or PCORI validation audits, we recommend using the **Humanos Operating System Launcher**:
+### 3. Launching the Advocacy Kernel
+Executes the UI sequence and launches the local Vite development server (Note: executes zero local cryptographic operations).
 
-**Windows (Recommended Experience)**:
-Double-click `Humanos-Operating-System.bat`. This triggers a terminal boot sequence that initializes the Zero-Knowledge infrastructure, establishes cryptographic handshakes, and launches the server.
-
-**Cross-Platform**:
 ```bash
 npm run dev
 ```
@@ -79,29 +69,29 @@ npm run dev
 
 ## 🔒 Security & FTC HBNR BAA Exemption
 
-We believe **Privacy is a request, but Sovereignty is mathematics.** 
+We believe Privacy is a request, but Sovereignty is mathematics. 
 
-By utilizing strict Edge-First Encryption, Aura hOS operates distinctly under the **FTC Health Breach Notification Rule (HBNR)** as a Personal Health Record. We do not hold decryption keys, legally shielding our institutional partners from Business Associate (BAA) constraints and HIPAA misclassification.
+By utilizing **256-bit AES-GCM Encryption with Web Crypto API key isolation** on the Machine Layer, Aura hOS operates distinctly under the **FTC Health Breach Notification Rule (HBNR)** as a Personal Health Record. Although this repository strictly handles Human Operations, we enforce the same Zero-Trust standard:
 
+- **Ethical Integrity:** Contact and Waitlist nodes route strictly through authenticated Odoo CRM endpoints using webhook payload encryption. We do not sell analytics.
 - **Zero Third-Party Trackers**: We have purged all unauthorized Google/Meta marketing tracking scopes. 
-- **Privacy Handshake**: Optional telemetry (PostHog) is loaded dynamically and strictly respects Edge rendering constraints.
-- **Sovereign-First Framework**: Contact and Waitlist nodes route strictly through zero-trust architectures.
+- **Privacy Handshake**: Optional telemetry (PostHog) is loaded dynamically and strictly respects Edge rendering constraints without accessing persistent local state.
 
-For more information, please see our [Zero-Knowledge Whitepaper](/whitepaper).
+For more information on how we bypass FDA SaMD and HIPAA BAA traps, please see our [Zero-Knowledge Whitepaper](/whitepaper).
 
 ---
 
 ## 🤝 The Contributor's Path
 
-We are scaling an enterprise-grade contributor network to protect the $3.0M Enterprise Capitalization.
+We are scaling an enterprise-grade contributor network:
 
-- **Data Scientists/Engineers**: Help us harden the Zero-Knowledge architecture and optimize the Supabase edge vectors.
-- **Clinicians**: Validate our UX logic against "Root-Cause" workflows to optimize our B2B integration metrics.
-- **Patients**: Share your history to establish the exact First Mile baseline prior to clinic arrival via the Zero-SSN Registration.
+- **Data Scientists/Engineers**: Help us harden the local encryption logic or optimize the UI compiling speeds locally.
+- **Clinicians**: Validate our UX logic against "Root-Cause" workflows.
+- **Advocates**: Help us scale the 501(c)(3) pipeline by driving awareness.
 
 1. Review the [Code of Conduct](CODE_OF_CONDUCT.md).
 2. Read the [Contributor Guidelines](CONTRIBUTING.md).
-3. Check the [Project Board](https://github.com/RamonRiosJr/humanos.foundation/projects) for active capitalization tasks.
+3. Check the [Project Board](https://github.com/RamonRiosJr/humanos.foundation/projects) for active validation tasks.
 
 ---
 
@@ -113,5 +103,3 @@ We are scaling an enterprise-grade contributor network to protect the $3.0M Ente
 [**Developed by Ramon Luis Rios Jr @ Coqui Cloud Dev Co.**](https://coqui.cloud)
 
 </div>
-
-
