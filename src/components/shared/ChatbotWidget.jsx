@@ -6,26 +6,9 @@ const ChatbotWidget = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [botState, setBotState] = useState('idle');
 
-    // Immersive demo auto-cycler for the animated states when the user opens the chat
+    // Bot state is kept static pending actual LLM API connection integration
     useEffect(() => {
-        if (!isOpen) {
-            setBotState('idle');
-            return;
-        }
-        
-        // Initial state
-        setBotState('speaking');
-        
-        let timeout;
-        const cycle = () => {
-            const states = ['listening', 'thinking', 'speaking', 'idle'];
-            const nextState = states[Math.floor(Math.random() * states.length)];
-            setBotState(nextState);
-            timeout = setTimeout(cycle, Math.random() * 3000 + 2000);
-        };
-        
-        timeout = setTimeout(cycle, 3000); // Wait for initial speaking to finish
-        return () => clearTimeout(timeout);
+        if (!isOpen) setBotState('idle');
     }, [isOpen]);
 
     return (
@@ -35,10 +18,10 @@ const ChatbotWidget = () => {
                     {/* Header */}
                     <div className="flex items-center justify-between bg-black/50 p-4 border-b border-white/10">
                         <div className="flex items-center gap-3">
-                            <AILogo className="w-12 h-12" botState={botState} />
+                            <AILogo className="w-12 h-12" botState={'idle'} />
                             <div>
                                 <h3 className="font-semibold text-white text-sm">hOS AI</h3>
-                                <p className="text-[10px] text-cyan-400 font-mono tracking-wider uppercase">Foundation AI (Beta)</p>
+                                <p className="text-[10px] text-cyan-400 font-mono tracking-wider uppercase">Foundation AI (Offline)</p>
                             </div>
                         </div>
                         <button onClick={() => setIsOpen(false)} className="text-slate-400 hover:text-white transition-colors" aria-label="Close Chat">
@@ -49,7 +32,7 @@ const ChatbotWidget = () => {
                     {/* Chat Area Log (Placeholder) */}
                     <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4 bg-gradient-to-b from-transparent to-black/20">
                         <div className="bg-slate-800/80 border border-slate-700/50 rounded-2xl rounded-tl-sm p-3 max-w-[85%] self-start text-sm text-slate-300 shadow-sm leading-relaxed">
-                            Hello. I am the AI guide for the Humanos Foundation. This module is currently in Beta and will be fully connected to our Sovereign Knowledge Graph soon. How can I help you navigate the movement today?
+                            Hello. I am the AI guide for the Humanos Foundation. I am currently offline pending the Phase 17 Sovereign Knowledge Graph deployment.
                         </div>
                     </div>
 
@@ -59,10 +42,10 @@ const ChatbotWidget = () => {
                             <input
                                 type="text"
                                 disabled
-                                placeholder="AI connection pending..."
-                                className="flex-1 bg-transparent text-sm text-white placeholder-slate-500 py-2 outline-none cursor-not-allowed"
+                                placeholder="Core edge routing disabled..."
+                                className="flex-1 bg-transparent text-sm text-white/50 placeholder-slate-600 py-2 outline-none cursor-not-allowed"
                             />
-                            <button disabled className="text-slate-500 opacity-50 cursor-not-allowed">
+                            <button disabled className="text-slate-700 cursor-not-allowed">
                                 <Send className="w-4 h-4" />
                             </button>
                         </div>

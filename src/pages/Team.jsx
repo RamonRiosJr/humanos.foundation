@@ -13,25 +13,6 @@ import {
 
 
 export default function Team() {
-    const [activeProjects, setActiveProjects] = useState([]);
-    const [loadingProjects, setLoadingProjects] = useState(true);
-
-    useEffect(() => {
-        // Simulate async loading to match the main app's robust zero-knowledge methodology
-        const fetchProjects = async () => {
-            try {
-                await new Promise(r => setTimeout(r, 800));
-                const projects = [];
-                setActiveProjects(projects);
-            } catch (e) {
-                console.error('Failed to fetch projects', e);
-            } finally {
-                setLoadingProjects(false);
-            }
-        };
-        fetchProjects();
-    }, []);
-
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta 
@@ -59,28 +40,14 @@ export default function Team() {
                                 Active Missions
                             </h2>
                             
-                            {loadingProjects ? (
-                                <div className="space-y-4">
-                                    {[1, 2].map(i => (
-                                        <div key={i} className="h-24 bg-white/5 rounded-2xl animate-pulse" />
-                                    ))}
-                                </div>
-                            ) : activeProjects.length > 0 ? (
-                                <div className="space-y-4">
-                                    {activeProjects.map((project, i) => (
-                                        <div key={i} className="glass rounded-2xl p-5 border border-white/[0.03] hover:border-cyan-500/20 transition-all group">
-                                            <h3 className="text-sm font-semibold mb-2 group-hover:text-cyan-400 transition-colors uppercase tracking-tight">{project.name}</h3>
-                                            <p className="text-xs text-white/40 leading-relaxed line-clamp-2">{project.description || 'Ongoing foundation mission to secure health data sovereignty.'}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            ) : (
-                                <div className="relative overflow-hidden glass rounded-2xl p-8 border border-cyan-500/10 text-center">
-                                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 animate-pulse" />
-                                    <p className="relative z-10 text-sm text-white/50 font-medium">B2B Clinic Mission Feed Connecting...</p>
-                                    <p className="relative z-10 text-[10px] text-cyan-400/50 mt-2 uppercase tracking-widest font-bold font-mono">V0.8.0-RC.2 • EDGE NODE ACTIVE</p>
-                                </div>
-                            )}
+                            <div className="relative overflow-hidden glass rounded-2xl p-8 border border-white/5 text-center">
+                                <p className="text-sm text-white/70 font-medium leading-relaxed">
+                                    All core engineering nodes are currently assigned to the Phase 17 Architecture Lock.
+                                </p>
+                                <p className="text-xs text-white/40 mt-4">
+                                    There are currently no unallocated public bounties. Please join the Discord to shadow ongoing operations.
+                                </p>
+                            </div>
                         </div>
 
                         <div className="grid sm:grid-cols-2 gap-6">
