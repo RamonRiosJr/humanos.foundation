@@ -35,12 +35,15 @@ export default function Press() {
             <section className="pb-28 px-4 md:px-8">
                 <div className="max-w-5xl mx-auto space-y-10">
                     {/* Press contact */}
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="glass-strong rounded-3xl p-8 md:p-12 border border-cyan-500/10">
-                        <div className="flex items-center gap-3 mb-5">
-                            <Mail className="w-5 h-5 text-cyan-400/60" />
-                            <h2 className="text-xl font-bold text-white/80" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Press Contact</h2>
+                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative overflow-hidden glass-strong rounded-3xl p-8 md:p-12 border border-cyan-500/30 shadow-[0_0_80px_rgba(34,211,238,0.15)]">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/20 rounded-full blur-[80px] pointer-events-none mix-blend-screen" />
+                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600/20 rounded-full blur-[80px] pointer-events-none mix-blend-screen" />
+                        
+                        <div className="relative z-10 flex items-center gap-3 mb-5">
+                            <Mail className="w-5 h-5 text-cyan-400" />
+                            <h2 className="text-xl font-bold text-white shadow-cyan-500/50 drop-shadow-md" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Press Contact</h2>
                         </div>
-                        <div className="grid sm:grid-cols-2 gap-6">
+                        <div className="relative z-10 grid sm:grid-cols-2 gap-6">
                             <div>
                                 <p className="text-sm text-white/70 mb-1 font-medium">Media Inquiries</p>
                                 <a href="mailto:press@humanos.foundation" className="text-cyan-400 font-bold hover:text-cyan-300 transition-colors text-sm underline decoration-cyan-400/20 underline-offset-4">press@humanos.foundation</a>
@@ -65,12 +68,14 @@ export default function Press() {
                     </motion.div>
 
                     {/* Boilerplate */}
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="glass rounded-3xl p-8 md:p-10 border border-white/[0.04]">
-                        <div className="flex items-center gap-3 mb-5">
-                            <Quote className="w-5 h-5 text-cyan-400/60" />
-                            <h2 className="text-lg font-bold text-white/70" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Official Boilerplate</h2>
+                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="relative overflow-hidden group glass rounded-3xl p-8 md:p-10 border border-white/[0.08] hover:border-purple-500/30 transition-all hover:shadow-[0_0_40px_rgba(168,85,247,0.1)]">
+                        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                        
+                        <div className="relative z-10 flex items-center gap-3 mb-5">
+                            <Quote className="w-5 h-5 text-purple-400" />
+                            <h2 className="text-lg font-bold text-white/90 drop-shadow-md" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Official Boilerplate</h2>
                         </div>
-                        <p className="text-sm text-white/70 leading-relaxed italic border-l-2 border-cyan-500/20 pl-5">{boilerplate}</p>
+                        <p className="relative z-10 text-sm text-white/80 leading-relaxed italic border-l-2 border-purple-500/40 pl-5">{boilerplate}</p>
                         <button
                             onClick={() => navigator.clipboard.writeText(boilerplate)}
                             className="mt-5 px-4 py-2 rounded-xl glass border border-white/[0.06] text-xs text-white/30 hover:text-cyan-400 hover:border-cyan-500/20 transition-all flex items-center gap-2"
@@ -80,12 +85,14 @@ export default function Press() {
                     </motion.div>
 
                     {/* Key topics */}
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }} className="glass rounded-3xl p-8 md:p-10 border border-white/[0.04]">
-                        <div className="flex items-center gap-3 mb-6">
-                            <Newspaper className="w-5 h-5 text-cyan-400/60" />
-                            <h2 className="text-lg font-bold text-white/70" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Story Angles We Support</h2>
+                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }} className="relative overflow-hidden group glass rounded-3xl p-8 md:p-10 border border-white/[0.08] hover:border-emerald-500/30 transition-all hover:shadow-[0_0_40px_rgba(16,185,129,0.1)]">
+                        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/0 via-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                        
+                        <div className="relative z-10 flex items-center gap-3 mb-6">
+                            <Newspaper className="w-5 h-5 text-emerald-400" />
+                            <h2 className="text-lg font-bold text-white/90 drop-shadow-md" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Story Angles We Support</h2>
                         </div>
-                        <ul className="space-y-3">
+                        <ul className="relative z-10 space-y-3">
                             {[
                                 'Patient data ownership and the right to health record portability',
                                 'The $250 billion health data market and who profits from it',
@@ -94,8 +101,8 @@ export default function Press() {
                                 'Health data equity in underserved and Global South communities',
                                 'Regulatory landscape: HIPAA, GDPR, 21st Century Cures Act',
                             ].map((angle, i) => (
-                                <li key={i} className="flex items-start gap-3 text-sm text-white/60">
-                                    <span className="text-cyan-500/60 font-mono text-xs mt-0.5">—</span>
+                                <li key={i} className="flex items-start gap-3 text-sm text-white/70">
+                                    <span className="text-emerald-400 font-bold text-sm mt-0 shadow-emerald-500/20 drop-shadow-md">✦</span>
                                     {angle}
                                 </li>
                             ))}
@@ -107,12 +114,12 @@ export default function Press() {
                         <h2 className="text-lg font-bold text-white/60 mb-5" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Credible External Resources</h2>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                             {pressLinks.map((link) => (
-                                <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="glass rounded-2xl p-5 border border-white/[0.04] hover:border-cyan-500/20 transition-all group">
+                                <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="glass rounded-2xl p-5 border border-white/[0.08] hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] hover:-translate-y-1 transition-all duration-300 group">
                                     <div className="flex items-start justify-between">
-                                        <p className="text-sm font-bold text-white/80 group-hover:text-cyan-400 transition-colors">{link.label}</p>
-                                        <ExternalLink className="w-3.5 h-3.5 text-white/20 group-hover:text-cyan-400/60 transition-colors shrink-0 mt-0.5" />
+                                        <p className="text-sm font-bold text-white/80 group-hover:text-cyan-400 transition-colors drop-shadow-sm">{link.label}</p>
+                                        <ExternalLink className="w-3.5 h-3.5 text-white/20 group-hover:text-cyan-400 transition-colors shrink-0 mt-0.5 drop-shadow-md" />
                                     </div>
-                                    <p className="text-xs text-white/60 mt-1 font-medium">{link.desc}</p>
+                                    <p className="text-xs text-white/60 mt-1 font-medium group-hover:text-white/70 transition-colors">{link.desc}</p>
                                 </a>
                             ))}
                         </div>
