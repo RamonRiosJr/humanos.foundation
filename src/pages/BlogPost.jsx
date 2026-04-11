@@ -137,15 +137,14 @@ export default function BlogPost() {
                                 <span className="text-cyan-400 font-bold text-sm">You</span>
                             </div>
                             <div className="w-full">
-                                <textarea 
-                                    className="w-full bg-obsidian-light/50 border border-white/10 rounded-xl p-4 text-white/90 placeholder:text-white/30 focus:outline-none focus:border-cyan-500/50 resize-none h-24 mb-3 transition-colors" 
-                                    placeholder="Add your voice to the movement..."
-                                ></textarea>
+                                <div className="w-full bg-obsidian-light/30 border border-white/5 rounded-xl p-6 text-center h-24 mb-3 flex items-center justify-center">
+                                    <p className="text-sm text-white/50 font-medium">On-page comments are temporarily locked.</p>
+                                </div>
                                 <div className="flex justify-between items-center">
-                                    <span className="text-[10px] uppercase tracking-wider text-white/30 font-medium">Connecting securely to Odoo ERP</span>
-                                    <Link to={createPageUrl('Join')} className="glow-btn px-6 py-2.5 rounded-xl bg-cyan-500/20 border border-cyan-500/50 text-cyan-400 font-bold text-sm hover:bg-cyan-500/30 hover:shadow-[0_0_20px_rgba(0,212,255,0.3)] transition-all flex items-center gap-2">
-                                        Post & Join <ArrowLeft className="w-4 h-4 rotate-180" />
-                                    </Link>
+                                    <span className="text-[10px] uppercase tracking-wider text-white/30 font-medium">Secure API Defrosting in Process</span>
+                                    <a href="https://discord.gg/humanos" target="_blank" rel="noopener noreferrer" className="glow-btn px-6 py-2.5 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-400 font-bold text-sm hover:bg-blue-500/20 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all flex items-center gap-2">
+                                        Discuss on Discord <ArrowLeft className="w-4 h-4 rotate-180" />
+                                    </a>
                                 </div>
                             </div>
                         </div>
