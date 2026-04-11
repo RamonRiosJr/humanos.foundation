@@ -7,9 +7,9 @@ import { Activity, CheckCircle2, Server, Globe2, ShieldCheck } from 'lucide-reac
 import { motion } from 'framer-motion';
 
 const systems = [
-    { name: 'FHIR OAuth Ingestion APIs', status: 'Operational', uptime: '99.99%', icon: <Globe2 className="w-4 h-4" /> },
-    { name: 'Zero-Knowledge Edge Relays', status: 'Operational', uptime: '100.0%', icon: <Server className="w-4 h-4" /> },
-    { name: 'Biometric Webhook Ledger', status: 'Operational', uptime: '99.98%', icon: <ShieldCheck className="w-4 h-4" /> },
+    { name: 'FHIR OAuth Ingestion APIs', status: 'Pending Link', uptime: '--.--%', icon: <Globe2 className="w-4 h-4 text-slate-500" /> },
+    { name: 'Zero-Knowledge Edge Relays', status: 'Pending Link', uptime: '--.--%', icon: <Server className="w-4 h-4 text-slate-500" /> },
+    { name: 'Biometric Webhook Ledger', status: 'Pending Link', uptime: '--.--%', icon: <ShieldCheck className="w-4 h-4 text-slate-500" /> },
 ];
 
 export default function Status() {
@@ -32,14 +32,13 @@ export default function Status() {
             <section className="py-20 px-4 md:px-8 max-w-4xl mx-auto space-y-12">
                 
                 {/* Global Status Banner */}
-                <div className="p-8 rounded-3xl bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-6">
-                    <div className="p-4 rounded-full bg-emerald-500/20 text-emerald-400 shrink-0 relative">
-                        <div className="absolute inset-0 rounded-full bg-emerald-400 animate-ping opacity-20" />
+                <div className="p-8 rounded-3xl bg-slate-500/10 border border-slate-500/30 flex items-center gap-6">
+                    <div className="p-4 rounded-full bg-slate-500/20 text-slate-400 shrink-0 relative">
                         <Activity className="w-8 h-8 relative z-10" />
                     </div>
                     <div>
-                        <h2 className="text-xl md:text-2xl font-bold text-white mb-1 tracking-tight">All Systems Operational</h2>
-                        <p className="text-sm text-emerald-200/80">No active incidents across the global FHIR routing network.</p>
+                        <h2 className="text-xl md:text-2xl font-bold text-white mb-1 tracking-tight">Status Monitor Offline</h2>
+                        <p className="text-sm text-slate-300/80">Pending Phase 17 connection to the primary Edge SLA API.</p>
                     </div>
                 </div>
 
@@ -77,11 +76,11 @@ export default function Status() {
                     ))}
                 </div>
 
-                {/* Incident History Placeholder */}
+                {/* Incident History (Defrosted) */}
                 <div className="pt-8 border-t border-white/[0.05]">
                     <h3 className="text-lg font-bold font-outfit text-white mb-6 px-2">Past 14 Days</h3>
                     <div className="glass p-8 rounded-2xl border border-white/5 text-center">
-                        <p className="text-sm text-white/40">No incidents reported in the last timeline window.</p>
+                        <p className="text-sm text-white/50 leading-relaxed max-w-md mx-auto">Detailed incident history logs have been temporarily locked pending our migration to the new edge uptime monitor in Phase 17.</p>
                     </div>
                 </div>
 
