@@ -39,7 +39,7 @@ export default function Developers() {
                     </div>
 
                     <p className="text-sm text-white/70 leading-relaxed mb-6">
-                        Unlike traditional clinical software, you do not need to install local databases or secure HIPAA pipelines. You simply format the patient's EHR into a <code className="text-cyan-300 font-mono text-[10px] bg-cyan-500/10 px-1 rounded">JSON FHIR R4</code> standard and `POST` it to our ephemeral edge proxy along with your <code>Clinic Routing ID</code>. 
+                        Unlike traditional clinical software, you do not need to install local databases or secure HIPAA pipelines. You simply strip all PII and format the anonymized clinical telemetry into an isolated <code className="text-cyan-300 font-mono text-[10px] bg-cyan-500/10 px-1 rounded">JSON FHIR R4</code> standard and `POST` it to our ephemeral edge proxy along with your <code>Clinic Routing ID</code>. 
                     </p>
 
                     <div className="bg-[#0a0a0f] rounded-xl border border-white/5 overflow-hidden">
@@ -82,7 +82,7 @@ export default function Developers() {
                             <Terminal className="w-6 h-6 text-white/50 group-hover:text-cyan-400 transition-colors" />
                         </div>
                         <h3 className="text-lg font-bold text-white mb-2">Aura Hub (Backend & Edges)</h3>
-                        <p className="text-sm text-white/50 leading-relaxed">The Supabase Deno Edge functions managing the secure webhook routes, powering the $199/month Clinic Gateway base alongside the $0.25 API micro-transactions per FHIR payload pull.</p>
+                        <p className="text-sm text-white/50 leading-relaxed">The Supabase Deno Edge functions managing the secure webhook routes, powering the $199/month Per Provider Seat Enterprise License.</p>
                     </a>
                 </div>
 
