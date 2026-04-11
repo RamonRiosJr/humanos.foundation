@@ -47,21 +47,21 @@ export default function Developers() {
                             <div className="w-2.5 h-2.5 rounded-full bg-rose-500/50" />
                             <div className="w-2.5 h-2.5 rounded-full bg-amber-500/50" />
                             <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/50" />
-                            <span className="text-[10px] text-white/30 ml-2 font-mono uppercase tracking-wider">api.humanos.foundation/v1/fhir/ingest</span>
+                            <span className="text-[10px] text-white/30 ml-2 font-mono uppercase tracking-wider">aurahos.io/api/edge/fhir-dispatcher</span>
                         </div>
                         <div className="p-6 overflow-x-auto text-xs font-mono text-cyan-300/80 leading-relaxed">
-                            <span className="text-purple-400">POST</span> <span className="text-white/60">/v1/fhir/ingest</span><br />
+                            <span className="text-purple-400">POST</span> <span className="text-white/60">/api/edge/fhir-dispatcher</span><br />
                             <span className="text-blue-400">Authorization:</span> Bearer {'<'}YOUR_AURA_SECRET{'>'}<br />
                             <span className="text-blue-400">Content-Type:</span> application/json<br />
                             <span className="text-blue-400">X-Aura-Clinic-ID:</span> RVFHC-CO-825<br /><br />
                             
                             <span className="text-white/40">{'{'}</span><br />
-                            <span className="text-rose-300">  "resourceType"</span><span className="text-white/40">:</span> <span className="text-emerald-300">"Patient"</span><span className="text-white/40">,</span><br />
-                            <span className="text-rose-300">  "identifier"</span><span className="text-white/40">: [{'{'}</span><br />
-                            <span className="text-rose-300">    "system"</span><span className="text-white/40">:</span> <span className="text-emerald-300">"urn:oid:Aura-hOS-Secure-Vault"</span><span className="text-white/40">,</span><br />
-                            <span className="text-rose-300">    "value"</span><span className="text-white/40">:</span> <span className="text-emerald-300">"02934-x82A"</span><br />
-                            <span className="text-white/40">  {'}'}],</span><br />
-                            <span className="text-rose-300">  "active"</span><span className="text-white/40">:</span> <span className="text-purple-400">true</span><br />
+                            <span className="text-rose-300">  "resourceType"</span><span className="text-white/40">:</span> <span className="text-emerald-300">"Observation"</span><span className="text-white/40">,</span><br />
+                            <span className="text-rose-300">  "status"</span><span className="text-white/40">:</span> <span className="text-emerald-300">"final"</span><span className="text-white/40">,</span><br />
+                            <span className="text-rose-300">  "code"</span><span className="text-white/40">: {'{'}</span><br />
+                            <span className="text-rose-300">    "coding"</span><span className="text-white/40">: [{'{'} </span><span className="text-rose-300">"system"</span><span className="text-white/40">:</span> <span className="text-emerald-300">"http://loinc.org"</span><span className="text-white/40">,</span> <span className="text-rose-300">"code"</span><span className="text-white/40">:</span> <span className="text-emerald-300">"8310-5"</span> <span className="text-white/40">{'}'}]</span><br />
+                            <span className="text-white/40">  {'}'},</span><br />
+                            <span className="text-rose-300">  "valueQuantity"</span><span className="text-white/40">: {'{'} </span><span className="text-rose-300">"value"</span><span className="text-white/40">:</span> <span className="text-purple-400">36.6</span><span className="text-white/40">,</span> <span className="text-rose-300">"unit"</span><span className="text-white/40">:</span> <span className="text-emerald-300">"C"</span> <span className="text-white/40">{'}'}</span><br />
                             <span className="text-white/40">{'}'}</span>
                         </div>
                     </div>
@@ -82,7 +82,7 @@ export default function Developers() {
                             <Terminal className="w-6 h-6 text-white/50 group-hover:text-cyan-400 transition-colors" />
                         </div>
                         <h3 className="text-lg font-bold text-white mb-2">Aura Hub (Backend & Edges)</h3>
-                        <p className="text-sm text-white/50 leading-relaxed">The Supabase Deno Edge functions managing the secure webhook routes and processing the $0.25 API micro-transactions.</p>
+                        <p className="text-sm text-white/50 leading-relaxed">The Supabase Deno Edge functions managing the secure webhook routes, powering the $199/mo Clinic Tier MRR, and processing the $0.25 API micro-transactions.</p>
                     </a>
                 </div>
 
