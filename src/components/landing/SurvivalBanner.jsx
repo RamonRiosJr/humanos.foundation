@@ -68,26 +68,26 @@ export default function SurvivalBanner() {
                     </div>
                     <div>
                         <h3 className="text-sm md:text-base font-bold text-white mb-0.5 tracking-tight flex items-center justify-center sm:justify-start gap-2">
-                            <span className="text-red-400 uppercase tracking-widest text-[10px] sm:text-xs">Survival Campaign</span>
+                            <span className="text-red-400 uppercase tracking-widest text-[10px] sm:text-xs">Enterprise Validation</span>
                             <span className="hidden sm:inline text-white/30">•</span>
-                            <span>Bridge to the $825k Federal PCORI Grant</span>
+                            <span>Engineering Secured by PCORI / AHRQ Pilot</span>
                         </h3>
                         <p className="text-xs md:text-sm text-white/70 leading-snug">
-                            Your $20k support directly funds the privacy locks that keep our families' medical records entirely in their own hands—bypassing the waiting room penalty forever.
+                            Our core engineering roadmap is entirely secured by the $825k PCORI / AHRQ non-dilutive pilot, serving as a direct bridge to the upcoming $1.5M Seed Round to permanently fund the Zero-Knowledge Vault architecture.
                         </p>
                     </div>
                 </div>
 
                 {/* Call To Action */}
                 <a 
-                    href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom"
+                    href="/research"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="shrink-0 group relative overflow-hidden inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-red-500/10 border border-red-500/30 hover:border-red-400 hover:bg-red-500/20 transition-all duration-300"
                 >
                     <span className="relative z-10 text-sm font-bold text-red-100 flex items-center gap-2">
                         <HeartPulse className="w-4 h-4 text-red-400 group-hover:scale-110 transition-transform" />
-                        Fund the Architecture
+                        View Capital Roadmap
                     </span>
                     <ArrowRight className="relative z-10 w-4 h-4 text-red-400 group-hover:translate-x-1 transition-transform" />
                     
