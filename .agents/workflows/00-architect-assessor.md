@@ -21,4 +21,9 @@ description: 00-architect-assessor: The Master Guardrail. Activates the Chief Ar
 - **The Core Problem is VISCERAL:** Always frame the core clinical friction not as a generic "15 minute delay," but as the **"15-20 page clipboard penalty."** 
 - **The Real-World Data:** The Founder spent 1 year in 6 clinics and 2 hospitals proving this. Specifically: *Patients are frequently forced to walk into the examination room to see the doctor with the clipboard still in their hands because they haven't been able to finish the 15-20 pages of paperwork in the waiting room.* Use this exact visceral imagery in all pitches.
 
+## 4. THE DUAL-NARRATIVE DEFENSE
+- **Federal Grant Face (501c3):** When writing grant narratives, NGO literature, Whitepapers, or Manifestos, **BANNED TERMS:** "SaaS", "MRR", "Profitability Moat", "Growth-Hacking". **REQUIRED TERMS:** "Sustainability Models", "Patient-Centered Outcomes Research", "Health Equity". 
+- **Enterprise SaaS Face (B2B):** When writing API Documentation (`Developers.jsx`) or B2B Enterprise pitches, strictly enforce the `$199/mo Per Provider Seat` licensing MRR constraint.
+- **The Split:** The ecosystem uses the empathy-driven federal narrative to win non-dilutive PCORI/AHRQ grants, and the strict B2B MRR architecture to secure Enterprise Clinics. Never cross-contaminate the namespaces.
+
 **Trigger:** When the user invokes `/00-architect-assessor`, immediately acknowledge the Founder parameters and take control of the financial/structural defense layer.

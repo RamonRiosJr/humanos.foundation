@@ -38,11 +38,11 @@ export default function Contact() {
                     <div className="relative w-full">
                         {/* Animated Soft Smoke Halo */}
                         <motion.div
-                            animate={{ opacity: [0.3, 0.6, 0.3] }}
-                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute -inset-2 bg-gradient-to-tr from-cyan-500/5 via-white/10 to-transparent rounded-[2rem] blur-xl pointer-events-none"
+                            animate={{ opacity: [0.4, 0.8, 0.4], scale: [0.98, 1.02, 0.98] }}
+                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute -inset-4 bg-gradient-to-tr from-cyan-500/40 via-blue-500/20 to-purple-500/10 rounded-[3rem] blur-2xl pointer-events-none"
                         />
-                        <div className="w-full relative rounded-3xl overflow-hidden glass-strong border border-white/[0.08] shadow-[0_0_50px_rgba(0,0,0,0.5)] z-10 bg-obsidian" style={{ height: '820px' }}>
+                        <div className="w-full relative rounded-3xl overflow-hidden glass-strong border border-cyan-500/20 shadow-[0_0_80px_rgba(34,211,238,0.15)] z-10 bg-obsidian" style={{ height: '820px' }}>
                             <iframe
                                 src="https://team.humanos.foundation/contactus"
                                 className="w-full absolute"
