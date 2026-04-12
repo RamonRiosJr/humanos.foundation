@@ -70,10 +70,10 @@ export default function SurvivalBanner() {
                         <h3 className="text-sm md:text-base font-bold text-white mb-0.5 tracking-tight flex items-center justify-center sm:justify-start gap-2">
                             <span className="text-red-400 uppercase tracking-widest text-[10px] sm:text-xs">Enterprise Validation</span>
                             <span className="hidden sm:inline text-white/30">•</span>
-                            <span>Engineering Secured by PCORI / AHRQ Pilot</span>
+                            <span>Engineering Structurally Aligned with PCORI / AHRQ Mandates</span>
                         </h3>
                         <p className="text-xs md:text-sm text-white/70 leading-snug">
-                            Our core engineering roadmap is entirely secured by the $825k PCORI / AHRQ non-dilutive pilot, serving as a direct bridge to the upcoming $1.5M Seed Round to permanently fund the Zero-Knowledge Vault architecture.
+                            Our core engineering roadmap is precision-targeted toward the $825k PCORI / AHRQ non-dilutive pilot, acting as the strategic bridge to the upcoming $1.5M Seed Round to permanently fund the Zero-Knowledge Vault architecture.
                         </p>
                     </div>
                 </div>
