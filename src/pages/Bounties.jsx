@@ -13,7 +13,7 @@ const activeBounties = [
         reward: '$500 USD',
         status: 'Open',
         labels: ['Deno', 'TypeScript', 'Healthcare'],
-        link: 'https://github.com/Humanos-OS/aura-hub'
+        link: 'https://github.com/RamonRiosJr/aura-hub'
     },
     {
         title: 'Optimize React Native AES-256 Decryption Loop',
@@ -21,7 +21,7 @@ const activeBounties = [
         reward: '$750 USD',
         status: 'Open',
         labels: ['React Native', 'Cryptography', 'C++'],
-        link: 'https://github.com/Humanos-OS/aura-health-os'
+        link: 'https://github.com/RamonRiosJr/aura-health-os'
     },
     {
         title: 'Implement Vercel ISR Fallback for Odoo Blog',
@@ -29,7 +29,7 @@ const activeBounties = [
         reward: '$250 USD',
         status: 'Claimed',
         labels: ['Next.js', 'React', 'Caching'],
-        link: 'https://github.com/Humanos-OS/humanos.foundation'
+        link: 'https://github.com/RamonRiosJr/humanos.foundation'
     }
 ];
 
@@ -72,7 +72,7 @@ export default function Bounties() {
                         <CircleDollarSign className="w-8 h-8 text-emerald-400 mb-4" />
                         <h4 className="text-sm font-bold text-white mb-2">3. Merge & Payout</h4>
                         <p className="text-xs text-white/50 leading-relaxed">
-                            Once the Foundation architects squash and merge your code into `main`, the USD bounty is executed via Stripe or Crypto within 48 hours.
+                            Once the Foundation architects squash and merge your code into `main`, the USD bounty is escrowed and executed via Stripe/Crypto immediately upon Seed Capitalization or Federal Grant disbursement.
                         </p>
                     </div>
                 </div>
@@ -123,7 +123,7 @@ export default function Bounties() {
                 </div>
 
                 <div className="text-center">
-                    <a href="https://github.com/Humanos-OS" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 hover:bg-cyan-500/20 text-cyan-300 font-bold text-sm tracking-wider uppercase transition-all glow-btn">
+                    <a href="https://github.com/RamonRiosJr" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 hover:bg-cyan-500/20 text-cyan-300 font-bold text-sm tracking-wider uppercase transition-all glow-btn">
                         View All Open Issues <ArrowUpRight className="w-4 h-4" />
                     </a>
                 </div>
