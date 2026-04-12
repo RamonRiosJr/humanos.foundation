@@ -9,8 +9,8 @@ export default function Research() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta 
-                title="Clinical Research & PCORI Outcomes — Humanos Foundation" 
-                description="Review the active clinical hypotheses structurally aligned with Patient-Centered Outcomes Research Institute (PCORI) research priorities investigating health data sovereignty." 
+                title="Clinical Research & Federal Outcomes — Humanos Foundation" 
+                description="Review the active clinical hypotheses structurally aligned with federal health equity research priorities investigating health data sovereignty." 
                 url="https://humanos.foundation/research" 
             />
             <Navbar />
@@ -32,7 +32,7 @@ export default function Research() {
                     
                     <div className="relative z-10">
                         <div className="inline-flex items-center gap-2 px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-[10px] font-bold uppercase tracking-widest rounded-full mb-6">
-                            Federal Grant Strategy / PCORI Alignment
+                            Federal Grant Strategy / Health Equity Alignment
                         </div>
                         
                         <h2 className="text-2xl md:text-3xl font-bold font-outfit text-white mb-6">Neurodivergent UI Sovereignty vs. Adherence Rates</h2>
@@ -72,11 +72,11 @@ export default function Research() {
                     </div>
                 </div>
 
-                {/* PCORI Framework Callout */}
+                {/* Federal Health Equity Alignment */}
                 <div className="text-center max-w-2xl mx-auto">
-                    <h3 className="text-lg font-bold text-white mb-4">Patient-Centered Outcomes Research Institute (PCORI) Alignment</h3>
-                    <p className="text-sm text-white/60 leading-relaxed mb-6">
-                        This architecture and subsequent clinical triaging logic has been designed specifically to investigate disparities in healthcare delivery models for individuals with Autism Spectrum Disorder (ASD), directly aligning with PCORI’s mandated priority populations regarding executive malfunction in chronic care management.
+                    <h3 className="text-lg font-bold text-white mb-4">Federal Health Equity Alignment</h3>
+                    <p className="text-sm text-white/60 leading-relaxed max-w-3xl">
+                        This architecture and subsequent clinical triaging logic has been designed specifically to investigate disparities in healthcare delivery models for individuals with Autism Spectrum Disorder (ASD), directly aligning with federal mandated priority populations regarding executive malfunction in chronic care management.
                     </p>
                     <a href="mailto:hello@humanos.foundation" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-400 hover:text-cyan-300 transition-colors">
                         Request Full Protocol Documentation <ArrowRight className="w-4 h-4" />
