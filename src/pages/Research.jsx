@@ -10,7 +10,7 @@ export default function Research() {
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta 
                 title="Clinical Research & PCORI Outcomes — Humanos Foundation" 
-                description="Review the active clinical hypotheses and Patient-Centered Outcomes Research Institute (PCORI) directives investigating health data sovereignty." 
+                description="Review the active clinical hypotheses structurally aligned with Patient-Centered Outcomes Research Institute (PCORI) research priorities investigating health data sovereignty." 
                 url="https://humanos.foundation/research" 
             />
             <Navbar />
@@ -32,7 +32,7 @@ export default function Research() {
                     
                     <div className="relative z-10">
                         <div className="inline-flex items-center gap-2 px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-[10px] font-bold uppercase tracking-widest rounded-full mb-6">
-                            Active Pipeline / PCORI Phase 1
+                            Federal Grant Strategy / PCORI Alignment
                         </div>
                         
                         <h2 className="text-2xl md:text-3xl font-bold font-outfit text-white mb-6">Neurodivergent UI Sovereignty vs. Adherence Rates</h2>
