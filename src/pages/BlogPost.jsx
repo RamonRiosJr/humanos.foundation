@@ -22,7 +22,19 @@ export default function BlogPost() {
             return;
         }
 
-        humanosMockClient.entities.BlogPost.get(postId).then(data => {
+        humanosMockClient.entities.BlogPost.get(postId).then(async (data) => {
+            if (data && data.contentUrl) {
+                try {
+                    const response = await fetch(data.contentUrl);
+                    if (response.ok) {
+                        data.content = await response.text();
+                    } else {
+                        data.content = "> *Error loading secure markdown file.*";
+                    }
+                } catch (e) {
+                    data.content = "> *Network error fetching content.*";
+                }
+            }
             setPost(data);
             setLoading(false);
         });
