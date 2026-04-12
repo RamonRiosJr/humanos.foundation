@@ -13,7 +13,7 @@ const footerLinks = {
         { label: 'Join the Movement', page: 'Join' },
     ],
     Resources: [
-        { label: 'Architecture Whitepaper', page: 'Whitepaper' },
+        { label: 'Architecture Whitepaper', href: 'https://aurahos.io/whitepaper', isExternal: true, disclaimer: 'Aura hOS proudly donates its Enterprise Architecture to our patients.' },
         { label: 'Developer Portal (API)', page: 'Developers' },
         { label: 'Interactive Sandbox', href: 'https://aurahos.io/demo', isExternal: true },
         { label: 'Clinical Research (PCORI)', page: 'Research' },
@@ -80,6 +80,9 @@ export default function Footer() {
                                             <Link to={createPageUrl(link.page)} className="text-xs text-white/50 hover:text-cyan-400 transition-colors font-medium">
                                                 {link.label}
                                             </Link>
+                                        )}
+                                        {link.disclaimer && (
+                                            <p className="text-[9px] text-zinc-500 italic mt-1.5 leading-tight pr-4">{link.disclaimer}</p>
                                         )}
                                     </li>
                                 ))}
