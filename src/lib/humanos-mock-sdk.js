@@ -161,7 +161,7 @@ const CORNERSTONE_POSTS = [
     {
         "id": "post-16",
         "title": "Lockscreen Native Hardware Integrations (Launch Update)",
-        "excerpt": "The NFC Aura Band and iOS Lockscreen Widget protocols are officially locked for next month. Why hardware-level triage logic is required to bypass the app launch in emergencies.",
+        "excerpt": "The NFC Aura Band and iOS Lockscreen Widget protocols are officially locked for next month. Why hardware-level boundary logic is required to bypass the app launch in emergencies.",
         "category": "Technology",
         "read_time_minutes": 5,
         "published": true,
