@@ -10,7 +10,7 @@ const supportWays = [
     { icon: Heart, title: 'Spread the Word', desc: 'Share our manifesto. Talk about patient data rights. Refer journalists, researchers, and advocates to us. The movement grows through people.', cta: 'Read the Manifesto', href: '/manifesto' },
     { icon: Users, title: 'Volunteer', desc: 'Give your time and skills. We need developers, writers, translators, and community organizers. Every contribution matters.', cta: 'Volunteer Now', href: '/volunteer' },
     { icon: Code, title: 'Contribute Code', desc: 'Help build open-source tools for the movement. Whether it\'s documentation, design, or development — we welcome all contributors.', cta: 'Visit Coqui Cloud', href: 'https://coqui.cloud' },
-    { icon: DollarSign, title: 'Financial Support', desc: 'Our engineering framework is strictly capitalized through institutional and federal pathways. The $825k PCORI / AHRQ non-dilutive pilot serves as our bridge to the upcoming $1.5M Seed Round.', cta: 'View Research', href: '/research' },
+    { icon: DollarSign, title: 'Financial Support', desc: 'Our engineering framework is strictly structured for institutional and federal pathways. The $825k federal health equity non-dilutive pilot application serves as our bridge to the upcoming $1.5M Seed Round.', cta: 'View Research', href: '/research' },
 ];
 
 export default function Support() {
@@ -40,7 +40,7 @@ export default function Support() {
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="mt-10 glass rounded-2xl p-6 border border-yellow-500/20 text-center">
                         <p className="text-sm text-white/60 leading-relaxed">
                             <span className="text-yellow-400 font-bold">Enterprise Capitalization:</span>{' '}
-                            Humanos Foundation operates its core development via enterprise capital mechanics. While formal 501(c)(3) nonprofit status is pending, our core B2B infrastructure pipeline is securely bridged through the $825k PCORI / AHRQ pilot into our $1.5M Seed Round.
+                            Humanos Foundation operates its core development via enterprise capital mechanics. While formal 501(c)(3) nonprofit status is pending, our core B2B infrastructure pipeline structurally targets the $825k federal health equity pilot into our $1.5M Seed Round.
                         </p>
                     </motion.div>
                 </div>

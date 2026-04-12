@@ -36,7 +36,7 @@ const faqs = [
         category: 'Pilot & Funding Architecture',
         questions: [
             { q: 'How do clinics pilot Aura hOS™?', a: 'We partner with federally qualified health centers (FQHCs) and enterprise B2B clinics. Our current pilot programs act as Sandbox environments designed to eliminate clinical intake friction. If you represent a front-range clinic, contact partnerships@humanos.foundation.' },
-            { q: 'How is the platform funded?', a: 'The Humanos Foundation architecture is primarily backed by a strategic capitalization roadmap, targeting prestigious enterprise health-equity funding vectors like PCORI and AHRQ, ensuring the core platform remains free for the neurodivergent community.' },
+            { q: 'How is the platform funded?', a: 'The Humanos Foundation architecture is primarily backed by a strategic capitalization roadmap, targeting prestigious federal health-equity funding vectors, ensuring the core platform remains free for the neurodivergent community.' },
             { q: 'Can developers audit the codebase?', a: 'Yes. Aura hOS™ is an open-source movement. We invite security auditors, developers, and systems architects to review our Zero-Knowledge protocols directly. Reach out to hello@humanos.foundation.' },
         ],
     },
