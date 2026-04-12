@@ -14,7 +14,7 @@ This isn't an inconvenience; it's cognitive overload. The data they hand the doc
 
 ### The Structural Solution
 
-Aura hOS™ v0.8.0-rc.1 eradicates the paper wall. By anchoring directly into our B2B Clinic Directory via Zero-SSN routing, the platform formats the patient's continuous lived data into a secure FHIR payload *from the safety of their home*. The clinical baseline is established without the clipboard penalty.
+Aura hOS™ v0.8.0-rc.3 eradicates the paper wall. By anchoring directly into our B2B Clinic Directory via Zero-SSN routing, the platform formats the patient's continuous lived data into a secure FHIR payload *from the safety of their home*. The clinical baseline is established without the clipboard penalty.
 
 ---
 
