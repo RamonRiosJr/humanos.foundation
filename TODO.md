@@ -2,6 +2,8 @@
 
 ## Phase 16: Ecosystem Synchronization
 - [ ] Monitor the Global Event Bus for the next major architectural shift.
+- [x] **[EVENT BUS] Native Hardware Migration:** Native Capacitor motion merged into Repo 1.
+- [x] **[EVENT BUS] Strategy Alignment:** B2B Routing payload logged into the Repo 2 business plan target matrix.
 
 ## Phase 17: Eradicate Mock Architecture (API Defrosting)
 - [x] **Blog Post CMS Generation:** Replaced the hardcoded JSON 18-post `CORNERSTONE_POSTS` string list. Formally extracted all clinical narrative into 18 standalone Native Markdown (`.md`) files in the `/public/content/blog/` directory to ensure perfect Google SEO crawling without crippling the Vite SPA routing model.
