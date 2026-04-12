@@ -59,6 +59,7 @@ export default function Volunteer() {
                         </div>
                     </div>
                 </div>
+            </div>
             </section>
             <Footer />
         </div>
