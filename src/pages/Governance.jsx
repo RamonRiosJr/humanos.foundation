@@ -88,7 +88,7 @@ export default function Governance() {
                     <FileSignature className="w-8 h-8 text-blue-400 mx-auto mb-4" />
                     <h3 className="text-lg font-bold text-white mb-3">Federal Grant Accountability</h3>
                     <p className="text-sm text-white/60 max-w-2xl mx-auto leading-relaxed">
-                        Funds rendered by the Patient-Centered Outcomes Research Institute (PCORI) or the Agency for Healthcare Research and Quality (AHRQ) are ring-fenced entirely for the open-source clinical FHIR engineering of Aura hOS. No federal funds are allocated to marketing, lobbying, or external contracting.
+                        It is the strict formal policy of the Foundation that any future funds rendered by federal entities, such as the Patient-Centered Outcomes Research Institute (PCORI) or the Agency for Healthcare Research and Quality (AHRQ), will be ring-fenced entirely for the open-source clinical FHIR engineering of Aura hOS. Zero federal funds will ever be allocated to marketing, lobbying, or external commercial contracting.
                     </p>
                 </div>
 
