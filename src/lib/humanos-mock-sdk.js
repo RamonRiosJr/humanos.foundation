@@ -150,7 +150,7 @@ const CORNERSTONE_POSTS = [
     },
     {
         "id": "post-15",
-        "title": "Aura hOS v0.8.0-rc.1: The Federal Infrastructure Lock",
+        "title": "Aura hOS v0.8.0-rc.3: The Federal Infrastructure Lock",
         "excerpt": "After 2,500 hours of development, the Zero-Knowledge Vault architecture is officially flagged as RC.1 and prepared for PCORI evaluation.",
         "category": "Technology",
         "read_time_minutes": 5,
