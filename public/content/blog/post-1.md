@@ -1,6 +1,6 @@
 # The 5-Minute Tragedy
 
-You walk into a clinic. You endure the [15-20 page clipboard penalty](/TheProblem), detailing weeks or months of complex suffering. You wait.
+You walk into a clinic. You endure [15 pages of arbitrary paperwork](/TheProblem), detailing weeks or months of complex suffering. You wait.
 
 Then, the doctor enters. They have exactly 5 minutes to review your forms, listen to your story, and decide your fate. 
 
@@ -12,7 +12,7 @@ When a complex human being is compressed into a rushed 5-minute clinical documen
 
 Because they don't understand the root cause, they drug the symptom. When that pill causes a side effect, they prescribe a second pill. You become a walking [Medication Gallery](/TheProblem). Your thoughts change. Your body breaks down. You face forced disability, all because the system refused to take the time to *know* you.
 
-At the [Humanos Foundation](/Manifesto), we say: **No more.** Aura hOS is a secure, digital vault that continuously records your true, daily lived experiences. We encrypt and lock your health history so that only you control it—bridging the gap between the reality of your suffering and the hospital's rushed intake process. We are building the tools to capture your unignorable truth, forcing the system to treat you as a human being.
+At the [Humanos Foundation](/Manifesto), we say: **No more.** hOS is a unified, local-first data layer that structures your continuous lived experience into a sovereign clinical record, ensuring your healthcare data remains your private, encrypted property while bridging the gap between your daily truth and the hospital system. We are building the tools to capture your unignorable, continuous truth, forcing the system to treat you as an individual.
 
 ---
 

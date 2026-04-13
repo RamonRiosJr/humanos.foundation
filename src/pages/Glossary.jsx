@@ -21,13 +21,6 @@ const terms = [
     { term: 'SaMD', full: 'Software as a Medical Device', definition: 'Software intended to be used for medical purposes — diagnosis, prevention, monitoring, or treatment — without being part of a hardware medical device. Subject to FDA regulation in the US and CE marking in the EU.' },
     { term: 'TEFCA', full: 'Trusted Exchange Framework and Common Agreement', definition: 'A US framework to enable nationwide health information exchange across different networks. Part of the 21st Century Cures Act implementation aiming for better patient data access.' },
     { term: 'Patient Sovereignty', full: 'Patient Data Sovereignty', definition: 'The principle that patients have absolute rights over their biological data—including the choice of whom to trust. It is not about "protecting" data behind a corporate wall; it is about mathematically ensuring the patient is the sole gatekeeper of their own history.' },
-    { term: 'Information Blocking', full: 'Information Blocking', definition: 'A practice by a healthcare provider, IT developer, or health exchange that unreasonably limits the access, exchange, or use of electronic health information (EHI). This anti-competitive practice is banned under the 21st Century Cures Act.' },
-    { term: 'Data Broker', full: 'Health Data Broker', definition: 'A commercial entity that collects information on consumers from multiple sources, analyzes it, and sells it to third parties. In healthcare, stripped or "anonymized" data escapes HIPAA and fuels this billion-dollar shadow industry.' },
-    { term: 'MDDS', full: 'Medical Device Data System', definition: 'Software that transfers, stores, or formats medical data without modifying it or controlling medical devices. Properly structured systems can qualify as MDDS, legally bypassing strict Class II FDA diagnostic regulations.' },
-    { term: 'BAA', full: 'Business Associate Agreement', definition: 'A mandatory contract required by HIPAA between a medical clinic and a third-party software vendor. Implementing a Zero-Knowledge encryption architecture mathematically bypasses the need for BAAs because the software vendor can never read the data.' },
-    { term: 'Triage Process', full: 'Hospital Triage', definition: 'The administrative and clinical process of determining the priority of patients\' treatments in the emergency room. Often the primary point of failure and delay for patients experiencing neurodivergent overloads or complex communication barriers.' },
-    { term: 'Clinical Baseline', full: 'Verified Medical Baseline', definition: 'The foundational snapshot of a patient\'s vital signs, active medications, and chronic conditions upon entry to a medical facility. Establishing this instantly without a clipboard prevents diagnostic errors.' },
-    { term: 'FTC HBNR', full: 'Health Breach Notification Rule', definition: 'A primary Federal Trade Commission regulation requiring vendors of personal health records (PHRs) to notify consumers following a breach. Platforms that do not possess decryption keys possess a powerful legal defense against these catastrophic liability vectors.' },
 ];
 
 const alphabet = [...new Set(terms.map(t => t.term[0]))].sort();
@@ -38,8 +31,7 @@ export default function Glossary() {
     const filtered = terms.filter(t =>
         filter === '' ||
         t.term.toLowerCase().includes(filter.toLowerCase()) ||
-        t.full.toLowerCase().includes(filter.toLowerCase()) ||
-        t.definition.toLowerCase().includes(filter.toLowerCase())
+        t.full.toLowerCase().includes(filter.toLowerCase())
     );
 
     return (

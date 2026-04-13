@@ -1,6 +1,6 @@
 # The Fatigue of Clinical Intake
 
-You arrive early, as instructed. The receptionist hands you a clipboard with a pen chained to it. You look down at the [15-20 page clipboard penalty](/TheProblem) stacked before you.
+You arrive early, as instructed. The receptionist hands you a clipboard with a pen chained to it. You look down at a stack of 15 photocopied pages.
 
 "Please fill these out before the doctor sees you."
 
@@ -10,7 +10,7 @@ This is the First Mile of healthcare, and it is a complete disaster. If you suff
 
 You try to write notes in the margins, but the margins are too small.
 
-By the time you hand the clipboard back, you are fatigued. You have spent your energy trying to map your human experience to an administrative liability form. When you are finally subjected to the rushed 5-minute clinical documentation, you lack the energy to properly explain what is happening.
+By the time you hand the clipboard back, you are fatigued. You have spent your energy trying to map your human experience to an administrative liability form. When you finally see the doctor, you lack the energy to properly explain what is happening.
 
 ### Liability Over Healing
 
