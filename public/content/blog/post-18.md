@@ -10,7 +10,7 @@ As of this morning, we have executed **Phase 13: Architectural Deprecation**.
 
 1. **Native Client Mocking:** We successfully ripped `odooClient.js` out of the ecosystem. All public-facing data (including this blog node) has been transitioned to a standalone, React-driven local simulation cache.
 2. **Headless Intake Architecture:** Broken third-party `<iframe>` tags across the Foundation site have been physically deleted and replaced by lightning-fast, headless `<GenericIntakeForm />` UI components that mimic secure webhook transactions.
-3. **SEO Shielding:** We have completely deregistered dead Enterprise nodes (`/providers`, `/sandbox`) from our edge payload and stripped them directly from the Google indexing `sitemap.xml`.
+3. **SEO Shielding:** We have completely deregistered dead Sovereign Nodes (`/providers`, `/sandbox`) from our edge payload and stripped them directly from the Google indexing `sitemap.xml`.
 
 ### Unified Edge Routing
 

@@ -23,7 +23,7 @@ export default function Status() {
             <Navbar />
             
             <PageHero 
-                badge="Enterprise Service Level Agreement" 
+                badge="Sovereign Service Level Agreement" 
                 title="Network" 
                 titleAccent="Status" 
                 subtitle="Aura hOS relies on globally distributed Supabase Edge Functions. We guarantee a 99.9% uptime SLA for all clinical integrations." 
