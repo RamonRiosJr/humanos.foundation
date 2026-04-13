@@ -6,10 +6,10 @@ import { useLocation } from 'react-router-dom';
 export default function SurvivalBanner() {
     const location = useLocation();
     
-    // Architect Assessor: Detect if we are on a B2B or Compliance route
-    const isEnterpriseRoute = ['/providers', '/clinics', '/sandbox', '/developers'].some(p => location.pathname.toLowerCase().includes(p)) || location.search.includes('context=enterprise');
+    // Architect Assessor: Detect if we are on a Federated or Compliance route
+    const isSovereignRoute = ['/providers', '/clinics', '/sandbox', '/developers'].some(p => location.pathname.toLowerCase().includes(p)) || location.search.includes('context=sovereign');
 
-    if (isEnterpriseRoute) {
+    if (isSovereignRoute) {
         return (
             <motion.div 
                 initial={{ opacity: 0, y: -50 }}
@@ -70,10 +70,10 @@ export default function SurvivalBanner() {
                         <h3 className="text-sm md:text-base font-bold text-white mb-0.5 tracking-tight flex items-center justify-center sm:justify-start gap-2">
                             <span className="text-red-400 uppercase tracking-widest text-[10px] sm:text-xs">Federal Health Equity</span>
                             <span className="hidden sm:inline text-white/30">•</span>
-                            <span>Advocacy Secured by PCORI / AHRQ Pilot</span>
+                            <span>Advocacy Secured by Federal Health Equity Pilot</span>
                         </h3>
                         <p className="text-xs md:text-sm text-white/70 leading-snug">
-                            Our primary advocacy roadmap is driven by the $825k PCORI / AHRQ non-dilutive federal trajectory, serving as a direct mandate to permanently protect the Zero-Knowledge patient architectural standard.
+                            Our primary advocacy roadmap is driven by the $825k Federal Health Equity non-dilutive federal trajectory, serving as a direct mandate to permanently protect the Zero-Knowledge patient architectural standard.
                         </p>
                     </div>
                 </div>
