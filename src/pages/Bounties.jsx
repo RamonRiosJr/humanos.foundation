@@ -72,7 +72,7 @@ export default function Bounties() {
                         <CircleDollarSign className="w-8 h-8 text-emerald-400 mb-4" />
                         <h4 className="text-sm font-bold text-white mb-2">3. Merge & Payout</h4>
                         <p className="text-xs text-white/50 leading-relaxed">
-                            Once the Foundation architects squash and merge your code into `main`, the USD bounty is escrowed and executed via Stripe/Crypto immediately upon Phase 18 Institutional Funding or Federal Grant disbursement.
+                            Once the Foundation architects squash and merge your code into `main`, the USD bounty is escrowed and executed via Stripe/Crypto immediately upon Phase 18 Federal Grant disbursement.
                         </p>
                     </div>
                 </div>

@@ -33,7 +33,7 @@ const faqs = [
         ],
     },
     {
-        category: 'Pilot & Funding Architecture',
+        category: 'Grants & Pilot Programs',
         questions: [
             { q: 'How do clinics pilot Aura hOS™?', a: 'We partner with federally qualified health centers (FQHCs) and institutional partners. Our current pilot programs act as real-world benchmarks designed to unconditionally eliminate the 15-20 page clipboard penalty. If you represent a front-range clinic, contact partnerships@humanos.foundation.' },
             { q: 'How is the platform funded?', a: 'The Humanos Foundation architecture is primarily backed by a strategic federal roadmap, targeting prestigious federal health-equity funding vectors, ensuring the core platform remains free for the neurodivergent community.' },
