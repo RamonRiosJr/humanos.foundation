@@ -29,14 +29,14 @@ export default function Clinics() {
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
                 title="Validated Clinics Directory — Humanos Foundation"
-                description="Public directory of validated B2B Clinic Routing IDs for Aura hOS integration."
+                description="Public directory of validated Federated Clinic Routing IDs for Aura hOS integration."
                 url="https://humanos.foundation/clinics"
             />
             <SurvivalBanner />
             <Navbar />
             
             <PageHero 
-                badge="B2B Infrastructure" 
+                badge="Federated Infrastructure" 
                 title="Clinic Routing" 
                 titleAccent="Directory" 
                 subtitle="Use these verified IDs to initiate a Zero-Knowledge clinical handshake with participating providers." 

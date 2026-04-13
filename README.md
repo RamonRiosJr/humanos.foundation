@@ -18,9 +18,9 @@
 
 ## 🌍 The Mission
 
-The **Humanos Foundation** is the 501(c)(3) Enterprise advocacy wing of the **Aura hOS™ (Human Operating System)**. We are a global network of patients, clinicians, and technologists dedicated to dismantling the 15-20 page clinical clipboard penalty. 
+The **Humanos Foundation** is the 501(c)(3) Sovereign advocacy wing of the **Aura hOS™ (Human Operating System)**. We are a global network of patients, clinicians, and technologists dedicated to dismantling the 15-20 page clinical clipboard penalty. 
 
-This repository powers our digital advocacy platform, designed to manage donor pathways, parse localized Markdown for our sovereign education library, and facilitate B2B Clinic Lead Generation via the FHIR R4 schema.
+This repository powers our digital advocacy platform, designed to manage donor pathways, parse localized Markdown for our sovereign education library, and facilitate Federated Clinic Lead Generation via the FHIR R4 schema.
 
 ---
 
@@ -39,7 +39,7 @@ Powers `humanos.foundation`. This is the administrative surface area of the NGO.
 Powers `aurahos.io` and the Clinical Patient Vault. For engineering the core software, please see the `aura-health-os` repository.
 - **Frontend:** Capacitor / React Native.
 - **Backend:** Local-First IndexedDB and PostgREST via Edge Functions.
-- **Use Case:** The B2B Clinic Route, FHIR R4 JSON Payload Generation, and AES-GCM encrypted vaults.
+- **Use Case:** The Federated Clinic Route, FHIR R4 JSON Payload Generation, and AES-GCM encrypted vaults.
 
 ---
 
@@ -83,7 +83,7 @@ For more information on how we bypass FDA SaMD and HIPAA BAA traps, please see o
 
 ## 🤝 The Contributor's Path
 
-We are scaling an enterprise-grade contributor network:
+We are scaling an sovereign-grade contributor network:
 
 - **Data Scientists/Engineers**: Help us harden the local encryption logic or optimize the UI compiling speeds locally.
 - **Clinicians**: Validate our UX logic against "Root-Cause" workflows.
