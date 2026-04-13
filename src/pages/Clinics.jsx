@@ -16,8 +16,8 @@ const clinicDirectory = [
         integrationType: 'Secure Vault Export',
     },
     {
-        id: 'AURA-SANDBOX-00',
-        name: 'Aura Developer Sandbox',
+        id: 'AURA-TESTNET-00',
+        name: 'Open-Source Testnet',
         region: 'Global',
         status: 'Active',
         integrationType: 'Testing Only',

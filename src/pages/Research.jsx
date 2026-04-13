@@ -47,7 +47,7 @@ export default function Research() {
                             <div>
                                 <h4 className="text-xs font-bold text-cyan-400/70 uppercase tracking-widest mb-3 border-b border-cyan-500/10 pb-2">The Experimental Paradigm</h4>
                                 <p className="text-sm text-white/70 leading-relaxed">
-                                    Aura hOS drops the portal liability. By ingesting FHIR payloads locally, the patient gains total sovereign control over the UX, notification frequency, and cognitive styling of their medical data. We hypothesize that removing compliance-driven UI barriers will lift neurodivergent adherence outcomes by a mathematically significant margin.
+                                    Aura hOS destroys the portal barrier. By ingesting FHIR payloads locally, the patient gains total sovereign control over the UX, notification frequency, and cognitive styling of their medical data. We hypothesize that removing compliance-driven UI barriers will lift neurodivergent adherence outcomes by a mathematically significant margin.
                                 </p>
                             </div>
                         </div>

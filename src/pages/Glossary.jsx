@@ -27,7 +27,7 @@ const terms = [
     { term: 'BAA', full: 'Business Associate Agreement', definition: 'A mandatory contract required by HIPAA between a medical clinic and a third-party software vendor. Implementing a Zero-Knowledge encryption architecture mathematically bypasses the need for BAAs because the software vendor can never read the data.' },
     { term: 'Triage Process', full: 'Hospital Triage', definition: 'The administrative and clinical process of determining the priority of patients\' treatments in the emergency room. Often the primary point of failure and delay for patients experiencing neurodivergent overloads or complex communication barriers.' },
     { term: 'Clinical Baseline', full: 'Verified Medical Baseline', definition: 'The foundational snapshot of a patient\'s vital signs, active medications, and chronic conditions upon entry to a medical facility. Establishing this instantly without a clipboard prevents diagnostic errors.' },
-    { term: 'FTC HBNR', full: 'Health Breach Notification Rule', definition: 'A primary Federal Trade Commission regulation requiring vendors of personal health records (PHRs) to notify consumers following a breach. Platforms that do not possess decryption keys possess a powerful legal defense against these catastrophic liability vectors.' },
+    { term: 'FTC HBNR', full: 'Health Breach Notification Rule', definition: 'A primary Federal Trade Commission regulation requiring vendors of personal health records (PHRs) to notify consumers following a breach. Platforms that do not possess decryption keys bypass this risk entirely, mathematically guaranteeing your data cannot be exposed in a corporate breach.' },
 ];
 
 const alphabet = [...new Set(terms.map(t => t.term[0]))].sort();
