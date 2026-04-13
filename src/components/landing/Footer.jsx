@@ -13,9 +13,7 @@ const footerLinks = {
         { label: 'Join the Movement', page: 'Join' },
     ],
     Resources: [
-        { label: 'Architecture Whitepaper', href: 'https://aurahos.io/whitepaper', isExternal: true, disclaimer: 'Aura hOS proudly donates its Enterprise Architecture to our patients.' },
-        { label: 'Developer Portal (API)', page: 'Developers' },
-        { label: 'Interactive Sandbox', href: 'https://aurahos.io/demo', isExternal: true },
+        { label: 'Zero-Knowledge Whitepaper', page: 'Whitepaper' },
         { label: 'Clinical Research', page: 'Research' },
         { label: 'Blog & Insights', page: 'Blog' },
         { label: 'Press & Media', page: 'Press' },
@@ -38,8 +36,6 @@ const footerLinks = {
         { label: 'Volunteer', page: 'Volunteer' },
         { label: 'Security', page: 'Security' },
         { label: 'System Status', page: 'Status' },
-        { label: 'B2B Clinic Directory', page: 'Clinics' },
-        { label: 'Enterprise Onboarding', href: 'https://aurahos.io', isExternal: true },
     ],
 };
 
