@@ -1,4 +1,4 @@
-# The Ultimate Enterprise Setup
+# The Ultimate Sovereign Protocol
 
 Healthcare clinics are fundamentally terrified of data liability. They do not want to hold your unencrypted data any longer than they have to, because holding data means defending it against audits, breaches, and Business Associate Agreement (BAA) compliance traps.
 
@@ -10,9 +10,9 @@ The patient application now inherently supports Provider-Pushed Consent tracking
 
 ### Clinical Telemetry Engines (Phase 3.D)
 
-Furthermore, we have hardwired complex Telemetry Tracking (Pre-appointment fasting windows, EEG wake alarms). The clinic injects the payload directives into the Enterprise API Gateway, and the `DashboardNotificationHub` autonomously maps these instructions directly into the patient's `ClinicalEvent` timeline.
+Furthermore, we have hardwired complex Telemetry Tracking (Pre-appointment fasting windows, EEG wake alarms). The clinic injects the payload directives into the Federated API Gateway, and the `DashboardNotificationHub` autonomously maps these instructions directly into the patient's `ClinicalEvent` timeline.
 
-The result? A mathematically proven liability shield. The enterprise clinic receives pristine, verified adherence metrics without ever touching the patient's decrypted private keys.
+The result? A mathematically proven liability shield. The Federated Clinic receives pristine, verified adherence metrics without ever touching the patient's decrypted private keys.
 
 ---
 

@@ -24,7 +24,7 @@ export default function Research() {
 
             <section className="py-20 px-4 md:px-8 max-w-5xl mx-auto space-y-16">
                 
-                {/* Hypothesis 1 (PCORI Core) */}
+                {/* Hypothesis 1 (Federal Grant Core) */}
                 <div className="glass p-8 md:p-12 rounded-3xl border border-white/10 relative overflow-hidden">
                     <div className="absolute top-0 right-0 p-8 opacity-5 opacity-pointer-events-none">
                         <Network className="w-64 h-64" />

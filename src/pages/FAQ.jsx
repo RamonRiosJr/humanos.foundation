@@ -11,7 +11,7 @@ const faqs = [
     {
         category: 'About Aura hOS™',
         questions: [
-            { q: 'What is Aura hOS™?', a: 'Aura hOS™ is an enterprise clinical software platform engineered by the Humanos Foundation. It acts as a Zero-Knowledge architectural bridge designed to solve the clinical \'First Mile\' crisis, eliminating the 15-20 page clipboard penalty for neurodivergent and medically complex populations via deterministic formatting and biometrics.' },
+            { q: 'What is Aura hOS™?', a: 'Aura hOS™ is an Federated Clinical software platform engineered by the Humanos Foundation. It acts as a Zero-Knowledge architectural bridge designed to solve the clinical \'First Mile\' crisis, eliminating the 15-20 page clipboard penalty for neurodivergent and medically complex populations via deterministic formatting and biometrics.' },
             { q: 'Is the Humanos Foundation a registered nonprofit?', a: 'The Humanos Foundation operates exactly as a 501(c)(3) open-source technology steward. Our formal 501(c)(3) nonprofit designation and tax exemption status is pending final determination from the IRS. We operate purely to engineer public-benefit, open-source technology for marginalized patient populations, fully aligning with state and federal grant compliance.' },
             { q: 'Who engineered Aura hOS™?', a: 'Aura hOS™ was architected by systems engineer and patient Ramon Luis Rios Jr., driven by the sheer necessity to survive a fragmented healthcare system. It was built from the ground up as a defensive, cryptographically sealed medical toolset. Learn more on the Origin page.' },
         ],
@@ -25,7 +25,7 @@ const faqs = [
         ],
     },
     {
-        category: 'Enterprise Technology',
+        category: 'Sovereign Technology',
         questions: [
             { q: 'What is Zero-Knowledge architecture?', a: 'Zero-knowledge architecture inside Aura hOS™ means that even the platform infrastructure cannot read your data. Your clinical state is protected via 256-bit AES-GCM Local Encryption before it touches our Edge servers, secured by a cryptographic key derived solely from your local device PIN or hash-fragment URL logic that never hits the server.' },
             { q: 'What does "local-first" deployment mean?', a: 'Local-first computing ensures your health data is stored and processed on your native device (iOS/Android). You retain absolute control even when completely offline. Your health records will not vanish if our servers experience downtime.' },
@@ -36,7 +36,7 @@ const faqs = [
         category: 'Pilot & Funding Architecture',
         questions: [
             { q: 'How do clinics pilot Aura hOS™?', a: 'We partner with federally qualified health centers (FQHCs) and federated clinics. Our current pilot programs act as Sandbox environments designed to eliminate clinical intake friction. If you represent a front-range clinic, contact partnerships@humanos.foundation.' },
-            { q: 'How is the platform funded?', a: 'The Humanos Foundation architecture is primarily backed by a strategic capitalization roadmap, targeting prestigious enterprise health-equity funding vectors like PCORI and AHRQ, ensuring the core platform remains free for the neurodivergent community.' },
+            { q: 'How is the platform funded?', a: 'The Humanos Foundation architecture is primarily backed by a strategic capitalization roadmap, targeting prestigious sovereign health-equity funding vectors like Federal Grant and Federal Directive, ensuring the core platform remains free for the neurodivergent community.' },
             { q: 'Can developers audit the codebase?', a: 'Yes. Aura hOS™ is an open-source movement. We invite security auditors, developers, and systems architects to review our Zero-Knowledge protocols directly. Reach out to hello@humanos.foundation.' },
         ],
     },

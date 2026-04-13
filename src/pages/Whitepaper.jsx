@@ -17,7 +17,7 @@ export default function Whitepaper() {
         <div className="bg-obsidian min-h-screen text-white flex flex-col overflow-x-hidden">
             <SEOMeta
                 title="Whitepaper Relocation | Humanos Foundation"
-                description="The Aura hOS Architecture Whitepaper has been securely moved to the enterprise domain."
+                description="The Aura hOS Architecture Whitepaper has been securely moved to the Sovereign Framework."
                 url="https://humanos.foundation/whitepaper"
                 type="website"
             />
@@ -40,11 +40,11 @@ export default function Whitepaper() {
                     </div>
                     
                     <h1 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>
-                        Secure Enterprise Handoff
+                        Secure Sovereign Handoff
                     </h1>
                     
                     <p className="text-white/70 mb-8 leading-relaxed font-medium">
-                        To maintain strict non-profit compliance boundaries, the Data Security & Privacy Whitepaper is now hosted securely on our commercial enterprise domain.
+                        To maintain strict non-profit compliance boundaries, the Data Security & Privacy Whitepaper is now hosted securely on our commercial Sovereign Framework.
                     </p>
 
                     <div className="bg-white/[0.03] border border-white/10 rounded-xl p-5 mb-6 backdrop-blur-sm relative overflow-hidden group">
