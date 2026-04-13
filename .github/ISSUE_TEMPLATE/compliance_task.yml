@@ -18,14 +18,12 @@ body:
       label: Regulation / Standard
       description: Which regulation or standard does this relate to?
       options:
-        - HIPAA — Health Insurance Portability and Accountability Act
-        - GDPR — General Data Protection Regulation
-        - SOC 2 — Service Organization Control 2
-        - SOX — Sarbanes-Oxley Act
-        - ISO 27001
-        - NIST CSF
-        - PCI-DSS
-        - FedRAMP
+        - FTC HBNR — Health Breach Notification Rule (Zero-Knowledge Exemption)
+        - FDA — General Wellness Device Exemption
+        - SAM.gov — 501(c)(3) Federal Grant Alignment
+        - ARPA-H / PCORI Grant Standards
+        - HIPAA — Administrative Safeguard (Non-Covered Entity)
+        - WCAG 2.1 — Federal Accessibility Standards
         - Internal Policy
         - Other
     validations:
