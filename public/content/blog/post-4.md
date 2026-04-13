@@ -2,7 +2,7 @@
 
 Let’s run the math on your last doctor’s visit.
 
-You arrived 15 minutes early. You were handed a clipboard. You spent 20 minutes suffering through the [15-20 page clipboard penalty](/TheProblem), attempting to compress months of physical and emotional suffering into tiny, badly photocopied checkboxes. You tried to add notes in the margins because a simple "Yes/No" cannot explain the complexity of your chronic pain, your shifting moods, or your neurodivergence.
+You arrived 15 minutes early. You were handed a clipboard. You spent 20 minutes filling out [15 pages of arbitrary paperwork](/TheProblem), attempting to compress months of physical and emotional suffering into tiny, badly photocopied checkboxes. You tried to add notes in the margins because a simple "Yes/No" cannot explain the complexity of your chronic pain, your shifting moods, or your neurodivergence.
 
 You waited another 30 minutes in a sterile room.
 

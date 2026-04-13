@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import HeartbeatStream from '../shared/HeartbeatStream';
 
 const stats = [
-    { value: '$825k', label: 'Federal Grant Target', sub: 'Health Equity Pipeline' },
+    { value: '$825k', label: 'Pending Federal Funding', sub: 'PCORI Cycle 2 & AHRQ Sandbox' },
     { value: '100%', label: 'FTC HBNR BAA Exemption', sub: 'Zero-Knowledge Cryptography' },
     { value: '0 Days', label: 'B2B Implementation Time', sub: 'Bypass SSN collection bottlenecks' },
     { value: 'R4', label: 'HL7 FHIR Native', sub: 'Seamless Sandboxed Exporting' },
