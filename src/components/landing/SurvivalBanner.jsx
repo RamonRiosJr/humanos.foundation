@@ -6,10 +6,10 @@ import { useLocation } from 'react-router-dom';
 export default function SurvivalBanner() {
     const location = useLocation();
     
-    // Architect Assessor: Detect if we are on a B2B or Compliance route
-    const isEnterpriseRoute = ['/providers', '/clinics', '/sandbox', '/developers'].some(p => location.pathname.toLowerCase().includes(p)) || location.search.includes('context=enterprise');
+    // Architect Assessor: Detect if we are on a Testnet or Compliance route
+    const isInstitutionalRoute = ['/providers', '/clinics', '/sandbox', '/developers'].some(p => location.pathname.toLowerCase().includes(p)) || location.search.includes('context=institutional');
 
-    if (isEnterpriseRoute) {
+    if (isInstitutionalRoute) {
         return (
             <motion.div 
                 initial={{ opacity: 0, y: -50 }}
@@ -29,12 +29,12 @@ export default function SurvivalBanner() {
                         </div>
                         <div>
                             <h3 className="text-sm md:text-base font-bold text-white mb-0.5 tracking-tight flex items-center justify-center sm:justify-start gap-2">
-                                <span className="text-cyan-400 uppercase tracking-widest text-[10px] sm:text-xs">Enterprise Sandbox Active</span>
+                                <span className="text-cyan-400 uppercase tracking-widest text-[10px] sm:text-xs">Institutional Testnet Active</span>
                                 <span className="hidden sm:inline text-white/30">•</span>
                                 <span>Targeting the $825k Federal Health Equity Pipeline</span>
                             </h3>
                             <p className="text-xs md:text-sm text-white/70 leading-snug">
-                                Aura hOS relies on absolute mathematical integrity. B2B Enterprise routes are heavily encrypted and strictly isolated from philanthropic data.
+                                Aura hOS relies on absolute mathematical integrity. Institutional cryptographic routes are mathematically enforced and strictly isolated from philanthropic data.
                             </p>
                         </div>
                     </div>

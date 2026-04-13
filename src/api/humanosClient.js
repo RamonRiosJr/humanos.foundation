@@ -16,7 +16,7 @@ const baseClient = {
         JoinRequest: {
             create: async (data) => {
                 await new Promise(r => setTimeout(r, 1200));
-                console.log("Mock B2B Payload Captured:", data);
+                console.log("Mock Interoperability Payload Captured:", data);
                 return humanosMockClient.entities.JoinRequest.create(data);
             }
         },
