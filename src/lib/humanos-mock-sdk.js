@@ -130,8 +130,8 @@ const CORNERSTONE_POSTS = [
     },
     {
         "id": "post-13",
-        "title": "The Assessor Protocol: Guarding Enterprise Capitalization",
-        "excerpt": "Why the Humanos Foundation enforces strict CTO/COO-level guardrails to prevent architectural drift and insulate the $3.0M Seed IP.",
+        "title": "The Assessor Protocol: Guarding Sovereign Boundaries",
+        "excerpt": "Why the Humanos Foundation enforces strict mission-level guardrails to prevent theoretical drift and insulate the 501(c)(3) Cause.",
         "category": "Technology",
         "read_time_minutes": 6,
         "published": true,
@@ -170,8 +170,8 @@ const CORNERSTONE_POSTS = [
     },
     {
         "id": "post-17",
-        "title": "Zero-Knowledge Signatures: The Enterprise API Boundary",
-        "excerpt": "How telemetry tracking and cryptographically enforced B2B clinical policies (Phase 3.D & 3.E) form the ultimate liability shield for our enterprise clinic partners.",
+        "title": "Zero-Knowledge Signatures: The Clinical API Boundary",
+        "excerpt": "How telemetry tracking and cryptographically enforced operational policies form the ultimate liability shield for our federated clinical partners.",
         "category": "Technology",
         "read_time_minutes": 7,
         "published": true,
