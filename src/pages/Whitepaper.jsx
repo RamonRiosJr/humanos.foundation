@@ -17,7 +17,7 @@ export default function Whitepaper() {
         <div className="bg-obsidian min-h-screen text-white flex flex-col overflow-x-hidden">
             <SEOMeta
                 title="Whitepaper Relocation | Humanos Foundation"
-                description="The Aura hOS Architecture Whitepaper has been securely moved to the enterprise domain."
+                description="The Aura hOS Architecture Whitepaper has been securely rendered natively."
                 url="https://humanos.foundation/whitepaper"
                 type="website"
             />
@@ -40,11 +40,11 @@ export default function Whitepaper() {
                     </div>
                     
                     <h1 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>
-                        Secure Enterprise Handoff
+                        Secure Cryptographic Handoff
                     </h1>
                     
                     <p className="text-white/70 mb-8 leading-relaxed font-medium">
-                        To maintain strict non-profit compliance boundaries, the Data Security & Privacy Whitepaper is now hosted securely on our commercial enterprise domain.
+                        To maintain strict non-profit compliance boundaries, the Data Security & Privacy Whitepaper is now hosted securely on our internal sovereignty domain.
                     </p>
 
                     <div className="bg-white/[0.03] border border-white/10 rounded-xl p-5 mb-6 backdrop-blur-sm relative overflow-hidden group">
@@ -67,7 +67,7 @@ export default function Whitepaper() {
                             </a>
                         </noscript>
                         <p className="text-[11px] text-zinc-500 italic font-normal tracking-wide bg-black/40 px-4 py-2 mt-4 rounded-lg border border-white/5 shadow-inner">
-                            Aura hOS proudly donates its Enterprise Architecture to our patients.
+                            Aura hOS proudly donates its mathematics to our patients.
                         </p>
                     </div>
                 </motion.div>

@@ -82,10 +82,10 @@ export default function Developers() {
                             <Terminal className="w-6 h-6 text-white/50 group-hover:text-cyan-400 transition-colors" />
                         </div>
                         <h3 className="text-lg font-bold text-white mb-2">Aura Hub (Backend & Edges)</h3>
-                        <p className="text-sm text-white/50 leading-relaxed mb-4">The Supabase Deno Edge functions managing the secure webhook routes, powering the interoperable enterprise architecture.</p>
+                        <p className="text-sm text-white/50 leading-relaxed mb-4">The Supabase Deno Edge functions managing the secure webhook routes, powering the interoperable open-source architecture.</p>
                         <div className="pt-2 border-t border-white/[0.05]">
                             <span className="inline-flex items-center gap-2 text-[10px] text-emerald-400 font-mono tracking-wide uppercase">
-                                For Enterprise Licensing & B2B Architecture, visit aurahos.io →
+                                For Source Code & Verification, visit GitHub →
                             </span>
                         </div>
                     </a>

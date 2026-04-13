@@ -153,7 +153,7 @@ export default function BlogPost() {
                                     <p className="text-sm text-white/50 font-medium">On-page comments are temporarily locked.</p>
                                 </div>
                                 <div className="flex justify-between items-center">
-                                    <span className="text-[10px] uppercase tracking-wider text-white/30 font-medium">Secure API Defrosting in Process</span>
+                                    <span className="text-[10px] uppercase tracking-wider text-white/30 font-medium">Decrypting Vault Package</span>
                                     <a href="https://discord.gg/humanos" target="_blank" rel="noopener noreferrer" className="glow-btn px-6 py-2.5 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-400 font-bold text-sm hover:bg-blue-500/20 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all flex items-center gap-2">
                                         Discuss on Discord <ArrowLeft className="w-4 h-4 rotate-180" />
                                     </a>

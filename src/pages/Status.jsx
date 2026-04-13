@@ -7,7 +7,7 @@ import { Activity, CheckCircle2, Server, Globe2, ShieldCheck } from 'lucide-reac
 import { motion } from 'framer-motion';
 
 const systems = [
-    { name: 'FHIR OAuth Ingestion APIs', status: 'Pending Link', uptime: '--.--%', icon: <Globe2 className="w-4 h-4 text-slate-500" /> },
+    { name: 'FHIR OAuth Ingestion Networks', status: 'Pending Link', uptime: '--.--%', icon: <Globe2 className="w-4 h-4 text-slate-500" /> },
     { name: 'Zero-Knowledge Edge Relays', status: 'Pending Link', uptime: '--.--%', icon: <Server className="w-4 h-4 text-slate-500" /> },
     { name: 'Biometric Webhook Ledger', status: 'Pending Link', uptime: '--.--%', icon: <ShieldCheck className="w-4 h-4 text-slate-500" /> },
 ];
@@ -17,16 +17,16 @@ export default function Status() {
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta 
                 title="System Status & SLA — Aura hOS" 
-                description="Live operational status of the Aura hOS clinical routing relays, edge functions, and B2B webhooks." 
+                description="Live operational status of the Aura hOS clinical routing relays and cryptographic edge functions." 
                 url="https://humanos.foundation/status" 
             />
             <Navbar />
             
             <PageHero 
-                badge="Enterprise Service Level Agreement" 
+                badge="Mathematical Service Level Guaranty" 
                 title="Network" 
                 titleAccent="Status" 
-                subtitle="Aura hOS relies on globally distributed Supabase Edge Functions. We guarantee a 99.9% uptime SLA for all B2B clinic integrations." 
+                subtitle="Aura hOS relies on globally distributed Supabase Edge Functions. We guarantee a 99.9% uptime for the uninterrupted enforcement of the Zero-Knowledge Vault." 
             />
 
             <section className="py-20 px-4 md:px-8 max-w-4xl mx-auto space-y-12">
@@ -38,7 +38,7 @@ export default function Status() {
                     </div>
                     <div>
                         <h2 className="text-xl md:text-2xl font-bold text-white mb-1 tracking-tight">Status Monitor Offline</h2>
-                        <p className="text-sm text-slate-300/80">Pending Phase 17 connection to the primary Edge SLA API.</p>
+                        <p className="text-sm text-slate-300/80">Pending Phase 17 connection to the primary Network Matrix.</p>
                     </div>
                 </div>
 
