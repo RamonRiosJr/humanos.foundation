@@ -68,12 +68,12 @@ export default function SurvivalBanner() {
                     </div>
                     <div>
                         <h3 className="text-sm md:text-base font-bold text-white mb-0.5 tracking-tight flex items-center justify-center sm:justify-start gap-2">
-                            <span className="text-red-400 uppercase tracking-widest text-[10px] sm:text-xs">Enterprise Validation</span>
+                            <span className="text-red-400 uppercase tracking-widest text-[10px] sm:text-xs">Federal Health Equity</span>
                             <span className="hidden sm:inline text-white/30">•</span>
-                            <span>Engineering Secured by PCORI / AHRQ Pilot</span>
+                            <span>Advocacy Secured by PCORI / AHRQ Pilot</span>
                         </h3>
                         <p className="text-xs md:text-sm text-white/70 leading-snug">
-                            Our core engineering roadmap is entirely secured by the $825k PCORI / AHRQ non-dilutive pilot, serving as a direct bridge to the upcoming $1.5M Seed Round to permanently fund the Zero-Knowledge Vault architecture.
+                            Our primary advocacy roadmap is driven by the $825k PCORI / AHRQ non-dilutive federal trajectory, serving as a direct mandate to permanently protect the Zero-Knowledge patient architectural standard.
                         </p>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ export default function SurvivalBanner() {
                 >
                     <span className="relative z-10 text-sm font-bold text-red-100 flex items-center gap-2">
                         <HeartPulse className="w-4 h-4 text-red-400 group-hover:scale-110 transition-transform" />
-                        View Capital Roadmap
+                        View Federal Strategy
                     </span>
                     <ArrowRight className="relative z-10 w-4 h-4 text-red-400 group-hover:translate-x-1 transition-transform" />
                     
