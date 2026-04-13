@@ -8,7 +8,7 @@ AI is currently being used to make the [assembly-line medical machine](/TheProbl
 
 ### Flipping the Supercomputer
 
-hOS is a unified, local-first data layer that structures your continuous lived experience into a sovereign clinical record, ensuring your healthcare data remains your private, encrypted property while bridging the gap between your daily truth and the hospital system. At the Humanos Foundation, we are building local-first, sovereign AI models—like our integrated CoquiBot. But we are pointing the supercomputer in the opposite direction.
+Aura hOS is a secure, digital vault that continuously records your true, daily lived experiences. We encrypt and lock your health history so that only you control it. At the Humanos Foundation, we are building local-first, sovereign AI models—like our integrated CoquiBot. But we are pointing the supercomputer in the opposite direction.
 
 We use AI to help the patient *expand* their nuance. If you struggle to articulate your symptoms, our AI acts as a patient advocate, gently prompting you to record the critical environmental, psychological, and physical details everyday. It then synthesizes that chaotic longitudinal data into a mathematically unignorable clinical report.
 

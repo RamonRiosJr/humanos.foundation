@@ -8,11 +8,11 @@ Writing a prescription takes 30 seconds. Ordering complex labs, reviewing daily 
 
 Millions of patients are currently trapped in the Medication Gallery. They are prescribed heavy, mind-altering pharmaceuticals simply because they exhibited a symptom that fits neatly into an administrative billing code. 
 
-We hear horrific stories daily: patients driven to the brink, losing their cognitive spark, suffering extreme side effects—only for the doctor to shrug and say, "Let's try this other pill instead." It is a sick game of dartboard medicine, born directly from the failure of the [5-minute clinical documentation](/TheProblem).
+We hear horrific stories daily: patients driven to the brink, losing their cognitive spark, suffering extreme side effects—only for the doctor to shrug and say, "Let's try this other pill instead." It is a sick game of dartboard medicine, born directly from the exhaustion of the [15-20 page clipboard penalty](/TheProblem) and the failure of the 5-minute clinical documentation.
 
 ### Holding the System Accountable
 
-hOS is a unified, local-first data layer that structures your continuous lived experience into a sovereign clinical record, ensuring your healthcare data remains your private, encrypted property while bridging the gap between your daily truth and the hospital system. The only way out is irrefutable data. When a patient controls a high-fidelity, longitudinal graph of their own health—every symptom, every trigger, every baseline metric—they strip the doctor of the ability to guess. You bring the truth, and you demand care based upon it.
+Aura hOS is a secure, digital vault that continuously records your true, daily lived experiences. We encrypt and lock your health history so that only you control it. The only way out is irrefutable data. When a patient controls a high-fidelity, day-by-day graph of their own health—every symptom, every trigger, every baseline metric—they strip the doctor of the ability to guess. You bring the truth, and you demand care based upon it.
 
 ---
 

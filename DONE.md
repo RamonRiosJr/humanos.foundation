@@ -2,7 +2,7 @@
 
 ## Pending Global Updates
 - [x] **PHARMACY HUB INTEGRATION**: The App AI has successfully built granular medication logistics (Quantity on Hand, Refill tracking) for B2B adherence engines. The Foundation AI must broadcast this Enterprise Pharmacy Hub capability into the public Whitepaper.
-- [x] **[EVENT BUS DIRECTIVE: SURVIVAL CAMPAIGN DEPLOYMENT]** The Strategy AI has drafted and finalized the GoFundMe Survival Narrative. You must immediately architect and deploy a high-visibility Campaign Banner or Landing Page Section on the Foundation site to intercept incoming donor traffic. Make absolutely sure the $825,000 pending PCORI Federal Grant strategy and the Zero-Knowledge Vault architecture are front-and-center so donors realize they are funding enterprise architecture, not an activist blog. Update all related AI context internally.
+- [x] **[EVENT BUS DIRECTIVE: SURVIVAL CAMPAIGN DEPLOYMENT]** The Strategy AI has drafted and finalized the GoFundMe Survival Narrative. You must immediately architect and deploy a high-visibility Campaign Banner or Landing Page Section on the Foundation site to intercept incoming donor traffic. Make absolutely sure the $825,000 pending Federal Health Equity Federal Grant strategy and the Zero-Knowledge Vault architecture are front-and-center so donors realize they are funding enterprise architecture, not an activist blog. Update all related AI context internally.
 - [x] **NETWORK RESILIENCE**: Build a static blog fallback protocol (JSON fallback or Next.js/Vercel ISR) for `humanos.foundation/blog` so that PR stories never 404 during Odoo backend outages. Please execute this natively in the `humanos.foundation` repo.
 - [x] **WHITEPAPER ROUTE**: Build the `/whitepaper` route on the frontend and populate it with the `Data_Security_and_Privacy_Whitepaper.md` content so reviewers do not hit a dead link (linked from federal grant pitches).
 - [x] **CLINIC IDS**: Publish public directory of validated "Clinic IDs" for the B2B SaaS routing.
@@ -31,18 +31,18 @@
 - [x] **GAP 4: DYNAMIC CONTEXT ROUTING (The Narrative Shield)**
   - [x] **State Management:** Implement a global Context layer / URL parameter listener (e.g., `?context=enterprise`).
   - [x] **Component Triage:** Modify `SurvivalBanner.jsx` to dynamically unload the $20K GoFundMe grassroots text whenever B2B/Enterprise routes are engaged.
-  - [x] **Capital Injection:** Dynamically swap the banner with a strict "Supported by the $825k PCORI / AHRQ Infrastructure Pilot" narrative to lock the institutional facade for hospital CTOs.
+  - [x] **Capital Injection:** Dynamically swap the banner with a strict "Supported by the $825k Federal Health Equity / Federal Agencies Infrastructure Pilot" narrative to lock the institutional facade for hospital CTOs.
 
-## Phase 9: Institutional Armor & PCORI Compliance
+## Phase 9: Institutional Armor & Federal Health Equity Compliance
 
 - [x] **GAP 5: BOARD GOVERNANCE & IRS TRANSPARENCY (`/governance`)**
   - [x] **Infrastructure:** Build `Governance.jsx` showing explicit 501(c)(3) compliance.
   - [x] **Conflict of Interest:** Publish the strict zero-compromise COI strategy.
   - [x] **Financial Public Ledger:** Create a structured layout for pending Form 990 uploads, establishing the NGO as a rigid legal entity.
 
-- [x] **GAP 6: CLINICAL OUTCOMES & PCORI EVIDENCE (`/research`)**
+- [x] **GAP 6: CLINICAL OUTCOMES & Federal Health Equity EVIDENCE (`/research`)**
   - [x] **Infrastructure:** Build `Research.jsx` to prove the grant validity.
-  - [x] **Narrative Engine:** Detail the "Neurodivergent UI Sovereignty vs. Adherence Rates" hypothesis to validate the $825k AHRQ/PCORI pipeline.
+  - [x] **Narrative Engine:** Detail the "Neurodivergent UI Sovereignty vs. Adherence Rates" hypothesis to validate the $825k Federal Health Equity pipeline.
   - [x] **Endpoints:** Create academic-style UI layouts for future peer-reviewed publications.
 
 - [x] **GAP 7: ENTERPRISE SYSTEM SLA (`/status`)**
@@ -66,7 +66,7 @@
 
 ## Phase 11: Enterprise Compliance & Sentinels Deployed
 - [x] **Specialized AI Auditors:** Created and natively installed `audit-ui-ux`, `audit-copywriting-ethics`, `audit-b2b-conversion`, and `audit-a11y-accessibility` into the `.agents/workflows` registry to gate-keep the public UI.
-- [x] **Ethical Brand Shielding:** Stripped unverified alignments (PCORI, HL7) from the Partners page, successfully blocking brand-jacking and stabilizing the PCORI pipeline.
+- [x] **Ethical Brand Shielding:** Stripped unverified alignments (Federal Health Equity, HL7) from the Partners page, successfully blocking brand-jacking and stabilizing the Federal Health Equity pipeline.
 - [x] **B2B Webhook Translation:** Removed Web3Forms. Mapped the `/providers` lead intake mechanically to `odooClient.createTicket()` with loading state enforcement.
 - [x] **WCAG AA Guardrails:** Enforced `aria-hidden` and exact `<label>` mapping to insulate the UI structure from disability compliance friction.
 
@@ -91,12 +91,12 @@
 - [x] **Clinical JSON Scope:** Replace "First Mile baseline" in the contributor path with the precise JSON data schema or FHIR structure used during patient onboarding.
 
 ## Phase 15: Dual-Narrative Ecosystem Alignment
-- [x] **PCORI Grant Alignment Rule (from PR 123):** Strictly separate the Federal Health Equity narrative from the B2B Enterprise narrative. Ensure that grant-facing pages (Whitepaper, Manifesto) explicitly avoid "SaaS", "MRR", or "Profitability Moat" language. Instead use "Sustainability Models" and focus entirely on the emotional agony of the 15-20 page clipboard for marginalized/neurodivergent demographics.
+- [x] **Federal Health Equity Grant Alignment Rule (from PR 123):** Strictly separate the Federal Health Equity narrative from the B2B Enterprise narrative. Ensure that grant-facing pages (Whitepaper, Manifesto) explicitly avoid "SaaS", "MRR", or "Profitability Moat" language. Instead use "Sustainability Models" and focus entirely on the emotional agony of the 15-20 page clipboard for marginalized/neurodivergent demographics.
 - [x] **Enterprise Sandbox Enforcement:** Enforced the $199/mo Provider Seat MRR exclusively on API/Developer pathways and B2B SaaS clinics (`Developers.jsx`), keeping the 501(c)(3) mission mathematically pure.
 - [x] **Architectural Guardrail Update:** Injected the "Dual-Narrative Defense Protocol" permanently into `.agents/workflows/00-architect-assessor.md` to guarantee the Founder never cross-contaminates Federal Grant logic with B2B Silicon Valley jargon.
 
 ## Phase 16: Ecosystem Synchronization
-- [x] **[COMPLETED - 501(c)(3) SHIELDING]** Urgent Compliance Pivot: Immediately audit `humanos.foundation` and **STRIP 100% of commercial B2B SaaS pricing** (including mentions of $199/mo or flat subscriptions). Displaying SaaS pricing on a non-profit foundation website creates a massive conflict for PCORI federal grant reviewers. Replace all pricing matrices with a strict redirect button: *"For Enterprise Licensing & B2B Architecture, visit aurahos.io"*.
+- [x] **[COMPLETED - 501(c)(3) SHIELDING]** Urgent Compliance Pivot: Immediately audit `humanos.foundation` and **STRIP 100% of commercial B2B SaaS pricing** (including mentions of $199/mo or flat subscriptions). Displaying SaaS pricing on a non-profit foundation website creates a massive conflict for Federal Health Equity federal grant reviewers. Replace all pricing matrices with a strict redirect button: *"For Enterprise Licensing & B2B Architecture, visit aurahos.io"*.
 - [x] **[EVENT BUS] Native Hardware Migration:** Native Capacitor motion merged into Repo 1.
 - [x] **[EVENT BUS] Strategy Alignment:** B2B Routing payload logged into the Repo 2 business plan target matrix.
 
