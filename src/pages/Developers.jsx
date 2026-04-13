@@ -85,7 +85,7 @@ export default function Developers() {
                         <p className="text-sm text-white/50 leading-relaxed mb-4">The Supabase Deno Edge functions managing the secure webhook routes, powering the interoperable enterprise architecture.</p>
                         <div className="pt-2 border-t border-white/[0.05]">
                             <span className="inline-flex items-center gap-2 text-[10px] text-emerald-400 font-mono tracking-wide uppercase">
-                                For Enterprise Licensing & B2B Architecture, visit aurahos.io →
+                                For Production Licensing & Clinical Architecture, visit aurahos.io →
                             </span>
                         </div>
                     </a>
