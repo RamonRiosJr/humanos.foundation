@@ -12,7 +12,7 @@ const brokenItems = [
 
 const hosItems = [
     { icon: Scan, text: 'Continuous lived-experience capture' },
-    { icon: Database, text: 'Unignorable daily history' },
+    { icon: Database, text: 'Unignorable longitudinal data' },
     { icon: ShieldCheck, text: 'Forcing case-by-case analysis' },
     { icon: Sparkles, text: 'Personalized root-cause care' },
 ];
@@ -76,7 +76,7 @@ export default function BrokenFirstMile() {
                                 Assembly-Line Medicine
                             </h3>
                             <p className="text-sm text-[#ffffff]/50 mb-8 leading-relaxed">
-                                You are not a standard deviation. The 15-20 page clipboard penalty followed by a rushed 5-minute clinical documentation cannot capture your truth.
+                                You are not a standard deviation. The 15-20 page clipboard penalty followed by a rushed 5-minute documentation cannot capture your truth.
                             </p>
 
                             <div className="space-y-4">

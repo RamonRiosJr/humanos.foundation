@@ -35,7 +35,7 @@ export default function TheProblem() {
                 badge="The Architectural Crisis"
                 title="Systemic Overload"
                 titleAccent="Medicine"
-                subtitle={<span key="st">The healthcare intake system is fundamentally broken — overwhelmed by <Link to={createPageUrl('Origin')} className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30 transition-colors font-medium">legacy data silos</Link>. It operates on volume-driven constraints that enforce the 15-20 page clipboard penalty.</span>}
+                subtitle={<span key="st">The healthcare intake system is fundamentally broken — overwhelmed by <Link to={createPageUrl('Origin')} className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/30 transition-colors font-medium">legacy data silos</Link>. It operates on volume-driven constraints that prioritize isolated symptom management over compiling longitudinal root causes.</span>}
             />
 
             <section ref={ref} className="pb-16 px-4 md:px-8">

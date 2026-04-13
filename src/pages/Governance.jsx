@@ -36,7 +36,7 @@ export default function Governance() {
                 <div className="glass p-8 md:p-12 rounded-3xl border border-white/5">
                     <h2 className="text-2xl font-bold font-outfit text-white mb-6">Board of Directors & Independence</h2>
                     <p className="text-sm text-white/70 leading-relaxed mb-6">
-                        The Humanos Foundation software architecture governs the most sensitive realities of the human condition. To prevent corporate capture and aggressive data monetization, the Foundation utilizes an independent Board of Directors.
+                        The Humanos Foundation software architecture governs the most sensitive telemetry of the human condition. To prevent corporate capture and aggressive data monetization, the Foundation utilizes an independent Board of Directors.
                     </p>
                     <div className="p-6 rounded-2xl bg-rose-500/5 border border-rose-500/20 mb-8">
                         <div className="flex items-start gap-4">
@@ -88,7 +88,7 @@ export default function Governance() {
                     <FileSignature className="w-8 h-8 text-blue-400 mx-auto mb-4" />
                     <h3 className="text-lg font-bold text-white mb-3">Federal Grant Accountability</h3>
                     <p className="text-sm text-white/60 max-w-2xl mx-auto leading-relaxed">
-                        It is the strict formal policy of the Foundation that any future funds rendered by federal entities and health equity organizations will be ring-fenced entirely for the open-source clinical FHIR engineering of Aura hOS. Zero federal funds will ever be allocated to marketing, lobbying, or external commercial contracting.
+                        Funds rendered by the Patient-Centered Outcomes Research Institute (PCORI) or the Agency for Healthcare Research and Quality (AHRQ) are ring-fenced entirely for the open-source clinical FHIR engineering of Aura hOS. No federal funds are allocated to marketing, lobbying, or external contracting.
                     </p>
                 </div>
 

@@ -6,7 +6,7 @@ const ChatbotWidget = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [botState, setBotState] = useState('idle');
 
-    // Bot state is kept static pending actual sovereign Knowledge Graph integration
+    // Bot state is kept static pending actual LLM API connection integration
     useEffect(() => {
         if (!isOpen) setBotState('idle');
     }, [isOpen]);

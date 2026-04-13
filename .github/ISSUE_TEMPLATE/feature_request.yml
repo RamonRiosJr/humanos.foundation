@@ -16,7 +16,7 @@ body:
     attributes:
       label: Problem Statement
       description: What problem are you trying to solve? What user need does this address?
-      placeholder: "As a [patient/advocate/clinician], I need [capability] so that [impact on sovereignty]."
+      placeholder: "As a [user type], I want [goal] so that [reason]."
     validations:
       required: true
 
@@ -39,8 +39,8 @@ body:
   - type: dropdown
     id: epic
     attributes:
-      label: Foundation Initiative
-      description: Which structural track does this advance?
+      label: Epic / Track
+      description: Which engineering track does this belong to?
       options:
         - Compliance
         - Security

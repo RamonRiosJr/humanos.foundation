@@ -4,14 +4,14 @@ Today, the Humanos Foundation officially promotes the Aura hOS™ ecosystem to *
 
 ### Locking the Zero-Knowledge Vault
 
-RC.1 is not a feature bump; it is a structural seal. We have officially deployed the Zero-Knowledge Vault architecture across the entire global event bus. By utilizing localized encryption routines, the Foundation mathematically proves its FTC HBNR exemption. We do not hold the keys. We are mathematically insulated from risk, fully guaranteeing the patient's absolute sovereignty.
+RC.1 is not a feature bump; it is a structural seal. We have officially deployed the Zero-Knowledge Vault architecture across the entire global event bus. By utilizing localized encryption routines, the Foundation mathematically proves its FTC HBNR BAA Exemption. We do not hold the keys. We are entirely immune to HIPAA liability, providing massive risk mitigation for our incoming Enterprise Clinic partners.
 
-### The $825k Federal Health Equity Pipeline
+### The $825k PCORI Pipeline
 
-With RC.1 live, the platform is now fully scaled to absorb a targeted $825,000 Federal Grant payload. The Zero-Knowledge routing structure is stable. The Dual-Path Validation (Zero-SSN Registration) is active. The Foundation site has formally transitioned to an authoritative, mathematically enforced Clinical NGO Core.
+With RC.1 live, the platform is now fully scaled to absorb the pending $825,000 PCORI/AHRQ Federal Grant payload. The B2B Clinic Routing API is stable. The Dual-Path Validation (Zero-SSN Registration) is active. The Foundation site has formally transitioned from a grassroots startup blog to an authoritative, enterprise-grade Clinical AI Hub.
 
 ---
 
-### Cryptographic Standard Deployed
+### Enterprise Standard Deployed
 
 The system only listens when the compliance is bulletproof. [Join the Movement](/Join) to build the future of sovereign data architecture.

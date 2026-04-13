@@ -22,7 +22,17 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
+    <!-- B2B and Practitioner Routes -->
+    <url>
+        <loc>https://humanos.foundation/clinics</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://humanos.foundation/developers</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
     <url>
         <loc>https://humanos.foundation/theproblem</loc>
         <changefreq>weekly</changefreq>

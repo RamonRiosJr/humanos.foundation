@@ -12,11 +12,11 @@ Under HIPAA, you have a legal right to receive a copy of your full medical recor
 
 ### 2. Reject the Portal Lock-In
 
-Hospitals love their online portals because they control them. The portals often only show you scrubbed test results, hiding the failure of their rushed 5-minute clinical documentation. Do not rely on their portal as your sole source of truth. Download the PDFs. Print them out. Store them in a secure folder on your own device.
+Hospitals love their online portals because they control them. The portals often only show you scrubbed test results, hiding any clinical documentation. Do not rely on their portal as your sole source of truth. Download the PDFs. Print them out. Store them in a secure folder on your own device.
 
 ### 3. Start a Longitudinal Symptom Journal
 
-The medical record only shows what happened *in the clinic*. It misses the 99% of your life that happens at home. By tracking your daily vital stats, sleep, and specific pain triggers, you create an unignorable baseline that effectively bypasses the subjective 15-20 page clipboard penalty.
+The medical record only shows what happened *in the clinic*. It misses the 99% of your life that happens at home. Start a simple spreadsheet or secure note tracking your daily vital stats, sleep, and specific pain triggers. This creates your "baseline."
 
 ---
 

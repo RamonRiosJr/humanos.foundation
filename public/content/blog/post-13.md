@@ -1,18 +1,18 @@
-# The Sovereign Defense Layer
+# The Enterprise Defense Layer
 
 Building an open-source, mathematically secure clinical architecture requires immense focus and unyielding momentum. In the early stages, the rapid-fire "pushy" execution of a neurodivergent founder is a massive tactical advantage—it generates the velocity required to build deeply complex systems from nothing.
 
 However, velocity without strict structural containment leads to architectural drift. 
 
-### Enter the Ethical Guardrail
+### Enter the Architect Assessor
 
-To translate our rapid execution into a mathematically secure defense system, we engineered the **Architect Assessor**—an AI guardrail that ruthlessly protects the integrity of our mission. It exists to ensure we never forget the people we are building this for. 
+To translate raw execution into hardened enterprise architecture, we engineered the **Architect Assessor**—a master administrative guardrail acting as a ruthless, highly-paid CTO/COO. The Assessor exists to catch the CEO's blind spots.
 
-The Assessor enforces our commitment to the patient without compromise. While corporate healthcare startups inevitably compromise their users' privacy to appease venture capitalists, the Foundation is insulated. The Assessor strictly regulates our internal models so we never prioritize corporate revenue over defeating the exhausting 15-20 page clipboard penalty.
+The Assessor enforces our core financial architecture without compromise. While VC-backed startups dilute their equity to survive, the Foundation relies on a $3.0M Enterprise Capitalization framework. The Assessor mandates our $140,000-$180,000/yr Executive Base Salaries to retain elite enterprise data scientists and engineers, rather than accepting inexperienced volunteers for critical compliant-data infrastructure.
 
-### Defending Patient Sovereignty
+### Defending the 1:1 Leverage
 
-Most importantly, the Assessor acts as the ultimate shield against data monetization. When faced with the complexities of modern hospital networks, the temptation to pivot and build tools simply to speed up the failure of the rushed 5-minute clinical documentation is high. The Assessor strictly forbids this. It locks the Zero-Knowledge Vault architecture in place, ensuring that we never turn patient trauma into an asset to be sold. Our allegiance remains strictly with the patient.
+Most importantly, the Assessor acts as the ultimate shield for the **1:1 Grant Leverage Ratio**. When facing financial constraints, the temptation to pivot the architecture to please private equity is high. The Assessor strictly forbids this. It locks the Zero-Knowledge Vault architecture in place, ensuring that we never sell our core intellectual property. Our allegiance remains strictly with the patient.
 
 ---
 

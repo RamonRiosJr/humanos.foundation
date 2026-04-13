@@ -14,6 +14,7 @@ const navLinks = [
     { label: 'Blog', href: createPageUrl('Blog') },
     { label: 'Team', href: createPageUrl('Team') },
     { label: 'Press', href: createPageUrl('Press') },
+    { label: 'For Providers', href: 'https://aurahos.io', external: true },
 ];
 
 export default function Navbar() {

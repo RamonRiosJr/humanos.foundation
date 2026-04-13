@@ -12,9 +12,9 @@ Aura hOS is a secure, digital vault that continuously records your true, daily l
 
 ### From One Patient to Millions
 
-When I finally brought the printed Aura hOS™ report into the clinic, bypassing the 15-20 page clipboard penalty entirely, everything changed. I wasn't a confused patient struggling to remember details anymore. I was the CEO of my own data.
+When I finally brought the printed Aura hOS™ report into the clinic, everything changed. I wasn't a confused patient struggling to remember details anymore. I was the CEO of my own data. 
 
-That was the moment I realized this wasn't just an app for me. It was a foundational, structural solution to the failure of the 5-minute clinical documentation for every patient on Earth.
+That was the moment I realized this wasn't just an app for me. It was a foundational structural solution to the 5-Minute Hustle for every patient on Earth.
 
 ---
 

@@ -16,8 +16,8 @@ const clinicDirectory = [
         integrationType: 'Secure Vault Export',
     },
     {
-        id: 'AURA-TESTNET-00',
-        name: 'Open-Source Testnet',
+        id: 'AURA-SANDBOX-00',
+        name: 'Aura Developer Sandbox',
         region: 'Global',
         status: 'Active',
         integrationType: 'Testing Only',
@@ -29,14 +29,14 @@ export default function Clinics() {
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
                 title="Validated Clinics Directory — Humanos Foundation"
-                description="Public directory of validated Zero-Knowledge Clinic Routing IDs for Aura hOS integration."
+                description="Public directory of validated B2B Clinic Routing IDs for Aura hOS integration."
                 url="https://humanos.foundation/clinics"
             />
             <SurvivalBanner />
             <Navbar />
             
             <PageHero 
-                badge="Secure Handshake" 
+                badge="B2B Infrastructure" 
                 title="Clinic Routing" 
                 titleAccent="Directory" 
                 subtitle="Use these verified IDs to initiate a Zero-Knowledge clinical handshake with participating providers." 

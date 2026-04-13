@@ -1,12 +1,12 @@
 # Bypassing the App Launch
 
-When you are being processed in the emergency room during a neurodivergent overload, you do not have the cognitive bandwidth to unlock your phone, locate an app, authenticate, and hand it to an overworked EMT.
+When you are under triage in the emergency room during a neurodivergent overload, you do not have the cognitive bandwidth to unlock your phone, locate an app, authenticate, and hand it to an overworked EMT.
 
 This is why we have engineered the **Aura hOS Lockscreen Native Hardware Integrations.**
 
 ### The NFC Aura Band
 
-Next month, the ecosystem will natively support an NFC-powered companion wristband. First responders can simply tap their hardware against the band to instantly invoke a Zero-Knowledge decrypted emergency medical payload. The data displays your specific critical care boundaries (e.g., "Requires quiet environment", "Do not touch without warning", "Severe SSRI allergy") securely, bypassing the restrictive Apple Wallet barriers.
+Next month, the ecosystem will natively support an NFC-powered companion wristband. First responders can simply tap their hardware against the band to instantly invoke a Zero-Knowledge decrypted emergency medical payload. The data displays your specific triage requirements (e.g., "Requires quiet environment", "Do not touch without warning", "Severe SSRI allergy") securely, bypassing the restrictive Apple Wallet barriers.
 
 ### The Lockscreen QR Widget
 

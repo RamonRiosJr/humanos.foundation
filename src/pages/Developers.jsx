@@ -20,7 +20,7 @@ export default function Developers() {
             <PageHero 
                 badge="API & Architecture" 
                 title="Developer" 
-                titleAccent="Network" 
+                titleAccent="Portal" 
                 subtitle="Aura hOS is fully open-source. Build integrations directly against our Zero-Knowledge OAuth Webhook API using standard FHIR R4 schemas." 
             />
 
@@ -39,7 +39,7 @@ export default function Developers() {
                     </div>
 
                     <p className="text-sm text-white/70 leading-relaxed mb-6">
-                        Unlike traditional clinical software, you do not need to install local databases or secure HIPAA pipelines. You simply strip all PII and format the anonymized clinical data into an isolated <code className="text-cyan-300 font-mono text-[10px] bg-cyan-500/10 px-1 rounded">JSON FHIR R4</code> standard and `POST` it to our ephemeral edge proxy along with your <code>Clinic Routing ID</code>. 
+                        Unlike traditional clinical software, you do not need to install local databases or secure HIPAA pipelines. You simply strip all PII and format the anonymized clinical telemetry into an isolated <code className="text-cyan-300 font-mono text-[10px] bg-cyan-500/10 px-1 rounded">JSON FHIR R4</code> standard and `POST` it to our ephemeral edge proxy along with your <code>Clinic Routing ID</code>. 
                     </p>
 
                     <div className="bg-[#0a0a0f] rounded-xl border border-white/5 overflow-hidden">
@@ -82,10 +82,10 @@ export default function Developers() {
                             <Terminal className="w-6 h-6 text-white/50 group-hover:text-cyan-400 transition-colors" />
                         </div>
                         <h3 className="text-lg font-bold text-white mb-2">Aura Hub (Backend & Edges)</h3>
-                        <p className="text-sm text-white/50 leading-relaxed mb-4">The Supabase Deno Edge functions managing the secure webhook routes, powering the interoperable open-source architecture.</p>
+                        <p className="text-sm text-white/50 leading-relaxed mb-4">The Supabase Deno Edge functions managing the secure webhook routes, powering the interoperable enterprise architecture.</p>
                         <div className="pt-2 border-t border-white/[0.05]">
                             <span className="inline-flex items-center gap-2 text-[10px] text-emerald-400 font-mono tracking-wide uppercase">
-                                For Source Code & Verification, visit GitHub →
+                                For Enterprise Licensing & B2B Architecture, visit aurahos.io →
                             </span>
                         </div>
                     </a>

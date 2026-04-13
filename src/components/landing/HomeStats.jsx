@@ -3,10 +3,10 @@ import { motion, useInView } from 'framer-motion';
 import HeartbeatStream from '../shared/HeartbeatStream';
 
 const stats = [
-    { value: '15-20', label: 'Page Clipboard Penalty', sub: 'Eliminated at the source' },
-    { value: '5 min', label: 'Clinical Documentation', sub: 'Protected from the rushed clock' },
-    { value: '100%', label: 'Mathematical Sovereignty', sub: 'Zero-Knowledge Cryptography' },
-    { value: '0', label: 'Corporate Silos', sub: 'No back-door data brokering' },
+    { value: '$825k', label: 'Pending Federal Funding', sub: 'PCORI Cycle 2 & AHRQ Sandbox' },
+    { value: '100%', label: 'FTC HBNR BAA Exemption', sub: 'Zero-Knowledge Cryptography' },
+    { value: '0 Days', label: 'B2B Implementation Time', sub: 'Bypass SSN collection bottlenecks' },
+    { value: 'R4', label: 'HL7 FHIR Native', sub: 'Seamless Sandboxed Exporting' },
 ];
 
 export default function HomeStats() {
