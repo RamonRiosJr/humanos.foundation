@@ -16,7 +16,7 @@ Aura hOS is a secure, digital vault that continuously records your true, daily l
 
 If we were ever subpoenaed, hacked, or bought out, we would literally have nothing to hand over except scrambled code. We are a "Zero-Knowledge" system because we have zero knowledge of what your symptoms, medications, or journals actually say.
 
-You are the only person who holds the key. You grant temporary, read-only access to your clinician when you walk into the room, and you revoke it when you leave.
+You are the only person who holds the key. You bypass the 15-20 page clipboard penalty entirely. You grant temporary, read-only access to your clinician to prevent the failure of the 5-minute clinical documentation, and you revoke the key when you leave.
 
 ---
 
