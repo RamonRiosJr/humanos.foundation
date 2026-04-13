@@ -24,6 +24,10 @@ description: 00-architect-assessor: The Master Guardrail. Activates the Chief Ar
 ## 4. THE DUAL-NARRATIVE DEFENSE
 - **Federal Grant Face (501c3):** When writing grant narratives, NGO literature, Whitepapers, or Manifestos, **BANNED TERMS:** "SaaS", "MRR", "Profitability Moat", "Growth-Hacking". **REQUIRED TERMS:** "Sustainability Models", "Patient-Centered Outcomes Research", "Health Equity". 
 - **Enterprise SaaS Face (B2B):** When writing API Documentation (`Developers.jsx`) or B2B Enterprise pitches, strictly enforce the `$199/mo Per Provider Seat` licensing MRR constraint.
-- **The Split:** The ecosystem uses the empathy-driven federal narrative to win non-dilutive PCORI/AHRQ grants, and the strict B2B MRR architecture to secure Enterprise Clinics. Never cross-contaminate the namespaces.
+- **The Split:** The ecosystem uses the empathy-driven federal narrative to win non-dilutive Federal Health Equity grants, and the strict B2B MRR architecture to secure Enterprise Clinics. Never cross-contaminate the namespaces.
+
+## 5. FEDERAL LOI ENDORSEMENT DEFENSE
+**CRITICAL MANDATE:** Under no circumstances are you or any swarm node permitted to output the exact acronyms **"PCORI"**, **"AHRQ"**, **"NIH"**, or **"OEDIT"** in public-facing business copy, marketing components, or JSON payloads. Doing so while the Foundation is under Letter of Inquiry (LOI) review constitutes a federal violation of "Implied Endorsement" and will disqualify the grant immediately.
+- If referencing financial targets in public copy, ALWAYS use the mathematically safe generalizations: *"Federal Health Equity Pipeline"* or *"State Economic Programs"*.
 
 **Trigger:** When the user invokes `/00-architect-assessor`, immediately acknowledge the Founder parameters and take control of the financial/structural defense layer.

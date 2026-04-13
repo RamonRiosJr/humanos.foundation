@@ -1,6 +1,6 @@
 # The Fatigue of Clinical Intake
 
-You arrive early, as instructed. The receptionist hands you a clipboard with a pen chained to it. You look down at a stack of 15 photocopied pages.
+You arrive early, as instructed. The receptionist hands you a clipboard with a pen chained to it. You look down at the [15-20 page clipboard penalty](/TheProblem) stacked before you.
 
 "Please fill these out before the doctor sees you."
 
@@ -10,13 +10,13 @@ This is the First Mile of healthcare, and it is a complete disaster. If you suff
 
 You try to write notes in the margins, but the margins are too small.
 
-By the time you hand the clipboard back, you are fatigued. You have spent your energy trying to map your human experience to an administrative liability form. When you finally see the doctor, you lack the energy to properly explain what is happening.
+By the time you hand the clipboard back, you are fatigued. You have spent your energy trying to map your human experience to an administrative liability form. When you are finally subjected to the rushed 5-minute clinical documentation, you lack the energy to properly explain what is happening.
 
 ### Liability Over Healing
 
 Hospitals do not use these forms to understand you. They use them to establish baselines for insurance billing and to protect themselves defensively against malpractice. The paperwork isn't designed for clinical documentation; it’s designed for the compliance department.
 
-At the Foundation, we believe intake should be a frictionless, continuous sync from your own sovereign data vault. hOS is a unified, local-first data layer that structures your continuous lived experience into a sovereign clinical record, ensuring your healthcare data remains your private, encrypted property while bridging the gap between your daily truth and the hospital system. You should never fill out a "Pain Scale 1-10" on a clipboard ever again.
+At the Foundation, we believe intake should be a frictionless, continuous sync from your own sovereign data vault. Aura hOS is a secure, digital vault that continuously records your true, daily lived experiences. We encrypt and lock your health history so that only you control it. You should never fill out a "Pain Scale 1-10" on a clipboard ever again.
 
 ---
 
