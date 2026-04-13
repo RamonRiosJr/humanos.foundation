@@ -8,13 +8,13 @@ Every week, a new tech company or hospital network sends you an email about how 
 
 ### Moving from "Trust Me" to "Trust Math"
 
-In the privacy model, you are trusting the good intentions (and the cybersecurity budget) of a corporation. You are handing over the most sensitive, continuous truths of your physical body and hoping they do not mismanage it.
+In the privacy model, you are trusting the good intentions (and the cybersecurity budget) of a corporation. You are handing over the most sensitive, continuous truths of your physical body—truths usually erased by the failure of the 5-minute clinical documentation—and hoping the hospital does not mismanage them.
 
-In the sovereignty model, trust is removed from the equation entirely. Through [Zero-Knowledge Architecture](/TheProblem) and local-first encryption, your data is locked with keys that only you hold. It is mathematically impossible for the foundation, the hospital, or a hacker to read your records without your explicit, temporary decryption key.
+In the sovereignty model, trust is removed from the equation entirely. Through [Zero-Knowledge Architecture](/TheProblem) and local-first encryption, your data is locked with keys that only you hold. By returning the encrypted data to the patient, we bypass the exhaustion of the 15-20 page clipboard penalty. It is mathematically impossible for the foundation, the hospital, or a hacker to read your records without your explicit, temporary decryption key.
 
 ### The Era of True Ownership
 
-hOS is a unified, local-first data layer that structures your continuous lived experience into a sovereign clinical record, ensuring your healthcare data remains your private, encrypted property while bridging the gap between your daily truth and the hospital system. We do not want your data. We do not want your passwords. We want to give you back the structural power over your own life. Sovereignty means never having to ask permission to access your own medical history. It means deciding, on a granular level, exactly who gets to see what.
+Aura hOS is a secure, digital vault that continuously records your true, daily lived experiences. We encrypt and lock your health history so that only you control it. We do not want your data. We do not want your passwords. We want to give you back the structural power over your own life. Sovereignty means never having to ask permission to access your own medical history. It means deciding, on a granular level, exactly who gets to see what.
 
 ---
 

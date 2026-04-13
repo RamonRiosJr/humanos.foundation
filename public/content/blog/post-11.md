@@ -22,7 +22,7 @@ The medical record only shows what happened *in the clinic*. It misses the 99% o
 
 ### Automate Your Sovereignty
 
-hOS is a unified, local-first data layer that structures your continuous lived experience into a sovereign clinical record, ensuring your healthcare data remains your private, encrypted property while bridging the gap between your daily truth and the hospital system. Collecting this data manually is exhausting. That is why we are building hOS. We want to automate this entire process for you.
+Aura hOS is a secure, digital vault that continuously records your true, daily lived experiences. We encrypt and lock your health history so that only you control it. Collecting this data manually is exhausting. That is why we are building hOS. We want to automate this entire process for you.
 
 ---
 

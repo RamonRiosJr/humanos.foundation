@@ -8,7 +8,7 @@ The Humanos Foundation and its core technology, Aura hOS™, began during a peri
 
 I realized that if I didn't build a system to advocate for myself, no one would. Built outside the traditional tech hubs, Aura hOS™ was coded entirely on the front lines. With uninterrupted focus and my two dogs—River and Brownie—by my side, I engineered the system through the night.
 
-Aura hOS™ is a unified, local-first data layer that structures your continuous lived experience into a sovereign clinical record, ensuring your healthcare data remains your private, encrypted property while bridging the gap between your daily truth and the hospital system. I built the first prototype of Aura hOS™ out of raw necessity. I needed a way to log my daily symptoms, track the catastrophic side effects of the [Medication Gallery](/TheProblem), and generate a report so clear and unignorable that the next doctor would be forced to listen to me.
+Aura hOS is a secure, digital vault that continuously records your true, daily lived experiences. We encrypt and lock your health history so that only you control it. I built the first prototype of Aura hOS™ out of raw necessity. I needed a way to log my daily symptoms, track the catastrophic side effects of the [Medication Gallery](/TheProblem), and generate a report so clear and unignorable that the next doctor would be forced to listen to me.
 
 ### From One Patient to Millions
 

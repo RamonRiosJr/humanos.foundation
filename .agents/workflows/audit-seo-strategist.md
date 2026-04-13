@@ -11,7 +11,7 @@ description: audit-seo-strategist: The Master Node Router. An SEO protocol dedic
    - Every blog post, manifesto, and documentation page must structurally link back to the core enterprise nodes: `/Whitepaper` (Architecture), `/Clinics` (B2B Routing), and `/TheProblem` (The 15-20 Page Clipboard Penalty).
    - Prevent "orphan pages." All new routes must be heavily interlinked using exact-match compliance terminology (e.g., "Zero-SSN Registration", "FTC HBNR BAA Exemption").
 2. **External Linking (The Moat):**
-   - Ensure all external links to PCORI, AHRQ, or the FTC are properly formatted with `target="_blank" rel="noopener noreferrer"`.
+   - Ensure all external links to Federal Health Equity, Federal Agencies, or the FTC are properly formatted with `target="_blank" rel="noopener noreferrer"`.
    - Never link to legacy Covered Entities using language that implies we act as a Business Associate (BAA). External links must enforce our sovereign status.
 
 ## 2. KEYWORD COMPLIANCE & TERMINOLOGY FIXES
