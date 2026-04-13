@@ -8,7 +8,7 @@ Then I realized: **It wasn’t me. And it wasn't the doctor, either. It was the 
 
 ### Healthcare as a Pitch Deck
 
-In the United States, going to the doctor feels like you are pitching a venture capitalist. You have exactly 5 minutes to deliver the perfect elevator pitch summarizing your trauma, your pain, and your months of suffering. If you stutter, if you forget a detail, if you take too long to explain the context—you lose. 
+In the United States, going to the doctor feels like you are pitching a venture capitalist while under duress. After already being exhausted by the 15-20 page clipboard penalty in the waiting room, you have exactly 5 minutes to deliver the perfect elevator pitch summarizing your trauma, your pain, and your months of suffering. If you stutter, if you forget a detail, if you take too long to explain the context—you lose.
 
 Prior to moving to the US, in my home country, doctors actually listened. You sat down. You talked. There wasn't a stopwatch ticking in the background.
 
