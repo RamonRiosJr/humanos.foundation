@@ -20,7 +20,7 @@ Because you felt rushed, you couldn't explain the nuance. Because you couldn't e
 
 ### Stop Subsidizing Their Inefficiency
 
-hOS is a unified, local-first data layer that structures your continuous lived experience into a sovereign clinical record, ensuring your healthcare data remains your private, encrypted property while bridging the gap between your daily truth and the hospital system. The only way to break this machine is to walk in with irrefutable, unignorable data. If you own a continuous, perfectly structured graph of your own lived experience, they cannot brush you off in 5 minutes. You strip them of the ability to guess, and you force them to listen.
+Aura hOS is a secure, digital vault that continuously records your true, daily lived experiences. We encrypt and lock your health history so that only you control it. The only way to break this machine is to walk in with irrefutable, unignorable data. If you own a continuous, perfectly structured graph of your own lived experience, they cannot brush you off in 5 minutes. You strip them of the ability to guess, and you force them to listen.
 
 ---
 

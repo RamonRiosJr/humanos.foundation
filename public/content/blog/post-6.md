@@ -14,7 +14,7 @@ In the sovereignty model, trust is removed from the equation entirely. Through [
 
 ### The Era of True Ownership
 
-hOS is a unified, local-first data layer that structures your continuous lived experience into a sovereign clinical record, ensuring your healthcare data remains your private, encrypted property while bridging the gap between your daily truth and the hospital system. We do not want your data. We do not want your passwords. We want to give you back the structural power over your own life. Sovereignty means never having to ask permission to access your own medical history. It means deciding, on a granular level, exactly who gets to see what.
+Aura hOS is a secure, digital vault that continuously records your true, daily lived experiences. We encrypt and lock your health history so that only you control it. We do not want your data. We do not want your passwords. We want to give you back the structural power over your own life. Sovereignty means never having to ask permission to access your own medical history. It means deciding, on a granular level, exactly who gets to see what.
 
 ---
 

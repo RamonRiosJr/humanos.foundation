@@ -24,7 +24,7 @@ This is incredibly dangerous. To satisfy the billing code and clear the room, th
 
 The solution is not to walk into the clinic and hand an overworked doctor a 50-page Excel spreadsheet. That only creates more administrative burden.
 
-hOS is a unified, local-first data layer that structures your continuous lived experience into a sovereign clinical record, ensuring your healthcare data remains your private, encrypted property while bridging the gap between your daily truth and the hospital system. The solution is to arm the patient with **Distilled, Actionable Truth**. By capturing and structuring your continuous lived experience before you enter the clinic, you bypass the 5-minute pitch deck. You hand the doctor a crystalline picture of your root cause, saving them time and saving yourself from the Medication Gallery.
+Aura hOS is a secure, digital vault that continuously records your true, daily lived experiences. We encrypt and lock your health history so that only you control it. The solution is to arm the patient with **Distilled, Actionable Truth**. By capturing and structuring your continuous lived experience before you enter the clinic, you bypass the 5-minute pitch deck. You hand the doctor a crystalline picture of your root cause, saving them time and saving yourself from the Medication Gallery.
 
 ---
 

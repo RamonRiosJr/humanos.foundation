@@ -2,7 +2,7 @@
 
 We hold this truth to be self-evident: Your health is the continuous, nuanced sum of your lived experience. It cannot be accurately represented by a 15-page intake form, a randomized 5-minute doctor visit, or a billing code designed by an insurance conglomerate.
 
-hOS is a unified, local-first data layer that structures your continuous lived experience into a sovereign clinical record, ensuring your healthcare data remains your private, encrypted property while bridging the gap between your daily truth and the hospital system. We are building the **Human Operating System (hOS)** to serve as the unignorable source of truth for every patient on Earth.
+Aura hOS is a secure, digital vault that continuously records your true, daily lived experiences. We encrypt and lock your health history so that only you control it. We are building the **Human Operating System (hOS)** to serve as the unignorable source of truth for every patient on Earth.
 
 ### Core Tenets of the Movement
 

@@ -10,7 +10,7 @@ In a standard Web2 application, you create an account and send your data to a se
 
 In the hOS ecosystem, the encryption key is generated locally on your device. It never leaves your phone or computer. When you sync your data to the cloud for backup or to share with a doctor, the data is scrambled into an unreadable cipher *before* it leaves your hands. 
 
-hOS is a unified, local-first data layer that structures your continuous lived experience into a sovereign clinical record, ensuring your healthcare data remains your private, encrypted property while bridging the gap between your daily truth and the hospital system. We host the encrypted files, but we **do not possess the key**. 
+Aura hOS is a secure, digital vault that continuously records your true, daily lived experiences. We encrypt and lock your health history so that only you control it. We host the encrypted files, but we **do not possess the key**. 
 
 ### Mathematical Independence
 

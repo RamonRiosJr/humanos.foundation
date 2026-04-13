@@ -16,7 +16,7 @@ By the time you hand the clipboard back, you are fatigued. You have spent your e
 
 Hospitals do not use these forms to understand you. They use them to establish baselines for insurance billing and to protect themselves defensively against malpractice. The paperwork isn't designed for clinical documentation; it’s designed for the compliance department.
 
-At the Foundation, we believe intake should be a frictionless, continuous sync from your own sovereign data vault. hOS is a unified, local-first data layer that structures your continuous lived experience into a sovereign clinical record, ensuring your healthcare data remains your private, encrypted property while bridging the gap between your daily truth and the hospital system. You should never fill out a "Pain Scale 1-10" on a clipboard ever again.
+At the Foundation, we believe intake should be a frictionless, continuous sync from your own sovereign data vault. Aura hOS is a secure, digital vault that continuously records your true, daily lived experiences. We encrypt and lock your health history so that only you control it. You should never fill out a "Pain Scale 1-10" on a clipboard ever again.
 
 ---
 
