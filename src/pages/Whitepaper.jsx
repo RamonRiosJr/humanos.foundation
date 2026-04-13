@@ -67,7 +67,7 @@ export default function Whitepaper() {
                             </a>
                         </noscript>
                         <p className="text-[11px] text-zinc-500 italic font-normal tracking-wide bg-black/40 px-4 py-2 mt-4 rounded-lg border border-white/5 shadow-inner">
-                            Aura hOS proudly donates its Enterprise Architecture to our patients.
+                            Aura hOS proudly donates its Sovereign Technology to our patients.
                         </p>
                     </div>
                 </motion.div>

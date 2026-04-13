@@ -4,9 +4,9 @@ Healthcare clinics are fundamentally terrified of data liability. They do not wa
 
 This is why the Aura hOS Provider Terminal is fundamentally shifting the market.
 
-### Zero-Knowledge B2B Policies (Phase 3.E)
+### Zero-Knowledge Operational Policies (Phase 3.E)
 
-The patient application now inherently supports Provider-Pushed Consent tracking via a strict **Zero-Knowledge Signature Boundary**. When a B2B Clinic partner sends a localized PDF, Terms of Service, or Treatment Policy to the patient, the entire payload is evaluated, signed, and encrypted locally on the patient's device securely before a single transmission is fired back across the network.
+The patient application now inherently supports Provider-Pushed Consent tracking via a strict **Zero-Knowledge Signature Boundary**. When a Federated Clinic partner sends a localized PDF, Terms of Service, or Treatment Policy to the patient, the entire payload is evaluated, signed, and encrypted locally on the patient's device securely before a single transmission is fired back across the network.
 
 ### Clinical Telemetry Engines (Phase 3.D)
 
