@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Activity, Heart, Brain, Shield, Zap, TrendingUp } from 'lucide-react';
+import { Activity, Heart, Brain, Shield, Zap } from 'lucide-react';
 
 const metrics = [
     { label: 'History Sync', value: 'Complete', icon: Brain, color: '#00d4ff' },
