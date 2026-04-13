@@ -17,7 +17,7 @@ export default function Status() {
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta 
                 title="System Status & SLA — Aura hOS" 
-                description="Live operational status of the Aura hOS clinical routing relays, edge functions, and B2B webhooks." 
+                description="Live operational status of the Aura hOS clinical routing relays, edge functions, and clinical webhooks." 
                 url="https://humanos.foundation/status" 
             />
             <Navbar />
@@ -26,7 +26,7 @@ export default function Status() {
                 badge="Enterprise Service Level Agreement" 
                 title="Network" 
                 titleAccent="Status" 
-                subtitle="Aura hOS relies on globally distributed Supabase Edge Functions. We guarantee a 99.9% uptime SLA for all B2B clinic integrations." 
+                subtitle="Aura hOS relies on globally distributed Supabase Edge Functions. We guarantee a 99.9% uptime SLA for all clinical integrations." 
             />
 
             <section className="py-20 px-4 md:px-8 max-w-4xl mx-auto space-y-12">

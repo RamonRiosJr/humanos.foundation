@@ -4,7 +4,7 @@ When you are building a $825,000 Zero-Knowledge data compliance pipeline, relian
 
 ### Deprecating the Odoo Backbone
 
-Historically, the non-profit site relied on a self-hosted Contabo Odoo instance (`team.humanos.foundation`) to handle community intake, developer recruitment, and B2B sandbox interactions. While effective for initial bootstrapping, it presented unacceptable downtime risks and potential data crossover leaks.
+Historically, the non-profit site relied on a self-hosted Contabo Odoo instance (`team.humanos.foundation`) to handle community intake, developer recruitment, and institutional sandbox interactions. While effective for initial bootstrapping, it presented unacceptable downtime risks and potential data crossover leaks.
 
 As of this morning, we have executed **Phase 13: Architectural Deprecation**.
 
@@ -14,7 +14,7 @@ As of this morning, we have executed **Phase 13: Architectural Deprecation**.
 
 ### Unified Edge Routing
 
-All B2B Marketing traffic and Hospital CTO validation checks originating from `humanos.foundation` are now securely mapped via target redirects directly into the fully compliant **aurahos.io** isolated environment.
+All Clinical partner traffic and Hospital CTO validation checks originating from `humanos.foundation` are now securely mapped via target redirects directly into the fully compliant **aurahos.io** isolated environment.
 
 By severing ties with legacy CRM structures, Aura hOS formally proves to incoming grant reviewers and hospital groups that our architecture is strictly sovereign. 
 
