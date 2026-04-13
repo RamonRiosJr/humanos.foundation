@@ -77,7 +77,7 @@ export default function HeroSection() {
                     </Link>
                 </motion.div>
 
-                {/* Dashboard */}
+                {/* Sovereign Terminal */}
                 <HeroDashboard />
             </div>
 

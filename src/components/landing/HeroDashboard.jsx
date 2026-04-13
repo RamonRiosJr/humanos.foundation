@@ -23,7 +23,7 @@ export default function HeroDashboard() {
                     <div className="flex items-center gap-2">
                         <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse" />
                         <span className="text-xs md:text-sm text-cyan-400/80 font-medium tracking-wider uppercase">
-                            hOS Dashboard — Live
+                            hOS Sovereign Terminal — Active
                         </span>
                     </div>
                     <div className="flex gap-1.5">

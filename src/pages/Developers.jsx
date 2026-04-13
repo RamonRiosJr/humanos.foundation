@@ -20,7 +20,7 @@ export default function Developers() {
             <PageHero 
                 badge="API & Architecture" 
                 title="Developer" 
-                titleAccent="Portal" 
+                titleAccent="Network" 
                 subtitle="Aura hOS is fully open-source. Build integrations directly against our Zero-Knowledge OAuth Webhook API using standard FHIR R4 schemas." 
             />
 
