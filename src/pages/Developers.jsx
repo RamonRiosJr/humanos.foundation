@@ -39,7 +39,7 @@ export default function Developers() {
                     </div>
 
                     <p className="text-sm text-white/70 leading-relaxed mb-6">
-                        Unlike traditional clinical software, you do not need to install local databases or secure HIPAA pipelines. You simply strip all PII and format the anonymized clinical telemetry into an isolated <code className="text-cyan-300 font-mono text-[10px] bg-cyan-500/10 px-1 rounded">JSON FHIR R4</code> standard and `POST` it to our ephemeral edge proxy along with your <code>Clinic Routing ID</code>. 
+                        Unlike traditional clinical software, you do not need to install local databases or secure HIPAA pipelines. You simply strip all PII and format the anonymized clinical data into an isolated <code className="text-cyan-300 font-mono text-[10px] bg-cyan-500/10 px-1 rounded">JSON FHIR R4</code> standard and `POST` it to our ephemeral edge proxy along with your <code>Clinic Routing ID</code>. 
                     </p>
 
                     <div className="bg-[#0a0a0f] rounded-xl border border-white/5 overflow-hidden">

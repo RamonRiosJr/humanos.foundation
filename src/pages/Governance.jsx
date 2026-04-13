@@ -36,7 +36,7 @@ export default function Governance() {
                 <div className="glass p-8 md:p-12 rounded-3xl border border-white/5">
                     <h2 className="text-2xl font-bold font-outfit text-white mb-6">Board of Directors & Independence</h2>
                     <p className="text-sm text-white/70 leading-relaxed mb-6">
-                        The Humanos Foundation software architecture governs the most sensitive telemetry of the human condition. To prevent corporate capture and aggressive data monetization, the Foundation utilizes an independent Board of Directors.
+                        The Humanos Foundation software architecture governs the most sensitive realities of the human condition. To prevent corporate capture and aggressive data monetization, the Foundation utilizes an independent Board of Directors.
                     </p>
                     <div className="p-6 rounded-2xl bg-rose-500/5 border border-rose-500/20 mb-8">
                         <div className="flex items-start gap-4">
