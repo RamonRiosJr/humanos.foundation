@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 
 /**
  * VaultBackground.jsx
- * Architect Assessor Protocol: Enterprise-Grade Visual Standard
+ * Architect Assessor Protocol: Mathematical Visual Standard
  * A continuous, sovereign, and mathematical HUD overlay that unifies 
  * all legacy and new pages under the Zero-Knowledge Vault aesthetic.
  */
 export default function VaultBackground() {
     return (
         <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden mix-blend-screen opacity-50">
-            {/* Enterprise Grid Array */}
+            {/* Structural Grid Array */}
             <div 
                 className="absolute inset-0" 
                 style={{ 
