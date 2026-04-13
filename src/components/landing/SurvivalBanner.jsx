@@ -29,12 +29,12 @@ export default function SurvivalBanner() {
                         </div>
                         <div>
                             <h3 className="text-sm md:text-base font-bold text-white mb-0.5 tracking-tight flex items-center justify-center sm:justify-start gap-2">
-                                <span className="text-cyan-400 uppercase tracking-widest text-[10px] sm:text-xs">Supported Infrastructure</span>
+                                <span className="text-cyan-400 uppercase tracking-widest text-[10px] sm:text-xs">Enterprise Sandbox Active</span>
                                 <span className="hidden sm:inline text-white/30">•</span>
                                 <span>Targeting the $825k Federal Health Equity Pipeline</span>
                             </h3>
                             <p className="text-xs md:text-sm text-white/70 leading-snug">
-                                Aura hOS relies on mathematical integrity. B2B Enterprise routes are heavily encrypted and directly utilize the Zero-Knowledge Vault architecture.
+                                Aura hOS relies on absolute mathematical integrity. B2B Enterprise routes are heavily encrypted and strictly isolated from philanthropic data.
                             </p>
                         </div>
                     </div>
@@ -68,26 +68,26 @@ export default function SurvivalBanner() {
                     </div>
                     <div>
                         <h3 className="text-sm md:text-base font-bold text-white mb-0.5 tracking-tight flex items-center justify-center sm:justify-start gap-2">
-                            <span className="text-red-400 uppercase tracking-widest text-[10px] sm:text-xs">Enterprise Validation</span>
+                            <span className="text-red-400 uppercase tracking-widest text-[10px] sm:text-xs">Survival Campaign Active</span>
                             <span className="hidden sm:inline text-white/30">•</span>
-                            <span>Engineering Structurally Aligned with Federal Health Equity Mandates</span>
+                            <span>Engineering Aligned with Federal Health Equity Mandates</span>
                         </h3>
                         <p className="text-xs md:text-sm text-white/70 leading-snug">
-                            Our core engineering roadmap is precision-targeted toward the $825k federal health equity non-dilutive pilot, acting as the strategic bridge to the upcoming $1.5M Seed Round to permanently fund the Zero-Knowledge Vault architecture.
+                            We are bridging the gap to our $825k Federal Health Equity pilot. Your organic support directly funds the Zero-Knowledge Vault architecture, bypassing the 15-20 page clipboard penalty forever.
                         </p>
                     </div>
                 </div>
 
                 {/* Call To Action */}
                 <a 
-                    href="/research"
+                    href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="shrink-0 group relative overflow-hidden inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-red-500/10 border border-red-500/30 hover:border-red-400 hover:bg-red-500/20 transition-all duration-300"
                 >
                     <span className="relative z-10 text-sm font-bold text-red-100 flex items-center gap-2">
                         <HeartPulse className="w-4 h-4 text-red-400 group-hover:scale-110 transition-transform" />
-                        View Capital Roadmap
+                        Support the Mission
                     </span>
                     <ArrowRight className="relative z-10 w-4 h-4 text-red-400 group-hover:translate-x-1 transition-transform" />
                     
