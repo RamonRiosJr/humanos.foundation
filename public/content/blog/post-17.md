@@ -1,4 +1,4 @@
-# The Ultimate Enterprise Setup
+# The Ultimate Cryptographic Setup
 
 Healthcare clinics are fundamentally terrified of data liability. They do not want to hold your unencrypted data any longer than they have to, because holding data means defending it against audits, breaches, and Business Associate Agreement (BAA) compliance traps.
 

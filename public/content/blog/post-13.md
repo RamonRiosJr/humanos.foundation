@@ -1,4 +1,4 @@
-# The Enterprise Defense Layer
+# The Sovereign Defense Layer
 
 Building an open-source, mathematically secure clinical architecture requires immense focus and unyielding momentum. In the early stages, the rapid-fire "pushy" execution of a neurodivergent founder is a massive tactical advantage—it generates the velocity required to build deeply complex systems from nothing.
 
