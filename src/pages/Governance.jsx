@@ -86,9 +86,9 @@ export default function Governance() {
                 {/* Federal Grant Oversight */}
                 <div className="p-8 rounded-3xl bg-blue-900/20 border border-blue-500/20 text-center">
                     <FileSignature className="w-8 h-8 text-blue-400 mx-auto mb-4" />
-                    <h3 className="text-lg font-bold text-white mb-3">Federal Grant Accountability</h3>
+                    <h3 className="text-lg font-bold text-white mb-3">Federal Accountability Standards</h3>
                     <p className="text-sm text-white/60 max-w-2xl mx-auto leading-relaxed">
-                        Funds rendered by the Patient-Centered Outcomes Research Institute  or the Agency for Healthcare Research and Quality (Federal Directive) are ring-fenced entirely for the open-source clinical FHIR engineering of Aura hOS. No federal funds are allocated to marketing, lobbying, or external contracting.
+                        To maintain strict institutional independence, any future funds rendered by Federal Health Equity mandates are required to be ring-fenced entirely for the open-source clinical engineering of Aura hOS. Operating bylaws strictly dictate that no foundational funds may be allocated to marketing, lobbying, or external corporate contracting.
                     </p>
                 </div>
 

@@ -40,7 +40,7 @@ export default function Support() {
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="mt-10 glass rounded-2xl p-6 border border-yellow-500/20 text-center">
                         <p className="text-sm text-white/60 leading-relaxed">
                             <span className="text-yellow-400 font-bold">Institutional Philanthropy:</span>{' '}
-                            Humanos Foundation operates its core patient advocacy via federal grant mechanics. While formal 501(c)(3) nonprofit status is pending, our core sovereign infrastructure pipeline is explicitly aligned with the $825k Federal Health Equity mandate for health equity.
+                            The Humanos Foundation architects its core patient advocacy to qualify for federal health equity mandates. While formal 501(c)(3) nonprofit status is pending, our core sovereign infrastructure pipeline remains explicitly aligned with the $825k Federal Health Equity trajectory.
                         </p>
                     </motion.div>
                 </div>
