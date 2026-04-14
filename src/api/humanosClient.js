@@ -1,4 +1,4 @@
-import { humanosMockClient } from '@/lib/humanos-mock-sdk';
+import { humanosLocalClient } from '@/lib/humanos-local-sdk';
 
 /** 
  * Humanos Foundation - Sovereign API Client
@@ -6,18 +6,17 @@ import { humanosMockClient } from '@/lib/humanos-mock-sdk';
  */
 
 const baseClient = {
-    ...humanosMockClient,
+    ...humanosLocalClient,
     entities: {
-        ...humanosMockClient.entities,
+        ...humanosLocalClient.entities,
         BlogPost: {
-            list: async () => humanosMockClient.entities.BlogPost.list(),
-            get: async (id) => humanosMockClient.entities.BlogPost.get(id)
+            list: async () => humanosLocalClient.entities.BlogPost.list(),
+            get: async (id) => humanosLocalClient.entities.BlogPost.get(id)
         },
         JoinRequest: {
             create: async (data) => {
-                await new Promise(r => setTimeout(r, 1200));
-                console.log("Mock Federated Payload Captured:", data);
-                return humanosMockClient.entities.JoinRequest.create(data);
+                // console.log("Zero-Knowledge Local Payload Captured:", data);
+                return humanosLocalClient.entities.JoinRequest.create(data);
             }
         },
         Project: {
