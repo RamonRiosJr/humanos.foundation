@@ -31,7 +31,7 @@ export default function SurvivalBanner() {
                             <h3 className="text-sm md:text-base font-bold text-white mb-0.5 tracking-tight flex items-center justify-center sm:justify-start gap-2">
                                 <span className="text-cyan-400 uppercase tracking-widest text-[10px] sm:text-xs">Supported Infrastructure</span>
                                 <span className="hidden sm:inline text-white/30">•</span>
-                                <span>Securing the $825k Federal Pipeline</span>
+                                <span>Anchoring the $825k Federal Pipeline</span>
                             </h3>
                             <p className="text-xs md:text-sm text-white/70 leading-snug">
                                 Aura hOS relies on mathematical integrity. Sovereign payload routes are heavily encrypted and directly utilize the Zero-Knowledge Vault architecture.
@@ -70,7 +70,7 @@ export default function SurvivalBanner() {
                         <h3 className="text-sm md:text-base font-bold text-white mb-0.5 tracking-tight flex items-center justify-center sm:justify-start gap-2">
                             <span className="text-red-400 uppercase tracking-widest text-[10px] sm:text-xs">Federal Health Equity</span>
                             <span className="hidden sm:inline text-white/30">•</span>
-                            <span>Advocacy Secured by Federal Health Equity Pilot</span>
+                            <span>Advocacy Anchored by Federal Health Equity Pilot</span>
                         </h3>
                         <p className="text-xs md:text-sm text-white/70 leading-snug">
                             Our primary advocacy roadmap is driven by the $825k Federal Health Equity non-dilutive federal trajectory, serving as a direct mandate to permanently protect the Zero-Knowledge patient architectural standard.
