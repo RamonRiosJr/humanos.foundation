@@ -34,17 +34,32 @@ const AppRouter = () => {
                         <MainPage />
                     </LayoutWrapper>
                 } />
-                {Object.entries(Pages).map(([path, Page]) => (
-                    <Route
-                        key={path}
-                        path={`/${path}`}
-                        element={
-                            <LayoutWrapper currentPageName={path}>
-                                <Page />
-                            </LayoutWrapper>
-                        }
-                    />
-                ))}
+                {Object.entries(Pages).map(([path, Page]) => {
+                    // Prevent duplicate routes if manually defined below
+                    if (path === 'Blog' || path === 'BlogPost') return null;
+                    return (
+                        <Route
+                            key={path}
+                            path={`/${path.toLowerCase()}`}
+                            element={
+                                <LayoutWrapper currentPageName={path}>
+                                    <Page />
+                                </LayoutWrapper>
+                            }
+                        />
+                    );
+                })}
+                {/* Canonical SEO Overrides */}
+                <Route path="/research" element={
+                    <LayoutWrapper currentPageName="Blog">
+                        {Pages.Blog ? <Pages.Blog /> : <></>}
+                    </LayoutWrapper>
+                } />
+                <Route path="/research/:slug" element={
+                    <LayoutWrapper currentPageName="BlogPost">
+                        {Pages.BlogPost ? <Pages.BlogPost /> : <></>}
+                    </LayoutWrapper>
+                } />
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
         </Suspense>
