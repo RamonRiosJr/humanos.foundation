@@ -10,7 +10,7 @@ const supportWays = [
     { icon: Heart, title: 'Spread the Word', desc: 'Share our manifesto. Talk about patient data rights. Refer journalists, researchers, and advocates to us. The movement grows through people.', cta: 'Read the Manifesto', href: '/manifesto' },
     { icon: Users, title: 'Volunteer', desc: 'Give your time and skills. We need developers, writers, translators, and community organizers. Every contribution matters.', cta: 'Volunteer Now', href: '/volunteer' },
     { icon: Code, title: 'Contribute Code', desc: 'Help build open-source tools for the movement. Whether it\'s documentation, design, or development — we welcome all contributors.', cta: 'Visit Coqui Cloud', href: 'https://coqui.cloud' },
-    { icon: DollarSign, title: 'Advocacy Support', desc: 'Our engineering infrastructure is sustained through strict institutional and philanthropic federal pathways. The $825k Federal Health Equity pilot trajectory serves as our anchor for patient data sovereignty.', cta: 'View Federal Strategy', href: '/research' },
+    { icon: DollarSign, title: 'Advocacy Support', desc: 'Our engineering infrastructure is architected to align with strict institutional and philanthropic federal pathways. The $825k Federal Health Equity pilot trajectory serves as our anchor for patient data sovereignty.', cta: 'View Federal Strategy', href: '/research' },
 ];
 
 export default function Support() {
