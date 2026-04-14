@@ -191,7 +191,7 @@ export default function Blog() {
                                                         {post.read_time_minutes} min
                                                     </div>
                                                     <Link
-                                                        to={`/BlogPost?id=${post.id}`}
+                                                        to={`/research/${post.id}`}
                                                         className="group/link inline-flex items-center gap-1 text-[11px] font-bold text-blue-400/60 group-hover:text-blue-400 transition-colors"
                                                     >
                                                         Read Story

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import SEOMeta from '../components/shared/SEOMeta';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
@@ -11,8 +11,8 @@ import rehypeSanitize from 'rehype-sanitize';
 import { createPageUrl } from '@/utils';
 
 export default function BlogPost() {
-    const [searchParams] = useSearchParams();
-    const postId = searchParams.get('id');
+    const { slug } = useParams();
+    const postId = slug;
     const [post, setPost] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -79,7 +79,7 @@ export default function BlogPost() {
             <SEOMeta
                 title={`${post.title} | Humanos Foundation`}
                 description={post.excerpt}
-                url={`https://humanos.foundation/blog/${post.id}`}
+                url={`https://humanos.foundation/research/${post.id}`}
                 type="article"
                 article={{
                     publishedTime: post.created_date,
