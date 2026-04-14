@@ -4,9 +4,9 @@ import HeartbeatStream from '../shared/HeartbeatStream';
 
 const stats = [
     { value: '$825k', label: 'Pending Federal Funding', sub: 'Federal Grant Cycle 2 & Federal Directive Sandbox' },
-    { value: '100%', label: 'FTC HBNR BAA Exemption', sub: 'Zero-Knowledge Cryptography' },
-    { value: '0 Days', label: 'Sovereign Integration Time', sub: 'Bypass SSN collection bottlenecks' },
-    { value: 'R4', label: 'HL7 FHIR Native', sub: 'Seamless Sandboxed Exporting' },
+    { value: '100%', label: 'Visual Independence', sub: 'Absolute Data Cryptography protects your family\'s graph' },
+    { value: '0 Days', label: 'Paperwork Penalty', sub: 'Bypass all clipboards and waiting room friction' },
+    { value: 'Universal', label: 'Hospital Integration', sub: 'Clean data exports to any doctor physically treating you' },
 ];
 
 export default function HomeStats() {
