@@ -1,5 +1,5 @@
 /**
- * Humanos Foundation - Sovereign Mock SDK
+ * Humanos Foundation - Sovereign Local SDK
  * This replaces the Base44 SDK to ensure full data sovereignty 
  * and removal of third-party tracking/analytics.
  */
@@ -225,31 +225,31 @@ const storage = {
     }
 };
 
-export const humanosMockClient = {
+export const humanosLocalClient = {
     auth: {
         me: async () => {
             // Default to an admin user for the local environment
             return { id: 'admin', name: 'Foundation Admin', role: 'admin' };
         },
         logout: (url) => {
-            console.log('Logging out...');
+            // console.log('Logging out...');
             if (url) window.location.href = url;
         },
         redirectToLogin: (url) => {
-            console.log('Redirecting to login (Mock)...');
+            // console.log('Redirecting to login (Local Auth)...');
         }
     },
     entities: {
         JoinRequest: {
             create: async (data) => {
-                console.log('Mock: Join Request Created', data);
+                // console.log('Zero-Knowledge: Join Request Captured', data);
                 return storage.add('join_requests', data);
             },
             list: async (...args) => storage.get('join_requests')
         },
         ContactMessage: {
             create: async (data) => {
-                console.log('Mock: Contact Message Created', data);
+                // console.log('Zero-Knowledge: Contact Message Captured', data);
                 return storage.add('contacts', data);
             },
             list: async (...args) => storage.get('contacts')
@@ -268,7 +268,7 @@ export const humanosMockClient = {
                 const { default: posthog } = await import('posthog-js');
                 posthog.capture(params.name || 'Custom Event', params.properties || params);
             }
-            console.log('Analytics Event Tracked:', params);
+            // console.log('Analytics Event Tracked:', params);
         }
     }
 };
