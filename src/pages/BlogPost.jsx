@@ -4,7 +4,7 @@ import SEOMeta from '../components/shared/SEOMeta';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageCTA from '../components/shared/PageCTA';
-import { humanosMockClient } from '../lib/humanos-mock-sdk';
+import { humanosLocalClient } from '../lib/humanos-local-sdk';
 import { ArrowLeft, Clock, CalendarDays, Tag, MessageSquare } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import rehypeSanitize from 'rehype-sanitize';
@@ -22,7 +22,7 @@ export default function BlogPost() {
             return;
         }
 
-        humanosMockClient.entities.BlogPost.get(postId).then(async (data) => {
+        humanosLocalClient.entities.BlogPost.get(postId).then(async (data) => {
             if (data && data.contentUrl) {
                 try {
                     const response = await fetch(data.contentUrl);
