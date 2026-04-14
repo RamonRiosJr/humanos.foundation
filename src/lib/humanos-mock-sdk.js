@@ -5,188 +5,188 @@
  */
 // PostHog imported dynamically below to prevent blank screen crashes when config is missing
 
-const STORAGE_PREFIX = 'humanos_v3_rc1_';
+const STORAGE_PREFIX = 'humanos_v3_rc2_';
 
 const CORNERSTONE_POSTS = [
     {
-        "id": "post-1",
+        "id": "you-are-not-a-standard-deviation",
         "title": "You Are Not A Standard Deviation",
         "excerpt": "Why the 15-page paper intake and 5-minute clinical documentation are breaking healthcare, and how securing your continuous lived experience is the only way to fight back.",
         "category": "Patient Rights",
         "read_time_minutes": 5,
         "published": true,
         "created_date": "2026-03-06T10:00:00Z",
-        "contentUrl": "/content/blog/post-1.md"
+        "contentUrl": "/content/blog/you-are-not-a-standard-deviation.md"
     },
     {
-        "id": "post-2",
+        "id": "escaping-the-medication-gallery",
         "title": "Escaping the Medication Gallery",
         "excerpt": "Drugging symptoms out of administrative convenience is ruining lives. It is time to demand root-cause documentation.",
         "category": "Movement Stories",
         "read_time_minutes": 8,
         "published": true,
         "created_date": "2026-03-07T14:30:00Z",
-        "contentUrl": "/content/blog/post-2.md"
+        "contentUrl": "/content/blog/escaping-the-medication-gallery.md"
     },
     {
-        "id": "post-3",
+        "id": "sovereignty-is-accountability",
         "title": "Sovereignty is Accountability",
         "excerpt": "Why owning your health data isn't just about privacy from hackers—it's about wielding power against a broken system.",
         "category": "Technology",
         "read_time_minutes": 6,
         "published": true,
         "created_date": "2026-03-08T09:15:00Z",
-        "contentUrl": "/content/blog/post-3.md"
+        "contentUrl": "/content/blog/sovereignty-is-accountability.md"
     },
     {
-        "id": "post-4",
+        "id": "the-bill-for-your-silenced-5-minutes",
         "title": "The Bill For Your Silenced 5 Minutes",
         "excerpt": "You gave them 15 pages and 20 minutes of your life. They gave you 5 minutes and a prescription. Here is the actual financial and emotional cost of being unheard.",
         "category": "Movement Stories",
         "read_time_minutes": 7,
         "published": true,
         "created_date": "2026-03-09T10:00:00Z",
-        "contentUrl": "/content/blog/post-4.md"
+        "contentUrl": "/content/blog/the-bill-for-your-silenced-5-minutes.md"
     },
     {
-        "id": "post-5",
+        "id": "the-american-hustle-vs-the-human-doctor",
         "title": "The American Hustle vs. The Human Doctor",
         "excerpt": "I thought I was the problem. Then I realized the system isn't just failing patients—it’s actively robbing doctors of the ability to practice medicine.",
         "category": "Movement Stories",
         "read_time_minutes": 6,
         "published": true,
         "created_date": "2026-03-10T14:00:00Z",
-        "contentUrl": "/content/blog/post-5.md"
+        "contentUrl": "/content/blog/the-american-hustle-vs-the-human-doctor.md"
     },
     {
-        "id": "post-6",
+        "id": "the-death-of-privacy-the-birth-of-sovereignty",
         "title": "The Death of Privacy, The Birth of Sovereignty",
         "excerpt": "Why \"Privacy\" is a weak corporate promise for people with something to hide, while \"Sovereignty\" is a structural guarantee for people with something to protect.",
         "category": "Patient Rights",
         "read_time_minutes": 8,
         "published": true,
         "created_date": "2026-03-11T10:00:00Z",
-        "contentUrl": "/content/blog/post-6.md"
+        "contentUrl": "/content/blog/the-death-of-privacy-the-birth-of-sovereignty.md"
     },
     {
-        "id": "post-7",
+        "id": "the-human-operating-system-manifesto",
         "title": "The Human Operating System Manifesto",
         "excerpt": "A comprehensive declaration of our intent to structurally upgrade the clinical data continuum and replace the assembly-line reality with a patient-first data ecosystem.",
         "category": "Policy & Regulation",
         "read_time_minutes": 12,
         "published": true,
         "created_date": "2026-03-12T12:00:00Z",
-        "contentUrl": "/content/blog/post-7.md"
+        "contentUrl": "/content/blog/the-human-operating-system-manifesto.md"
     },
     {
-        "id": "post-8",
+        "id": "the-15-page-paper-wall",
         "title": "The 15-Page Paper Wall",
         "excerpt": "How clinical intake paperwork is designed to induce fatigue, erase patient nuance, and protect the hospital from liability rather than actually documenting you.",
         "category": "Movement Stories",
         "read_time_minutes": 7,
         "published": true,
         "created_date": "2026-03-13T09:00:00Z",
-        "contentUrl": "/content/blog/post-8.md"
+        "contentUrl": "/content/blog/the-15-page-paper-wall.md"
     },
     {
-        "id": "post-9",
+        "id": "zero-knowledge-why-we-dont-want-your-password",
         "title": "Zero-Knowledge: Why We Don't Want Your Password",
         "excerpt": "A deep dive into the cryptography that makes hOS mathematically incapable of selling or leaking your data.",
         "category": "Technology",
         "read_time_minutes": 9,
         "published": true,
         "created_date": "2026-03-14T14:30:00Z",
-        "contentUrl": "/content/blog/post-9.md"
+        "contentUrl": "/content/blog/zero-knowledge-why-we-dont-want-your-password.md"
     },
     {
-        "id": "post-10",
+        "id": "founded-on-the-front-lines",
         "title": "Founded on the Front Lines",
         "excerpt": "The raw, unfiltered origin story of the Humanos Foundation, built against the odds by a patient navigating chronic illness.",
         "category": "Community",
         "read_time_minutes": 6,
         "published": true,
         "created_date": "2026-03-15T11:00:00Z",
-        "contentUrl": "/content/blog/post-10.md"
+        "contentUrl": "/content/blog/founded-on-the-front-lines.md"
     },
     {
-        "id": "post-11",
+        "id": "how-to-reclaim-your-medical-record-today",
         "title": "How to Reclaim Your Medical Record Today",
         "excerpt": "Don't wait for the system to change. Here are three actionable steps you can take today to legally reclaim your scattered health history.",
         "category": "Patient Rights",
         "read_time_minutes": 5,
         "published": true,
         "created_date": "2026-03-16T16:00:00Z",
-        "contentUrl": "/content/blog/post-11.md"
+        "contentUrl": "/content/blog/how-to-reclaim-your-medical-record-today.md"
     },
     {
-        "id": "post-12",
+        "id": "the-algorithm-of-empathy-why-ai-must-serve-the-patient",
         "title": "The Algorithm of Empathy: Why AI Must Serve the Patient",
         "excerpt": "Artificial Intelligence in healthcare is inevitable. The question is: Will it be used by hospitals to bill you faster, or by you to advocate for your health?",
         "category": "Technology",
         "read_time_minutes": 8,
         "published": true,
         "created_date": "2026-03-17T09:00:00Z",
-        "contentUrl": "/content/blog/post-12.md"
+        "contentUrl": "/content/blog/the-algorithm-of-empathy-why-ai-must-serve-the-patient.md"
     },
     {
-        "id": "post-13",
+        "id": "the-assessor-protocol-guarding-sovereign-boundaries",
         "title": "The Assessor Protocol: Guarding Sovereign Boundaries",
         "excerpt": "Why the Humanos Foundation enforces strict mission-level guardrails to prevent theoretical drift and insulate the 501(c)(3) Cause.",
         "category": "Technology",
         "read_time_minutes": 6,
         "published": true,
         "created_date": "2026-03-24T10:00:00Z",
-        "contentUrl": "/content/blog/post-13.md"
+        "contentUrl": "/content/blog/the-assessor-protocol-guarding-sovereign-boundaries.md"
     },
     {
-        "id": "post-14",
+        "id": "the-15-20-page-clipboard-penalty",
         "title": "The 15-20 Page Clipboard Penalty",
         "excerpt": "Why \"Waiting Room Duress\" destroys clinical data before the doctor even views it, and how Zero-SSN registration bypasses it.",
         "category": "Movement Stories",
         "read_time_minutes": 8,
         "published": true,
         "created_date": "2026-03-30T14:30:00Z",
-        "contentUrl": "/content/blog/post-14.md"
+        "contentUrl": "/content/blog/the-15-20-page-clipboard-penalty.md"
     },
     {
-        "id": "post-15",
+        "id": "aura-hos-v080-rc3-the-federal-infrastructure-lock",
         "title": "Aura hOS v0.8.0-rc.3: The Federal Infrastructure Lock",
         "excerpt": "After 2,500 hours of development, the Zero-Knowledge Vault architecture is officially flagged as RC.1 and prepared for Federal Grant evaluation.",
         "category": "Technology",
         "read_time_minutes": 5,
         "published": true,
         "created_date": "2026-04-06T09:00:00Z",
-        "contentUrl": "/content/blog/post-15.md"
+        "contentUrl": "/content/blog/aura-hos-v080-rc3-the-federal-infrastructure-lock.md"
     },
     {
-        "id": "post-16",
+        "id": "lockscreen-native-hardware-integrations-launch-update",
         "title": "Lockscreen Native Hardware Integrations (Launch Update)",
         "excerpt": "The NFC Aura Band and iOS Lockscreen Widget protocols are officially locked for next month. Why hardware-level triage logic is required to bypass the app launch in emergencies.",
         "category": "Technology",
         "read_time_minutes": 5,
         "published": true,
         "created_date": "2026-04-09T18:00:00Z",
-        "contentUrl": "/content/blog/post-16.md"
+        "contentUrl": "/content/blog/lockscreen-native-hardware-integrations-launch-update.md"
     },
     {
-        "id": "post-17",
+        "id": "zero-knowledge-signatures-the-clinical-api-boundary",
         "title": "Zero-Knowledge Signatures: The Clinical API Boundary",
         "excerpt": "How telemetry tracking and cryptographically enforced operational policies form the ultimate liability shield for our federated clinical partners.",
         "category": "Technology",
         "read_time_minutes": 7,
         "published": true,
         "created_date": "2026-04-10T09:00:00Z",
-        "contentUrl": "/content/blog/post-17.md"
+        "contentUrl": "/content/blog/zero-knowledge-signatures-the-clinical-api-boundary.md"
     },
     {
-        "id": "post-18",
+        "id": "phase-13-full-infrastructure-extrication-from-legacy-web2",
         "title": "Phase 13: Full Infrastructure Extrication from Legacy Web2",
         "excerpt": "The Humanos Foundation has officially deprecated its legacy Odoo CRM dependency, shifting 100% of its payload and routing architecture to the native aurahos.io edge.",
         "category": "Technology",
         "read_time_minutes": 6,
         "published": true,
         "created_date": "2026-04-10T12:00:00Z",
-        "contentUrl": "/content/blog/post-18.md"
+        "contentUrl": "/content/blog/phase-13-full-infrastructure-extrication-from-legacy-web2.md"
     }
 ];
 
