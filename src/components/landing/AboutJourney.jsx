@@ -137,7 +137,7 @@ export default function AboutJourney() {
                     >
                         <div className="space-y-4">
                             <p className="text-white/80 text-sm md:text-base leading-relaxed font-medium">
-                                hOS wasn't built in a disconnected tech hub or a venture capital pitch meeting.
+                                hOS wasn't built in a disconnected tech hub or a corporate boardroom.
                                 It was engineered on the front lines of the healthcare crisis, powered by necessity and
                                 an unshakable belief that{' '}
                                 <Link to={createPageUrl('TheProblem')} className="text-cyan-400 font-bold underline underline-offset-4 decoration-cyan-400/20 hover:text-cyan-300 transition-colors">patients deserve data sovereignty</Link>.
@@ -146,10 +146,10 @@ export default function AboutJourney() {
                                 <span className="text-cyan-400 font-bold drop-shadow-[0_0_8px_rgba(34,211,238,0.3)]">Ramon Luis Rios Jr.</span>, the founder, was a patient first — navigating a broken
                                 healthcare system, drowning in the <Link to={createPageUrl('TheProblem')} className="text-cyan-400/80 font-bold underline decoration-cyan-400/20">15-20 page clipboard penalty</Link>, and locked out of his own <a href="https://aurahos.io/whitepaper" target="_blank" rel="noopener noreferrer" className="text-cyan-400/80 font-bold underline decoration-cyan-400/20">Zero-Knowledge Vault</a>. <span className="block mt-3 mb-1 text-[11px] text-zinc-500 italic font-normal tracking-wide bg-obsidian/50 p-2 rounded border border-white/5 inline-block">Aura hOS proudly donates its Sovereign Technology to our patients.</span>
                                 With raw code and relentless determination, he built the absolute foundation
-                                of what would become <span className="text-cyan-400 font-bold drop-shadow-[0_0_8px_rgba(34,211,238,0.2)]">Aura hOS™ v0.8.0-rc.3</span>. Engineered by the Humanos NGO, it now acts as a <a href="https://www.ftc.gov" target="_blank" rel="noopener noreferrer" className="text-cyan-500/70 hover:text-cyan-400">FTC HBNR BAA Exempt</a> technological pipeline routing patients securely via <Link to={createPageUrl('Clinics')} className="text-cyan-400/80 font-bold underline decoration-cyan-400/20">Zero-SSN Registration</Link>.
+                                of what would become <span className="text-cyan-400 font-bold drop-shadow-[0_0_8px_rgba(34,211,238,0.2)]">Aura hOS™ v0.8.0-rc.3</span>. Engineered by the Humanos NGO, it now operates as an absolute digital sanctuary, giving patients the definitive power to link their health data securely <Link to={createPageUrl('Clinics')} className="text-cyan-400/80 font-bold underline decoration-cyan-400/20">without exposing their SSN</Link>.
                             </p>
                             <p className="text-white/80 text-sm md:text-base leading-relaxed font-medium">
-                                No team. No funding. Just a laptop, two loyal dogs, and a vision
+                                Driven by an Autonomous AI Orchestrator and impenetrable Zero-Touch Compliance pipelines, the core architecture was forged by a solo architect, two loyal dogs, and a vision
                                 that healthcare should <span className="text-cyan-400 font-bold drop-shadow-[0_0_8px_rgba(34,211,238,0.2)]">serve the human</span> — not the institution.
                             </p>
                         </div>
