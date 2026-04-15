@@ -1,0 +1,21 @@
+{
+  "redirects": [
+    { "source": "/blog", "destination": "/research", "permanent": true },
+    { "source": "/blog/:slug", "destination": "/research/:slug", "permanent": true },
+    { "source": "/BlogPost", "destination": "/research", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    }
+  ]
+}
