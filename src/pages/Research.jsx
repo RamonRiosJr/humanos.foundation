@@ -41,7 +41,7 @@ export default function Research() {
                             <div>
                                 <h4 className="text-xs font-bold text-white/50 uppercase tracking-widest mb-3 border-b border-white/5 pb-2">The Control Paradigm</h4>
                                 <p className="text-sm text-white/70 leading-relaxed">
-                                    Current EHR portals (e.g., MyChart) enforce rigid UX protocols required by HIPAA compliance. For neurodivergent populations (ADHD/Autism spectrums), these 2FA friction walls, rigid notification cadences, and clinical jargon trigger severe executive dysfunction, directly resulting in an average 40% medication non-adherence rate.
+                                    Current EHR portals (e.g., MyChart) are the digital manifestations of the 15-20 page clipboard penalty. For neurodivergent populations (ADHD/Autism spectrums), this clinical friction and the resulting compressed 5-minute clinical documentation trigger severe executive dysfunction, directly resulting in an average 40% medication non-adherence rate.
                                 </p>
                             </div>
                             <div>
