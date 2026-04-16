@@ -5,6 +5,8 @@ import { humanosLocalClient } from '@/lib/humanos-local-sdk';
  * (Odoo Deprecated: Decoupled for pure Vercel edge deployment and local-first simulation caching before the Supabase PBX link)
  */
 
+const IS_PRODUCTION = import.meta.env.PROD;
+
 const baseClient = {
     ...humanosLocalClient,
     entities: {
@@ -15,7 +17,9 @@ const baseClient = {
         },
         JoinRequest: {
             create: async (data) => {
-                // console.log("Zero-Knowledge Local Payload Captured:", data);
+                if (!IS_PRODUCTION) {
+                    console.log("Zero-Knowledge Local Payload Captured:", data);
+                }
                 return humanosLocalClient.entities.JoinRequest.create(data);
             }
         },
