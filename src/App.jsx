@@ -76,6 +76,8 @@ const PosthogPageViewTracker = () => {
     return null;
 };
 
+import ErrorBoundary from '@/lib/ErrorBoundary';
+
 function App() {
 
     return (
@@ -87,7 +89,9 @@ function App() {
                         <A11yWidget />
                         <ChatbotWidget />
                         <VaultBackground />
-                        <AppRouter />
+                        <ErrorBoundary>
+                            <AppRouter />
+                        </ErrorBoundary>
                     </Router>
                     <Toaster />
                 </QueryClientProvider>
