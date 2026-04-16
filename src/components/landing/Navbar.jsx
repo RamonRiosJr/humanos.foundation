@@ -29,6 +29,8 @@ export default function Navbar() {
 
     return (
         <motion.nav
+            role="navigation"
+            aria-label="Main Navigation"
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
@@ -71,8 +73,14 @@ export default function Navbar() {
 
                     <div className="flex items-center gap-3 lg:hidden">
                         <ThemeToggle />
-                        <button className="text-white/40 hover:text-white/60 transition-colors" onClick={() => setMenuOpen(!menuOpen)}>
-                            {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                        <button 
+                            className="text-white/40 hover:text-white/60 transition-colors" 
+                            onClick={() => setMenuOpen(!menuOpen)}
+                            aria-expanded={menuOpen}
+                            aria-controls="mobile-menu-dropdown"
+                            aria-label={menuOpen ? "Close mobile menu" : "Open mobile menu"}
+                        >
+                            {menuOpen ? <X className="w-5 h-5" aria-hidden="true" /> : <Menu className="w-5 h-5" aria-hidden="true" />}
                         </button>
                     </div>
                 </div>
@@ -80,6 +88,9 @@ export default function Navbar() {
                 <AnimatePresence>
                     {menuOpen && (
                         <motion.div
+                            id="mobile-menu-dropdown"
+                            role="region"
+                            aria-label="Mobile Menu"
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
