@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useQuery } from '@tanstack/react-query';
 import { useParams, Link } from 'react-router-dom';
 import SEOMeta from '../components/shared/SEOMeta';
 import Navbar from '../components/landing/Navbar';
@@ -10,19 +11,22 @@ import ReactMarkdown from 'react-markdown';
 import rehypeSanitize from 'rehype-sanitize';
 import { createPageUrl } from '@/utils';
 
+// Helper to extract the first image from Markdown
+const extractFirstMarkdownImage = (markdownText) => {
+    if (!markdownText) return 'https://humanos.foundation/og-image.png';
+    const match = markdownText.match(/!\[.*?\]\((.*?)\)/);
+    return match ? match[1] : 'https://humanos.foundation/og-image.png';
+};
+
 export default function BlogPost() {
     const { slug } = useParams();
     const postId = slug;
-    const [post, setPost] = useState(null);
-    const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        if (!postId) {
-            setLoading(false);
-            return;
-        }
-
-        humanosLocalClient.entities.BlogPost.get(postId).then(async (data) => {
+    const { data: post, isLoading: loading } = useQuery({
+        queryKey: ['blog_post', postId],
+        queryFn: async () => {
+            if (!postId) return null;
+            const data = await humanosLocalClient.entities.BlogPost.get(postId);
             if (data && data.contentUrl) {
                 try {
                     const response = await fetch(data.contentUrl);
@@ -35,10 +39,11 @@ export default function BlogPost() {
                     data.content = "> *Network error fetching content.*";
                 }
             }
-            setPost(data);
-            setLoading(false);
-        });
-    }, [postId]);
+            return data;
+        },
+        enabled: !!postId,
+        staleTime: 1000 * 60 * 30, // Route caching for 30 minutes
+    });
 
     const formatDate = (isoString) => {
         if (!isoString) return '';
@@ -80,6 +85,7 @@ export default function BlogPost() {
                 title={`${post.title} | Humanos Foundation`}
                 description={post.excerpt}
                 url={`https://humanos.foundation/research/${post.id}`}
+                image={post.image_url || extractFirstMarkdownImage(post.content)}
                 type="article"
                 article={{
                     publishedTime: post.created_date,

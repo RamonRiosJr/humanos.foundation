@@ -149,8 +149,7 @@ export default function AboutJourney() {
                                 of what would become <span className="text-cyan-400 font-bold drop-shadow-[0_0_8px_rgba(34,211,238,0.2)]">Aura hOS™ v0.8.0-rc.3</span>. Engineered by the Humanos NGO, it now operates as an absolute digital sanctuary, giving patients the definitive power to link their health data securely <Link to={createPageUrl('Clinics')} className="text-cyan-400/80 font-bold underline decoration-cyan-400/20">without exposing their SSN</Link>.
                             </p>
                             <p className="text-white/80 text-sm md:text-base leading-relaxed font-medium">
-                                Driven by an Autonomous AI Orchestrator and impenetrable Zero-Touch Compliance pipelines, the core architecture was forged by a solo architect, two loyal dogs, and a vision
-                                that healthcare should <span className="text-cyan-400 font-bold drop-shadow-[0_0_8px_rgba(34,211,238,0.2)]">serve the human</span> — not the institution.
+                                Driven by an unyielding belief that no family should fight this system alone, the core architecture was forged by a solo architect, two loyal dogs, and a vision that healthcare should <span className="text-cyan-400 font-bold drop-shadow-[0_0_8px_rgba(34,211,238,0.2)]">serve the human</span> — not the institution.
                             </p>
                         </div>
 

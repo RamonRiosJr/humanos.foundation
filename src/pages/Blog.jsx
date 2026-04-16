@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
+import { useQuery } from '@tanstack/react-query';
 import SEOMeta from '../components/shared/SEOMeta';
 import { motion, AnimatePresence } from 'framer-motion';
 import { humanosLocalClient } from '../lib/humanos-local-sdk';
@@ -26,28 +27,21 @@ const POSTS_PER_PAGE = 12;
 
 export default function Blog() {
     const { t } = useTranslation();
-    const [posts, setPosts] = useState([]);
     const [activeCategory, setActiveCategory] = useState('All');
     const [searchQuery, setSearchQuery] = useState('');
-    const [loading, setLoading] = useState(true);
     const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
 
-    useEffect(() => {
-        humanosLocalClient.entities.BlogPost.list().then(data => {
-            if (!data) {
-                setPosts([]);
-                setLoading(false);
-                return;
-            }
-            // Sort by date descending
-            const sorted = [...data].sort((a, b) => new Date(b.created_date).getTime() - new Date(a.created_date).getTime());
-            setPosts(sorted);
-            setLoading(false);
-        }).catch(() => {
-            setPosts([]);
-            setLoading(false);
-        });
-    }, []);
+    const { data: postsData, isLoading: loading } = useQuery({
+        queryKey: ['blog_posts'],
+        queryFn: async () => {
+            const data = await humanosLocalClient.entities.BlogPost.list();
+            if (!data) return [];
+            return [...data].sort((a, b) => new Date(b.created_date).getTime() - new Date(a.created_date).getTime());
+        },
+        staleTime: 1000 * 60 * 5, // Cache for 5 minutes
+    });
+
+    const posts = postsData || [];
 
     const filtered = useMemo(() => {
         return posts.filter(post => {
