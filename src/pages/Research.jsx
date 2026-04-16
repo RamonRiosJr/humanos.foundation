@@ -3,7 +3,7 @@ import SEOMeta from '../components/shared/SEOMeta';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
-import { Network, LineChart, TestTube2, ArrowRight } from 'lucide-react';
+import { Network, LineChart, TestTube2, ArrowRight, ShieldCheck, Activity, Users, Clock } from 'lucide-react';
 
 export default function Research() {
     return (
@@ -72,15 +72,112 @@ export default function Research() {
                     </div>
                 </div>
 
-                {/* Federal Framework Callout */}
-                <div className="text-center max-w-2xl mx-auto">
-                    <h3 className="text-lg font-bold text-white mb-4">Federal Health Equity & Priority Population Alignment</h3>
-                    <p className="text-sm text-white/60 leading-relaxed mb-6">
-                        This architecture and subsequent clinical triaging logic has been designed specifically to investigate disparities in healthcare delivery models for individuals with Autism Spectrum Disorder (ASD), directly aligning with federal grant mandates regarding priority populations and executive malfunction in chronic care management.
-                    </p>
-                    <a href="mailto:hello@humanos.foundation" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-400 hover:text-cyan-300 transition-colors">
-                        Request Full Protocol Documentation <ArrowRight className="w-4 h-4" />
-                    </a>
+                {/* Federal Protocol Documentation Section */}
+                <div className="mt-12 border-t border-white/10 pt-12">
+                    <div className="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between mb-8">
+                        <div className="flex items-center gap-3">
+                            <ShieldCheck className="w-6 h-6 text-cyan-400" />
+                            <h3 className="text-xl md:text-2xl font-bold font-outfit text-white">Full Clinical Protocol & Methodology</h3>
+                        </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {/* Column 1: Aims & Methodology */}
+                        <div className="space-y-8">
+                            <div className="glass p-6 rounded-2xl border border-white/5">
+                                <h4 className="flex items-center gap-2 text-sm font-bold text-white mb-4">
+                                    <Activity className="w-4 h-4 text-cyan-400" /> Specific Aims & Mechanics
+                                </h4>
+                                <ul className="space-y-3 text-sm text-white/60">
+                                    <li className="flex items-start gap-2">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5 shrink-0" />
+                                        <p><strong className="text-white/80">Objective:</strong> Quantify the mathematical lift in pharmacological adherence (Rx fills) when compliance-driven UI barriers (2FA resets, generic notifications) are removed via localized FHIR interception.</p>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5 shrink-0" />
+                                        <p><strong className="text-white/80">Data Capture Mechanics:</strong> Real-time Rx refill rates are ingested securely via encrypted e-prescribing webhooks locally. There is NO reliance on unreliable patient self-reporting.</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div className="glass p-6 rounded-2xl border border-white/5">
+                                <h4 className="flex items-center gap-2 text-sm font-bold text-white mb-4">
+                                    <Users className="w-4 h-4 text-purple-400" /> Inclusion & Exclusion Cohorts
+                                </h4>
+                                <ul className="space-y-3 text-sm text-white/60">
+                                    <li className="flex items-start gap-2">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-1.5 shrink-0" />
+                                        <p><strong className="text-white/80">Criteria:</strong> Patients aged 8-17, formally navigating ASD/ADHD neurodivergence, currently requiring daily pharmacological intervention (e.g., Stimulants, SSRIs).</p>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-red-400/80 mt-1.5 shrink-0" />
+                                        <p><strong className="text-white/80">Exclusions:</strong> Patients requiring active inpatient psychiatric monitoring or severe acute intervention, to maintain pure outpatient executive function logging.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/* Column 2: Governance & Timeline */}
+                        <div className="space-y-8">
+                            <div className="glass p-6 rounded-2xl border border-white/5">
+                                <h4 className="flex items-center gap-2 text-sm font-bold text-white mb-4">
+                                    <ShieldCheck className="w-4 h-4 text-emerald-400" /> Zero-Knowledge IRB Defense
+                                </h4>
+                                <p className="text-sm text-white/60 leading-relaxed">
+                                    Because the Aura hOS environment processes all FHIR payloads natively on the sterile client device (AES-GCM 256 encryption), the cloud architecture is mathematically blinded to the patient's Protected Health Information (PHI). This directly legally insulates the study structure, bypassing standard HIPAA BAA and FDA SaMD liabilities entirely, allowing for accelerated Safe Harbor pilot executions.
+                                </p>
+                            </div>
+
+                            <div className="glass p-6 rounded-2xl border border-white/5">
+                                <h4 className="flex items-center gap-2 text-sm font-bold text-white mb-4">
+                                    <Clock className="w-4 h-4 text-amber-400" /> Clinical Phase Timeline
+                                </h4>
+                                <div className="space-y-4">
+                                    <div className="flex gap-4">
+                                        <div className="flex flex-col items-center">
+                                            <div className="w-2 h-2 rounded-full bg-amber-400" />
+                                            <div className="w-px h-8 bg-white/10 my-1" />
+                                        </div>
+                                        <div>
+                                            <p className="text-xs font-bold text-white">Phase I (Months 1-3)</p>
+                                            <p className="text-xs text-white/50">Baseline UI friction logging and cohort onboarding via NGO routes.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-4">
+                                        <div className="flex flex-col items-center">
+                                            <div className="w-2 h-2 rounded-full bg-cyan-400" />
+                                            <div className="w-px h-8 bg-white/10 my-1" />
+                                        </div>
+                                        <div>
+                                            <p className="text-xs font-bold text-white">Phase II (Months 4-6)</p>
+                                            <p className="text-xs text-white/50">Aura hOS continuous zero-friction Rx routing deployment.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-4">
+                                        <div className="flex flex-col items-center">
+                                            <div className="w-2 h-2 rounded-full bg-emerald-400" />
+                                        </div>
+                                        <div>
+                                            <p className="text-xs font-bold text-white">Phase III (Months 7-12)</p>
+                                            <p className="text-xs text-white/50">Quantitative evaluation of adherence lift and Federal Grant reporting.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="mt-8 p-6 bg-red-500/5 border border-red-500/20 rounded-2xl flex flex-col md:flex-row gap-6 items-center justify-between">
+                        <div>
+                            <h4 className="text-sm font-bold text-red-400 mb-2">Institutional Advisory Mandate</h4>
+                            <p className="text-xs text-white/60 leading-relaxed max-w-2xl">
+                                While specifically engineered as open-source technical architecture, federal compliance mandates require rigorous medical oversight. The Foundation is actively securing a <strong>Chief Medical Information Officer (CMIO)</strong> or <strong>Principal Investigator</strong> to permanently anchor the institutional validity of this protocol.
+                            </p>
+                        </div>
+                        <a href="mailto:hello@humanos.foundation" className="shrink-0 px-6 py-2 bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 font-bold text-xs uppercase tracking-widest rounded-xl transition-all duration-300 whitespace-nowrap">
+                            Apply for PI Role
+                        </a>
+                    </div>
                 </div>
 
             </section>
