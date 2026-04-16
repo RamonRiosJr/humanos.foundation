@@ -36,7 +36,7 @@ const AppRouter = () => {
                 } />
                 {Object.entries(Pages).map(([path, Page]) => {
                     // Prevent duplicate routes if manually defined below
-                    if (path === 'Blog' || path === 'BlogPost') return null;
+                    if (path === 'BlogPost') return null;
                     return (
                         <Route
                             key={path}
@@ -49,12 +49,7 @@ const AppRouter = () => {
                         />
                     );
                 })}
-                {/* Canonical SEO Overrides */}
-                <Route path="/research" element={
-                    <LayoutWrapper currentPageName="Blog">
-                        {Pages.Blog ? <Pages.Blog /> : <></>}
-                    </LayoutWrapper>
-                } />
+                {/* Canonical SEO Overrides for Research Articles */}
                 <Route path="/research/:slug" element={
                     <LayoutWrapper currentPageName="BlogPost">
                         {Pages.BlogPost ? <Pages.BlogPost /> : <></>}

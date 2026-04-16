@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from '@/App.jsx'
 import '@/index.css'
 import '@/lib/i18n' // Initialize i18n global engine
+import ErrorBoundary from '@/components/shared/ErrorBoundary'
 
 const posthogKey = import.meta.env.VITE_POSTHOG_KEY;
 
@@ -18,4 +19,8 @@ if (posthogKey) {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(
+    <ErrorBoundary>
+        <App />
+    </ErrorBoundary>
+);
