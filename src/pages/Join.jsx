@@ -52,7 +52,7 @@ export default function Join() {
                                     border: '0',
                                     backgroundColor: 'transparent'
                                 }}
-                                title="Join"
+                                title="Foundation Join Intake Form"
                                 scrolling="yes"
                             />
                         </div>

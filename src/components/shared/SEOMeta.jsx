@@ -8,12 +8,17 @@ export default function SEOMeta({
     title = 'Humanos Foundation — Health Data Sovereignty Movement',
     description = 'The Human Operating System (hOS) movement fights to return health data sovereignty to every patient. Own your health record. Control who sees it. Benefit from it.',
     url = 'https://humanos.foundation',
-    image = 'https://humanos.foundation/og-image.png',
+    image,
     type = 'website',
     article = null, // { publishedTime, modifiedTime, author, section, tags[] }
     noindex = false,
 }) {
     const fullTitle = title.includes('Humanos') ? title : `${title} | Humanos Foundation`;
+    
+    // Dynamically inject OG payload via edge function for articles, fallback to static root image.
+    const dynamicOgImage = image || (type === 'article' 
+        ? `https://humanos.foundation/api/og?title=${encodeURIComponent(title)}&category=${encodeURIComponent(article?.section || '')}`
+        : 'https://humanos.foundation/og-image.png');
 
     useEffect(() => {
         // Title
@@ -52,16 +57,16 @@ export default function SEOMeta({
         setMeta('og:title', fullTitle, 'property');
         setMeta('og:description', description, 'property');
         setMeta('og:url', url, 'property');
-        setMeta('og:image', image, 'property');
+        setMeta('og:image', dynamicOgImage, 'property');
         setMeta('og:type', type, 'property');
         setMeta('og:site_name', 'Humanos Foundation', 'property');
         setMeta('og:locale', 'en_US', 'property');
 
         // Twitter Card
-        setMeta('twitter:card', 'summary_large_image');
+        setMeta('twitter:card', type === 'article' ? 'summary_large_image' : 'summary_large_image');
         setMeta('twitter:title', fullTitle);
         setMeta('twitter:description', description);
-        setMeta('twitter:image', image);
+        setMeta('twitter:image', dynamicOgImage);
         setMeta('twitter:site', '@humanosHQ');
         setMeta('twitter:creator', '@ramonriosjr');
 
