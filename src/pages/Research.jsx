@@ -3,7 +3,7 @@ import SEOMeta from '../components/shared/SEOMeta';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
-import { Network, LineChart, TestTube2, ArrowRight, ShieldCheck, Activity, Users, Clock } from 'lucide-react';
+import { Network, LineChart, TestTube2, ShieldCheck, Activity, Users, Clock } from 'lucide-react';
 
 export default function Research() {
     return (
