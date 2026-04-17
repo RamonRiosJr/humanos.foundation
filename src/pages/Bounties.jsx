@@ -45,9 +45,9 @@ export default function Bounties() {
             
             <PageHero 
                 badge="Decentralized Engineering" 
-                title="Open Source" 
-                titleAccent="Bounties" 
-                subtitle="The Humanos Foundation relies on a decentralized, global engineering base. We pay direct USD cash grants for critical FHIR parsers, edge routing optimizations, and cryptographic security audits." 
+                title="Deferred Impact" 
+                titleAccent="Grants" 
+                subtitle="The Humanos Foundation relies on a decentralized, global engineering base. We formally escrow USD impact grants for critical FHIR parsers, routing optimizations, and cryptographic audits to be paid upon institutional capitalization." 
             />
 
             <section className="py-20 px-4 md:px-8 max-w-5xl mx-auto space-y-16">
@@ -58,7 +58,7 @@ export default function Bounties() {
                         <TerminalSquare className="w-8 h-8 text-cyan-400 mb-4" />
                         <h4 className="text-sm font-bold text-white mb-2">1. Claim the Issue</h4>
                         <p className="text-xs text-white/50 leading-relaxed">
-                            Navigate to our GitHub repositories and comment on an Issue tagged with `bounty-open` to request assignment.
+                            Navigate to our GitHub repositories and comment on an Issue tagged with `bounty-open` to request assignment. You must be formally assigned to secure the commit lock and prevent collision.
                         </p>
                     </div>
                     <div className="glass p-6 rounded-3xl border border-white/5 relative overflow-hidden">
@@ -72,7 +72,7 @@ export default function Bounties() {
                         <CircleDollarSign className="w-8 h-8 text-emerald-400 mb-4" />
                         <h4 className="text-sm font-bold text-white mb-2">3. Merge & Payout</h4>
                         <p className="text-xs text-white/50 leading-relaxed">
-                            Once the Foundation architects squash and merge your code into `main`, the USD bounty is escrowed and executed via Stripe/Crypto immediately upon Seed Capitalization or Federal Grant disbursement.
+                            Once your code is successfully squashed and merged into `main`, the USD impact grant is securely escrowed. Payouts are executed strictly upon Institutional Endowment or Federal Grant disbursement.
                         </p>
                     </div>
                 </div>
@@ -123,8 +123,8 @@ export default function Bounties() {
                 </div>
 
                 <div className="text-center">
-                    <a href="https://github.com/RamonRiosJr" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 hover:bg-cyan-500/20 text-cyan-300 font-bold text-sm tracking-wider uppercase transition-all glow-btn">
-                        View All Open Issues <ArrowUpRight className="w-4 h-4" />
+                    <a href="https://github.com/pulls?q=user%3ARamonRiosJr+is%3Aissue+is%3Aopen+label%3Abounty-open" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 hover:bg-cyan-500/20 text-cyan-300 font-bold text-sm tracking-wider uppercase transition-all glow-btn">
+                        Explore Open Grants <ArrowUpRight className="w-4 h-4" />
                     </a>
                 </div>
 
