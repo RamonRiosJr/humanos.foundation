@@ -9,6 +9,7 @@ import { humanosLocalClient } from '../lib/humanos-local-sdk';
 import { ArrowLeft, Clock, CalendarDays, Tag, MessageSquare } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import rehypeSanitize from 'rehype-sanitize';
+import HighlightShare from '../components/shared/HighlightShare';
 import { createPageUrl } from '@/utils';
 
 // Helper to extract the first image from Markdown
@@ -94,6 +95,7 @@ export default function BlogPost() {
                 }}
             />
             <Navbar />
+            <HighlightShare />
 
             <article className="pt-40 pb-20 px-4 md:px-8 max-w-4xl mx-auto">
                 <Link to={createPageUrl('Blog')} className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors mb-8 text-sm font-medium">
