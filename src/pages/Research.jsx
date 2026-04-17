@@ -3,6 +3,7 @@ import SEOMeta from '../components/shared/SEOMeta';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
+import HighlightShare from '../components/shared/HighlightShare';
 import { Network, LineChart, TestTube2, ShieldCheck, Activity, Users, Clock } from 'lucide-react';
 
 export default function Research() {
@@ -14,6 +15,7 @@ export default function Research() {
                 url="https://humanos.foundation/research" 
             />
             <Navbar />
+            <HighlightShare />
             
             <PageHero 
                 badge="Clinical Hypotheses" 
