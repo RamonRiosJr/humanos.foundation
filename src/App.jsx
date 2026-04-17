@@ -61,14 +61,21 @@ const AppRouter = () => {
     );
 };
 
-const PosthogPageViewTracker = () => {
+const AnalyticsPageViewTracker = () => {
     const location = useLocation();
 
     React.useEffect(() => {
-        // Only track if setup is complete
+        // Track Posthog
         if (import.meta.env.VITE_POSTHOG_KEY) {
             import('posthog-js').then(({ default: posthog }) => {
                 posthog.capture('$pageview');
+            });
+        }
+
+        // Track Google Analytics (GA4) SPA routing dynamically
+        if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('config', 'G-XWJTX77CCX', {
+                page_path: location.pathname + location.search
             });
         }
     }, [location]);
@@ -85,7 +92,7 @@ function App() {
             <A11yProvider>
                 <QueryClientProvider client={queryClientInstance}>
                     <Router>
-                        <PosthogPageViewTracker />
+                        <AnalyticsPageViewTracker />
                         <A11yWidget />
                         <ChatbotWidget />
                         <VaultBackground />
