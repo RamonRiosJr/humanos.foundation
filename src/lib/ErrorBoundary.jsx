@@ -13,8 +13,20 @@ class ErrorBoundary extends React.Component {
     }
 
     componentDidCatch(error, errorInfo) {
-        // You can also log the error to an error reporting service natively here
         console.error("ErrorBoundary caught an error:", error, errorInfo);
+
+        // Intelligent auto-recover for Vite Stale Chunk deployment errors (404s during CI/CD)
+        const isChunkLoadError = error?.message?.match(/Failed to fetch dynamically imported module/i) ||
+                                 error?.message?.match(/Importing a module script failed/i) ||
+                                 error?.message?.match(/dynamically imported module/i);
+        
+        if (isChunkLoadError) {
+            console.warn("Vite Stale Chunk detected. Executing autonomous hard reload to synchronize SPA with Edge deployment.");
+            // Debounce the reload slightly to prevent infinite loops if the chunk is permanently broken
+            setTimeout(() => {
+                window.location.reload();
+            }, 500);
+        }
     }
 
     render() {

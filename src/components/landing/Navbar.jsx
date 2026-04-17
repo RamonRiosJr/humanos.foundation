@@ -27,8 +27,50 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // A11y Focus Trap for Mobile Menu
+    useEffect(() => {
+        if (!menuOpen) return;
+
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') {
+                setMenuOpen(false);
+                return;
+            }
+            if (e.key === 'Tab') {
+                const navElement = document.getElementById('main-navigation');
+                if (!navElement) return;
+
+                // Select all visibly focusable elements inside the navbar
+                const focusableNodes = Array.from(
+                    navElement.querySelectorAll('a[href], button, [tabindex]:not([tabindex="-1"])')
+                ).filter(node => node.offsetParent !== null && window.getComputedStyle(node).display !== 'none');
+
+                if (focusableNodes.length === 0) return;
+
+                const firstNode = focusableNodes[0];
+                const lastNode = focusableNodes[focusableNodes.length - 1];
+
+                if (e.shiftKey) {
+                    if (document.activeElement === firstNode) {
+                        lastNode.focus();
+                        e.preventDefault();
+                    }
+                } else {
+                    if (document.activeElement === lastNode) {
+                        firstNode.focus();
+                        e.preventDefault();
+                    }
+                }
+            }
+        };
+
+        document.addEventListener('keydown', handleKeyDown);
+        return () => document.removeEventListener('keydown', handleKeyDown);
+    }, [menuOpen]);
+
     return (
         <motion.nav
+            id="main-navigation"
             role="navigation"
             aria-label="Main Navigation"
             initial={{ y: -20, opacity: 0 }}
