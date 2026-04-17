@@ -36,7 +36,7 @@ const sections = [
     },
     {
         title: '8. Governing Law',
-        content: `These Terms are governed by the laws of the Commonwealth of Puerto Rico and the United States of America, without regard to conflict of law principles. Any disputes shall be resolved in the courts of Puerto Rico.`,
+        content: `These Terms are governed by the laws of the State of Utah and the United States of America, without regard to conflict of law principles. Any disputes shall be resolved in the courts of Utah.`,
     },
     {
         title: '9. Changes to Terms',
@@ -51,7 +51,7 @@ const sections = [
 export default function Terms() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
-            <SEOMeta title="Terms of Use — Humanos Foundation" description="Terms governing use of humanos.foundation. Informational site only — not medical advice. Governing law: Puerto Rico / United States." url="https://humanos.foundation/terms" />
+            <SEOMeta title="Terms of Use — Humanos Foundation" description="Terms governing use of humanos.foundation. Informational site only — not medical advice. Governing law: Utah / United States." url="https://humanos.foundation/terms" />
             <Navbar />
             <PageHero badge="Legal" title="Terms of" titleAccent="Use" subtitle="Plain language terms governing your use of this Site." />
             <LegalLayout sections={sections} lastUpdated="March 1, 2026" version="1.0" />

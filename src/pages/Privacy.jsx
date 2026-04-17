@@ -40,7 +40,7 @@ const sections = [
     },
     {
         title: '9. Contact',
-        content: `For all privacy-related requests:\n\nEmail: privacy@humanos.foundation\nHumanos Foundation\nPuerto Rico, United States`,
+        content: `For all privacy-related requests:\n\nEmail: privacy@humanos.foundation\nHumanos Foundation\nUtah, United States`,
     },
 ];
 
