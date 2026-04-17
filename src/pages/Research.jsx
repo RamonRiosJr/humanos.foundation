@@ -4,6 +4,7 @@ import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageHero from '../components/shared/PageHero';
 import HighlightShare from '../components/shared/HighlightShare';
+import NativeShareWidget from '../components/shared/NativeShareWidget';
 import { Network, LineChart, TestTube2, ShieldCheck, Activity, Users, Clock } from 'lucide-react';
 
 export default function Research() {
@@ -37,7 +38,14 @@ export default function Research() {
                             Active Pipeline / Federal Phase 1 Pilot
                         </div>
                         
-                        <h2 className="text-2xl md:text-3xl font-bold font-outfit text-white mb-6">Neurodivergent UI Sovereignty vs. Adherence Rates</h2>
+                        <div className="flex items-center justify-between mb-6">
+                            <h2 className="text-2xl md:text-3xl font-bold font-outfit text-white">Neurodivergent UI Sovereignty vs. Adherence Rates</h2>
+                            <NativeShareWidget 
+                                title="Clinical Hypotheses — Humanos Foundation"
+                                text="Review the active clinical hypotheses investigating health data sovereignty at the Humanos Foundation."
+                                url="https://humanos.foundation/research"
+                            />
+                        </div>
                         
                         <div className="grid md:grid-cols-2 gap-8 mb-8">
                             <div>

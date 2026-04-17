@@ -10,6 +10,7 @@ import { ArrowLeft, Clock, CalendarDays, Tag, MessageSquare } from 'lucide-react
 import ReactMarkdown from 'react-markdown';
 import rehypeSanitize from 'rehype-sanitize';
 import HighlightShare from '../components/shared/HighlightShare';
+import NativeShareWidget from '../components/shared/NativeShareWidget';
 import { createPageUrl } from '@/utils';
 
 // Helper to extract the first image from Markdown
@@ -98,9 +99,17 @@ export default function BlogPost() {
             <HighlightShare />
 
             <article className="pt-40 pb-20 px-4 md:px-8 max-w-4xl mx-auto">
-                <Link to={createPageUrl('Blog')} className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors mb-8 text-sm font-medium">
-                    <ArrowLeft className="w-4 h-4" /> Back to Blog
-                </Link>
+                <div className="flex items-center justify-between mb-8">
+                    <Link to={createPageUrl('Blog')} className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors text-sm font-medium">
+                        <ArrowLeft className="w-4 h-4" /> Back to Blog
+                    </Link>
+                    
+                    <NativeShareWidget 
+                        title={`${post.title} | Humanos Foundation`}
+                        text={post.excerpt || `Read ${post.title} on the Humanos Foundation Blog.`}
+                        url={`https://humanos.foundation/research/${post.id}`}
+                    />
+                </div>
 
                 <div className="flex flex-wrap items-center gap-3 mb-6">
                     {post.category && (
