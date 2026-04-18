@@ -3,7 +3,7 @@ import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageCTA from '../components/shared/PageCTA';
 import SEOMeta from '../components/shared/SEOMeta';
-import { Shield, Lock, Cloud, Workflow, Eye, Key } from 'lucide-react';
+import { Lock, Workflow, Key } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function TheSolution() {
