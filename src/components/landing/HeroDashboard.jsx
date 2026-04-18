@@ -7,23 +7,23 @@ export default function HeroDashboard() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-5xl mx-auto mt-12 md:mt-20"
+            className="relative w-full max-w-3xl mx-auto mt-12 md:mt-20"
         >
-            <div className="relative rounded-2xl md:rounded-3xl p-2 md:p-4 bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-purple-500/20 backdrop-blur-xl border border-cyan-500/30 shadow-[0_0_80px_rgba(34,211,238,0.15)] group overflow-hidden">
+            <div className="relative rounded-2xl md:rounded-3xl p-2 md:p-3 bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-purple-500/20 backdrop-blur-xl border border-cyan-500/30 shadow-[0_0_80px_rgba(34,211,238,0.15)] group overflow-hidden">
                 
                 {/* Header bar to keep the UI feel active */}
-                <div className="absolute top-6 left-8 z-20 flex items-center gap-2">
-                    <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse" />
-                    <span className="text-xs md:text-sm text-cyan-400 font-bold tracking-widest uppercase drop-shadow-md">
-                        Provider Sandbox Terminal — Active
+                <div className="absolute top-4 left-6 z-20 flex items-center gap-2">
+                    <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-cyan-400 animate-pulse" />
+                    <span className="text-[10px] md:text-xs text-cyan-400 font-bold tracking-widest uppercase drop-shadow-md">
+                        Provider Terminal — Prototype
                     </span>
                 </div>
 
                 {/* Embedded Dashboard Image */}
                 <div className="relative rounded-xl md:rounded-2xl overflow-hidden bg-[#0d0d15] border border-white/10 shadow-2xl">
                     <img 
-                        src="/aura-hos-enterprise-provider-sandbox.png" 
-                        alt="Aura hOS Enterprise Provider Sandbox UI" 
+                        src="/content/provider-terminal-prototype.jpg" 
+                        alt="Aura hOS Enterprise Provider Terminal Prototype" 
                         className="w-full h-auto object-cover transform object-top transition-transform duration-1000 ease-out group-hover:scale-[1.01]" 
                     />
                     
