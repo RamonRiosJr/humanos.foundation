@@ -10,6 +10,7 @@ const navLinks = [
     { label: 'Origin', href: createPageUrl('Origin') },
     { label: 'Manifesto', href: createPageUrl('Manifesto') },
     { label: 'The Problem', href: createPageUrl('TheProblem') },
+    { label: 'The Solution', href: createPageUrl('TheSolution') },
     { label: 'Principles', href: createPageUrl('Principles') },
     { label: 'Blog', href: createPageUrl('Blog') },
     { label: 'Team', href: createPageUrl('Team') },

@@ -29,6 +29,7 @@ const Security = lazy(() => import('./pages/Security'));
 const Support = lazy(() => import('./pages/Support'));
 const Terms = lazy(() => import('./pages/Terms'));
 const TheProblem = lazy(() => import('./pages/TheProblem'));
+const TheSolution = lazy(() => import('./pages/TheSolution'));
 const Volunteer = lazy(() => import('./pages/Volunteer'));
 const Team = lazy(() => import('./pages/Team'));
 const Whitepaper = lazy(() => import('./pages/Whitepaper'));
@@ -62,6 +63,7 @@ export const PAGES = {
     "Support": Support,
     "Terms": Terms,
     "TheProblem": TheProblem,
+    "TheSolution": TheSolution,
     "Volunteer": Volunteer,
     "Team": Team,
     "whitepaper": Whitepaper,
