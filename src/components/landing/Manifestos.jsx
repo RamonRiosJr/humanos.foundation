@@ -197,14 +197,22 @@ export default function Manifestos() {
                                             </p>
                                         </div>
                                         
-                                        <div className="mt-8 flex justify-start">
+                                        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-start">
+                                            <a
+                                                href="https://aurahos.io/app"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/50 text-emerald-300 text-xs md:text-sm font-black tracking-widest uppercase hover:from-emerald-500/30 hover:to-teal-500/30 hover:border-emerald-300 transition-all shadow-[0_0_20px_rgba(16,185,129,0.2)] hover:shadow-[0_0_40px_rgba(16,185,129,0.4)] hover:scale-105 transform duration-300"
+                                            >
+                                                🟢 Patients Always Free Access
+                                            </a>
                                             <a
                                                 href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-cyan-950/30 border border-cyan-500/30 text-cyan-400 text-xs md:text-sm font-bold tracking-widest uppercase hover:bg-cyan-900/40 hover:border-cyan-400/60 transition-all shadow-[0_0_15px_rgba(34,211,238,0.1)] hover:shadow-[0_0_30px_rgba(34,211,238,0.2)]"
                                             >
-                                                ⚡ Support the Open Source Bridge
+                                                ⚡ Support the bridge
                                             </a>
                                         </div>
                                     </div>
