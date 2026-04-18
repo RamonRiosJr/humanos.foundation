@@ -1,13 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Activity, Heart, Brain, Shield, Zap } from 'lucide-react';
-
-const metrics = [
-    { label: 'History Sync', value: 'Complete', icon: Brain, color: '#00d4ff' },
-    { label: 'Clinical Agenda', value: 'Ready', icon: Heart, color: '#f43f5e' },
-    { label: 'Daily Tasks', value: '3 Pending', icon: Activity, color: '#10b981' },
-    { label: 'Digital Vault', value: 'Sovereign', icon: Shield, color: '#8b5cf6' },
-];
 
 export default function HeroDashboard() {
     return (
@@ -15,88 +7,34 @@ export default function HeroDashboard() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-4xl mx-auto mt-12 md:mt-16"
+            className="relative w-full max-w-5xl mx-auto mt-12 md:mt-20"
         >
-            <div className="glass-strong rounded-2xl md:rounded-3xl p-4 md:p-8 glow-cyan h-full">
-                {/* Header bar */}
-                <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center gap-2">
-                        <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse" />
-                        <span className="text-xs md:text-sm text-cyan-400/80 font-medium tracking-wider uppercase">
-                            hOS Sovereign Terminal — Active
-                        </span>
-                    </div>
-                    <div className="flex gap-1.5">
-                        <div className="w-2 h-2 rounded-full bg-white/10" />
-                        <div className="w-2 h-2 rounded-full bg-white/10" />
-                        <div className="w-2 h-2 rounded-full bg-cyan-400/40" />
-                    </div>
+            <div className="relative rounded-2xl md:rounded-3xl p-2 md:p-4 bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-purple-500/20 backdrop-blur-xl border border-cyan-500/30 shadow-[0_0_80px_rgba(34,211,238,0.15)] group overflow-hidden">
+                
+                {/* Header bar to keep the UI feel active */}
+                <div className="absolute top-6 left-8 z-20 flex items-center gap-2">
+                    <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse" />
+                    <span className="text-xs md:text-sm text-cyan-400 font-bold tracking-widest uppercase drop-shadow-md">
+                        Provider Sandbox Terminal — Active
+                    </span>
                 </div>
 
-                {/* Metrics grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-                    {metrics.map((metric, i) => (
-                        <motion.div
-                            key={metric.label}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 1 + i * 0.15 }}
-                            className="glass rounded-xl p-3 md:p-4 group hover:border-cyan-500/20 transition-all duration-500"
-                        >
-                            <metric.icon
-                                className="w-4 h-4 md:w-5 md:h-5 mb-2 transition-transform duration-500 group-hover:scale-110"
-                                style={{ color: metric.color }}
-                            />
-                            <p className="text-[10px] md:text-xs text-white/40 uppercase tracking-wider mb-1">
-                                {metric.label}
-                            </p>
-                            <p className="text-lg md:text-xl font-semibold text-white">
-                                {metric.value}
-                            </p>
-                        </motion.div>
-                    ))}
-                </div>
-
-                {/* Mini waveform */}
-                <div className="mt-5 glass rounded-xl p-3 md:p-4">
-                    <div className="flex items-center justify-between mb-2">
-                        <div className="flex items-center gap-2">
-                            <Zap className="w-3.5 h-3.5 text-cyan-400" />
-                            <span className="text-xs text-white/40">Clinical Agenda Sync</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                            <Shield className="w-3 h-3 text-emerald-400" />
-                            <span className="text-[10px] text-emerald-400">Zero-Knowledge</span>
-                        </div>
-                    </div>
-                    <div className="flex items-end gap-[2px] h-10 md:h-12">
-                        {Array.from({ length: 48 }).map((_, i) => {
-                            const h = 20 + Math.sin(i * 0.4) * 30 + Math.random() * 25;
-                            return (
-                                <motion.div
-                                    key={i}
-                                    className="flex-1 rounded-full"
-                                    style={{
-                                        background: `linear-gradient(to top, rgba(0,212,255,0.1), rgba(0,212,255,${0.3 + Math.random() * 0.4}))`,
-                                    }}
-                                    initial={{ height: 0 }}
-                                    animate={{ height: `${h}%` }}
-                                    transition={{
-                                        duration: 1.5,
-                                        delay: 1.5 + i * 0.03,
-                                        ease: [0.16, 1, 0.3, 1],
-                                    }}
-                                />
-                            );
-                        })}
-                    </div>
+                {/* Embedded Dashboard Image */}
+                <div className="relative rounded-xl md:rounded-2xl overflow-hidden bg-[#0d0d15] border border-white/10 shadow-2xl">
+                    <img 
+                        src="/aura-hos-enterprise-provider-sandbox.png" 
+                        alt="Aura hOS Enterprise Provider Sandbox UI" 
+                        className="w-full h-auto object-cover transform object-top transition-transform duration-1000 ease-out group-hover:scale-[1.01]" 
+                    />
+                    
+                    {/* Glossy overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.02] to-white/[0.05] pointer-events-none" />
                 </div>
             </div>
 
-            {/* Floating reflection */}
-            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-16 bg-cyan-500/5 blur-3xl rounded-full" />
+            {/* Massive floating reflection */}
+            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-24 bg-cyan-500/20 blur-[100px] rounded-full pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-500/10 blur-[120px] rounded-full pointer-events-none -z-10" />
         </motion.div>
     );
 }
-
-
