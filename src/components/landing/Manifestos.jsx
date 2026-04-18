@@ -139,6 +139,38 @@ export default function Manifestos() {
                                         </motion.div>
                                     ))}
                                 </div>
+                                
+                                {/* Patient Terminal Showcase */}
+                                <motion.div 
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                                    transition={{ duration: 0.8, delay: 1.2 }}
+                                    className="mt-12 md:mt-16 max-w-4xl mx-auto rounded-xl md:rounded-2xl overflow-hidden border border-emerald-500/20 shadow-[0_0_40px_rgba(16,185,129,0.1)] relative group"
+                                >
+                                    <div className="absolute top-0 left-0 w-full h-8 bg-[#0d0d15] flex items-center px-4 border-b border-white/5 z-10">
+                                        <div className="flex gap-1.5">
+                                            <div className="w-2 h-2 rounded-full bg-red-500/50" />
+                                            <div className="w-2 h-2 rounded-full bg-yellow-500/50" />
+                                            <div className="w-2 h-2 rounded-full bg-emerald-500/50" />
+                                        </div>
+                                        <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
+                                            <Shield className="w-3 h-3 text-emerald-400" />
+                                            <span className="text-[9px] md:text-[10px] text-emerald-400/80 font-bold tracking-widest uppercase">
+                                                Zero-Knowledge Patient Vault — Active
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className="bg-[#0d0d15] pt-8 overflow-hidden relative">
+                                        {/* Image */}
+                                        <img 
+                                            src="/patient-terminal-sandbox.png" 
+                                            alt="Aura hOS Patient Terminal Sandbox" 
+                                            className="w-full h-auto object-cover transform transition-transform duration-1000 ease-out group-hover:scale-[1.02]" 
+                                        />
+                                        {/* Glossy overlay */}
+                                        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.02] to-white/[0.05] pointer-events-none" />
+                                    </div>
+                                </motion.div>
                             </div>
                         </motion.div>
                     ) : (
