@@ -171,6 +171,27 @@ export default function Manifestos() {
                                         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.02] to-white/[0.05] pointer-events-none" />
                                     </div>
                                 </motion.div>
+
+                                {/* Builder Dedication */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                                    transition={{ duration: 0.8, delay: 1.4 }}
+                                    className="mt-8 md:mt-12 max-w-3xl mx-auto text-center"
+                                >
+                                    <p className="text-sm md:text-base text-white/70 leading-relaxed font-medium mb-6">
+                                        Dedicating 25 years of technology architecture and process engineering back to patients. Because we demand a better system—one that restores the relationship and communication between doctors and patients. Over <span className="text-cyan-400 font-bold">3,000 engineering hours</span> have brought this open-source application to life. We must build the change ourselves: while legacy EHRs optimize for billing, we optimize for health through sovereign patient documentation and centralized truth. <span className="text-blue-400">💙 RamonRios.NET</span>
+                                    </p>
+                                    
+                                    <a
+                                        href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#0d0d15] border border-emerald-500/30 text-emerald-400 text-xs md:text-sm font-bold tracking-widest uppercase hover:bg-emerald-500/10 hover:border-emerald-400/60 transition-all shadow-[0_0_15px_rgba(16,185,129,0.1)] hover:shadow-[0_0_30px_rgba(16,185,129,0.2)]"
+                                    >
+                                        Support the Open Source Bridge
+                                    </a>
+                                </motion.div>
                             </div>
                         </motion.div>
                     ) : (
