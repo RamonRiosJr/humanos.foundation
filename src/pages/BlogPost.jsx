@@ -15,9 +15,9 @@ import { createPageUrl } from '@/utils';
 
 // Helper to extract the first image from Markdown
 const extractFirstMarkdownImage = (markdownText) => {
-    if (!markdownText) return 'https://humanos.foundation/aura-hos-enterprise-provider-sandbox.png';
+    if (!markdownText) return 'https://humanos.foundation/patient-terminal-sandbox.png';
     const match = markdownText.match(/!\[.*?\]\((.*?)\)/);
-    return match ? match[1] : 'https://humanos.foundation/aura-hos-enterprise-provider-sandbox.png';
+    return match ? match[1] : 'https://humanos.foundation/patient-terminal-sandbox.png';
 };
 
 export default function BlogPost() {
