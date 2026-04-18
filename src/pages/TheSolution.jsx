@@ -67,7 +67,7 @@ export default function TheSolution() {
                 title="Your Body. Your Logic."
                 subtitle="Join the movement that maps health data sovereignty back to its origin."
                 cta="Access Patient Portal"
-                ctaHref="https://app.humanos.foundation"
+                ctaHref="https://app.aurahos.io"
                 secondaryCta="Review the Codebase"
                 secondaryCtaHref="/opensource"
             />
