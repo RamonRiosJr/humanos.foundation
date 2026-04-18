@@ -18,7 +18,7 @@ export default function SEOMeta({
     // Dynamically inject OG payload via edge function for articles, fallback to static root image.
     const dynamicOgImage = image || (type === 'article' 
         ? `https://humanos.foundation/api/og?title=${encodeURIComponent(title)}&category=${encodeURIComponent(article?.section || '')}`
-        : 'https://humanos.foundation/aura-hos-enterprise-provider-sandbox.png');
+        : 'https://humanos.foundation/patient-terminal-sandbox.png');
 
     useEffect(() => {
         // Title

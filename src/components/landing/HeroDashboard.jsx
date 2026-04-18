@@ -15,15 +15,15 @@ export default function HeroDashboard() {
                 <div className="absolute top-4 left-6 z-20 flex items-center gap-2">
                     <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-cyan-400 animate-pulse" />
                     <span className="text-[10px] md:text-xs text-cyan-400 font-bold tracking-widest uppercase drop-shadow-md">
-                        Provider Terminal — Active
+                        Provider Terminal — Prototype
                     </span>
                 </div>
 
                 {/* Embedded Dashboard Image */}
                 <div className="relative rounded-xl md:rounded-2xl overflow-hidden bg-[#0d0d15] border border-white/10 shadow-2xl">
                     <img 
-                        src="/aura-hos-enterprise-provider-sandbox.png" 
-                        alt="Aura hOS Enterprise Provider Sandbox UI" 
+                        src="/content/provider-terminal-prototype.jpg" 
+                        alt="Aura hOS Enterprise Provider Terminal Prototype" 
                         className="w-full h-auto object-cover transform object-top transition-transform duration-1000 ease-out group-hover:scale-[1.01]" 
                     />
                     
