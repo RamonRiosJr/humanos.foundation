@@ -18,7 +18,7 @@ export default function SEOMeta({
     // Dynamically inject OG payload via edge function for articles, fallback to static root image.
     const dynamicOgImage = image || (type === 'article' 
         ? `https://humanos.foundation/api/og?title=${encodeURIComponent(title)}&category=${encodeURIComponent(article?.section || '')}`
-        : 'https://humanos.foundation/og-image.png');
+        : 'https://humanos.foundation/aura-hos-enterprise-provider-sandbox.png');
 
     useEffect(() => {
         // Title
@@ -96,7 +96,7 @@ export default function SEOMeta({
                     '@id': 'https://humanos.foundation/#organization',
                     name: 'Humanos Foundation',
                     url: 'https://humanos.foundation',
-                    logo: 'https://humanos.foundation/logo.png',
+                    logo: 'https://humanos.foundation/aura.png',
                     description: 'A movement dedicated to returning health data sovereignty to every individual.',
                     founder: {
                         '@type': 'Person',

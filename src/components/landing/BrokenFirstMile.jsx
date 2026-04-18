@@ -53,11 +53,23 @@ export default function BrokenFirstMile() {
                         initial={{ opacity: 0, x: -40 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 1, delay: 0.2 }}
-                        className="relative rounded-2xl md:rounded-r-none md:rounded-l-3xl overflow-hidden"
+                        className="relative rounded-2xl md:rounded-r-none md:rounded-l-3xl overflow-hidden group"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-950 to-black" />
+                        {/* Oppressive Emotive Image Mask */}
+                        <div className="absolute inset-0 z-0 overflow-hidden opacity-40 mix-blend-luminosity bg-black">
+                            <motion.img 
+                                initial={{ scale: 1.1, filter: 'blur(4px)' }}
+                                animate={isInView ? { scale: 1.05, filter: 'blur(0px)' } : {}}
+                                transition={{ duration: 2.5, ease: "easeOut", delay: 0.5 }}
+                                src="/content/clipboard-penalty-assembly-line-medicine.jpg" 
+                                alt="Assembly Line Medicine Patient"
+                                className="w-full h-full object-cover origin-center scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out grayscale-[40%]" 
+                            />
+                        </div>
+
+                        <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/90 via-neutral-950/80 to-black/95 z-0" />
                         {/* Grain overlay */}
-                        <div className="absolute inset-0 opacity-20" style={{
+                        <div className="absolute inset-0 opacity-20 z-0 mix-blend-overlay" style={{
                             backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.8\' numOctaves=\'4\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23n)\' opacity=\'0.4\'/%3E%3C/svg%3E")',
                         }} />
 
@@ -110,8 +122,20 @@ export default function BrokenFirstMile() {
                         transition={{ duration: 1, delay: 0.4 }}
                         className="relative rounded-2xl md:rounded-l-none md:rounded-r-3xl overflow-hidden bg-[#0d0d15] text-white group shadow-2xl border-y border-r border-cyan-500/10"
                     >
+                        {/* Emotive UI Image Mask */}
+                        <div className="absolute inset-0 z-0 overflow-hidden mix-blend-screen opacity-40">
+                            <motion.img 
+                                initial={{ scale: 1.1 }}
+                                animate={isInView ? { scale: 1.05 } : {}}
+                                transition={{ duration: 2, ease: "easeOut", delay: 0.8 }}
+                                src="/content/patient-data-sovereignty-vault.jpg" 
+                                alt="Patient Data Sovereignty Vault"
+                                className="w-full h-full object-cover origin-center scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out grayscale-[20%]" 
+                            />
+                        </div>
+
                         {/* Radiant background patterns for 'Light' effect */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#0d0d15] via-cyan-900/40 to-[#10101a] z-0" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#0d0d15]/90 via-cyan-900/40 to-[#10101a]/90 z-0" />
 
                         {/* Radiant glow highlights */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-400/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
