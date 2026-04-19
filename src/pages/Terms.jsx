@@ -51,7 +51,12 @@ const sections = [
 export default function Terms() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
-            <SEOMeta title="Terms of Use — Humanos Foundation" description="Terms governing use of humanos.foundation. Informational site only — not medical advice. Governing law: Utah / United States." url="https://humanos.foundation/terms" />
+            <SEOMeta 
+                title="Terms of Use | FDA SaMD Exclusion & End User Agreement" 
+                description="Terms governing use of the Humanos Foundation and Aura hOS movement. Outlining zero-knowledge administration parameters and FDA SaMD exclusion." 
+                url="https://humanos.foundation/terms" 
+                keywords="FDA SaMD exclusion terms, health tech user agreement, non diagnostic application terms, federal formatting engine medical safe harbor, zero knowledge medical app rules"
+            />
             <Navbar />
             <PageHero badge="Legal" title="Terms of" titleAccent="Use" subtitle="Plain language terms governing your use of this Site." />
             <LegalLayout sections={sections} lastUpdated="March 1, 2026" version="1.0" />

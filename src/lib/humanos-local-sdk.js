@@ -150,14 +150,14 @@ const CORNERSTONE_POSTS = [
         "contentUrl": "/content/blog/the-15-20-page-clipboard-penalty.md"
     },
     {
-        "id": "aura-hos-v080-rc3-the-federal-infrastructure-lock",
-        "title": "Aura hOS v0.8.0-rc.3: The Federal Infrastructure Lock",
-        "excerpt": "After 2,500 hours of development, the Zero-Knowledge Vault architecture is officially flagged as RC.1 and prepared for Federal Grant evaluation.",
+        "id": "aura-hos-v080-rc4-the-federal-infrastructure-lock",
+        "title": "Aura hOS v0.8.0-rc.4: The Federal Infrastructure Lock",
+        "excerpt": "After 2,500 hours of development, the Zero-Knowledge Vault architecture is officially flagged as RC.4 and prepared for Federal Grant evaluation.",
         "category": "Technology",
         "read_time_minutes": 5,
         "published": true,
         "created_date": "2026-04-06T09:00:00Z",
-        "contentUrl": "/content/blog/aura-hos-v080-rc3-the-federal-infrastructure-lock.md"
+        "contentUrl": "/content/blog/aura-hos-v080-rc4-the-federal-infrastructure-lock.md"
     },
     {
         "id": "lockscreen-native-hardware-integrations-launch-update",

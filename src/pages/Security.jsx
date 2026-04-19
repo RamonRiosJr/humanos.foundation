@@ -31,7 +31,12 @@ const outOfScope = [
 export default function Security() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
-            <SEOMeta title="Security & Responsible Disclosure — Humanos Foundation" description="Report vulnerabilities responsibly to Humanos Foundation. We commit to acknowledging security reports within 48 hours and never pursuing legal action against good-faith researchers." url="https://humanos.foundation/security" />
+            <SEOMeta 
+                title="Security & Responsible Disclosure | Bug Bounty Protocols" 
+                description="Report vulnerabilities responsibly to the Humanos Foundation. We protect good-faith researchers reporting on our zero-knowledge health architecture." 
+                url="https://humanos.foundation/security" 
+                keywords="health tech bug bounty, responsible disclosure healthcare, medical application security, Zero-Knowledge security testing, AES-256 GCM hacking bounty, open source medical security"
+            />
             <Navbar />
             <PageHero badge="Security" title="Responsible" titleAccent="Disclosure" subtitle="We take security seriously. If you've found a vulnerability, we want to know — and we'll treat you with respect." />
 

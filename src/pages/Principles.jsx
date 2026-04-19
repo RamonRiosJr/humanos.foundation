@@ -67,9 +67,10 @@ export default function Principles() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
-                title="Our Principles — Zero-Knowledge, Local-First, Patient-First | Humanos Foundation"
-                description="The non-negotiable principles behind the hOS movement: patient-first architecture, zero-knowledge encryption, local-first computing, radical transparency, open standards, and health equity by design."
+                title="Our Principles | Zero-Knowledge, Local-First, Patient-First"
+                description="The core commitments of the hOS movement: patient-first architecture, AES-GCM encryption, local-first computing, open standards, and true health equity."
                 url="https://humanos.foundation/principles"
+                keywords="health equity by design, local first health tech, open standard healthcare, FHIR principles, zero-knowledge encryption principles, radical transparency medical records, health tech non profit"
             />
             <Navbar />
             <PageHero

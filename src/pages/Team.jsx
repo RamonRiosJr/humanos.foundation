@@ -16,9 +16,10 @@ export default function Team() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta 
-                title="Join the Team — Humanos Foundation" 
+                title="Join The Clinical Core | Health Data Sovereignty Operators" 
                 description="Collaborate with a global team of developers, researchers, and advocates building the future of health data sovereignty." 
                 url="https://humanos.foundation/team" 
+                keywords="healthcare open source team, medical software developers, health equity advocates, clinical infrastructure roles, health tech non profit jobs"
             />
             <Navbar />
             
