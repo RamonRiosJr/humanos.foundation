@@ -85,7 +85,7 @@ export default function Developers() {
                         <p className="text-sm text-white/50 leading-relaxed mb-4">The Supabase Deno Edge functions managing the secure webhook routes, powering the interoperable Sovereign Technology.</p>
                         <div className="pt-2 border-t border-white/[0.05]">
                             <span className="inline-flex items-center gap-2 text-[10px] text-emerald-400 font-mono tracking-wide uppercase">
-                                Requires $199/mo Per Provider Seat License. Visit aurahos.io →
+                                Enterprise Clinical Hooks Active →
                             </span>
                         </div>
                     </a>
