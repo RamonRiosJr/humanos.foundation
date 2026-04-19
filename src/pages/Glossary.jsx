@@ -37,9 +37,10 @@ export default function Glossary() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
-                title="Health Data Glossary — FHIR, HIPAA, PHI, Zero-Knowledge & More"
+                title="Health Data Glossary | FHIR, HIPAA, PHI & Zero-Knowledge"
                 description="Plain-language definitions for FHIR, HIPAA, PHI, EHR, zero-knowledge architecture, GDPR, CCPA, patient sovereignty, and other key terms in the health data rights movement."
                 url="https://humanos.foundation/glossary"
+                keywords="health data glossary, FHIR definition, what is zero-knowledge architecture, HIPAA limitations, PHI meaning, patient data sovereignty terms, EHR dictionary, SaMD FDA regulations, decentralized identity healthcare"
             />
             <Navbar />
             <PageHero badge="Reference" title="Health Data" titleAccent="Glossary" subtitle="Plain-language definitions for the terms that matter most in the patient data sovereignty movement." />

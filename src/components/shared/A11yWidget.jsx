@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useA11y } from '@/lib/A11yContext';
-import { Accessibility, Eye, Maximize, Type, Link as LinkIcon, PauseCircle, X, Globe } from 'lucide-react';
+import { PersonStanding, Eye, Maximize, Type, Link as LinkIcon, PauseCircle, X, Globe } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const A11yWidget = () => {
@@ -18,7 +18,7 @@ const A11yWidget = () => {
                 <div className="absolute bottom-16 left-0 bg-slate-900/90 backdrop-blur-xl border border-white/10 rounded-2xl w-72 sm:w-80 p-4 shadow-2xl flex flex-col gap-3 animate-in fade-in slide-in-from-bottom-4">
                     <div className="flex items-center justify-between pb-3 border-b border-white/10">
                         <div className="flex items-center gap-2">
-                            <Accessibility className="w-5 h-5 text-blue-400" />
+                            <PersonStanding className="w-5 h-5 text-blue-400" />
                             <h3 className="font-semibold text-white">{t('a11y.title')}</h3>
                         </div>
                         <button onClick={() => setIsOpen(false)} className="text-slate-400 hover:text-white transition-colors" aria-label={t('a11y.close')}>
@@ -96,7 +96,7 @@ const A11yWidget = () => {
                 aria-label="Toggle Accessibility Menu"
                 aria-expanded={isOpen}
             >
-                {isOpen ? <X className="w-7 h-7" /> : <Accessibility className="w-7 h-7" />}
+                {isOpen ? <X className="w-7 h-7" /> : <PersonStanding className="w-7 h-7" />}
             </button>
         </div>
     );

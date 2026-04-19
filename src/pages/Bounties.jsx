@@ -37,9 +37,10 @@ export default function Bounties() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta 
-                title="Open Source Developer Bounties — Humanos Foundation" 
-                description="Contribute to the open-source Aura hOS clinical routing matrix and claim USD bounties for merged Pull Requests." 
+                title="Open Source Developer Bounties | FHIR Engineering Grants" 
+                description="Contribute to the open-source Aura hOS clinical routing matrix. Claim USD bounties for merged Pull Requests in React Native, Deno, and FHIR architecture." 
                 url="https://humanos.foundation/bounties" 
+                keywords="open source bounties, FHIR parsing development, Deno edge functions jobs, React Native health tech, GitHub engineering grants, health tech developer bounties, healthcare API developer, open source software contributions"
             />
             <Navbar />
             

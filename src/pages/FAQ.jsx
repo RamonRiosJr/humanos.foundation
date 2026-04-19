@@ -74,9 +74,10 @@ export default function FAQ() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
-                title="FAQ — Patient Data Rights, hOS Movement & Health Sovereignty"
-                description="Answers to common questions about the hOS movement, patient data ownership, HIPAA, zero-knowledge architecture, FHIR, and how to get involved with Humanos Foundation."
+                title="FAQ | Patient Data Rights & Zero-Knowledge Healthcare"
+                description="Answers to common questions about the hOS movement, patient data ownership, the HIPAA vs FTC HBNR loophole, zero-knowledge architecture, and interoperability."
                 url="https://humanos.foundation/faq"
+                keywords="patient data questions, is my health data secure, who owns my medical records, FTC HBNR loop hole, zero knowledge healthcare faq, HIPAA vs FTC HBNR, health tech open source framework"
             />
             <Navbar />
             <PageHero badge="Common Questions" title="Frequently Asked" titleAccent="Questions" subtitle="Everything you need to know about the hOS movement, patient data rights, and how to get involved." />
