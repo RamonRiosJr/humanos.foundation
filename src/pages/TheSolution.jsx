@@ -61,7 +61,6 @@ export default function TheSolution() {
                             <p className="text-white/60 text-sm leading-relaxed">The First Mile mapping logic automatically writes your continuous narrative into whatever PDF, HL7, or proprietary webhook the clinic demands, stripping the 15-page clipboard tax entirely.</p>
                         </div>
                     </div>
-                    </div>
 
                     {/* Patient Terminal Showcase */}
                     <motion.div 
