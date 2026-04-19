@@ -16,6 +16,21 @@
 
 </div>
 
+## 📱 Ecosystem Showcase
+
+The Aura hOS Sovereign Architecture powers our federated clinic routing, generating Zero-SSN environments and absolute cryptographic isolation.
+
+<p align="center">
+  <img src="public/showcase/aura-hos-zero-knowledge-encryption-vault.png" width="48%" style="margin: 1%" alt="Zero-Knowledge Encryption Vault" />
+  <img src="public/showcase/aura-hos-b2b-zero-ssn-patient-dashboard.png" width="48%" style="margin: 1%" alt="Zero-SSN Patient Dashboard" />
+</p>
+<p align="center">
+  <img src="public/showcase/aura-hos-medication-efficacy-telemetry.png" width="48%" style="margin: 1%" alt="Medication Efficacy Telemetry" />
+  <img src="public/showcase/aura-hos-dynamic-care-team.png" width="48%" style="margin: 1%" alt="Dynamic Care Team" />
+</p>
+
+---
+
 ## 🌍 The Mission
 
 The **Humanos Foundation** is the 501(c)(3) Sovereign advocacy wing of the **Aura hOS™ (Human Operating System)**. We are a global network of patients, clinicians, and technologists dedicated to dismantling the 15-20 page clinical clipboard penalty. 
