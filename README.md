@@ -35,6 +35,18 @@ The Aura hOS Sovereign Architecture powers our federated clinic routing, generat
 
 The **Humanos Foundation** is the 501(c)(3) Sovereign advocacy wing of the **Aura hOS™ (Human Operating System)**. We are a global network of patients, clinicians, and technologists dedicated to dismantling the 15-20 page clinical clipboard penalty. 
 
+### 🏛️ The Foundation Vanguard
+Our movement replaces the hostile "assembly-line" medical intake process with a cryptographic Digital Handshake, permanently securing patient data autonomy.
+
+<p align="center">
+  <img src="public/content/clipboard-penalty-assembly-line-medicine.jpg" width="48%" style="margin: 1%" alt="The Clipboard Penalty" />
+  <img src="public/showcase/clipboard-vs-handsake.jpg" width="48%" style="margin: 1%" alt="Clipboard vs Digital Handshake" />
+</p>
+<p align="center">
+  <img src="public/content/patient-data-sovereignty-vault.jpg" width="48%" style="margin: 1%" alt="Patient Data Sovereignty Vault" />
+  <img src="public/showcase/aura-60-sec.jpg" width="48%" style="margin: 1%" alt="Aura 60 Seconds Workflow" />
+</p>
+
 This repository powers our digital advocacy platform, designed to manage donor pathways, parse localized Markdown for our sovereign education library, and facilitate Federated Clinic Lead Generation via the FHIR R4 schema.
 
 ---
