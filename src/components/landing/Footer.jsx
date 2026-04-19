@@ -9,7 +9,10 @@ const footerLinks = {
         { label: 'Origin', page: 'Origin' },
         { label: 'Manifesto', page: 'Manifesto' },
         { label: 'The Problem', page: 'TheProblem' },
+        { label: 'The Solution', page: 'TheSolution' },
         { label: 'Our Principles', page: 'Principles' },
+        { label: 'Team', page: 'Team' },
+        { label: 'Events', page: 'Events' },
         { label: 'Join the Movement', page: 'Join' },
     ],
     Resources: [
@@ -17,6 +20,7 @@ const footerLinks = {
         { label: 'Developer Portal (API)', page: 'Developers' },
         { label: 'Interactive Sandbox', href: 'https://aurahos.io/demo', isExternal: true },
         { label: 'Clinical Research', page: 'Research' },
+        { label: 'Ecosystem Resources', page: 'Resources' },
         { label: 'Blog & Insights', page: 'Blog' },
         { label: 'Press & Media', page: 'Press' },
         { label: 'FAQ', page: 'FAQ' },
@@ -34,6 +38,7 @@ const footerLinks = {
     ],
     Connect: [
         { label: 'Contact', page: 'Contact' },
+        { label: 'Help & Support', page: 'Support' },
         { label: 'Partners', page: 'Partners' },
         { label: 'Volunteer', page: 'Volunteer' },
         { label: 'Security', page: 'Security' },

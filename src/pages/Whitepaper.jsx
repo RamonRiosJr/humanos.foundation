@@ -44,7 +44,7 @@ export default function Whitepaper() {
                     </h1>
                     
                     <p className="text-white/70 mb-8 leading-relaxed font-medium">
-                        To maintain strict non-profit compliance boundaries, the Data Security & Privacy Whitepaper is now hosted securely on our commercial Sovereign Framework.
+                        To maintain strict non-profit compliance boundaries, the Data Security & Privacy Whitepaper is now hosted securely on the Aura hOS Sovereign Architecture.
                     </p>
 
                     <div className="bg-white/[0.03] border border-white/10 rounded-xl p-5 mb-6 backdrop-blur-sm relative overflow-hidden group">
