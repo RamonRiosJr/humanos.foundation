@@ -26,7 +26,12 @@ const principles = [
 export default function OpenSource() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
-            <SEOMeta title="Open Source Health Technology — Humanos Foundation" description="We believe in open source as a philosophy. Explore open-source health projects, FHIR standards, and the Coqui Cloud Dev Co. technical infrastructure behind the hOS movement." url="https://humanos.foundation/open-source" />
+            <SEOMeta 
+                title="Open Source Health Technology | The Clinical Routing Matrix" 
+                description="We believe in open source as a philosophy. Explore open-source health projects, FHIR standards, and the Coqui Cloud technical infrastructure behind hOS." 
+                url="https://humanos.foundation/open-source" 
+                keywords="open source medical software, FHIR standard implementation, health tech infrastructure, open architecture healthcare, patient first technology, open healthcare APIs, Coqui Cloud Dev Co, free clinical routing matrix"
+            />
             <Navbar />
             <PageHero badge="Open Source" title="Open by" titleAccent="Default" subtitle="We believe in open source as a philosophy, not just a development model. Transparency, collaboration, and freedom are how we build trust." />
             <section className="pb-20 px-4 md:px-8">
