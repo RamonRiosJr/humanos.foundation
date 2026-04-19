@@ -12,6 +12,7 @@ const navLinks = [
     { label: 'The Problem', href: createPageUrl('TheProblem') },
     { label: 'The Solution', href: createPageUrl('TheSolution') },
     { label: 'Principles', href: createPageUrl('Principles') },
+    { label: 'Developers', href: createPageUrl('Developers') },
     { label: 'Blog', href: createPageUrl('Blog') },
     { label: 'Team', href: createPageUrl('Team') },
     { label: 'Press', href: createPageUrl('Press') },
