@@ -3,7 +3,7 @@ import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
 import PageCTA from '../components/shared/PageCTA';
 import SEOMeta from '../components/shared/SEOMeta';
-import { Lock, Workflow, Key } from 'lucide-react';
+import { Lock, Workflow, Key, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function TheSolution() {
@@ -61,6 +61,40 @@ export default function TheSolution() {
                             <p className="text-white/60 text-sm leading-relaxed">The First Mile mapping logic automatically writes your continuous narrative into whatever PDF, HL7, or proprietary webhook the clinic demands, stripping the 15-page clipboard tax entirely.</p>
                         </div>
                     </div>
+                    </div>
+
+                    {/* Patient Terminal Showcase */}
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="mt-20 max-w-5xl mx-auto rounded-xl md:rounded-3xl overflow-hidden border border-emerald-500/20 shadow-[0_0_40px_rgba(16,185,129,0.1)] relative group"
+                    >
+                        <div className="absolute top-0 left-0 w-full h-8 bg-[#0d0d15] flex items-center px-4 border-b border-white/5 z-10">
+                            <div className="flex gap-1.5">
+                                <div className="w-2 h-2 rounded-full bg-red-500/50" />
+                                <div className="w-2 h-2 rounded-full bg-yellow-500/50" />
+                                <div className="w-2 h-2 rounded-full bg-emerald-500/50" />
+                            </div>
+                            <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
+                                <Shield className="w-3 h-3 text-emerald-400" />
+                                <span className="text-[9px] md:text-[10px] text-emerald-400/80 font-bold tracking-widest uppercase">
+                                    Zero-Knowledge Patient Vault — Active
+                                </span>
+                            </div>
+                        </div>
+                        <div className="bg-[#0d0d15] pt-8 overflow-hidden relative">
+                            {/* Image */}
+                            <img 
+                                src="/patient-terminal-sandbox.png" 
+                                alt="Aura hOS Patient Terminal Sandbox" 
+                                className="w-full h-auto object-cover transform transition-transform duration-1000 ease-out group-hover:scale-[1.02]" 
+                            />
+                            {/* Glossy overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.02] to-white/[0.05] pointer-events-none" />
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 

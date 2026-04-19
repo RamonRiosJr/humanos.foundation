@@ -1,6 +1,6 @@
 # The RC.3 Validation
 
-Today, the Humanos Foundation officially promotes the Aura hOS™ ecosystem to **v0.8.0-rc.3**. This release candidate marks the culmination of 2,500 hours of continuous architectural refinement, strictly governed by the Architect Assessor Protocol.
+Today, the Humanos Foundation officially promotes the Aura hOS™ ecosystem to **v0.8.0-rc.4**. This release candidate marks the culmination of 2,500 hours of continuous architectural refinement, strictly governed by the Architect Assessor Protocol.
 
 ### Locking the Zero-Knowledge Vault
 
