@@ -10,9 +10,10 @@ export default function TheSolution() {
     return (
         <div className="bg-obsidian min-h-screen text-white font-sans selection:bg-cyan-500/30 selection:text-cyan-50">
             <SEOMeta
-                title="The Solution | Humanos Foundation"
-                description="Zero-Knowledge architecture. Absolute patient sovereignty. Discover how the Human Operating System terminates the 15-page clipboard penalty."
-                url="https://humanos.foundation/thesolution"
+                title="The Sovereign Solution | Cryptographic Health Vault"
+                description="Secure your medical data locally using AES-256 encryption. Aura hOS uses FHIR interoperability to instantly map your continuous narrative directly into any clinic."
+                url="https://humanos.foundation/the-solution"
+                keywords="local first medical app, zero knowledge health data, AES-256 health encryption, FHIR R4 interoperability, secure health wallet, sovereign identity, patient health app, biometric encrypted health, HIPAA secure frontend, clinical cryptography"
             />
             <Navbar />
 

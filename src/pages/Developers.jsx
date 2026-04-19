@@ -10,9 +10,10 @@ export default function Developers() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta 
-                title="Aura hOS Developer API — FHIR R4 Interoperability" 
-                description="Technical documentation for integrating Epic/Cerner endpoints with the Aura hOS Zero-Knowledge architecture." 
-                url="https://humanos.foundation/developers" 
+                title="Sovereign Developer Portal | FHIR R4 REST API Webhooks" 
+                description="Technical documentation for integrating Epic, Oracle Cerner, and AthenaHealth endpoints with the Aura hOS Zero-Knowledge FHIR R4 architecture." 
+                url="https://humanos.foundation/developers"
+                keywords="health tech API, FHIR R4 documentation, SMART on FHIR development, healthcare webhook, Epic MyChart integration, Cerner Health API, AthenaHealth JSON parser, Supabase Deno Edge functions, Zero-Knowledge OAuth routing" 
             />
             <SurvivalBanner />
             <Navbar />
