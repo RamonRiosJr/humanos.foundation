@@ -11,9 +11,10 @@ export default function Research() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta 
-                title="Clinical Research & Federal Outcomes — Humanos Foundation" 
-                description="Review the active clinical hypotheses and federal health equity directives investigating health data sovereignty." 
+                title="Clinical Research & Federal Outcomes | Neurosociological Hypotheses" 
+                description="Review the active clinical hypotheses and federal health equity directives investigating health data sovereignty, pharmacological adherence, and neurodivergent care." 
                 url="https://humanos.foundation/research" 
+                keywords="health equity research, clinical outcomes hypotheses, neurodivergent medication adherence, FDA SaMD bypass, IRB research safe harbor, FHIR clinical trials, physiological data sovereignity, health equity federal grants"
             />
             <Navbar />
             <HighlightShare />

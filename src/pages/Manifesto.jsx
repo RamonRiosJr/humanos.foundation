@@ -107,9 +107,10 @@ export default function Manifesto() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
-                title="The hOS Manifesto — Demanding Individualized Care"
-                description="A formal declaration against assembly-line medicine. We believe in rooting out the causes of suffering, not medicating symptoms in a 5-minute clinical documentation. Join the movement."
+                title="The hOS Manifesto | Demanding Individualized Care"
+                description="A formal declaration against assembly-line medicine and polypharmacy. We believe in compiling root-cause health data, not medicating symptoms in a 5-minute clinical window."
                 url="https://humanos.foundation/manifesto"
+                keywords="patient rights manifesto, health equity, individualized care, medical data ownership, First Mile of care, neurodivergent patient rights, healthcare revolution, chronic illness advocacy, medical gaslighting, patient empowerment"
                 type="article"
                 article={{ publishedTime: '2026-03-01', author: 'Ramon Luis Rios Jr.', section: 'Movement' }}
             />

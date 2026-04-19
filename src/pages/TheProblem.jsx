@@ -26,9 +26,10 @@ export default function TheProblem() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
-                title="The Problem — Assembly-Line Medicine & Over-Medication"
-                description="The healthcare system is a billing machine. 15 pages of arbitrary paperwork and a 5-minute clinical documentation lead directly to the medication gallery."
+                title="The Health Data Problem | Over-Medication & Institutional Silos"
+                description="The modern healthcare system is a high-volume billing engine. See how local-first data architecture solves the 15-minute diagnostic time crunch and stops the prescriptive spiral."
                 url="https://humanos.foundation/the-problem"
+                keywords="electronic health records failure, diagnostic latency, polypharmacy root cause, systemic medical failure, patient record silos, health data brokerage, assembly-line medicine, care fragmentation, prescriptive cascade"
             />
             <Navbar />
             <PageHero

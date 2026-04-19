@@ -57,9 +57,10 @@ export default function Origin() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta
-                title="Origin Story — Ramon Luis Rios Jr. & the hOS Movement"
-                description="hOS was engineered on the front lines of the healthcare crisis by Ramon Luis Rios Jr., a patient who refused to accept a broken healthcare system. The origin story of Humanos Foundation and the health data sovereignty movement."
+                title="The Human Origin | Ramon Rios Jr. & Health Sovereignty"
+                description="The hOS movement was engineered on the front lines of the healthcare crisis. Read the origin story of Ramon Rios Jr. and the fight for patient data rights."
                 url="https://humanos.foundation/origin"
+                keywords="Ramon Luis Rios Jr, health tech founder, patient advocacy data rights, open source medical origin, health tech movement"
             />
             <Navbar />
             <PageHero

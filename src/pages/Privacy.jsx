@@ -47,7 +47,13 @@ const sections = [
 export default function Privacy() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
-            <SEOMeta title="Privacy Policy — Humanos Foundation" description="How Humanos Foundation collects, uses, and protects your personal data. GDPR and CCPA compliant. We never sell your data." url="https://humanos.foundation/privacy" noindex={false} />
+            <SEOMeta 
+                title="Privacy & FTC HBNR Compliance | Foundation Protocols" 
+                description="How Humanos Foundation protects your personal data using Zero-Knowledge cryptographic routing. GDPR, CCPA, and FTC Health Breach Notification compliant." 
+                url="https://humanos.foundation/privacy" 
+                keywords="FTC HBNR Compliance, zero-knowledge privacy policy, GDPR health tech, CCPA patient data, medical data protection laws, HIPAA alternative compliance, secure medical frontend, health data privacy policy"
+                noindex={false} 
+            />
             <Navbar />
             <PageHero badge="Legal" title="Privacy" titleAccent="Policy" subtitle="We believe in radical transparency — including about how we handle your data." />
             <LegalLayout sections={sections} lastUpdated="March 1, 2026" version="1.0" />
