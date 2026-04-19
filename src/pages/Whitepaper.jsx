@@ -16,9 +16,10 @@ export default function Whitepaper() {
     return (
         <div className="bg-obsidian min-h-screen text-white flex flex-col overflow-x-hidden">
             <SEOMeta
-                title="Whitepaper Relocation | Humanos Foundation"
-                description="The Aura hOS Architecture Whitepaper has been securely moved to the Sovereign Framework."
+                title="Sovereign Architecture Whitepaper | Aura hOS Framework"
+                description="The Aura hOS Architecture Whitepaper outlines the zero-knowledge biometric architecture. Read the secure federal protocol."
                 url="https://humanos.foundation/whitepaper"
+                keywords="health architecture whitepaper, zero knowledge medical framework, FHIR compliance document, federal health equity framework, open source clinical routing"
                 type="website"
             />
             

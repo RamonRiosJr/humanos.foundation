@@ -16,7 +16,7 @@ const supportWays = [
 export default function Support() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
-            <SEOMeta title="Support the Movement — Donate & Contribute to hOS" description="Support Humanos Foundation's mission for patient data sovereignty. Volunteer, contribute code, spread the word, or explore our research roadmap. Every contribution fuels the revolution." url="https://humanos.foundation/support" />
+            <SEOMeta title="Support the Movement | 501(c)(3) Health Sovereignty" description="Support Humanos Foundation's mission for patient data sovereignty. Volunteer, contribute code, spread the word, or explore our research roadmap. Every contribution fuels the revolution." url="https://humanos.foundation/support" keywords="501(c)3 donations, support health equity, health tech grant funding, donate to health data sovereignty, open source clinical funding, medical research contribution" />
             <Navbar />
             <PageHero badge="Support the Mission" title="Fuel the" titleAccent="Revolution" subtitle="The hOS movement depends on people who believe health data sovereignty is worth fighting for. Here's how you can help." />
             <section className="pb-28 px-4 md:px-8">

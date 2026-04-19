@@ -52,7 +52,7 @@ const resourceGroups = [
 export default function Resources() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
-            <SEOMeta title="Research & Resources — Health Data Rights, HIPAA, GDPR | Humanos Foundation" description="Curated resources for patients, advocates, researchers, and technologists: regulatory references, patient advocacy organizations, academic research, and open-source health projects." url="https://humanos.foundation/resources" />
+            <SEOMeta title="Research & Resources | Health Data Rights, HIPAA, GDPR" description="Curated resources for patients, advocates, researchers, and technologists: regulatory references, patient advocacy organizations, academic research, and open-source health projects." url="https://humanos.foundation/resources" keywords="HIPAA alternatives, GDPR health data, patient advocacy resources, health data research literature, open source health resources, biometric data protection guides" />
             <Navbar />
             <PageHero badge="Knowledge Base" title="Research &" titleAccent="Resources" subtitle="Curated resources for patients, advocates, researchers, and technologists building toward health data sovereignty." />
             <section className="pb-28 px-4 md:px-8">

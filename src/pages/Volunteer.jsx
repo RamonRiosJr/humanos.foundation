@@ -18,7 +18,7 @@ const roles = [
 export default function Volunteer() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
-            <SEOMeta title="Volunteer for the hOS movement — Humanos Foundation" description="Contribute to the health data sovereignty movement as a developer, writer, translator, advocate, researcher, or community leader. Volunteer with Humanos Foundation." url="https://humanos.foundation/volunteer" />
+            <SEOMeta title="Volunteer for the hOS movement | Open Source Clinical Data" description="Contribute to the health data sovereignty movement as a developer, writer, translator, advocate, researcher, or community leader. Volunteer with Humanos Foundation." url="https://humanos.foundation/volunteer" keywords="open source volunteer, non profit clinical data, health equity volunteer, open source healthcare, human operating system community, volunteer medical research" />
             <Navbar />
             <PageHero badge="Get Involved" title="Volunteer for" titleAccent="the Movement" subtitle="The hOS movement is built by volunteers who believe health data sovereignty is worth fighting for. Find your role." />
             <section className="pb-28 px-4 md:px-8">
