@@ -174,7 +174,7 @@ export default function Manifestos() {
                                                 rel="noopener noreferrer"
                                                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/50 text-emerald-300 text-xs md:text-sm font-black tracking-widest uppercase hover:from-emerald-500/30 hover:to-teal-500/30 hover:border-emerald-300 transition-all shadow-[0_0_20px_rgba(16,185,129,0.2)] hover:shadow-[0_0_40px_rgba(16,185,129,0.4)] hover:scale-105 transform duration-300"
                                             >
-                                                🟢 Patients Always Free Access
+                                                🟢 Patient Always Free APP Access
                                             </a>
                                             <a
                                                 href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom"
