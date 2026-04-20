@@ -22,7 +22,7 @@ export default function Developers() {
                 badge="API & Architecture" 
                 title="Developer" 
                 titleAccent="Portal" 
-                subtitle="Aura hOS is entirely open-source. The Zero-Knowledge OAuth Webhook API is currently undergoing strict regulatory compliance review. Developer access and B2B SaaS Clinic licensing ($199/mo per Provider Seat) will unlock upon clearance." 
+                subtitle="Aura hOS is entirely open-source. The Zero-Knowledge OAuth Webhook API is currently undergoing strict regulatory compliance review. Developer access will unlock upon clearance." 
             />
 
             <section className="py-20 px-4 md:px-8 max-w-5xl mx-auto space-y-16">
