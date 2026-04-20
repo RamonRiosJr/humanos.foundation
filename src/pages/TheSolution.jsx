@@ -5,6 +5,7 @@ import PageCTA from '../components/shared/PageCTA';
 import SEOMeta from '../components/shared/SEOMeta';
 import { Lock, Workflow, Key, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
+import IntakePoll from '../components/shared/IntakePoll';
 
 export default function TheSolution() {
     return (
@@ -61,7 +62,13 @@ export default function TheSolution() {
                             <p className="text-white/60 text-sm leading-relaxed">The First Mile mapping logic automatically writes your continuous narrative into whatever PDF, HL7, or proprietary webhook the clinic demands, stripping the 15-page clipboard tax entirely.</p>
                         </div>
                     </div>
+                </div>
+            </section>
 
+            <IntakePoll />
+
+            <section className="py-20 px-4 md:px-8 bg-obsidian relative">
+                <div className="max-w-7xl mx-auto">
                     {/* Patient Terminal Showcase */}
                     <motion.div 
                         initial={{ opacity: 0, y: 20 }}
