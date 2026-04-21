@@ -75,7 +75,7 @@ export default function IntakePoll() {
                     });
                     setDbData(mappedData);
                 }
-            } catch (err) {
+            } catch {
                 console.log("Awaiting Supabase Database Configuration...");
             }
         };
@@ -99,7 +99,7 @@ export default function IntakePoll() {
                 ...prev,
                 [`${questionId}_${optionId}`]: (prev ? prev[`${questionId}_${optionId}`] || 0 : 0) + 1
             }));
-        } catch (err) {
+        } catch {
             // Silently fail if not configured yet
         }
     };
@@ -111,12 +111,7 @@ export default function IntakePoll() {
         }
     };
 
-    const prevQuestion = () => {
-        if (currentStep > 0) {
-            setCurrentStep(c => c - 1);
-            setShowResults(userVotes[POLL_QUESTIONS[currentStep - 1].id] !== undefined);
-        }
-    };
+
 
     // Calculate total votes dynamically
     const getOptionsWithPercentages = (question) => {
