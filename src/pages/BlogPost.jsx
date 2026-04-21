@@ -37,7 +37,7 @@ export default function BlogPost() {
                     } else {
                         data.content = "> *Error loading secure markdown file.*";
                     }
-                } catch (e) {
+                } catch {
                     data.content = "> *Network error fetching content.*";
                 }
             }
