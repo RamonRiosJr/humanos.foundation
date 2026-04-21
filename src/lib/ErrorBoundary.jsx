@@ -1,5 +1,6 @@
 import React from 'react';
 import { AlertCircle } from 'lucide-react';
+import { Logger } from './logger';
 
 class ErrorBoundary extends React.Component {
     constructor(props) {
@@ -13,7 +14,7 @@ class ErrorBoundary extends React.Component {
     }
 
     componentDidCatch(error, errorInfo) {
-        console.error("ErrorBoundary caught an error:", error, errorInfo);
+        Logger.error(error, "Display Surface Failure");
 
         // Intelligent auto-recover for Vite Stale Chunk deployment errors (404s during CI/CD)
         const isChunkLoadError = error?.message?.match(/Failed to fetch dynamically imported module/i) ||
@@ -21,7 +22,7 @@ class ErrorBoundary extends React.Component {
                                  error?.message?.match(/dynamically imported module/i);
         
         if (isChunkLoadError) {
-            console.warn("Vite Stale Chunk detected. Executing autonomous hard reload to synchronize SPA with Edge deployment.");
+            Logger.warn("Vite Stale Chunk detected. Executing autonomous hard reload to synchronize SPA with Edge deployment.");
             // Debounce the reload slightly to prevent infinite loops if the chunk is permanently broken
             setTimeout(() => {
                 window.location.reload();
