@@ -11,7 +11,11 @@ export default async function handler(req, res) {
         }
 
         const odooUrl = `https://team.humanos.foundation/humanos_api?model=${model}&method=${method}`;
-        const apiKey = process.env.VITE_ODOO_API_KEY || 'fd7ad0b686cbb2c00e6e8ccecf8c73e3832caf6b';
+        const apiKey = process.env.VITE_ODOO_API_KEY;
+        
+        if (!apiKey) {
+            return res.status(500).json({ error: 'Server authentication misconfiguration (Missing ENV)' });
+        }
         
         const payload = data ? JSON.stringify(data) : undefined;
         const fetchOptions = {
