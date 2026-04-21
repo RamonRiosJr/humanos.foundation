@@ -23,7 +23,7 @@ const terms = [
     { term: 'Patient Sovereignty', full: 'Patient Data Sovereignty', definition: 'The principle that patients have absolute rights over their biological data—including the choice of whom to trust. It is not about "protecting" data behind a corporate wall; it is about mathematically ensuring the patient is the sole gatekeeper of their own history.' },
 ];
 
-const alphabet = [...new Set(terms.map(t => t.term[0]))].sort();
+const _alphabet = [...new Set(terms.map(t => t.term[0]))].sort();
 
 export default function Glossary() {
     const [filter, setFilter] = useState('');

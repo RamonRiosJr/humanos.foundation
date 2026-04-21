@@ -10,7 +10,6 @@ import PageCTA from '../components/shared/PageCTA';
 import { Clock, ArrowRight, Search, Calendar } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 
 const categories = ['All', 'Patient Rights', 'Technology', 'Policy & Regulation', 'Movement Stories', 'Research & Data', 'Community'];
 
@@ -26,7 +25,6 @@ const categoryColors = {
 const POSTS_PER_PAGE = 12;
 
 export default function Blog() {
-    const { t } = useTranslation();
     const [activeCategory, setActiveCategory] = useState('All');
     const [searchQuery, setSearchQuery] = useState('');
     const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
