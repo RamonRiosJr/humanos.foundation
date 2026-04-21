@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { X, Send } from 'lucide-react';
 import { AILogo } from './AILogo';
 
 const ChatbotWidget = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [botState, setBotState] = useState('idle');
-
-    // Bot state is kept static pending actual LLM API connection integration
-    useEffect(() => {
-        if (!isOpen) setBotState('idle');
-    }, [isOpen]);
-
     return (
         <div className="fixed bottom-6 right-6 z-50">
             {isOpen && (
