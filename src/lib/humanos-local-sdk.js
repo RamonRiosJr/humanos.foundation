@@ -248,7 +248,7 @@ export const humanosLocalClient = {
         JoinRequest: {
             create: async (data) => {
                 if (!IS_PRODUCTION) {
-                    console.log('Zero-Knowledge: Join Request Captured', data);
+                    console.log('Zero-Knowledge: Join Request Captured [REDACTED]');
                 }
                 return storage.add('join_requests', data);
             },
@@ -257,7 +257,7 @@ export const humanosLocalClient = {
         ContactMessage: {
             create: async (data) => {
                 if (!IS_PRODUCTION) {
-                    console.log('Zero-Knowledge: Contact Message Captured', data);
+                    console.log('Zero-Knowledge: Contact Message Captured [REDACTED]');
                 }
                 return storage.add('contacts', data);
             },
