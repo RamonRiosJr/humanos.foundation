@@ -22,7 +22,7 @@ The Aura hOS Sovereign Architecture powers our federated clinic routing, generat
 
 <p align="center">
   <img src="public/showcase/aura-hos-zero-knowledge-encryption-vault.png" width="48%" style="margin: 1%" alt="Zero-Knowledge Encryption Vault" />
-  <img src="public/showcase/aura-hos-b2b-zero-ssn-patient-dashboard.png" width="48%" style="margin: 1%" alt="Zero-SSN Patient Dashboard" />
+  <img src="public/showcase/aura-hos-zero-ssn-patient-dashboard.png" width="48%" style="margin: 1%" alt="Zero-SSN Patient Dashboard" />
 </p>
 <p align="center">
   <img src="public/showcase/aura-hos-medication-efficacy-telemetry.png" width="48%" style="margin: 1%" alt="Medication Efficacy Telemetry" />
@@ -75,7 +75,7 @@ sequenceDiagram
     participant P as Patient Device (Local)
     participant Edge as Vercel Edge Runtime
     participant Vault as Core Database
-    participant Clinic as B2B FHIR Gateway (EHR)
+    participant Clinic as Clinical FHIR Gateway (EHR)
 
     P->>P: 1. Generate Local AES-256 Key
     P->>P: 2. Encrypt Clinical Narrative
