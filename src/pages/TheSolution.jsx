@@ -54,7 +54,7 @@ export default function TheSolution() {
                         <div className="glass p-8 rounded-2xl border border-white/5 hover:border-white/20 transition-all group">
                             <Key className="w-8 h-8 text-emerald-400 mb-6 group-hover:scale-110 transition-transform" />
                             <h3 className="text-xl font-bold mb-3 text-white">Self-Custodial Keys</h3>
-                            <p className="text-white/60 text-sm leading-relaxed">Unlike B2B SaaS EHRs that act as a middleman to your own body, you hold the definitive cryptovalue. If we are subpoenaed for your records, we literally have nothing to orchestrate but encrypted shards.</p>
+                            <p className="text-white/60 text-sm leading-relaxed">Unlike conventional corporate EHRs that act as a middleman to your own body, you hold the definitive cryptovalue. If we are subpoenaed for your records, we literally have nothing to orchestrate but encrypted shards.</p>
                         </div>
                         <div className="glass p-8 rounded-2xl border border-white/5 hover:border-white/20 transition-all group">
                             <Workflow className="w-8 h-8 text-purple-400 mb-6 group-hover:scale-110 transition-transform" />
