@@ -68,6 +68,27 @@ Powers `aurahos.io` and the Clinical Patient Vault. For engineering the core sof
 - **Backend:** Local-First IndexedDB and PostgREST via Edge Functions.
 - **Use Case:** The Federated Clinic Route, FHIR R4 JSON Payload Generation, and AES-GCM encrypted vaults.
 
+### 3. Cryptographic Data Flow (Zero-Knowledge Sync)
+
+```mermaid
+sequenceDiagram
+    participant P as Patient Device (Local)
+    participant Edge as Vercel Edge Runtime
+    participant Vault as Core Database
+    participant Clinic as B2B FHIR Gateway (EHR)
+
+    P->>P: 1. Generate Local AES-256 Key
+    P->>P: 2. Encrypt Clinical Narrative
+    P->>Edge: 3. POST /api/sync (Ciphertext Payload)
+    Edge->>Vault: 4. Store Ciphertext (Zero Knowledge)
+    Note over Edge,Vault: Servers mathematically cannot decrypt patient data
+    
+    Clinic->>Edge: 5. Request Authorized Data (OAuth 2.0 Webhook)
+    Edge->>P: 6. Secure Push: "Clinic X Requesting Intake Data"
+    P->>P: 7. User Approves -> Decrypt & Format to FHIR R4 JSON
+    P->>Clinic: 8. Direct Local-to-Clinic P2P Handshake (E2E)
+```
+
 ---
 
 ## 🚀 Presentation & Quick Start
