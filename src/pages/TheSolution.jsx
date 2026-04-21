@@ -92,11 +92,13 @@ export default function TheSolution() {
                         </div>
                         <div className="bg-[#0d0d15] pt-8 overflow-hidden relative">
                             {/* Image */}
-                            <img 
-                                src="/patient-terminal-sandbox.png" 
-                                alt="Aura hOS Patient Terminal Sandbox" 
-                                className="w-full h-auto object-cover transform transition-transform duration-1000 ease-out group-hover:scale-[1.02]" 
-                            />
+                            <a href="https://aurahos.io/app" target="_blank" rel="noopener noreferrer" className="block relative cursor-pointer z-20">
+                                <img 
+                                    src="/patient-terminal-sandbox.png" 
+                                    alt="Aura hOS Patient Terminal Sandbox" 
+                                    className="w-full h-auto object-cover transform transition-transform duration-1000 ease-out group-hover:scale-[1.02]" 
+                                />
+                            </a>
                             {/* Glossy overlay */}
                             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.02] to-white/[0.05] pointer-events-none" />
                         </div>

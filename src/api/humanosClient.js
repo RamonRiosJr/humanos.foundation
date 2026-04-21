@@ -18,7 +18,7 @@ const baseClient = {
         JoinRequest: {
             create: async (data) => {
                 if (!IS_PRODUCTION) {
-                    console.log("Zero-Knowledge Local Payload Captured:", data);
+                    console.log("Zero-Knowledge Local Payload Captured [REDACTED]");
                 }
                 return humanosLocalClient.entities.JoinRequest.create(data);
             }
