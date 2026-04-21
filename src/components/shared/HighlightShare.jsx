@@ -51,7 +51,7 @@ export default function HighlightShare() {
                         show: true
                     });
                 }
-            } catch (e) {
+            } catch {
                 // Ignore Safari ghost window.getSelection() errors on empty documents
             }
         };

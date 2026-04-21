@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, ClipboardX, BrainCircuit, HeartCrack, ListTodo, ChevronRight } from 'lucide-react';
+import { supabase } from '../../lib/supabase';
 
 const POLL_QUESTIONS = [
     {
@@ -53,6 +54,8 @@ export default function IntakePoll() {
     const [userVotes, setUserVotes] = useState({});
     // Should we show results for the current step?
     const [showResults, setShowResults] = useState(false);
+    // Real consensus data pulled from Supabase
+    const [dbData, setDbData] = useState(null);
 
     // Initialize from local storage if they already voted
     useEffect(() => {
@@ -60,13 +63,45 @@ export default function IntakePoll() {
         if (stored) {
             setUserVotes(JSON.parse(stored));
         }
+
+        const fetchConsensus = async () => {
+            try {
+                // If the user hasn't added the .env keys, this simply fails silently and uses baseline mock data
+                const { data, error } = await supabase.from('poll_consensus').select('*');
+                if (data && !error) {
+                    const mappedData = {};
+                    data.forEach(row => {
+                        mappedData[`${row.question_id}_${row.option_id}`] = parseInt(row.votes, 10);
+                    });
+                    setDbData(mappedData);
+                }
+            } catch {
+                console.log("Awaiting Supabase Database Configuration...");
+            }
+        };
+        fetchConsensus();
     }, []);
 
-    const handleVote = (questionId, optionId) => {
+    const handleVote = async (questionId, optionId) => {
         const newVotes = { ...userVotes, [questionId]: optionId };
         setUserVotes(newVotes);
         localStorage.setItem('humanos_intake_poll', JSON.stringify(newVotes));
         setShowResults(true);
+
+        // Fire atomic RPC to Supabase
+        try {
+            await supabase.rpc('increment_poll_vote', {
+                p_question_id: questionId,
+                p_option_id: optionId
+            });
+            // Optimistically update the dbData locally so UI is instantaneous
+            setDbData(prev => ({
+                ...prev,
+                [`${questionId}_${optionId}`]: (prev ? prev[`${questionId}_${optionId}`] || 0 : 0) + 1
+            }));
+        } catch {
+            // Silently fail if not configured yet
+        }
     };
 
     const nextQuestion = () => {
@@ -76,26 +111,33 @@ export default function IntakePoll() {
         }
     };
 
-    const prevQuestion = () => {
-        if (currentStep > 0) {
-            setCurrentStep(c => c - 1);
-            setShowResults(userVotes[POLL_QUESTIONS[currentStep - 1].id] !== undefined);
-        }
-    };
+
 
     // Calculate total votes dynamically
     const getOptionsWithPercentages = (question) => {
         const hasVotedThisQuestion = userVotes[question.id] !== undefined;
         
-        let totalVotes = question.options.reduce((sum, opt) => sum + opt.mockVotes, 0);
-        // If the user hasn't voted yet, we will add 1 to the total when they do.
-        // If they have voted, we adjust the mock numbers to include their vote.
-        if (hasVotedThisQuestion) totalVotes += 1;
+        let totalVotes = question.options.reduce((sum, opt) => {
+            const backendVotes = dbData ? (dbData[`${question.id}_${opt.id}`] || 0) : opt.mockVotes;
+            return sum + backendVotes;
+        }, 0);
+
+        // If the backend has no data, or we just voted but haven't fetched it yet
+        if (totalVotes === 0 && !dbData) {
+            totalVotes = question.options.reduce((sum, opt) => sum + opt.mockVotes, 0);
+        }
+        
+        // If the user hasn't voted yet AND we are resolving immediately vs UI
+        if (hasVotedThisQuestion && !dbData) totalVotes += 1;
 
         return question.options.map(opt => {
             const isSelected = userVotes[question.id] === opt.id;
-            const actualVotes = opt.mockVotes + (isSelected ? 1 : 0);
-            const percentage = Math.round((actualVotes / totalVotes) * 100);
+            
+            // Backend precedence
+            let actualVotes = dbData ? (dbData[`${question.id}_${opt.id}`] || 0) : opt.mockVotes;
+            if (!dbData && isSelected) actualVotes += 1;
+            
+            const percentage = totalVotes > 0 ? Math.round((actualVotes / totalVotes) * 100) : 0;
             return {
                 ...opt,
                 actualVotes,
