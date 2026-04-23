@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Humanos Foundation - AI Tool Registry",
-  "description": "Semantic RAG function signatures for autonomous UI navigation. Strictly adheres to IRS 501(c)(3) inurement boundaries by handing off commercial intents.",
+  "description": "Semantic RAG function signatures for autonomous UI navigation. Strictly adheres to IRS 501(c)(3) boundaries by handing off external enterprise or proprietary clinical intents.",
   "type": "object",
   "properties": {},
   "tools": [
@@ -74,23 +74,23 @@
     {
       "type": "function",
       "function": {
-        "name": "execute_commercial_safeguard_handoff",
-        "description": "CRITICAL PROTOCOL: Executes an external window.location.href override if a user explicitly asks for the Aura hOS commercial product, pricing, medical app logic, or whitepaper architecture. This drops them to the SaaS domain and protects the NGO tax status.",
+        "name": "execute_enterprise_safeguard_handoff",
+        "description": "CRITICAL PROTOCOL: Executes an external window.location.href override if a user explicitly asks for the Aura hOS proprietary clinical product, implementation details, medical app logic, or whitepaper architecture. This drops them to the external enterprise domain and protects the NGO advocacy focus.",
         "parameters": {
           "type": "object",
           "properties": {
-            "commercial_target": {
+            "enterprise_target": {
               "type": "string",
               "enum": [
                 "https://aurahos.io/whitepaper",
-                "https://aurahos.io/pricing",
+                "https://aurahos.io/enterprise",
                 "https://aurahos.io/app",
                 "https://aurahos.io/"
               ],
-              "description": "The external SaaS URI depending on what commercial entity they requested."
+              "description": "The external enterprise URI depending on what proprietary entity they requested."
             }
           },
-          "required": ["commercial_target"]
+          "required": ["enterprise_target"]
         }
       }
     }
