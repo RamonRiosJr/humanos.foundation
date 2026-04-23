@@ -6,6 +6,7 @@
     "author": "Ramon Luis Rios Jr. (Coqui Cloud Dev Co.)",
     "license": "MIT",
     "homepage": "https://humanos.foundation",
+    "keywords": ["zero-knowledge fhir", "edge intake routing", "cms kill the clipboard", "health data sovereignty", "aura hos"],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/RamonRiosJr/humanos.foundation.git"

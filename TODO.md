@@ -9,6 +9,7 @@
 *(Enterprise Capitalization Hardening for 501(c)(3) Repository)*
 
 ### 🔒 Security & Privacy (Zero-Knowledge)
+- [x] **SecOps Critical Vulnerability (0-Day Leakage Fix):** Purged `console.log` statements in `HardwareHandshakeIsland.tsx` and `ActivePatientBillingIsland.tsx` that inadvertently logged raw, unencrypted PHI payloads to the client-side DevTools console during the AES-GCM decompression loop.
 
 ### ♿ Accessibility (Section 508 & WCAG 2.1 AA Required for Grants)
 ### ⚙️ Performance & Code Quality (Refactoring)
