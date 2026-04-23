@@ -42,19 +42,23 @@ export default function Contact() {
                             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                             className="absolute -inset-4 bg-gradient-to-tr from-cyan-500/40 via-blue-500/20 to-purple-500/10 rounded-[3rem] blur-2xl pointer-events-none"
                         />
-                        <div className="w-full relative rounded-3xl overflow-hidden glass-strong border border-cyan-500/20 shadow-[0_0_80px_rgba(34,211,238,0.15)] z-10 bg-obsidian" style={{ height: '820px' }}>
-                            <iframe
-                                src="https://team.humanos.foundation/contactus"
-                                className="w-full absolute"
-                                style={{ 
-                                    height: 'calc(100% + 200px)', 
-                                    top: '-75px', 
-                                    border: '0',
-                                    backgroundColor: 'transparent'
-                                }}
-                                title="Foundation Contact Intake Form"
-                                scrolling="yes"
-                            />
+                        <div className="w-full relative rounded-3xl overflow-hidden glass-strong border border-cyan-500/20 shadow-[0_0_80px_rgba(34,211,238,0.15)] z-10 bg-obsidian" style={{ height: '600px' }}>
+                            <div className="w-full h-full overflow-y-auto overflow-x-hidden relative no-scrollbar">
+                                <iframe
+                                    src="https://team.humanos.foundation/contactus"
+                                    className="w-full"
+                                    style={{ 
+                                        height: '1100px', 
+                                        marginTop: '-75px', 
+                                        border: '0',
+                                        backgroundColor: 'transparent'
+                                    }}
+                                    title="Foundation Contact Intake Form"
+                                    scrolling="no"
+                                />
+                                {/* Permanent Odoo Footer Mask */}
+                                <div className="absolute bottom-0 left-0 w-full h-[150px] bg-obsidian z-20 pointer-events-none" />
+                            </div>
                         </div>
                     </div>
                 </div>
