@@ -188,6 +188,16 @@ const CORNERSTONE_POSTS = [
         "published": true,
         "created_date": "2026-04-10T12:00:00Z",
         "contentUrl": "/content/blog/phase-13-full-infrastructure-extrication-from-legacy-web2.md"
+    },
+    {
+        "id": "the-federal-mandate-to-kill-the-clipboard",
+        "title": "The Federal Mandate to 'Kill the Clipboard': How Zero-Knowledge Edge Routing Solves the Intake Crisis",
+        "excerpt": "The Centers for Medicare & Medicaid Services (CMS) have officially declared war on paper-based patient intake. Here is how Aura hOS utilizes Zero-Knowledge FHIR Edge Routing to permanently kill the clipboard.",
+        "category": "Technology",
+        "read_time_minutes": 7,
+        "published": true,
+        "created_date": "2026-04-22T14:00:00Z",
+        "contentUrl": "/content/blog/the-federal-mandate-to-kill-the-clipboard.md"
     }
 ];
 
