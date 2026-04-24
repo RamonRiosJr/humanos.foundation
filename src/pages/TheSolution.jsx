@@ -11,10 +11,10 @@ export default function TheSolution() {
     return (
         <div className="bg-obsidian min-h-screen text-white font-sans selection:bg-cyan-500/30 selection:text-cyan-50">
             <SEOMeta
-                title="The Sovereign Solution | Cryptographic Health Vault"
-                description="Secure your medical data locally using AES-256 encryption. Aura hOS uses FHIR interoperability to instantly map your continuous narrative directly into any clinic."
+                title="Aura hOS™ Solution | CMS Kill the Clipboard Architecture"
+                description="Secure your medical data locally using AES-256 encryption. Aura hOS™ executes the CMS Kill the Clipboard mandate via Zero-Knowledge FHIR interoperability."
                 url="https://humanos.foundation/the-solution"
-                keywords="local first medical app, zero knowledge health data, AES-256 health encryption, FHIR R4 interoperability, secure health wallet, sovereign identity, patient health app, biometric encrypted health, HIPAA secure frontend, clinical cryptography"
+                keywords="Aura hOS™, CMS Kill the Clipboard, local first medical app, zero knowledge health data, AES-256 health encryption, FHIR R4 interoperability, secure health wallet, sovereign identity, patient health app, biometric encrypted health, HIPAA secure frontend, clinical cryptography"
             />
             <Navbar />
 

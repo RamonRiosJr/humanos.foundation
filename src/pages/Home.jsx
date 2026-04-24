@@ -9,15 +9,16 @@ import SectionDivider from '../components/shared/SectionDivider';
 import HomeStats from '../components/landing/HomeStats';
 import SEOMeta from '../components/shared/SEOMeta';
 import SurvivalBanner from '../components/landing/SurvivalBanner';
+import DataManifestoImage from '../components/landing/DataManifestoImage';
 
 export default function Home() {
     return (
         <div className="bg-obsidian min-h-screen text-white overflow-x-clip">
             <SEOMeta
-                title="Humanos Foundation | Open-Source Health Data Sovereignty"
-                description="The Human Operating System (hOS) is a Zero-Knowledge, open-source vault giving patients ultimate sovereign ownership of their medical records to bypass legacy EHR billing machines."
+                title="Aura hOS™ — A HumanOS Foundation Initiative | Health Data Sovereignty"
+                description="The Humanos Foundation enforces Zero-Knowledge FHIR and Edge Intake Routing to solve the CMS Kill the Clipboard mandate. Own your health data sovereignty with Aura hOS™."
                 url="https://humanos.foundation"
-                keywords="open source medical records, zero knowledge EHR, FHIR interoperability, HIPAA alternative, FTC HBNR compliance, patient data sovereignty, health tech non-profit, Aura hOS"
+                keywords="Aura hOS, HumanOS Foundation, CMS Kill the Clipboard, Zero-Knowledge FHIR, health data sovereignty"
                 type="website"
             />
             <SurvivalBanner />
@@ -29,6 +30,8 @@ export default function Home() {
             <div id="stats"><HomeStats /></div>
             <SectionDivider />
             <div id="origin"><AboutJourney /></div>
+            <SectionDivider />
+            <DataManifestoImage />
             <SectionDivider />
             <div id="manifesto"><Manifestos /></div>
             <Footer />
