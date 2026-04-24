@@ -33,7 +33,7 @@ The Aura hOS Sovereign Architecture powers our federated clinic routing, generat
 
 ## 🌍 The Mission
 
-The **Humanos Foundation** is the 501(c)(3) Sovereign advocacy wing of the **Aura hOS™ (Human Operating System)**. We are a global network of patients, clinicians, and technologists dedicated to dismantling the 15-20 page clinical clipboard penalty. 
+The **Humanos Foundation** is the 501(c)(3) Sovereign advocacy wing of the **Aura hOS™ (Human Operating System)**. We are a global network of patients, clinicians, and technologists dedicated to executing the CMS "Kill the Clipboard" federal mandate via Zero-Knowledge FHIR Edge Routing. 
 
 ### 🏛️ The Foundation Vanguard
 Our movement replaces the hostile "assembly-line" medical intake process with a cryptographic Digital Handshake, permanently securing patient data autonomy.
@@ -66,7 +66,7 @@ Powers `humanos.foundation`. This is the administrative surface area of the NGO.
 Powers `aurahos.io` and the Clinical Patient Vault. For engineering the core software, please see the `aura-health-os` repository.
 - **Frontend:** Capacitor / React Native.
 - **Backend:** Local-First IndexedDB and PostgREST via Edge Functions.
-- **Use Case:** The Federated Clinic Route, FHIR R4 JSON Payload Generation, and AES-GCM encrypted vaults.
+- **Use Case:** Zero-Knowledge FHIR Edge Intake Routing exactly designed to natively map the Federal CMS Kill the Clipboard mandates to AES-GCM encrypted vaults.
 
 ### 3. Cryptographic Data Flow (Zero-Knowledge Sync)
 
