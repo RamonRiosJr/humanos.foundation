@@ -46,7 +46,7 @@ export default function SEOMeta({
         };
 
         // Basic SEO
-        const baseKeywords = 'health data sovereignty, patient data rights, hOS, human operating system, FTC HBNR personal health record, Zero-Knowledge Healthcare, patient owned health record, health data portability, Ramon Rios, Humanos Foundation, Coqui Cloud';
+        const baseKeywords = 'Aura hOS™, HumanOS Foundation, CMS Kill the Clipboard, Zero-Knowledge FHIR, health data sovereignty, patient data rights, hOS, human operating system, FTC HBNR personal health record, patient owned health record, Ramon Rios, Coqui Cloud';
         const activeKeywords = keywords ? `${keywords}, ${baseKeywords}` : baseKeywords;
 
         setMeta('description', description);
@@ -100,7 +100,7 @@ export default function SEOMeta({
                     '@id': 'https://humanos.foundation/#organization',
                     name: 'Humanos Foundation',
                     url: 'https://humanos.foundation',
-                    logo: 'https://humanos.foundation/aura.png',
+                    logo: 'https://humanos.foundation/logo.png',
                     description: 'A movement dedicated to returning health data sovereignty to every individual.',
                     founder: {
                         '@type': 'Person',
