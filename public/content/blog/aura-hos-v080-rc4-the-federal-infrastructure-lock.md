@@ -6,9 +6,9 @@ Today, the Humanos Foundation officially promotes the Aura hOS™ ecosystem to *
 
 RC.4 is not a feature bump; it is a structural seal. We have officially deployed the Zero-Knowledge Vault architecture across the entire global event bus. By utilizing localized encryption routines, the Foundation mathematically proves its FTC HBNR BAA Exemption. We do not hold the keys. We are entirely immune to HIPAA liability, providing massive risk mitigation for our incoming Federated Clinic partners.
 
-### The $825k Federal Grant Pipeline
+### Federal Compliance Readiness
 
-With RC.4 live, the platform is now fully scaled to absorb the pending $825,000 Federal Health Equity Federal Grant payload. The Federated Clinic Routing API is stable. The Dual-Path Validation (Zero-SSN Registration) is active. The Foundation site has formally transitioned from a grassroots advocacy platform to an authoritative, federal-ready Clinical AI Hub.
+With RC.4 live, the platform is now fully scaled for institutional evaluation. The Federated Clinic Routing API is stable. The Dual-Path Validation (Zero-SSN Registration) is active. The Foundation site has formally transitioned from a grassroots advocacy platform to an authoritative, federal-ready Clinical AI Hub.
 
 ---
 

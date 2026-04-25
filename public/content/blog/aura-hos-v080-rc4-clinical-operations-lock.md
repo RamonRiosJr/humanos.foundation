@@ -14,7 +14,7 @@ We fortified the active patient stream with native clinical calculators (BMI, eG
 
 ### The Federal Grant Trajectory
 
-With RC.4 live, the platform is computationally ready to absorb the pending $825,000 Federal Health Equity Grant payload. The Unified Global Auth array is secure. The Clinical Operations are hardened. The Foundation has officially transitioned from a grassroots architecture into an institutional-grade Clinical AI Node.
+With RC.4 live, the platform is computationally ready for institutional evaluation. The Unified Global Auth array is secure. The Clinical Operations are hardened. The Foundation has officially transitioned from a grassroots architecture into an institutional-grade Clinical AI Node.
 
 ---
 
