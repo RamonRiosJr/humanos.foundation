@@ -8,7 +8,7 @@ import { Scale, FileText, Landmark, ShieldAlert, FileSignature } from 'lucide-re
 
 const governanceDocs = [
     { title: 'Articles of Incorporation', date: '2026', status: 'Filed - State of Utah', icon: <Landmark className="w-4 h-4" /> },
-    { title: '501(c)(3) IRS Determination', date: 'Pending', status: 'Awaiting IRS IRS-1023', icon: <Scale className="w-4 h-4" /> },
+    { title: '501(c)(3) IRS Determination', date: 'Pending', status: 'Awaiting Form 1023', icon: <Scale className="w-4 h-4" /> },
     { title: 'Conflict of Interest Policy', date: '2026', status: 'Adopted internally', icon: <ShieldAlert className="w-4 h-4" /> },
     { title: 'Form 990 Public Disclosures', date: '---', status: 'First filing due 2027', icon: <FileText className="w-4 h-4" /> },
 ];
