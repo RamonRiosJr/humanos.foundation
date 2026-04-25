@@ -1,6 +1,6 @@
 # Zero Dependency Architecture
 
-When you are building a $825,000 Zero-Knowledge data compliance pipeline, reliance on third-party Web2 CRMs is not just a bottleneck—it is a critical security vulnerability. Today, the Humanos Foundation has completely eradicated its final legacy dependencies.
+When you are building a Zero-Knowledge data compliance pipeline for federal evaluation, reliance on third-party Web2 CRMs is not just a bottleneck—it is a critical security vulnerability. Today, the Humanos Foundation has completely eradicated its final legacy dependencies.
 
 ### Deprecating the Odoo Backbone
 
