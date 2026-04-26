@@ -26,7 +26,7 @@ At the HumanOS Foundation, we architected **Aura hOS** specifically to preempt t
 
 1. **Edge-Native Intake:** Rather than waiting in a lobby to manually fill out psychometric and kinematic histories, the patient completes their clinical taxonomy natively on their own mobile hardware via an offline-capable, highly encrypted application.
 2. **Deterministic Cryptographic Handshake:** Upon arriving at the clinic, there is no paperwork. The patient physically verifies a cryptographic proxy via an ephemeral visual QR matrix, or native biometric NFC routing. 
-3. **True Interoperability:** The intake payload is transferred instantaneously into the clinic's B2B Provider Dashboard. Because the transmission utilizes strict **Zero-Knowledge FHIR JSON** encryption schemas, the payload natively interoperates with downstream Enterprise EHR systems (Epic, Cerner) while maintaining absolute HIPAA and FTC HBNR BAA Exemption barriers.
+3. **True Interoperability:** The intake payload is transferred instantaneously into the clinic's Federated Provider Gateway. Because the transmission utilizes strict **Zero-Knowledge FHIR JSON** encryption schemas, the payload natively interoperates with downstream Enterprise EHR systems (Epic, Cerner) while maintaining absolute HIPAA and FTC HBNR BAA Exemption barriers.
 
 ## Bypassing the $25,000 Epic Barrier
 

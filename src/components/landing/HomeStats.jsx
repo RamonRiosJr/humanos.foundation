@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import HeartbeatStream from '../shared/HeartbeatStream';
 
 const stats = [
-    { value: '$825k', label: 'Pending Federal Funding', sub: 'Federal Grant Cycle 2 & Federal Directive Sandbox' },
+    { value: '2,500+', label: 'Engineering Hours', sub: 'Zero-Knowledge architecture built from the ground up' },
     { value: '100%', label: 'Visual Independence', sub: 'Absolute Data Cryptography protects your family\'s graph' },
     { value: '0 Days', label: 'Paperwork Penalty', sub: 'Bypass all clipboards and waiting room friction' },
     { value: 'Universal', label: 'Hospital Integration', sub: 'Clean data exports to any doctor physically treating you' },

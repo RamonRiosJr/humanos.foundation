@@ -1,41 +1,43 @@
-# Security Policy
+# Security Policy — Humanos Foundation
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+| Version | Platform | Supported |
+| --- | --- | --- |
+| Aura hOS™ v0.8.x (current) | `aurahos.io` | ✅ Active |
+| humanos.foundation (current) | `humanos.foundation` | ✅ Active |
+| All prior releases | — | ❌ End of Life |
 
-| Version | Supported          |
-| ------- | ------------------ |
-| v5.0.x  | :white_check_mark: |
-| v4.0.x  | :x:                |
+## Architecture Context
+
+This repository (`humanos.foundation`) is the **Human Operations Layer** — an advocacy and donor-routing platform. It does **not** process, store, or transmit clinical health data. All cryptographic operations (AES-256-GCM, PBKDF2, Web Crypto API key isolation) occur exclusively on the patient's device within the separate `aura-health-os` repository.
 
 ## Reporting a Vulnerability
 
-Please do **NOT** open a public GitHub Issue to report security vulnerabilities.
+**Do NOT open a public GitHub Issue for security reports.**
 
-If you discover a security vulnerability, we'd like to know about it so we can take steps to address it as quickly as possible. Please follow these steps to report a vulnerability:
+Email: **[security@humanos.foundation](mailto:security@humanos.foundation)**
 
-1. **Email:** Send an email to [hello@humanos.foundation](mailto:hello@humanos.foundation) or use the preferred secure contact method for your organization.
-2. **Details:** Include the following information in your report:
-   - A detailed description of the vulnerability.
-   - The steps required to reproduce the vulnerability.
-   - The versions of the framework/service affected.
-   - Any potential impact or risk associated with the vulnerability.
-   - Any suggested mitigations or fixes.
+Include the following:
+- Description of the vulnerability and its potential impact
+- Steps to reproduce
+- Affected version / URL / endpoint
+- Any suggested mitigations
 
-## Review and Remediation
+## Our Commitments
 
-Upon receiving a vulnerability report, our security team will:
+1. We will **acknowledge** your report within **48 hours**.
+2. We will provide a severity assessment within **7 business days**.
+3. We will **never** pursue legal action against good-faith researchers.
+4. We will publicly credit you (with your permission) upon remediation.
 
-1. Acknowledge receipt of your report within 48 hours.
-2. Investigate the issue to confirm the vulnerability and determine its severity.
-3. Work with you to understand the vulnerability fully and formulate a remediation plan.
-4. Keep you updated on our progress as we work to resolve the issue.
+## Scope
 
-We ask that you maintain confidentiality until we have had an opportunity to address the vulnerability and release a fix or mitigation.
+**In Scope:** `humanos.foundation`, `team.humanos.foundation`, any publicly accessible API endpoints, authentication and CRM webhook flows.
+
+**Out of Scope:** Third-party services (Vercel, Odoo, PostHog), denial-of-service attacks, social engineering, attacks requiring physical device access.
 
 ## Public Disclosure
 
-Once a vulnerability has been addressed, we will coordinate public disclosure with you. We value the contributions of security researchers and will provide appropriate credit (if desired) for responsibly disclosed vulnerabilities.
+We will coordinate responsible public disclosure with you after remediation. We believe security research is a public good and we treat it that way.
 
