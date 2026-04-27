@@ -15,14 +15,6 @@ export default defineConfig({
     },
     server: {
         host: true,
-        port: 7200,
-        proxy: {
-            '/odoo_local': {
-                target: 'https://team.humanos.foundation',
-                changeOrigin: true,
-                rewrite: (path) => path.replace(/^\/odoo_local/, '/humanos_api'),
-                secure: false
-            }
-        }
+        port: 7200
     },
 });
