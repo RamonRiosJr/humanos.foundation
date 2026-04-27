@@ -61,7 +61,26 @@ export default function IntakePoll() {
     useEffect(() => {
         const stored = localStorage.getItem('humanos_intake_poll');
         if (stored) {
-            setUserVotes(JSON.parse(stored));
+            const parsedVotes = JSON.parse(stored);
+            setUserVotes(parsedVotes);
+            
+            // Calculate how far they got to \"stick\" their progress
+            let furthestAnsweredStep = 0;
+            for (let i = 0; i < POLL_QUESTIONS.length; i++) {
+                if (parsedVotes[POLL_QUESTIONS[i].id]) {
+                    furthestAnsweredStep = i;
+                } else {
+                    break; // Stop at the first unanswered question
+                }
+            }
+            
+            // Jump to the furthest question they answered
+            setCurrentStep(furthestAnsweredStep);
+            
+            // If they answered this particular question, show the results
+            if (parsedVotes[POLL_QUESTIONS[furthestAnsweredStep].id]) {
+                setShowResults(true);
+            }
         }
 
         const fetchConsensus = async () => {
