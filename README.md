@@ -135,6 +135,6 @@ We are scaling an sovereign-grade contributor network:
 **Built by patients, for patients.** 
 *Data Sovereignty is a Human Right.*
 
-[**Developed by Ramon Luis Rios Jr @ Coqui Cloud Dev Co.**](https://coqui.cloud)
+[**Developed by Ramon Luis Rios Jr | RamonRios.Net**](https://ramonrios.net)
 
 </div>

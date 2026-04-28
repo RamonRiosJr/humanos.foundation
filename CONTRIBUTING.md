@@ -191,5 +191,5 @@ _Thank you for making humanos.foundation better for everyone!_ 🚀
 **GitHub:** [github.com/RamonRiosJr](https://github.com/RamonRiosJr) &nbsp;|&nbsp;
 **LinkedIn:** [linkedin.com/in/ramon-rios-a8ba3035](https://www.linkedin.com/in/ramon-rios-a8ba3035) &nbsp;|&nbsp;
 **Blog:** [ramonrios.net](https://ramonrios.net) &nbsp;|&nbsp;
-**Coqui Cloud Dev Co.:** [coqui.cloud](https://coqui.cloud)
+**RamonRios.Net:** [ramonrios.net](https://ramonrios.net)
 
