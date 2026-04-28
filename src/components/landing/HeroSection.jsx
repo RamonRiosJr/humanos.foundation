@@ -4,10 +4,8 @@ import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import NeuralMap from './NeuralMap';
 import HeroDashboard from './HeroDashboard';
-import { useTranslation } from 'react-i18next';
 
 export default function HeroSection() {
-    const { t } = useTranslation();
 
     return (
         <section className="relative min-h-screen flex flex-col items-center px-4 md:px-8 overflow-hidden noise-overlay pt-32 md:pt-40 lg:pt-48 pb-20">
@@ -23,7 +21,7 @@ export default function HeroSection() {
                 >
                     <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
                     <span className="text-[11px] md:text-xs text-cyan-400/80 font-medium tracking-[0.2em] uppercase">
-                        {t('hero.badge')}
+                        Aura hOS™ v0.8.0-rc.4
                     </span>
                 </motion.div>
 
@@ -36,12 +34,12 @@ export default function HeroSection() {
                     // @ts-ignore — fontFamily is valid in MotionStyle at runtime
                     style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
                 >
-                    <span className="text-white">{t('hero.title_part1')}</span>
+                    <span className="text-white">You Are Not</span>
                     <br />
-                    <span className="text-white/70">{t('hero.title_part2')} </span>
-                    <span className="gradient-text">{t('hero.title_part3')}</span>
+                    <span className="text-white/70">A </span>
+                    <span className="gradient-text">5-Minute</span>
                     <br />
-                    <span className="text-white">{t('hero.title_part4')}</span>
+                    <span className="text-white">Story.</span>
                 </motion.h1>
 
                 {/* Subheadline */}
@@ -51,7 +49,7 @@ export default function HeroSection() {
                     transition={{ duration: 1, delay: 0.4 }}
                     className="text-sm md:text-lg text-white/70 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed font-medium"
                 >
-                    {t('hero.subtitle')}
+                    The "First Mile" of clinical care is catastrophically broken for neurodivergent populations. Engineered by the Humanos NGO, Aura hOS™ replaces the 15-20 page physical clipboard penalty with a mathematically secure Zero-Knowledge Vault. We strictly eradicate clinical intake liability for healthcare organizations while returning seamless data sovereignty directly to the patient.
                 </motion.p>
 
                 {/* CTA */}
@@ -66,7 +64,7 @@ export default function HeroSection() {
                         className="glow-btn relative inline-flex px-10 py-5 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-white font-bold text-sm md:text-base tracking-wide group hover:border-cyan-400/60 hover:shadow-[0_0_40px_rgba(34,211,238,0.3)] transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.2)]"
                     >
                         <span className="relative z-10 flex items-center gap-2">
-                            {t('hero.cta_main')}
+                            Take Command of Your Story
                             <motion.span
                                 animate={{ x: [0, 4, 0] }}
                                 transition={{ duration: 1.5, repeat: Infinity }}
