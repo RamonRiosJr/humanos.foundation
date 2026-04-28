@@ -67,6 +67,22 @@ export default function Press() {
                         </div>
                     </motion.div>
 
+                    {/* Founder Interview CTA */}
+                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative overflow-hidden group bg-gradient-to-br from-cyan-900/40 via-blue-900/20 to-transparent rounded-3xl p-8 md:p-12 border border-cyan-500/30 hover:border-cyan-400/60 transition-all shadow-[0_0_40px_rgba(34,211,238,0.1)] text-center">
+                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay pointer-events-none"></div>
+                        <h2 className="relative z-10 text-2xl font-bold text-white mb-3 drop-shadow-md" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Request an Interview</h2>
+                        <p className="relative z-10 text-sm text-cyan-100/70 max-w-xl mx-auto mb-8 leading-relaxed">Ensure your reporting accesses the unvarnished engineering truth behind Zero-Knowledge healthcare, data sovereignty, and the destruction of the 15-page clipboard penalty.</p>
+                        <a 
+                            href="https://ramonrios.net/@tito" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            onClick={() => window.gtag && window.gtag('event', 'click_schedule_interview')}
+                            className="relative z-10 inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-cyan-500/20 border border-cyan-400/50 text-cyan-300 font-bold hover:bg-cyan-400 hover:text-slate-900 transition-all shadow-[0_0_20px_rgba(34,211,238,0.2)] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] glow-btn"
+                        >
+                            Schedule with Founder
+                        </a>
+                    </motion.div>
+
                     {/* Boilerplate */}
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="relative overflow-hidden group glass rounded-3xl p-8 md:p-10 border border-white/[0.08] hover:border-purple-500/30 transition-all hover:shadow-[0_0_40px_rgba(168,85,247,0.1)]">
                         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
