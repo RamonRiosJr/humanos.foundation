@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useA11y } from '@/lib/A11yContext';
-import { Accessibility, Eye, Maximize, Type, Link as LinkIcon, PauseCircle, X, AlignJustify, Globe } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+import { Accessibility, Eye, Maximize, Type, Link as LinkIcon, PauseCircle, X, AlignJustify } from 'lucide-react';
 
 // The Aura hOS Enterprise Cognitive Focus Mask
 const ReadingMask = () => {
@@ -30,11 +29,6 @@ const ReadingMask = () => {
 const A11yWidget = () => {
     const { settings, toggleSetting } = useA11y();
     const [isOpen, setIsOpen] = useState(false);
-    const { t, i18n } = useTranslation();
-
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng);
-    };
 
     return (
         <>
@@ -48,11 +42,11 @@ const A11yWidget = () => {
                                     <Accessibility className="w-5 h-5 text-blue-400" />
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-white tracking-wide text-sm">{t('a11y.title') || 'Accessibility'}</h3>
+                                    <h3 className="font-bold text-white tracking-wide text-sm">Accessibility</h3>
                                     <p className="text-[10px] text-blue-400 font-mono tracking-widest uppercase">Aura hOS Engine Active</p>
                                 </div>
                             </div>
-                            <button onClick={() => setIsOpen(false)} className="text-slate-400 hover:text-white transition-transform hover:rotate-90 bg-white/5 p-1.5 rounded-full" aria-label={t('a11y.close')}>
+                            <button onClick={() => setIsOpen(false)} className="text-slate-400 hover:text-white transition-transform hover:rotate-90 bg-white/5 p-1.5 rounded-full" aria-label="Close">
                                 <X className="w-4 h-4" />
                             </button>
                         </div>
@@ -62,66 +56,44 @@ const A11yWidget = () => {
                                 active={settings.highContrast}
                                 onClick={() => toggleSetting('highContrast')}
                                 icon={<Eye className="w-4 h-4" />}
-                                label={t('a11y.high_contrast') || 'High Contrast'}
+                                label="High Contrast"
                                 description="Enhances visual distinctness"
                             />
                             <A11yToggle
                                 active={settings.largeText}
                                 onClick={() => toggleSetting('largeText')}
                                 icon={<Maximize className="w-4 h-4" />}
-                                label={t('a11y.large_text') || 'Large Text'}
+                                label="Large Text"
                                 description="Increases base typography scale"
                             />
                             <A11yToggle
                                 active={settings.dyslexiaFont}
                                 onClick={() => toggleSetting('dyslexiaFont')}
                                 icon={<Type className="w-4 h-4" />}
-                                label={t('a11y.dyslexia_font') || 'Dyslexia Font'}
+                                label="Dyslexia Font"
                                 description="Switches to highly legible typeface"
                             />
                             <A11yToggle
                                 active={settings.readingMask}
                                 onClick={() => toggleSetting('readingMask')}
                                 icon={<AlignJustify className="w-4 h-4" />}
-                                label={t('a11y.reading_mask') || 'Cognitive Focus'}
+                                label="Cognitive Focus"
                                 description="Isolates visual reading area"
                             />
                             <A11yToggle
                                 active={settings.highlightLinks}
                                 onClick={() => toggleSetting('highlightLinks')}
                                 icon={<LinkIcon className="w-4 h-4" />}
-                                label={t('a11y.highlight_links') || 'Highlight Links'}
+                                label="Highlight Links"
                                 description="Underlines actionable UI elements"
                             />
                             <A11yToggle
                                 active={settings.pauseAnimations}
                                 onClick={() => toggleSetting('pauseAnimations')}
                                 icon={<PauseCircle className="w-4 h-4" />}
-                                label={t('a11y.pause_animations') || 'Pause Animations'}
+                                label="Pause Animations"
                                 description="Freezes all motion states"
                             />
-                        </div>
-
-                        {/* Aura Style Language Selector */}
-                        <div className="pt-3 border-t border-white/5">
-                            <div className="flex items-center gap-2 mb-3">
-                                <Globe className="w-3.5 h-3.5 text-blue-400" />
-                                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{t('a11y.language') || 'Language'}</span>
-                            </div>
-                            <div className="grid grid-cols-2 gap-2">
-                                <button
-                                    onClick={() => changeLanguage('en')}
-                                    className={`py-2 px-3 rounded-lg text-xs font-bold tracking-wide transition-all border ${i18n.language && i18n.language.startsWith('en') ? 'bg-blue-500 border-blue-400 text-white shadow-[0_0_15px_rgba(59,130,246,0.3)]' : 'bg-white/5 border-white/10 text-slate-400 hover:border-white/30 hover:bg-white/10'}`}
-                                >
-                                    English (US)
-                                </button>
-                                <button
-                                    onClick={() => changeLanguage('es')}
-                                    className={`py-2 px-3 rounded-lg text-xs font-bold tracking-wide transition-all border ${i18n.language && i18n.language.startsWith('es') ? 'bg-blue-500 border-blue-400 text-white shadow-[0_0_15px_rgba(59,130,246,0.3)]' : 'bg-white/5 border-white/10 text-slate-400 hover:border-white/30 hover:bg-white/10'}`}
-                                >
-                                    Español
-                                </button>
-                            </div>
                         </div>
                     </div>
                 )}
@@ -129,7 +101,7 @@ const A11yWidget = () => {
                 {/* Aura Interactive Floating Button */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className={`relative w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500 border overflow-hidden group ${isOpen ? 'bg-blue-600 border-blue-400 text-white shadow-[0_0_30px_rgba(59,130,246,0.6)] scale-95' : 'bg-slate-900 border-white/20 text-blue-400 shadow-xl hover:border-blue-500/50 hover:bg-slate-800 hover:-translate-y-1'
+                    className={`relative w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500 border overflow-hidden group shadow-[0_0_20px_rgba(59,130,246,0.3)] ${isOpen ? 'bg-blue-600 border-blue-400 text-white shadow-[0_0_30px_rgba(59,130,246,0.6)] scale-95' : 'bg-slate-900 border-white/20 text-blue-400 shadow-xl hover:border-blue-500/50 hover:bg-slate-800 hover:-translate-y-1'
                         }`}
                     aria-label="Toggle Accessibility Menu"
                     aria-expanded={isOpen}
