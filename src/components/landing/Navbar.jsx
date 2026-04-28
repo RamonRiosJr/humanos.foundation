@@ -84,7 +84,7 @@ export default function Navbar() {
             <div className="w-full bg-gradient-to-r from-rose-600/95 via-red-500/95 to-rose-600/95 backdrop-blur-xl border-b border-white/20 shadow-[0_4px_20px_-4px_rgba(225,29,72,0.4)]">
                 <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-center gap-2 md:gap-4 text-[10px] md:text-xs">
                     <span className="animate-pulse text-sm">❤️</span>
-                    <a href="https://aurahos.io" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
+                    <a href="https://aurahos.io" target="_blank" rel="noopener noreferrer" onClick={() => window.gtag && window.gtag('event', 'click_app_access_banner')} className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
                         <span className="text-white font-bold tracking-widest uppercase drop-shadow-md">
                             Patients: App Access is <span className="text-yellow-300 font-extrabold border-b border-yellow-300/50 pb-0.5 ml-1">ALWAYS FREE</span>
                         </span>
@@ -120,11 +120,12 @@ export default function Navbar() {
                             href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom"
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => window.gtag && window.gtag('event', 'click_bridge_round')}
                             className="bg-yellow-400/10 text-yellow-500 hover:text-yellow-400 px-3 md:px-5 py-1.5 md:py-2 rounded-lg text-[10px] md:text-xs font-bold tracking-widest uppercase transition-all duration-300 border border-yellow-500/20 hover:border-yellow-500/50 hover:bg-yellow-500/20 shadow-[0_0_15px_rgba(234,179,8,0.15)] hover:shadow-[0_0_25px_rgba(234,179,8,0.3)] min-w-max flex-shrink-0"
                         >
                             ⚡ Bridge Round
                         </a>
-                        <Link to={createPageUrl('Join')} className="px-5 py-2 rounded-xl bg-gradient-to-r from-cyan-400/20 to-blue-500/20 border border-cyan-400/30 text-xs text-cyan-300 hover:text-white hover:border-cyan-300/60 transition-all duration-300 font-bold shadow-[0_0_15px_rgba(34,211,238,0.15)] glow-btn">
+                        <Link to={createPageUrl('Join')} onClick={() => window.gtag && window.gtag('event', 'click_join_movement')} className="px-5 py-2 rounded-xl bg-gradient-to-r from-cyan-400/20 to-blue-500/20 border border-cyan-400/30 text-xs text-cyan-300 hover:text-white hover:border-cyan-300/60 transition-all duration-300 font-bold shadow-[0_0_15px_rgba(34,211,238,0.15)] glow-btn">
                             Join the Movement
                         </Link>
                         <ThemeToggle />
