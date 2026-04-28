@@ -17,4 +17,25 @@ export default defineConfig({
         host: true,
         port: 7200
     },
+    build: {
+        sourcemap: false,
+        rollupOptions: {
+            output: {
+                manualChunks(id) {
+                    if (id.includes('node_modules')) {
+                        if (id.includes('framer-motion')) {
+                            return 'vendor-framer';
+                        }
+                        if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+                            return 'vendor-react';
+                        }
+                        if (id.includes('lucide')) {
+                            return 'vendor-lucide';
+                        }
+                        return 'vendor-core';
+                    }
+                }
+            }
+        }
+    }
 });
