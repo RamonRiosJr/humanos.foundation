@@ -28,9 +28,9 @@ export default function OpenSource() {
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden">
             <SEOMeta 
                 title="Open Source Health Technology | The Clinical Routing Matrix" 
-                description="We believe in open source as a philosophy. Explore open-source health projects, FHIR standards, and the Coqui Cloud technical infrastructure behind hOS." 
+                description="We believe in open source as a philosophy. Explore open-source health projects, FHIR standards, and the RamonRios.Net technical infrastructure behind hOS." 
                 url="https://humanos.foundation/open-source" 
-                keywords="open source medical software, FHIR standard implementation, health tech infrastructure, open architecture healthcare, patient first technology, open healthcare APIs, Coqui Cloud Dev Co, free clinical routing matrix"
+                keywords="open source medical software, FHIR standard implementation, health tech infrastructure, open architecture healthcare, patient first technology, open healthcare APIs, RamonRios.Net, free clinical routing matrix"
             />
             <Navbar />
             <PageHero badge="Open Source" title="Open by" titleAccent="Default" subtitle="We believe in open source as a philosophy, not just a development model. Transparency, collaboration, and freedom are how we build trust." />
@@ -73,10 +73,10 @@ export default function OpenSource() {
                     {/* GitHub CTA */}
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="glass-strong rounded-3xl p-8 md:p-10 border border-cyan-500/10 text-center">
                         <Github className="w-10 h-10 text-white/30 mx-auto mb-4" />
-                        <h3 className="text-xl font-bold text-white/70 mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>Coqui Cloud Dev Co.</h3>
+                        <h3 className="text-xl font-bold text-white/70 mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>RamonRios.Net</h3>
                         <p className="text-sm text-white/30 mb-6 max-w-md mx-auto">The technical home of the hOS movement. Open source, community-driven, patient-first.</p>
-                        <a href="https://coqui.cloud" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass border border-white/[0.08] text-sm text-white/50 hover:text-cyan-400 hover:border-cyan-500/30 transition-all">
-                            Visit Coqui Cloud <ExternalLink className="w-3.5 h-3.5" />
+                        <a href="https://ramonrios.net" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass border border-white/[0.08] text-sm text-white/50 hover:text-cyan-400 hover:border-cyan-500/30 transition-all">
+                            Visit RamonRios.Net <ExternalLink className="w-3.5 h-3.5" />
                         </a>
                     </motion.div>
                 </div>

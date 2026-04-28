@@ -9,7 +9,7 @@ import { Heart, Users, Code, DollarSign, ExternalLink } from 'lucide-react';
 const supportWays = [
     { icon: Heart, title: 'Spread the Word', desc: 'Share our manifesto. Talk about patient data rights. Refer journalists, researchers, and advocates to us. The movement grows through people.', cta: 'Read the Manifesto', href: '/manifesto' },
     { icon: Users, title: 'Volunteer', desc: 'Give your time and skills. We need developers, writers, translators, and community organizers. Every contribution matters.', cta: 'Volunteer Now', href: '/volunteer' },
-    { icon: Code, title: 'Contribute Code', desc: 'Help build open-source tools for the movement. Whether it\'s documentation, design, or development — we welcome all contributors.', cta: 'Visit Coqui Cloud', href: 'https://coqui.cloud' },
+    { icon: Code, title: 'Contribute Code', desc: 'Help build open-source tools for the movement. Whether it\'s documentation, design, or development — we welcome all contributors.', cta: 'Visit RamonRios.Net', href: 'https://ramonrios.net' },
     { icon: DollarSign, title: 'Institutional Support', desc: 'The Humanos Foundation aligns its engineering infrastructure with federal health equity mandates and institutional philanthropic partners to permanently protect patient data sovereignty.', cta: 'View Our Research', href: '/research' },
 ];
 

@@ -46,7 +46,7 @@ export default function SEOMeta({
         };
 
         // Basic SEO
-        const baseKeywords = 'health data sovereignty, patient data rights, hOS, human operating system, FTC HBNR personal health record, Zero-Knowledge Healthcare, patient owned health record, health data portability, Ramon Rios, Humanos Foundation, Coqui Cloud';
+        const baseKeywords = 'health data sovereignty, patient data rights, hOS, human operating system, FTC HBNR personal health record, Zero-Knowledge Healthcare, patient owned health record, health data portability, Ramon Rios, Humanos Foundation, RamonRios.Net';
         const activeKeywords = keywords ? `${keywords}, ${baseKeywords}` : baseKeywords;
 
         setMeta('description', description);
@@ -106,9 +106,9 @@ export default function SEOMeta({
                         '@type': 'Person',
                         name: 'Ramon Luis Rios Jr.',
                         url: 'https://ramonrios.net',
-                        sameAs: ['https://ramonrios.net', 'https://coqui.cloud'],
+                        sameAs: ['https://ramonrios.net', 'https://ramonrios.net'],
                     },
-                    sameAs: ['https://humanos.foundation', 'https://coqui.cloud'],
+                    sameAs: ['https://humanos.foundation', 'https://ramonrios.net'],
                     contactPoint: {
                         '@type': 'ContactPoint',
                         email: 'hello@humanos.foundation',

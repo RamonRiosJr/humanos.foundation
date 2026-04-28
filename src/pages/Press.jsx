@@ -60,8 +60,8 @@ export default function Press() {
                             </div>
                             <div>
                                 <p className="text-sm text-white/70 mb-1 font-medium">Organization</p>
-                                <a href="https://coqui.cloud" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm flex items-center gap-1 font-bold underline decoration-cyan-400/20 underline-offset-4">
-                                    Coqui Cloud Dev Co. <ExternalLink className="w-3 h-3" />
+                                <a href="https://ramonrios.net" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm flex items-center gap-1 font-bold underline decoration-cyan-400/20 underline-offset-4">
+                                    RamonRios.Net <ExternalLink className="w-3 h-3" />
                                 </a>
                             </div>
                         </div>
