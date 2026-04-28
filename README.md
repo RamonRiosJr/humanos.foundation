@@ -59,21 +59,37 @@ Powers `aurahos.io` and the Clinical Patient Vault. For engineering the core sof
 
 ```mermaid
 sequenceDiagram
+    autonumber
     participant P as Patient Device (Local)
     participant Edge as Vercel Edge Runtime
     participant Vault as Core Database
     participant Clinic as Clinical FHIR Gateway (EHR)
 
-    P->>P: 1. Generate Local AES-256 Key
-    P->>P: 2. Encrypt Clinical Narrative
-    P->>Edge: 3. POST /api/sync (Ciphertext Payload)
-    Edge->>Vault: 4. Store Ciphertext (Zero Knowledge)
-    Note over Edge,Vault: Servers mathematically cannot decrypt patient data
+    Note over P: Biometric Secure Enclave
+    activate P
+    P->>P: Generate Local AES-256 Key
+    P->>P: Encrypt Clinical Narrative
+    P->>Edge: POST /api/sync (Ciphertext Payload)
+    deactivate P
     
-    Clinic->>Edge: 5. Request Authorized Data (OAuth 2.0 Webhook)
-    Edge->>P: 6. Secure Push: "Clinic X Requesting Intake Data"
-    P->>P: 7. User Approves -> Decrypt & Format to FHIR R4 JSON
-    P->>Clinic: 8. Direct Local-to-Clinic P2P Handshake (E2E)
+    activate Edge
+    Edge->>Vault: Store Ciphertext (Zero Knowledge)
+    Note over Edge,Vault: Servers mathematically cannot decrypt patient data
+    deactivate Edge
+    
+    activate Clinic
+    Clinic->>Edge: Request Authorized Data (OAuth 2.0 Webhook)
+    deactivate Clinic
+
+    activate Edge
+    Edge->>P: Secure Push: "Clinic X Requesting Intake Data"
+    deactivate Edge
+
+    activate P
+    Note over P: Local FaceID / Biometric Approval
+    P->>P: Decrypt & Format to FHIR R4 JSON
+    P->>Clinic: Direct Local-to-Clinic P2P Handshake (E2E)
+    deactivate P
 ```
 
 ---
