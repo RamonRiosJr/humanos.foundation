@@ -2,17 +2,10 @@ import React, { useEffect, useState, useRef } from 'react';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import './AILogo.css';
 
-export type BotState = 'idle' | 'listening' | 'thinking' | 'speaking';
-
-interface AILogoProps {
-  className?: string;
-  botState?: BotState;
-}
-
-export function AILogo({ className = '', botState = 'idle' }: AILogoProps) {
+export function AILogo({ className = '', botState = 'idle' }) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const svgRef = useRef<SVGSVGElement>(null);
+  const svgRef = useRef(null);
   
   // FEATURE 3: Digital Glitch Transitions
   const [isGlitching, setIsGlitching] = useState(false);
@@ -27,7 +20,7 @@ export function AILogo({ className = '', botState = 'idle' }: AILogoProps) {
   const rotateX = useTransform(y, [-100, 100], [15, -15]);
   const rotateY = useTransform(x, [-100, 100], [-15, 15]);
 
-  function handleMouseMove(event: React.MouseEvent<HTMLDivElement>) {
+  function handleMouseMove(event) {
     const rect = event.currentTarget.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
@@ -54,9 +47,9 @@ export function AILogo({ className = '', botState = 'idle' }: AILogoProps) {
         const force = Math.pow((maxDist - dist) / maxDist, 2);
         const pushX = (dx / dist) * force * 25;
         const pushY = (dy / dist) * force * 25;
-        (node as HTMLElement).style.transform = `translate(${pushX}px, ${pushY}px)`;
+        node.style.transform = `translate(${pushX}px, ${pushY}px)`;
       } else {
-        (node as HTMLElement).style.transform = 'translate(0px, 0px)';
+        node.style.transform = 'translate(0px, 0px)';
       }
     });
   }
@@ -68,7 +61,7 @@ export function AILogo({ className = '', botState = 'idle' }: AILogoProps) {
     if (!svgRef.current) return;
     const nodes = svgRef.current.querySelectorAll('.interactive-node');
     nodes.forEach((node) => {
-      (node as HTMLElement).style.transform = 'translate(0px, 0px)';
+      node.style.transform = 'translate(0px, 0px)';
     });
   }
 
