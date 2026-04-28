@@ -13,6 +13,7 @@ export const A11yProvider = ({ children }) => {
             dyslexiaFont: false,
             highlightLinks: false,
             pauseAnimations: false,
+            readingMask: false,
         };
     });
 
