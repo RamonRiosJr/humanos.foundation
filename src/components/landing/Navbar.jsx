@@ -78,9 +78,24 @@ export default function Navbar() {
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className={`sticky top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'py-3' : 'py-5'}`}
+            className={`sticky top-0 w-full z-50 transition-all duration-500`}
         >
-            <div className="max-w-7xl mx-auto px-4 md:px-8">
+            {/* Global Patient Advocacy Banner */}
+            <div className="w-full bg-gradient-to-r from-rose-600/95 via-red-500/95 to-rose-600/95 backdrop-blur-xl border-b border-white/20 shadow-[0_4px_20px_-4px_rgba(225,29,72,0.4)]">
+                <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-center gap-2 md:gap-4 text-[10px] md:text-xs">
+                    <span className="animate-pulse text-sm">❤️</span>
+                    <a href="https://aurahos.io" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
+                        <span className="text-white font-bold tracking-widest uppercase drop-shadow-md">
+                            Patients: App Access is <span className="text-yellow-300 font-extrabold border-b border-yellow-300/50 pb-0.5 ml-1">ALWAYS FREE</span>
+                        </span>
+                    </a>
+                    <span className="hidden sm:inline text-white font-black tracking-widest uppercase bg-white/20 px-2.5 py-0.5 rounded-full border border-white/30 text-[9px] shadow-sm">
+                        #KillTheClipboard
+                    </span>
+                </div>
+            </div>
+
+            <div className={`max-w-7xl mx-auto px-4 md:px-8 transition-all duration-500 ${scrolled ? 'py-3' : 'py-5'}`}>
                 <div className={`flex items-center justify-between rounded-2xl px-5 py-3 transition-all duration-500 ${scrolled ? 'glass-strong shadow-lg shadow-black/20' : 'bg-transparent'}`}>
                     <HOSLogo
                         size={scrolled ? 34 : 52}
