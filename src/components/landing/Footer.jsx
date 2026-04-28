@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, ExternalLink, Zap } from 'lucide-react';
+import { Heart, ExternalLink, Zap, Facebook, Github, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import HOSLogo from '../shared/HOSLogo';
@@ -106,6 +106,17 @@ export default function Footer() {
                         <span>for the movement</span>
                     </div>
                     <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-2 border-r border-white/10 pr-4 mr-1">
+                            <a href="https://www.facebook.com/HumanosFoundation" target="_blank" rel="noopener noreferrer" className="p-1.5 text-white/20 hover:text-blue-500 hover:bg-blue-500/10 rounded-md transition-all" aria-label="Facebook">
+                                <Facebook className="w-3.5 h-3.5" />
+                            </a>
+                            <a href="https://github.com/RamonRiosJr/humanos.foundation" target="_blank" rel="noopener noreferrer" className="p-1.5 text-white/20 hover:text-white hover:bg-white/10 rounded-md transition-all" aria-label="GitHub">
+                                <Github className="w-3.5 h-3.5" />
+                            </a>
+                            <a href="https://www.youtube.com/@HumanosFoundation" target="_blank" rel="noopener noreferrer" className="p-1.5 text-white/20 hover:text-red-500 hover:bg-red-500/10 rounded-md transition-all" aria-label="YouTube">
+                                <Youtube className="w-4 h-4" />
+                            </a>
+                        </div>
                         <a href="mailto:hello@humanos.foundation" className="text-[10px] text-white/15 hover:text-cyan-400/60 transition-colors">
                             hello@humanos.foundation
                         </a>
