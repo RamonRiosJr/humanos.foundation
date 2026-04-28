@@ -20,7 +20,7 @@ const sections = [
     },
     {
         title: '4. Intellectual Property',
-        content: `All content on this Site — including text, graphics, logos, and the hOS movement materials — is the property of Humanos Foundation and Coqui Cloud Dev Co. and is protected by applicable intellectual property laws.\n\nYou may share and reference our content for educational and advocacy purposes with attribution to "Humanos Foundation / humanos.foundation."`,
+        content: `All content on this Site — including text, graphics, logos, and the hOS movement materials — is the property of Humanos Foundation and RamonRios.Net and is protected by applicable intellectual property laws.\n\nYou may share and reference our content for educational and advocacy purposes with attribution to "Humanos Foundation / humanos.foundation."`,
     },
     {
         title: '5. User Conduct',
