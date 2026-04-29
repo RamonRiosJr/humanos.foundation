@@ -81,15 +81,15 @@ export default function Navbar() {
             className={`sticky top-0 w-full z-50 transition-all duration-500`}
         >
             {/* Global Patient Advocacy Banner */}
-            <div className="w-full bg-gradient-to-r from-rose-600/95 via-red-500/95 to-rose-600/95 backdrop-blur-xl border-b border-white/20 shadow-[0_4px_20px_-4px_rgba(225,29,72,0.4)]">
+            <div className="w-full bg-gradient-to-r from-[#0a0a0f]/95 via-cyan-900/60 to-[#0a0a0f]/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-[0_4px_20px_-4px_rgba(34,211,238,0.15)]">
                 <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-center gap-2 md:gap-4 text-[10px] md:text-xs">
-                    <span className="animate-pulse text-sm">❤️</span>
+                    <span className="animate-pulse text-sm">🩵</span>
                     <a href="https://aurahos.io" target="_blank" rel="noopener noreferrer" onClick={() => window.gtag && window.gtag('event', 'click_app_access_banner')} className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
                         <span className="text-white font-bold tracking-widest uppercase drop-shadow-md">
-                            Patients: App Access is <span className="text-yellow-300 font-extrabold border-b border-yellow-300/50 pb-0.5 ml-1">ALWAYS FREE</span>
+                            Patients: App Access is <span className="text-cyan-300 font-extrabold border-b border-cyan-300/50 pb-0.5 ml-1">ALWAYS FREE</span>
                         </span>
                     </a>
-                    <span className="hidden sm:inline text-white font-black tracking-widest uppercase bg-white/20 px-2.5 py-0.5 rounded-full border border-white/30 text-[9px] shadow-sm">
+                    <span className="hidden sm:inline text-cyan-100 font-black tracking-widest uppercase bg-cyan-500/20 px-2.5 py-0.5 rounded-full border border-cyan-500/30 text-[9px] shadow-sm">
                         #KillTheClipboard
                     </span>
                 </div>
