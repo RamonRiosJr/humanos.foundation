@@ -9,6 +9,11 @@ export default function HeroSection() {
 
     return (
         <section className="relative min-h-screen flex flex-col items-center px-4 md:px-8 overflow-hidden noise-overlay pt-32 md:pt-40 lg:pt-48 pb-20">
+            <div className="absolute inset-0 z-0 opacity-30 mix-blend-screen pointer-events-none">
+                <img src="/images/data-sovereignty-hero.png" alt="Health Data Sovereignty" className="w-full h-full object-cover object-center scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/50 via-[#0a0a0f]/80 to-[#0a0a0f]" />
+            </div>
+
             <NeuralMap />
 
             <div className="relative z-10 w-full text-center max-w-5xl mx-auto flex-1 flex flex-col justify-center items-center">
