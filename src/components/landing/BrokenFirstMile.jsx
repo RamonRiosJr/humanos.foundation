@@ -61,9 +61,9 @@ export default function BrokenFirstMile() {
                                 initial={{ scale: 1.1, filter: 'blur(4px)' }}
                                 animate={isInView ? { scale: 1.05, filter: 'blur(0px)' } : {}}
                                 transition={{ duration: 2.5, ease: "easeOut", delay: 0.5 }}
-                                src="/content/clipboard-penalty-assembly-line-medicine.jpg" 
+                                src="/images/clipboard-vs-aura.png" 
                                 alt="Assembly Line Medicine Patient"
-                                className="w-full h-full object-cover origin-center scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out grayscale-[40%]" 
+                                className="w-full h-full object-cover object-left origin-center scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out grayscale-[40%]" 
                             />
                         </div>
 
@@ -128,9 +128,9 @@ export default function BrokenFirstMile() {
                                 initial={{ scale: 1.1 }}
                                 animate={isInView ? { scale: 1.05 } : {}}
                                 transition={{ duration: 2, ease: "easeOut", delay: 0.8 }}
-                                src="/content/patient-data-sovereignty-vault.jpg" 
+                                src="/images/clipboard-vs-aura.png" 
                                 alt="Patient Data Sovereignty Vault"
-                                className="w-full h-full object-cover origin-center scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out grayscale-[20%]" 
+                                className="w-full h-full object-cover object-right origin-center scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out grayscale-[20%]" 
                             />
                         </div>
 
