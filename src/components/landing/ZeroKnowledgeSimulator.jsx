@@ -69,7 +69,7 @@ export default function ZeroKnowledgeSimulator() {
                                     <textarea 
                                         value={rawText}
                                         onChange={(e) => setRawText(e.target.value)}
-                                        className="w-full h-36 bg-white/[0.02] border border-white/10 rounded-xl p-4 text-sm text-cyan-50 focus:outline-none focus:border-emerald-500/50 transition-colors resize-none placeholder-white/20"
+                                        className="w-full h-36 bg-black/40 border border-white/10 rounded-xl p-4 text-sm text-cyan-50 focus:outline-none focus:border-emerald-500/50 transition-colors resize-none placeholder-white/20 shadow-inner"
                                         placeholder="Type a symptom or clinical note here..."
                                     />
                                     <button 
