@@ -8,6 +8,7 @@ import Footer from '../components/landing/Footer';
 import SectionDivider from '../components/shared/SectionDivider';
 import HomeStats from '../components/landing/HomeStats';
 import SEOMeta from '../components/shared/SEOMeta';
+import ZeroKnowledgeSimulator from '../components/landing/ZeroKnowledgeSimulator';
 import SurvivalBanner from '../components/landing/SurvivalBanner';
 
 export default function Home() {
@@ -25,6 +26,8 @@ export default function Home() {
             <HeroSection />
             <SectionDivider />
             <div id="vision"><BrokenFirstMile /></div>
+            <SectionDivider />
+            <ZeroKnowledgeSimulator />
             <SectionDivider />
             <div id="stats"><HomeStats /></div>
             <SectionDivider />
