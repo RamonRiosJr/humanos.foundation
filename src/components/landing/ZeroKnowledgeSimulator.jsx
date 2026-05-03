@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Lock, ShieldCheck, Database, KeyRound, Cpu, ArrowRight } from 'lucide-react';
 
@@ -8,9 +8,9 @@ export default function ZeroKnowledgeSimulator() {
     const [encryptionStage, setEncryptionStage] = useState(0);
     const [cipherText, setCipherText] = useState("");
 
-    const generateFakeCipher = (text) => {
+    const generateFakeCipher = useCallback((text) => {
         return "U2FsdGVkX1" + btoa(text).replace(/=/g, '') + Array.from({length: 48}, () => Math.floor(Math.random()*16).toString(16)).join('') + "==";
-    };
+    }, []);
 
     const handleEncrypt = () => {
         if (!rawText.trim() || encryptionStage > 0) return;
