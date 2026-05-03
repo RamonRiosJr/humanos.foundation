@@ -1,6 +1,6 @@
 # The RC.4 Clinical Operations Lock
 
-Today, the Humanos Foundation officially promotes the Aura hOS™ ecosystem to **v0.8.0-rc.4**. This release candidate signifies a massive architectural leap, strictly governed by the Architect Assessor Protocol. We have successfully annihilated one of the most vicious barriers in modern healthcare: the 15-page clipboard penalty.
+Today, the Humanos Foundation officially promotes the Aura hOS™ ecosystem to **v0.8.0-rc.5**. This release candidate signifies a massive architectural leap, strictly governed by the Architect Assessor Protocol. We have successfully annihilated one of the most vicious barriers in modern healthcare: the 15-page clipboard penalty.
 
 ### Hardening the Front Desk
 
@@ -21,3 +21,4 @@ With RC.4 live, the platform is computationally ready for institutional evaluati
 ### Sovereign Standard Deployed
 
 The system only listens when the compliance is bulletproof. [Join the Movement](/Join) to build the future of sovereign data architecture.
+
