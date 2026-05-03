@@ -72,7 +72,7 @@ export default function Blog() {
             />
             <Navbar />
             <PageHero
-                badge="Aura hOS™ v0.8.0-rc.4 — SOVEREIGN LIBRARY"
+                badge="Aura hOS™ v0.8.0-rc.5 — SOVEREIGN LIBRARY"
                 title="The Movement"
                 titleAccent="Insights"
                 subtitle="Exposing the 5-minute hustle and architecting a future where you own your full story."
@@ -221,5 +221,6 @@ export default function Blog() {
         </div>
     );
 }
+
 
 
