@@ -1,6 +1,6 @@
 <div align="center">
 
-# Humanos Foundation
+# HumanOS Foundation
 ### The Advocacy Kernel & Human Operations Layer
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-00d4ff.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](https://opensource.org/licenses/MIT)
@@ -24,7 +24,7 @@
 
 ## 🌍 The Mission
 
-The **Humanos Foundation** is the 501(c)(3) Sovereign advocacy wing of the **Aura hOS™ (Human Operating System)**. We are a global network of patients, clinicians, and technologists dedicated to dismantling the 15-20 page clinical clipboard penalty. 
+The **HumanOS Foundation** is the 501(c)(3)(Pending) Sovereign advocacy wing of the **Aura hOS™ (Human Operating System)**. We are a global network of patients, clinicians, and technologists dedicated to dismantling the 15-20 page clinical clipboard penalty. 
 
 ### 🏛️ The Foundation Vanguard
 Our movement replaces the hostile "assembly-line" medical intake process with a cryptographic Digital Handshake, permanently securing patient data autonomy.
