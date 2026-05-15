@@ -1,6 +1,6 @@
 <div align="center">
 
-# Humanos Foundation
+# HumanOS Foundation
 ### The Advocacy Kernel & Human Operations Layer
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-00d4ff.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](https://opensource.org/licenses/MIT)
