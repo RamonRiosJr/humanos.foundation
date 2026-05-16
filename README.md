@@ -22,9 +22,14 @@
 
 
 
+> **⚠️ PROJECT STATUS: PRE-LAUNCH & ARCHITECTURAL PHASE**
+> *The Humanos Foundation is currently in the pre-launch phase. We are actively finalizing our 501(c)(3) tax-exempt status, securing federal/seed funding, and formalizing compliance frameworks. This repository serves as a live architectural proof-of-concept for investors, strategic clinical partnerships, and ecosystem development.*
+
 ## 🌍 The Mission
 
-The **HumanOS Foundation** is the 501(c)(3)(Pending) Sovereign advocacy wing of the **Aura hOS™ (Human Operating System)**. We are a global network of patients, clinicians, and technologists dedicated to dismantling the 15-20 page clinical clipboard penalty. 
+The **HumanOS Foundation** is the 501(c)(3) (Pre-Filing Stage / Pending Funding) Sovereign advocacy wing of the **Aura hOS™ (Human Operating System)**. We are a global network of patients, clinicians, and technologists dedicated to dismantling the 15-20 page clinical clipboard penalty. 
+
+**The Medical Origin:** The term "Aura" is strictly derived from the clinical neurological symptom that precedes an epileptic seizure or severe migraine, which frequently causes episodic mutism. The Aura Human Operating System is engineered to act as a digital voice for these exact pre-ictal patients who are physically unable to participate in standard verbal intake.
 
 ### 🏛️ The Foundation Vanguard
 Our movement replaces the hostile "assembly-line" medical intake process with a cryptographic Digital Handshake, permanently securing patient data autonomy.
