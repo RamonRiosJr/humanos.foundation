@@ -41,6 +41,14 @@ jobs:
           CI: true
           NODE_ENV: production
 
+      - name: 💾 Preserve Preview Artifacts (GH-600 Context Memory)
+        uses: actions/upload-artifact@v4
+        continue-on-error: true
+        with:
+          name: preview-build-artifact-${{ github.sha }}
+          path: dist/
+          retention-days: 7
+
       - name: Deploy to Vercel (Preview)
         id: deploy
         continue-on-error: true
