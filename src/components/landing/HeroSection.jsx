@@ -26,7 +26,7 @@ export default function HeroSection() {
                 >
                     <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
                     <span className="text-[11px] md:text-xs text-cyan-400/80 font-medium tracking-[0.2em] uppercase">
-                        Aura hOS™ v0.8.0-rc.5
+                        Aura hOS™ v0.9.1
                     </span>
                 </motion.div>
 
