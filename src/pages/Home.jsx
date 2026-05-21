@@ -18,7 +18,7 @@ export default function Home() {
                 title="Humanos Foundation | Open-Source Health Data Sovereignty"
                 description="The Human Operating System (hOS) is a Zero-Knowledge, open-source vault giving patients ultimate sovereign ownership of their medical records to bypass legacy EHR billing machines."
                 url="https://humanos.foundation"
-                keywords="open source medical records, zero knowledge EHR, FHIR interoperability, HIPAA alternative, FTC HBNR compliance, patient data sovereignty, health tech non-profit, Aura hOS"
+                keywords="Kill the Clipboard, Zero-Knowledge FHIR, Edge Intake Routing, open source medical records, zero knowledge EHR, FHIR interoperability, HIPAA alternative, FTC HBNR compliance, patient data sovereignty, health tech non-profit, Aura hOS"
                 type="website"
             />
             <SurvivalBanner />
