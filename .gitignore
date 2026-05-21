@@ -33,5 +33,4 @@ docs/fix-branch/
 *.txt
 
 # AI Agent Security Exfiltration Lock
-.agents/
-docs/
+# .agents/ and docs/ intentionally un-ignored to sync the ecosystem swarms
