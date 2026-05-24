@@ -2,7 +2,7 @@
 
 Building an open-source, mathematically secure clinical architecture requires immense focus and unyielding momentum. In the early stages, the rapid-fire "pushy" execution of a neurodivergent founder is a massive tactical advantage—it generates the velocity required to build deeply complex systems from nothing.
 
-However, velocity without strict structural containment leads to architectural drift. 
+However, velocity without strict structural containment leads to architectural drift.
 
 ### Enter the Architect Assessor
 

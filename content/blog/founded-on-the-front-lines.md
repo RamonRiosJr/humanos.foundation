@@ -2,7 +2,7 @@
 
 Great movements rarely start in sterile boardrooms. They start in the trenches. They start when the pain of the status quo becomes unbearable.
 
-The Humanos Foundation and its core technology, Aura hOS™, began during a period of intense personal medical crisis and clinical isolation. I was dealing with complex health issues, dismissed by rushed doctors, and suffocating under the weight of relentless, thought-altering medications designed to treat symptoms while ignoring the root cause. 
+The Humanos Foundation and its core technology, Aura hOS™, began during a period of intense personal medical crisis and clinical isolation. I was dealing with complex health issues, dismissed by rushed doctors, and suffocating under the weight of relentless, thought-altering medications designed to treat symptoms while ignoring the root cause.
 
 ### Coding for Survival
 
@@ -12,7 +12,7 @@ Aura hOS is a secure, digital vault that continuously records your true, daily l
 
 ### From One Patient to Millions
 
-When I finally brought the printed Aura hOS™ report into the clinic, everything changed. I wasn't a confused patient struggling to remember details anymore. I was the CEO of my own data. 
+When I finally brought the printed Aura hOS™ report into the clinic, everything changed. I wasn't a confused patient struggling to remember details anymore. I was the CEO of my own data.
 
 That was the moment I realized this wasn't just an app for me. It was a foundational structural solution to the 5-Minute Hustle for every patient on Earth.
 
