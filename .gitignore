@@ -33,4 +33,8 @@ docs/fix-branch/
 *.txt
 
 # AI Agent Security Exfiltration Lock
-# .agents/ and docs/ intentionally un-ignored to sync the ecosystem swarms
+# Keep private agent workflows, catchups, and job hunt progress local and secure
+.agents/
+docs/AURA_GLOBAL_CATCHUP.md
+TODO_PRIVATE.md
+
