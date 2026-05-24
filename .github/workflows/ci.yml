@@ -33,7 +33,7 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm ci
 
       - name: TypeScript type-check
         run: npm run typecheck
@@ -41,8 +41,8 @@ jobs:
       - name: ESLint
         run: npm run lint
 
-      # - name: Prettier format-check
-      #   run: npx prettier --check .
+      - name: Prettier format-check
+        run: npx prettier --check .
 
       - name: Unit tests + Coverage
         run: npm test -- --coverage --passWithNoTests
@@ -59,8 +59,8 @@ jobs:
           retention-days: 14
 
       - name: Security audit
-        run: npm audit --audit-level=high || true
-        # Non-blocking: awareness only, not a hard failure
+        run: npm audit --audit-level=high
+        # Blocks the build on high/critical vulnerabilities
 
       - name: Production build
         run: npm run build
@@ -68,7 +68,7 @@ jobs:
           CI: true
           NODE_ENV: production
 
-      - name: 💾 Preserve CI Build Artifacts (GH-600 Context Memory)
+      - name: 💾 Preserve CI Build Artifacts (Ecosystem Context Memory)
         uses: actions/upload-artifact@v4
         with:
           name: ci-build-artifact
