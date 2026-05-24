@@ -41,7 +41,7 @@ jobs:
           CI: true
           NODE_ENV: production
 
-      - name: 💾 Preserve Preview Artifacts (GH-600 Context Memory)
+      - name: 💾 Preserve Preview Artifacts (Ecosystem Context Memory)
         uses: actions/upload-artifact@v4
         continue-on-error: true
         with:
