@@ -41,9 +41,9 @@ cd humanos.foundation
 
 1. **Create a feature branch** from `main`:
 
-   ```bash
-   git checkout -b feat/my-improvement
-   ```
+    ```bash
+    git checkout -b feat/my-improvement
+    ```
 
 2. **Make your changes** following the [Script Standards](#script-standards) below.
 
@@ -114,13 +114,13 @@ All scripts in this repository must adhere to the following standards:
 - **Never use `$PID`** as a variable name — it is reserved by PowerShell. Use `$PROJ_ID`, `$REPO_ID`, etc.
 - **Never use backtick interpolation in GraphQL strings** — use string concatenation:
 
-  ```powershell
-  # ❌ Wrong — fragile with double-quoted field names
-  $mut = "mutation { createProjectV2(input: { title: `"$title`" }) { ... } }"
+    ```powershell
+    # ❌ Wrong — fragile with double-quoted field names
+    $mut = "mutation { createProjectV2(input: { title: `"$title`" }) { ... } }"
 
-  # ✅ Correct — safe and explicit
-  $mut = 'mutation { createProjectV2(input: { title: "' + $title + '" }) { ... } }'
-  ```
+    # ✅ Correct — safe and explicit
+    $mut = 'mutation { createProjectV2(input: { title: "' + $title + '" }) { ... } }'
+    ```
 
 - **Credentials via env vars OR `Read-Host -AsSecureString`**
 - **Idempotent** — check before create, skip if exists
@@ -192,4 +192,3 @@ _Thank you for making humanos.foundation better for everyone!_ 🚀
 **LinkedIn:** [linkedin.com/in/ramon-rios-a8ba3035](https://www.linkedin.com/in/ramon-rios-a8ba3035) &nbsp;|&nbsp;
 **Blog:** [ramonrios.net](https://ramonrios.net) &nbsp;|&nbsp;
 **RamonRios.Net:** [ramonrios.net](https://ramonrios.net)
-

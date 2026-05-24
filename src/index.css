@@ -109,7 +109,8 @@ html.a11y-large-text {
 
 /* Dyslexia Font: Fallback to highly readable OpenDyslexic or Comic Sans */
 html.a11y-dyslexia * {
-    font-family: 'OpenDyslexic', 'Comic Sans MS', 'Comic Sans', sans-serif !important;
+    font-family:
+        "OpenDyslexic", "Comic Sans MS", "Comic Sans", sans-serif !important;
 }
 
 /* Highlight Links: Pure yellow highlights for all interactive anchors */

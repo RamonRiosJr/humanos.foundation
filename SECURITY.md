@@ -2,11 +2,11 @@
 
 ## Supported Versions
 
-| Version | Platform | Supported |
-| --- | --- | --- |
-| Aura hOS™ v0.8.x (current) | `aurahos.io` | ✅ Active |
-| humanos.foundation (current) | `humanos.foundation` | ✅ Active |
-| All prior releases | — | ❌ End of Life |
+| Version                      | Platform             | Supported      |
+| ---------------------------- | -------------------- | -------------- |
+| Aura hOS™ v0.8.x (current)   | `aurahos.io`         | ✅ Active      |
+| humanos.foundation (current) | `humanos.foundation` | ✅ Active      |
+| All prior releases           | —                    | ❌ End of Life |
 
 ## Architecture Context
 
@@ -19,6 +19,7 @@ This repository (`humanos.foundation`) is the **Human Operations Layer** — an 
 Email: **[security@humanos.foundation](mailto:security@humanos.foundation)**
 
 Include the following:
+
 - Description of the vulnerability and its potential impact
 - Steps to reproduce
 - Affected version / URL / endpoint
@@ -40,4 +41,3 @@ Include the following:
 ## Public Disclosure
 
 We will coordinate responsible public disclosure with you after remediation. We believe security research is a public good and we treat it that way.
-

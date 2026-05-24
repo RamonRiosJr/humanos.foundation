@@ -16,7 +16,7 @@ As of this morning, we have executed **Phase 13: Architectural Deprecation**.
 
 All Clinical partner traffic and Hospital CTO validation checks originating from `humanos.foundation` are now securely mapped via target redirects directly into the fully compliant **aurahos.io** isolated environment.
 
-By severing ties with legacy CRM structures, Aura hOS formally proves to incoming grant reviewers and hospital groups that our architecture is strictly sovereign. 
+By severing ties with legacy CRM structures, Aura hOS formally proves to incoming grant reviewers and hospital groups that our architecture is strictly sovereign.
 
 ---
 

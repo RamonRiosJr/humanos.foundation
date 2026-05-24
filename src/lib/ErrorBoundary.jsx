@@ -1,6 +1,6 @@
-import React from 'react';
-import { AlertCircle } from 'lucide-react';
-import { Logger } from './logger';
+import React from "react";
+import { AlertCircle } from "lucide-react";
+import { Logger } from "./logger";
 
 class ErrorBoundary extends React.Component {
     constructor(props) {
@@ -17,12 +17,17 @@ class ErrorBoundary extends React.Component {
         Logger.error(error, "Display Surface Failure");
 
         // Intelligent auto-recover for Vite Stale Chunk deployment errors (404s during CI/CD)
-        const isChunkLoadError = error?.message?.match(/Failed to fetch dynamically imported module/i) ||
-                                 error?.message?.match(/Importing a module script failed/i) ||
-                                 error?.message?.match(/dynamically imported module/i);
-        
+        const isChunkLoadError =
+            error?.message?.match(
+                /Failed to fetch dynamically imported module/i,
+            ) ||
+            error?.message?.match(/Importing a module script failed/i) ||
+            error?.message?.match(/dynamically imported module/i);
+
         if (isChunkLoadError) {
-            Logger.warn("Vite Stale Chunk detected. Executing autonomous hard reload to synchronize SPA with Edge deployment.");
+            Logger.warn(
+                "Vite Stale Chunk detected. Executing autonomous hard reload to synchronize SPA with Edge deployment.",
+            );
             // Debounce the reload slightly to prevent infinite loops if the chunk is permanently broken
             setTimeout(() => {
                 window.location.reload();
@@ -36,9 +41,13 @@ class ErrorBoundary extends React.Component {
             return (
                 <div className="flex flex-col items-center justify-center min-h-[50vh] p-8 text-center bg-transparent border border-red-500/20 rounded-xl bg-red-500/5 my-12 mx-auto max-w-2xl backdrop-blur-sm">
                     <AlertCircle className="w-12 h-12 text-red-400 mb-4" />
-                    <h2 className="text-xl font-bold text-white mb-2 font-outfit">Component Degradation Detected</h2>
+                    <h2 className="text-xl font-bold text-white mb-2 font-outfit">
+                        Component Degradation Detected
+                    </h2>
                     <p className="text-sm text-slate-300 mb-6">
-                        A critical rendering failure occurred within this visual component. The rest of the page remains isolated and functional.
+                        A critical rendering failure occurred within this visual
+                        component. The rest of the page remains isolated and
+                        functional.
                     </p>
                     <button
                         onClick={() => window.location.reload()}

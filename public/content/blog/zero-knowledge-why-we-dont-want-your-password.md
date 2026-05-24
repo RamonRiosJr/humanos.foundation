@@ -8,9 +8,9 @@ This is the philosophy behind **Zero-Knowledge Architecture**.
 
 In a standard Web2 application, you create an account and send your data to a server. The server encrypts your data, but the server also holds the key. If the server is hacked, or if the company decides to sell your data to a pharmaceutical firm, they just unlock it.
 
-In the hOS ecosystem, the encryption key is generated locally on your device. It never leaves your phone or computer. When you sync your data to the cloud for backup or to share with a doctor, the data is scrambled into an unreadable cipher *before* it leaves your hands. 
+In the hOS ecosystem, the encryption key is generated locally on your device. It never leaves your phone or computer. When you sync your data to the cloud for backup or to share with a doctor, the data is scrambled into an unreadable cipher _before_ it leaves your hands.
 
-Aura hOS is a secure, digital vault that continuously records your true, daily lived experiences. We encrypt and lock your health history so that only you control it. We host the encrypted files, but we **do not possess the key**. 
+Aura hOS is a secure, digital vault that continuously records your true, daily lived experiences. We encrypt and lock your health history so that only you control it. We host the encrypted files, but we **do not possess the key**.
 
 ### Mathematical Independence
 

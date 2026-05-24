@@ -1,76 +1,77 @@
 name: Enterprise CI Pipeline
 
 on:
-  push:
-    branches: [main, master, develop]
-  pull_request:
-    branches: [main, master]
+    push:
+        branches: [main, master, develop]
+    pull_request:
+        branches: [main, master]
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
 
 env:
-  NODE_VERSION: "24"
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    NODE_VERSION: "24"
+    FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
-  quality-gate:
-    name: Quality Gate
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
+    quality-gate:
+        name: Quality Gate
+        runs-on: ubuntu-latest
+        timeout-minutes: 15
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: "npm"
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ env.NODE_VERSION }}
+                  cache: "npm"
 
-      - name: Install dependencies
-        run: npm ci
+            - name: Install dependencies
+              run: npm ci
 
-      - name: TypeScript type-check
-        run: npm run typecheck
+            - name: TypeScript type-check
+              run: npm run typecheck
 
-      - name: ESLint
-        run: npm run lint
+            - name: ESLint
+              run: npm run lint
 
-      - name: Prettier format-check
-        run: npx prettier --check .
+            - name: Prettier format-check
+              run: npx prettier --check .
 
-      - name: Unit tests + Coverage
-        run: npm test -- --coverage --passWithNoTests
-        env:
-          CI: true
+            - name: Unit tests + Coverage
+              run: npm test -- --coverage --passWithNoTests
+              env:
+                  CI: true
 
-      - name: Upload coverage report
-        uses: actions/upload-artifact@v4
-        if: always()
-        continue-on-error: true
-        with:
-          name: coverage-report
-          path: coverage/
-          retention-days: 14
+            - name: Upload coverage report
+              uses: actions/upload-artifact@v4
+              if: always()
+              continue-on-error: true
+              with:
+                  name: coverage-report
+                  path: coverage/
+                  retention-days: 14
+                  if-no-files-found: ignore
 
-      - name: Security audit
-        run: npm audit --audit-level=high
-        # Blocks the build on high/critical vulnerabilities
+            - name: Security audit
+              run: npm audit --audit-level=high
+              # Blocks the build on high/critical vulnerabilities
 
-      - name: Production build
-        run: npm run build
-        env:
-          CI: true
-          NODE_ENV: production
+            - name: Production build
+              run: npm run build
+              env:
+                  CI: true
+                  NODE_ENV: production
 
-      - name: 💾 Preserve CI Build Artifacts (Ecosystem Context Memory)
-        uses: actions/upload-artifact@v4
-        with:
-          name: ci-build-artifact
-          path: dist/
-          retention-days: 7
+            - name: 💾 Preserve CI Build Artifacts (Ecosystem Context Memory)
+              uses: actions/upload-artifact@v4
+              with:
+                  name: ci-build-artifact
+                  path: dist/
+                  retention-days: 7

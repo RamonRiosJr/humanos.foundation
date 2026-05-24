@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { createPageUrl } from '@/utils';
-import HOSLogo from '../shared/HOSLogo';
-import ThemeToggle from '../shared/ThemeToggle';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+import { createPageUrl } from "@/utils";
+import HOSLogo from "../shared/HOSLogo";
+import ThemeToggle from "../shared/ThemeToggle";
 
 const navLinks = [
-    { label: 'Origin', href: createPageUrl('Origin') },
-    { label: 'Manifesto', href: createPageUrl('Manifesto') },
-    { label: 'The Problem', href: createPageUrl('TheProblem') },
-    { label: 'The Solution', href: createPageUrl('TheSolution') },
-    { label: 'Principles', href: createPageUrl('Principles') },
-    { label: 'Developers', href: createPageUrl('Developers') },
-    { label: 'Blog', href: createPageUrl('Blog') },
-    { label: 'Team', href: createPageUrl('Team') },
-    { label: 'Press', href: createPageUrl('Press') },
-    { label: 'For Providers', href: 'https://aurahos.io', external: true },
+    { label: "Origin", href: createPageUrl("Origin") },
+    { label: "Manifesto", href: createPageUrl("Manifesto") },
+    { label: "The Problem", href: createPageUrl("TheProblem") },
+    { label: "The Solution", href: createPageUrl("TheSolution") },
+    { label: "Principles", href: createPageUrl("Principles") },
+    { label: "Developers", href: createPageUrl("Developers") },
+    { label: "Blog", href: createPageUrl("Blog") },
+    { label: "Team", href: createPageUrl("Team") },
+    { label: "Press", href: createPageUrl("Press") },
+    { label: "For Providers", href: "https://aurahos.io", external: true },
 ];
 
 export default function Navbar() {
@@ -25,8 +25,8 @@ export default function Navbar() {
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     // A11y Focus Trap for Mobile Menu
@@ -34,18 +34,24 @@ export default function Navbar() {
         if (!menuOpen) return;
 
         const handleKeyDown = (e) => {
-            if (e.key === 'Escape') {
+            if (e.key === "Escape") {
                 setMenuOpen(false);
                 return;
             }
-            if (e.key === 'Tab') {
-                const navElement = document.getElementById('main-navigation');
+            if (e.key === "Tab") {
+                const navElement = document.getElementById("main-navigation");
                 if (!navElement) return;
 
                 // Select all visibly focusable elements inside the navbar
                 const focusableNodes = Array.from(
-                    navElement.querySelectorAll('a[href], button, [tabindex]:not([tabindex="-1"])')
-                ).filter(node => node.offsetParent !== null && window.getComputedStyle(node).display !== 'none');
+                    navElement.querySelectorAll(
+                        'a[href], button, [tabindex]:not([tabindex="-1"])',
+                    ),
+                ).filter(
+                    (node) =>
+                        node.offsetParent !== null &&
+                        window.getComputedStyle(node).display !== "none",
+                );
 
                 if (focusableNodes.length === 0) return;
 
@@ -66,8 +72,8 @@ export default function Navbar() {
             }
         };
 
-        document.addEventListener('keydown', handleKeyDown);
-        return () => document.removeEventListener('keydown', handleKeyDown);
+        document.addEventListener("keydown", handleKeyDown);
+        return () => document.removeEventListener("keydown", handleKeyDown);
     }, [menuOpen]);
 
     return (
@@ -84,9 +90,21 @@ export default function Navbar() {
             <div className="w-full bg-gradient-to-r from-[#0a0a0f]/95 via-cyan-900/60 to-[#0a0a0f]/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-[0_4px_20px_-4px_rgba(34,211,238,0.15)]">
                 <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-center gap-2 md:gap-4 text-[10px] md:text-xs">
                     <span className="animate-pulse text-sm">🩵</span>
-                    <a href="https://aurahos.io" target="_blank" rel="noopener noreferrer" onClick={() => window.gtag && window.gtag('event', 'click_app_access_banner')} className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
+                    <a
+                        href="https://aurahos.io"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() =>
+                            window.gtag &&
+                            window.gtag("event", "click_app_access_banner")
+                        }
+                        className="flex items-center gap-2 hover:scale-105 transition-transform duration-300"
+                    >
                         <span className="text-white font-bold tracking-widest uppercase drop-shadow-md">
-                            Patients: App Access is <span className="text-cyan-300 font-extrabold border-b border-cyan-300/50 pb-0.5 ml-1">ALWAYS FREE</span>
+                            Patients: App Access is{" "}
+                            <span className="text-cyan-300 font-extrabold border-b border-cyan-300/50 pb-0.5 ml-1">
+                                ALWAYS FREE
+                            </span>
                         </span>
                     </a>
                     <span className="hidden sm:inline text-cyan-100 font-black tracking-widest uppercase bg-cyan-500/20 px-2.5 py-0.5 rounded-full border border-cyan-500/30 text-[9px] shadow-sm">
@@ -95,37 +113,61 @@ export default function Navbar() {
                 </div>
             </div>
 
-            <div className={`max-w-7xl mx-auto px-4 md:px-8 transition-all duration-500 ${scrolled ? 'py-3' : 'py-5'}`}>
-                <div className={`flex items-center justify-between rounded-2xl px-5 py-3 transition-all duration-500 ${scrolled ? 'glass-strong shadow-lg shadow-black/20' : 'bg-transparent'}`}>
+            <div
+                className={`max-w-7xl mx-auto px-4 md:px-8 transition-all duration-500 ${scrolled ? "py-3" : "py-5"}`}
+            >
+                <div
+                    className={`flex items-center justify-between rounded-2xl px-5 py-3 transition-all duration-500 ${scrolled ? "glass-strong shadow-lg shadow-black/20" : "bg-transparent"}`}
+                >
                     <HOSLogo
                         size={scrolled ? 34 : 52}
-                        wordmarkSize={scrolled ? 'xs' : 'sm'}
+                        wordmarkSize={scrolled ? "xs" : "sm"}
                         variant="full"
                         className="transition-all duration-500"
                     />
 
                     <div className="hidden lg:flex items-center gap-6">
-                        {navLinks.map((link) => (
+                        {navLinks.map((link) =>
                             link.external ? (
-                                <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 tracking-wider uppercase font-bold border border-cyan-500/30 px-3 py-1.5 rounded-lg bg-cyan-500/10">
+                                <a
+                                    key={link.label}
+                                    href={link.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 tracking-wider uppercase font-bold border border-cyan-500/30 px-3 py-1.5 rounded-lg bg-cyan-500/10"
+                                >
                                     {link.label}
                                 </a>
                             ) : (
-                                <Link key={link.label} to={link.href} className="text-xs text-white/60 hover:text-cyan-400 transition-colors duration-300 tracking-wider uppercase font-bold">
+                                <Link
+                                    key={link.label}
+                                    to={link.href}
+                                    className="text-xs text-white/60 hover:text-cyan-400 transition-colors duration-300 tracking-wider uppercase font-bold"
+                                >
                                     {link.label}
                                 </Link>
-                            )
-                        ))}
+                            ),
+                        )}
                         <a
                             href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom"
                             target="_blank"
                             rel="noopener noreferrer"
-                            onClick={() => window.gtag && window.gtag('event', 'click_bridge_round')}
+                            onClick={() =>
+                                window.gtag &&
+                                window.gtag("event", "click_bridge_round")
+                            }
                             className="bg-yellow-400/10 text-yellow-500 hover:text-yellow-400 px-3 md:px-5 py-1.5 md:py-2 rounded-lg text-[10px] md:text-xs font-bold tracking-widest uppercase transition-all duration-300 border border-yellow-500/20 hover:border-yellow-500/50 hover:bg-yellow-500/20 shadow-[0_0_15px_rgba(234,179,8,0.15)] hover:shadow-[0_0_25px_rgba(234,179,8,0.3)] min-w-max flex-shrink-0"
                         >
                             ⚡ Bridge Round
                         </a>
-                        <Link to={createPageUrl('Join')} onClick={() => window.gtag && window.gtag('event', 'click_join_movement')} className="px-5 py-2 rounded-xl bg-gradient-to-r from-cyan-400/20 to-blue-500/20 border border-cyan-400/30 text-xs text-cyan-300 hover:text-white hover:border-cyan-300/60 transition-all duration-300 font-bold shadow-[0_0_15px_rgba(34,211,238,0.15)] glow-btn">
+                        <Link
+                            to={createPageUrl("Join")}
+                            onClick={() =>
+                                window.gtag &&
+                                window.gtag("event", "click_join_movement")
+                            }
+                            className="px-5 py-2 rounded-xl bg-gradient-to-r from-cyan-400/20 to-blue-500/20 border border-cyan-400/30 text-xs text-cyan-300 hover:text-white hover:border-cyan-300/60 transition-all duration-300 font-bold shadow-[0_0_15px_rgba(34,211,238,0.15)] glow-btn"
+                        >
                             Join the Movement
                         </Link>
                         <ThemeToggle />
@@ -133,14 +175,22 @@ export default function Navbar() {
 
                     <div className="flex items-center gap-3 lg:hidden">
                         <ThemeToggle />
-                        <button 
-                            className="text-white/40 hover:text-white/60 transition-colors" 
+                        <button
+                            className="text-white/40 hover:text-white/60 transition-colors"
                             onClick={() => setMenuOpen(!menuOpen)}
                             aria-expanded={menuOpen}
                             aria-controls="mobile-menu-dropdown"
-                            aria-label={menuOpen ? "Close mobile menu" : "Open mobile menu"}
+                            aria-label={
+                                menuOpen
+                                    ? "Close mobile menu"
+                                    : "Open mobile menu"
+                            }
                         >
-                            {menuOpen ? <X className="w-5 h-5" aria-hidden="true" /> : <Menu className="w-5 h-5" aria-hidden="true" />}
+                            {menuOpen ? (
+                                <X className="w-5 h-5" aria-hidden="true" />
+                            ) : (
+                                <Menu className="w-5 h-5" aria-hidden="true" />
+                            )}
                         </button>
                     </div>
                 </div>
@@ -157,20 +207,32 @@ export default function Navbar() {
                             transition={{ duration: 0.2 }}
                             className="lg:hidden bg-[#0a0a0f]/95 backdrop-blur-xl border border-white/10 rounded-2xl mt-2 p-4 space-y-1 shadow-2xl"
                         >
-                            {navLinks.map((link) => (
+                            {navLinks.map((link) =>
                                 link.external ? (
-                                    <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)} className="block px-4 py-3 text-sm text-cyan-400 font-bold border border-cyan-500/30 bg-cyan-500/10 rounded-xl mb-1">
+                                    <a
+                                        key={link.label}
+                                        href={link.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={() => setMenuOpen(false)}
+                                        className="block px-4 py-3 text-sm text-cyan-400 font-bold border border-cyan-500/30 bg-cyan-500/10 rounded-xl mb-1"
+                                    >
                                         {link.label}
                                     </a>
                                 ) : (
-                                    <Link key={link.label} to={link.href} onClick={() => setMenuOpen(false)} className="block px-4 py-3 text-sm text-white hover:text-cyan-400 transition-colors rounded-xl hover:bg-white/[0.05] font-medium">
+                                    <Link
+                                        key={link.label}
+                                        to={link.href}
+                                        onClick={() => setMenuOpen(false)}
+                                        className="block px-4 py-3 text-sm text-white hover:text-cyan-400 transition-colors rounded-xl hover:bg-white/[0.05] font-medium"
+                                    >
                                         {link.label}
                                     </Link>
-                                )
-                            ))}
+                                ),
+                            )}
                             <div className="pt-2 space-y-2">
-                                <a 
-                                    href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom" 
+                                <a
+                                    href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     onClick={() => setMenuOpen(false)}
@@ -178,9 +240,9 @@ export default function Navbar() {
                                 >
                                     ⚡ Bridge Round
                                 </a>
-                                <Link 
-                                    to={createPageUrl('Join')} 
-                                    onClick={() => setMenuOpen(false)} 
+                                <Link
+                                    to={createPageUrl("Join")}
+                                    onClick={() => setMenuOpen(false)}
                                     className="block w-full px-4 py-3 rounded-xl bg-cyan-500/20 border border-cyan-400/40 text-sm text-cyan-300 font-bold text-center glow-btn"
                                 >
                                     Join the Movement

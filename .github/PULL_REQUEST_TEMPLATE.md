@@ -7,6 +7,7 @@
 ### Type of Change
 
 <!-- Check all that apply -->
+
 - [ ] 🐛 Bug fix (non-breaking change that fixes an issue)
 - [ ] ✨ New feature (non-breaking change that adds functionality)
 - [ ] 💥 Breaking change (fix or feature that would cause existing functionality to change)
@@ -26,6 +27,7 @@
 ### How Was It Tested?
 
 <!-- Describe the tests that you ran to verify your changes. -->
+
 - [ ] Unit tests pass (`npm test`)
 - [ ] TypeScript type-check passes (`npx tsc --noEmit`)
 - [ ] ESLint passes (`npx eslint .`)
@@ -52,6 +54,7 @@
 ### Security Consideration
 
 <!-- Has a security review been performed? Are there any security implications? -->
+
 - [ ] No security implications
 - [ ] Security implications reviewed and addressed (describe below)
 

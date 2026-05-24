@@ -56,7 +56,7 @@ export const reducer = (state, action) => {
             return {
                 ...state,
                 toasts: state.toasts.map((t) =>
-                    t.id === action.toast.id ? { ...t, ...action.toast } : t
+                    t.id === action.toast.id ? { ...t, ...action.toast } : t,
                 ),
             };
 
@@ -78,10 +78,10 @@ export const reducer = (state, action) => {
                 toasts: state.toasts.map((t) =>
                     t.id === toastId || toastId === undefined
                         ? {
-                            ...t,
-                            open: false,
-                        }
-                        : t
+                              ...t,
+                              open: false,
+                          }
+                        : t,
                 ),
             };
         }
@@ -157,11 +157,9 @@ function useToast() {
     return {
         ...state,
         toast,
-        dismiss: (toastId) => dispatch({ type: actionTypes.DISMISS_TOAST, toastId }),
+        dismiss: (toastId) =>
+            dispatch({ type: actionTypes.DISMISS_TOAST, toastId }),
     };
 }
 
-export { useToast, toast }; 
-
-
-
+export { useToast, toast };

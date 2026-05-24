@@ -1,7 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
-export default function PageHero({ badge, title, titleAccent, subtitle, children = null }) {
+export default function PageHero({
+    badge,
+    title,
+    titleAccent,
+    subtitle,
+    children = null,
+}) {
     return (
         <section className="relative pt-32 md:pt-44 pb-20 md:pb-28 px-4 md:px-8 overflow-hidden">
             <div className="absolute inset-0">
@@ -16,19 +22,27 @@ export default function PageHero({ badge, title, titleAccent, subtitle, children
                         className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 mb-6"
                     >
                         <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-                        <span className="text-[11px] text-cyan-400/80 font-medium tracking-[0.2em] uppercase">{badge}</span>
+                        <span className="text-[11px] text-cyan-400/80 font-medium tracking-[0.2em] uppercase">
+                            {badge}
+                        </span>
                     </motion.div>
                 )}
                 <motion.h1
                     initial={{ opacity: 0, y: 25 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{
+                        duration: 0.9,
+                        delay: 0.1,
+                        ease: [0.16, 1, 0.3, 1],
+                    }}
                     className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-5"
                     // @ts-ignore — fontFamily is valid in MotionStyle at runtime
-                    style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
+                    style={{ fontFamily: "Outfit, Inter, sans-serif" }}
                 >
-                    {title}{' '}
-                    {titleAccent && <span className="gradient-text">{titleAccent}</span>}
+                    {title}{" "}
+                    {titleAccent && (
+                        <span className="gradient-text">{titleAccent}</span>
+                    )}
                 </motion.h1>
                 {subtitle && (
                     <motion.p
@@ -45,5 +59,3 @@ export default function PageHero({ badge, title, titleAccent, subtitle, children
         </section>
     );
 }
-
-

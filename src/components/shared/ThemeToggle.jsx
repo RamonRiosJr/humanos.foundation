@@ -1,13 +1,13 @@
-import React from 'react';
-import { Moon, Sun } from 'lucide-react';
-import { useTheme } from '../ThemeProvider';
+import React from "react";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "../ThemeProvider";
 
 export default function ThemeToggle() {
     const { theme, setTheme } = useTheme();
 
     return (
         <button
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="relative inline-flex items-center justify-center p-2 rounded-xl glass border border-white/[0.04] text-white/70 hover:text-cyan-400 hover:border-cyan-500/30 transition-all duration-300"
             aria-label="Toggle theme"
         >

@@ -1,50 +1,57 @@
-import React, { useState, useRef } from 'react';
-import { motion, useInView, AnimatePresence } from 'framer-motion';
-import { BookOpen, Scale, Shield, Eye, Key, Fingerprint } from 'lucide-react';
+import React, { useState, useRef } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import { BookOpen, Scale, Shield, Eye, Key, Fingerprint } from "lucide-react";
 
 const manifestoLines = [
     'We believe the "First Mile" of care is fundamentally broken — forcing complex lived experiences into a 15-page paper intake and a 5-minute clinical documentation is an act of institutional violence against the vulnerable.',
-    'We believe treating symptoms with endless new medications while ignoring the root cause is unacceptable.',
+    "We believe treating symptoms with endless new medications while ignoring the root cause is unacceptable.",
     'We believe the "Medication Gallery" must be dismantled. You are not a trial-and-error experiment for pharmacology.',
-    'We believe healthcare must serve the human, not the volume-driven billing machine.',
-    'We believe that bridging the First Mile requires patient data sovereignty, equipping individuals with their unassailable truth before they ever enter the clinic.',
-    'We are the revolution against assembly-line medicine. We are hOS.',
+    "We believe healthcare must serve the human, not the volume-driven billing machine.",
+    "We believe that bridging the First Mile requires patient data sovereignty, equipping individuals with their unassailable truth before they ever enter the clinic.",
+    "We are the revolution against assembly-line medicine. We are hOS.",
 ];
 
 const fourLaws = [
     {
         icon: Key,
-        title: 'The Law of Ownership',
-        description: 'Your biological data belongs to you. Not your provider. Not your insurer. You.',
-        number: 'I',
+        title: "The Law of Ownership",
+        description:
+            "Your biological data belongs to you. Not your provider. Not your insurer. You.",
+        number: "I",
     },
     {
         icon: Eye,
-        title: 'The Law of Transparency',
-        description: 'Every access to your data is logged, visible, and under your control.',
-        number: 'II',
+        title: "The Law of Transparency",
+        description:
+            "Every access to your data is logged, visible, and under your control.",
+        number: "II",
     },
     {
         icon: Shield,
-        title: 'The Law of Sovereignty',
-        description: 'Your health data is encrypted end-to-end. No backdoors. No compromises.',
-        number: 'III',
+        title: "The Law of Sovereignty",
+        description:
+            "Your health data is encrypted end-to-end. No backdoors. No compromises.",
+        number: "III",
     },
     {
         icon: Fingerprint,
-        title: 'The Law of Identity',
-        description: 'Your health identity is self-sovereign — portable, interoperable, and yours forever.',
-        number: 'IV',
+        title: "The Law of Identity",
+        description:
+            "Your health identity is self-sovereign — portable, interoperable, and yours forever.",
+        number: "IV",
     },
 ];
 
 export default function Manifestos() {
-    const [activeTab, setActiveTab] = useState('manifesto');
+    const [activeTab, setActiveTab] = useState("manifesto");
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: '-80px' });
+    const isInView = useInView(ref, { once: true, margin: "-80px" });
 
     return (
-        <section ref={ref} className="relative py-24 md:py-40 px-4 md:px-8 overflow-hidden">
+        <section
+            ref={ref}
+            className="relative py-24 md:py-40 px-4 md:px-8 overflow-hidden"
+        >
             <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-[#080810] to-obsidian" />
 
             <div className="relative z-10 max-w-5xl mx-auto">
@@ -60,10 +67,9 @@ export default function Manifestos() {
                     </span>
                     <h2
                         className="text-3xl md:text-5xl lg:text-6xl font-bold mt-4 tracking-tight"
-                        style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
+                        style={{ fontFamily: "Outfit, Inter, sans-serif" }}
                     >
-                        Our{' '}
-                        <span className="gradient-text">Manifestos</span>
+                        Our <span className="gradient-text">Manifestos</span>
                     </h2>
                 </motion.div>
 
@@ -76,26 +82,32 @@ export default function Manifestos() {
                 >
                     <div className="glass rounded-full p-1.5 flex gap-2">
                         <button
-                            onClick={() => setActiveTab('manifesto')}
-                            className={`px-6 md:px-10 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wide transition-all duration-300 ${activeTab === 'manifesto'
-                                ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/40 text-white shadow-[0_0_20px_rgba(34,211,238,0.3)]'
-                                : 'border border-transparent text-white/40 hover:text-white hover:bg-white/5'
-                                }`}
+                            onClick={() => setActiveTab("manifesto")}
+                            className={`px-6 md:px-10 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wide transition-all duration-300 ${
+                                activeTab === "manifesto"
+                                    ? "bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/40 text-white shadow-[0_0_20px_rgba(34,211,238,0.3)]"
+                                    : "border border-transparent text-white/40 hover:text-white hover:bg-white/5"
+                            }`}
                         >
                             <span className="flex items-center gap-2">
-                                <BookOpen className={`w-4 h-4 ${activeTab === 'manifesto' ? 'text-cyan-400' : ''}`} />
+                                <BookOpen
+                                    className={`w-4 h-4 ${activeTab === "manifesto" ? "text-cyan-400" : ""}`}
+                                />
                                 The Manifesto
                             </span>
                         </button>
                         <button
-                            onClick={() => setActiveTab('laws')}
-                            className={`px-6 md:px-10 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wide transition-all duration-300 ${activeTab === 'laws'
-                                ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/40 text-white shadow-[0_0_20px_rgba(34,211,238,0.3)]'
-                                : 'border border-transparent text-white/40 hover:text-white hover:bg-white/5'
-                                }`}
+                            onClick={() => setActiveTab("laws")}
+                            className={`px-6 md:px-10 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wide transition-all duration-300 ${
+                                activeTab === "laws"
+                                    ? "bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/40 text-white shadow-[0_0_20px_rgba(34,211,238,0.3)]"
+                                    : "border border-transparent text-white/40 hover:text-white hover:bg-white/5"
+                            }`}
                         >
                             <span className="flex items-center gap-2">
-                                <Scale className={`w-4 h-4 ${activeTab === 'laws' ? 'text-cyan-400' : ''}`} />
+                                <Scale
+                                    className={`w-4 h-4 ${activeTab === "laws" ? "text-cyan-400" : ""}`}
+                                />
                                 The Four Laws
                             </span>
                         </button>
@@ -104,7 +116,7 @@ export default function Manifestos() {
 
                 {/* Content */}
                 <AnimatePresence mode="wait">
-                    {activeTab === 'manifesto' ? (
+                    {activeTab === "manifesto" ? (
                         <motion.div
                             key="manifesto"
                             initial={{ opacity: 0, y: 20 }}
@@ -123,50 +135,114 @@ export default function Manifestos() {
                                         <motion.div
                                             key={i}
                                             initial={{ opacity: 0, x: -30 }}
-                                            animate={isInView ? { opacity: 1, x: 0 } : {}}
-                                            transition={{ duration: 0.8, delay: 0.3 + i * 0.15 }}
+                                            animate={
+                                                isInView
+                                                    ? { opacity: 1, x: 0 }
+                                                    : {}
+                                            }
+                                            transition={{
+                                                duration: 0.8,
+                                                delay: 0.3 + i * 0.15,
+                                            }}
                                             className="py-5 md:py-6 border-b border-white/[0.03] last:border-0"
                                         >
                                             <p
-                                                className={`text-base md:text-xl leading-relaxed ${i === manifestoLines.length - 1
-                                                    ? 'text-cyan-400 font-bold text-lg md:text-2xl drop-shadow-[0_0_10px_rgba(34,211,238,0.2)]'
-                                                    : 'text-white/70 font-medium'
-                                                    }`}
-                                                style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
+                                                className={`text-base md:text-xl leading-relaxed ${
+                                                    i ===
+                                                    manifestoLines.length - 1
+                                                        ? "text-cyan-400 font-bold text-lg md:text-2xl drop-shadow-[0_0_10px_rgba(34,211,238,0.2)]"
+                                                        : "text-white/70 font-medium"
+                                                }`}
+                                                style={{
+                                                    fontFamily:
+                                                        "Outfit, Inter, sans-serif",
+                                                }}
                                             >
                                                 {line}
                                             </p>
                                         </motion.div>
                                     ))}
                                 </div>
-                                
-
 
                                 {/* Builder Dedication */}
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
-                                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                                    animate={
+                                        isInView ? { opacity: 1, y: 0 } : {}
+                                    }
                                     transition={{ duration: 0.8, delay: 1.4 }}
                                     className="mt-12 md:mt-16 max-w-4xl mx-auto"
                                 >
                                     <div className="glass p-6 md:p-8 rounded-2xl border border-white/5 relative overflow-hidden group">
                                         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl group-hover:bg-cyan-500/10 transition-colors duration-700" />
-                                        <h3 className="text-xl font-bold mb-6 text-white tracking-wide" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>The Architect's Thesis</h3>
+                                        <h3
+                                            className="text-xl font-bold mb-6 text-white tracking-wide"
+                                            style={{
+                                                fontFamily:
+                                                    "Outfit, Inter, sans-serif",
+                                            }}
+                                        >
+                                            The Architect's Thesis
+                                        </h3>
                                         <div className="space-y-5">
                                             <p className="text-sm md:text-base text-white/70 leading-relaxed font-medium">
-                                                Dedicating 25 years of technology architecture and process engineering back to patients. Over <span className="text-cyan-400 font-bold">2,500 engineering hours</span> have brought this open-source infrastructure into reality. I built this alone because waiting for government agencies and institutional bureaucracy is a death sentence. 
+                                                Dedicating 25 years of
+                                                technology architecture and
+                                                process engineering back to
+                                                patients. Over{" "}
+                                                <span className="text-cyan-400 font-bold">
+                                                    2,500 engineering hours
+                                                </span>{" "}
+                                                have brought this open-source
+                                                infrastructure into reality. I
+                                                built this alone because waiting
+                                                for government agencies and
+                                                institutional bureaucracy is a
+                                                death sentence.
                                             </p>
                                             <p className="text-sm md:text-base text-white/70 leading-relaxed font-medium">
-                                                Instead of pitching theoretical proofs-of-concept, I spent hundreds of hours sitting silently in clinical waiting rooms—documenting the catastrophic failure of the modern intake process. I watched sick, vulnerable people forced to sit in contaminated rooms, jeopardizing their health to manually type 15-20 pages of redundant medical history into "shiny new iPads." Digitizing a fundamentally broken process is not innovation. It is institutional negligence that cross-contaminates waiting rooms and penalizes the sick.
+                                                Instead of pitching theoretical
+                                                proofs-of-concept, I spent
+                                                hundreds of hours sitting
+                                                silently in clinical waiting
+                                                rooms—documenting the
+                                                catastrophic failure of the
+                                                modern intake process. I watched
+                                                sick, vulnerable people forced
+                                                to sit in contaminated rooms,
+                                                jeopardizing their health to
+                                                manually type 15-20 pages of
+                                                redundant medical history into
+                                                "shiny new iPads." Digitizing a
+                                                fundamentally broken process is
+                                                not innovation. It is
+                                                institutional negligence that
+                                                cross-contaminates waiting rooms
+                                                and penalizes the sick.
                                             </p>
                                             <p className="text-sm md:text-base text-white/70 leading-relaxed font-medium">
-                                                My ultimate goal is that the Human Operating System becomes the definitive biological data vault for humanity. If an emergency strikes on the other side of the planet, your cryptographic payload unlocks your continuous care narrative to save your life. Legacy EHRs optimize for corporate billing schemas. We optimize for survival. 
+                                                My ultimate goal is that the
+                                                Human Operating System becomes
+                                                the definitive biological data
+                                                vault for humanity. If an
+                                                emergency strikes on the other
+                                                side of the planet, your
+                                                cryptographic payload unlocks
+                                                your continuous care narrative
+                                                to save your life. Legacy EHRs
+                                                optimize for corporate billing
+                                                schemas. We optimize for
+                                                survival.
                                             </p>
                                             <p className="text-sm md:text-base text-white/90 font-medium pt-2">
-                                                Let's build the change ourselves.<span className="text-blue-400 font-bold ml-2">With 💙 RamonRios.NET</span>
+                                                Let's build the change
+                                                ourselves.
+                                                <span className="text-blue-400 font-bold ml-2">
+                                                    With 💙 RamonRios.NET
+                                                </span>
                                             </p>
                                         </div>
-                                        
+
                                         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-start">
                                             <a
                                                 href="https://aurahos.io/app"
@@ -174,7 +250,8 @@ export default function Manifestos() {
                                                 rel="noopener noreferrer"
                                                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/50 text-emerald-300 text-xs md:text-sm font-black tracking-widest uppercase hover:from-emerald-500/30 hover:to-teal-500/30 hover:border-emerald-300 transition-all shadow-[0_0_20px_rgba(16,185,129,0.2)] hover:shadow-[0_0_40px_rgba(16,185,129,0.4)] hover:scale-105 transform duration-300"
                                             >
-                                                🟢 Patient Always Free APP Access
+                                                🟢 Patient Always Free APP
+                                                Access
                                             </a>
                                             <a
                                                 href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom"
@@ -204,7 +281,10 @@ export default function Manifestos() {
                                         key={law.title}
                                         initial={{ opacity: 0, y: 30 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.6, delay: i * 0.12 }}
+                                        transition={{
+                                            duration: 0.6,
+                                            delay: i * 0.12,
+                                        }}
                                         className="relative group"
                                     >
                                         <div className="relative rounded-2xl overflow-hidden">
@@ -215,8 +295,15 @@ export default function Manifestos() {
                                             {/* Pulsing icon glow */}
                                             <motion.div
                                                 className="absolute -top-8 -right-8 w-24 h-24 bg-cyan-400/5 rounded-full blur-2xl"
-                                                animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
-                                                transition={{ duration: 4, delay: i * 0.5, repeat: Infinity }}
+                                                animate={{
+                                                    scale: [1, 1.2, 1],
+                                                    opacity: [0.3, 0.6, 0.3],
+                                                }}
+                                                transition={{
+                                                    duration: 4,
+                                                    delay: i * 0.5,
+                                                    repeat: Infinity,
+                                                }}
                                             />
 
                                             <div className="relative z-10 p-6 md:p-8">
@@ -224,14 +311,20 @@ export default function Manifestos() {
                                                     <law.icon className="w-6 h-6 text-cyan-400/70" />
                                                     <span
                                                         className="text-3xl md:text-4xl font-bold text-white/[0.06]"
-                                                        style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
+                                                        style={{
+                                                            fontFamily:
+                                                                "Outfit, Inter, sans-serif",
+                                                        }}
                                                     >
                                                         {law.number}
                                                     </span>
                                                 </div>
                                                 <h3
                                                     className="text-lg md:text-xl font-semibold text-white/80 mb-2"
-                                                    style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
+                                                    style={{
+                                                        fontFamily:
+                                                            "Outfit, Inter, sans-serif",
+                                                    }}
                                                 >
                                                     {law.title}
                                                 </h3>
@@ -250,5 +343,3 @@ export default function Manifestos() {
         </section>
     );
 }
-
-

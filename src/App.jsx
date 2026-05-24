@@ -1,42 +1,55 @@
-import React, { Suspense } from 'react';
-import { Toaster } from "@/components/ui/toaster"
-import { QueryClientProvider } from '@tanstack/react-query'
-import { queryClientInstance } from '@/lib/query-client'
-import { pagesConfig } from './pages.config'
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import PageNotFound from './lib/PageNotFound';
+import React, { Suspense } from "react";
+import { Toaster } from "@/components/ui/toaster";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { queryClientInstance } from "@/lib/query-client";
+import { pagesConfig } from "./pages.config";
+import {
+    BrowserRouter as Router,
+    Route,
+    Routes,
+    useLocation,
+} from "react-router-dom";
+import PageNotFound from "./lib/PageNotFound";
 
-import { ThemeProvider } from './components/ThemeProvider';
-import { A11yProvider } from '@/lib/A11yContext';
-import A11yWidget from '@/components/shared/A11yWidget';
-import ChatbotWidget from '@/components/shared/ChatbotWidget';
-import VaultBackground from '@/components/shared/VaultBackground';
+import { ThemeProvider } from "./components/ThemeProvider";
+import { A11yProvider } from "@/lib/A11yContext";
+import A11yWidget from "@/components/shared/A11yWidget";
+import ChatbotWidget from "@/components/shared/ChatbotWidget";
+import VaultBackground from "@/components/shared/VaultBackground";
 
 const { Pages, Layout, mainPage } = pagesConfig;
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];
 const MainPage = mainPageKey ? Pages[mainPageKey] : <></>;
 
 /** @param {{ children: any, currentPageName: any }} props */
-const LayoutWrapper = ({ children, currentPageName }) => Layout ?
-    <Layout currentPageName={currentPageName}>{children}</Layout>
-    : <>{children}</>;
+const LayoutWrapper = ({ children, currentPageName }) =>
+    Layout ? (
+        <Layout currentPageName={currentPageName}>{children}</Layout>
+    ) : (
+        <>{children}</>
+    );
 
 const AppRouter = () => {
     return (
-        <Suspense fallback={
-            <div className="fixed inset-0 flex items-center justify-center bg-black/95">
-                <div className="w-8 h-8 border-4 border-cyan-500/30 border-t-cyan-400 rounded-full animate-spin"></div>
-            </div>
-        }>
+        <Suspense
+            fallback={
+                <div className="fixed inset-0 flex items-center justify-center bg-black/95">
+                    <div className="w-8 h-8 border-4 border-cyan-500/30 border-t-cyan-400 rounded-full animate-spin"></div>
+                </div>
+            }
+        >
             <Routes>
-                <Route path="/" element={
-                    <LayoutWrapper currentPageName={mainPageKey}>
-                        <MainPage />
-                    </LayoutWrapper>
-                } />
+                <Route
+                    path="/"
+                    element={
+                        <LayoutWrapper currentPageName={mainPageKey}>
+                            <MainPage />
+                        </LayoutWrapper>
+                    }
+                />
                 {Object.entries(Pages).map(([path, Page]) => {
                     // Prevent duplicate routes if manually defined below
-                    if (path === 'BlogPost') return null;
+                    if (path === "BlogPost") return null;
                     return (
                         <Route
                             key={path}
@@ -50,11 +63,14 @@ const AppRouter = () => {
                     );
                 })}
                 {/* Canonical SEO Overrides for Research Articles */}
-                <Route path="/research/:slug" element={
-                    <LayoutWrapper currentPageName="BlogPost">
-                        {Pages.BlogPost ? <Pages.BlogPost /> : <></>}
-                    </LayoutWrapper>
-                } />
+                <Route
+                    path="/research/:slug"
+                    element={
+                        <LayoutWrapper currentPageName="BlogPost">
+                            {Pages.BlogPost ? <Pages.BlogPost /> : <></>}
+                        </LayoutWrapper>
+                    }
+                />
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
         </Suspense>
@@ -67,15 +83,15 @@ const AnalyticsPageViewTracker = () => {
     React.useEffect(() => {
         // Track Posthog
         if (import.meta.env.VITE_POSTHOG_KEY) {
-            import('posthog-js').then(({ default: posthog }) => {
-                posthog.capture('$pageview');
+            import("posthog-js").then(({ default: posthog }) => {
+                posthog.capture("$pageview");
             });
         }
 
         // Track Google Analytics (GA4) SPA routing dynamically
-        if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('config', 'G-XWJTX77CCX', {
-                page_path: location.pathname + location.search
+        if (typeof window !== "undefined" && window.gtag) {
+            window.gtag("config", "G-XWJTX77CCX", {
+                page_path: location.pathname + location.search,
             });
         }
     }, [location]);
@@ -83,10 +99,9 @@ const AnalyticsPageViewTracker = () => {
     return null;
 };
 
-import ErrorBoundary from '@/lib/ErrorBoundary';
+import ErrorBoundary from "@/lib/ErrorBoundary";
 
 function App() {
-
     return (
         <ThemeProvider defaultTheme="dark">
             <A11yProvider>
@@ -104,7 +119,7 @@ function App() {
                 </QueryClientProvider>
             </A11yProvider>
         </ThemeProvider>
-    )
+    );
 }
 
-export default App
+export default App;

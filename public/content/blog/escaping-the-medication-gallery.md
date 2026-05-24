@@ -6,7 +6,7 @@ Writing a prescription takes 30 seconds. Ordering complex labs, reviewing daily 
 
 ### Drugging the Symptom
 
-Millions of patients are currently trapped in the Medication Gallery. They are prescribed heavy, mind-altering pharmaceuticals simply because they exhibited a symptom that fits neatly into an administrative billing code. 
+Millions of patients are currently trapped in the Medication Gallery. They are prescribed heavy, mind-altering pharmaceuticals simply because they exhibited a symptom that fits neatly into an administrative billing code.
 
 We hear horrific stories daily: patients driven to the brink, losing their cognitive spark, suffering extreme side effects—only for the doctor to shrug and say, "Let's try this other pill instead." It is a sick game of dartboard medicine, born directly from the failure of the [5-minute clinical documentation](/TheProblem).
 

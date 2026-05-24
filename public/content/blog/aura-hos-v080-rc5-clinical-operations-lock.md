@@ -4,7 +4,7 @@ Today, the Humanos Foundation officially promotes the Aura hOS™ ecosystem to *
 
 ### Hardening the Front Desk
 
-RC.4 transforms the static frontend into a **Clinical Operations Center**. We engineered a Neural OCR ingestion pipeline that allows front desks to instantly digest driver's licenses and insurance cards simply by holding them to the terminal. The Zero-Knowledge state dynamically maps this data without exposing the core backend to HIPAA liabilities. 
+RC.4 transforms the static frontend into a **Clinical Operations Center**. We engineered a Neural OCR ingestion pipeline that allows front desks to instantly digest driver's licenses and insurance cards simply by holding them to the terminal. The Zero-Knowledge state dynamically maps this data without exposing the core backend to HIPAA liabilities.
 
 Simultaneously, we've deployed a **P2P Digital Consents Array**. Providers can instantly dispatch secure SMS vectors to a patient's mobile device, allowing them to digitally sign HIPAA Privacy Notices and Financial Responsibilities securely in the waiting room—completely abandoning physical clipboards.
 
@@ -21,4 +21,3 @@ With RC.4 live, the platform is computationally ready for institutional evaluati
 ### Sovereign Standard Deployed
 
 The system only listens when the compliance is bulletproof. [Join the Movement](/Join) to build the future of sovereign data architecture.
-

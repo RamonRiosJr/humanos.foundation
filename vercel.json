@@ -1,22 +1,36 @@
 {
-  "redirects": [
-    { "source": "/blog/:slug", "destination": "/research/:slug", "permanent": true },
-    { "source": "/BlogPost", "destination": "/research", "permanent": true }
-  ],
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://www.googletagmanager.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https://www.google-analytics.com https://prod.spline.design; connect-src 'self' https://api.web3forms.com https://team.humanos.foundation https://prod.spline.design wss://prod.spline.design https://www.google-analytics.com https://region1.google-analytics.com https://www.gstatic.com https://us.i.posthog.com; frame-src 'self' https://team.humanos.foundation; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';" }
-      ]
-    }
-  ]
+    "redirects": [
+        {
+            "source": "/blog/:slug",
+            "destination": "/research/:slug",
+            "permanent": true
+        },
+        { "source": "/BlogPost", "destination": "/research", "permanent": true }
+    ],
+    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                { "key": "X-Content-Type-Options", "value": "nosniff" },
+                { "key": "X-Frame-Options", "value": "DENY" },
+                {
+                    "key": "Strict-Transport-Security",
+                    "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                    "key": "Referrer-Policy",
+                    "value": "strict-origin-when-cross-origin"
+                },
+                {
+                    "key": "Permissions-Policy",
+                    "value": "camera=(), microphone=(), geolocation=()"
+                },
+                {
+                    "key": "Content-Security-Policy",
+                    "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://www.googletagmanager.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https://www.google-analytics.com https://prod.spline.design; connect-src 'self' https://api.web3forms.com https://team.humanos.foundation https://prod.spline.design wss://prod.spline.design https://www.google-analytics.com https://region1.google-analytics.com https://www.gstatic.com https://us.i.posthog.com; frame-src 'self' https://team.humanos.foundation; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';"
+                }
+            ]
+        }
+    ]
 }

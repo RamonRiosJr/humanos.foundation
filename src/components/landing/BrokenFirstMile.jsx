@@ -1,28 +1,43 @@
-import React from 'react';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { AlertTriangle, Sparkles, FileX, Wifi, Clock, ShieldCheck, Scan, Database } from 'lucide-react';
+import React from "react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import {
+    AlertTriangle,
+    Sparkles,
+    FileX,
+    Wifi,
+    Clock,
+    ShieldCheck,
+    Scan,
+    Database,
+} from "lucide-react";
 
 const brokenItems = [
-    { icon: FileX, text: 'The 15-20 page clipboard penalty in the waiting room' },
-    { icon: Clock, text: 'The rushed 5-minute clinical documentation' },
-    { icon: AlertTriangle, text: 'The Prescriptive Spiral' },
-    { icon: Wifi, text: 'Logging symptoms, missing causes' },
+    {
+        icon: FileX,
+        text: "The 15-20 page clipboard penalty in the waiting room",
+    },
+    { icon: Clock, text: "The rushed 5-minute clinical documentation" },
+    { icon: AlertTriangle, text: "The Prescriptive Spiral" },
+    { icon: Wifi, text: "Logging symptoms, missing causes" },
 ];
 
 const hosItems = [
-    { icon: Scan, text: 'Continuous lived-experience capture' },
-    { icon: Database, text: 'Unignorable longitudinal data' },
-    { icon: ShieldCheck, text: 'Forcing case-by-case analysis' },
-    { icon: Sparkles, text: 'Personalized root-cause care' },
+    { icon: Scan, text: "Continuous lived-experience capture" },
+    { icon: Database, text: "Unignorable longitudinal data" },
+    { icon: ShieldCheck, text: "Forcing case-by-case analysis" },
+    { icon: Sparkles, text: "Personalized root-cause care" },
 ];
 
 export default function BrokenFirstMile() {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: '-100px' });
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <section ref={ref} className="relative py-24 md:py-40 px-4 md:px-8 overflow-hidden">
+        <section
+            ref={ref}
+            className="relative py-24 md:py-40 px-4 md:px-8 overflow-hidden"
+        >
             {/* Dividing line glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-cyan-500/30 to-transparent" />
 
@@ -39,9 +54,9 @@ export default function BrokenFirstMile() {
                     </span>
                     <h2
                         className="text-3xl md:text-5xl lg:text-6xl font-bold mt-4 tracking-tight"
-                        style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
+                        style={{ fontFamily: "Outfit, Inter, sans-serif" }}
                     >
-                        The Broken{' '}
+                        The Broken{" "}
                         <span className="text-white/30">First Mile</span>
                     </h2>
                 </motion.div>
@@ -57,21 +72,33 @@ export default function BrokenFirstMile() {
                     >
                         {/* Oppressive Emotive Image Mask */}
                         <div className="absolute inset-0 z-0 overflow-hidden opacity-40 mix-blend-luminosity bg-black">
-                            <motion.img 
-                                initial={{ scale: 1.1, filter: 'blur(4px)' }}
-                                animate={isInView ? { scale: 1.05, filter: 'blur(0px)' } : {}}
-                                transition={{ duration: 2.5, ease: "easeOut", delay: 0.5 }}
-                                src="/images/legacy-chaos.png" 
+                            <motion.img
+                                initial={{ scale: 1.1, filter: "blur(4px)" }}
+                                animate={
+                                    isInView
+                                        ? { scale: 1.05, filter: "blur(0px)" }
+                                        : {}
+                                }
+                                transition={{
+                                    duration: 2.5,
+                                    ease: "easeOut",
+                                    delay: 0.5,
+                                }}
+                                src="/images/legacy-chaos.png"
                                 alt="Assembly Line Medicine Patient"
-                                className="w-full h-full object-cover object-center origin-center scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out grayscale-[40%]" 
+                                className="w-full h-full object-cover object-center origin-center scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out grayscale-[40%]"
                             />
                         </div>
 
                         <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/90 via-neutral-950/80 to-black/95 z-0" />
                         {/* Grain overlay */}
-                        <div className="absolute inset-0 opacity-20 z-0 mix-blend-overlay" style={{
-                            backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.8\' numOctaves=\'4\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23n)\' opacity=\'0.4\'/%3E%3C/svg%3E")',
-                        }} />
+                        <div
+                            className="absolute inset-0 opacity-20 z-0 mix-blend-overlay"
+                            style={{
+                                backgroundImage:
+                                    "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E\")",
+                            }}
+                        />
 
                         <div className="relative z-10 p-8 md:p-12">
                             <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full border border-red-500/20 bg-red-500/5">
@@ -83,12 +110,16 @@ export default function BrokenFirstMile() {
 
                             <h3
                                 className="text-2xl md:text-3xl font-bold text-[#ffffff]/90 mb-2"
-                                style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
+                                style={{
+                                    fontFamily: "Outfit, Inter, sans-serif",
+                                }}
                             >
                                 Assembly-Line Medicine
                             </h3>
                             <p className="text-sm text-[#ffffff]/50 mb-8 leading-relaxed">
-                                You are not a standard deviation. The 15-20 page clipboard penalty followed by a rushed 5-minute documentation cannot capture your truth.
+                                You are not a standard deviation. The 15-20 page
+                                clipboard penalty followed by a rushed 5-minute
+                                documentation cannot capture your truth.
                             </p>
 
                             <div className="space-y-4">
@@ -96,12 +127,19 @@ export default function BrokenFirstMile() {
                                     <motion.div
                                         key={item.text}
                                         initial={{ opacity: 0, x: -20 }}
-                                        animate={isInView ? { opacity: 1, x: 0 } : {}}
-                                        transition={{ duration: 0.6, delay: 0.5 + i * 0.1 }}
+                                        animate={
+                                            isInView ? { opacity: 1, x: 0 } : {}
+                                        }
+                                        transition={{
+                                            duration: 0.6,
+                                            delay: 0.5 + i * 0.1,
+                                        }}
                                         className="flex items-center gap-3 p-3 rounded-xl bg-[#ffffff]/[0.02] border border-[#ffffff]/[0.06]"
                                     >
                                         <item.icon className="w-4 h-4 text-red-400/60 shrink-0" />
-                                        <span className="text-sm text-[#ffffff]/60">{item.text}</span>
+                                        <span className="text-sm text-[#ffffff]/60">
+                                            {item.text}
+                                        </span>
                                     </motion.div>
                                 ))}
                             </div>
@@ -124,13 +162,17 @@ export default function BrokenFirstMile() {
                     >
                         {/* Emotive UI Image Mask */}
                         <div className="absolute inset-0 z-0 overflow-hidden mix-blend-screen opacity-40">
-                            <motion.img 
+                            <motion.img
                                 initial={{ scale: 1.1 }}
                                 animate={isInView ? { scale: 1.05 } : {}}
-                                transition={{ duration: 2, ease: "easeOut", delay: 0.8 }}
-                                src="/images/aura-clarity.png" 
+                                transition={{
+                                    duration: 2,
+                                    ease: "easeOut",
+                                    delay: 0.8,
+                                }}
+                                src="/images/aura-clarity.png"
                                 alt="Patient Data Sovereignty Vault"
-                                className="w-full h-full object-cover object-center origin-center scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out grayscale-[20%]" 
+                                className="w-full h-full object-cover object-center origin-center scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out grayscale-[20%]"
                             />
                         </div>
 
@@ -151,12 +193,18 @@ export default function BrokenFirstMile() {
 
                             <h3
                                 className="text-2xl md:text-3xl font-bold text-[#ffffff] mb-2 drop-shadow-md"
-                                style={{ fontFamily: 'Outfit, Inter, sans-serif' }}
+                                style={{
+                                    fontFamily: "Outfit, Inter, sans-serif",
+                                }}
                             >
                                 Individualized Clarity
                             </h3>
                             <p className="text-sm text-[#ffffff]/80 mb-8 leading-relaxed font-medium">
-                                Your data, structured so perfectly that the system is <span className="text-[#22d3ee] font-bold">forced to listen.</span>
+                                Your data, structured so perfectly that the
+                                system is{" "}
+                                <span className="text-[#22d3ee] font-bold">
+                                    forced to listen.
+                                </span>
                             </p>
 
                             <div className="space-y-4">
@@ -164,12 +212,19 @@ export default function BrokenFirstMile() {
                                     <motion.div
                                         key={item.text}
                                         initial={{ opacity: 0, x: 20 }}
-                                        animate={isInView ? { opacity: 1, x: 0 } : {}}
-                                        transition={{ duration: 0.6, delay: 0.7 + i * 0.1 }}
+                                        animate={
+                                            isInView ? { opacity: 1, x: 0 } : {}
+                                        }
+                                        transition={{
+                                            duration: 0.6,
+                                            delay: 0.7 + i * 0.1,
+                                        }}
                                         className="flex items-center gap-3 p-3 rounded-xl bg-[#22d3ee]/10 border border-[#22d3ee]/20 shadow-lg backdrop-blur-sm transition-all hover:bg-[#22d3ee] hover:-translate-y-0.5 group/item cursor-default"
                                     >
                                         <item.icon className="w-4 h-4 text-[#22d3ee] shrink-0 group-hover/item:text-[#000000] transition-colors" />
-                                        <span className="text-sm text-[#ffffff]/90 font-semibold group-hover/item:text-[#000000] transition-colors">{item.text}</span>
+                                        <span className="text-sm text-[#ffffff]/90 font-semibold group-hover/item:text-[#000000] transition-colors">
+                                            {item.text}
+                                        </span>
                                     </motion.div>
                                 ))}
                             </div>
@@ -180,5 +235,3 @@ export default function BrokenFirstMile() {
         </section>
     );
 }
-
-

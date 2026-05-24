@@ -1,5 +1,5 @@
-import React from 'react';
-import { ShieldAlert } from 'lucide-react';
+import React from "react";
+import { ShieldAlert } from "lucide-react";
 
 export default class ErrorBoundary extends React.Component {
     constructor(props) {
@@ -30,9 +30,12 @@ export default class ErrorBoundary extends React.Component {
                             Critical Render Fault
                         </h1>
                         <p className="text-zinc-400 leading-relaxed mb-8 text-sm md:text-base">
-                            A localized structural error prevented this module from loading successfully. This is typically caused by internal exception faults or parsing errors. Your structural environment remains secure.
+                            A localized structural error prevented this module
+                            from loading successfully. This is typically caused
+                            by internal exception faults or parsing errors. Your
+                            structural environment remains secure.
                         </p>
-                        <button 
+                        <button
                             onClick={() => window.location.reload()}
                             className="px-6 py-3 rounded-xl bg-gradient-to-r from-red-500/20 to-rose-500/20 border border-red-400/30 text-xs font-bold tracking-widest uppercase transition-all duration-300 hover:bg-red-500/30 hover:border-red-400/60 shadow-[0_0_15px_rgba(248,113,113,0.15)] glow-btn"
                         >
@@ -43,6 +46,6 @@ export default class ErrorBoundary extends React.Component {
             );
         }
 
-        return this.props.children; 
+        return this.props.children;
     }
 }

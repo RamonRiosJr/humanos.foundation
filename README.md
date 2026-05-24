@@ -1,6 +1,7 @@
 <div align="center">
 
 # HumanOS Foundation
+
 ### The Advocacy Kernel & Human Operations Layer
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-00d4ff.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](https://opensource.org/licenses/MIT)
@@ -16,22 +17,21 @@
 
 ---
 
-*"We are engineering the 256-bit AES-GCM local-first data vault to cryptographically secure your clinical narrative."*
+_"We are engineering the 256-bit AES-GCM local-first data vault to cryptographically secure your clinical narrative."_
 
 </div>
 
-
-
 > **⚠️ PROJECT STATUS: PRE-LAUNCH & ARCHITECTURAL PHASE**
-> *The Humanos Foundation is currently in the pre-launch phase. We are actively finalizing our 501(c)(3) tax-exempt status, securing federal/seed funding, and formalizing compliance frameworks. This repository serves as a live architectural proof-of-concept for investors, strategic clinical partnerships, and ecosystem development.*
+> _The Humanos Foundation is currently in the pre-launch phase. We are actively finalizing our 501(c)(3) tax-exempt status, securing federal/seed funding, and formalizing compliance frameworks. This repository serves as a live architectural proof-of-concept for investors, strategic clinical partnerships, and ecosystem development._
 
 ## 🌍 The Mission
 
-The **HumanOS Foundation** is the 501(c)(3) (Pre-Filing Stage / Pending Funding) Sovereign advocacy wing of the **Aura hOS™ (Human Operating System)**. We are a global network of patients, clinicians, and technologists dedicated to dismantling the 15-20 page clinical clipboard penalty. 
+The **HumanOS Foundation** is the 501(c)(3) (Pre-Filing Stage / Pending Funding) Sovereign advocacy wing of the **Aura hOS™ (Human Operating System)**. We are a global network of patients, clinicians, and technologists dedicated to dismantling the 15-20 page clinical clipboard penalty.
 
 **The Medical Origin:** The term "Aura" is strictly derived from the clinical neurological symptom that precedes an epileptic seizure or severe migraine, which frequently causes episodic mutism. The Aura Human Operating System is engineered to act as a digital voice for these exact pre-ictal patients who are physically unable to participate in standard verbal intake.
 
 ### 🏛️ The Foundation Vanguard
+
 Our movement replaces the hostile "assembly-line" medical intake process with a cryptographic Digital Handshake, permanently securing patient data autonomy.
 
 <p align="center">
@@ -52,14 +52,18 @@ This repository powers our digital advocacy platform, designed to manage donor p
 To protect our regulatory standing, the ecosystem is strictly divided into two distinct perimeters:
 
 ### 1. The Human Operations Layer (This Repository)
+
 Powers `humanos.foundation`. This is the administrative surface area of the NGO.
+
 - **Frontend:** React 18 SPA, deployed via Vercel Edge.
 - **Backend (CRM):** Bound directly to Odoo (`teams.humanos.foundation`) via internal iframes and XML-RPC webhook payloads.
 - **Use Case:** Recruiting, Helpdesk, GoFundMe routing, and Federal Grant validation.
 - **Design System:** Custom CSS, Tailwind, and Framer Motion decorative animations (No diagnostic logic).
 
 ### 2. The Machine Layer (External Repository)
+
 Powers `aurahos.io` and the Clinical Patient Vault. For engineering the core software, please see the `aura-health-os` repository.
+
 - **Frontend:** Capacitor / React Native.
 - **Backend:** Local-First IndexedDB and PostgREST via Edge Functions.
 - **Use Case:** The Federated Clinic Route, FHIR R4 JSON Payload Generation, and AES-GCM encrypted vaults.
@@ -80,12 +84,12 @@ sequenceDiagram
     P->>P: Encrypt Clinical Narrative
     P->>Edge: POST /api/sync (Ciphertext Payload)
     deactivate P
-    
+
     activate Edge
     Edge->>Vault: Store Ciphertext (Zero Knowledge)
     Note over Edge,Vault: Servers mathematically cannot decrypt patient data
     deactivate Edge
-    
+
     activate Clinic
     Clinic->>Edge: Request Authorized Data (OAuth 2.0 Webhook)
     deactivate Clinic
@@ -106,10 +110,12 @@ sequenceDiagram
 ## 🚀 Presentation & Quick Start
 
 ### 1. Prerequisites
+
 - **Node.js**: v20 or higher
 - **Git**
 
 ### 2. Deployment
+
 ```bash
 git clone https://github.com/RamonRiosJr/humanos.foundation.git
 cd humanos.foundation
@@ -117,6 +123,7 @@ npm install
 ```
 
 ### 3. Launching the Advocacy Kernel
+
 Executes the UI sequence and launches the local Vite development server (Note: executes zero local cryptographic operations).
 
 ```bash
@@ -129,12 +136,12 @@ npm run dev
 
 ## 🔒 Security & FTC HBNR BAA Exemption
 
-We believe Privacy is a request, but Sovereignty is mathematics. 
+We believe Privacy is a request, but Sovereignty is mathematics.
 
 By utilizing **256-bit AES-GCM Encryption with Web Crypto API key isolation** on the Machine Layer, Aura hOS operates distinctly under the **FTC Health Breach Notification Rule (HBNR)** as a Personal Health Record. Although this repository strictly handles Human Operations, we enforce the same Zero-Trust standard:
 
 - **Ethical Integrity:** Contact and Waitlist nodes route strictly through authenticated Odoo CRM endpoints using webhook payload encryption. We do not sell analytics.
-- **Zero Third-Party Trackers**: We have purged all unauthorized Google/Meta marketing tracking scopes. 
+- **Zero Third-Party Trackers**: We have purged all unauthorized Google/Meta marketing tracking scopes.
 - **Privacy Handshake**: Optional telemetry (PostHog) is loaded dynamically and strictly respects Edge rendering constraints without accessing persistent local state.
 
 For more information on how we bypass FDA SaMD and HIPAA BAA traps, please see our [Zero-Knowledge Whitepaper](/whitepaper).
@@ -157,8 +164,8 @@ We are scaling an sovereign-grade contributor network:
 
 <div align="center">
 
-**Built by patients, for patients.** 
-*Data Sovereignty is a Human Right.*
+**Built by patients, for patients.**
+_Data Sovereignty is a Human Right._
 
 [**Developed by Ramon Luis Rios Jr | RamonRios.Net**](https://ramonrios.net)
 

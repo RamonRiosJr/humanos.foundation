@@ -17,7 +17,6 @@ diverse, inclusive, and healthy community.
 Examples of behavior that contributes to a positive environment for our
 community include:
 
-
 - Demonstrating empathy and kindness toward other people
 - Being respectful of differing opinions, viewpoints, and experiences
 - Giving and gracefully accepting constructive feedback
@@ -25,10 +24,9 @@ community include:
   and learning from the experience
 - Focusing on what is best not just for us as individuals, but for the
 
-  overall community
+    overall community
 
 Examples of unacceptable behavior include:
-
 
 - The use of sexualized language or imagery, and sexual attention or
   advances of any kind
@@ -38,7 +36,7 @@ Examples of unacceptable behavior include:
   address, without their explicit permission
 - Other conduct which could reasonably be considered inappropriate in a
 
-  professional setting
+    professional setting
 
 ## Enforcement Responsibilities
 
@@ -136,4 +134,3 @@ at [https://www.contributor-covenant.org/translations][translations].
 [Mozilla CoC]: https://github.com/mozilla/diversity
 [FAQ]: https://www.contributor-covenant.org/faq
 [translations]: https://www.contributor-covenant.org/translations
-

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Share2, Check, Copy } from 'lucide-react';
+import React, { useState } from "react";
+import { Share2, Check, Copy } from "lucide-react";
 
 export default function NativeShareWidget({ title, text, url }) {
     const [copied, setCopied] = useState(false);
@@ -7,7 +7,9 @@ export default function NativeShareWidget({ title, text, url }) {
     const handleShare = async () => {
         const shareUrl = url || window.location.href;
         const shareTitle = title || document.title;
-        const shareText = text || 'Check out this clinical protocol from the Humanos Foundation.';
+        const shareText =
+            text ||
+            "Check out this clinical protocol from the Humanos Foundation.";
 
         if (navigator.share) {
             try {
@@ -18,8 +20,8 @@ export default function NativeShareWidget({ title, text, url }) {
                 });
             } catch (error) {
                 // Determine if it was just an AbortError (user closed the share sheet)
-                if (error.name !== 'AbortError') {
-                    console.error('Error sharing natively', error);
+                if (error.name !== "AbortError") {
+                    console.error("Error sharing natively", error);
                     fallbackCopy(shareUrl);
                 }
             }
@@ -52,8 +54,14 @@ export default function NativeShareWidget({ title, text, url }) {
                 </>
             ) : (
                 <>
-                    {navigator.share ? <Share2 className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                    <span>{navigator.share ? 'Share Article' : 'Copy Link'}</span>
+                    {navigator.share ? (
+                        <Share2 className="w-4 h-4" />
+                    ) : (
+                        <Copy className="w-4 h-4" />
+                    )}
+                    <span>
+                        {navigator.share ? "Share Article" : "Copy Link"}
+                    </span>
                 </>
             )}
         </button>

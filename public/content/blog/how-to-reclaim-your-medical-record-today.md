@@ -6,9 +6,9 @@ You cannot advocate for your health if you do not have the complete picture. Unt
 
 ### 1. The HIPAA Request
 
-Under HIPAA, you have a legal right to receive a copy of your full medical record. Not just the summary—the *full* record, including doctor notes. Call your provider’s Medical Records department and explicitly request your "Complete Legal Medical Record." 
+Under HIPAA, you have a legal right to receive a copy of your full medical record. Not just the summary—the _full_ record, including doctor notes. Call your provider’s Medical Records department and explicitly request your "Complete Legal Medical Record."
 
-*Note: They are permitted to charge you a "reasonable fee" for copying expenses. If they push back, politely remind them of your HIPAA rights.*
+_Note: They are permitted to charge you a "reasonable fee" for copying expenses. If they push back, politely remind them of your HIPAA rights._
 
 ### 2. Reject the Portal Lock-In
 
@@ -16,7 +16,7 @@ Hospitals love their online portals because they control them. The portals often
 
 ### 3. Start a Longitudinal Symptom Journal
 
-The medical record only shows what happened *in the clinic*. It misses the 99% of your life that happens at home. Start a simple spreadsheet or secure note tracking your daily vital stats, sleep, and specific pain triggers. This creates your "baseline."
+The medical record only shows what happened _in the clinic_. It misses the 99% of your life that happens at home. Start a simple spreadsheet or secure note tracking your daily vital stats, sleep, and specific pain triggers. This creates your "baseline."
 
 ---
 

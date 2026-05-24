@@ -1,23 +1,47 @@
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import HeartbeatStream from '../shared/HeartbeatStream';
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import HeartbeatStream from "../shared/HeartbeatStream";
 
 const stats = [
-    { value: '2,500+', label: 'Engineering Hours', sub: 'Zero-Knowledge architecture built from the ground up' },
-    { value: '100%', label: 'Visual Independence', sub: 'Absolute Data Cryptography protects your family\'s graph' },
-    { value: '0 Days', label: 'Paperwork Penalty', sub: 'Bypass all clipboards and waiting room friction' },
-    { value: 'Universal', label: 'Hospital Integration', sub: 'Clean data exports to any doctor physically treating you' },
+    {
+        value: "2,500+",
+        label: "Engineering Hours",
+        sub: "Zero-Knowledge architecture built from the ground up",
+    },
+    {
+        value: "100%",
+        label: "Visual Independence",
+        sub: "Absolute Data Cryptography protects your family's graph",
+    },
+    {
+        value: "0 Days",
+        label: "Paperwork Penalty",
+        sub: "Bypass all clipboards and waiting room friction",
+    },
+    {
+        value: "Universal",
+        label: "Hospital Integration",
+        sub: "Clean data exports to any doctor physically treating you",
+    },
 ];
 
 export default function HomeStats() {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: '-80px' });
+    const isInView = useInView(ref, { once: true, margin: "-80px" });
 
     return (
-        <section ref={ref} className="relative py-16 md:py-20 px-4 md:px-8 overflow-hidden">
+        <section
+            ref={ref}
+            className="relative py-16 md:py-20 px-4 md:px-8 overflow-hidden"
+        >
             {/* Background Subdued Heartbeat */}
             <div className="absolute inset-0 flex items-center justify-center opacity-30 pointer-events-none">
-                <HeartbeatStream color="#22d3ee" className="h-40 md:h-64" duration={8} segmentLength={150} />
+                <HeartbeatStream
+                    color="#22d3ee"
+                    className="h-40 md:h-64"
+                    duration={8}
+                    segmentLength={150}
+                />
             </div>
 
             <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -29,16 +53,21 @@ export default function HomeStats() {
                         transition={{ duration: 0.7, delay: i * 0.12 }}
                         className="glass rounded-2xl p-5 md:p-7 group hover:border-cyan-500/20 transition-all duration-500 border border-white/[0.04]"
                     >
-                        <p className="text-3xl md:text-4xl font-bold gradient-text mb-2" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>
+                        <p
+                            className="text-3xl md:text-4xl font-bold gradient-text mb-2"
+                            style={{ fontFamily: "Outfit, Inter, sans-serif" }}
+                        >
                             {stat.value}
                         </p>
-                        <p className="text-xs md:text-sm font-semibold text-white/70 mb-1">{stat.label}</p>
-                        <p className="text-[10px] md:text-xs text-white/50 leading-relaxed font-medium">{stat.sub}</p>
+                        <p className="text-xs md:text-sm font-semibold text-white/70 mb-1">
+                            {stat.label}
+                        </p>
+                        <p className="text-[10px] md:text-xs text-white/50 leading-relaxed font-medium">
+                            {stat.sub}
+                        </p>
                     </motion.div>
                 ))}
             </div>
         </section>
     );
 }
-
-

@@ -1,7 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
-export default function HeartbeatStream({ color = '#22d3ee', className = '', duration = 4, segmentLength = 100 }) {
+export default function HeartbeatStream({
+    color = "#22d3ee",
+    className = "",
+    duration = 4,
+    segmentLength = 100,
+}) {
     // Generate a long, continuous EKG-style path
     const createSegment = (startX) => {
         return `L ${startX + 10} 50 L ${startX + 15} 40 L ${startX + 20} 50 L ${startX + 35} 50 L ${startX + 40} 10 L ${startX + 45} 90 L ${startX + 50} 50 L ${startX + 60} 50 L ${startX + 65} 45 L ${startX + 70} 50 L ${startX + segmentLength} 50`;
@@ -15,7 +20,9 @@ export default function HeartbeatStream({ color = '#22d3ee', className = '', dur
     const totalWidth = segments * segmentLength;
 
     return (
-        <div className={`relative w-full h-12 md:h-16 overflow-hidden flex items-center ${className}`}>
+        <div
+            className={`relative w-full h-12 md:h-16 overflow-hidden flex items-center ${className}`}
+        >
             <svg
                 viewBox={`0 0 ${totalWidth} 100`}
                 preserveAspectRatio="none"
@@ -45,10 +52,10 @@ export default function HeartbeatStream({ color = '#22d3ee', className = '', dur
                     transition={{
                         duration: duration,
                         repeat: Infinity,
-                        ease: "linear"
+                        ease: "linear",
                     }}
                     style={{
-                        filter: `drop-shadow(0 0 8px ${color})`
+                        filter: `drop-shadow(0 0 8px ${color})`,
                     }}
                 />
             </svg>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function SectionDivider() {
     return (
@@ -9,7 +9,3 @@ export default function SectionDivider() {
         </div>
     );
 }
-
-
-
-

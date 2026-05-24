@@ -2,35 +2,20 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "@/*": [
-                "./src/*"
-            ]
+            "@/*": ["./src/*"]
         },
         "jsx": "react-jsx",
         "module": "esnext",
         "moduleResolution": "bundler",
-        "lib": [
-            "esnext",
-            "dom"
-        ],
+        "lib": ["esnext", "dom"],
         "target": "esnext",
         "checkJs": false,
         "skipLibCheck": true,
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "resolveJsonModule": true,
-        "types": [
-            "vite/client"
-        ]
+        "types": ["vite/client"]
     },
-    "include": [
-        "src/**/*.js",
-        "src/**/*.jsx",
-        "src/**/*.ts",
-        "src/**/*.tsx"
-    ],
-    "exclude": [
-        "node_modules",
-        "dist"
-    ]
+    "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
+    "exclude": ["node_modules", "dist"]
 }

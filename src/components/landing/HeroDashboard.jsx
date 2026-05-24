@@ -1,13 +1,30 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Activity, Heart, Brain, Shield, Zap, ExternalLink } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+    Activity,
+    Heart,
+    Brain,
+    Shield,
+    Zap,
+    ExternalLink,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
 const metrics = [
-    { label: 'History Sync', value: 'Complete', icon: Brain, color: '#00d4ff' },
-    { label: 'Clinical Agenda', value: 'Ready', icon: Heart, color: '#f43f5e' },
-    { label: 'Daily Tasks', value: '3 Pending', icon: Activity, color: '#10b981' },
-    { label: 'Digital Vault', value: 'Sovereign', icon: Shield, color: '#8b5cf6' },
+    { label: "History Sync", value: "Complete", icon: Brain, color: "#00d4ff" },
+    { label: "Clinical Agenda", value: "Ready", icon: Heart, color: "#f43f5e" },
+    {
+        label: "Daily Tasks",
+        value: "3 Pending",
+        icon: Activity,
+        color: "#10b981",
+    },
+    {
+        label: "Digital Vault",
+        value: "Sovereign",
+        icon: Shield,
+        color: "#8b5cf6",
+    },
 ];
 
 export default function HeroDashboard() {
@@ -63,16 +80,23 @@ export default function HeroDashboard() {
                     <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
                             <Zap className="w-3.5 h-3.5 text-cyan-400" />
-                            <span className="text-xs text-white/40">Clinical Agenda Sync</span>
+                            <span className="text-xs text-white/40">
+                                Clinical Agenda Sync
+                            </span>
                         </div>
                         <div className="flex items-center gap-1">
                             <Shield className="w-3 h-3 text-emerald-400" />
-                            <span className="text-[10px] text-emerald-400">Zero-Knowledge</span>
+                            <span className="text-[10px] text-emerald-400">
+                                Zero-Knowledge
+                            </span>
                         </div>
                     </div>
                     <div className="flex items-end gap-[2px] h-10 md:h-12">
                         {Array.from({ length: 48 }).map((_, i) => {
-                            const h = 20 + Math.sin(i * 0.4) * 30 + Math.random() * 25;
+                            const h =
+                                20 +
+                                Math.sin(i * 0.4) * 30 +
+                                Math.random() * 25;
                             return (
                                 <motion.div
                                     key={i}
@@ -96,22 +120,24 @@ export default function HeroDashboard() {
                 {/* Foundation CTA Matrix */}
                 <div className="mt-8 pt-5 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-white/50 font-medium">
-                        HumanOS Foundation donates this architecture to patients.
+                        HumanOS Foundation donates this architecture to
+                        patients.
                     </p>
                     <div className="flex items-center gap-3 w-full md:w-auto">
-                        <Link 
-                            to="/thesolution" 
+                        <Link
+                            to="/thesolution"
                             className="flex-1 md:flex-none text-center px-4 py-2 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold hover:bg-cyan-500/20 transition-all shadow-[0_0_15px_rgba(34,211,238,0.1)]"
                         >
                             The Solution
                         </Link>
-                        <a 
-                            href="https://aurahos.io/app" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
+                        <a
+                            href="https://aurahos.io/app"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="flex-1 md:flex-none flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white/80 text-xs font-bold hover:bg-white/10 hover:text-white transition-all hover:border-white/20"
                         >
-                            Patient Always Free APP Access <ExternalLink className="w-3 h-3" />
+                            Patient Always Free APP Access{" "}
+                            <ExternalLink className="w-3 h-3" />
                         </a>
                     </div>
                 </div>
@@ -122,5 +148,3 @@ export default function HeroDashboard() {
         </motion.div>
     );
 }
-
-

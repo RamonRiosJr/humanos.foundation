@@ -18,7 +18,9 @@ export const Logger = {
     error: (error, context = "Unhandled") => {
         // Redact any nested stack traces in production to prevent Edge function internal state leaks
         if (isProd) {
-            console.error(`[Foundation Error] <${context}>: ${error.message || 'Execution Failure (Redacted for Security)'}`);
+            console.error(
+                `[Foundation Error] <${context}>: ${error.message || "Execution Failure (Redacted for Security)"}`,
+            );
         } else {
             console.error(`[Foundation Error] <${context}>:`, error);
         }
@@ -28,5 +30,5 @@ export const Logger = {
         if (!isProd) {
             console.debug(`[🔒 Zero-Knowledge Edge]: ${message}`);
         }
-    }
+    },
 };

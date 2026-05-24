@@ -1,50 +1,89 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle2, ClipboardX, BrainCircuit, HeartCrack, ListTodo, ChevronRight } from 'lucide-react';
-import { supabase } from '../../lib/supabase';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import {
+    CheckCircle2,
+    ClipboardX,
+    BrainCircuit,
+    HeartCrack,
+    ListTodo,
+    ChevronRight,
+} from "lucide-react";
+import { supabase } from "../../lib/supabase";
 
 const POLL_QUESTIONS = [
     {
-        id: 'pages_filled',
+        id: "pages_filled",
         icon: ClipboardX,
-        question: "What's the maximum number of intake forms you remember filling out while sick, in pain, or at a new specialist?",
+        question:
+            "What's the maximum number of intake forms you remember filling out while sick, in pain, or at a new specialist?",
         options: [
-            { id: '1-4', label: "1 to 4 pages", mockVotes: 142 },
-            { id: '5-10', label: "5 to 10 pages", mockVotes: 856 },
-            { id: '10-15', label: "10 to 15 pages", mockVotes: 1204 },
-            { id: '15-20', label: "15 to 20+ pages", mockVotes: 3450 }
-        ]
+            { id: "1-4", label: "1 to 4 pages", mockVotes: 142 },
+            { id: "5-10", label: "5 to 10 pages", mockVotes: 856 },
+            { id: "10-15", label: "10 to 15 pages", mockVotes: 1204 },
+            { id: "15-20", label: "15 to 20+ pages", mockVotes: 3450 },
+        ],
     },
     {
-        id: 'medical_recall',
+        id: "medical_recall",
         icon: BrainCircuit,
-        question: "Are you genuinely able to accurately recall every medication name, dosage, and surgical procedure from the past 10 years by memory?",
+        question:
+            "Are you genuinely able to accurately recall every medication name, dosage, and surgical procedure from the past 10 years by memory?",
         options: [
-            { id: 'yes', label: "Yes, I remember it all perfectly", mockVotes: 112 },
-            { id: 'mostly', label: "Mostly, but I miss some dates", mockVotes: 734 },
-            { id: 'no', label: "No, it's impossible to remember it all", mockVotes: 4890 }
-        ]
+            {
+                id: "yes",
+                label: "Yes, I remember it all perfectly",
+                mockVotes: 112,
+            },
+            {
+                id: "mostly",
+                label: "Mostly, but I miss some dates",
+                mockVotes: 734,
+            },
+            {
+                id: "no",
+                label: "No, it's impossible to remember it all",
+                mockVotes: 4890,
+            },
+        ],
     },
     {
-        id: 'doctor_attention',
+        id: "doctor_attention",
         icon: HeartCrack,
-        question: "After filling out the massive clipboard, do you feel the doctor actually had the time to read it and address all your needs?",
+        question:
+            "After filling out the massive clipboard, do you feel the doctor actually had the time to read it and address all your needs?",
         options: [
-            { id: 'yes', label: "Yes, they addressed everything", mockVotes: 245 },
-            { id: 'rushed', label: "They tried, but seemed incredibly rushed", mockVotes: 2150 },
-            { id: 'ignored', label: "No, they asked me the exact same questions again", mockVotes: 4210 }
-        ]
+            {
+                id: "yes",
+                label: "Yes, they addressed everything",
+                mockVotes: 245,
+            },
+            {
+                id: "rushed",
+                label: "They tried, but seemed incredibly rushed",
+                mockVotes: 2150,
+            },
+            {
+                id: "ignored",
+                label: "No, they asked me the exact same questions again",
+                mockVotes: 4210,
+            },
+        ],
     },
     {
-        id: 'forgotten_details',
+        id: "forgotten_details",
         icon: ListTodo,
-        question: "How often do you leave the clinic, get to your car, or arrive home and instantly remember exactly what you actually needed to tell the doctor?",
+        question:
+            "How often do you leave the clinic, get to your car, or arrive home and instantly remember exactly what you actually needed to tell the doctor?",
         options: [
-            { id: 'never', label: "Rarely or Never", mockVotes: 180 },
-            { id: 'sometimes', label: "Sometimes", mockVotes: 1150 },
-            { id: 'always', label: "Almost Every Single Time", mockVotes: 5120 }
-        ]
-    }
+            { id: "never", label: "Rarely or Never", mockVotes: 180 },
+            { id: "sometimes", label: "Sometimes", mockVotes: 1150 },
+            {
+                id: "always",
+                label: "Almost Every Single Time",
+                mockVotes: 5120,
+            },
+        ],
+    },
 ];
 
 export default function IntakePoll() {
@@ -59,11 +98,11 @@ export default function IntakePoll() {
 
     // Initialize from local storage if they already voted
     useEffect(() => {
-        const stored = localStorage.getItem('humanos_intake_poll');
+        const stored = localStorage.getItem("humanos_intake_poll");
         if (stored) {
             const parsedVotes = JSON.parse(stored);
             setUserVotes(parsedVotes);
-            
+
             // Calculate how far they got to \"stick\" their progress
             let furthestAnsweredStep = 0;
             for (let i = 0; i < POLL_QUESTIONS.length; i++) {
@@ -73,10 +112,10 @@ export default function IntakePoll() {
                     break; // Stop at the first unanswered question
                 }
             }
-            
+
             // Jump to the furthest question they answered
             setCurrentStep(furthestAnsweredStep);
-            
+
             // If they answered this particular question, show the results
             if (parsedVotes[POLL_QUESTIONS[furthestAnsweredStep].id]) {
                 setShowResults(true);
@@ -86,11 +125,14 @@ export default function IntakePoll() {
         const fetchConsensus = async () => {
             try {
                 // If the user hasn't added the .env keys, this simply fails silently and uses baseline mock data
-                const { data, error } = await supabase.from('poll_consensus').select('*');
+                const { data, error } = await supabase
+                    .from("poll_consensus")
+                    .select("*");
                 if (data && !error) {
                     const mappedData = {};
-                    data.forEach(row => {
-                        mappedData[`${row.question_id}_${row.option_id}`] = parseInt(row.votes, 10);
+                    data.forEach((row) => {
+                        mappedData[`${row.question_id}_${row.option_id}`] =
+                            parseInt(row.votes, 10);
                     });
                     setDbData(mappedData);
                 }
@@ -104,19 +146,20 @@ export default function IntakePoll() {
     const handleVote = async (questionId, optionId) => {
         const newVotes = { ...userVotes, [questionId]: optionId };
         setUserVotes(newVotes);
-        localStorage.setItem('humanos_intake_poll', JSON.stringify(newVotes));
+        localStorage.setItem("humanos_intake_poll", JSON.stringify(newVotes));
         setShowResults(true);
 
         // Fire atomic RPC to Supabase
         try {
-            await supabase.rpc('increment_poll_vote', {
+            await supabase.rpc("increment_poll_vote", {
                 p_question_id: questionId,
-                p_option_id: optionId
+                p_option_id: optionId,
             });
             // Optimistically update the dbData locally so UI is instantaneous
-            setDbData(prev => ({
+            setDbData((prev) => ({
                 ...prev,
-                [`${questionId}_${optionId}`]: (prev ? prev[`${questionId}_${optionId}`] || 0 : 0) + 1
+                [`${questionId}_${optionId}`]:
+                    (prev ? prev[`${questionId}_${optionId}`] || 0 : 0) + 1,
             }));
         } catch {
             // Silently fail if not configured yet
@@ -125,43 +168,53 @@ export default function IntakePoll() {
 
     const nextQuestion = () => {
         if (currentStep < POLL_QUESTIONS.length - 1) {
-            setCurrentStep(c => c + 1);
-            setShowResults(userVotes[POLL_QUESTIONS[currentStep + 1].id] !== undefined);
+            setCurrentStep((c) => c + 1);
+            setShowResults(
+                userVotes[POLL_QUESTIONS[currentStep + 1].id] !== undefined,
+            );
         }
     };
-
-
 
     // Calculate total votes dynamically
     const getOptionsWithPercentages = (question) => {
         const hasVotedThisQuestion = userVotes[question.id] !== undefined;
-        
+
         let totalVotes = question.options.reduce((sum, opt) => {
-            const backendVotes = dbData ? (dbData[`${question.id}_${opt.id}`] || 0) : opt.mockVotes;
+            const backendVotes = dbData
+                ? dbData[`${question.id}_${opt.id}`] || 0
+                : opt.mockVotes;
             return sum + backendVotes;
         }, 0);
 
         // If the backend has no data, or we just voted but haven't fetched it yet
         if (totalVotes === 0 && !dbData) {
-            totalVotes = question.options.reduce((sum, opt) => sum + opt.mockVotes, 0);
+            totalVotes = question.options.reduce(
+                (sum, opt) => sum + opt.mockVotes,
+                0,
+            );
         }
-        
+
         // If the user hasn't voted yet AND we are resolving immediately vs UI
         if (hasVotedThisQuestion && !dbData) totalVotes += 1;
 
-        return question.options.map(opt => {
+        return question.options.map((opt) => {
             const isSelected = userVotes[question.id] === opt.id;
-            
+
             // Backend precedence
-            let actualVotes = dbData ? (dbData[`${question.id}_${opt.id}`] || 0) : opt.mockVotes;
+            let actualVotes = dbData
+                ? dbData[`${question.id}_${opt.id}`] || 0
+                : opt.mockVotes;
             if (!dbData && isSelected) actualVotes += 1;
-            
-            const percentage = totalVotes > 0 ? Math.round((actualVotes / totalVotes) * 100) : 0;
+
+            const percentage =
+                totalVotes > 0
+                    ? Math.round((actualVotes / totalVotes) * 100)
+                    : 0;
             return {
                 ...opt,
                 actualVotes,
                 percentage,
-                isSelected
+                isSelected,
             };
         });
     };
@@ -176,33 +229,43 @@ export default function IntakePoll() {
         <section className="py-24 px-4 relative overflow-hidden bg-[#0d0d15] border-y border-white/5">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(ellipse_at_top_right,rgba(0,212,255,0.05),transparent_50%)] pointer-events-none" />
-            
+
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Outfit, Inter, sans-serif' }}>
+                    <h2
+                        className="text-3xl md:text-5xl font-bold mb-4"
+                        style={{ fontFamily: "Outfit, Inter, sans-serif" }}
+                    >
                         The Reality of Intake.
                     </h2>
                     <p className="text-white/50 max-w-2xl mx-auto text-lg leading-relaxed">
-                        The current healthcare system operates on a fractured data model. Add your voice to the live diagnostic consensus as we build the case for patient data sovereignty.
+                        The current healthcare system operates on a fractured
+                        data model. Add your voice to the live diagnostic
+                        consensus as we build the case for patient data
+                        sovereignty.
                     </p>
                 </div>
 
                 <div className="glass p-6 md:p-10 rounded-3xl border border-white/10 relative z-10 shadow-[0_0_50px_rgba(0,212,255,0.03)]">
-                    
                     {/* Progress Bar */}
                     <div className="flex gap-2 mb-8">
                         {POLL_QUESTIONS.map((_, idx) => (
-                            <div 
-                                key={idx} 
+                            <div
+                                key={idx}
                                 className={`h-1.5 flex-1 rounded-full overflow-hidden bg-white/5 transition-all duration-300 ${
-                                    idx <= currentStep ? 'bg-white/10' : ''
+                                    idx <= currentStep ? "bg-white/10" : ""
                                 }`}
                             >
                                 {idx <= currentStep && (
-                                    <motion.div 
-                                        initial={{ width: 0 }} 
-                                        animate={{ width: idx < currentStep || showResults ? '100%' : '50%' }} 
-                                        className="h-full bg-cyan-400" 
+                                    <motion.div
+                                        initial={{ width: 0 }}
+                                        animate={{
+                                            width:
+                                                idx < currentStep || showResults
+                                                    ? "100%"
+                                                    : "50%",
+                                        }}
+                                        className="h-full bg-cyan-400"
                                     />
                                 )}
                             </div>
@@ -221,7 +284,8 @@ export default function IntakePoll() {
                             </div>
                             <div>
                                 <span className="text-xs font-bold uppercase tracking-widest text-cyan-400/80 mb-2 block">
-                                    Question {currentStep + 1} of {POLL_QUESTIONS.length}
+                                    Question {currentStep + 1} of{" "}
+                                    {POLL_QUESTIONS.length}
                                 </span>
                                 <h3 className="text-xl md:text-2xl font-bold text-white leading-relaxed">
                                     {currentQ.question}
@@ -233,38 +297,55 @@ export default function IntakePoll() {
                             {optionsData.map((opt) => (
                                 <button
                                     key={opt.id}
-                                    onClick={() => !showResults && handleVote(currentQ.id, opt.id)}
+                                    onClick={() =>
+                                        !showResults &&
+                                        handleVote(currentQ.id, opt.id)
+                                    }
                                     disabled={showResults}
                                     className={`w-full text-left relative overflow-hidden rounded-xl p-5 border transition-all duration-300 ${
-                                        showResults 
-                                            ? opt.isSelected 
-                                                ? 'bg-cyan-500/10 border-cyan-400/50' 
-                                                : 'bg-white/5 border-transparent'
-                                            : 'bg-white/5 border-white/10 hover:border-cyan-400/50 hover:bg-white/10'
+                                        showResults
+                                            ? opt.isSelected
+                                                ? "bg-cyan-500/10 border-cyan-400/50"
+                                                : "bg-white/5 border-transparent"
+                                            : "bg-white/5 border-white/10 hover:border-cyan-400/50 hover:bg-white/10"
                                     }`}
                                 >
                                     {showResults && (
                                         <motion.div
                                             initial={{ width: 0 }}
-                                            animate={{ width: `${opt.percentage}%` }}
-                                            transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
-                                            className={`absolute inset-0 z-0 opacity-10 ${opt.isSelected ? 'bg-cyan-400' : 'bg-white'}`}
+                                            animate={{
+                                                width: `${opt.percentage}%`,
+                                            }}
+                                            transition={{
+                                                duration: 1,
+                                                delay: 0.1,
+                                                ease: "easeOut",
+                                            }}
+                                            className={`absolute inset-0 z-0 opacity-10 ${opt.isSelected ? "bg-cyan-400" : "bg-white"}`}
                                         />
                                     )}
-                                    
+
                                     <div className="relative z-10 flex items-center justify-between">
                                         <div className="flex items-center gap-3">
                                             {showResults && opt.isSelected && (
                                                 <CheckCircle2 className="w-5 h-5 text-cyan-400" />
                                             )}
-                                            <span className={`font-medium ${showResults && !opt.isSelected ? 'text-white/60' : 'text-white'}`}>
+                                            <span
+                                                className={`font-medium ${showResults && !opt.isSelected ? "text-white/60" : "text-white"}`}
+                                            >
                                                 {opt.label}
                                             </span>
                                         </div>
-                                        
+
                                         {showResults && (
                                             <div className="flex items-center gap-4 text-sm font-bold">
-                                                <span className={opt.isSelected ? 'text-cyan-400' : 'text-white/60'}>
+                                                <span
+                                                    className={
+                                                        opt.isSelected
+                                                            ? "text-cyan-400"
+                                                            : "text-white/60"
+                                                    }
+                                                >
                                                     {opt.percentage}%
                                                 </span>
                                             </div>
@@ -275,21 +356,29 @@ export default function IntakePoll() {
                         </div>
 
                         {showResults && (
-                            <motion.div 
+                            <motion.div
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 className="mt-8 flex justify-between items-center border-t border-white/10 pt-6"
                             >
                                 <span className="text-sm text-white/40">
-                                    {optionsData.reduce((acc, curr) => acc + curr.actualVotes, 0).toLocaleString()} total respondents
+                                    {optionsData
+                                        .reduce(
+                                            (acc, curr) =>
+                                                acc + curr.actualVotes,
+                                            0,
+                                        )
+                                        .toLocaleString()}{" "}
+                                    total respondents
                                 </span>
-                                
+
                                 {currentStep < POLL_QUESTIONS.length - 1 ? (
                                     <button
                                         onClick={nextQuestion}
                                         className="glow-btn px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-bold flex items-center gap-2 hover:bg-cyan-500/20"
                                     >
-                                        Next Question <ChevronRight className="w-4 h-4" />
+                                        Next Question{" "}
+                                        <ChevronRight className="w-4 h-4" />
                                     </button>
                                 ) : (
                                     <p className="text-emerald-400 font-bold tracking-wide">
@@ -302,17 +391,18 @@ export default function IntakePoll() {
                 </div>
 
                 {isFinished && (
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
                         className="mt-12 text-center"
                     >
                         <p className="text-xl text-white/80 mb-6 font-medium">
-                            The data is undeniable. The current workflow is structurally failing patients.
+                            The data is undeniable. The current workflow is
+                            structurally failing patients.
                         </p>
-                        <a 
-                            href="/join" 
+                        <a
+                            href="/join"
                             className="glow-btn inline-block px-8 py-4 rounded-xl bg-cyan-500 text-obsidian font-black tracking-widest uppercase hover:bg-cyan-400 hover:scale-105 transition-all shadow-[0_0_30px_rgba(0,212,255,0.3)]"
                         >
                             Help Us Fix It. Join the Vanguard.

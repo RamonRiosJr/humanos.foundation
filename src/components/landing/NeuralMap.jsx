@@ -1,5 +1,5 @@
-import React, { useMemo } from 'react';
-import { motion } from 'framer-motion';
+import React, { useMemo } from "react";
+import { motion } from "framer-motion";
 
 const NODE_COUNT = 28;
 const EDGE_COUNT = 40;
@@ -56,11 +56,19 @@ export default function NeuralMap() {
                 <defs>
                     <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
                         <stop offset="0%" stopColor="#00d4ff" stopOpacity="1" />
-                        <stop offset="100%" stopColor="#00d4ff" stopOpacity="0" />
+                        <stop
+                            offset="100%"
+                            stopColor="#00d4ff"
+                            stopOpacity="0"
+                        />
                     </radialGradient>
                     <filter id="glow">
                         <feGaussianBlur stdDeviation="0.5" result="blur" />
-                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        <feComposite
+                            in="SourceGraphic"
+                            in2="blur"
+                            operator="over"
+                        />
                     </filter>
                 </defs>
 
@@ -79,7 +87,7 @@ export default function NeuralMap() {
                             duration: edge.duration,
                             delay: edge.delay,
                             repeat: Infinity,
-                            ease: 'easeInOut',
+                            ease: "easeInOut",
                         }}
                     />
                 ))}
@@ -101,7 +109,7 @@ export default function NeuralMap() {
                             duration: node.duration,
                             delay: node.delay,
                             repeat: Infinity,
-                            ease: 'easeInOut',
+                            ease: "easeInOut",
                         }}
                     />
                 ))}
@@ -112,11 +120,9 @@ export default function NeuralMap() {
                 className="absolute inset-0"
                 style={{
                     background:
-                        'radial-gradient(ellipse at center, transparent 30%, #0a0a0f 75%)',
+                        "radial-gradient(ellipse at center, transparent 30%, #0a0a0f 75%)",
                 }}
             />
         </div>
     );
 }
-
-

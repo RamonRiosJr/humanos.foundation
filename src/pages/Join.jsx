@@ -1,11 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import SEOMeta from '../components/shared/SEOMeta';
-import Navbar from '../components/landing/Navbar';
-import Footer from '../components/landing/Footer';
-import PageHero from '../components/shared/PageHero';
-import HOSLogo from '../components/shared/HOSLogo';
-
+import React from "react";
+import { motion } from "framer-motion";
+import SEOMeta from "../components/shared/SEOMeta";
+import Navbar from "../components/landing/Navbar";
+import Footer from "../components/landing/Footer";
+import PageHero from "../components/shared/PageHero";
+import HOSLogo from "../components/shared/HOSLogo";
 
 export default function Join() {
     return (
@@ -32,26 +31,42 @@ export default function Join() {
                         transition={{ duration: 0.7, delay: 0.1 }}
                         className="flex justify-center mb-10"
                     >
-                        <HOSLogo size={144} wordmarkSize="xl" variant="full" asLink={false} className="flex-col text-center gap-6" />
+                        <HOSLogo
+                            size={144}
+                            wordmarkSize="xl"
+                            variant="full"
+                            asLink={false}
+                            className="flex-col text-center gap-6"
+                        />
                     </motion.div>
-                    
+
                     <div className="relative w-full">
                         {/* Animated Soft Smoke Halo */}
                         <motion.div
-                            animate={{ opacity: [0.4, 0.8, 0.4], scale: [0.98, 1.02, 0.98] }}
-                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                            animate={{
+                                opacity: [0.4, 0.8, 0.4],
+                                scale: [0.98, 1.02, 0.98],
+                            }}
+                            transition={{
+                                duration: 5,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                            }}
                             className="absolute -inset-4 bg-gradient-to-tr from-cyan-500/40 via-blue-500/20 to-purple-500/10 rounded-[3rem] blur-2xl pointer-events-none"
                         />
-                        <div className="w-full relative rounded-3xl overflow-hidden glass-strong border border-cyan-500/20 shadow-[0_0_80px_rgba(34,211,238,0.15)] z-10 bg-obsidian" style={{ height: '600px' }}>
+                        <div
+                            className="w-full relative rounded-3xl overflow-hidden glass-strong border border-cyan-500/20 shadow-[0_0_80px_rgba(34,211,238,0.15)] z-10 bg-obsidian"
+                            style={{ height: "600px" }}
+                        >
                             <div className="w-full h-full overflow-y-auto overflow-x-hidden relative no-scrollbar">
                                 <iframe
                                     src="https://team.humanos.foundation/contactus"
                                     className="w-full"
-                                    style={{ 
-                                        height: '1100px', 
-                                        marginTop: '-75px', 
-                                        border: '0',
-                                        backgroundColor: 'transparent'
+                                    style={{
+                                        height: "1100px",
+                                        marginTop: "-75px",
+                                        border: "0",
+                                        backgroundColor: "transparent",
                                     }}
                                     title="Foundation Join Intake Form"
                                     scrolling="no"
