@@ -40,4 +40,17 @@ export default defineConfig({
             },
         },
     },
+    test: {
+        globals: true,
+        environment: "jsdom",
+        coverage: {
+            provider: "v8",
+            thresholds: {
+                lines: 5,
+                functions: 5,
+                branches: 5,
+                statements: 5,
+            },
+        },
+    },
 });
