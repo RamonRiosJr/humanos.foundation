@@ -15,7 +15,7 @@ import {
 const brokenItems = [
     {
         icon: FileX,
-        text: "The 15-20 page clipboard penalty in the waiting room",
+        text: "Kill the 15-20 page clipboard penalty with Edge Intake Routing",
     },
     { icon: Clock, text: "The rushed 5-minute clinical documentation" },
     { icon: AlertTriangle, text: "The Prescriptive Spiral" },
