@@ -63,65 +63,65 @@ export default function Research() {
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
-                    variants={FADE_UP}
-                    className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
-                >
-                    {[
-                        {
-                            label: "Active Cohort Size",
-                            value: "2,841",
-                            icon: Users,
-                            color: "text-blue-400",
-                            bg: "bg-blue-500/10",
-                            border: "border-blue-500/20",
-                        },
-                        {
-                            label: "Zero-Knowledge Packets",
-                            value: "1.2M+",
-                            icon: Lock,
-                            color: "text-emerald-400",
-                            bg: "bg-emerald-500/10",
-                            border: "border-emerald-500/20",
-                        },
-                        {
-                            label: "Avg. Adherence Lift",
-                            value: "+38.4%",
-                            icon: LineChart,
-                            color: "text-purple-400",
-                            bg: "bg-purple-500/10",
-                            border: "border-purple-500/20",
-                        },
-                        {
-                            label: "Current Network Latency",
-                            value: "< 12ms",
-                            icon: Zap,
-                            color: "text-amber-400",
-                            bg: "bg-amber-500/10",
-                            border: "border-amber-500/20",
-                        },
-                    ].map((stat, i) => (
-                        <div
-                            key={i}
-                            className={`p-6 rounded-3xl border ${stat.border} ${stat.bg} backdrop-blur-md relative overflow-hidden group`}
-                        >
-                            <div className="absolute -right-4 -bottom-4 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={FADE_UP}
+                        className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+                    >
+                        {[
+                            {
+                                label: "Active Cohort Size",
+                                value: "2,841",
+                                icon: Users,
+                                color: "text-blue-400",
+                                bg: "bg-blue-500/10",
+                                border: "border-blue-500/20",
+                            },
+                            {
+                                label: "Zero-Knowledge Packets",
+                                value: "1.2M+",
+                                icon: Lock,
+                                color: "text-emerald-400",
+                                bg: "bg-emerald-500/10",
+                                border: "border-emerald-500/20",
+                            },
+                            {
+                                label: "Avg. Adherence Lift",
+                                value: "+38.4%",
+                                icon: LineChart,
+                                color: "text-purple-400",
+                                bg: "bg-purple-500/10",
+                                border: "border-purple-500/20",
+                            },
+                            {
+                                label: "Current Network Latency",
+                                value: "< 12ms",
+                                icon: Zap,
+                                color: "text-amber-400",
+                                bg: "bg-amber-500/10",
+                                border: "border-amber-500/20",
+                            },
+                        ].map((stat, i) => (
+                            <div
+                                key={i}
+                                className={`p-6 rounded-3xl border ${stat.border} ${stat.bg} backdrop-blur-md relative overflow-hidden group`}
+                            >
+                                <div className="absolute -right-4 -bottom-4 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
+                                    <stat.icon
+                                        className={`w-24 h-24 ${stat.color}`}
+                                    />
+                                </div>
                                 <stat.icon
-                                    className={`w-24 h-24 ${stat.color}`}
+                                    className={`w-6 h-6 ${stat.color} mb-4`}
                                 />
+                                <p className="text-3xl md:text-4xl font-bold font-outfit text-white mb-1">
+                                    {stat.value}
+                                </p>
+                                <p className="text-[10px] md:text-xs text-white/60 uppercase tracking-widest font-bold">
+                                    {stat.label}
+                                </p>
                             </div>
-                            <stat.icon
-                                className={`w-6 h-6 ${stat.color} mb-4`}
-                            />
-                            <p className="text-3xl md:text-4xl font-bold font-outfit text-white mb-1">
-                                {stat.value}
-                            </p>
-                            <p className="text-[10px] md:text-xs text-white/60 uppercase tracking-widest font-bold">
-                                {stat.label}
-                            </p>
-                        </div>
-                    ))}
-                </motion.div>
+                        ))}
+                    </motion.div>
                 </div>
 
                 <div className="space-y-16">
