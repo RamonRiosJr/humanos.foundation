@@ -53,9 +53,16 @@ export default function Research() {
 
             <section className="py-12 px-4 md:px-8 max-w-6xl mx-auto space-y-24">
                 {/* Active Telemetry Dashboard */}
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
+                <div className="space-y-8">
+                    <div className="flex items-center justify-center">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/20 text-amber-400 text-[10px] font-bold uppercase tracking-widest rounded-full">
+                            <div className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse shadow-[0_0_8px_rgba(251,191,36,0.8)]" />
+                            Simulated Telemetry / Phase 1 Projection
+                        </div>
+                    </div>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
                     variants={FADE_UP}
                     className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
@@ -115,6 +122,7 @@ export default function Research() {
                         </div>
                     ))}
                 </motion.div>
+                </div>
 
                 <div className="space-y-16">
                     <div className="flex items-center gap-4">
