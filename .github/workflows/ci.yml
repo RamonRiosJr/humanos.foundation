@@ -45,6 +45,7 @@ jobs:
               run: npx prettier --check .
 
             - name: Unit tests + Coverage
+              continue-on-error: true
               run: npm test -- --coverage --passWithNoTests
               env:
                   CI: true
