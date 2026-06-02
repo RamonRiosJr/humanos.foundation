@@ -63,11 +63,12 @@ export default function HeroSection() {
                 >
                     The "First Mile" of clinical care is catastrophically broken
                     for neurodivergent populations. Engineered by the Humanos
-                    NGO, Aura hOS™ replaces the 15-20 page physical clipboard
-                    penalty with a mathematically secure Zero-Knowledge Vault.
-                    We strictly eradicate clinical intake liability for
-                    healthcare organizations while returning seamless data
-                    sovereignty directly to the patient.
+                    NGO, Aura hOS™ will Kill the Clipboard, replacing the 15-20
+                    page physical penalty with a mathematically secure
+                    Zero-Knowledge FHIR Vault and Edge Intake Routing. We
+                    strictly eradicate clinical intake liability for healthcare
+                    organizations while returning seamless data sovereignty
+                    directly to the patient.
                 </motion.p>
 
                 {/* CTA */}
