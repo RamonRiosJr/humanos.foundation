@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export const config = {
-  runtime: 'edge',
+    runtime: "edge",
 };
 
 const SYSTEM_PROMPT = `You are the AI guide for the Humanos Foundation — the advocacy engine for the hOS (Human Operating System) movement.
@@ -24,40 +24,49 @@ Behavioral rules:
 - Always end with a follow-up question.`;
 
 export default async function handler(req) {
-  if (req.method !== 'POST') {
-    return new Response(JSON.stringify({ error: 'Method not allowed' }), { status: 405 });
-  }
-
-  try {
-    const { message, history } = await req.json();
-    
-    // Look for GEMINI_API_KEY (Server-side only). 
-    // We fall back to VITE_GEMINI_API_KEY just in case, but you should delete VITE_ from Vercel!
-    const apiKey = process.env.GEMINI_API_KEY || process.env.VITE_GEMINI_API_KEY; 
-    
-    if (!apiKey) {
-      return new Response(JSON.stringify({ error: 'API key not configured' }), { status: 500 });
+    if (req.method !== "POST") {
+        return new Response(JSON.stringify({ error: "Method not allowed" }), {
+            status: 405,
+        });
     }
 
-    const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-flash",
-      systemInstruction: SYSTEM_PROMPT,
-    });
+    try {
+        const { message, history } = await req.json();
 
-    const chat = model.startChat({
-      history: history || [],
-    });
+        // Look for GEMINI_API_KEY (Server-side only).
+        // We fall back to VITE_GEMINI_API_KEY just in case, but you should delete VITE_ from Vercel!
+        const apiKey =
+            process.env.GEMINI_API_KEY || process.env.VITE_GEMINI_API_KEY;
 
-    const result = await chat.sendMessage(message);
-    const text = result.response.text();
-    
-    return new Response(JSON.stringify({ text }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
-    });
-  } catch (error) {
-    console.error('Chat error:', error);
-    return new Response(JSON.stringify({ error: 'Failed to process chat message' }), { status: 500 });
-  }
+        if (!apiKey) {
+            return new Response(
+                JSON.stringify({ error: "API key not configured" }),
+                { status: 500 },
+            );
+        }
+
+        const genAI = new GoogleGenerativeAI(apiKey);
+        const model = genAI.getGenerativeModel({
+            model: "gemini-1.5-flash",
+            systemInstruction: SYSTEM_PROMPT,
+        });
+
+        const chat = model.startChat({
+            history: history || [],
+        });
+
+        const result = await chat.sendMessage(message);
+        const text = result.response.text();
+
+        return new Response(JSON.stringify({ text }), {
+            status: 200,
+            headers: { "Content-Type": "application/json" },
+        });
+    } catch (error) {
+        console.error("Chat error:", error);
+        return new Response(
+            JSON.stringify({ error: "Failed to process chat message" }),
+            { status: 500 },
+        );
+    }
 }

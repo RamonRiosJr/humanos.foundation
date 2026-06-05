@@ -18,6 +18,6 @@ We architected a strictly decoupled **Zero-Knowledge Encryption** pipeline isola
 
 ## Consequences
 
-- **Positive:** We are mathematically protected against HIPAA audits. If subpoenaed, the Foundation can only yield encrypted SQLite shards.
+- **Positive:** The platform is mathematically isolated from legacy HIPAA BAA requirements. If subpoenaed, the Foundation can only yield unreadable encrypted SQLite shards, maintaining our complete safe harbor status under the FTC HBNR exemption.
 - **Positive:** Vercel Edge caching remains highly performant (<50ms latency) since the server never reconstructs user state.
 - **Negative:** Developers lose the ability to debug patient state in the Edge. We accepted this tradeoff to establish the unbreachable NGO boundaries.

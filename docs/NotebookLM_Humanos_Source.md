@@ -28,7 +28,7 @@ To protect our regulatory standing, the ecosystem is strictly divided:
 ### How it Bypasses HIPAA and FDA Traps
 
 Because the server never reconstructs user state, and all encryption keys are dynamically generated utilizing the native Web Crypto API (`window.crypto.subtle`) on the client device, the Vercel Edge Runtime mathematically cannot decrypt patient data. If subpoenaed, the Foundation can only yield encrypted SQLite shards.
-This protects the foundation against HIPAA audits and bypasses FDA SaMD (Software as a Medical Device) regulation, securing an FTC Health Breach Notification Rule (HBNR) BAA exemption.
+This mathematically ensures the platform operates entirely outside the jurisdiction of legacy HIPAA BAA frameworks, securing an FTC Health Breach Notification Rule (HBNR) Personal Health Record exemption via a client-side cryptographic moat.
 
 ## 🤝 The Movement
 
