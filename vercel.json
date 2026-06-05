@@ -7,7 +7,10 @@
         },
         { "source": "/BlogPost", "destination": "/research", "permanent": true }
     ],
-    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+    "rewrites": [
+        { "source": "/api/(.*)", "destination": "/api/$1" },
+        { "source": "/(.*)", "destination": "/index.html" }
+    ],
     "headers": [
         {
             "source": "/(.*)",
