@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { X, Send, Bot } from "lucide-react";
+import { X, Send } from "lucide-react";
 import { AILogo } from "./AILogo";
 import { useFoundationChat } from "@/hooks/useFoundationChat";
 
